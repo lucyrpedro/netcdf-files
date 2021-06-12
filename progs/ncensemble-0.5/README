@@ -1,0 +1,123 @@
+What this does
+--------------
+
+"ncensemble" is a utility which will do point-wise ensemble statistics 
+on sets of fields stored in netCDF files.
+
+Basically, you have to have one input netCDF file per ensemble member, with
+identical structure, and you get one netCDF file out (again with identical
+structure) per type of statistic that you want to calculate, e.g. a file of
+means a file of standard deviations etc.
+
+It can be used just to calculate mean and standard deviation of a single
+ensemble, but if you give it two ensembles (usually representing a
+perturbation and a control experiment) then as well as giving ensemble mean
+and standard deviations for each ensemble it can also evaluate the anomaly
+(i.e. difference in means), and its associated t-statistic and one-tailed
+probability value (lower tail).  As of version 0.4 it will also do maximum
+and minimum of each ensemble.  Again, these are all point-by-point operations
+within each field.  
+
+Note that the standard deviations which it calculates are the form with
+(n-1) in the denominator, i.e. the estimator of the population standard
+deviation, (as opposed to the formulation of sample standard deviation with
+"n" in the denominator).
+
+
+Installation
+------------
+
+- Extract from the tar file (presumably you've done this already).
+
+- Ensure you have netCDF headers and libraries installed.
+  If not, get these first from http://www.unidata.ucar.edu/software/netcdf/
+ 
+- Type "make".  NB the makefile will try to find the netCDF installation by
+  looking for "ncdump" in your executable search path, but if this doesn't
+  work you can do "make NETCDF=....."
+
+- Move the "ncensemble" executable to where you want it, or do "make install"
+  for $HOME/bin (as non-root) or /usr/local/bin (as root).
+
+
+Usage
+-----
+
+Here is a copy of the usage message that you can also see by running the
+program without any arguments.
+
+  Usage
+  ncensemble <FLAGS> <INPUT FILES (ensemble 1)> [- <INPUT FILES (ensemble 2)>]
+
+  Calculate fields of statistics for ensembles of NetCDF files.
+  N.B. Requires input files to have identical structure.
+
+  FLAGS include:
+
+   one or more of the following:
+
+     -m filename   output file for mean of ensemble 1
+     -s filename   output file for s.d. of ensemble 1
+     -M filename   output file for mean of ensemble 2
+     -S filename   output file for s.d. of ensemble 2
+     -a filename   output file for anomaly (ensemble 1 - ensemble 2)
+     -t filename   output file for Student's t statistic on means
+     -p filename   output file for one-tailed probability of t statistic
+
+     -h filename   output file for maximum of ensemble 1
+     -H filename   output file for maximum of ensemble 2
+     -l filename   output file for minimum of ensemble 1
+     -L filename   output file for minimum of ensemble 2
+
+     (to remember the flags for max and min: h for highest, l for lowest)
+
+   and optionally:
+
+     -V  variables  comma-separated list of variables to process 
+                    (defaults to all variables)
+
+     -C  include also the coordinate variables related to the variables
+         explicitly specified with -V (has no effect if -V is not used)
+
+     -v  verbose
+     -c  permit clobbering (overwriting) of existing output files
+
+     -i  ignore mismatches in dims/vars between files [USE WITH CAUTION]
+
+  FOR EXAMPLE:
+
+    calculate mean and standard deviation for single ensemble:
+
+        ncensemble -m mean.nc -s sd.nc \
+            member1.nc member2.nc member3.nc member4.nc
+
+    calculate anomaly and probability for two ensembles, writing only
+     the variables "temp", "ps" and related coordinate variables to 
+     output file (and allowing output to overwrite existing files):
+
+        ncensemble -c -a anom.nc -p prob.nc -V temp,ps -C \
+           pert1.nc pert2.nc pert3.nc pert4.nc - ctl1.nc ctl2.nc ctl3.nc
+
+        (NB mnemonic: think of the dash on the command line separating the
+         two ensembles as ensemble1 'minus' ensemble2.  This will give the)
+         correct sense for the anomaly.)
+
+
+Copying
+-------
+
+Please see separate COPYING file.
+
+
+URL
+---
+
+Please get latest updates from:
+http://home.badc.rl.ac.uk/iwi/ncensemble/
+
+
+Author
+------
+
+Alan Iwi <A.M.Iwi@rl.ac.uk>, CCLRC
+incorporating also a t-statistics routine by the Royal Statistical Society

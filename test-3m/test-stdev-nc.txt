@@ -1,0 +1,51 @@
+netcdf test-stdev {
+dimensions:
+	lat = 72 ;
+	lon = 96 ;
+	time_counter = UNLIMITED ; // (1 currently)
+	axis_nbounds = 2 ;
+variables:
+	float lat(lat) ;
+		lat:axis = "Y" ;
+		lat:standard_name = "latitude" ;
+		lat:long_name = "Latitude" ;
+		lat:units = "degrees_north" ;
+	float lon(lon) ;
+		lon:axis = "X" ;
+		lon:standard_name = "longitude" ;
+		lon:long_name = "Longitude" ;
+		lon:units = "degrees_east" ;
+	float stdev(time_counter, lat, lon) ;
+		stdev:online_operation = "instant" ;
+		stdev:interval_operation = "3 h" ;
+		stdev:interval_write = "3 h" ;
+		stdev:cell_methods = "time: point" ;
+		stdev:coordinates = "time_instant" ;
+	double time_counter(time_counter) ;
+		time_counter:axis = "T" ;
+		time_counter:standard_name = "time" ;
+		time_counter:long_name = "Time axis" ;
+		time_counter:calendar = "gregorian" ;
+		time_counter:units = "seconds since 2012-09-27 21:00:00" ;
+		time_counter:time_origin = "2012-09-27 21:00:00" ;
+		time_counter:bounds = "time_counter_bounds" ;
+	double time_counter_bounds(time_counter, axis_nbounds) ;
+	double time_instant(time_counter) ;
+		time_instant:standard_name = "time" ;
+		time_instant:long_name = "Time axis" ;
+		time_instant:calendar = "gregorian" ;
+		time_instant:units = "seconds since 2012-09-27 21:00:00" ;
+		time_instant:time_origin = "2012-09-27 21:00:00" ;
+		time_instant:bounds = "time_instant_bounds" ;
+	double time_instant_bounds(time_counter, axis_nbounds) ;
+
+// global attributes:
+		:name = "ce262a_pc" ;
+		:description = "UM output" ;
+		:title = "UM output" ;
+		:Conventions = "CF-1.6" ;
+		:timeStamp = "2021-Jun-02 17:06:55 GMT" ;
+		:uuid = "df8fd873-e621-46f8-a8d4-ad3d59b55239" ;
+		:history = "Sat Jun 12 14:21:36 2021: ncks -v stdev test.nc test-stdev.nc" ;
+		:NCO = "netCDF Operators version 4.9.6-alpha03 (Homepage = http://nco.sf.net, Code = http://github.com/nco/nco)" ;
+}
