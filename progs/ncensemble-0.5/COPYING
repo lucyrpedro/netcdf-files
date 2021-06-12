@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------
+
+These routines are copyright the Science and Technology Facilities Council
+(STFC), author Alan Iwi <A.M.Iwi@rl.ac.uk>, except for the file "tprob.c",
+which contains a routine for calculating probability values for the Student's
+t distribution and which is copyright the Royal Statistical Society (RSS) and
+STFC.
+
+The RSS has given its permission for distribution of its routine, provided
+that no fee is charged.  This routine cannot be distributed under the GNU GPL,
+because the GPL does not allow the imposition of a "no fee" condition.  In
+order to respect the "no fee" terms of their licence, but to allow for the
+possibility of replacing their code in future with a GPL-compatible routine
+and then distributing the whole program under the GPL, the whole program is
+currently released under the following terms.
+
+  (1) You are free to use and/or to modify this code, but in doing so you
+      agree to hold STFC and its employees harmless against any claims
+      arising from your use or modification of this software, however caused.
+
+  (2) You are also free to copy and distribute this code, in accordance with
+      your choice of clause (3) or clause (4) below.
+
+  (3) You may distribute modified or unmodified versions, provided that:
+       (a) you must not charge any fee, and
+       (b) if you distribute any compiled code, you must include with it the
+           corresponding source code, and
+       (c) the whole must remain subject to this licence; you may not add to
+           or remove anything from it, including freedoms or restrictions; you
+           must include this COPYING file verbatim (except to add mention of
+           any additional copyright holders in the first paragraph)
+
+  (4) Alternatively, you may distribute modified or unmodified versions,
+      provided that:
+       (a) you entirely remove or replace the material which is copyright 
+           the RSS, and
+       (b) you distribute the remainder (with or without other modifications)
+           under the terms of the GNU GPL version 2 or later version,
+           replacing this COPYING file with the text of the GPL, as normally
+           displayed at http://www.gnu.org/licenses/gpl.txt
+
+--------------------------------------------------------------------------
