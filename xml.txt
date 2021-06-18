@@ -1,0 +1,58 @@
+lrpedro@uan01:~/xml> more um-atmos-grid_ens_def.xml
+<grid_definition>
+
+  <grid id="um-atmos_grid_t_ufs">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="ensemble" />
+  </grid>
+
+  <grid id="um-atmos_grid_t_ufs_ens">
+    <domain domain_ref="um-atmos_grid_t" />
+    <scalar id="ensmean1">
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+
+  <grid id="um-atmos_grid_t_ufs_1">
+    <domain domain_ref="um-atmos_grid_t" />
+  </grid>
+</grid_definition>
+
+
+
+
+
+lrpedro@uan01:~/xml> more um-atmos-field_ens_def.xml
+
+<field_definition default_value="-1073741824.0" prec="8">
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_ufs" id="m01s00i024" operation="average" />
+
+</field_definition>
+
+
+
+
+
+
+
+
+
+lrpedro@uan01:~/xml> more um-atmos-file_ens_def.xml
+
+<file_definition format="netcdf4" time_counter="instant" type="multiple_file">
+  <file description="UM output" id="x0" name="ce262.pp0" output_freq="3h" />
+  <file description="UM output" id="x2" name="ce262a_pc" output_freq="3h" split_freq="3h">
+
+    <field field_ref="m01s00i024" name="m01s00i024" operation="instant" />
+    <field field_ref="m01s00i024" id="m01s00i024_ens" grid_ref="um-atmos_grid_t_ufs_ens" operation="instant" />
+
+    <field name ="sqav" id="sqav" field_ref="m01s00i024_ens" > m01s00i024_ens*m01s00i024_ens </field>
+
+    <field id="ensq" field_ref="m01s00i024" > m01s00i024*m01s00i024  </field>
+    <field name="avensq" id="avensq" field_ref="ensq" grid_ref="um-atmos_grid_t_ufs_ens" operation="instant" />
+
+    <field name="stdev" grid_ref="um-atmos_grid_t_ufs_1" operation="instant" > sqrt(avensq - sqav) </field>
+
+  </file>
+
+</file_definition>
