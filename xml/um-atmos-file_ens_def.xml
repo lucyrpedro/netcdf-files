@@ -1,0 +1,16 @@
+<file_definition format="netcdf4" time_counter="instant" type="multiple_file">
+  <file description="UM output" id="x0" name="ce262.pp0" output_freq="3h" />
+  <file description="UM output" id="x2" name="ce262a_pc" output_freq="3h" split_freq="3h">
+
+    <field field_ref="m01s00i024" name="m01s00i024" operation="instant" />
+    <field field_ref="m01s00i024" id="m01s00i024_ens" grid_ref="um-atmos_grid_t_ufs_ens" operation="instant" />
+
+    <field name="temp" id="temp" field_ref="m01s00i024" operation="average"/>
+
+    <field name="temp2" id="temp2" field_ref="temp" /> temp*temp </field>
+
+    <field name="sigma_T" id="sigma_T" operation="instant" freq_op="3h"> sqrt(@temp2-@temp*@temp) </field>
+
+  </file>
+
+</file_definition>
