@@ -1,0 +1,16 @@
+<file_definition format="netcdf4" time_counter="instant" type="multiple_file">
+  <file description="UM output" id="x0" name="ce262.pp0" output_freq="3h" />
+  <file description="UM output" id="x2" name="ce262a_pc" output_freq="3h" split_freq="3h">
+    <field field_ref="m01s00i024" />
+    <field field_ref="m01s00i024_sq" />
+
+    <field field_ref="m01s00i024_1" />
+    <field field_ref="m01s00i024_1sq" />
+
+    <field name="m01s00i024_1sq_ens" field_ref="m01s00i024_1sq" grid_ref="um-atmos_grid_t_ufs_ens" />
+
+    <field name="stdev" grid_ref="um-atmos_grid_t_ufs_ens" operation="instant" freq_op="1h" >sqrt(@m01s00i024_1sq - @m01s00i024^2) </field>
+
+  </file>
+
+</file_definition>
