@@ -1,0 +1,46 @@
+um-atmos-grid_ens_def.xml
+
+<grid_definition>
+  <grid id="um-atmos_grid_uv_tfl4731">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_tfl4731" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_ufs">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="ensemble" />
+  </grid>
+</grid_definition>
+
+um-atmos-field_ens_def.xml
+
+<field_definition default_value="-1073741824.0" prec="8">
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_ufs" id="m01s00i024" long_name="SURFACE TEMPERATURE AFTER TIMESTEP" standard_name="surface_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_tfl4731" id="m01s15i214" long_name="ERTEL POTENTIAL VORTICITY THETA SURF"
+standard_name="ertel_potential_vorticity" unit="K m2 kg-1 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_ufs" id="m01s30i420" long_name="column integral cvT per unit area" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_ufs" id="m01s30i421" long_name="column integral gr per unit area" />
+</field_definition>
+
+um-atmos-file_ens_def.xml
+
+<file_definition format="netcdf4" time_counter="instant" type="multiple_file">
+  <file description="UM output" id="x0" name="ce262.pp0" output_freq="3h">
+    <field field_ref="m01s15i214" name="m01s15i214" operation="instant" />
+    <field field_ref="m01s30i420" name="m01s30i420" operation="instant" />
+    <field field_ref="m01s30i421" name="m01s30i421" operation="instant" />
+  </file>
+  <file description="UM output" id="x2" name="ce262a_pc" output_freq="3h" split_freq="3h">
+    <field field_ref="m01s00i024" name="m01s00i024" operation="instant" />
+    <field field_ref="m01s00i024" name="m01s00i024_2" operation="maximum" />
+    <field field_ref="m01s00i024" name="m01s00i024_3" operation="minimum" />
+    <field field_ref="m01s00i024" name="m01s00i024_4" operation="average" />
+  </file>
+</file_definition>
+
+
+
+
+
+
+

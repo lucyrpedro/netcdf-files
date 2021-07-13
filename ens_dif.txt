@@ -1,0 +1,33 @@
+-bash-4.1$ more rose-app-ens0.conf
+[namelist:run_convection]
+t_melt_snow=274
+
+-bash-4.1$ more rose-app-ens1.conf
+[namelist:planet_constants]
+sc=2661.0
+[namelist:run_convection]
+t_melt_snow=275
+
+-bash-4.1$ more rose-app-ens2.conf
+[namelist:planet_constants]
+sc=3761.0
+[namelist:run_convection]
+t_melt_snow=275
+
+-bash-4.1$ more rose-app-ens3.conf
+[namelist:planet_constants]
+sc=1861.0
+[namelist:run_convection]
+t_melt_snow=275
+
+-bash-4.1$ more rose-app-ens4.conf
+[namelist:planet_constants]
+sc=1961.0
+[namelist:run_convection]
+t_melt_snow=275
+
+-bash-4.1$ more rose-app-ens5.conf
+[namelist:planet_constants]
+sc=1661.0
+[namelist:run_convection]
+t_melt_snow=275

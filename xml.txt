@@ -1,6 +1,6 @@
-lrpedro@uan01:~/xml> more um-atmos-grid_ens_def.xml
-<grid_definition>
+um-atmos-grid_ens_def.xml
 
+<grid_definition>
   <grid id="um-atmos_grid_t_ufs">
     <domain domain_ref="um-atmos_grid_t" />
     <axis axis_ref="ensemble" />
@@ -22,11 +22,10 @@ lrpedro@uan01:~/xml> more um-atmos-grid_ens_def.xml
 
 
 
-lrpedro@uan01:~/xml> more um-atmos-field_ens_def.xml
+um-atmos-field_ens_def.xml
 
 <field_definition default_value="-1073741824.0" prec="8">
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_ufs" id="m01s00i024" operation="average" />
-
 </field_definition>
 
 
@@ -37,7 +36,7 @@ lrpedro@uan01:~/xml> more um-atmos-field_ens_def.xml
 
 
 
-lrpedro@uan01:~/xml> more um-atmos-file_ens_def.xml
+um-atmos-file_ens_def.xml
 
 <file_definition format="netcdf4" time_counter="instant" type="multiple_file">
   <file description="UM output" id="x0" name="ce262.pp0" output_freq="3h" />
