@@ -1,6 +1,0 @@
-<field_definition default_value="-1073741824.0" prec="8">
-  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_ufs_ens" id="m01s00i024" operation="average" />
-  <field enabled=".TRUE." field_ref="m01s00i024" id="m01s00i024_sq" > m01s00i024*m01s00i024 </field>
-  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_ufs" id="m01s00i024_1" operation="average" />
-  <field enabled=".TRUE." field_ref="m01s00i024_1" id="m01s00i024_1sq" > m01s00i024_1*m01s00i024_1 </field>
-</field_definition>

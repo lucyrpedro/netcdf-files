@@ -1,5 +1,9 @@
 <file_definition format="netcdf4" time_counter="instant" type="multiple_file">
-  <file description="UM output" id="x0" name="ce262_ens1.pp0" output_freq="3h" />
+  <file description="UM output" id="x0" name="ce262_ens1.pp0" output_freq="3h">
+    <field field_ref="m01s15i214" name="m01s15i214" operation="instant" />
+    <field field_ref="m01s30i420" name="m01s30i420" operation="instant" />
+    <field field_ref="m01s30i421" name="m01s30i421" operation="instant" />
+  </file>
   <file description="UM output" id="x2" name="ce262_ens1a_pc" output_freq="3h" split_freq="3h">
     <field field_ref="m01s00i024" name="m01s00i024" operation="instant" />
     <field field_ref="m01s00i024" name="m01s00i024_2" operation="maximum" />
