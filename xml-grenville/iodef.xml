@@ -1,0 +1,20 @@
+<simulation>
+  <context id="um-atmos_ens">
+    <domain_definition src="/work/n02/n02/grenvill/cylc-run/u-ce262/share/data/xml/um-atmos-domain_def.xml" />
+    <axis_definition src="/work/n02/n02/grenvill/cylc-run/u-ce262/share/data/xml/um-atmos-axis_def.xml" />
+    <grid_definition src="/work/n02/n02/grenvill/cylc-run/u-ce262/share/data/xml/um-atmos-grid_ens_def.xml" />
+    <field_definition src="/work/n02/n02/grenvill/cylc-run/u-ce262/share/data/xml/um-atmos-field_ens_def.xml" />
+    <file_definition src="/work/n02/n02/grenvill/cylc-run/u-ce262/share/data/xml/um-atmos-file_ens_def.xml" />
+  </context>
+  <context id="xios">
+    <variable_definition>
+      <variable id="using_server" type="bool">true</variable>
+      <variable id="using_server2" type="bool">true</variable>
+      <variable id="ratio_server2" type="int">25</variable>
+      <variable id="server2_dist_file_memory" type="bool">true</variable>
+      <variable id="server2_dist_file_memory_ratio" type="double">0.5</variable>
+      <variable id="info_level" type="int">100</variable>
+      <variable id="print_file" type="bool">true</variable>
+    </variable_definition>
+  </context>
+</simulation>
