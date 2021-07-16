@@ -1,0 +1,15 @@
+#!/bin/bash
+echo $UM_ATM_NENS
+for (( ens=0; ens<$UM_ATM_NENS; ens++ ))
+do
+  export DATAW=$(dirname $CYLC_TASK_WORK_PATH)/$TASK_NAME_ROOT$ens
+  opt_file=$ROSE_SUITE_DIR/app/$ROSE_TASK_APP/opt/rose-app-ens$ens.conf
+  if [[ -f $opt_file ]] ; then
+    export ROSE_APP_OPT_CONF_KEYS="ens"$ens
+  else
+    export ROSE_APP_OPT_CONF_KEYS=""
+  fi
+  mkdir -p $DATAW
+  cd $DATAW
+  rose task-run --verbose --command-key=ens_setup
+done

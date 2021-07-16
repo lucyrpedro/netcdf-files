@@ -1,0 +1,221 @@
+
+{% set NUPN =  8 %} # Number of Numa nodes per node (machine dependent)
+{% set PPN = 128 %} # Maximum number of processes per node (machine dependent)
+
+{% set APPN = ATM_PPN if ATM_PPN is defined else PPN %}
+{% set ATMOS_TASKS = ATM_PROCX*ATM_PROCY+IOS_NPROC %}
+{% set ATMOS_NODES = ((ATMOS_TASKS*OMPTHR_ATM)/(APPN*HYPERTHREADS))|round(0,"ceil")|int %}
+{% set ATMOS_PPNU = ((ATM_PROCX*ATM_PROCY+IOS_NPROC)/(ATMOS_NODES*NUPN))|round(0,'ceil')|int %}
+
+{% set TASK_NAME_ROOT = "atmos_ens" %}
+
+{% if ATMOS_NENS > 0 %}
+ {% set ATMOS_NEXEC = ATMOS_NENS %}
+{% else %}
+ {% set ATMOS_NEXEC = 1 %}
+{% endif %}
+{% set NEXEC = ATMOS_NEXEC %}
+
+{% if XIOS_NPROC > 0 %}
+ {% set XPPN = XIOS_PPN if XIOS_PPN is defined else PPN %}
+ {% set XIOS_NODES = (XIOS_NPROC/XPPN)|round(0,'ceil')|int %}
+ {% set XIOS_PPNU = (XIOS_NPROC/(XIOS_NODES*NUPN))|round(0,'ceil')|int %}
+ {% set NEXEC = NEXEC+1 %}
+{% endif %}
+
+     [[ARCHER2]]
+        initial scripting = "export HOME=$DATADIR"
+        pre-script = """
+                                module load epcc-job-env
+                                module unload craype-network-ofi
+                                module unload cray-mpich
+                                module load craype-network-ucx
+                                module load cray-mpich-ucx
+                                module load libfabric
+                                module load cray-hdf5-parallel
+                                module load cray-netcdf-hdf5parallel
+                                module list 2>&1             
+                                unset OMP_NUM_THREADS 
+                                """
+        [[[directives]]]
+            --chdir=/work/n02/n02/jwc
+            --partition=standard
+            --qos=standard
+            --account={{HPC_ACCOUNT}}
+            --export=none
+            --exclusive=
+        [[[job]]]
+            batch system = slurm
+        [[[remote]]]
+            host = {{ HPC_HOST }}
+{% if HPC_USER is defined %} 
+            owner = {{ HPC_USER }}
+{% endif %}         
+
+    [[LINUX]]
+        [[[remote]]]
+            host = {{ ROSE_ORIG_HOST }}
+        [[[job]]]
+            batch system = background
+
+# UM high OpenMP
+    # Extract, Mirror
+    [[fcm_make]]
+        inherit = LINUX
+        [[[environment]]]
+            CONFIG=ncas-ex-cce
+            PREBUILD = 
+            ROSE_TASK_OPTIONS=--ignore-lock
+
+    # Pre-process, Build
+    [[fcm_make2]]
+        inherit = ARCHER2
+        [[[job]]]
+            execution time limit = PT3H
+        [[[environment]]]
+            UM_INSTALL_DIR  = /work/y07/shared/umshared
+            XIOS_PATH = {{XIOS_PATH}}
+            CONFIG=ncas-ex-cce
+            PREBUILD =
+            ROSE_TASK_N_JOBS     = 8
+            ROSE_TASK_OPTIONS=--ignore-lock
+
+    [[fcm_make_drivers]]
+        inherit = LINUX
+        [[[environment]]]
+            ROSE_TASK_OPTIONS=--ignore-lock
+
+    [[fcm_make2_drivers]]
+        inherit = ARCHER2
+        [[[job]]]
+            execution time limit = PT20M
+        [[[environment]]]
+            ROSE_TASK_N_JOBS = 1
+            ROSE_TASK_OPTIONS=--ignore-lock
+
+    # Reconfiguration 
+    [[recon]]
+        inherit = ARCHER2
+        [[[job]]]
+            execution time limit = PT20M
+        [[[directives]]]
+{% if HPC_QUEUE is defined %} 
+            --qos={{HPC_QUEUE}}
+{% if HPC_QUEUE == 'short' %}
+            --reservation=shortqos
+{% endif %}
+{% endif %}
+            --nodes=1
+            --ntasks=128
+            --tasks-per-node=128
+            --cpus-per-task=1
+        [[[environment]]]
+            UM_INSTALL_DIR  = /work/y07/shared/umshared
+            ROSE_TASK_APP    = um
+            XIOS_PATH = {{XIOS_PATH}}
+            ASTART=../recon/atmos.astart
+            RCF_NPROCX = 8
+            RCF_NPROCY = 16
+            OMP_NUM_THREADS = 1
+            ROSE_LAUNCHER = srun
+            ROSE_LAUNCHER_PREOPTS = --cpu-bind=cores
+            TASKEND = $MODELBASIS
+
+    # Make XIOS xml files
+    [[xml]]
+        inherit = ARCHER2
+        [[[job]]]
+            execution time limit = PT5M
+        [[[directives]]]
+            --qos=short
+            --reservation=shortqos
+        [[[environment]]]
+            UM_ATM_NENS = {{ATMOS_NENS}}
+
+    # Atmosphere Model Run 
+    [[atmos]]
+       inherit = ARCHER2
+       [[[job]]]
+           execution time limit = PT20M
+       [[[directives]]]
+{% if HPC_QUEUE is defined %} 
+            --qos={{HPC_QUEUE}}
+{% if HPC_QUEUE == 'short' %}
+            --reservation=shortqos
+{% endif %}
+{% endif %}
+{% if NEXEC > 1 %}
+  {% for exec in range(ATMOS_NEXEC) %}
+           hetjob_{{exec}}_--partition=standard
+           hetjob_{{exec}}_--nodes={{ATMOS_NODES}}
+           hetjob_{{exec}}_--ntasks={{ATMOS_TASKS}}
+           hetjob_{{exec}}_--tasks-per-node={{ATMOS_PPNU*NUPN}}
+           hetjob_{{exec}}_--cpus-per-task={{OMPTHR_ATM}}
+  {% endfor %}
+  {% if XIOS_NPROC > 0 %}
+           hetjob_{{NEXEC-1}}_--partition=standard
+           hetjob_{{NEXEC-1}}_--nodes={{XIOS_NODES}}
+           hetjob_{{NEXEC-1}}_--ntasks= {{XIOS_NPROC}}
+           hetjob_{{NEXEC-1}}_--tasks-per-node={{XIOS_PPNU*NUPN}}
+           hetjob_{{NEXEC-1}}_--cpus-per-task=1
+  {% endif %}
+{% else %}
+           --nodes={{ATMOS_NODES}}
+           --ntasks={{ATMOS_TASKS}}
+           --tasks-per-node={{ATMOS_PPNU*NUPN}}
+           --cpus-per-task={{OMPTHR_ATM}}
+{% endif %}
+       [[[environment]]]
+          UM_INSTALL_DIR = /work/y07/shared/umshared
+          ROSE_TASK_APP = um
+          XIOS_PATH = {{XIOS_PATH}}
+          ATMOS_EXEC = $CYLC_SUITE_SHARE_DIR/fcm_make/build-atmos/bin/um-atmos.exe
+          ASTART=../recon/atmos.astart
+          UM_ATM_NPROCX = {{ATM_PROCX}}
+          UM_ATM_NPROCY = {{ATM_PROCY}}
+          FLUME_IOS_NPROC = {{IOS_NPROC}}
+          TOTAL_MPI_TASKS = {{ATM_PROCX * ATM_PROCY + IOS_NPROC}}
+          MPI_TASKS_PER_NODE = {{NUPN*ATMOS_PPNU}}
+          TASKS_PER_NUMA = {{ATMOS_PPNU}}
+          XIOS_NPROC = {{XIOS_NPROC}}
+          UM_ATM_NENS = {{ATMOS_NENS}}
+          TASK_NAME_ROOT = {{TASK_NAME_ROOT}}
+          ROSE_LAUNCHER = srun
+{% if NEXEC > 1 %}
+          {% if OMPTHR_ATM > 1 %}
+            ROSE_LAUNCHER_PREOPTS_UM  = --het-group=0 --hint=nomultithread --distribution=block:block --export=all,OMP_PLACES=cores env OMP_NUM_THREADS={{OMPTHR_ATM}} HYPERTHREADS={{HYPERTHREADS}}
+          {% else %}
+            ROSE_LAUNCHER_PREOPTS_UM  = --het-group=0 --cpu-bind=cores --export=all env OMP_NUM_THREADS={{OMPTHR_ATM}} HYPERTHREADS={{HYPERTHREADS}}
+          {% endif %}
+  {% if XIOS_NPROC > 0 %}
+          ROSE_LAUNCHER_PREOPTS_XIOS = --het-group={{NEXEC-1}} --cpu-bind=cores --export=all env OMP_NUM_THREADS=1 HYPERTHREADS=1
+  {% endif %}
+{% else %}
+          {% if OMPTHR_ATM > 1 %}
+            ROSE_LAUNCHER_PREOPTS_UM  = --hint=nomultithread --distribution=block:block --export=all,OMP_PLACES=cores env OMP_NUM_THREADS={{OMPTHR_ATM}} HYPERTHREADS={{HYPERTHREADS}}
+          {% else %}
+            ROSE_LAUNCHER_PREOPTS_UM  = --cpu-bind=cores --export=all env OMP_NUM_THREADS={{OMPTHR_ATM}} HYPERTHREADS={{HYPERTHREADS}}
+          {% endif %}
+{% endif %}
+          TASKEND = $( rose date $CYLC_SUITE_INITIAL_CYCLE_POINT $CYLC_TASK_CYCLE_POINT --calendar {{CALENDAR}} --offset2 {{FMT}} --print-format y,m,d,h,M,s )
+          CONTINUE = $( if [[ $CYLC_TASK_CYCLE_POINT == $CYLC_SUITE_INITIAL_CYCLE_POINT ]]; then echo ""; else echo "true"; fi )
+          DRIVERS_VERIFY_RST = False
+
+{% if ATMOS_NENS > 0 %}
+    [[ ens_setup_all ]]
+        inherit = ARCHER2
+        command scripting ="rose task-run --verbose --command-key=ens_setup_all"
+        [[[job]]]
+            execution time limit = PT5M
+        [[[directives]]]
+            --qos=short
+            --reservation=shortqos
+        [[[environment]]]
+            UM_INSTALL_DIR  = /work/y07/shared/umshared
+            XIOS_PATH = {{XIOS_PATH}}
+            UM_ATM_NENS = {{ATMOS_NENS}}
+            TASK_NAME_ROOT = {{TASK_NAME_ROOT}}
+            ROSE_TASK_APP = um
+            ASTART='../recon/atmos.astart'
+            TASKEND = $( rose date $CYLC_SUITE_INITIAL_CYCLE_POINT $CYLC_TASK_CYCLE_POINT --calendar {{CALENDAR}} --offset2 {{FMT}} --print-format y,m,d,h,M,s )
+{% endif %}

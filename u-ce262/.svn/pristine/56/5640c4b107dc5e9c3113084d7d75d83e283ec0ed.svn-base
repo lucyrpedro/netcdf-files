@@ -1,0 +1,1286 @@
+[xios_contexts]
+description=
+sort-key=02
+ns=iodef.xml/xios_contexts
+title=XIOS Contexts
+
+[xios_options]
+description=
+sort-key=03
+ns=iodef.xml/xios_options
+title=XIOS Options
+
+[xios_um]
+description=
+sort-key=04
+ns=iodef.xml/xios_um
+title=UM XIOS Output
+
+[xios_options=using_server]
+compulsory=true
+description=Run XIOS in detached (true) or attached (false) mode
+sort-key=03
+type=boolean
+ns=iodef.xml/xios_options
+
+[xios_options=using_oasis]
+compulsory=true
+description=Use XIOS with Oasis
+sort-key=04
+trigger=xios_options=oasis_codes_id : true ;
+        xios_options=call_oasis_enddef : true ;
+type=boolean
+ns=iodef.xml/xios_options
+
+[xios_options=oasis_codes_id]
+compulsory=true
+description=Names of coupled models in Oasis namcouple file
+sort-key=05
+type=character
+ns=iodef.xml/xios_options
+
+[xios_options=call_oasis_enddef]
+compulsory=false
+description=
+help=From XIOS version 1587 : XIOS - OASIS interaction : 
+    =due to many problems occurring in the OASIS/XIOS initialization 
+    =phase due to bad ordering of the intialization call from both, 
+    =you have now the possibily to explicitly inform XIOS that the 
+    =servers must call oasis_enddef().
+    =
+    =New rules : On model side, before calling oasis_enddef, 
+    =you must add a call to "xios_oasis_enddef()"
+    =
+    =Old rules : oasis_enddef must be called before any call to 
+    ="xios_context_initialize" otherwise it may lead to a deadlock.
+    =
+    =You can use the old rules if the variable <call_oasis_enddef> is 
+    =set to false (default value is true), 
+    =and then there is no need to modify the source code of the models
+sort-key=06
+type=boolean
+ns=iodef.xml/xios_options
+
+[xios_options=using_server2]
+compulsory=true
+description=Use XIOS level two IO servers
+sort-key=07
+trigger=xios_options=ratio_server2 : true ;
+        xios_options=number_pools_server2 : true ;
+        xios_options=server2_dist_file_memory : true ;
+type=boolean
+ns=iodef.xml/xios_options
+
+[xios_options=ratio_server2]
+compulsory=true
+description=Percentage of IO servers used for level two
+help=Defines the percentage of servers that will be dedicated to level two.
+    =The parameter can take values from 0 to 100%.
+    =If the requested number of level two servers is invalid 
+    =(for example, zero or equal to the total number of servers),
+    =XIOS will run in classical server mode with one server level.
+sort-key=08
+type=integer
+ns=iodef.xml/xios_options
+
+[xios_options=number_pools_server2]
+compulsory=true
+description=Specify the number of level two server pools
+help=Specifies the number of level two server pools
+    =(i.e. number of MPI communicators on level two)
+    =If number_pools_server2=0, the number of pools 
+    =is equal to the number of level two servers, 
+    =thus permitting one process per communicator.
+sort-key=10
+type=integer
+ns=iodef.xml/xios_options
+
+[xios_options=server2_dist_file_memory]
+compulsory=true
+description=Activates memory optimisation
+help=By default file distribution among level two server pools 
+    =is optimized for bandwidth. 
+    =An alternative way of distributing files is possible in order
+    =to minimise memory consumption by level two servers
+sort-key=11
+trigger=xios_options=server2_dist_file_memory_ratio : true ;
+type=boolean
+ns=iodef.xml/xios_options
+
+[xios_options=server2_dist_file_memory_ratio]
+compulsory=true
+description=Set value of memory optimisation (0-1)
+help=Enter value from 0 (memory optimization) to 1 (bandwidth optimization)
+sort-key=12
+type=real
+ns=iodef.xml/xios_options
+
+[xios_options=info_level]
+compulsory=false
+description=Output verbosity level (0-100)
+sort-key=13
+trigger=xios_options=print_file : this > 0 ;
+type=integer
+ns=iodef.xml/xios_options
+
+[xios_options=print_file]
+compulsory=false
+description=Write standard output and standard error to files
+help=If true XIOS standard output and standard error are redirected 
+    =to files indexed by process rank, (default=false)
+sort-key=14
+type=boolean
+ns=iodef.xml/xios_options
+
+[xios_options=optimal_buffer_size]
+compulsory=false
+description=Specify buffer sizing behaviour
+sort-key=15
+value-titles=Performance (default),Memory
+values='performance','memory'
+ns=iodef.xml/xios_options
+
+[xios_options=buffer_size_factor]
+compulsory=false
+description=Muliple the computed buffer size by this factor
+sort-key=16
+type=real
+ns=iodef.xml/xios_options
+
+[xios_options=min_buffer_size]
+compulsory=false
+description=Fix the minimum size of buffers
+sort-key=17
+type=integer
+ns=iodef.xml/xios_options
+
+[namelist:xios_streams]
+description=These namelists define the XIOS output streams to which STASH diagnostics may be sent
+duplicate=true
+macro=output_streams.OutputStreamValidate
+ns=iodef.xml/xios_um/XIOS Output Streams
+
+[namelist:xios_streams=file_id]
+compulsory=true
+description=The unique file identifier string for this output stream
+help=This string will be used by various parts of the code to retrieve and
+    =interact with this stream, each stream must have a unique identifier.
+    =
+    =The file_id values provided in the stash request namelist should be
+    =directed to the desired output stream using the corresponding identifier.
+pattern=(?# Must be between 1 and 20 characters)^'.{1,20}'$
+sort-key=01
+type=character
+
+[namelist:xios_streams=filename]
+compulsory=true
+description=The filename for the output stream file
+help=This provides the filename to attach to the stream.  Note that if periodic
+    =re-initialisation is being used the filenames will be generated
+    =automatically,
+    =and therefore this value will be ignored
+sort-key=02
+type=character
+
+[namelist:xios_streams=filename_base]
+compulsory=true
+description=Filename base for reinitialised stream files
+help=This gives the name for the generated output stream files,
+    =it supports special characters which can contain any character,
+    =%y will be replaced by the year (4 characters), %mo by the month (2 char), %d
+    =by the day (2 char), %h by the hour (2 char), %mi by the minute (2 char), %s
+    =by the second (2 char), %S by the number of seconds since the time origin and
+    =%D by the number of full days since the time origin.
+sort-key=02
+type=character
+
+[namelist:xios_streams=compression_level]
+compulsory=true
+description=Deflate level
+help=The DEFLATE method takes a parameter to specify the amount of compression
+    =applied to the data. The values range from 0 (no compression) to 9 
+    =(maximum compression). The larger the value the more computation time
+    =needed to compress the data. Typically a value of 1 is found to be the
+    =best compromise between compression ratio and time taken.
+sort-key=03
+values=0,1,2,3,4,5,6,7,8,9
+
+[namelist:xios_streams=output_freq_unit]
+compulsory=true
+description=Time unit for output frequency
+help=Time unit for output frequency used by
+    =namelist:xios_streams=output_freq_value. Takes values of hours,
+    =days,timesteps or months
+sort-key=04
+value-titles='None','Hours','Days','Timesteps','Months'
+values=0,1,2,3,4
+
+[namelist:xios_streams=output_freq_value]
+compulsory=true
+description=Value for output frequency of XIOS diagnosic files
+help=Value for output frequency of XIOS diagnosic files in units
+    =of namelist:xios_streams=output_freq_unit.
+sort-key=05
+type=integer
+
+[namelist:xios_streams=l_reinit]
+compulsory=true
+description=Periodic reinitialisation for XIOS diagnostic files
+help=In long runs the amount of data or number of fields that would be written
+    =to a given stream becomes too large to hold in one file. Periodically,
+    =when
+    =this flag is active,
+    =a new file is created and the stream pointer is
+    =changed to write to this new file. In short runs the files may not be very
+    =large and so this functionality may not be needed
+sort-key=06
+trigger=namelist:xios_streams=filename : .false. ;
+       =namelist:xios_streams=reinit_end : .true. ;
+       =namelist:xios_streams=reinit_step : .true. ;
+       =namelist:xios_streams=reinit_start : .true. ;
+       =namelist:xios_streams=reinit_unit : .true. ;
+       =namelist:xios_streams=filename_base : .true. ;
+type=logical
+
+[namelist:xios_streams=reinit_unit]
+compulsory=true
+description=Time unit for periodic reinitialisation
+help=Time unit for periodic reinitialisation used by
+    =namelist:xios_streams=reinit_start,
+    =namelist:xios_streams=reinit_end and
+    =namelist:xios_streams=reinit_step. Takes values of hours,
+    =days,timesteps or months
+sort-key=07
+value-titles='None','Hours','Days','Timesteps','Months'
+values=0,1,2,3,4
+
+[namelist:xios_streams=reinit_start]
+compulsory=true
+description=Start for periodic reinitialisation of diagnostic stream files
+help=The start time for the generation of diagnostic NetCDF files in units of
+    =namelist:xios_streams=reinit_unit.  This gives the time of the first
+    =timestep where an output file for this stream should be created
+sort-key=08
+type=integer
+
+[namelist:xios_streams=reinit_end]
+compulsory=true
+description=End time for reinitialisation of diagnostic stream files
+help=The end time for the generation of diagnostic NetCDF files in units of
+    =namelist:xios_streams=reinit_unit.  After this time the stream will be
+    =closed to any future STASH requests
+sort-key=09
+type=integer
+
+[namelist:xios_streams=reinit_step]
+compulsory=true
+description=Period for periodic reinitialisation of diagnosic stream files
+help=Period for periodic reinitialisation of diagnositc stream files in units
+    =of namelist:xios_streams=reinit_unit. Starting from the time given by
+    =namelist:xios_streams=reinit_start this controls the absolute time until
+    =the current file is closed and a new one is initialised to take its place
+sort-key=10
+type=integer
+
+[namelist:xios_output_options]
+compulsory=true
+ns=iodef.xml/xios_um/XIOS Output Options
+
+[namelist:xios_output_options=format]
+compulsory=true
+description=NetCDF output format
+help=XIOS netCDF files can have 1 of 2 different formats
+    =
+    =NetCDF4 - Updated format based on HDF5, many enhanced features available
+    =
+    =NetCDF4 Classic Model - NetCDF4 format written to not use the enhanced
+    =features to remain compatatible with software written for the netCDF3 
+    =library. Such software can read this format with a simple recompile/relink 
+    =against the netCDF4 library.
+    =
+    =The XIOS default format is NetCDF4.
+sort-key=01
+value-titles=NetCDF4,NetCDF4 Classic Model
+values=1,2
+
+[namelist:xios_output_options=file_type]
+compulsory=true
+description=Output single or multiple files
+help=Define the type of file output
+    =
+    =Single file - Single global file per stream is written using 
+    =netCDF4 parallel I/O.
+    =
+    =Multiple file - One file per XIOS server per stream is written
+    =using sequential netCDF I/O.
+sort-key=02
+value-titles=Single file,Multiple file
+values=1,2
+
+[namelist:xios_output_options=prec]
+compulsory=true
+description=Floating point precision of variables
+sort-key=03
+value-titles=32-bit,64-bit
+values=4,8
+
+[namelist:xios_output_options=packing]
+compulsory=true
+description=Packing profile
+help=Packing profile for XIOS output. Each STASH item has 10 packing
+    =profiles defined. These are numbers that define the accuracy to which the
+    =field will be packed when written to XIOS files. Each of the ten profiles can
+    =be defined as the standard packing for a particular configuration. Using
+    =packing reduces the space requirement to about one third the unpacked size.
+    =The following packing profiles are currently defined for XIOS output:
+    =
+    = 0 -> unpacked
+    = 1 -> packed as required for operational output streams
+    = 2 -> packed as required for standard climate output
+    = 4 -> packed as required for stratosphere model output
+    = 5 -> New standard climate packing
+    = 7 -> Packing suitable for 1-4km res regional runs
+sort-key=10
+value-titles='Unpacked','Operational','Standard Climate','Stratosphere',
+            ='New Climate','Convective-scale (<5km)'
+values=0,1,2,4,5,7
+
+[namelist:xios_output_options=is_rotated]
+compulsory=true
+description=Does output grid have rotated poles
+sort-key=11
+type=logical
+
+[namelist:xios_output_options=l_regrid]
+compulsory=true
+description=Regrid output fields using XIOS
+sort-key=12
+trigger=namelist:xios_output_options=grid_type : .true. ;
+        namelist:xios_output_options=interp_order : .true. ;
+type=logical
+
+[namelist:xios_output_options=interp_order]
+compulsory=true
+description=Define the order of interpolation
+sort-key=13
+value-titles=First order,Second order
+values=1,2
+
+[namelist:xios_output_options=grid_type]
+compulsory=true
+description=Select type of grid to regrid output fields to
+sort-key=14
+trigger=namelist:xios_output_options=nlat_regrid : 1;
+value-titles=None,Octahedral reduced Gaussian grid
+values=0,1
+
+[namelist:xios_output_options=nlat_regrid]
+compulsory=true
+description=Number of latitude points for regridded data
+sort-key=15
+type=integer
+
+[ns=iodef.xml/xios_um/XIOS Output Options]
+sort-key=1c
+
+[ns=iodef.xml/xios_um/XIOS Output Streams]
+sort-key=1d
+
+[namelist:nlstcgen]
+compulsory=true
+ns=iodef.xml/xios_um/Model Timestep
+
+[namelist:nlstcgen=secs_per_periodim]
+compulsory=true
+description=Number of seconds per period,typically 1 day (86400 sec).
+fail-if=this % 86400 != 0 #Must be a whole number of days
+help=Period must be a whole number of days. Seconds in one day are 86400.
+ns=iodef.xml/xios_um/Model Timestep
+range=86400:1036800
+type=integer
+
+[namelist:nlstcgen=steps_per_periodim]
+compulsory=true
+description=Number of time steps per period
+fail-if=namelist:nlstcgen=secs_per_periodim % this != 0;
+       =# Number of seconds in period must be a multiple of the number of steps
+help=Number of time steps must divide into one hour
+ns=iodef.xml/xios_um/Model Timestep
+range=1:86400
+type=integer
+
+[ns=iodef.xml/xios_um/Model Timestep]
+description=
+sort-key=1a
+
+[ns=iodef.xml/xios_um/STASH Requests and Profiles]
+description=Please expand and select a page
+sort-key=1e
+
+[ns=iodef.xml/xios_um/STASH Requests and Profiles/streq]
+macro=stash_indices.TidyStashTransformPruneDuplicated,
+     =stash_indices.TidyStashValidate,
+     =stash_testmask.STASHTstmskValidate,
+     =stash_indices.TidyStashTransform,
+     =output_streams.OutputStreamValidate,
+     =stash_requests.StashProfilesValidate,
+     =stash_requests.StashProfilesRemoveUnused,
+     =profile_names.ProfileNameValidate
+title=STASH Requests
+
+[namelist:nlcfiles=streqlog]
+compulsory=true
+description=File for stash requests log
+help=The full path to the file which will contain the STASH requests output log
+ns=iodef.xml/xios_um/STASH Requests and Profiles
+type=character
+
+[namelist:exclude_package]
+compulsory=false
+duplicate=true
+help=the optional exclude_package section is a way to specifiy a group of
+    =diagnostic requests that should be ignored in a model run and not output.
+    =To ignore more than one package, provide more than one exclude_package
+    =xios_um.
+ns=iodef.xml/xios_um/STASH Requests and Profiles/exclude_package
+title=Packages to exclude
+
+[namelist:exclude_package=package]
+compulsory=true
+description=Name of package to exclude
+help=Name of a package to exclude from stash output
+    =For this to have an effect it should match a package mentioned
+    =in the stash panel.
+pattern=(?# Must be between 0 and 40 characters)^'.{0,40}'$
+type=character
+
+[namelist:umstash_domain]
+duplicate=true
+macro=profile_names.ProfileNameValidate
+ns=iodef.xml/xios_um/STASH Requests and Profiles/domain
+title=Domain Profiles
+
+[namelist:umstash_domain=dom_name]
+compulsory=true
+description=Name of domain profile
+help=This is the name of a domain profile
+    = which can be selected in the stash panel.
+    = max of 16 characters
+pattern=(?# Must be between 1 and 16 characters)^'.{1,16}'$
+sort-key=a10
+type=character
+
+[namelist:umstash_domain=iest]
+compulsory=true
+description=Eastern limit of data
+help=Please provide Eastern limit of data for extracted sub domain
+type=integer
+
+[namelist:umstash_domain=ilevs]
+compulsory=true
+description=How would you like to select requested levels?
+help=Output levels may be specified as any single contiguous range
+    =or as a list of individual levels
+sort-key=a21
+trigger=namelist:umstash_domain=levb: 1;
+       =namelist:umstash_domain=levt: 1;
+       =namelist:umstash_domain=levlst: 2;
+value-titles=provide range [bottom and top level numbers],
+            =provide an explicit list of model levels
+values=1,2
+
+[namelist:umstash_domain=imn]
+compulsory=true
+description=What type of spatial meaning is required?
+help=Spatial meaning option:
+    =0 None
+    =1 Vertical
+    =2 Zonal
+    =3 Meridional
+    =4 Horizontal area
+sort-key=a42
+value-titles=None,Vertical,Zonal,Meridional,Horizontal area
+values=0,1,2,3,4
+
+[namelist:umstash_domain=imsk]
+compulsory=true
+description=What type of masking of grid points is required?
+help=Options 1,2 and 3 are standard masking for all,
+    =land and sea points;
+    =Option 4 must be paired with a suitable Time profile,
+    =processing for
+    =max,min,
+    =mean or accumulated values. It will then use all non-MDI
+    =values instead of returning MDI if any value in the time window is MDI.
+    =This may be useful for max/min of an intermittent field like convective
+    =cloud base,
+    =but be careful and check for sensible results.
+sort-key=a41
+value-titles=Land and sea points,Land points only,Sea points only,
+            =Alternative missing data treatment for max/min (see Help)
+values=1,2,3,4
+
+[namelist:umstash_domain=inth]
+compulsory=true
+description=Northern limit of data
+help=Please provide Northern limit of data for extracted sub domain
+type=integer
+
+[namelist:umstash_domain=iopa]
+compulsory=true
+description=Which domain area is required?
+help=Allows output domain to be limited in various ways
+sort-key=a40
+trigger=namelist:umstash_domain=inth: 9,10;
+       =namelist:umstash_domain=isth: 9,
+       =10;
+       =namelist:umstash_domain=iest: 9,10;
+       =namelist:umstash_domain=iwst: 9,10;
+value-titles=Full model area,northern hemisphere only,
+            =southern hemisphere only,90N to 30N,30S to 90S,
+            =30N to equator,equator to 30S,30N to 30S,
+            =specified area in whole degrees,
+            =specified area in grid points
+values=1,2,3,4,5,6,7,8,9,10
+
+[namelist:umstash_domain=iopl]
+compulsory=true
+description=Select vertical level type for domain profile
+help=Try to choose a valid vertical level type for the variable;
+    =E.g. temperature may be output on theta levels but not rho levels,
+    =and can be interpolated to pressure or height levels,
+    =but surface and 1.5M temperature are always single level.
+sort-key=a20
+trigger=namelist:umstash_domain=ilevs: 1,2,6;
+       =namelist:umstash_domain=rlevlst: 3,4,
+       =7,8,9;
+value-titles=Variable derived on model rho levels (Charney-Phillips Grid),
+            =Variable derived on model theta levels (Charney-Phillips Grid),
+            =Variable on pressure levels (hPa),
+            =Variable on geometric height levels,
+            =Variable derived on a single or unspecified level,
+            =Variable on deep soil levels,
+            =Variable on constant theta surfaces (K),
+            =Variables on potential vorticity levels,
+            =Variables on cloud threshold levels (ocktas)
+values=1,2,3,4,5,6,7,8,9
+
+[namelist:umstash_domain=isth]
+compulsory=true
+description=Southern limit of data
+help=Please provide Southern limit of data for extracted sub domain
+type=integer
+
+[namelist:umstash_domain=iwst]
+compulsory=true
+description=Western limit of data
+help=Please provide Western limit of data for extracted sub domain
+type=integer
+
+[namelist:umstash_domain=iwt]
+compulsory=true
+description=What type of weighting is required
+help=type of weighting is required
+    =0 None
+    =1 Horizontal
+    =2 Volume
+    =3 Mass
+sort-key=a43
+value-titles=None,Horizontal,Volume,Mass
+values=0,1,2,3
+
+[namelist:umstash_domain=l_spml_ts]
+compulsory=true
+description=Time series for a single point on multiple levels
+help=Logical switch to turn on a different description of gridcells used
+    =in this domain time series. Instead of specifing the extent of a single
+    =region of interest which is 'collapsed' to a single value
+    =(see namelist:umstash_domain=ts) this option allows one to
+    =specify an entire column of gridcells for output. This manner of input is
+    =particularly convenient when setting up a time series to output a single
+    =point on multiple levels (SPML).
+    =Currently limited to a single site per domain profile.
+length=1
+sort-key=a50
+trigger=namelist:umstash_domain=spml_ns: .true.;
+       =namelist:umstash_domain=spml_ew: .true.;
+       =namelist:umstash_domain=spml_bot: .true.;
+       =namelist:umstash_domain=spml_top: .true.;
+       =namelist:umstash_domain=tblim: .false.;
+       =namelist:umstash_domain=tblimr: .false.;
+       =namelist:umstash_domain=ttlim: .false.;
+       =namelist:umstash_domain=ttlimr: .false.;
+       =namelist:umstash_domain=tnlim: .false.;
+       =namelist:umstash_domain=telim: .false.;
+       =namelist:umstash_domain=tslim: .false.;
+       =namelist:umstash_domain=twlim: .false.;
+       =namelist:umstash_domain=tsnum: .false.;
+type=logical
+
+[namelist:umstash_domain=levb]
+compulsory=true
+description=What is the bottom model level required
+help=the bottom of a range between this and levt
+sort-key=a22
+type=integer
+
+[namelist:umstash_domain=levlst]
+compulsory=true
+description=Please provide model levels list to output
+help=Please provide model levels list to output,
+    =code limit is 40 levels.
+length=40
+sort-key=a24
+type=integer
+
+[namelist:umstash_domain=levt]
+compulsory=true
+description=What is the top model level required
+help=the top of a range between this and levb
+sort-key=a23
+type=integer
+
+[namelist:umstash_domain=plt]
+compulsory=true
+description=Specify pseudo level type
+help=TBA
+sort-key=a30
+trigger=namelist:umstash_domain=pslist: this !=0 ;
+value-titles=None,SW radiation bands,LW radiation bands,
+            =Atmospheric assimilation groups,
+            =Radiation bands for calculating aerosol optical depth,
+            =HadCM2 Sulphate Loading Pattern Index,
+            =Land and Vegetation Surface Types,Sea ice categories,
+            =Number of land surface tiles x maximum number of snow layers,
+            =COSP radar reflectivity bins,COSP number of hydrometeors,
+            =COSP backscattering ratio bins,COSP ISCCP tau bins,
+            =COSP max. num. of subcolumns output,
+            =Vera probabilities of visibility below visible thresholds,
+            =Vera visibility centiles,
+            =Reflectivity thresholds for calculating echo-top height
+values=0,1,2,3,4,8,9,10,11,12,13,14,15,16,17,18,19
+
+[namelist:umstash_domain=pslist]
+compulsory=true
+description=Please provide pseudo levels list to output
+help=Please provide levels list to output,
+    =code limit is 500 levels.
+length=500
+sort-key=a31
+type=integer
+
+[namelist:umstash_domain=rlevlst]
+compulsory=true
+description=Please provide levels list to output
+help=Please provide levels list to output,
+    =code limit is 40 levels.
+length=40
+sort-key=a25
+type=real
+
+[namelist:umstash_domain=spml_bot]
+compulsory=true
+description=Lowest level for SPML time series
+fail-if=this>namelist:umstash_domain=spml_top;
+       =#Bottom of SPML time series must be equal to or below the top
+help=Lowest level for the single point on multiple levels (SPML) time series.
+    =This specifies the bottom model level of the column above the site specified by
+    =namelist:umstash_domain=spml_ns and namelist:umstash_domain=spml_ew.
+length=1
+range=0:
+sort-key=a53
+type=integer
+
+[namelist:umstash_domain=spml_ew]
+compulsory=true
+description=East-West coordinates for SPML time series
+help=East-West coordinates for the single point on multiple levels (SPML) time series.
+    =Currently limited to a single site (and the model levels above it).
+length=1
+sort-key=a52
+type=integer
+
+[namelist:umstash_domain=spml_ns]
+compulsory=true
+description=North-South coordinates for the SPML time series
+help=North-South coordinates for single point on multiple levels (SPML) time series.
+    =Currently limited to a single site (and the model levels above it).
+length=1
+sort-key=a51
+type=integer
+
+[namelist:umstash_domain=spml_top]
+compulsory=true
+description=Top level for SPML time series
+fail-if=this<namelist:umstash_domain=spml_bot;
+       =#Top of SPML time series must be above or equal to bottom
+help=Top level for single point on multiple levels (SPML) time series.
+    =This specifies the top model level of the column above the site specified by
+    =namelist:umstash_domain=spml_ns and namelist:umstash_domain=spml_ew.
+length=1
+range=0:
+sort-key=a54
+type=integer
+
+[namelist:umstash_domain=tblim]
+compulsory=true
+description=What is the bottom model level required for ts?
+help=the bottom of a range between this and ttlim,
+    =provide tsnum values
+length=:
+sort-key=a53
+type=integer
+
+[namelist:umstash_domain=tblimr]
+compulsory=true
+description=What is the bottom model level required for ts?
+help=the bottom of a range between this and ttlimr,
+    =provide tsnum values
+length=:
+sort-key=a55
+type=real
+
+[namelist:umstash_domain=telim]
+compulsory=true
+description=Eastern limit of data for ts
+help=Please provide Eastern limit of data for extracted ts
+length=:
+sort-key=a59
+type=integer
+
+[namelist:umstash_domain=tnlim]
+compulsory=true
+description=Northern limit of data for ts
+help=Please provide Northern limit of data for extracted ts
+length=:
+sort-key=a57
+type=integer
+
+[namelist:umstash_domain=ts]
+compulsory=true
+description=Is this a timeseries profile?
+help=Using timeseries to investigate model behaviour.
+    =-------------------------------------------------
+    =
+    =UM timeseries can provide a useful means of looking at the behaviour
+    =of the model at selected locations. This is best done by selecting a
+    =small number of grid points of interest (eg because the behaviour of
+    =the model with two different physics parametrisations changes at these
+    =locations).  The next step is to decide which output fields are of
+    =interest.  In this type of investigation it is usually useful to get
+    =out timeseries with a time profile of every timestep. Fields of
+    =interest would often include top of atmosphere radiation,
+    =surface radiation,surface latent heat,surface sensible heat,
+    =precipitation,surface temperature & or 1.5m temperature,
+    =boundary layer depth. In many studies it will also be useful to
+    =get out T,
+    =q,qcl,qcf,layer cloud,
+    =convective cloud on all model levels for the selected grid
+    =points. These fields can then be plotted as model level versus time
+    =sections and will show what is happening in the model.  U & V can also
+    =be output but because of the grid on which u and v are held ie offset
+    =by 1/2 grid length from T,
+    =q grid they will not be at the same
+    =locations.
+    =
+    =In most studies of this type a short run of 1-3 months outputting
+    =timeseries is usually enough. Note that including timeseries increases
+    =the memory requirements of the run. If a lot of points and fields are
+    =requested every timestep the memory required will quickly exceed that
+    =required in normal climate runs. It may be necessary to reinitialise
+    =the timeseries on periods of less than 30 days.
+    =
+    =Setting up timeseries requests
+    =------------------------------
+    =
+    =STASH time series are defined by both domain and time profiles.
+    =
+    =The facility allows you to specify a number of "boxes",
+    =these get collapsed
+    =down to point values by meaning (using any weighting defined in the domain
+    =profile).
+    =
+    =This list of point values is written to an area of memory at intervals defined
+    =by the sampling frequency in the time profile.
+    =
+    =The time profile also defines an over-writing period to stop the list becoming
+    =too long. It is normal to output the result at the same frequency as the
+    =over-writing period.
+    =
+    =eg.
+    =days                            0           1           2           3
+    =timesteps                       .............................................
+    =sampling freq 12hrs                   |     |     |     |     |     |
+    =over-writing freq 24hrs                     x           x           x
+    =output freq 24hrs                           +           +           +
+    =
+    =would result in a "PP-fields" each with 2 time levels and as many points as
+    =are defined in the domain profile. The "fields" would be produced each day.
+    =If 3 "points" were defined,
+    =the file would contain "fields" vis:
+    =
+    =Field 1.  VAL(point=1,
+    =time=12),VAL(point=2,time=12),VAL(point=3,time=12),
+    =VAL(point=1,time=24),VAL(point=2,time=24),VAL(point=3,
+    =time=24)
+    =Field 2.  VAL(point=1,time=36),VAL(point=2,
+    =time=36),VAL(point=3,time=36),VAL(point=1,time=48),
+    =VAL(point=2,time=48),VAL(point=3,
+    =time=48)
+    =etc.
+    =
+    =
+    =This panel allows two methods of specifying boxes. In the first
+    =method,
+    =a box is specified by giving the range of points it contains
+    =in both horizontal directions and the number of levels it
+    =contains. Thus,
+    =each line of the table describes a single box.
+    =
+    =The second method is used for specifying boxes of a single grid point
+    =on one level. In this method,
+    =a range of levels indicates one box for
+    =each level. This method is quicker to set up when you want to look at
+    =the same point separately on a number of levels.
+    =
+    =To compare the methods,
+    =if you wanted to look at point 3,5 on levels
+    =4,
+    =5 and 6 then in the first method you would have 3 rows:
+    =
+    =3  3  5  5  4
+    =3  3  5  5  5
+    =3  3  5  5  6
+    =
+    =whereas in the second method you would require one row:
+    =
+    =3  5  4  6
+    =
+    =When specifying boxes of more than one gridpoint it may be that some
+    =of the dimensions of the boxes may be collapsed out by other
+    =attributes of the domain profile. For example,
+    =doing a vertical mean
+    =on the previous window will mean that a timeseries on more than one
+    =level is not relevant. In such cases,
+    =the unused columns in the table
+    =are disabled.
+    =
+    =Only the atmospheric model allows true boxes at present. Other models can
+    =only deal with points,
+    =so specify the "first" and "last" dimensions as
+    =the same,
+    =or use the second method of specifying timeseries.
+    =
+    =It is normal to specify the full horizontal domain in the HORIZONTAL window of
+    =a time series profile. Spatial averaging is not normally required.
+    =
+    =All dimensions must lie within the box defined by the rest of the profile.
+    =
+    =Special PP-package programs are required to access time-series.
+sort-key=a50
+trigger=namelist:umstash_domain=l_spml_ts: .true.;
+       =namelist:umstash_domain=tsnum: .true.;
+       =namelist:umstash_domain=tblim: .true.;
+       =namelist:umstash_domain=ttlim: .true.;
+       =namelist:umstash_domain=tblimr: .true.;
+       =namelist:umstash_domain=ttlimr: .true.;
+       =namelist:umstash_domain=tnlim: .true.;
+       =namelist:umstash_domain=tslim: .true.;
+       =namelist:umstash_domain=telim: .true.;
+       =namelist:umstash_domain=twlim: .true.;
+type=logical
+
+[namelist:umstash_domain=tslim]
+compulsory=true
+description=Southern limit of data for ts
+help=Please provide Southern limit of data for extracted ts
+length=:
+sort-key=a58
+type=integer
+
+[namelist:umstash_domain=tsnum]
+compulsory=true
+description=How many time series domains are required?
+help=See ts help.
+range=0:
+sort-key=a52
+trigger=namelist:umstash_domain=tblim: this > 0;
+       =namelist:umstash_domain=ttlim: this > 0;
+       =namelist:umstash_domain=tblimr: this > 0;
+       =namelist:umstash_domain=ttlimr: this > 0;
+       =namelist:umstash_domain=tnlim: this > 0;
+       =namelist:umstash_domain=tslim: this > 0;
+       =namelist:umstash_domain=telim: this > 0;
+       =namelist:umstash_domain=twlim: this > 0;
+type=integer
+
+[namelist:umstash_domain=ttlim]
+compulsory=true
+description=What is the top model level required for ts?
+help=the top of a range between this and tblim,
+    =provide tsnum values
+length=:
+sort-key=a54
+type=integer
+
+[namelist:umstash_domain=ttlimr]
+compulsory=true
+description=What is the top model level required for ts?
+help=the top of a range between this and tblimr,
+    =provide tsnum values
+length=:
+sort-key=a56
+type=real
+
+[namelist:umstash_domain=twlim]
+compulsory=true
+description=Western limit of data for ts
+help=Please provide Western limit of data for extracted ts
+length=:
+sort-key=a60
+type=integer
+
+[namelist:umstash_streq]
+duplicate=true
+ns=iodef.xml/xios_um/STASH Requests and Profiles/streq
+widget[rose-config-edit:sub-ns]=stash.StashSummaryDataPanelv1
+
+[namelist:umstash_streq=dom_name]
+compulsory=true
+description=Domain Profile
+pattern=(?# Must be between 1 and 16 characters)^'.{1,16}'$
+type=character
+
+[namelist:umstash_streq=isec]
+compulsory=true
+description=Section Number
+range=0:
+type=integer
+
+[namelist:umstash_streq=item]
+compulsory=true
+description=Item Number
+type=integer
+
+[namelist:umstash_streq=package]
+compulsory=true
+description=Package
+pattern=(?# Must be between 0 and 40 characters)^'.{0,40}'$
+type=character
+
+[namelist:umstash_streq=tim_name]
+compulsory=true
+description=Time Profile
+pattern=(?# Must be between 1 and 16 characters)^'.{1,16}'$
+type=character
+
+[namelist:umstash_streq=use_name]
+compulsory=true
+description=Usage Profile
+pattern=(?# Must be between 1 and 16 characters)^'.{1,16}'$
+type=character
+
+[namelist:umstash_streq=ens_name]
+compulsory=true
+description=Ensemble Diagnostic Profile
+pattern=(?# Must be between 0 and 16 characters)^'.{0,16}'$
+type=character
+
+[namelist:umstash_time]
+duplicate=true
+macro=profile_names.ProfileNameValidate
+ns=iodef.xml/xios_um/STASH Requests and Profiles/time
+title=Time Profiles
+
+[namelist:umstash_time=iedt]
+compulsory=true
+description=Select end date and time
+help=The date and time for start of regular data YYYY,MM,DD,HH,
+    =MM,SS
+length=6
+sort-key=a52
+type=integer
+
+[namelist:umstash_time=iend]
+compulsory=true
+description=End time of diag output
+help=Please select a time to end output from time profile,
+    =units unt3
+    =set to -1 to go to end of forecast run
+sort-key=a33
+type=integer
+
+[namelist:umstash_time=ifre]
+compulsory=true
+description=Frequency of diag output
+help=Please select frequency to output data,using units unt3
+sort-key=a34
+type=integer
+
+[namelist:umstash_time=intv]
+compulsory=true
+description=Specify the Time Interval for processing
+help=Enter time interval over which to process the data,
+    =units are described by unt1
+sort-key=a21
+type=integer
+
+[namelist:umstash_time=ioff]
+compulsory=true
+description=Specify the Sampling offset (0 for no offset)
+help=One can select to offset the sampling frequency from the time interval,
+    =units are described by unt2
+sort-key=a27
+type=integer
+
+[namelist:umstash_time=iopt]
+compulsory=true
+description=Diagnostic output option
+help=Please select a time unit for output times. Only regular intervals is valid when time processing.
+sort-key=a31
+trigger=namelist:umstash_time=istr: 1;
+       =namelist:umstash_time=lts0: 1;
+       =namelist:umstash_time=iend: 1;
+       =namelist:umstash_time=ifre: 1,
+       =3;
+       =namelist:umstash_time=itimes: 2;
+       =namelist:umstash_time=iser: 2;
+       =namelist:umstash_time=isdt: 3;
+       =namelist:umstash_time=iedt: 3;
+value-titles=Regular intervals,specified list,
+            =Regular intervals start/stop dates
+values=1,2,3
+
+[namelist:umstash_time=isam]
+compulsory=true
+description=Specify the Sampling Period (frequency)
+help=Enter sampling period,the units are described by unt2
+sort-key=a25
+type=integer
+
+[namelist:umstash_time=isdt]
+compulsory=true
+description=Select start date and time
+help=The date and time for start of regular data YYYY,MM,DD,HH,
+    =MM,SS
+length=6
+sort-key=a51
+type=integer
+
+[namelist:umstash_time=iser]
+compulsory=true
+description=List of times data is required,using unit UNT3
+help=List of times data is required,using unit UNT3
+length=:
+sort-key=a42
+type=integer
+
+[namelist:umstash_time=istr]
+compulsory=true
+description=Start time of diag output
+help=Please select a time to start output from time profile,
+    =units unt3
+sort-key=a32
+trigger=namelist:umstash_time=lts0: 0
+type=integer
+
+[namelist:umstash_time=itimes]
+compulsory=true
+description=How many specific times do you require the output?
+help=How many specific times do you require the output?
+range=0:
+sort-key=a41
+type=integer
+
+[namelist:umstash_time=ityp]
+compulsory=true
+description=Specify time processing required
+help=Time profiles have three sets of parameters
+    =1. The type of time processing,
+    =if any,that is required.
+    =2. If time processing is selected,
+    =the period over which to process data,
+    =and the sampling period.
+    =3. The output times for data. The first question in the panel defines time processing choices.
+    =Single time fields:are snap-shots of a field output at the timesteps implied by the second part of the window,
+    =i.e. no time processing.
+    =Accumulations and Means:Need to be accumulated over an interval,
+    =known as the period. Values that make up the mean/accumulation do not need to be taken from each timestep but most often are,
+    =in which case set the sampling frequency to 1 timestep.
+    =Time series: Are best used in conjunction with time series domain profiles. A series of data points is appended at the frequency specified into STASH reserved space in dump. The data in dump is overwritten every re-cycling period. see below:
+    =Special day-mean time series: Are best used in conjunction with time series domain profiles. A series of data points is appended at the frequency specified into STASH reserved space in dump. The data in dump is overwritten every re-cycling period. The data is based on daily sampling of timestep means over the day. Hence,
+    =sampling period must be 1 day and sampling offset must be zero.
+    =Maximum/minimum:Settings should be similar to accumulations. The period defines the period over which the extremum is calculated and the sampling frequency defines the timesteps at which the checks of current values against current extrema are made (most often 1 timestep).
+    =If one of the time processing options is selected,
+    =an area in the dump is used to hold a working copy of the diagnostic.
+sort-key=a1
+trigger=namelist:umstash_time=isam: this !=1 ;
+       =namelist:umstash_time=intv: this !=1 ;
+       =namelist:umstash_time=unt1: this !=1 ;
+       =namelist:umstash_time=unt2: this !=1 ;
+       =namelist:umstash_time=ioff: this !=1 ;
+value-titles=No time processing,
+            =Time accumulation specify period and sampling frequency,
+            =Time mean specify meaning period and sampling frequency,
+            =time series specify recycling period and sampling frequency,
+            =Maximum value in a period specify period and sampling frequency,
+            =Minimum value in a period specify period and sampling frequency,
+            =Special daily mean time series
+values=1,2,3,4,5,6,8
+widget[rose-config-edit]=rose.config_editor.valuewidget.radiobuttons.RadioButtonsValueWidget
+
+[namelist:umstash_time=lts0]
+compulsory=true
+description=Disable output of diagnostics at TimeStep 0
+help=Some diagnostics from section 0 and 16 can (nominally) be output
+    =at TimeStep 0.
+    =In order to preserve consistency between diagnostic output from
+    =an NRun and a CRun this functionality can be switched off.
+    =
+    =Disabling output at TimeStep 0 is recommended for Climate jobs.
+sort-key=a35
+type=logical
+
+[namelist:umstash_time=tim_name]
+compulsory=true
+description=Name of time profile
+help=This is the name of a time profile
+    = which can be selected in the stash panel.
+    = Max of 16 characters
+pattern=(?# Must be between 1 and 16 characters)^'.{1,16}'$
+sort-key=a11
+type=character
+
+[namelist:umstash_time=unt1]
+compulsory=true
+description=Units for Time Interval processing
+fail-if=this == 2 and (namelist:umstash_time=intv * 3600) % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of intv must be a multiple of the timestep to use Hours unit;
+       =this == 5 and (namelist:umstash_time=intv * 60) % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of intv must be a multiple of the timestep to use Minutes unit;
+       =this == 6 and namelist:umstash_time=intv % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of intv must be a multiple of the timestep to use Seconds unit;
+help=Please select a time units for time processing.
+    =We try to check use of Hours, Minutes or Seconds is consistent with
+    =model timestep
+sort-key=a22
+value-titles=Timesteps, Hours, Days, Dump periods, Minutes, Seconds
+values=1,2,3,4,5,6
+
+[namelist:umstash_time=unt2]
+compulsory=true
+description=Units for sampling period (frequency)
+fail-if=this == 2 and (namelist:umstash_time=isam * 3600) % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of isam must be a multiple of the timestep to use Hours unit;
+       =this == 5 and (namelist:umstash_time=isam * 60) % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of isam must be a multiple of the timestep to use Minutes unit;
+       =this == 6 and namelist:umstash_time=isam % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of isam must be a multiple of the timestep to use Seconds unit;
+help=Please select a time units for sampling period.
+    =We try to check use of Hours, Minutes or Seconds is consistent with
+    =model timestep
+sort-key=a26
+value-titles=Timesteps, Hours, Days, Dump periods, Minutes, Seconds
+values=1,2,3,4,5,6
+
+[namelist:umstash_time=unt3]
+compulsory=true
+description=Units for output times of diag
+fail-if=this == 2 and (namelist:umstash_time=istr * 3600) % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of istr must be a multiple of the timestep to use Hours unit;
+       =this == 5 and (namelist:umstash_time=istr * 60) % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of istr must be a multiple of the timestep to use Minutes unit;
+       =this == 6 and namelist:umstash_time=istr % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of istr must be a multiple of the timestep to use Seconds unit;
+       =this == 2 and (namelist:umstash_time=iend * 3600) % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of iend must be a multiple of the timestep to use Hours unit;
+       =this == 5 and (namelist:umstash_time=iend * 60) % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of iend must be a multiple of the timestep to use Minutes unit;
+       =this == 6 and namelist:umstash_time=iend % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of iend must be a multiple of the timestep to use Seconds unit;
+       =this == 2 and (namelist:umstash_time=ifre * 3600) % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of ifre must be a multiple of the timestep to use Hours unit;
+       =this == 5 and (namelist:umstash_time=ifre * 60) % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of ifre must be a multiple of the timestep to use Minutes unit;
+       =this == 6 and namelist:umstash_time=ifre % (namelist:nlstcgen=secs_per_periodim / namelist:nlstcgen=steps_per_periodim) != 0;
+       =# Value of ifre must be a multiple of the timestep to use Seconds unit;
+help=Please select a time unit for output times.
+    =Please ensure use of Hours, Minutes or Seconds is consistent with
+    =model timestep
+sort-key=a30
+value-titles=Timesteps, Hours, Days, Dump periods, Minutes, Seconds
+values=1,2,3,4,5,6
+
+[namelist:umstash_use]
+duplicate=true
+macro=output_streams.OutputStreamValidate
+ns=iodef.xml/xios_um/STASH Requests and Profiles/use
+title=Usage Profiles
+
+[namelist:umstash_use=file_id]
+compulsory=true
+description=file ID of FF output stream
+help=When requesting output to a user netCDF file this provides the 
+    =file ID of the output stream from the namelist:xios_streams section
+pattern=(?# Must be between 1 and 20 characters)^'.{1,20}'$
+sort-key=a3
+type=character
+
+[namelist:umstash_use=use_name]
+compulsory=true
+description=Name of useage profile
+help=This is the name of a usage profile
+    = which can be selected in the stash panel.
+    = This will be linked with a UM FF output stream or store (TAG)
+    = max of 16 characters
+pattern=(?# Must be between 1 and 16 characters)^'.{1,16}'$
+sort-key=a1
+type=character
+
+[namelist:umstash_ens]
+duplicate=true
+ns=iodef.xml/xios_um/STASH Requests and Profiles/ens
+title=Ensemble Diagnostic Profiles
+
+[namelist:umstash_ens=ens_name]
+compulsory=true
+description=Name of ensemble diagnostic profile
+pattern=(?# Must be between 0 and 16 characters)^'.{0,16}'$
+sort-key=a1
+type=character
+
+[namelist:umstash_ens=mean]
+compulsory=true
+description=Create ensemble mean diagnostic?
+sort-key=a2
+type=logical
+
+[namelist:umstash_ens=output]
+compulsory=true
+description=Number of ensemble members to output
+sort-key=a3
+value-titles=All,None,Range,List
+values=all,none,range,list
+trigger=namelist:umstash_ens=member_list: list;
+       =namelist:umstash_ens=member_first: range;
+       =namelist:umstash_ens=member_last: range;
+
+[namelist:umstash_ens=member_list]
+compulsory=true
+description=List of ensemble members to output
+sort-key=a4
+length=:
+type=integer
+
+[namelist:umstash_ens=member_first]
+compulsory=true
+description=First ensemble member to output
+sort-key=a5
+type=integer
+
+[namelist:umstash_ens=member_last]
+compulsory=true
+description=Last ensemble member to output
+sort-key=a6
+type=integer
+

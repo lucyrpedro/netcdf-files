@@ -1,0 +1,102 @@
+#!jinja2
+
+{% set OMPTHR_ATM = OMPTHR_ATM if OMPTHR_ATM is defined else 1 %}
+{% set HYPERTHREADS = 2 if (LAHYPER is defined and LAHYPER) else 1 %}
+{% set IOS_NPROC = IOS_NPROC if IOS_NPROC is defined else 0 %}
+{% set ATMOS_NENS = ATM_NENS if ATM_NENS is defined else 0 %}
+{% if ATMOS_NENS > 0 %}
+  {% set MODELS = "um_ens" %}
+{% else %}
+  {% set MODELS = "um" %}
+{% endif %}
+{% set XIOS_NPROC = XIOS_NPROC if XIOS_NPROC is defined else 0 %}
+{% if XIOS_NPROC > 0 %}
+  {% set MODELS = MODELS+" xios" %}
+{% endif %}
+
+{% macro format_final(run_periods, fmt='PT1S') -%}
+    {%- set ENDYR = '+P%dY'%(run_periods[0]) if run_periods[0] > 0 else '' -%}
+    {%- set ENDMO = '+P%dM'%(run_periods[1]) if run_periods[1] > 0 else '' -%}
+    {%- set ENDDA = '+P%dD'%(run_periods[2]) if run_periods[2] > 0 else '' -%}
+    {%- set ENDHR = '+PT%dH'%(run_periods[3]) if run_periods[3] > 0 else '' -%}
+    {%- set ENDMI = '+PT%dM'%(run_periods[4]) if run_periods[4] > 0 else '' -%}
+    {{ENDYR}}{{ENDMO}}{{ENDDA}}{{ENDHR}}{{ENDMI}}-{{fmt}}
+{%- endmacro %}
+
+{% if BASIS[0] == 0 %}
+  {% set CYCLE_INIT = '00010101' %}
+{% else %}
+  {% set CYCLE_INIT = '%04d%02d%02dT%02d%02d' % (BASIS[0],BASIS[1],BASIS[2],BASIS[3],BASIS[4]) %}
+{% endif %}
+{% set FMT = 'P' + ('T' if CYCLE == 'm' or CYCLE == 'H' else '') + RESUB|string + CYCLE|upper %}
+
+[cylc]
+    UTC mode = True 
+    # Timeout handlers
+    [[events]]
+        timeout = P1D
+
+[scheduling]
+    cycling mode        = {{CALENDAR}}
+    initial cycle point = {{CYCLE_INIT}}
+    final cycle point   = {{CYCLE_INIT}}
+    max active cycle points = 3
+    [[dependencies]]
+      [[[ R1 ]]]
+        graph = """
+{%- if BUILD %}
+         {{ 'fcm_make => fcm_make2' + (' => recon' if RECON else ' => atmos' if RUN else '') }}
+{% endif %}
+{% if BUILD_DRIVERS %}
+         {{ 'fcm_make_drivers => fcm_make2_drivers' + (' => atmos' if RUN else '') }}
+{% endif %}
+{% if CREATE_XIOS_XML %}
+         {{ 'xml'  + (' => atmos' if RUN else '') }}
+{% endif %}
+{% if RUN and ATMOS_NENS > 0 %}
+         ens_setup_all => atmos
+{% endif %}
+{% if RECON %}
+         {{ 'recon' + (' => atmos' if RUN else '') }}
+{% elif RUN %}
+         atmos
+{% endif %}
+        """
+      [[[ {{FMT}} ]]]
+        graph = """
+{% if RUN and ATMOS_NENS > 0 %}
+          ens_setup_all[-{{FMT}}] => ens_setup_all => atmos
+{% endif %}
+{% if RUN %}
+          atmos[-{{FMT}}] => atmos
+{% endif %}
+        """
+
+[runtime]
+# Root, inherited by everything
+    [[root]]
+        init-script = """
+export CYLC_VERSION={{CYLC_VERSION}}
+export ROSE_VERSION={{ROSE_VERSION}}
+"""
+        command scripting = "rose task-run --verbose"
+        [[[events]]]
+            # Cylc has sensible defaults for event notification- only add
+            # to the entry below if you want to be notified by mail
+            mail events = submission failed, submission timeout, submission retry, retry, failed, timeout
+            submission timeout = P1D # 1 day
+        [[[environment]]]
+            MODELBASIS = '{{ BASIS | join(',') }}'
+            CUMFDIR=$CYLC_TASK_WORK_PATH
+            DATAW=$CYLC_TASK_WORK_PATH
+            DATAM=$CYLC_SUITE_SHARE_DIR/data/History_Data
+            RUNID=$(echo -n $CYLC_SUITE_NAME | cut -d - -f 2 | cut -c 1-5)
+            XIOS_XML=$CYLC_SUITE_SHARE_DIR/data/xml
+            USE_XIOS={{ USE_XIOS | lower}}
+            ROSE_ORIG_HOST={{ ROSE_ORIG_HOST }}
+            INPUT_DATA=/work/y07/shared/umshared/standard_jobs/inputs/vn{{VN}}
+            MODELS = {{ MODELS }}
+            VN = {{ VN }}
+
+# Include site specific configurations
+{% include 'site/'+SITE+'.rc' %}
