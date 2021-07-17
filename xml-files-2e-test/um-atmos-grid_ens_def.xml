@@ -5,10 +5,9 @@
 		<axis axis_ref="ensemble" />
 	</grid>
 
-
 	<grid id="um-atmos_grid_t_ufs_ens">
 		<domain domain_ref="um-atmos_grid_t" />
-		<scalar id="ensmean1">
+		<scalar id="ens-mean">
 			<reduce_axis operation="average" />
 		</scalar>
 	</grid>
