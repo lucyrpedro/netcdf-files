@@ -2,17 +2,17 @@
 
         <file description="UM output" id="x2" name="ce262a_pc" output_freq="3h" split_freq="3h">
 
-                <field field_ref="m01s00i024" id="m01s00i024_inst" name="m01s00i024" operation="instant" />
+                <field id="m01s00i024_inst" name="m01s00i024" field_ref="m01s00i024" operation="instant" />
 
-                <field field_ref="m01s00i024" id="m01s00i024_ens" name="m01s00i024_ens" grid_ref="um-atmos_grid_t_ufs_ens" operation="instant" />
+                <field id="m01s00i024_ens" name="m01s00i024_ens" field_ref="m01s00i024" grid_ref="um-atmos_grid_t_ufs_ens" operation="instant" />
 
-                <field name="sqav" id="sqav" field_ref="m01s00i024_ens" > m01s00i024_ens*m01s00i024_ens </field>
+                <field id="sqav" name="sqav" field_ref="m01s00i024_ens" > m01s00i024_ens*m01s00i024_ens </field>
 
-                <field name="ensq" id="ensq" field_ref="m01s00i024" > m01s00i024*m01s00i024  </field>
+                <field id="ensq" name="ensq" field_ref="m01s00i024" > m01s00i024*m01s00i024  </field>
 
-                <field name="avensq" id="avensq" field_ref="ensq" grid_ref="um-atmos_grid_t_ufs_ens" operation="instant" />
+                <field id="avensq" name="avensq" field_ref="ensq" grid_ref="um-atmos_grid_t_ufs_ens" operation="instant" />
 
-                <field name="stdev" id="stdev" grid_ref="um-atmos_grid_t_test" operation="instant" > sqrt(avensq - sqav) </field>
+                <field id="stdev" name="stdev" grid_ref="um-atmos_grid_t_test" operation="instant" > sqrt(avensq - sqav) </field>
 
         </file>
 
