@@ -1,5 +1,11 @@
 <field_definition default_value="-1073741824.0" prec="8"> 
 
-	<field id="m01s00i024_test" name="m01s00i024-field" grid_ref="um-atmos_grid_t_ufs" operation="average" enabled=".TRUE." />
+	<field
+		id="m01s00i024_test" 
+		name="m01s00i024-field" 
+		grid_ref="um-atmos_grid_t_ufs" 
+		operation="average" 
+		enabled=".TRUE." 
+	/>
 
 </field_definition>

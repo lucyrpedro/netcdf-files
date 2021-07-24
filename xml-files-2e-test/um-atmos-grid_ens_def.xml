@@ -1,15 +1,15 @@
 <grid_definition>
 
-        <grid id="um-atmos_grid_t_test">
-                <domain domain_ref="um-atmos_grid_t" />
-        </grid>
+	<grid id="um-atmos_grid_t_test">
+		<domain domain_ref="um-atmos_grid_t" />
+	</grid>
 
-        <grid id="um-atmos_grid_t_ufs_ens">
-                <domain domain_ref="um-atmos_grid_t" />
-                <scalar id="ens-mean">
-                        <reduce_axis operation="average" />
-                </scalar>
-        </grid>
+	<grid id="um-atmos_grid_t_ufs_ens">
+		<domain domain_ref="um-atmos_grid_t" />
+		<scalar id="ens-mean">
+			<reduce_axis operation="average" />
+		</scalar>
+	</grid>
 
 	<grid id="um-atmos_grid_t_ufs">
 		<domain domain_ref="um-atmos_grid_t" />

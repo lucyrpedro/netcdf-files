@@ -21,7 +21,7 @@
 			id="sqav"
 			name="sqav" 
 			field_ref="m01s00i024_ens" 
-		> m01s00i024_ens*m01s00i024_ens 
+			> m01s00i024_ens*m01s00i024_ens 
 		</field>
 
 		<field 
@@ -30,7 +30,7 @@
 			field_ref="m01s00i024_test"	
 			grid_ref="um-atmos_grid_t_ufs_ens"
 			operation="instant"
-		> m01s00i024_test*m01s00i024_test
+			> m01s00i024_test*m01s00i024_test
 		</field>
 
 		<field 
@@ -38,7 +38,7 @@
 			name="stdev" 
 			grid_ref="um-atmos_grid_t_test" 
 			operation="instant" 
-		> sqrt(avensq - sqav) 
+			> sqrt(avensq - sqav) 
 		</field>
 
         </file>
