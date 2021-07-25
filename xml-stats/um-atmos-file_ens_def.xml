@@ -19,12 +19,12 @@
 		</field>
 
 		<field
-    	id="ensq"
-      name="ensq"
-      operation="instant"
-      field_ref="m01s00i024"
-      > m01s00i024*m01s00i024
-    </field>
+			id="ensq"
+			name="ensq"
+			operation="instant"
+			field_ref="m01s00i024"
+			> m01s00i024*m01s00i024
+		</field>
 
 		<field
 			id="avensq"
@@ -43,100 +43,100 @@
 			> sqrt(avensq - sqav)
 		</field>
 
-    <field
-    	id="ens_add"
-      name="ens-add"
-      operation="instant"
-      field_ref="m01s00i024"
-    	> m01s00i024 + 1
+		<field
+			id="ens_add"
+			name="ens-add"
+			operation="instant"
+			field_ref="m01s00i024"
+			> m01s00i024 + 1
 		</field>
 
 		<field
-      id="ens_sub"
-      name="ens-sub"
-      operation="instant"
-      field_ref="m01s00i024"
-      > m01s00i024 - 2
-    </field>
+			id="ens_sub"
+			name="ens-sub"
+			operation="instant"
+			field_ref="m01s00i024"
+			> m01s00i024 - 2
+		</field>
 
 		<field
-      id="ens_mult"
-      name="ens-mult"
-      operation="instant"
-      field_ref="m01s00i024"
-      > m01s00i024*3
-    </field>
+			id="ens_mult"
+			name="ens-mult"
+			operation="instant"
+			field_ref="m01s00i024"
+			> m01s00i024*3
+		</field>
 
 		<field
-      id="ens_div"
-      name="ens-div"
-      operation="instant"
-      field_ref="m01s00i024"
+			id="ens_div"
+			name="ens-div"
+			operation="instant"
+			field_ref="m01s00i024"
 			> m01s00i024/4
-    </field>
-
-		<field
-      id="ens_pow"
-      name="ens-pow"
-      operation="instant"
-      field_ref="m01s00i024"
-      > m01s00i024^5
 		</field>
 
 		<field
-      id="ens_cos"
-      name="ens-cos"
-      operation="instant"
-      field_ref="m01s00i024"
-      > cos(m01s00i024)
-    </field>
-
-		<field
-      id="ens_sin"
-      name="ens-sin"
-      operation="instant"
-      field_ref="m01s00i024"
-      > sin(m01s00i024)
-    </field>
-
-		<field
-      id="ens_tan"
-      name="ens-tan"
-      operation="instant"
-      field_ref="m01s00i024"
-      > tan(m01s00i024)
-    </field>
-
-		<field
-	    id="ens_exp"
-	    name="ens-exp"
-	    operation="instant"
-	    field_ref="m01s00i024"
-	    > exp(m01s00i024)
-    </field>
-
-		<field
-      id="ens_log"
-      name="ens-log"
-      operation="instant"
-      field_ref="m01s00i024"
-      > log(m01s00i024)
-    </field>
-
-		<field
-      id="ens_log10"
-      name="ens-log10"
-      operation="instant"
-      field_ref="m01s00i024"
-      > log10(m01s00i024)
+			id="ens_pow"
+			name="ens-pow"
+			operation="instant"
+			field_ref="m01s00i024"
+			> m01s00i024^5
 		</field>
 
 		<field
-      id="ens_sqrt"
-      name="ens-sqrt"
-      operation="instant"
-      field_ref="m01s00i024"
-      > sqrt(m01s00i024)
+			id="ens_cos"
+			name="ens-cos"
+			operation="instant"
+			field_ref="m01s00i024"
+			> cos(m01s00i024)
+		</field>
+
+		<field
+			id="ens_sin"
+			name="ens-sin"
+			operation="instant"
+			field_ref="m01s00i024"
+			> sin(m01s00i024)
+		</field>
+
+		<field
+			id="ens_tan"
+			name="ens-tan"
+			operation="instant"
+			field_ref="m01s00i024"
+			> tan(m01s00i024)
+		</field>
+
+		<field
+			id="ens_exp"
+			name="ens-exp"
+			operation="instant"
+			field_ref="m01s00i024"
+			> exp(m01s00i024)
+		</field>
+
+		<field
+			id="ens_log"
+			name="ens-log"
+			operation="instant"
+			field_ref="m01s00i024"
+			> log(m01s00i024)
+		</field>
+
+		<field
+			id="ens_log10"
+			name="ens-log10"
+			operation="instant"
+			field_ref="m01s00i024"
+			> log10(m01s00i024)
+		</field>
+
+		<field
+			id="ens_sqrt"
+			name="ens-sqrt"
+			operation="instant"
+			field_ref="m01s00i024"
+			> sqrt(m01s00i024)
 		</field>
 
 		<field
