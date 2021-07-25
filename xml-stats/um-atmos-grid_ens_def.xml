@@ -1,0 +1,47 @@
+<grid_definition>
+
+	<grid id="um-atmos_grid_t_test">
+		<domain domain_ref="um-atmos_grid_t" />
+	</grid>
+
+	<grid id="um-atmos_grid_t_ufs">
+                <domain domain_ref="um-atmos_grid_t" />
+                <axis axis_ref="ensemble" />
+        </grid>
+
+	<grid id="um-atmos_grid_t_ufs_ens">
+		<domain domain_ref="um-atmos_grid_t" />
+		<scalar id="ens-mean">
+			<reduce_axis operation="average" />
+		</scalar>
+	</grid>
+
+        <grid id="um-atmos_grid_t_ufs_ens_average">
+                <domain domain_ref="um-atmos_grid_t" />
+                <scalar id="ens-average-grid">
+                        <reduce_axis operation="average" />
+                </scalar>
+        </grid>
+
+	<grid id="um-atmos_grid_t_ufs_ens_sum">
+                <domain domain_ref="um-atmos_grid_t" />
+                <scalar id="ens-sum-grid">
+                        <reduce_axis operation="sum" />
+                </scalar>
+	</grid>
+
+	<grid id="um-atmos_grid_t_ufs_ens_max">
+                <domain domain_ref="um-atmos_grid_t" />
+                <scalar id="ens-max-grid">
+                        <reduce_axis operation="max" />
+                </scalar>
+	</grid>
+
+	<grid id="um-atmos_grid_t_ufs_ens_min">
+                <domain domain_ref="um-atmos_grid_t" />
+                <scalar id="ens-min-grid">
+                        <reduce_axis operation="min" />
+                </scalar>
+	</grid>
+
+</grid_definition>

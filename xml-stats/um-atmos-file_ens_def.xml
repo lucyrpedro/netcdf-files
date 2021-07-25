@@ -1,0 +1,177 @@
+<file_definition format="netcdf4" time_counter="instant" type="one_file">
+	
+	<file description="UM output" id="x2" name="ce262a_pc" output_freq="3h" split_freq="3h">
+		
+		<field 
+			id="m01s00i024_ens" 
+			name="m01s00i024_ens" 
+			operation="instant"
+			field_ref="m01s00i024"
+			grid_ref="um-atmos_grid_t_ufs_ens" 
+		/>
+
+		<field 
+			id="sqav"
+			name="sqav" 
+			operation="instant"
+			field_ref="m01s00i024_ens" 
+			> m01s00i024_ens*m01s00i024_ens 
+		</field>
+
+                <field 
+                        id="ensq"
+                        name="ensq" 
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > m01s00i024*m01s00i024
+                </field>
+
+		<field 
+			id="avensq" 
+			name="avensq"
+			operation="instant"
+			field_ref="m01s00i024"
+			grid_ref="um-atmos_grid_t_ufs_ens"
+			> m01s00i024*m01s00i024
+		</field>
+
+		<field 
+			id="stdev" 
+			name="stdev" 
+			operation="instant"
+			field_ref="m01s00i024_ens"
+			> sqrt(avensq - sqav) 
+		</field>
+
+                <field 
+                        id="ens_add"
+                        name="ens-add" 
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > m01s00i024 + 1
+		</field>
+
+		<field
+                        id="ens_sub"
+                        name="ens-sub"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > m01s00i024 - 2
+                </field>
+
+		<field
+                        id="ens_mult"
+                        name="ens-mult"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > m01s00i024*3
+                </field>
+
+		<field
+                        id="ens_div"
+                        name="ens-div"
+                        operation="instant"
+                        field_ref="m01s00i024"
+			> m01s00i024/4
+                </field>
+
+		<field
+                        id="ens_pow"
+                        name="ens-pow"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > m01s00i024^5
+                </field>
+
+		<field
+                        id="ens_cos"
+                        name="ens-cos"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > cos(m01s00i024)
+                </field>
+
+		<field
+                        id="ens_sin"
+                        name="ens-sin"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > sin(m01s00i024)
+                </field>
+
+		<field
+                        id="ens_tan"
+                        name="ens-tan"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > tan(m01s00i024)
+                </field>
+
+		<field
+                        id="ens_exp"
+                        name="ens-exp"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > exp(m01s00i024)
+                </field>
+
+		<field
+                        id="ens_log"
+                        name="ens-log"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > log(m01s00i024)
+                </field>
+
+		<field
+                        id="ens_log10"
+                        name="ens-log10"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > log10(m01s00i024)
+                </field>
+
+		<field
+                        id="ens_sqrt"
+                        name="ens-sqrt"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        > sqrt(m01s00i024)
+		</field>
+
+		<field
+			id="m01s00i024_ens_average"
+			name="m01s00i024_ens-average"
+			operation="instant"
+			field_ref="m01s00i024"
+			grid_ref="um-atmos_grid_t_ufs_ens_average"
+		/>
+
+		<field 
+			id="m01s00i024_ens_sum" 
+			name="m01s00i024_ens-sum" 
+			operation="instant"
+			field_ref="m01s00i024"
+			grid_ref="um-atmos_grid_t_ufs_ens_sum" 
+		/>
+
+		<field
+			id="m01s00i024_ens_max"
+			name="m01s00i024_ens-max"
+			operation="instant"
+			field_ref="m01s00i024"
+			grid_ref="um-atmos_grid_t_ufs_ens_max"
+		/>
+
+		<field
+			id="m01s00i024_ens_min"
+			name="m01s00i024_ens-min"
+			operation="instant"
+			field_ref="m01s00i024"
+			grid_ref="um-atmos_grid_t_ufs_ens_min"
+		/>
+
+	</file>
+
+</file_definition>
+
