@@ -1,0 +1,90 @@
+<file_definition format="netcdf4" time_counter="instant" type="one_file">
+
+	<file description="UM output" id="x2" name="ce262a_pc" output_freq="3h" split_freq="3h">
+
+		<field
+			name="m01s00i024_once"
+			operation="once"
+			field_ref="m01s00i024"
+		/>
+
+	<field
+			name="m01s00i024_instant"
+                        operation="instant"
+                        field_ref="m01s00i024"
+		/>
+
+	
+		<field
+                        name="m01s00i024_maximum"
+                        operation="maximum"
+                        field_ref="m01s00i024"
+		/>
+
+	
+		<field
+                        name="m01s00i024_minimum"
+                        operation="minimum"
+                        field_ref="m01s00i024"
+		/>
+
+	
+		<field
+                        name="m01s00i024_average"
+                        operation="average"
+                        field_ref="m01s00i024"
+		/>
+
+	
+		<field
+                        name="m01s00i024_accumulate"
+                        operation="accumulate"
+                        field_ref="m01s00i024"
+		/>
+
+		<field
+			name="m01s00i024_ens_once"
+			operation="once"
+			field_ref="m01s00i024"
+			grid_ref="um-atmos_grid_t_ufs_ens"
+		/>
+
+                <field
+                        name="m01s00i024_ens_instant"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        grid_ref="um-atmos_grid_t_ufs_ens"
+		/>
+
+		<field
+                        name="m01s00i024_ens_maximum"
+                        operation="maximum"
+                        field_ref="m01s00i024"
+                        grid_ref="um-atmos_grid_t_ufs_ens"
+		/>
+
+		<field
+                        name="m01s00i024_ens_minimum"
+                        operation="minimum"
+                        field_ref="m01s00i024"
+                        grid_ref="um-atmos_grid_t_ufs_ens"
+		/>
+
+		<field
+                        name="m01s00i024_ens_average"
+                        operation="average"
+                        field_ref="m01s00i024"
+                        grid_ref="um-atmos_grid_t_ufs_ens"
+		/>
+
+		<field
+                        name="m01s00i024_ens_accumulate"
+                        operation="accumulate"
+                        field_ref="m01s00i024"
+                        grid_ref="um-atmos_grid_t_ufs_ens"
+		/>
+
+	</file>
+
+</file_definition>
+

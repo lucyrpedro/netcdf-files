@@ -1,0 +1,99 @@
+<file_definition format="netcdf4" time_counter="instant" type="multiple_file">
+
+	<file description="UM output" name="time_step_1" output_freq="3h" split_freq="3h">
+
+		<field
+			name="m01s00i024_instant_1"
+                        operation="instant"
+                        field_ref="m01s00i024"
+		/>
+
+	</file>
+
+	<file description="UM output" name="time_step_2" output_freq="3h" split_freq="1h">
+
+                <field
+                        name="m01s00i024_instant_2"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                />
+
+	</file>
+
+	<file description="UM output" name="time_step_3" output_freq="1h" split_freq="3h">
+
+                <field
+                        name="m01s00i024_instant_3"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                />
+
+	</file>
+
+	<file description="UM output" name="time_step_4" output_freq="1h" split_freq="1h">
+
+                <field
+                        name="m01s00i024_instant_4"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                />
+
+        </file>
+
+        <file description="UM output" name="time_step_5" output_freq="3h">
+
+                <field
+                        name="m01s00i024_instant_5"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                />
+
+	</file>	
+
+        <file description="UM output" name="time_step_6" output_freq="1h">
+
+                <field
+                        name="m01s00i024_instant_6"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                />
+
+        </file>
+
+	<file description="UM output" name="time_step_7" output_freq="1h">
+
+                <field
+                        name="m01s00i024_instant_7"
+                        operation="instant"
+			field_ref="m01s00i024"
+			freq_ops="1ts"
+                />
+
+	</file>
+
+        <file description="UM output" name="time_step_8" output_freq="1h">
+
+                <field
+                        name="m01s00i024_instant_8"
+                        operation="instant"
+                        field_ref="m01s00i024"
+			freq_ops="1ts"
+			freq_offset="1ts"
+                />
+
+	</file>
+
+        <file description="UM output" name="time_step_9" output_freq="1h">
+
+                <field
+                        name="m01s00i024_instant_9"
+                        operation="instant"
+                        field_ref="m01s00i024"
+			freq_ops="1ts"
+			freq_offset="2ts"
+                />
+
+        </file>
+
+</file_definition>
+

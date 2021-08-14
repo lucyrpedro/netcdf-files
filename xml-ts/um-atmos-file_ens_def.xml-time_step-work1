@@ -1,0 +1,65 @@
+<file_definition format="netcdf4" time_counter="instant" type="one_file">
+
+        <file description="UM output" name="time_step_1h" output_freq="3ts">
+
+                <field
+                        name="m01s00i024_instant"
+                        operation="instant"
+			field_ref="m01s00i024"
+		/>
+
+                <field
+                        name="m01s00i024_once"
+                        operation="once"
+                        field_ref="m01s00i024"
+		/>
+
+		<field
+                        name="m01s00i024_maximum"
+                        operation="maximum"
+                        field_ref="m01s00i024"
+		/>
+
+		<field
+                        name="m01s00i024_minimum"
+                        operation="minimum"
+                        field_ref="m01s00i024"
+		/>
+
+		<field
+                        name="m01s00i024_average"
+                        operation="average"
+                        field_ref="m01s00i024"
+		/>
+
+		<field
+                        name="m01s00i024_accumulate"
+                        operation="accumulate"
+                        field_ref="m01s00i024"
+		/>
+
+		<field
+                        name="m01s00i024_0ts"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        freq_offset="0ts"
+                />
+
+		<field
+                        name="m01s00i024_1ts"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                	freq_offset="1ts"   
+		/>
+
+		<field
+                        name="m01s00i024_2ts"
+                        operation="instant"
+                        field_ref="m01s00i024"
+                        freq_offset="2ts"
+		/>
+
+        </file>
+
+</file_definition>
+
