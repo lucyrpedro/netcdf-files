@@ -1,7 +1,14 @@
 <file_definition format="netcdf4" time_counter="instant" type="one_file">
 	
 	<file description="UM output" id="x2" name="ce262a_pc" output_freq="3h" split_freq="3h">
-		
+
+                <field 
+                        id="m01s00i024_inst" 
+                        name="m01s00i024_inst" 
+                        operation="instant"
+                        field_ref="m01s00i024"
+                />
+
 		<field 
 			id="m01s00i024_ens" 
 			name="m01s00i024_ens" 

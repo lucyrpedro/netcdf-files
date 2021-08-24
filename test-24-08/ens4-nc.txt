@@ -1,0 +1,84 @@
+netcdf ce262a_pc_2012092721-2012092723 {
+dimensions:
+	axis_nbounds = 2 ;
+	lon = 96 ;
+	lat = 72 ;
+	ensemble = 4 ;
+	time_counter = UNLIMITED ; // (1 currently)
+variables:
+	float lat(lat) ;
+		lat:axis = "Y" ;
+		lat:standard_name = "latitude" ;
+		lat:long_name = "Latitude" ;
+		lat:units = "degrees_north" ;
+	float lon(lon) ;
+		lon:axis = "X" ;
+		lon:standard_name = "longitude" ;
+		lon:long_name = "Longitude" ;
+		lon:units = "degrees_east" ;
+	double time_instant(time_counter) ;
+		time_instant:standard_name = "time" ;
+		time_instant:long_name = "Time axis" ;
+		time_instant:calendar = "gregorian" ;
+		time_instant:units = "seconds since 2012-09-27 21:00:00" ;
+		time_instant:time_origin = "2012-09-27 21:00:00" ;
+		time_instant:bounds = "time_instant_bounds" ;
+	double time_instant_bounds(time_counter, axis_nbounds) ;
+	double time_counter(time_counter) ;
+		time_counter:axis = "T" ;
+		time_counter:standard_name = "time" ;
+		time_counter:long_name = "Time axis" ;
+		time_counter:calendar = "gregorian" ;
+		time_counter:units = "seconds since 2012-09-27 21:00:00" ;
+		time_counter:time_origin = "2012-09-27 21:00:00" ;
+		time_counter:bounds = "time_counter_bounds" ;
+	double time_counter_bounds(time_counter, axis_nbounds) ;
+	double m01s00i024_inst(time_counter, ensemble, lat, lon) ;
+		m01s00i024_inst:online_operation = "instant" ;
+		m01s00i024_inst:interval_operation = "3 h" ;
+		m01s00i024_inst:interval_write = "3 h" ;
+		m01s00i024_inst:cell_methods = "time: point" ;
+		m01s00i024_inst:_FillValue = -1073741824. ;
+		m01s00i024_inst:missing_value = -1073741824. ;
+		m01s00i024_inst:coordinates = "time_instant" ;
+	double m01s00i024_ens(time_counter, lat, lon) ;
+		m01s00i024_ens:online_operation = "instant" ;
+		m01s00i024_ens:interval_operation = "3 h" ;
+		m01s00i024_ens:interval_write = "3 h" ;
+		m01s00i024_ens:cell_methods = "time: point" ;
+		m01s00i024_ens:_FillValue = -1073741824. ;
+		m01s00i024_ens:missing_value = -1073741824. ;
+		m01s00i024_ens:coordinates = "time_instant" ;
+	double sqav(time_counter, lat, lon) ;
+		sqav:online_operation = "instant" ;
+		sqav:interval_operation = "3 h" ;
+		sqav:interval_write = "3 h" ;
+		sqav:cell_methods = "time: point" ;
+		sqav:_FillValue = -1073741824. ;
+		sqav:missing_value = -1073741824. ;
+		sqav:coordinates = "time_instant" ;
+	double avensq(time_counter, lat, lon) ;
+		avensq:online_operation = "instant" ;
+		avensq:interval_operation = "3 h" ;
+		avensq:interval_write = "3 h" ;
+		avensq:cell_methods = "time: point" ;
+		avensq:_FillValue = -1073741824. ;
+		avensq:missing_value = -1073741824. ;
+		avensq:coordinates = "time_instant" ;
+	double stdev(time_counter, lat, lon) ;
+		stdev:online_operation = "instant" ;
+		stdev:interval_operation = "3 h" ;
+		stdev:interval_write = "3 h" ;
+		stdev:cell_methods = "time: point" ;
+		stdev:_FillValue = -1073741824. ;
+		stdev:missing_value = -1073741824. ;
+		stdev:coordinates = "time_instant" ;
+
+// global attributes:
+		:name = "ce262a_pc" ;
+		:description = "UM output" ;
+		:title = "UM output" ;
+		:Conventions = "CF-1.6" ;
+		:timeStamp = "2021-Aug-24 18:21:28 GMT" ;
+		:uuid = "13f6eda4-e85f-44d8-9b46-da5a1a031d0d" ;
+}
