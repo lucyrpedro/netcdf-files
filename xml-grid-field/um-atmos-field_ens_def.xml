@@ -1,0 +1,23 @@
+<field_definition default_value="-1073741824.0" prec="8"> 
+
+	<field
+		id="m01s00i024" 
+		name="m01s00i024"
+		grid_ref="um-atmos_grid_t_ufs" 
+		enabled=".TRUE." 
+	/>
+
+        <field
+                id="m01s00i024_test" 
+                name="m01s00i024_test"
+                grid_ref="um-atmos_grid_t_ufs" 
+                enabled=".TRUE." 
+        />
+
+<field id="field1D" name="field1D" grid_ref="um-atmos_grid_ens" enabled=".TRUE."/>
+
+<field id="field2D" name="field2D" grid_ref="um-atmos_grid_t_test" enabled=".TRUE."/>
+
+<field id="field3D" name="field3D" grid_ref="um-atmos_grid_t_ufs" enabled=".TRUE."/>
+
+</field_definition>
