@@ -1,21 +1,5 @@
 <grid_definition>
 
-	<grid id="um-atmos_grid_t_test">
-		<domain domain_ref="um-atmos_grid_t" />
-	</grid>
-
-	<grid id="um-atmos_grid_t_ufs_ens">
-		<domain domain_ref="um-atmos_grid_t" />
-		<scalar id="ens-mean">
-			<reduce_axis operation="average" />
-		</scalar>
-	</grid>
-
-	<grid id="um-atmos_grid_t_ufs">
-		<domain domain_ref="um-atmos_grid_t" />
-		<axis axis_ref="ensemble" />
-	</grid>
-
   <grid id="um-atmos_grid_uv_tfl4731">
     <domain domain_ref="um-atmos_grid_uv" />
     <axis axis_ref="um-atmos_tfl4731" />
@@ -27,49 +11,49 @@
     <axis axis_ref="ensemble" />
   </grid>
 
-<grid id="scalar_scalar_average">
-  <scalar>
-    <reduce_scalar operation="average" />
-  </scalar>
-</grid>
+	<grid id="scalar_scalar_average">
+  	<scalar>
+    	<reduce_scalar operation="average" />
+  	</scalar>
+	</grid>
 
-<grid id="axis_scalar_average_ens">
-  <axis axis_ref="ensemble" />
-  <scalar>
-    <reduce_axis operation="average" />
-  </scalar>
-</grid>
+	<grid id="axis_scalar_average_ens">
+	  <axis axis_ref="ensemble" />
+	  <scalar>
+	    <reduce_axis operation="average" />
+	  </scalar>
+	</grid>
 
-<grid id="axis_axis_average_ens">
-  <axis axis_ref="ensemble" />
-  <axis>
-    <reduce_axis operation="average" />
-  </axis>
-</grid>
+	<grid id="axis_axis_average_ens">
+	  <axis axis_ref="ensemble" />
+	  <axis>
+	    <reduce_axis operation="average" />
+	  </axis>
+	</grid>
 
-<grid id="axis_scalar_average">
-  <scalar>
-    <reduce_axis operation="average" />
-  </scalar>
-</grid>
+	<grid id="axis_scalar_average">
+	  <scalar>
+	    <reduce_axis operation="average" />
+	  </scalar>
+	</grid>
 
-<grid id="axis_axis_average">
-  <axis>
-    <reduce_axis operation="average" />
-  </axis>
-</grid>
+	<grid id="axis_axis_average">
+	  <axis>
+	    <reduce_axis operation="average" />
+	  </axis>
+	</grid>
 
-<grid id="domain_scalar_average">
-  <scalar>
-    <reduce_domain operation="average" />
-  </scalar>
-</grid>
+	<grid id="domain_scalar_average">
+	  <scalar>
+	    <reduce_domain operation="average" />
+	  </scalar>
+	</grid>
 
-<grid id="domain_axis_average">
-  <domain domain_ref="um-atmos_grid_t" />
-  <axis>
-    <reduce_domain operation="average" direction="iDir" local="false"/>
-  </axis>
-</grid>
+	<grid id="domain_axis_average">
+	  <domain domain_ref="um-atmos_grid_t" />
+	  <axis>
+	    <reduce_domain operation="average" direction="iDir" local="false"/>
+	  </axis>
+	</grid>
 
 </grid_definition>
