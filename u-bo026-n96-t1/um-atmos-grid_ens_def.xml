@@ -181,7 +181,7 @@
     <axis axis_ref="ensemble" />
   </grid>
 
-	<grid id="atmos_grid_t_DIAG_ens_mean">
+	<grid id="um_atmos_grid_t_DIAG_ens_mean">
 		<domain domain_ref="um-atmos_grid_t" />
 		<scalar id="ens-mean">
 			<reduce_axis operation="average" />
