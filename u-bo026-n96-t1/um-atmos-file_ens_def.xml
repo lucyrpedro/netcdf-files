@@ -315,7 +315,7 @@
 			name="m01s00i024_ens"
 			operation="instant"
 			field_ref="m01s00i024"
-			grid_ref="um-atmos_grid_t_ufs_ens_mean"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
 		/>
 
 		<field
@@ -331,7 +331,7 @@
 			name="avensq"
 			operation="instant"
 			field_ref="m01s00i024"
-			grid_ref="um-atmos_grid_t_ufs_ens_mean"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
 			> m01s00i024*m01s00i024
 		</field>
 
