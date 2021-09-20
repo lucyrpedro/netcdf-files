@@ -1,4 +1,4 @@
-<file_definition format="netcdf4" time_counter="instant" type="one_file">
+<file_definition format="netcdf4" time_counter="instant" type="multiple_file">
   <file description="UM output" id="xios_up9_1h" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.p9" output_freq="1h" split_freq="02d">
     <field field_ref="m01s02i205" name="m01s02i205" operation="instant" />
     <field field_ref="m01s03i225" name="m01s03i225" operation="instant" />
@@ -301,6 +301,50 @@
     <field field_ref="m01s30i431" name="m01s30i431" operation="average" />
   </file>
 
+<file description="Test New XML" id="test-new-xml" name="test-new-xml" output_freq="72ts">
+
+		<field
+			id="m01s00i024_inst"
+			name="m01s00i024_inst"
+			operation="instant"
+			field_ref="m01s00i024"
+		/>
+
+		<field
+			id="m01s00i024_ens"
+			name="m01s00i024_ens"
+			operation="instant"
+			field_ref="m01s00i024"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="sqav"
+			name="sqav"
+			operation="instant"
+			field_ref="m01s00i024_ens"
+			> m01s00i024_ens*m01s00i024_ens
+		</field>
+
+		<field
+			id="avensq"
+			name="avensq"
+			operation="instant"
+			field_ref="m01s00i024"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s00i024*m01s00i024
+		</field>
+
+		<field
+			id="stdev"
+			name="stdev"
+			operation="instant"
+			field_ref="m01s00i024_ens"
+			> sqrt(avensq - sqav)
+		</field>
+
+</file>
+
 <file description="Test New XML" id="test-m01s00i023" name="test-m01s00i023" output_freq="72ts">
 
 		<field
@@ -319,16 +363,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i023"
-			name="sqav-m01s00i023"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s00i023_ens"
 			> m01s00i023_ens*m01s00i023_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i023"
-			name="avensq-m01s00i023"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s00i023"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -336,54 +380,10 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i023"
-			name="stdev-m01s00i023"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s00i023_ens"
-			> sqrt(avensq - sqav)
-		</field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s00i024" name="test-m01s00i024" output_freq="72ts">
-
-		<field
-			id="m01s00i024_inst"
-			name="m01s00i024_inst"
-			operation="instant"
-			field_ref="m01s00i024"
-		/>
-
-		<field
-			id="m01s00i024_ens"
-			name="m01s00i024_ens"
-			operation="instant"
-			field_ref="m01s00i024"
-			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-		/>
-
-		<field
-			id="sqav-m01s00i024"
-			name="sqav-m01s00i024"
-			operation="instant"
-			field_ref="m01s00i024_ens"
-			> m01s00i024_ens*m01s00i024_ens
-		</field>
-
-		<field
-			id="avensq-m01s00i024"
-			name="avensq-m01s00i024"
-			operation="instant"
-			field_ref="m01s00i024"
-			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-			> m01s00i024*m01s00i024
-		</field>
-
-		<field
-			id="stdev-m01s00i024"
-			name="stdev-m01s00i024"
-			operation="instant"
-			field_ref="m01s00i024_ens"
 			> sqrt(avensq - sqav)
 		</field>
 
@@ -407,16 +407,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i025"
-			name="sqav-m01s00i025"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s00i025_ens"
 			> m01s00i025_ens*m01s00i025_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i025"
-			name="avensq-m01s00i025"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s00i025"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -424,8 +424,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i025"
-			name="stdev-m01s00i025"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s00i025_ens"
 			> sqrt(avensq - sqav)
@@ -451,16 +451,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i030"
-			name="sqav-m01s00i030"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s00i030_ens"
 			> m01s00i030_ens*m01s00i030_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i030"
-			name="avensq-m01s00i030"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s00i030"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -468,8 +468,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i030"
-			name="stdev-m01s00i030"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s00i030_ens"
 			> sqrt(avensq - sqav)
@@ -495,16 +495,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i031"
-			name="sqav-m01s00i031"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s00i031_ens"
 			> m01s00i031_ens*m01s00i031_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i031"
-			name="avensq-m01s00i031"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s00i031"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -512,8 +512,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i031"
-			name="stdev-m01s00i031"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s00i031_ens"
 			> sqrt(avensq - sqav)
@@ -539,16 +539,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i032"
-			name="sqav-m01s00i032"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s00i032_ens"
 			> m01s00i032_ens*m01s00i032_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i032"
-			name="avensq-m01s00i032"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s00i032"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -556,8 +556,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i032"
-			name="stdev-m01s00i032"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s00i032_ens"
 			> sqrt(avensq - sqav)
@@ -583,16 +583,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i033"
-			name="sqav-m01s00i033"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s00i033_ens"
 			> m01s00i033_ens*m01s00i033_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i033"
-			name="avensq-m01s00i033"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s00i033"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -600,8 +600,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i033"
-			name="stdev-m01s00i033"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s00i033_ens"
 			> sqrt(avensq - sqav)
@@ -627,16 +627,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i409"
-			name="sqav-m01s00i409"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s00i409_ens"
 			> m01s00i409_ens*m01s00i409_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i409"
-			name="avensq-m01s00i409"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s00i409"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -644,8 +644,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i409"
-			name="stdev-m01s00i409"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s00i409_ens"
 			> sqrt(avensq - sqav)
@@ -671,16 +671,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i507"
-			name="sqav-m01s00i507"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s00i507_ens"
 			> m01s00i507_ens*m01s00i507_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i507"
-			name="avensq-m01s00i507"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s00i507"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -688,8 +688,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i507"
-			name="stdev-m01s00i507"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s00i507_ens"
 			> sqrt(avensq - sqav)
@@ -715,16 +715,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i508"
-			name="sqav-m01s00i508"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s00i508_ens"
 			> m01s00i508_ens*m01s00i508_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i508"
-			name="avensq-m01s00i508"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s00i508"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -732,8 +732,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i508"
-			name="stdev-m01s00i508"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s00i508_ens"
 			> sqrt(avensq - sqav)
@@ -759,16 +759,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i509"
-			name="sqav-m01s00i509"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s00i509_ens"
 			> m01s00i509_ens*m01s00i509_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i509"
-			name="avensq-m01s00i509"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s00i509"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -776,8 +776,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i509"
-			name="stdev-m01s00i509"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s00i509_ens"
 			> sqrt(avensq - sqav)
@@ -803,16 +803,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i201"
-			name="sqav-m01s01i201"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s01i201_ens"
 			> m01s01i201_ens*m01s01i201_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i201"
-			name="avensq-m01s01i201"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s01i201"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -820,8 +820,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i201"
-			name="stdev-m01s01i201"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s01i201_ens"
 			> sqrt(avensq - sqav)
@@ -847,16 +847,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i203"
-			name="sqav-m01s01i203"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s01i203_ens"
 			> m01s01i203_ens*m01s01i203_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i203"
-			name="avensq-m01s01i203"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s01i203"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -864,8 +864,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i203"
-			name="stdev-m01s01i203"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s01i203_ens"
 			> sqrt(avensq - sqav)
@@ -891,16 +891,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i207"
-			name="sqav-m01s01i207"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s01i207_ens"
 			> m01s01i207_ens*m01s01i207_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i207"
-			name="avensq-m01s01i207"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s01i207"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -908,8 +908,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i207"
-			name="stdev-m01s01i207"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s01i207_ens"
 			> sqrt(avensq - sqav)
@@ -935,16 +935,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i208"
-			name="sqav-m01s01i208"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s01i208_ens"
 			> m01s01i208_ens*m01s01i208_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i208"
-			name="avensq-m01s01i208"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s01i208"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -952,8 +952,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i208"
-			name="stdev-m01s01i208"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s01i208_ens"
 			> sqrt(avensq - sqav)
@@ -979,16 +979,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i209"
-			name="sqav-m01s01i209"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s01i209_ens"
 			> m01s01i209_ens*m01s01i209_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i209"
-			name="avensq-m01s01i209"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s01i209"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -996,8 +996,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i209"
-			name="stdev-m01s01i209"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s01i209_ens"
 			> sqrt(avensq - sqav)
@@ -1023,16 +1023,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i210"
-			name="sqav-m01s01i210"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s01i210_ens"
 			> m01s01i210_ens*m01s01i210_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i210"
-			name="avensq-m01s01i210"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s01i210"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1040,8 +1040,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i210"
-			name="stdev-m01s01i210"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s01i210_ens"
 			> sqrt(avensq - sqav)
@@ -1067,16 +1067,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i211"
-			name="sqav-m01s01i211"
+			id="sqav"
+			name="sqav"
 			operation="instant"
 			field_ref="m01s01i211_ens"
 			> m01s01i211_ens*m01s01i211_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i211"
-			name="avensq-m01s01i211"
+			id="avensq"
+			name="avensq"
 			operation="instant"
 			field_ref="m01s01i211"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1084,8 +1084,8 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i211"
-			name="stdev-m01s01i211"
+			id="stdev"
+			name="stdev"
 			operation="instant"
 			field_ref="m01s01i211_ens"
 			> sqrt(avensq - sqav)
@@ -1111,16 +1111,16 @@
     />
 
     <field
-      id="sqav-m01s01i235"
-      name="sqav-m01s01i235"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s01i235_ens"
       > m01s01i235_ens*m01s01i235_ens
     </field>
 
     <field
-      id="avensq-m01s01i235"
-      name="avensq-m01s01i235"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s01i235"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1128,8 +1128,8 @@
     </field>
 
     <field
-      id="stdev-m01s01i235"
-      name="stdev-m01s01i235"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s01i235_ens"
       > sqrt(avensq - sqav)
@@ -1155,16 +1155,16 @@
     />
 
     <field
-      id="sqav-m01s01i245"
-      name="sqav-m01s01i245"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s01i245_ens"
       > m01s01i245_ens*m01s01i245_ens
     </field>
 
     <field
-      id="avensq-m01s01i245"
-      name="avensq-m01s01i245"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s01i245"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1172,8 +1172,8 @@
     </field>
 
     <field
-      id="stdev-m01s01i245"
-      name="stdev-m01s01i245"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s01i245_ens"
       > sqrt(avensq - sqav)
@@ -1199,16 +1199,16 @@
     />
 
     <field
-      id="sqav-m01s01i246"
-      name="sqav-m01s01i246"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s01i246_ens"
       > m01s01i246_ens*m01s01i246_ens
     </field>
 
     <field
-      id="avensq-m01s01i246"
-      name="avensq-m01s01i246"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s01i246"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1216,8 +1216,8 @@
     </field>
 
     <field
-      id="stdev-m01s01i246"
-      name="stdev-m01s01i246"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s01i246_ens"
       > sqrt(avensq - sqav)
@@ -1243,16 +1243,16 @@
     />
 
     <field
-      id="sqav-m01s01i254"
-      name="sqav-m01s01i254"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s01i254_ens"
       > m01s01i254_ens*m01s01i254_ens
     </field>
 
     <field
-      id="avensq-m01s01i254"
-      name="avensq-m01s01i254"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s01i254"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1260,8 +1260,8 @@
     </field>
 
     <field
-      id="stdev-m01s01i254"
-      name="stdev-m01s01i254"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s01i254_ens"
       > sqrt(avensq - sqav)
@@ -1287,16 +1287,16 @@
     />
 
     <field
-      id="sqav-m01s01i255"
-      name="sqav-m01s01i255"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s01i255_ens"
       > m01s01i255_ens*m01s01i255_ens
     </field>
 
     <field
-      id="avensq-m01s01i255"
-      name="avensq-m01s01i255"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s01i255"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1304,8 +1304,8 @@
     </field>
 
     <field
-      id="stdev-m01s01i255"
-      name="stdev-m01s01i255"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s01i255_ens"
       > sqrt(avensq - sqav)
@@ -1331,16 +1331,16 @@
     />
 
     <field
-      id="sqav-m01s01i260"
-      name="sqav-m01s01i260"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s01i260_ens"
       > m01s01i260_ens*m01s01i260_ens
     </field>
 
     <field
-      id="avensq-m01s01i260"
-      name="avensq-m01s01i260"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s01i260"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1348,8 +1348,8 @@
     </field>
 
     <field
-      id="stdev-m01s01i260"
-      name="stdev-m01s01i260"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s01i260_ens"
       > sqrt(avensq - sqav)
@@ -1374,16 +1374,16 @@
     />
 
     <field
-      id="sqav-m01s01i280"
-      name="sqav-m01s01i280"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s01i280_ens"
       > m01s01i280_ens*m01s01i280_ens
     </field>
 
     <field
-      id="avensq-m01s01i280"
-      name="avensq-m01s01i280"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s01i280"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1391,8 +1391,8 @@
     </field>
 
     <field
-      id="stdev-m01s01i280"
-      name="stdev-m01s01i280"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s01i280_ens"
       > sqrt(avensq - sqav)
@@ -1418,16 +1418,16 @@
     />
 
     <field
-      id="sqav-m01s01i281"
-      name="sqav-m01s01i281"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s01i281_ens"
       > m01s01i281_ens*m01s01i281_ens
     </field>
 
     <field
-      id="avensq-m01s01i281"
-      name="avensq-m01s01i281"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s01i281"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1435,8 +1435,8 @@
     </field>
 
     <field
-      id="stdev-m01s01i281"
-      name="stdev-m01s01i281"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s01i281_ens"
       > sqrt(avensq - sqav)
@@ -1462,16 +1462,16 @@
     />
 
     <field
-      id="sqav-m01s01i298"
-      name="sqav-m01s01i298"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s01i298_ens"
       > m01s01i298_ens*m01s01i298_ens
     </field>
 
     <field
-      id="avensq-m01s01i298"
-      name="avensq-m01s01i298"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s01i298"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1479,8 +1479,8 @@
     </field>
 
     <field
-      id="stdev-m01s01i298"
-      name="stdev-m01s01i298"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s01i298_ens"
       > sqrt(avensq - sqav)
@@ -1506,16 +1506,16 @@
     />
 
     <field
-      id="sqav-m01s01i299"
-      name="sqav-m01s01i299"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s01i299_ens"
       > m01s01i299_ens*m01s01i299_ens
     </field>
 
     <field
-      id="avensq-m01s01i299"
-      name="avensq-m01s01i299"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s01i299"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1523,8 +1523,8 @@
     </field>
 
     <field
-      id="stdev-m01s01i299"
-      name="stdev-m01s01i299"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s01i299_ens"
       > sqrt(avensq - sqav)
@@ -1550,16 +1550,16 @@
     />
 
     <field
-      id="sqav-m01s02i201"
-      name="sqav-m01s02i201"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s02i201_ens"
       > m01s02i201_ens*m01s02i201_ens
     </field>
 
     <field
-      id="avensq-m01s02i201"
-      name="avensq-m01s02i201"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s02i201"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1567,8 +1567,8 @@
     </field>
 
     <field
-      id="stdev-m01s02i201"
-      name="stdev-m01s02i201"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s02i201_ens"
       > sqrt(avensq - sqav)
@@ -1594,16 +1594,16 @@
     />
 
     <field
-      id="sqav-m01s02i203"
-      name="sqav-m01s02i203"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s02i203_ens"
       > m01s02i203_ens*m01s02i203_ens
     </field>
 
     <field
-      id="avensq-m01s02i203"
-      name="avensq-m01s02i203"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s02i203"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1611,8 +1611,8 @@
     </field>
 
     <field
-      id="stdev-m01s02i203"
-      name="stdev-m01s02i203"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s02i203_ens"
       > sqrt(avensq - sqav)
@@ -1638,16 +1638,16 @@
     />
 
     <field
-      id="sqav-m01s02i204"
-      name="sqav-m01s02i204"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s02i204_ens"
       > m01s02i204_ens*m01s02i204_ens
     </field>
 
     <field
-      id="avensq-m01s02i204"
-      name="avensq-m01s02i204"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s02i204"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1655,8 +1655,8 @@
     </field>
 
     <field
-      id="stdev-m01s02i204"
-      name="stdev-m01s02i204"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s02i204_ens"
       > sqrt(avensq - sqav)
@@ -1682,16 +1682,16 @@
     />
 
     <field
-      id="sqav-m01s02i205"
-      name="sqav-m01s02i205"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s02i205_ens"
       > m01s02i205_ens*m01s02i205_ens
     </field>
 
     <field
-      id="avensq-m01s02i205"
-      name="avensq-m01s02i205"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s02i205"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1699,8 +1699,8 @@
     </field>
 
     <field
-      id="stdev-m01s02i205"
-      name="stdev-m01s02i205"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s02i205_ens"
       > sqrt(avensq - sqav)
@@ -1726,16 +1726,16 @@
     />
 
     <field
-      id="sqav-m01s02i206"
-      name="sqav-m01s02i206"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s02i206_ens"
       > m01s02i206_ens*m01s02i206_ens
     </field>
 
     <field
-      id="avensq-m01s02i206"
-      name="avensq-m01s02i206"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s02i206"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1743,8 +1743,8 @@
     </field>
 
     <field
-      id="stdev-m01s02i206"
-      name="stdev-m01s02i206"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s02i206_ens"
       > sqrt(avensq - sqav)
@@ -1770,16 +1770,16 @@
     />
 
     <field
-      id="sqav-m01s02i207"
-      name="sqav-m01s02i207"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s02i207_ens"
       > m01s02i207_ens*m01s02i207_ens
     </field>
 
     <field
-      id="avensq-m01s02i207"
-      name="avensq-m01s02i207"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s02i207"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1787,8 +1787,8 @@
     </field>
 
     <field
-      id="stdev-m01s02i207"
-      name="stdev-m01s02i207"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s02i207_ens"
       > sqrt(avensq - sqav)
@@ -1814,16 +1814,16 @@
     />
 
     <field
-      id="sqav-m01s02i208"
-      name="sqav-m01s02i208"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s02i208_ens"
       > m01s02i208_ens*m01s02i208_ens
     </field>
 
     <field
-      id="avensq-m01s02i208"
-      name="avensq-m01s02i208"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s02i208"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1831,8 +1831,8 @@
     </field>
 
     <field
-      id="stdev-m01s02i208"
-      name="stdev-m01s02i208"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s02i208_ens"
       > sqrt(avensq - sqav)
@@ -1858,16 +1858,16 @@
     />
 
     <field
-      id="sqav-m01s03i201"
-      name="sqav-m01s03i201"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i201_ens"
       > m01s03i201_ens*m01s03i201_ens
     </field>
 
     <field
-      id="avensq-m01s03i201"
-      name="avensq-m01s03i201"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i201"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1875,8 +1875,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i201"
-      name="stdev-m01s03i201"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i201_ens"
       > sqrt(avensq - sqav)
@@ -1902,16 +1902,16 @@
     />
 
     <field
-      id="sqav-m01s03i217"
-      name="sqav-m01s03i217"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i217_ens"
       > m01s03i217_ens*m01s03i217_ens
     </field>
 
     <field
-      id="avensq-m01s03i217"
-      name="avensq-m01s03i217"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i217"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1919,8 +1919,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i217"
-      name="stdev-m01s03i217"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i217_ens"
       > sqrt(avensq - sqav)
@@ -1946,16 +1946,16 @@
     />
 
     <field
-      id="sqav-m01s03i223"
-      name="sqav-m01s03i223"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i223_ens"
       > m01s03i223_ens*m01s03i223_ens
     </field>
 
     <field
-      id="avensq-m01s03i223"
-      name="avensq-m01s03i223"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i223"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1963,8 +1963,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i223"
-      name="stdev-m01s03i223"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i223_ens"
       > sqrt(avensq - sqav)
@@ -1990,16 +1990,16 @@
     />
 
     <field
-      id="sqav-m01s03i224"
-      name="sqav-m01s03i224"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i224_ens"
       > m01s03i224_ens*m01s03i224_ens
     </field>
 
     <field
-      id="avensq-m01s03i224"
-      name="avensq-m01s03i224"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i224"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2007,8 +2007,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i224"
-      name="stdev-m01s03i224"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i224_ens"
       > sqrt(avensq - sqav)
@@ -2034,16 +2034,16 @@
     />
 
     <field
-      id="sqav-m01s03i228"
-      name="sqav-m01s03i228"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i228_ens"
       > m01s03i228_ens*m01s03i228_ens
     </field>
 
     <field
-      id="avensq-m01s03i228"
-      name="avensq-m01s03i228"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i228"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2051,8 +2051,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i228"
-      name="stdev-m01s03i228"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i228_ens"
       > sqrt(avensq - sqav)
@@ -2078,16 +2078,16 @@
     />
 
     <field
-      id="sqav-m01s03i231"
-      name="sqav-m01s03i231"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i231_ens"
       > m01s03i231_ens*m01s03i231_ens
     </field>
 
     <field
-      id="avensq-m01s03i231"
-      name="avensq-m01s03i231"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i231"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2095,8 +2095,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i231"
-      name="stdev-m01s03i231"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i231_ens"
       > sqrt(avensq - sqav)
@@ -2122,16 +2122,16 @@
     />
 
     <field
-      id="sqav-m01s03i232"
-      name="sqav-m01s03i232"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i232_ens"
       > m01s03i232_ens*m01s03i232_ens
     </field>
 
     <field
-      id="avensq-m01s03i232"
-      name="avensq-m01s03i232"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i232"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2139,8 +2139,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i232"
-      name="stdev-m01s03i232"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i232_ens"
       > sqrt(avensq - sqav)
@@ -2166,16 +2166,16 @@
     />
 
     <field
-      id="sqav-m01s03i234"
-      name="sqav-m01s03i234"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i234_ens"
       > m01s03i234_ens*m01s03i234_ens
     </field>
 
     <field
-      id="avensq-m01s03i234"
-      name="avensq-m01s03i234"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i234"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2183,8 +2183,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i234"
-      name="stdev-m01s03i234"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i234_ens"
       > sqrt(avensq - sqav)
@@ -2210,16 +2210,16 @@
     />
 
     <field
-      id="sqav-m01s03i235"
-      name="sqav-m01s03i235"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i235_ens"
       > m01s03i235_ens*m01s03i235_ens
     </field>
 
     <field
-      id="avensq-m01s03i235"
-      name="avensq-m01s03i235"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i235"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2227,8 +2227,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i235"
-      name="stdev-m01s03i235"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i235_ens"
       > sqrt(avensq - sqav)
@@ -2254,16 +2254,16 @@
     />
 
     <field
-      id="sqav-m01s03i236"
-      name="sqav-m01s03i236"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i236_ens"
       > m01s03i236_ens*m01s03i236_ens
     </field>
 
     <field
-      id="avensq-m01s03i236"
-      name="avensq-m01s03i236"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i236"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2271,8 +2271,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i236"
-      name="stdev-m01s03i236"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i236_ens"
       > sqrt(avensq - sqav)
@@ -2298,16 +2298,16 @@
     />
 
     <field
-      id="sqav-m01s03i237"
-      name="sqav-m01s03i237"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i237_ens"
       > m01s03i237_ens*m01s03i237_ens
     </field>
 
     <field
-      id="avensq-m01s03i237"
-      name="avensq-m01s03i237"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i237"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2315,8 +2315,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i237"
-      name="stdev-m01s03i237"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i237_ens"
       > sqrt(avensq - sqav)
@@ -2342,16 +2342,16 @@
     />
 
     <field
-      id="sqav-m01s03i245"
-      name="sqav-m01s03i245"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i245_ens"
       > m01s03i245_ens*m01s03i245_ens
     </field>
 
     <field
-      id="avensq-m01s03i245"
-      name="avensq-m01s03i245"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i245"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2359,8 +2359,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i245"
-      name="stdev-m01s03i245"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i245_ens"
       > sqrt(avensq - sqav)
@@ -2386,16 +2386,16 @@
     />
 
     <field
-      id="sqav-m01s03i258"
-      name="sqav-m01s03i258"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i258_ens"
       > m01s03i258_ens*m01s03i258_ens
     </field>
 
     <field
-      id="avensq-m01s03i258"
-      name="avensq-m01s03i258"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i258"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2403,8 +2403,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i258"
-      name="stdev-m01s03i258"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i258_ens"
       > sqrt(avensq - sqav)
@@ -2430,16 +2430,16 @@
     />
 
     <field
-      id="sqav-m01s03i261"
-      name="sqav-m01s03i261"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i261_ens"
       > m01s03i261_ens*m01s03i261_ens
     </field>
 
     <field
-      id="avensq-m01s03i261"
-      name="avensq-m01s03i261"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i261"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2447,8 +2447,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i261"
-      name="stdev-m01s03i261"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i261_ens"
       > sqrt(avensq - sqav)
@@ -2474,16 +2474,16 @@
     />
 
     <field
-      id="sqav-m01s03i293"
-      name="sqav-m01s03i293"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i293_ens"
       > m01s03i293_ens*m01s03i293_ens
     </field>
 
     <field
-      id="avensq-m01s03i293"
-      name="avensq-m01s03i293"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i293"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2491,8 +2491,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i293"
-      name="stdev-m01s03i293"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i293_ens"
       > sqrt(avensq - sqav)
@@ -2518,16 +2518,16 @@
     />
 
     <field
-      id="sqav-m01s03i296"
-      name="sqav-m01s03i296"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i296_ens"
       > m01s03i296_ens*m01s03i296_ens
     </field>
 
     <field
-      id="avensq-m01s03i296"
-      name="avensq-m01s03i296"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i296"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2535,8 +2535,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i296"
-      name="stdev-m01s03i296"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i296_ens"
       > sqrt(avensq - sqav)
@@ -2562,16 +2562,16 @@
     />
 
     <field
-      id="sqav-m01s03i297"
-      name="sqav-m01s03i297"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i297_ens"
       > m01s03i297_ens*m01s03i297_ens
     </field>
 
     <field
-      id="avensq-m01s03i297"
-      name="avensq-m01s03i297"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i297"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2579,8 +2579,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i297"
-      name="stdev-m01s03i297"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i297_ens"
       > sqrt(avensq - sqav)
@@ -2606,16 +2606,16 @@
     />
 
     <field
-      id="sqav-m01s03i298"
-      name="sqav-m01s03i298"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i298_ens"
       > m01s03i298_ens*m01s03i298_ens
     </field>
 
     <field
-      id="avensq-m01s03i298"
-      name="avensq-m01s03i298"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i298"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2623,8 +2623,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i298"
-      name="stdev-m01s03i298"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i298_ens"
       > sqrt(avensq - sqav)
@@ -2650,16 +2650,16 @@
     />
 
     <field
-      id="sqav-m01s03i304"
-      name="sqav-m01s03i304"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i304_ens"
       > m01s03i304_ens*m01s03i304_ens
     </field>
 
     <field
-      id="avensq-m01s03i304"
-      name="avensq-m01s03i304"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i304"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2667,8 +2667,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i304"
-      name="stdev-m01s03i304"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i304_ens"
       > sqrt(avensq - sqav)
@@ -2694,16 +2694,16 @@
     />
 
     <field
-      id="sqav-m01s03i305"
-      name="sqav-m01s03i305"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i305_ens"
       > m01s03i305_ens*m01s03i305_ens
     </field>
 
     <field
-      id="avensq-m01s03i305"
-      name="avensq-m01s03i305"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i305"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2711,8 +2711,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i305"
-      name="stdev-m01s03i305"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i305_ens"
       > sqrt(avensq - sqav)
@@ -2738,16 +2738,16 @@
     />
 
     <field
-      id="sqav-m01s03i306"
-      name="sqav-m01s03i306"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i306_ens"
       > m01s03i306_ens*m01s03i306_ens
     </field>
 
     <field
-      id="avensq-m01s03i306"
-      name="avensq-m01s03i306"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i306"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2755,8 +2755,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i306"
-      name="stdev-m01s03i306"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i306_ens"
       > sqrt(avensq - sqav)
@@ -2782,16 +2782,16 @@
     />
 
     <field
-      id="sqav-m01s03i307"
-      name="sqav-m01s03i307"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i307_ens"
       > m01s03i307_ens*m01s03i307_ens
     </field>
 
     <field
-      id="avensq-m01s03i307"
-      name="avensq-m01s03i307"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i307"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2799,8 +2799,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i307"
-      name="stdev-m01s03i307"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i307_ens"
       > sqrt(avensq - sqav)
@@ -2826,16 +2826,16 @@
     />
 
     <field
-      id="sqav-m01s03i308"
-      name="sqav-m01s03i308"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i308_ens"
       > m01s03i308_ens*m01s03i308_ens
     </field>
 
     <field
-      id="avensq-m01s03i308"
-      name="avensq-m01s03i308"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i308"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2843,8 +2843,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i308"
-      name="stdev-m01s03i308"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i308_ens"
       > sqrt(avensq - sqav)
@@ -2870,16 +2870,16 @@
     />
 
     <field
-      id="sqav-m01s03i309"
-      name="sqav-m01s03i309"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i309_ens"
       > m01s03i309_ens*m01s03i309_ens
     </field>
 
     <field
-      id="avensq-m01s03i309"
-      name="avensq-m01s03i309"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i309"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2887,8 +2887,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i309"
-      name="stdev-m01s03i309"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i309_ens"
       > sqrt(avensq - sqav)
@@ -2914,16 +2914,16 @@
     />
 
     <field
-      id="sqav-m01s03i310"
-      name="sqav-m01s03i310"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i310_ens"
       > m01s03i310_ens*m01s03i310_ens
     </field>
 
     <field
-      id="avensq-m01s03i310"
-      name="avensq-m01s03i310"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i310"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2931,8 +2931,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i310"
-      name="stdev-m01s03i310"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i310_ens"
       > sqrt(avensq - sqav)
@@ -2958,16 +2958,16 @@
     />
 
     <field
-      id="sqav-m01s03i332"
-      name="sqav-m01s03i332"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i332_ens"
       > m01s03i332_ens*m01s03i332_ens
     </field>
 
     <field
-      id="avensq-m01s03i332"
-      name="avensq-m01s03i332"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i332"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -2975,8 +2975,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i332"
-      name="stdev-m01s03i332"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i332_ens"
       > sqrt(avensq - sqav)
@@ -3002,16 +3002,16 @@
     />
 
     <field
-      id="sqav-m01s03i340"
-      name="sqav-m01s03i340"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i340_ens"
       > m01s03i340_ens*m01s03i340_ens
     </field>
 
     <field
-      id="avensq-m01s03i340"
-      name="avensq-m01s03i340"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i340"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3019,8 +3019,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i340"
-      name="stdev-m01s03i340"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i340_ens"
       > sqrt(avensq - sqav)
@@ -3046,16 +3046,16 @@
     />
 
     <field
-      id="sqav-m01s03i353"
-      name="sqav-m01s03i353"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i353_ens"
       > m01s03i353_ens*m01s03i353_ens
     </field>
 
     <field
-      id="avensq-m01s03i353"
-      name="avensq-m01s03i353"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i353"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3063,8 +3063,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i353"
-      name="stdev-m01s03i353"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i353_ens"
       > sqrt(avensq - sqav)
@@ -3090,16 +3090,16 @@
     />
 
     <field
-      id="sqav-m01s03i395"
-      name="sqav-m01s03i395"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i395_ens"
       > m01s03i395_ens*m01s03i395_ens
     </field>
 
     <field
-      id="avensq-m01s03i395"
-      name="avensq-m01s03i395"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i395"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3107,8 +3107,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i395"
-      name="stdev-m01s03i395"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i395_ens"
       > sqrt(avensq - sqav)
@@ -3134,16 +3134,16 @@
     />
 
     <field
-      id="sqav-m01s03i662"
-      name="sqav-m01s03i662"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i662_ens"
       > m01s03i662_ens*m01s03i662_ens
     </field>
 
     <field
-      id="avensq-m01s03i662"
-      name="avensq-m01s03i662"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i662"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3151,8 +3151,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i662"
-      name="stdev-m01s03i662"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i662_ens"
       > sqrt(avensq - sqav)
@@ -3178,16 +3178,16 @@
     />
 
     <field
-      id="sqav-m01s03i663"
-      name="sqav-m01s03i663"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s03i663_ens"
       > m01s03i663_ens*m01s03i663_ens
     </field>
 
     <field
-      id="avensq-m01s03i663"
-      name="avensq-m01s03i663"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s03i663"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3195,8 +3195,8 @@
     </field>
 
     <field
-      id="stdev-m01s03i663"
-      name="stdev-m01s03i663"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s03i663_ens"
       > sqrt(avensq - sqav)
@@ -3222,16 +3222,16 @@
     />
 
     <field
-      id="sqav-m01s04i203"
-      name="sqav-m01s04i203"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s04i203_ens"
       > m01s04i203_ens*m01s04i203_ens
     </field>
 
     <field
-      id="avensq-m01s04i203"
-      name="avensq-m01s04i203"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s04i203"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3239,8 +3239,8 @@
     </field>
 
     <field
-      id="stdev-m01s04i203"
-      name="stdev-m01s04i203"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s04i203_ens"
       > sqrt(avensq - sqav)
@@ -3266,16 +3266,16 @@
     />
 
     <field
-      id="sqav-m01s04i204"
-      name="sqav-m01s04i204"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s04i204_ens"
       > m01s04i204_ens*m01s04i204_ens
     </field>
 
     <field
-      id="avensq-m01s04i204"
-      name="avensq-m01s04i204"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s04i204"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3283,8 +3283,8 @@
     </field>
 
     <field
-      id="stdev-m01s04i204"
-      name="stdev-m01s04i204"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s04i204_ens"
       > sqrt(avensq - sqav)
@@ -3310,16 +3310,16 @@
     />
 
     <field
-      id="sqav-m01s05i205"
-      name="sqav-m01s05i205"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i205_ens"
       > m01s05i205_ens*m01s05i205_ens
     </field>
 
     <field
-      id="avensq-m01s05i205"
-      name="avensq-m01s05i205"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i205"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3327,8 +3327,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i205"
-      name="stdev-m01s05i205"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i205_ens"
       > sqrt(avensq - sqav)
@@ -3354,16 +3354,16 @@
     />
 
     <field
-      id="sqav-m01s05i206"
-      name="sqav-m01s05i206"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i206_ens"
       > m01s05i206_ens*m01s05i206_ens
     </field>
 
     <field
-      id="avensq-m01s05i206"
-      name="avensq-m01s05i206"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i206"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3371,8 +3371,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i206"
-      name="stdev-m01s05i206"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i206_ens"
       > sqrt(avensq - sqav)
@@ -3398,16 +3398,16 @@
     />
 
     <field
-      id="sqav-m01s05i214"
-      name="sqav-m01s05i214"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i214_ens"
       > m01s05i214_ens*m01s05i214_ens
     </field>
 
     <field
-      id="avensq-m01s05i214"
-      name="avensq-m01s05i214"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i214"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3415,8 +3415,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i214"
-      name="stdev-m01s05i214"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i214_ens"
       > sqrt(avensq - sqav)
@@ -3442,16 +3442,16 @@
     />
 
     <field
-      id="sqav-m01s05i215"
-      name="sqav-m01s05i215"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i215_ens"
       > m01s05i215_ens*m01s05i215_ens
     </field>
 
     <field
-      id="avensq-m01s05i215"
-      name="avensq-m01s05i215"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i215"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3459,8 +3459,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i215"
-      name="stdev-m01s05i215"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i215_ens"
       > sqrt(avensq - sqav)
@@ -3486,16 +3486,16 @@
     />
 
     <field
-      id="sqav-m01s05i216"
-      name="sqav-m01s05i216"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i216_ens"
       > m01s05i216_ens*m01s05i216_ens
     </field>
 
     <field
-      id="avensq-m01s05i216"
-      name="avensq-m01s05i216"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i216"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3503,8 +3503,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i216"
-      name="stdev-m01s05i216"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i216_ens"
       > sqrt(avensq - sqav)
@@ -3530,16 +3530,16 @@
     />
 
     <field
-      id="sqav-m01s05i231"
-      name="sqav-m01s05i231"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i231_ens"
       > m01s05i231_ens*m01s05i231_ens
     </field>
 
     <field
-      id="avensq-m01s05i231"
-      name="avensq-m01s05i231"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i231"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3547,8 +3547,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i231"
-      name="stdev-m01s05i231"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i231_ens"
       > sqrt(avensq - sqav)
@@ -3574,16 +3574,16 @@
     />
 
     <field
-      id="sqav-m01s05i232"
-      name="sqav-m01s05i232"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i232_ens"
       > m01s05i232_ens*m01s05i232_ens
     </field>
 
     <field
-      id="avensq-m01s05i232"
-      name="avensq-m01s05i232"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i232"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3591,8 +3591,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i232"
-      name="stdev-m01s05i232"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i232_ens"
       > sqrt(avensq - sqav)
@@ -3618,16 +3618,16 @@
     />
 
     <field
-      id="sqav-m01s05i269"
-      name="sqav-m01s05i269"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i269_ens"
       > m01s05i269_ens*m01s05i269_ens
     </field>
 
     <field
-      id="avensq-m01s05i269"
-      name="avensq-m01s05i269"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i269"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3635,8 +3635,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i269"
-      name="stdev-m01s05i269"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i269_ens"
       > sqrt(avensq - sqav)
@@ -3662,16 +3662,16 @@
     />
 
     <field
-      id="sqav-m01s05i270"
-      name="sqav-m01s05i270"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i270_ens"
       > m01s05i270_ens*m01s05i270_ens
     </field>
 
     <field
-      id="avensq-m01s05i270"
-      name="avensq-m01s05i270"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i270"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3679,8 +3679,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i270"
-      name="stdev-m01s05i270"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i270_ens"
       > sqrt(avensq - sqav)
@@ -3706,16 +3706,16 @@
     />
 
     <field
-      id="sqav-m01s05i272"
-      name="sqav-m01s05i272"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i272_ens"
       > m01s05i272_ens*m01s05i272_ens
     </field>
 
     <field
-      id="avensq-m01s05i272"
-      name="avensq-m01s05i272"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i272"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3723,8 +3723,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i272"
-      name="stdev-m01s05i272"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i272_ens"
       > sqrt(avensq - sqav)
@@ -3750,16 +3750,16 @@
     />
 
     <field
-      id="sqav-m01s05i277"
-      name="sqav-m01s05i277"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i277_ens"
       > m01s05i277_ens*m01s05i277_ens
     </field>
 
     <field
-      id="avensq-m01s05i277"
-      name="avensq-m01s05i277"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i277"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3767,8 +3767,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i277"
-      name="stdev-m01s05i277"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i277_ens"
       > sqrt(avensq - sqav)
@@ -3794,16 +3794,16 @@
     />
 
     <field
-      id="sqav-m01s05i278"
-      name="sqav-m01s05i278"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i278_ens"
       > m01s05i278_ens*m01s05i278_ens
     </field>
 
     <field
-      id="avensq-m01s05i278"
-      name="avensq-m01s05i278"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i278"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3811,8 +3811,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i278"
-      name="stdev-m01s05i278"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i278_ens"
       > sqrt(avensq - sqav)
@@ -3838,16 +3838,16 @@
     />
 
     <field
-      id="sqav-m01s05i279"
-      name="sqav-m01s05i279"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s05i279_ens"
       > m01s05i279_ens*m01s05i279_ens
     </field>
 
     <field
-      id="avensq-m01s05i279"
-      name="avensq-m01s05i279"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s05i279"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3855,8 +3855,8 @@
     </field>
 
     <field
-      id="stdev-m01s05i279"
-      name="stdev-m01s05i279"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s05i279_ens"
       > sqrt(avensq - sqav)
@@ -3882,16 +3882,16 @@
     />
 
     <field
-      id="sqav-m01s08i023"
-      name="sqav-m01s08i023"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s08i023_ens"
       > m01s08i023_ens*m01s08i023_ens
     </field>
 
     <field
-      id="avensq-m01s08i023"
-      name="avensq-m01s08i023"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s08i023"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3899,8 +3899,8 @@
     </field>
 
     <field
-      id="stdev-m01s08i023"
-      name="stdev-m01s08i023"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s08i023_ens"
       > sqrt(avensq - sqav)
@@ -3926,16 +3926,16 @@
     />
 
     <field
-      id="sqav-m01s08i208"
-      name="sqav-m01s08i208"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s08i208_ens"
       > m01s08i208_ens*m01s08i208_ens
     </field>
 
     <field
-      id="avensq-m01s08i208"
-      name="avensq-m01s08i208"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s08i208"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3943,8 +3943,8 @@
     </field>
 
     <field
-      id="stdev-m01s08i208"
-      name="stdev-m01s08i208"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s08i208_ens"
       > sqrt(avensq - sqav)
@@ -3970,16 +3970,16 @@
     />
 
     <field
-      id="sqav-m01s08i209"
-      name="sqav-m01s08i209"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s08i209_ens"
       > m01s08i209_ens*m01s08i209_ens
     </field>
 
     <field
-      id="avensq-m01s08i209"
-      name="avensq-m01s08i209"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s08i209"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -3987,8 +3987,8 @@
     </field>
 
     <field
-      id="stdev-m01s08i209"
-      name="stdev-m01s08i209"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s08i209_ens"
       > sqrt(avensq - sqav)
@@ -4014,16 +4014,16 @@
     />
 
     <field
-      id="sqav-m01s08i231"
-      name="sqav-m01s08i231"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s08i231_ens"
       > m01s08i231_ens*m01s08i231_ens
     </field>
 
     <field
-      id="avensq-m01s08i231"
-      name="avensq-m01s08i231"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s08i231"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4031,8 +4031,8 @@
     </field>
 
     <field
-      id="stdev-m01s08i231"
-      name="stdev-m01s08i231"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s08i231_ens"
       > sqrt(avensq - sqav)
@@ -4058,16 +4058,16 @@
     />
 
     <field
-      id="sqav-m01s08i233"
-      name="sqav-m01s08i233"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s08i233_ens"
       > m01s08i233_ens*m01s08i233_ens
     </field>
 
     <field
-      id="avensq-m01s08i233"
-      name="avensq-m01s08i233"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s08i233"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4075,8 +4075,8 @@
     </field>
 
     <field
-      id="stdev-m01s08i233"
-      name="stdev-m01s08i233"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s08i233_ens"
       > sqrt(avensq - sqav)
@@ -4102,16 +4102,16 @@
     />
 
     <field
-      id="sqav-m01s08i234"
-      name="sqav-m01s08i234"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s08i234_ens"
       > m01s08i234_ens*m01s08i234_ens
     </field>
 
     <field
-      id="avensq-m01s08i234"
-      name="avensq-m01s08i234"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s08i234"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4119,8 +4119,8 @@
     </field>
 
     <field
-      id="stdev-m01s08i234"
-      name="stdev-m01s08i234"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s08i234_ens"
       > sqrt(avensq - sqav)
@@ -4146,16 +4146,16 @@
     />
 
     <field
-      id="sqav-m01s08i235"
-      name="sqav-m01s08i235"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s08i235_ens"
       > m01s08i235_ens*m01s08i235_ens
     </field>
 
     <field
-      id="avensq-m01s08i235"
-      name="avensq-m01s08i235"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s08i235"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4163,8 +4163,8 @@
     </field>
 
     <field
-      id="stdev-m01s08i235"
-      name="stdev-m01s08i235"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s08i235_ens"
       > sqrt(avensq - sqav)
@@ -4190,16 +4190,16 @@
     />
 
     <field
-      id="sqav-m01s16i222"
-      name="sqav-m01s16i222"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s16i222_ens"
       > m01s16i222_ens*m01s16i222_ens
     </field>
 
     <field
-      id="avensq-m01s16i222"
-      name="avensq-m01s16i222"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s16i222"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4207,8 +4207,8 @@
     </field>
 
     <field
-      id="stdev-m01s16i222"
-      name="stdev-m01s16i222"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s16i222_ens"
       > sqrt(avensq - sqav)
@@ -4234,16 +4234,16 @@
     />
 
     <field
-      id="sqav-m01s30i402"
-      name="sqav-m01s30i402"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i402_ens"
       > m01s30i402_ens*m01s30i402_ens
     </field>
 
     <field
-      id="avensq-m01s30i402"
-      name="avensq-m01s30i402"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i402"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4251,8 +4251,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i402"
-      name="stdev-m01s30i402"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i402_ens"
       > sqrt(avensq - sqav)
@@ -4278,16 +4278,16 @@
     />
 
     <field
-      id="sqav-m01s30i403"
-      name="sqav-m01s30i403"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i403_ens"
       > m01s30i403_ens*m01s30i403_ens
     </field>
 
     <field
-      id="avensq-m01s30i403"
-      name="avensq-m01s30i403"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i403"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4295,8 +4295,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i403"
-      name="stdev-m01s30i403"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i403_ens"
       > sqrt(avensq - sqav)
@@ -4322,16 +4322,16 @@
     />
 
     <field
-      id="sqav-m01s30i404"
-      name="sqav-m01s30i404"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i404_ens"
       > m01s30i404_ens*m01s30i404_ens
     </field>
 
     <field
-      id="avensq-m01s30i404"
-      name="avensq-m01s30i404"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i404"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4339,8 +4339,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i404"
-      name="stdev-m01s30i404"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i404_ens"
       > sqrt(avensq - sqav)
@@ -4366,16 +4366,16 @@
     />
 
     <field
-      id="sqav-m01s30i405"
-      name="sqav-m01s30i405"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i405_ens"
       > m01s30i405_ens*m01s30i405_ens
     </field>
 
     <field
-      id="avensq-m01s30i405"
-      name="avensq-m01s30i405"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i405"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4383,8 +4383,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i405"
-      name="stdev-m01s30i405"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i405_ens"
       > sqrt(avensq - sqav)
@@ -4410,16 +4410,16 @@
     />
 
     <field
-      id="sqav-m01s30i406"
-      name="sqav-m01s30i406"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i406_ens"
       > m01s30i406_ens*m01s30i406_ens
     </field>
 
     <field
-      id="avensq-m01s30i406"
-      name="avensq-m01s30i406"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i406"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4427,8 +4427,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i406"
-      name="stdev-m01s30i406"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i406_ens"
       > sqrt(avensq - sqav)
@@ -4454,16 +4454,16 @@
     />
 
     <field
-      id="sqav-m01s30i407"
-      name="sqav-m01s30i407"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i407_ens"
       > m01s30i407_ens*m01s30i407_ens
     </field>
 
     <field
-      id="avensq-m01s30i407"
-      name="avensq-m01s30i407"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i407"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4471,8 +4471,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i407"
-      name="stdev-m01s30i407"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i407_ens"
       > sqrt(avensq - sqav)
@@ -4498,16 +4498,16 @@
     />
 
     <field
-      id="sqav-m01s30i408"
-      name="sqav-m01s30i408"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i408_ens"
       > m01s30i408_ens*m01s30i408_ens
     </field>
 
     <field
-      id="avensq-m01s30i408"
-      name="avensq-m01s30i408"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i408"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4515,8 +4515,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i408"
-      name="stdev-m01s30i408"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i408_ens"
       > sqrt(avensq - sqav)
@@ -4542,16 +4542,16 @@
     />
 
     <field
-      id="sqav-m01s30i419"
-      name="sqav-m01s30i419"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i419_ens"
       > m01s30i419_ens*m01s30i419_ens
     </field>
 
     <field
-      id="avensq-m01s30i419"
-      name="avensq-m01s30i419"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i419"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4559,8 +4559,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i419"
-      name="stdev-m01s30i419"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i419_ens"
       > sqrt(avensq - sqav)
@@ -4586,16 +4586,16 @@
     />
 
     <field
-      id="sqav-m01s30i420"
-      name="sqav-m01s30i420"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i420_ens"
       > m01s30i420_ens*m01s30i420_ens
     </field>
 
     <field
-      id="avensq-m01s30i420"
-      name="avensq-m01s30i420"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i420"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4603,8 +4603,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i420"
-      name="stdev-m01s30i420"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i420_ens"
       > sqrt(avensq - sqav)
@@ -4630,16 +4630,16 @@
     />
 
     <field
-      id="sqav-m01s30i421"
-      name="sqav-m01s30i421"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i421_ens"
       > m01s30i421_ens*m01s30i421_ens
     </field>
 
     <field
-      id="avensq-m01s30i421"
-      name="avensq-m01s30i421"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i421"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4647,8 +4647,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i421"
-      name="stdev-m01s30i421"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i421_ens"
       > sqrt(avensq - sqav)
@@ -4657,7 +4657,7 @@
 </file>
 
 <file description="Test New XML" id="test-m01s30i428" name="test-m01s30i428" output_freq="72ts">
-
+	
     <field
       id="m01s30i428_inst"
        name="m01s30i428_inst"
@@ -4674,16 +4674,16 @@
     />
 
     <field
-      id="sqav-m01s30i428"
-      name="sqav-m01s30i428"
+      id="sqav-1"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i428_ens"
       > m01s30i428_ens*m01s30i428_ens
     </field>
 
     <field
-      id="avensq-m01s30i428"
-      name="avensq-m01s30i428"
+      id="avensq-1"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i428"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4691,8 +4691,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i428"
-      name="stdev-m01s30i428"
+      id="stdev-1"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i428_ens"
       > sqrt(avensq - sqav)
@@ -4718,16 +4718,16 @@
     />
 
     <field
-      id="sqav-m01s30i429"
-      name="sqav-m01s30i429"
+      id="sqav"
+      name="sqav"
       operation="instant"
       field_ref="m01s30i429_ens"
       > m01s30i429_ens*m01s30i429_ens
     </field>
 
     <field
-      id="avensq-m01s30i429"
-      name="avensq-m01s30i429"
+      id="avensq"
+      name="avensq"
       operation="instant"
       field_ref="m01s30i429"
       grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -4735,8 +4735,8 @@
     </field>
 
     <field
-      id="stdev-m01s30i429"
-      name="stdev-m01s30i429"
+      id="stdev"
+      name="stdev"
       operation="instant"
       field_ref="m01s30i429_ens"
       > sqrt(avensq - sqav)
@@ -4745,5 +4745,4 @@
 </file>
 
 </file_definition>
-
 
