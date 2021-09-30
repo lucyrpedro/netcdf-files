@@ -1,0 +1,1098 @@
+<file_definition format="netcdf4" time_counter="instant" type="one_file">
+  <file description="UM output" id="xios_up9_1h" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.p9" output_freq="1h" split_freq="02d">
+    <field field_ref="m01s02i205" name="m01s02i205" operation="instant" />
+    <field field_ref="m01s03i225" name="m01s03i225" operation="instant" />
+    <field field_ref="m01s03i226" name="m01s03i226" operation="instant" />
+    <field field_ref="m01s04i203" name="m01s04i203" operation="average" />
+    <field field_ref="m01s05i205" name="m01s05i205" operation="average" />
+    <field field_ref="m01s05i216" name="m01s05i216" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upa_1d" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.pa" output_freq="1d" split_freq="10d">
+    <field field_ref="m01s00i024" name="m01s00i024" operation="average" />
+    <field field_ref="m01s00i031" name="m01s00i031" operation="average" />
+    <field field_ref="m01s00i032" name="m01s00i032" operation="average" />
+    <field field_ref="m01s04i203" name="m01s04i203_2" operation="average" />
+    <field field_ref="m01s05i205" name="m01s05i205_2" operation="average" />
+    <field field_ref="m01s05i216" name="m01s05i216_3" operation="average" />
+    <field field_ref="m01s05i250" name="m01s05i250" operation="average" />
+    <field field_ref="m01s05i256" name="m01s05i256" operation="average" />
+    <field field_ref="m01s05i257" name="m01s05i257" operation="average" />
+    <field field_ref="m01s05i270" name="m01s05i270" operation="average" />
+    <field field_ref="m01s05i272" name="m01s05i272" operation="average" />
+    <field field_ref="m01s08i208" name="m01s08i208" operation="average" />
+    <field field_ref="m01s08i234" name="m01s08i234" operation="average" />
+    <field field_ref="m01s08i235" name="m01s08i235" operation="average" />
+    <field field_ref="m01s30i201_4" name="m01s30i201_4" operation="average" />
+    <field field_ref="m01s30i202_4" name="m01s30i202_4" operation="average" />
+    <field field_ref="m01s30i301_5" name="m01s30i301_5" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upb_1d" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.pb" output_freq="1d" split_freq="10d">
+    <field field_ref="m01s15i215" name="m01s15i215" operation="instant" />
+    <field field_ref="m01s16i222" name="m01s16i222_2" operation="average" />
+    <field field_ref="m01s30i201_3" name="m01s30i201_3" operation="average" />
+    <field field_ref="m01s30i202_3" name="m01s30i202_3" operation="average" />
+    <field field_ref="m01s30i207" name="m01s30i207" operation="average" />
+    <field field_ref="m01s30i301_4" name="m01s30i301_4" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upc_6h" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.pc" output_freq="6h" split_freq="10d">
+    <field field_ref="m01s00i409" name="m01s00i409" operation="instant" />
+    <field field_ref="m01s03i227" name="m01s03i227" operation="maximum" />
+    <field field_ref="m01s15i214" name="m01s15i214" operation="instant" />
+    <field field_ref="m01s16i202" name="m01s16i202" operation="instant" />
+    <field field_ref="m01s16i222" name="m01s16i222" operation="instant" />
+    <field field_ref="m01s30i201_5" name="m01s30i201_5" operation="instant" />
+    <field field_ref="m01s30i202_5" name="m01s30i202_5" operation="instant" />
+    <field field_ref="m01s30i203_2" name="m01s30i203_2" operation="instant" />
+    <field field_ref="m01s30i204_3" name="m01s30i204_3" operation="instant" />
+    <field field_ref="m01s30i205_3" name="m01s30i205_3" operation="instant" />
+    <field field_ref="m01s30i207_3" name="m01s30i207_3" operation="instant" />
+    <field field_ref="m01s30i301_3" name="m01s30i301_3" operation="instant" />
+    <field field_ref="m01s30i407" name="m01s30i407" operation="instant" />
+    <field field_ref="m01s30i408" name="m01s30i408" operation="instant" />
+  </file>
+  <file description="UM output" id="xios_upd_1d" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.pd" output_freq="1d" split_freq="10d">
+    <field field_ref="m01s00i407" name="m01s00i407" operation="average" />
+    <field field_ref="m01s00i408" name="m01s00i408" operation="average" />
+    <field field_ref="m01s01i201" name="m01s01i201" operation="average" />
+    <field field_ref="m01s01i203" name="m01s01i203" operation="average" />
+    <field field_ref="m01s01i210" name="m01s01i210" operation="average" />
+    <field field_ref="m01s01i211" name="m01s01i211" operation="average" />
+    <field field_ref="m01s01i235" name="m01s01i235" operation="average" />
+    <field field_ref="m01s01i260" name="m01s01i260" operation="average" />
+    <field field_ref="m01s02i201" name="m01s02i201" operation="average" />
+    <field field_ref="m01s02i203" name="m01s02i203" operation="average" />
+    <field field_ref="m01s02i204" name="m01s02i204" operation="average" />
+    <field field_ref="m01s02i207" name="m01s02i207" operation="average" />
+    <field field_ref="m01s02i208" name="m01s02i208" operation="average" />
+    <field field_ref="m01s03i217" name="m01s03i217" operation="average" />
+    <field field_ref="m01s03i225" name="m01s03i225_2" operation="average" />
+    <field field_ref="m01s03i226" name="m01s03i226_2" operation="average" />
+    <field field_ref="m01s03i227" name="m01s03i227_2" operation="maximum" />
+    <field field_ref="m01s03i228" name="m01s03i228" operation="average" />
+    <field field_ref="m01s03i234" name="m01s03i234" operation="average" />
+    <field field_ref="m01s03i236" name="m01s03i236_2" operation="average" />
+    <field field_ref="m01s03i236" name="m01s03i236_3" operation="maximum" />
+    <field field_ref="m01s03i236" name="m01s03i236_4" operation="minimum" />
+    <field field_ref="m01s03i237" name="m01s03i237" operation="average" />
+    <field field_ref="m01s03i245" name="m01s03i245" operation="average" />
+    <field field_ref="m01s03i296" name="m01s03i296" operation="average" />
+    <field field_ref="m01s03i297" name="m01s03i297" operation="average" />
+    <field field_ref="m01s03i304" name="m01s03i304" operation="average" />
+    <field field_ref="m01s03i305" name="m01s03i305" operation="average" />
+    <field field_ref="m01s03i307" name="m01s03i307" operation="average" />
+    <field field_ref="m01s03i309" name="m01s03i309" operation="average" />
+    <field field_ref="m01s03i310" name="m01s03i310" operation="average" />
+    <field field_ref="m01s03i332" name="m01s03i332" operation="average" />
+    <field field_ref="m01s03i365" name="m01s03i365" operation="average" />
+    <field field_ref="m01s03i366" name="m01s03i366" operation="average" />
+    <field field_ref="m01s03i367" name="m01s03i367" operation="average" />
+    <field field_ref="m01s03i367" name="m01s03i367_2" operation="maximum" />
+    <field field_ref="m01s08i023" name="m01s08i023_2" operation="average" />
+    <field field_ref="m01s08i209" name="m01s08i209_2" operation="average" />
+    <field field_ref="m01s08i223" name="m01s08i223_2" operation="average" />
+    <field field_ref="m01s16i222" name="m01s16i222_3" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upe_1d" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.pe" output_freq="1d" split_freq="10d">
+    <field field_ref="m01s03i223" name="m01s03i223" operation="average" />
+    <field field_ref="m01s30i201" name="m01s30i201_2" operation="average" />
+    <field field_ref="m01s30i202" name="m01s30i202_2" operation="average" />
+    <field field_ref="m01s30i204" name="m01s30i204_2" operation="average" />
+    <field field_ref="m01s30i205" name="m01s30i205_2" operation="average" />
+    <field field_ref="m01s30i208" name="m01s30i208" operation="average" />
+    <field field_ref="m01s30i215" name="m01s30i215_2" operation="average" />
+    <field field_ref="m01s30i225" name="m01s30i225_2" operation="average" />
+    <field field_ref="m01s30i258" name="m01s30i258_2" operation="average" />
+    <field field_ref="m01s30i301" name="m01s30i301_2" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upf_1d" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.pf" output_freq="1d" split_freq="10d">
+    <field field_ref="m01s00i023" name="m01s00i023" operation="average" />
+    <field field_ref="m01s01i207" name="m01s01i207" operation="average" />
+    <field field_ref="m01s01i208" name="m01s01i208" operation="average" />
+    <field field_ref="m01s01i209" name="m01s01i209" operation="average" />
+    <field field_ref="m01s02i206" name="m01s02i206" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upg_1m" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.pg" output_freq="1mo" split_freq="1mo">
+    <field field_ref="m01s06i101" name="m01s06i101" operation="average" />
+    <field field_ref="m01s06i102" name="m01s06i102" operation="average" />
+    <field field_ref="m01s06i103" name="m01s06i103" operation="average" />
+    <field field_ref="m01s06i104" name="m01s06i104" operation="average" />
+    <field field_ref="m01s06i105" name="m01s06i105" operation="average" />
+    <field field_ref="m01s06i106" name="m01s06i106" operation="average" />
+    <field field_ref="m01s06i207" name="m01s06i207" operation="average" />
+    <field field_ref="m01s06i208" name="m01s06i208" operation="average" />
+    <field field_ref="m01s06i223" name="m01s06i223" operation="average" />
+    <field field_ref="m01s06i224" name="m01s06i224" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upi_1m" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.pi" output_freq="1mo" split_freq="1mo">
+    <field field_ref="m01s00i030" name="m01s00i030_2" operation="instant" />
+    <field field_ref="m01s00i033" name="m01s00i033_2" operation="instant" />
+    <field field_ref="m01s03i395" name="m01s03i395_2" operation="instant" />
+    <field field_ref="m01s08i023" name="m01s08i023" operation="instant" />
+    <field field_ref="m01s08i209" name="m01s08i209" operation="instant" />
+    <field field_ref="m01s08i223" name="m01s08i223" operation="instant" />
+    <field field_ref="m01s30i402" name="m01s30i402" operation="instant" />
+    <field field_ref="m01s30i420" name="m01s30i420" operation="instant" />
+    <field field_ref="m01s30i421" name="m01s30i421" operation="instant" />
+  </file>
+  <file description="UM output" id="xios_upk_3h" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.pk" output_freq="3h" split_freq="10d">
+    <field field_ref="m01s05i216" name="m01s05i216_2" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upm_1m" name="/work/n02/n02/lrpedro/cylc-run/u-bo026-n96-t3/share/data/History_Data/bo026a.pm" output_freq="1mo" split_freq="1mo">
+    <field field_ref="m01s00i002" name="m01s00i002" operation="average" />
+    <field field_ref="m01s00i003" name="m01s00i003" operation="average" />
+    <field field_ref="m01s00i004" name="m01s00i004" operation="average" />
+    <field field_ref="m01s00i010" name="m01s00i010" operation="average" />
+    <field field_ref="m01s00i012" name="m01s00i012" operation="average" />
+    <field field_ref="m01s00i023" name="m01s00i023_2" operation="average" />
+    <field field_ref="m01s00i024" name="m01s00i024_2" operation="average" />
+    <field field_ref="m01s00i025" name="m01s00i025" operation="average" />
+    <field field_ref="m01s00i028" name="m01s00i028" operation="average" />
+    <field field_ref="m01s00i029" name="m01s00i029" operation="average" />
+    <field field_ref="m01s00i030" name="m01s00i030" operation="average" />
+    <field field_ref="m01s00i031" name="m01s00i031_2" operation="average" />
+    <field field_ref="m01s00i032" name="m01s00i032_2" operation="average" />
+    <field field_ref="m01s00i033" name="m01s00i033" operation="average" />
+    <field field_ref="m01s00i211" name="m01s00i211" operation="average" />
+    <field field_ref="m01s00i254" name="m01s00i254" operation="average" />
+    <field field_ref="m01s00i266" name="m01s00i266" operation="average" />
+    <field field_ref="m01s00i407_2" name="m01s00i407_2" operation="average" />
+    <field field_ref="m01s00i408_2" name="m01s00i408_2" operation="average" />
+    <field field_ref="m01s00i409" name="m01s00i409_2" operation="average" />
+    <field field_ref="m01s00i507" name="m01s00i507" operation="average" />
+    <field field_ref="m01s00i508" name="m01s00i508" operation="average" />
+    <field field_ref="m01s00i509" name="m01s00i509" operation="average" />
+    <field field_ref="m01s01i201" name="m01s01i201_2" operation="average" />
+    <field field_ref="m01s01i203" name="m01s01i203_2" operation="average" />
+    <field field_ref="m01s01i207" name="m01s01i207_2" operation="average" />
+    <field field_ref="m01s01i208" name="m01s01i208_2" operation="average" />
+    <field field_ref="m01s01i209" name="m01s01i209_2" operation="average" />
+    <field field_ref="m01s01i210" name="m01s01i210_2" operation="average" />
+    <field field_ref="m01s01i211" name="m01s01i211_2" operation="average" />
+    <field field_ref="m01s01i221" name="m01s01i221" operation="average" />
+    <field field_ref="m01s01i223" name="m01s01i223" operation="average" />
+    <field field_ref="m01s01i225" name="m01s01i225" operation="average" />
+    <field field_ref="m01s01i226" name="m01s01i226" operation="average" />
+    <field field_ref="m01s01i235" name="m01s01i235_2" operation="average" />
+    <field field_ref="m01s01i241" name="m01s01i241" operation="average" />
+    <field field_ref="m01s01i242" name="m01s01i242" operation="average" />
+    <field field_ref="m01s01i245" name="m01s01i245" operation="average" />
+    <field field_ref="m01s01i246" name="m01s01i246" operation="average" />
+    <field field_ref="m01s01i254" name="m01s01i254" operation="average" />
+    <field field_ref="m01s01i255" name="m01s01i255" operation="average" />
+    <field field_ref="m01s01i260" name="m01s01i260_2" operation="average" />
+    <field field_ref="m01s01i280" name="m01s01i280" operation="average" />
+    <field field_ref="m01s01i281" name="m01s01i281" operation="average" />
+    <field field_ref="m01s01i298" name="m01s01i298" operation="average" />
+    <field field_ref="m01s01i299" name="m01s01i299" operation="average" />
+    <field field_ref="m01s02i201" name="m01s02i201_2" operation="average" />
+    <field field_ref="m01s02i203" name="m01s02i203_2" operation="average" />
+    <field field_ref="m01s02i204" name="m01s02i204_2" operation="average" />
+    <field field_ref="m01s02i205" name="m01s02i205_2" operation="average" />
+    <field field_ref="m01s02i206" name="m01s02i206_2" operation="average" />
+    <field field_ref="m01s02i207" name="m01s02i207_2" operation="average" />
+    <field field_ref="m01s02i208" name="m01s02i208_2" operation="average" />
+    <field field_ref="m01s03i201" name="m01s03i201" operation="average" />
+    <field field_ref="m01s03i217" name="m01s03i217_2" operation="average" />
+    <field field_ref="m01s03i219" name="m01s03i219" operation="average" />
+    <field field_ref="m01s03i220" name="m01s03i220" operation="average" />
+    <field field_ref="m01s03i223" name="m01s03i223_2" operation="average" />
+    <field field_ref="m01s03i224" name="m01s03i224" operation="average" />
+    <field field_ref="m01s03i225" name="m01s03i225_3" operation="average" />
+    <field field_ref="m01s03i226" name="m01s03i226_3" operation="average" />
+    <field field_ref="m01s03i227" name="m01s03i227_3" operation="average" />
+    <field field_ref="m01s03i228" name="m01s03i228_2" operation="average" />
+    <field field_ref="m01s03i231" name="m01s03i231" operation="average" />
+    <field field_ref="m01s03i232" name="m01s03i232" operation="average" />
+    <field field_ref="m01s03i234" name="m01s03i234_2" operation="average" />
+    <field field_ref="m01s03i235" name="m01s03i235" operation="average" />
+    <field field_ref="m01s03i236" name="m01s03i236" operation="average" />
+    <field field_ref="m01s03i237" name="m01s03i237_2" operation="average" />
+    <field field_ref="m01s03i245" name="m01s03i245_2" operation="average" />
+    <field field_ref="m01s03i258" name="m01s03i258" operation="average" />
+    <field field_ref="m01s03i261" name="m01s03i261" operation="average" />
+    <field field_ref="m01s03i293" name="m01s03i293" operation="average" />
+    <field field_ref="m01s03i296" name="m01s03i296_2" operation="average" />
+    <field field_ref="m01s03i297" name="m01s03i297_2" operation="average" />
+    <field field_ref="m01s03i298" name="m01s03i298" operation="average" />
+    <field field_ref="m01s03i304" name="m01s03i304_2" operation="average" />
+    <field field_ref="m01s03i305" name="m01s03i305_2" operation="average" />
+    <field field_ref="m01s03i306" name="m01s03i306" operation="average" />
+    <field field_ref="m01s03i307" name="m01s03i307_2" operation="average" />
+    <field field_ref="m01s03i308" name="m01s03i308" operation="average" />
+    <field field_ref="m01s03i309" name="m01s03i309_2" operation="average" />
+    <field field_ref="m01s03i310" name="m01s03i310_2" operation="average" />
+    <field field_ref="m01s03i332" name="m01s03i332_2" operation="average" />
+    <field field_ref="m01s03i340" name="m01s03i340" operation="average" />
+    <field field_ref="m01s03i353" name="m01s03i353" operation="average" />
+    <field field_ref="m01s03i365" name="m01s03i365_2" operation="average" />
+    <field field_ref="m01s03i366" name="m01s03i366_2" operation="average" />
+    <field field_ref="m01s03i367" name="m01s03i367_3" operation="average" />
+    <field field_ref="m01s03i392" name="m01s03i392" operation="average" />
+    <field field_ref="m01s03i394" name="m01s03i394" operation="average" />
+    <field field_ref="m01s03i395" name="m01s03i395" operation="average" />
+    <field field_ref="m01s03i662" name="m01s03i662" operation="average" />
+    <field field_ref="m01s03i663" name="m01s03i663" operation="average" />
+    <field field_ref="m01s04i203" name="m01s04i203_3" operation="average" />
+    <field field_ref="m01s04i204" name="m01s04i204" operation="average" />
+    <field field_ref="m01s05i205" name="m01s05i205_3" operation="average" />
+    <field field_ref="m01s05i206" name="m01s05i206" operation="average" />
+    <field field_ref="m01s05i209" name="m01s05i209" operation="average" />
+    <field field_ref="m01s05i214" name="m01s05i214" operation="average" />
+    <field field_ref="m01s05i215" name="m01s05i215" operation="average" />
+    <field field_ref="m01s05i216" name="m01s05i216_4" operation="average" />
+    <field field_ref="m01s05i231" name="m01s05i231" operation="average" />
+    <field field_ref="m01s05i232" name="m01s05i232" operation="average" />
+    <field field_ref="m01s05i269" name="m01s05i269" operation="average" />
+    <field field_ref="m01s05i270" name="m01s05i270_2" operation="average" />
+    <field field_ref="m01s05i272" name="m01s05i272_2" operation="average" />
+    <field field_ref="m01s05i277" name="m01s05i277" operation="average" />
+    <field field_ref="m01s05i278" name="m01s05i278" operation="average" />
+    <field field_ref="m01s05i279" name="m01s05i279" operation="average" />
+    <field field_ref="m01s05i319" name="m01s05i319" operation="average" />
+    <field field_ref="m01s05i320" name="m01s05i320" operation="average" />
+    <field field_ref="m01s05i322" name="m01s05i322" operation="average" />
+    <field field_ref="m01s05i323" name="m01s05i323" operation="average" />
+    <field field_ref="m01s06i201" name="m01s06i201" operation="average" />
+    <field field_ref="m01s08i023" name="m01s08i023_3" operation="average" />
+    <field field_ref="m01s08i208" name="m01s08i208_2" operation="average" />
+    <field field_ref="m01s08i209" name="m01s08i209_3" operation="average" />
+    <field field_ref="m01s08i223" name="m01s08i223_3" operation="average" />
+    <field field_ref="m01s08i225" name="m01s08i225" operation="average" />
+    <field field_ref="m01s08i229" name="m01s08i229" operation="average" />
+    <field field_ref="m01s08i230" name="m01s08i230" operation="average" />
+    <field field_ref="m01s08i231" name="m01s08i231" operation="average" />
+    <field field_ref="m01s08i233" name="m01s08i233" operation="average" />
+    <field field_ref="m01s08i234" name="m01s08i234_2" operation="average" />
+    <field field_ref="m01s08i235" name="m01s08i235_2" operation="average" />
+    <field field_ref="m01s16i222" name="m01s16i222_4" operation="average" />
+    <field field_ref="m01s30i112" name="m01s30i112" operation="average" />
+    <field field_ref="m01s30i114" name="m01s30i114" operation="average" />
+    <field field_ref="m01s30i201" name="m01s30i201" operation="average" />
+    <field field_ref="m01s30i202" name="m01s30i202" operation="average" />
+    <field field_ref="m01s30i203" name="m01s30i203" operation="average" />
+    <field field_ref="m01s30i204" name="m01s30i204" operation="average" />
+    <field field_ref="m01s30i205" name="m01s30i205" operation="average" />
+    <field field_ref="m01s30i206" name="m01s30i206" operation="average" />
+    <field field_ref="m01s30i207" name="m01s30i207_2" operation="average" />
+    <field field_ref="m01s30i208" name="m01s30i208_2" operation="average" />
+    <field field_ref="m01s30i211" name="m01s30i211" operation="average" />
+    <field field_ref="m01s30i212" name="m01s30i212" operation="average" />
+    <field field_ref="m01s30i214" name="m01s30i214" operation="average" />
+    <field field_ref="m01s30i215" name="m01s30i215" operation="average" />
+    <field field_ref="m01s30i218" name="m01s30i218" operation="average" />
+    <field field_ref="m01s30i222" name="m01s30i222" operation="average" />
+    <field field_ref="m01s30i224" name="m01s30i224" operation="average" />
+    <field field_ref="m01s30i225" name="m01s30i225" operation="average" />
+    <field field_ref="m01s30i228" name="m01s30i228" operation="average" />
+    <field field_ref="m01s30i234" name="m01s30i234" operation="average" />
+    <field field_ref="m01s30i235" name="m01s30i235" operation="average" />
+    <field field_ref="m01s30i244" name="m01s30i244" operation="average" />
+    <field field_ref="m01s30i248" name="m01s30i248" operation="average" />
+    <field field_ref="m01s30i258" name="m01s30i258" operation="average" />
+    <field field_ref="m01s30i288" name="m01s30i288" operation="average" />
+    <field field_ref="m01s30i301" name="m01s30i301" operation="average" />
+    <field field_ref="m01s30i403" name="m01s30i403" operation="average" />
+    <field field_ref="m01s30i404" name="m01s30i404" operation="average" />
+    <field field_ref="m01s30i405" name="m01s30i405" operation="average" />
+    <field field_ref="m01s30i406" name="m01s30i406" operation="average" />
+    <field field_ref="m01s30i419" name="m01s30i419" operation="average" />
+    <field field_ref="m01s30i428" name="m01s30i428" operation="average" />
+    <field field_ref="m01s30i429" name="m01s30i429" operation="average" />
+    <field field_ref="m01s30i431" name="m01s30i431" operation="average" />
+  </file>
+
+<file description="Field m01s04i203" id="test-m01s04i203" name="test-m01s04i203" output_freq="72ts">
+
+		<field
+			id="m01s04i203_inst"
+			name="m01s04i203_inst"
+			operation="instant"
+			field_ref="m01s04i203"
+		/>
+
+		<field
+			id="m01s04i203_ens"
+			name="m01s04i203_ens"
+			operation="instant"
+			field_ref="m01s04i203"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s04i203_sqav"
+			name="m01s04i203_sqav"
+			operation="instant"
+			field_ref="m01s04i203_ens"
+			> m01s04i203_ens*m01s04i203_ens
+		</field>
+
+		<field
+			id="m01s04i203_avensq"
+			name="m01s04i203_avensq"
+			operation="instant"
+			field_ref="m01s04i203"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s04i203*m01s04i203
+		</field>
+
+		<field
+			id="m01s04i203_stdev"
+			name="m01s04i203_stdev"
+			operation="instant"
+			field_ref="m01s04i203_ens"
+			> sqrt(m01s04i203_avensq - m01s04i203_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s04i204" id="test-m01s04i204" name="test-m01s04i204" output_freq="72ts">
+
+		<field
+			id="m01s04i204_inst"
+			name="m01s04i204_inst"
+			operation="instant"
+			field_ref="m01s04i204"
+		/>
+
+		<field
+			id="m01s04i204_ens"
+			name="m01s04i204_ens"
+			operation="instant"
+			field_ref="m01s04i204"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s04i204_sqav"
+			name="m01s04i204_sqav"
+			operation="instant"
+			field_ref="m01s04i204_ens"
+			> m01s04i204_ens*m01s04i204_ens
+		</field>
+
+		<field
+			id="m01s04i204_avensq"
+			name="m01s04i204_avensq"
+			operation="instant"
+			field_ref="m01s04i204"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s04i204*m01s04i204
+		</field>
+
+		<field
+			id="m01s04i204_stdev"
+			name="m01s04i204_stdev"
+			operation="instant"
+			field_ref="m01s04i204_ens"
+			> sqrt(m01s04i204_avensq - m01s04i204_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i205" id="test-m01s05i205" name="test-m01s05i205" output_freq="72ts">
+
+		<field
+			id="m01s05i205_inst"
+			name="m01s05i205_inst"
+			operation="instant"
+			field_ref="m01s05i205"
+		/>
+
+		<field
+			id="m01s05i205_ens"
+			name="m01s05i205_ens"
+			operation="instant"
+			field_ref="m01s05i205"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i205_sqav"
+			name="m01s05i205_sqav"
+			operation="instant"
+			field_ref="m01s05i205_ens"
+			> m01s05i205_ens*m01s05i205_ens
+		</field>
+
+		<field
+			id="m01s05i205_avensq"
+			name="m01s05i205_avensq"
+			operation="instant"
+			field_ref="m01s05i205"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i205*m01s05i205
+		</field>
+
+		<field
+			id="m01s05i205_stdev"
+			name="m01s05i205_stdev"
+			operation="instant"
+			field_ref="m01s05i205_ens"
+			> sqrt(m01s05i205_avensq - m01s05i205_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i206" id="test-m01s05i206" name="test-m01s05i206" output_freq="72ts">
+
+		<field
+			id="m01s05i206_inst"
+			name="m01s05i206_inst"
+			operation="instant"
+			field_ref="m01s05i206"
+		/>
+
+		<field
+			id="m01s05i206_ens"
+			name="m01s05i206_ens"
+			operation="instant"
+			field_ref="m01s05i206"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i206_sqav"
+			name="m01s05i206_sqav"
+			operation="instant"
+			field_ref="m01s05i206_ens"
+			> m01s05i206_ens*m01s05i206_ens
+		</field>
+
+		<field
+			id="m01s05i206_avensq"
+			name="m01s05i206_avensq"
+			operation="instant"
+			field_ref="m01s05i206"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i206*m01s05i206
+		</field>
+
+		<field
+			id="m01s05i206_stdev"
+			name="m01s05i206_stdev"
+			operation="instant"
+			field_ref="m01s05i206_ens"
+			> sqrt(m01s05i206_avensq - m01s05i206_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i209" id="test-m01s05i209" name="test-m01s05i209" output_freq="72ts">
+
+		<field
+			id="m01s05i209_inst"
+			name="m01s05i209_inst"
+			operation="instant"
+			field_ref="m01s05i209"
+		/>
+
+		<field
+			id="m01s05i209_ens"
+			name="m01s05i209_ens"
+			operation="instant"
+			field_ref="m01s05i209"
+			grid_ref="um-atmos_grid_t_D1TH_ens_mean"
+		/>
+
+		<field
+			id="m01s05i209_sqav"
+			name="m01s05i209_sqav"
+			operation="instant"
+			field_ref="m01s05i209_ens"
+			> m01s05i209_ens*m01s05i209_ens
+		</field>
+
+		<field
+			id="m01s05i209_avensq"
+			name="m01s05i209_avensq"
+			operation="instant"
+			field_ref="m01s05i209"
+			grid_ref="um-atmos_grid_t_D1TH_ens_mean"
+			> m01s05i209*m01s05i209
+		</field>
+
+		<field
+			id="m01s05i209_stdev"
+			name="m01s05i209_stdev"
+			operation="instant"
+			field_ref="m01s05i209_ens"
+			> sqrt(m01s05i209_avensq - m01s05i209_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i214" id="test-m01s05i214" name="test-m01s05i214" output_freq="72ts">
+
+		<field
+			id="m01s05i214_inst"
+			name="m01s05i214_inst"
+			operation="instant"
+			field_ref="m01s05i214"
+		/>
+
+		<field
+			id="m01s05i214_ens"
+			name="m01s05i214_ens"
+			operation="instant"
+			field_ref="m01s05i214"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i214_sqav"
+			name="m01s05i214_sqav"
+			operation="instant"
+			field_ref="m01s05i214_ens"
+			> m01s05i214_ens*m01s05i214_ens
+		</field>
+
+		<field
+			id="m01s05i214_avensq"
+			name="m01s05i214_avensq"
+			operation="instant"
+			field_ref="m01s05i214"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i214*m01s05i214
+		</field>
+
+		<field
+			id="m01s05i214_stdev"
+			name="m01s05i214_stdev"
+			operation="instant"
+			field_ref="m01s05i214_ens"
+			> sqrt(m01s05i214_avensq - m01s05i214_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i215" id="test-m01s05i215" name="test-m01s05i215" output_freq="72ts">
+
+		<field
+			id="m01s05i215_inst"
+			name="m01s05i215_inst"
+			operation="instant"
+			field_ref="m01s05i215"
+		/>
+
+		<field
+			id="m01s05i215_ens"
+			name="m01s05i215_ens"
+			operation="instant"
+			field_ref="m01s05i215"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i215_sqav"
+			name="m01s05i215_sqav"
+			operation="instant"
+			field_ref="m01s05i215_ens"
+			> m01s05i215_ens*m01s05i215_ens
+		</field>
+
+		<field
+			id="m01s05i215_avensq"
+			name="m01s05i215_avensq"
+			operation="instant"
+			field_ref="m01s05i215"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i215*m01s05i215
+		</field>
+
+		<field
+			id="m01s05i215_stdev"
+			name="m01s05i215_stdev"
+			operation="instant"
+			field_ref="m01s05i215_ens"
+			> sqrt(m01s05i215_avensq - m01s05i215_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i216" id="test-m01s05i216" name="test-m01s05i216" output_freq="72ts">
+
+		<field
+			id="m01s05i216_inst"
+			name="m01s05i216_inst"
+			operation="instant"
+			field_ref="m01s05i216"
+		/>
+
+		<field
+			id="m01s05i216_ens"
+			name="m01s05i216_ens"
+			operation="instant"
+			field_ref="m01s05i216"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i216_sqav"
+			name="m01s05i216_sqav"
+			operation="instant"
+			field_ref="m01s05i216_ens"
+			> m01s05i216_ens*m01s05i216_ens
+		</field>
+
+		<field
+			id="m01s05i216_avensq"
+			name="m01s05i216_avensq"
+			operation="instant"
+			field_ref="m01s05i216"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i216*m01s05i216
+		</field>
+
+		<field
+			id="m01s05i216_stdev"
+			name="m01s05i216_stdev"
+			operation="instant"
+			field_ref="m01s05i216_ens"
+			> sqrt(m01s05i216_avensq - m01s05i216_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i231" id="test-m01s05i231" name="test-m01s05i231" output_freq="72ts">
+
+		<field
+			id="m01s05i231_inst"
+			name="m01s05i231_inst"
+			operation="instant"
+			field_ref="m01s05i231"
+		/>
+
+		<field
+			id="m01s05i231_ens"
+			name="m01s05i231_ens"
+			operation="instant"
+			field_ref="m01s05i231"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i231_sqav"
+			name="m01s05i231_sqav"
+			operation="instant"
+			field_ref="m01s05i231_ens"
+			> m01s05i231_ens*m01s05i231_ens
+		</field>
+
+		<field
+			id="m01s05i231_avensq"
+			name="m01s05i231_avensq"
+			operation="instant"
+			field_ref="m01s05i231"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i231*m01s05i231
+		</field>
+
+		<field
+			id="m01s05i231_stdev"
+			name="m01s05i231_stdev"
+			operation="instant"
+			field_ref="m01s05i231_ens"
+			> sqrt(m01s05i231_avensq - m01s05i231_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i232" id="test-m01s05i232" name="test-m01s05i232" output_freq="72ts">
+
+		<field
+			id="m01s05i232_inst"
+			name="m01s05i232_inst"
+			operation="instant"
+			field_ref="m01s05i232"
+		/>
+
+		<field
+			id="m01s05i232_ens"
+			name="m01s05i232_ens"
+			operation="instant"
+			field_ref="m01s05i232"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i232_sqav"
+			name="m01s05i232_sqav"
+			operation="instant"
+			field_ref="m01s05i232_ens"
+			> m01s05i232_ens*m01s05i232_ens
+		</field>
+
+		<field
+			id="m01s05i232_avensq"
+			name="m01s05i232_avensq"
+			operation="instant"
+			field_ref="m01s05i232"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i232*m01s05i232
+		</field>
+
+		<field
+			id="m01s05i232_stdev"
+			name="m01s05i232_stdev"
+			operation="instant"
+			field_ref="m01s05i232_ens"
+			> sqrt(m01s05i232_avensq - m01s05i232_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i250" id="test-m01s05i250" name="test-m01s05i250" output_freq="72ts">
+
+		<field
+			id="m01s05i250_inst"
+			name="m01s05i250_inst"
+			operation="instant"
+			field_ref="m01s05i250"
+		/>
+
+		<field
+			id="m01s05i250_ens"
+			name="m01s05i250_ens"
+			operation="instant"
+			field_ref="m01s05i250"
+			grid_ref="um-atmos_grid_t_D52TH_ens_mean"
+		/>
+
+		<field
+			id="m01s05i250_sqav"
+			name="m01s05i250_sqav"
+			operation="instant"
+			field_ref="m01s05i250_ens"
+			> m01s05i250_ens*m01s05i250_ens
+		</field>
+
+		<field
+			id="m01s05i250_avensq"
+			name="m01s05i250_avensq"
+			operation="instant"
+			field_ref="m01s05i250"
+			grid_ref="um-atmos_grid_t_D52TH_ens_mean"
+			> m01s05i250*m01s05i250
+		</field>
+
+		<field
+			id="m01s05i250_stdev"
+			name="m01s05i250_stdev"
+			operation="instant"
+			field_ref="m01s05i250_ens"
+			> sqrt(m01s05i250_avensq - m01s05i250_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i256" id="test-m01s05i256" name="test-m01s05i256" output_freq="72ts">
+
+		<field
+			id="m01s05i256_inst"
+			name="m01s05i256_inst"
+			operation="instant"
+			field_ref="m01s05i256"
+		/>
+
+		<field
+			id="m01s05i256_ens"
+			name="m01s05i256_ens"
+			operation="instant"
+			field_ref="m01s05i256"
+			grid_ref="um-atmos_grid_t_D52RH_ens_mean"
+		/>
+
+		<field
+			id="m01s05i256_sqav"
+			name="m01s05i256_sqav"
+			operation="instant"
+			field_ref="m01s05i256_ens"
+			> m01s05i256_ens*m01s05i256_ens
+		</field>
+
+		<field
+			id="m01s05i256_avensq"
+			name="m01s05i256_avensq"
+			operation="instant"
+			field_ref="m01s05i256"
+			grid_ref="um-atmos_grid_t_D52RH_ens_mean"
+			> m01s05i256*m01s05i256
+		</field>
+
+		<field
+			id="m01s05i256_stdev"
+			name="m01s05i256_stdev"
+			operation="instant"
+			field_ref="m01s05i256_ens"
+			> sqrt(m01s05i256_avensq - m01s05i256_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i257" id="test-m01s05i257" name="test-m01s05i257" output_freq="72ts">
+
+		<field
+			id="m01s05i257_inst"
+			name="m01s05i257_inst"
+			operation="instant"
+			field_ref="m01s05i257"
+		/>
+
+		<field
+			id="m01s05i257_ens"
+			name="m01s05i257_ens"
+			operation="instant"
+			field_ref="m01s05i257"
+			grid_ref="um-atmos_grid_t_D52RH_ens_mean"
+		/>
+
+		<field
+			id="m01s05i257_sqav"
+			name="m01s05i257_sqav"
+			operation="instant"
+			field_ref="m01s05i257_ens"
+			> m01s05i257_ens*m01s05i257_ens
+		</field>
+
+		<field
+			id="m01s05i257_avensq"
+			name="m01s05i257_avensq"
+			operation="instant"
+			field_ref="m01s05i257"
+			grid_ref="um-atmos_grid_t_D52RH_ens_mean"
+			> m01s05i257*m01s05i257
+		</field>
+
+		<field
+			id="m01s05i257_stdev"
+			name="m01s05i257_stdev"
+			operation="instant"
+			field_ref="m01s05i257_ens"
+			> sqrt(m01s05i257_avensq - m01s05i257_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i269" id="test-m01s05i269" name="test-m01s05i269" output_freq="72ts">
+
+		<field
+			id="m01s05i269_inst"
+			name="m01s05i269_inst"
+			operation="instant"
+			field_ref="m01s05i269"
+		/>
+
+		<field
+			id="m01s05i269_ens"
+			name="m01s05i269_ens"
+			operation="instant"
+			field_ref="m01s05i269"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i269_sqav"
+			name="m01s05i269_sqav"
+			operation="instant"
+			field_ref="m01s05i269_ens"
+			> m01s05i269_ens*m01s05i269_ens
+		</field>
+
+		<field
+			id="m01s05i269_avensq"
+			name="m01s05i269_avensq"
+			operation="instant"
+			field_ref="m01s05i269"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i269*m01s05i269
+		</field>
+
+		<field
+			id="m01s05i269_stdev"
+			name="m01s05i269_stdev"
+			operation="instant"
+			field_ref="m01s05i269_ens"
+			> sqrt(m01s05i269_avensq - m01s05i269_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i270" id="test-m01s05i270" name="test-m01s05i270" output_freq="72ts">
+
+		<field
+			id="m01s05i270_inst"
+			name="m01s05i270_inst"
+			operation="instant"
+			field_ref="m01s05i270"
+		/>
+
+		<field
+			id="m01s05i270_ens"
+			name="m01s05i270_ens"
+			operation="instant"
+			field_ref="m01s05i270"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i270_sqav"
+			name="m01s05i270_sqav"
+			operation="instant"
+			field_ref="m01s05i270_ens"
+			> m01s05i270_ens*m01s05i270_ens
+		</field>
+
+		<field
+			id="m01s05i270_avensq"
+			name="m01s05i270_avensq"
+			operation="instant"
+			field_ref="m01s05i270"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i270*m01s05i270
+		</field>
+
+		<field
+			id="m01s05i270_stdev"
+			name="m01s05i270_stdev"
+			operation="instant"
+			field_ref="m01s05i270_ens"
+			> sqrt(m01s05i270_avensq - m01s05i270_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i272" id="test-m01s05i272" name="test-m01s05i272" output_freq="72ts">
+
+		<field
+			id="m01s05i272_inst"
+			name="m01s05i272_inst"
+			operation="instant"
+			field_ref="m01s05i272"
+		/>
+
+		<field
+			id="m01s05i272_ens"
+			name="m01s05i272_ens"
+			operation="instant"
+			field_ref="m01s05i272"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i272_sqav"
+			name="m01s05i272_sqav"
+			operation="instant"
+			field_ref="m01s05i272_ens"
+			> m01s05i272_ens*m01s05i272_ens
+		</field>
+
+		<field
+			id="m01s05i272_avensq"
+			name="m01s05i272_avensq"
+			operation="instant"
+			field_ref="m01s05i272"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i272*m01s05i272
+		</field>
+
+		<field
+			id="m01s05i272_stdev"
+			name="m01s05i272_stdev"
+			operation="instant"
+			field_ref="m01s05i272_ens"
+			> sqrt(m01s05i272_avensq - m01s05i272_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i277" id="test-m01s05i277" name="test-m01s05i277" output_freq="72ts">
+
+		<field
+			id="m01s05i277_inst"
+			name="m01s05i277_inst"
+			operation="instant"
+			field_ref="m01s05i277"
+		/>
+
+		<field
+			id="m01s05i277_ens"
+			name="m01s05i277_ens"
+			operation="instant"
+			field_ref="m01s05i277"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i277_sqav"
+			name="m01s05i277_sqav"
+			operation="instant"
+			field_ref="m01s05i277_ens"
+			> m01s05i277_ens*m01s05i277_ens
+		</field>
+
+		<field
+			id="m01s05i277_avensq"
+			name="m01s05i277_avensq"
+			operation="instant"
+			field_ref="m01s05i277"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i277*m01s05i277
+		</field>
+
+		<field
+			id="m01s05i277_stdev"
+			name="m01s05i277_stdev"
+			operation="instant"
+			field_ref="m01s05i277_ens"
+			> sqrt(m01s05i277_avensq - m01s05i277_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i278" id="test-m01s05i278" name="test-m01s05i278" output_freq="72ts">
+
+		<field
+			id="m01s05i278_inst"
+			name="m01s05i278_inst"
+			operation="instant"
+			field_ref="m01s05i278"
+		/>
+
+		<field
+			id="m01s05i278_ens"
+			name="m01s05i278_ens"
+			operation="instant"
+			field_ref="m01s05i278"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s05i278_sqav"
+			name="m01s05i278_sqav"
+			operation="instant"
+			field_ref="m01s05i278_ens"
+			> m01s05i278_ens*m01s05i278_ens
+		</field>
+
+		<field
+			id="m01s05i278_avensq"
+			name="m01s05i278_avensq"
+			operation="instant"
+			field_ref="m01s05i278"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s05i278*m01s05i278
+		</field>
+
+		<field
+			id="m01s05i278_stdev"
+			name="m01s05i278_stdev"
+			operation="instant"
+			field_ref="m01s05i278_ens"
+			> sqrt(m01s05i278_avensq - m01s05i278_sqav)
+		</field>
+
+</file>
+
+</file_definition>
+
+

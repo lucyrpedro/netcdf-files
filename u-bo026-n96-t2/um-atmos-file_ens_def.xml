@@ -301,7 +301,227 @@
     <field field_ref="m01s30i431" name="m01s30i431" operation="average" />
   </file>
 
-<file description="Test New XML" id="test-m01s00i023" name="test-m01s00i023" output_freq="72ts">
+<file description="Field m01s00i002" id="test-m01s00i002" name="test-m01s00i002" output_freq="72ts">
+
+		<field
+			id="m01s00i002_inst"
+			name="m01s00i002_inst"
+			operation="instant"
+			field_ref="m01s00i002"
+		/>
+
+		<field
+			id="m01s00i002_ens"
+			name="m01s00i002_ens"
+			operation="instant"
+			field_ref="m01s00i002"
+			grid_ref="um-atmos_grid_cu_halo_single_DALLRH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i002_sqav"
+			name="m01s00i002_sqav"
+			operation="instant"
+			field_ref="m01s00i002_ens"
+			> m01s00i002_ens*m01s00i002_ens
+		</field>
+
+		<field
+			id="m01s00i002_avensq"
+			name="m01s00i002_avensq"
+			operation="instant"
+			field_ref="m01s00i002"
+			grid_ref="um-atmos_grid_cu_halo_single_DALLRH_ens_mean"
+			> m01s00i002*m01s00i002
+		</field>
+
+		<field
+			id="m01s00i002_stdev"
+			name="m01s00i002_stdev"
+			operation="instant"
+			field_ref="m01s00i002_ens"
+			> sqrt(m01s00i002_avensq - m01s00i002_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i003" id="test-m01s00i003" name="test-m01s00i003" output_freq="72ts">
+
+		<field
+			id="m01s00i003_inst"
+			name="m01s00i003_inst"
+			operation="instant"
+			field_ref="m01s00i003"
+		/>
+
+		<field
+			id="m01s00i003_ens"
+			name="m01s00i003_ens"
+			operation="instant"
+			field_ref="m01s00i003"
+			grid_ref="um-atmos_grid_cv_halo_single_DALLRH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i003_sqav"
+			name="m01s00i003_sqav"
+			operation="instant"
+			field_ref="m01s00i003_ens"
+			> m01s00i003_ens*m01s00i003_ens
+		</field>
+
+		<field
+			id="m01s00i003_avensq"
+			name="m01s00i003_avensq"
+			operation="instant"
+			field_ref="m01s00i003"
+			grid_ref="um-atmos_grid_cv_halo_single_DALLRH_ens_mean"
+			> m01s00i003*m01s00i003
+		</field>
+
+		<field
+			id="m01s00i003_stdev"
+			name="m01s00i003_stdev"
+			operation="instant"
+			field_ref="m01s00i003_ens"
+			> sqrt(m01s00i003_avensq - m01s00i003_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i004" id="test-m01s00i004" name="test-m01s00i004" output_freq="72ts">
+
+		<field
+			id="m01s00i004_inst"
+			name="m01s00i004_inst"
+			operation="instant"
+			field_ref="m01s00i004"
+		/>
+
+		<field
+			id="m01s00i004_ens"
+			name="m01s00i004_ens"
+			operation="instant"
+			field_ref="m01s00i004"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i004_sqav"
+			name="m01s00i004_sqav"
+			operation="instant"
+			field_ref="m01s00i004_ens"
+			> m01s00i004_ens*m01s00i004_ens
+		</field>
+
+		<field
+			id="m01s00i004_avensq"
+			name="m01s00i004_avensq"
+			operation="instant"
+			field_ref="m01s00i004"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			> m01s00i004*m01s00i004
+		</field>
+
+		<field
+			id="m01s00i004_stdev"
+			name="m01s00i004_stdev"
+			operation="instant"
+			field_ref="m01s00i004_ens"
+			> sqrt(m01s00i004_avensq - m01s00i004_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i010" id="test-m01s00i010" name="test-m01s00i010" output_freq="72ts">
+
+		<field
+			id="m01s00i010_inst"
+			name="m01s00i010_inst"
+			operation="instant"
+			field_ref="m01s00i010"
+		/>
+
+		<field
+			id="m01s00i010_ens"
+			name="m01s00i010_ens"
+			operation="instant"
+			field_ref="m01s00i010"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i010_sqav"
+			name="m01s00i010_sqav"
+			operation="instant"
+			field_ref="m01s00i010_ens"
+			> m01s00i010_ens*m01s00i010_ens
+		</field>
+
+		<field
+			id="m01s00i010_avensq"
+			name="m01s00i010_avensq"
+			operation="instant"
+			field_ref="m01s00i010"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+			> m01s00i010*m01s00i010
+		</field>
+
+		<field
+			id="m01s00i010_stdev"
+			name="m01s00i010_stdev"
+			operation="instant"
+			field_ref="m01s00i010_ens"
+			> sqrt(m01s00i010_avensq - m01s00i010_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i012" id="test-m01s00i012" name="test-m01s00i012" output_freq="72ts">
+
+		<field
+			id="m01s00i012_inst"
+			name="m01s00i012_inst"
+			operation="instant"
+			field_ref="m01s00i012"
+		/>
+
+		<field
+			id="m01s00i012_ens"
+			name="m01s00i012_ens"
+			operation="instant"
+			field_ref="m01s00i012"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i012_sqav"
+			name="m01s00i012_sqav"
+			operation="instant"
+			field_ref="m01s00i012_ens"
+			> m01s00i012_ens*m01s00i012_ens
+		</field>
+
+		<field
+			id="m01s00i012_avensq"
+			name="m01s00i012_avensq"
+			operation="instant"
+			field_ref="m01s00i012"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+			> m01s00i012*m01s00i012
+		</field>
+
+		<field
+			id="m01s00i012_stdev"
+			name="m01s00i012_stdev"
+			operation="instant"
+			field_ref="m01s00i012_ens"
+			> sqrt(m01s00i012_avensq - m01s00i012_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i023" id="test-m01s00i023" name="test-m01s00i023" output_freq="72ts">
 
 		<field
 			id="m01s00i023_inst"
@@ -319,16 +539,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i023"
-			name="sqav-m01s00i023"
+			id="m01s00i023_sqav"
+			name="m01s00i023_sqav"
 			operation="instant"
 			field_ref="m01s00i023_ens"
 			> m01s00i023_ens*m01s00i023_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i023"
-			name="avensq-m01s00i023"
+			id="m01s00i023_avensq"
+			name="m01s00i023_avensq"
 			operation="instant"
 			field_ref="m01s00i023"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -336,16 +556,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i023"
-			name="stdev-m01s00i023"
+			id="m01s00i023_stdev"
+			name="m01s00i023_stdev"
 			operation="instant"
 			field_ref="m01s00i023_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i023_avensq - m01s00i023_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s00i024" name="test-m01s00i024" output_freq="72ts">
+<file description="Field m01s00i024" id="test-m01s00i024" name="test-m01s00i024" output_freq="72ts">
 
 		<field
 			id="m01s00i024_inst"
@@ -363,16 +583,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i024"
-			name="sqav-m01s00i024"
+			id="m01s00i024_sqav"
+			name="m01s00i024_sqav"
 			operation="instant"
 			field_ref="m01s00i024_ens"
 			> m01s00i024_ens*m01s00i024_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i024"
-			name="avensq-m01s00i024"
+			id="m01s00i024_avensq"
+			name="m01s00i024_avensq"
 			operation="instant"
 			field_ref="m01s00i024"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -380,16 +600,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i024"
-			name="stdev-m01s00i024"
+			id="m01s00i024_stdev"
+			name="m01s00i024_stdev"
 			operation="instant"
 			field_ref="m01s00i024_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i024_avensq - m01s00i024_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s00i025" name="test-m01s00i025" output_freq="72ts">
+<file description="Field m01s00i025" id="test-m01s00i025" name="test-m01s00i025" output_freq="72ts">
 
 		<field
 			id="m01s00i025_inst"
@@ -407,16 +627,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i025"
-			name="sqav-m01s00i025"
+			id="m01s00i025_sqav"
+			name="m01s00i025_sqav"
 			operation="instant"
 			field_ref="m01s00i025_ens"
 			> m01s00i025_ens*m01s00i025_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i025"
-			name="avensq-m01s00i025"
+			id="m01s00i025_avensq"
+			name="m01s00i025_avensq"
 			operation="instant"
 			field_ref="m01s00i025"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -424,16 +644,104 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i025"
-			name="stdev-m01s00i025"
+			id="m01s00i025_stdev"
+			name="m01s00i025_stdev"
 			operation="instant"
 			field_ref="m01s00i025_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i025_avensq - m01s00i025_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s00i030" name="test-m01s00i030" output_freq="72ts">
+<file description="Field m01s00i028" id="test-m01s00i028" name="test-m01s00i028" output_freq="72ts">
+
+		<field
+			id="m01s00i028_inst"
+			name="m01s00i028_inst"
+			operation="instant"
+			field_ref="m01s00i028"
+		/>
+
+		<field
+			id="m01s00i028_ens"
+			name="m01s00i028_ens"
+			operation="instant"
+			field_ref="m01s00i028"
+			grid_ref="um-atmos_grid_cu_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s00i028_sqav"
+			name="m01s00i028_sqav"
+			operation="instant"
+			field_ref="m01s00i028_ens"
+			> m01s00i028_ens*m01s00i028_ens
+		</field>
+
+		<field
+			id="m01s00i028_avensq"
+			name="m01s00i028_avensq"
+			operation="instant"
+			field_ref="m01s00i028"
+			grid_ref="um-atmos_grid_cu_DIAG_ens_mean"
+			> m01s00i028*m01s00i028
+		</field>
+
+		<field
+			id="m01s00i028_stdev"
+			name="m01s00i028_stdev"
+			operation="instant"
+			field_ref="m01s00i028_ens"
+			> sqrt(m01s00i028_avensq - m01s00i028_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i029" id="test-m01s00i029" name="test-m01s00i029" output_freq="72ts">
+
+		<field
+			id="m01s00i029_inst"
+			name="m01s00i029_inst"
+			operation="instant"
+			field_ref="m01s00i029"
+		/>
+
+		<field
+			id="m01s00i029_ens"
+			name="m01s00i029_ens"
+			operation="instant"
+			field_ref="m01s00i029"
+			grid_ref="um-atmos_grid_cv_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s00i029_sqav"
+			name="m01s00i029_sqav"
+			operation="instant"
+			field_ref="m01s00i029_ens"
+			> m01s00i029_ens*m01s00i029_ens
+		</field>
+
+		<field
+			id="m01s00i029_avensq"
+			name="m01s00i029_avensq"
+			operation="instant"
+			field_ref="m01s00i029"
+			grid_ref="um-atmos_grid_cv_DIAG_ens_mean"
+			> m01s00i029*m01s00i029
+		</field>
+
+		<field
+			id="m01s00i029_stdev"
+			name="m01s00i029_stdev"
+			operation="instant"
+			field_ref="m01s00i029_ens"
+			> sqrt(m01s00i029_avensq - m01s00i029_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i030" id="test-m01s00i030" name="test-m01s00i030" output_freq="72ts">
 
 		<field
 			id="m01s00i030_inst"
@@ -451,16 +759,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i030"
-			name="sqav-m01s00i030"
+			id="m01s00i030_sqav"
+			name="m01s00i030_sqav"
 			operation="instant"
 			field_ref="m01s00i030_ens"
 			> m01s00i030_ens*m01s00i030_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i030"
-			name="avensq-m01s00i030"
+			id="m01s00i030_avensq"
+			name="m01s00i030_avensq"
 			operation="instant"
 			field_ref="m01s00i030"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -468,16 +776,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i030"
-			name="stdev-m01s00i030"
+			id="m01s00i030_stdev"
+			name="m01s00i030_stdev"
 			operation="instant"
 			field_ref="m01s00i030_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i030_avensq - m01s00i030_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s00i031" name="test-m01s00i031" output_freq="72ts">
+<file description="Field m01s00i031" id="test-m01s00i031" name="test-m01s00i031" output_freq="72ts">
 
 		<field
 			id="m01s00i031_inst"
@@ -495,16 +803,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i031"
-			name="sqav-m01s00i031"
+			id="m01s00i031_sqav"
+			name="m01s00i031_sqav"
 			operation="instant"
 			field_ref="m01s00i031_ens"
 			> m01s00i031_ens*m01s00i031_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i031"
-			name="avensq-m01s00i031"
+			id="m01s00i031_avensq"
+			name="m01s00i031_avensq"
 			operation="instant"
 			field_ref="m01s00i031"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -512,16 +820,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i031"
-			name="stdev-m01s00i031"
+			id="m01s00i031_stdev"
+			name="m01s00i031_stdev"
 			operation="instant"
 			field_ref="m01s00i031_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i031_avensq - m01s00i031_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s00i032" name="test-m01s00i032" output_freq="72ts">
+<file description="Field m01s00i032" id="test-m01s00i032" name="test-m01s00i032" output_freq="72ts">
 
 		<field
 			id="m01s00i032_inst"
@@ -539,16 +847,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i032"
-			name="sqav-m01s00i032"
+			id="m01s00i032_sqav"
+			name="m01s00i032_sqav"
 			operation="instant"
 			field_ref="m01s00i032_ens"
 			> m01s00i032_ens*m01s00i032_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i032"
-			name="avensq-m01s00i032"
+			id="m01s00i032_avensq"
+			name="m01s00i032_avensq"
 			operation="instant"
 			field_ref="m01s00i032"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -556,16 +864,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i032"
-			name="stdev-m01s00i032"
+			id="m01s00i032_stdev"
+			name="m01s00i032_stdev"
 			operation="instant"
 			field_ref="m01s00i032_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i032_avensq - m01s00i032_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s00i033" name="test-m01s00i033" output_freq="72ts">
+<file description="Field m01s00i033" id="test-m01s00i033" name="test-m01s00i033" output_freq="72ts">
 
 		<field
 			id="m01s00i033_inst"
@@ -583,16 +891,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i033"
-			name="sqav-m01s00i033"
+			id="m01s00i033_sqav"
+			name="m01s00i033_sqav"
 			operation="instant"
 			field_ref="m01s00i033_ens"
 			> m01s00i033_ens*m01s00i033_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i033"
-			name="avensq-m01s00i033"
+			id="m01s00i033_avensq"
+			name="m01s00i033_avensq"
 			operation="instant"
 			field_ref="m01s00i033"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -600,16 +908,324 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i033"
-			name="stdev-m01s00i033"
+			id="m01s00i033_stdev"
+			name="m01s00i033_stdev"
 			operation="instant"
 			field_ref="m01s00i033_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i033_avensq - m01s00i033_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s00i409" name="test-m01s00i409" output_freq="72ts">
+<file description="Field m01s00i211" id="test-m01s00i211" name="test-m01s00i211" output_freq="72ts">
+
+		<field
+			id="m01s00i211_inst"
+			name="m01s00i211_inst"
+			operation="instant"
+			field_ref="m01s00i211"
+		/>
+
+		<field
+			id="m01s00i211_ens"
+			name="m01s00i211_ens"
+			operation="instant"
+			field_ref="m01s00i211"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i211_sqav"
+			name="m01s00i211_sqav"
+			operation="instant"
+			field_ref="m01s00i211_ens"
+			> m01s00i211_ens*m01s00i211_ens
+		</field>
+
+		<field
+			id="m01s00i211_avensq"
+			name="m01s00i211_avensq"
+			operation="instant"
+			field_ref="m01s00i211"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+			> m01s00i211*m01s00i211
+		</field>
+
+		<field
+			id="m01s00i211_stdev"
+			name="m01s00i211_stdev"
+			operation="instant"
+			field_ref="m01s00i211_ens"
+			> sqrt(m01s00i211_avensq - m01s00i211_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i254" id="test-m01s00i254" name="test-m01s00i254" output_freq="72ts">
+
+		<field
+			id="m01s00i254_inst"
+			name="m01s00i254_inst"
+			operation="instant"
+			field_ref="m01s00i254"
+		/>
+
+		<field
+			id="m01s00i254_ens"
+			name="m01s00i254_ens"
+			operation="instant"
+			field_ref="m01s00i254"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i254_sqav"
+			name="m01s00i254_sqav"
+			operation="instant"
+			field_ref="m01s00i254_ens"
+			> m01s00i254_ens*m01s00i254_ens
+		</field>
+
+		<field
+			id="m01s00i254_avensq"
+			name="m01s00i254_avensq"
+			operation="instant"
+			field_ref="m01s00i254"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+			> m01s00i254*m01s00i254
+		</field>
+
+		<field
+			id="m01s00i254_stdev"
+			name="m01s00i254_stdev"
+			operation="instant"
+			field_ref="m01s00i254_ens"
+			> sqrt(m01s00i254_avensq - m01s00i254_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i266" id="test-m01s00i266" name="test-m01s00i266" output_freq="72ts">
+
+		<field
+			id="m01s00i266_inst"
+			name="m01s00i266_inst"
+			operation="instant"
+			field_ref="m01s00i266"
+		/>
+
+		<field
+			id="m01s00i266_ens"
+			name="m01s00i266_ens"
+			operation="instant"
+			field_ref="m01s00i266"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i266_sqav"
+			name="m01s00i266_sqav"
+			operation="instant"
+			field_ref="m01s00i266_ens"
+			> m01s00i266_ens*m01s00i266_ens
+		</field>
+
+		<field
+			id="m01s00i266_avensq"
+			name="m01s00i266_avensq"
+			operation="instant"
+			field_ref="m01s00i266"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+			> m01s00i266*m01s00i266
+		</field>
+
+		<field
+			id="m01s00i266_stdev"
+			name="m01s00i266_stdev"
+			operation="instant"
+			field_ref="m01s00i266_ens"
+			> sqrt(m01s00i266_avensq - m01s00i266_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i407" id="test-m01s00i407" name="test-m01s00i407" output_freq="72ts">
+
+		<field
+			id="m01s00i407_inst"
+			name="m01s00i407_inst"
+			operation="instant"
+			field_ref="m01s00i407"
+		/>
+
+		<field
+			id="m01s00i407_ens"
+			name="m01s00i407_ens"
+			operation="instant"
+			field_ref="m01s00i407"
+			grid_ref="um-atmos_grid_t_halo_single_D52RH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i407_sqav"
+			name="m01s00i407_sqav"
+			operation="instant"
+			field_ref="m01s00i407_ens"
+			> m01s00i407_ens*m01s00i407_ens
+		</field>
+
+		<field
+			id="m01s00i407_avensq"
+			name="m01s00i407_avensq"
+			operation="instant"
+			field_ref="m01s00i407"
+			grid_ref="um-atmos_grid_t_halo_single_D52RH_ens_mean"
+			> m01s00i407*m01s00i407
+		</field>
+
+		<field
+			id="m01s00i407_stdev"
+			name="m01s00i407_stdev"
+			operation="instant"
+			field_ref="m01s00i407_ens"
+			> sqrt(m01s00i407_avensq - m01s00i407_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i407_2" id="test-m01s00i407_2" name="test-m01s00i407_2" output_freq="72ts">
+
+		<field
+			id="m01s00i407_2_inst"
+			name="m01s00i407_2_inst"
+			operation="instant"
+			field_ref="m01s00i407_2"
+		/>
+
+		<field
+			id="m01s00i407_2_ens"
+			name="m01s00i407_2_ens"
+			operation="instant"
+			field_ref="m01s00i407_2"
+			grid_ref="um-atmos_grid_t_halo_single_DALLRH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i407_2_sqav"
+			name="m01s00i407_2_sqav"
+			operation="instant"
+			field_ref="m01s00i407_2_ens"
+			> m01s00i407_2_ens*m01s00i407_2_ens
+		</field>
+
+		<field
+			id="m01s00i407_2_avensq"
+			name="m01s00i407_2_avensq"
+			operation="instant"
+			field_ref="m01s00i407_2"
+			grid_ref="um-atmos_grid_t_halo_single_DALLRH_ens_mean"
+			> m01s00i407_2*m01s00i407_2
+		</field>
+
+		<field
+			id="m01s00i407_2_stdev"
+			name="m01s00i407_2_stdev"
+			operation="instant"
+			field_ref="m01s00i407_2_ens"
+			> sqrt(m01s00i407_2_avensq - m01s00i407_2_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i408" id="test-m01s00i408" name="test-m01s00i408" output_freq="72ts">
+
+		<field
+			id="m01s00i408_inst"
+			name="m01s00i408_inst"
+			operation="instant"
+			field_ref="m01s00i408"
+		/>
+
+		<field
+			id="m01s00i408_ens"
+			name="m01s00i408_ens"
+			operation="instant"
+			field_ref="m01s00i408"
+			grid_ref="um-atmos_grid_t_halo_single_D52TH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i408_sqav"
+			name="m01s00i408_sqav"
+			operation="instant"
+			field_ref="m01s00i408_ens"
+			> m01s00i408_ens*m01s00i408_ens
+		</field>
+
+		<field
+			id="m01s00i408_avensq"
+			name="m01s00i408_avensq"
+			operation="instant"
+			field_ref="m01s00i408"
+			grid_ref="um-atmos_grid_t_halo_single_D52TH_ens_mean"
+			> m01s00i408*m01s00i408
+		</field>
+
+		<field
+			id="m01s00i408_stdev"
+			name="m01s00i408_stdev"
+			operation="instant"
+			field_ref="m01s00i408_ens"
+			> sqrt(m01s00i408_avensq - m01s00i408_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i408_2" id="test-m01s00i408_2" name="test-m01s00i408_2" output_freq="72ts">
+
+		<field
+			id="m01s00i408_2_inst"
+			name="m01s00i408_2_inst"
+			operation="instant"
+			field_ref="m01s00i408_2"
+		/>
+
+		<field
+			id="m01s00i408_2_ens"
+			name="m01s00i408_2_ens"
+			operation="instant"
+			field_ref="m01s00i408_2"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i408_2_sqav"
+			name="m01s00i408_2_sqav"
+			operation="instant"
+			field_ref="m01s00i408_2_ens"
+			> m01s00i408_2_ens*m01s00i408_2_ens
+		</field>
+
+		<field
+			id="m01s00i408_2_avensq"
+			name="m01s00i408_2_avensq"
+			operation="instant"
+			field_ref="m01s00i408_2"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			> m01s00i408_2*m01s00i408_2
+		</field>
+
+		<field
+			id="m01s00i408_2_stdev"
+			name="m01s00i408_2_stdev"
+			operation="instant"
+			field_ref="m01s00i408_2_ens"
+			> sqrt(m01s00i408_2_avensq - m01s00i408_2_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s00i409" id="test-m01s00i409" name="test-m01s00i409" output_freq="72ts">
 
 		<field
 			id="m01s00i409_inst"
@@ -627,16 +1243,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i409"
-			name="sqav-m01s00i409"
+			id="m01s00i409_sqav"
+			name="m01s00i409_sqav"
 			operation="instant"
 			field_ref="m01s00i409_ens"
 			> m01s00i409_ens*m01s00i409_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i409"
-			name="avensq-m01s00i409"
+			id="m01s00i409_avensq"
+			name="m01s00i409_avensq"
 			operation="instant"
 			field_ref="m01s00i409"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -644,16 +1260,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i409"
-			name="stdev-m01s00i409"
+			id="m01s00i409_stdev"
+			name="m01s00i409_stdev"
 			operation="instant"
 			field_ref="m01s00i409_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i409_avensq - m01s00i409_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s00i507" name="test-m01s00i507" output_freq="72ts">
+<file description="Field m01s00i507" id="test-m01s00i507" name="test-m01s00i507" output_freq="72ts">
 
 		<field
 			id="m01s00i507_inst"
@@ -671,16 +1287,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i507"
-			name="sqav-m01s00i507"
+			id="m01s00i507_sqav"
+			name="m01s00i507_sqav"
 			operation="instant"
 			field_ref="m01s00i507_ens"
 			> m01s00i507_ens*m01s00i507_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i507"
-			name="avensq-m01s00i507"
+			id="m01s00i507_avensq"
+			name="m01s00i507_avensq"
 			operation="instant"
 			field_ref="m01s00i507"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -688,16 +1304,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i507"
-			name="stdev-m01s00i507"
+			id="m01s00i507_stdev"
+			name="m01s00i507_stdev"
 			operation="instant"
 			field_ref="m01s00i507_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i507_avensq - m01s00i507_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s00i508" name="test-m01s00i508" output_freq="72ts">
+<file description="Field m01s00i508" id="test-m01s00i508" name="test-m01s00i508" output_freq="72ts">
 
 		<field
 			id="m01s00i508_inst"
@@ -715,16 +1331,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i508"
-			name="sqav-m01s00i508"
+			id="m01s00i508_sqav"
+			name="m01s00i508_sqav"
 			operation="instant"
 			field_ref="m01s00i508_ens"
 			> m01s00i508_ens*m01s00i508_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i508"
-			name="avensq-m01s00i508"
+			id="m01s00i508_avensq"
+			name="m01s00i508_avensq"
 			operation="instant"
 			field_ref="m01s00i508"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -732,16 +1348,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i508"
-			name="stdev-m01s00i508"
+			id="m01s00i508_stdev"
+			name="m01s00i508_stdev"
 			operation="instant"
 			field_ref="m01s00i508_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i508_avensq - m01s00i508_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s00i509" name="test-m01s00i509" output_freq="72ts">
+<file description="Field m01s00i509" id="test-m01s00i509" name="test-m01s00i509" output_freq="72ts">
 
 		<field
 			id="m01s00i509_inst"
@@ -759,16 +1375,16 @@
 		/>
 
 		<field
-			id="sqav-m01s00i509"
-			name="sqav-m01s00i509"
+			id="m01s00i509_sqav"
+			name="m01s00i509_sqav"
 			operation="instant"
 			field_ref="m01s00i509_ens"
 			> m01s00i509_ens*m01s00i509_ens
 		</field>
 
 		<field
-			id="avensq-m01s00i509"
-			name="avensq-m01s00i509"
+			id="m01s00i509_avensq"
+			name="m01s00i509_avensq"
 			operation="instant"
 			field_ref="m01s00i509"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -776,16 +1392,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s00i509"
-			name="stdev-m01s00i509"
+			id="m01s00i509_stdev"
+			name="m01s00i509_stdev"
 			operation="instant"
 			field_ref="m01s00i509_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s00i509_avensq - m01s00i509_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s01i201" name="test-m01s01i201" output_freq="72ts">
+<file description="Field m01s01i201" id="test-m01s01i201" name="test-m01s01i201" output_freq="72ts">
 
 		<field
 			id="m01s01i201_inst"
@@ -803,16 +1419,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i201"
-			name="sqav-m01s01i201"
+			id="m01s01i201_sqav"
+			name="m01s01i201_sqav"
 			operation="instant"
 			field_ref="m01s01i201_ens"
 			> m01s01i201_ens*m01s01i201_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i201"
-			name="avensq-m01s01i201"
+			id="m01s01i201_avensq"
+			name="m01s01i201_avensq"
 			operation="instant"
 			field_ref="m01s01i201"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -820,16 +1436,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i201"
-			name="stdev-m01s01i201"
+			id="m01s01i201_stdev"
+			name="m01s01i201_stdev"
 			operation="instant"
 			field_ref="m01s01i201_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s01i201_avensq - m01s01i201_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s01i203" name="test-m01s01i203" output_freq="72ts">
+<file description="Field m01s01i203" id="test-m01s01i203" name="test-m01s01i203" output_freq="72ts">
 
 		<field
 			id="m01s01i203_inst"
@@ -847,16 +1463,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i203"
-			name="sqav-m01s01i203"
+			id="m01s01i203_sqav"
+			name="m01s01i203_sqav"
 			operation="instant"
 			field_ref="m01s01i203_ens"
 			> m01s01i203_ens*m01s01i203_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i203"
-			name="avensq-m01s01i203"
+			id="m01s01i203_avensq"
+			name="m01s01i203_avensq"
 			operation="instant"
 			field_ref="m01s01i203"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -864,16 +1480,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i203"
-			name="stdev-m01s01i203"
+			id="m01s01i203_stdev"
+			name="m01s01i203_stdev"
 			operation="instant"
 			field_ref="m01s01i203_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s01i203_avensq - m01s01i203_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s01i207" name="test-m01s01i207" output_freq="72ts">
+<file description="Field m01s01i207" id="test-m01s01i207" name="test-m01s01i207" output_freq="72ts">
 
 		<field
 			id="m01s01i207_inst"
@@ -891,16 +1507,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i207"
-			name="sqav-m01s01i207"
+			id="m01s01i207_sqav"
+			name="m01s01i207_sqav"
 			operation="instant"
 			field_ref="m01s01i207_ens"
 			> m01s01i207_ens*m01s01i207_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i207"
-			name="avensq-m01s01i207"
+			id="m01s01i207_avensq"
+			name="m01s01i207_avensq"
 			operation="instant"
 			field_ref="m01s01i207"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -908,16 +1524,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i207"
-			name="stdev-m01s01i207"
+			id="m01s01i207_stdev"
+			name="m01s01i207_stdev"
 			operation="instant"
 			field_ref="m01s01i207_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s01i207_avensq - m01s01i207_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s01i208" name="test-m01s01i208" output_freq="72ts">
+<file description="Field m01s01i208" id="test-m01s01i208" name="test-m01s01i208" output_freq="72ts">
 
 		<field
 			id="m01s01i208_inst"
@@ -935,16 +1551,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i208"
-			name="sqav-m01s01i208"
+			id="m01s01i208_sqav"
+			name="m01s01i208_sqav"
 			operation="instant"
 			field_ref="m01s01i208_ens"
 			> m01s01i208_ens*m01s01i208_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i208"
-			name="avensq-m01s01i208"
+			id="m01s01i208_avensq"
+			name="m01s01i208_avensq"
 			operation="instant"
 			field_ref="m01s01i208"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -952,16 +1568,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i208"
-			name="stdev-m01s01i208"
+			id="m01s01i208_stdev"
+			name="m01s01i208_stdev"
 			operation="instant"
 			field_ref="m01s01i208_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s01i208_avensq - m01s01i208_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s01i209" name="test-m01s01i209" output_freq="72ts">
+<file description="Field m01s01i209" id="test-m01s01i209" name="test-m01s01i209" output_freq="72ts">
 
 		<field
 			id="m01s01i209_inst"
@@ -979,16 +1595,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i209"
-			name="sqav-m01s01i209"
+			id="m01s01i209_sqav"
+			name="m01s01i209_sqav"
 			operation="instant"
 			field_ref="m01s01i209_ens"
 			> m01s01i209_ens*m01s01i209_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i209"
-			name="avensq-m01s01i209"
+			id="m01s01i209_avensq"
+			name="m01s01i209_avensq"
 			operation="instant"
 			field_ref="m01s01i209"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -996,16 +1612,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i209"
-			name="stdev-m01s01i209"
+			id="m01s01i209_stdev"
+			name="m01s01i209_stdev"
 			operation="instant"
 			field_ref="m01s01i209_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s01i209_avensq - m01s01i209_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s01i210" name="test-m01s01i210" output_freq="72ts">
+<file description="Field m01s01i210" id="test-m01s01i210" name="test-m01s01i210" output_freq="72ts">
 
 		<field
 			id="m01s01i210_inst"
@@ -1023,16 +1639,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i210"
-			name="sqav-m01s01i210"
+			id="m01s01i210_sqav"
+			name="m01s01i210_sqav"
 			operation="instant"
 			field_ref="m01s01i210_ens"
 			> m01s01i210_ens*m01s01i210_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i210"
-			name="avensq-m01s01i210"
+			id="m01s01i210_avensq"
+			name="m01s01i210_avensq"
 			operation="instant"
 			field_ref="m01s01i210"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1040,16 +1656,16 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i210"
-			name="stdev-m01s01i210"
+			id="m01s01i210_stdev"
+			name="m01s01i210_stdev"
 			operation="instant"
 			field_ref="m01s01i210_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s01i210_avensq - m01s01i210_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s01i211" name="test-m01s01i211" output_freq="72ts">
+<file description="Field m01s01i211" id="test-m01s01i211" name="test-m01s01i211" output_freq="72ts">
 
 		<field
 			id="m01s01i211_inst"
@@ -1067,16 +1683,16 @@
 		/>
 
 		<field
-			id="sqav-m01s01i211"
-			name="sqav-m01s01i211"
+			id="m01s01i211_sqav"
+			name="m01s01i211_sqav"
 			operation="instant"
 			field_ref="m01s01i211_ens"
 			> m01s01i211_ens*m01s01i211_ens
 		</field>
 
 		<field
-			id="avensq-m01s01i211"
-			name="avensq-m01s01i211"
+			id="m01s01i211_avensq"
+			name="m01s01i211_avensq"
 			operation="instant"
 			field_ref="m01s01i211"
 			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
@@ -1084,3663 +1700,716 @@
 		</field>
 
 		<field
-			id="stdev-m01s01i211"
-			name="stdev-m01s01i211"
+			id="m01s01i211_stdev"
+			name="m01s01i211_stdev"
 			operation="instant"
 			field_ref="m01s01i211_ens"
-			> sqrt(avensq - sqav)
+			> sqrt(m01s01i211_avensq - m01s01i211_sqav)
 		</field>
 
 </file>
 
-<file description="Test New XML" id="test-m01s01i235" name="test-m01s01i235" output_freq="72ts">
-
-    <field
-      id="m01s01i235_inst"
-      name="m01s01i235_inst"
-      operation="instant"
-      field_ref="m01s01i235"
-    />
-
-    <field
-      id="m01s01i235_ens"
-      name="m01s01i235_ens"
-      operation="instant"
-      field_ref="m01s01i235"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s01i235"
-      name="sqav-m01s01i235"
-      operation="instant"
-      field_ref="m01s01i235_ens"
-      > m01s01i235_ens*m01s01i235_ens
-    </field>
-
-    <field
-      id="avensq-m01s01i235"
-      name="avensq-m01s01i235"
-      operation="instant"
-      field_ref="m01s01i235"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s01i235*m01s01i235
-    </field>
-
-    <field
-      id="stdev-m01s01i235"
-      name="stdev-m01s01i235"
-      operation="instant"
-      field_ref="m01s01i235_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s01i245" name="test-m01s01i245" output_freq="72ts">
-
-    <field
-      id="m01s01i245_inst"
-      name="m01s01i245_inst"
-      operation="instant"
-      field_ref="m01s01i245"
-    />
-
-    <field
-      id="m01s01i245_ens"
-      name="m01s01i245_ens"
-      operation="instant"
-      field_ref="m01s01i245"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s01i245"
-      name="sqav-m01s01i245"
-      operation="instant"
-      field_ref="m01s01i245_ens"
-      > m01s01i245_ens*m01s01i245_ens
-    </field>
-
-    <field
-      id="avensq-m01s01i245"
-      name="avensq-m01s01i245"
-      operation="instant"
-      field_ref="m01s01i245"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s01i245*m01s01i245
-    </field>
-
-    <field
-      id="stdev-m01s01i245"
-      name="stdev-m01s01i245"
-      operation="instant"
-      field_ref="m01s01i245_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s01i246" name="test-m01s01i246" output_freq="72ts">
-
-    <field
-      id="m01s01i246_inst"
-      name="m01s01i246_inst"
-      operation="instant"
-      field_ref="m01s01i246"
-    />
-
-    <field
-      id="m01s01i246_ens"
-      name="m01s01i246_ens"
-      operation="instant"
-      field_ref="m01s01i246"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s01i246"
-      name="sqav-m01s01i246"
-      operation="instant"
-      field_ref="m01s01i246_ens"
-      > m01s01i246_ens*m01s01i246_ens
-    </field>
-
-    <field
-      id="avensq-m01s01i246"
-      name="avensq-m01s01i246"
-      operation="instant"
-      field_ref="m01s01i246"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s01i246*m01s01i246
-    </field>
-
-    <field
-      id="stdev-m01s01i246"
-      name="stdev-m01s01i246"
-      operation="instant"
-      field_ref="m01s01i246_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s01i254" name="test-m01s01i254" output_freq="72ts">
-
-    <field
-      id="m01s01i254_inst"
-      name="m01s01i254_inst"
-      operation="instant"
-      field_ref="m01s01i254"
-    />
-
-    <field
-      id="m01s01i254_ens"
-      name="m01s01i254_ens"
-      operation="instant"
-      field_ref="m01s01i254"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s01i254"
-      name="sqav-m01s01i254"
-      operation="instant"
-      field_ref="m01s01i254_ens"
-      > m01s01i254_ens*m01s01i254_ens
-    </field>
-
-    <field
-      id="avensq-m01s01i254"
-      name="avensq-m01s01i254"
-      operation="instant"
-      field_ref="m01s01i254"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s01i254*m01s01i254
-    </field>
-
-    <field
-      id="stdev-m01s01i254"
-      name="stdev-m01s01i254"
-      operation="instant"
-      field_ref="m01s01i254_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s01i255" name="test-m01s01i255" output_freq="72ts">
-
-    <field
-      id="m01s01i255_inst"
-      name="m01s01i255_inst"
-      operation="instant"
-      field_ref="m01s01i255"
-    />
-
-    <field
-      id="m01s01i255_ens"
-      name="m01s01i255_ens"
-      operation="instant"
-      field_ref="m01s01i255"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s01i255"
-      name="sqav-m01s01i255"
-      operation="instant"
-      field_ref="m01s01i255_ens"
-      > m01s01i255_ens*m01s01i255_ens
-    </field>
-
-    <field
-      id="avensq-m01s01i255"
-      name="avensq-m01s01i255"
-      operation="instant"
-      field_ref="m01s01i255"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s01i255*m01s01i255
-    </field>
-
-    <field
-      id="stdev-m01s01i255"
-      name="stdev-m01s01i255"
-      operation="instant"
-      field_ref="m01s01i255_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s01i260" name="test-m01s01i260" output_freq="72ts">
-
-    <field
-      id="m01s01i260_inst"
-      name="m01s01i260_inst"
-      operation="instant"
-      field_ref="m01s01i260"
-    />
-
-    <field
-      id="m01s01i260_ens"
-      name="m01s01i260_ens"
-      operation="instant"
-      field_ref="m01s01i260"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s01i260"
-      name="sqav-m01s01i260"
-      operation="instant"
-      field_ref="m01s01i260_ens"
-      > m01s01i260_ens*m01s01i260_ens
-    </field>
-
-    <field
-      id="avensq-m01s01i260"
-      name="avensq-m01s01i260"
-      operation="instant"
-      field_ref="m01s01i260"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s01i260*m01s01i260
-    </field>
-
-    <field
-      id="stdev-m01s01i260"
-      name="stdev-m01s01i260"
-      operation="instant"
-      field_ref="m01s01i260_ens"
-      > sqrt(avensq - sqav)
-    </field>
-</file>
-
-<file description="Test New XML" id="test-m01s01i280" name="test-m01s01i280" output_freq="72ts">
-
-    <field
-      id="m01s01i280_inst"
-      name="m01s01i280_inst"
-      operation="instant"
-      field_ref="m01s01i280"
-    />
-
-    <field
-      id="m01s01i280_ens"
-      name="m01s01i280_ens"
-      operation="instant"
-      field_ref="m01s01i280"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s01i280"
-      name="sqav-m01s01i280"
-      operation="instant"
-      field_ref="m01s01i280_ens"
-      > m01s01i280_ens*m01s01i280_ens
-    </field>
-
-    <field
-      id="avensq-m01s01i280"
-      name="avensq-m01s01i280"
-      operation="instant"
-      field_ref="m01s01i280"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s01i280*m01s01i280
-    </field>
-
-    <field
-      id="stdev-m01s01i280"
-      name="stdev-m01s01i280"
-      operation="instant"
-      field_ref="m01s01i280_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s01i281" name="test-m01s01i281" output_freq="72ts">
-
-    <field
-      id="m01s01i281_inst"
-      name="m01s01i281_inst"
-      operation="instant"
-      field_ref="m01s01i281"
-    />
-
-    <field
-      id="m01s01i281_ens"
-      name="m01s01i281_ens"
-      operation="instant"
-      field_ref="m01s01i281"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s01i281"
-      name="sqav-m01s01i281"
-      operation="instant"
-      field_ref="m01s01i281_ens"
-      > m01s01i281_ens*m01s01i281_ens
-    </field>
-
-    <field
-      id="avensq-m01s01i281"
-      name="avensq-m01s01i281"
-      operation="instant"
-      field_ref="m01s01i281"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s01i281*m01s01i281
-    </field>
-
-    <field
-      id="stdev-m01s01i281"
-      name="stdev-m01s01i281"
-      operation="instant"
-      field_ref="m01s01i281_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s01i298" name="test-m01s01i298" output_freq="72ts">
-
-    <field
-      id="m01s01i298_inst"
-      name="m01s01i298_inst"
-      operation="instant"
-      field_ref="m01s01i298"
-    />
-
-    <field
-      id="m01s01i298_ens"
-      name="m01s01i298_ens"
-      operation="instant"
-      field_ref="m01s01i298"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s01i298"
-      name="sqav-m01s01i298"
-      operation="instant"
-      field_ref="m01s01i298_ens"
-      > m01s01i298_ens*m01s01i298_ens
-    </field>
-
-    <field
-      id="avensq-m01s01i298"
-      name="avensq-m01s01i298"
-      operation="instant"
-      field_ref="m01s01i298"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s01i298*m01s01i298
-    </field>
-
-    <field
-      id="stdev-m01s01i298"
-      name="stdev-m01s01i298"
-      operation="instant"
-      field_ref="m01s01i298_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s01i299" name="test-m01s01i299" output_freq="72ts">
-
-    <field
-      id="m01s01i299_inst"
-      name="m01s01i299_inst"
-      operation="instant"
-      field_ref="m01s01i299"
-    />
-
-    <field
-      id="m01s01i299_ens"
-      name="m01s01i299_ens"
-      operation="instant"
-      field_ref="m01s01i299"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s01i299"
-      name="sqav-m01s01i299"
-      operation="instant"
-      field_ref="m01s01i299_ens"
-      > m01s01i299_ens*m01s01i299_ens
-    </field>
-
-    <field
-      id="avensq-m01s01i299"
-      name="avensq-m01s01i299"
-      operation="instant"
-      field_ref="m01s01i299"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s01i299*m01s01i299
-    </field>
-
-    <field
-      id="stdev-m01s01i299"
-      name="stdev-m01s01i299"
-      operation="instant"
-      field_ref="m01s01i299_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s02i201" name="test-m01s02i201" output_freq="72ts">
-
-    <field
-      id="m01s02i201_inst"
-      name="m01s02i201_inst"
-      operation="instant"
-      field_ref="m01s02i201"
-    />
-
-    <field
-      id="m01s02i201_ens"
-      name="m01s02i201_ens"
-      operation="instant"
-      field_ref="m01s02i201"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s02i201"
-      name="sqav-m01s02i201"
-      operation="instant"
-      field_ref="m01s02i201_ens"
-      > m01s02i201_ens*m01s02i201_ens
-    </field>
-
-    <field
-      id="avensq-m01s02i201"
-      name="avensq-m01s02i201"
-      operation="instant"
-      field_ref="m01s02i201"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s02i201*m01s02i201
-    </field>
-
-    <field
-      id="stdev-m01s02i201"
-      name="stdev-m01s02i201"
-      operation="instant"
-      field_ref="m01s02i201_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s02i203" name="test-m01s02i203" output_freq="72ts">
-
-    <field
-      id="m01s02i203_inst"
-      name="m01s02i203_inst"
-      operation="instant"
-      field_ref="m01s02i203"
-    />
-
-    <field
-      id="m01s02i203_ens"
-      name="m01s02i203_ens"
-      operation="instant"
-      field_ref="m01s02i203"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s02i203"
-      name="sqav-m01s02i203"
-      operation="instant"
-      field_ref="m01s02i203_ens"
-      > m01s02i203_ens*m01s02i203_ens
-    </field>
-
-    <field
-      id="avensq-m01s02i203"
-      name="avensq-m01s02i203"
-      operation="instant"
-      field_ref="m01s02i203"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s02i203*m01s02i203
-    </field>
-
-    <field
-      id="stdev-m01s02i203"
-      name="stdev-m01s02i203"
-      operation="instant"
-      field_ref="m01s02i203_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s02i204" name="test-m01s02i204" output_freq="72ts">
-
-    <field
-      id="m01s02i204_inst"
-      name="m01s02i204_inst"
-      operation="instant"
-      field_ref="m01s02i204"
-    />
-
-    <field
-      id="m01s02i204_ens"
-      name="m01s02i204_ens"
-      operation="instant"
-      field_ref="m01s02i204"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s02i204"
-      name="sqav-m01s02i204"
-      operation="instant"
-      field_ref="m01s02i204_ens"
-      > m01s02i204_ens*m01s02i204_ens
-    </field>
-
-    <field
-      id="avensq-m01s02i204"
-      name="avensq-m01s02i204"
-      operation="instant"
-      field_ref="m01s02i204"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s02i204*m01s02i204
-    </field>
-
-    <field
-      id="stdev-m01s02i204"
-      name="stdev-m01s02i204"
-      operation="instant"
-      field_ref="m01s02i204_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s02i205" name="test-m01s02i205" output_freq="72ts">
-
-    <field
-      id="m01s02i205_inst"
-      name="m01s02i205_inst"
-      operation="instant"
-      field_ref="m01s02i205"
-    />
-
-    <field
-      id="m01s02i205_ens"
-      name="m01s02i205_ens"
-      operation="instant"
-      field_ref="m01s02i205"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s02i205"
-      name="sqav-m01s02i205"
-      operation="instant"
-      field_ref="m01s02i205_ens"
-      > m01s02i205_ens*m01s02i205_ens
-    </field>
-
-    <field
-      id="avensq-m01s02i205"
-      name="avensq-m01s02i205"
-      operation="instant"
-      field_ref="m01s02i205"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s02i205*m01s02i205
-    </field>
-
-    <field
-      id="stdev-m01s02i205"
-      name="stdev-m01s02i205"
-      operation="instant"
-      field_ref="m01s02i205_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s02i206" name="test-m01s02i206" output_freq="72ts">
-
-    <field
-      id="m01s02i206_inst"
-      name="m01s02i206_inst"
-      operation="instant"
-      field_ref="m01s02i206"
-    />
-
-    <field
-      id="m01s02i206_ens"
-      name="m01s02i206_ens"
-      operation="instant"
-      field_ref="m01s02i206"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s02i206"
-      name="sqav-m01s02i206"
-      operation="instant"
-      field_ref="m01s02i206_ens"
-      > m01s02i206_ens*m01s02i206_ens
-    </field>
-
-    <field
-      id="avensq-m01s02i206"
-      name="avensq-m01s02i206"
-      operation="instant"
-      field_ref="m01s02i206"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s02i206*m01s02i206
-    </field>
-
-    <field
-      id="stdev-m01s02i206"
-      name="stdev-m01s02i206"
-      operation="instant"
-      field_ref="m01s02i206_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s02i207" name="test-m01s02i207" output_freq="72ts">
-
-    <field
-      id="m01s02i207_inst"
-      name="m01s02i207_inst"
-      operation="instant"
-      field_ref="m01s02i207"
-    />
-
-    <field
-      id="m01s02i207_ens"
-      name="m01s02i207_ens"
-      operation="instant"
-      field_ref="m01s02i207"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s02i207"
-      name="sqav-m01s02i207"
-      operation="instant"
-      field_ref="m01s02i207_ens"
-      > m01s02i207_ens*m01s02i207_ens
-    </field>
-
-    <field
-      id="avensq-m01s02i207"
-      name="avensq-m01s02i207"
-      operation="instant"
-      field_ref="m01s02i207"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s02i207*m01s02i207
-    </field>
-
-    <field
-      id="stdev-m01s02i207"
-      name="stdev-m01s02i207"
-      operation="instant"
-      field_ref="m01s02i207_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s02i208" name="test-m01s02i208" output_freq="72ts">
-
-    <field
-      id="m01s02i208_inst"
-      name="m01s02i208_inst"
-      operation="instant"
-      field_ref="m01s02i208"
-    />
-
-    <field
-      id="m01s02i208_ens"
-      name="m01s02i208_ens"
-      operation="instant"
-      field_ref="m01s02i208"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s02i208"
-      name="sqav-m01s02i208"
-      operation="instant"
-      field_ref="m01s02i208_ens"
-      > m01s02i208_ens*m01s02i208_ens
-    </field>
-
-    <field
-      id="avensq-m01s02i208"
-      name="avensq-m01s02i208"
-      operation="instant"
-      field_ref="m01s02i208"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s02i208*m01s02i208
-    </field>
-
-    <field
-      id="stdev-m01s02i208"
-      name="stdev-m01s02i208"
-      operation="instant"
-      field_ref="m01s02i208_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i201" name="test-m01s03i201" output_freq="72ts">
-
-    <field
-      id="m01s03i201_inst"
-      name="m01s03i201_inst"
-      operation="instant"
-      field_ref="m01s03i201"
-    />
-
-    <field
-      id="m01s03i201_ens"
-      name="m01s03i201_ens"
-      operation="instant"
-      field_ref="m01s03i201"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i201"
-      name="sqav-m01s03i201"
-      operation="instant"
-      field_ref="m01s03i201_ens"
-      > m01s03i201_ens*m01s03i201_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i201"
-      name="avensq-m01s03i201"
-      operation="instant"
-      field_ref="m01s03i201"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i201*m01s03i201
-    </field>
-
-    <field
-      id="stdev-m01s03i201"
-      name="stdev-m01s03i201"
-      operation="instant"
-      field_ref="m01s03i201_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i217" name="test-m01s03i217" output_freq="72ts">
-
-    <field
-      id="m01s03i217_inst"
-      name="m01s03i217_inst"
-      operation="instant"
-      field_ref="m01s03i217"
-    />
-
-    <field
-      id="m01s03i217_ens"
-      name="m01s03i217_ens"
-      operation="instant"
-      field_ref="m01s03i217"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i217"
-      name="sqav-m01s03i217"
-      operation="instant"
-      field_ref="m01s03i217_ens"
-      > m01s03i217_ens*m01s03i217_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i217"
-      name="avensq-m01s03i217"
-      operation="instant"
-      field_ref="m01s03i217"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i217*m01s03i217
-    </field>
-
-    <field
-      id="stdev-m01s03i217"
-      name="stdev-m01s03i217"
-      operation="instant"
-      field_ref="m01s03i217_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i223" name="test-m01s03i223" output_freq="72ts">
-
-    <field
-      id="m01s03i223_inst"
-      name="m01s03i223_inst"
-      operation="instant"
-      field_ref="m01s03i223"
-    />
-
-    <field
-      id="m01s03i223_ens"
-      name="m01s03i223_ens"
-      operation="instant"
-      field_ref="m01s03i223"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i223"
-      name="sqav-m01s03i223"
-      operation="instant"
-      field_ref="m01s03i223_ens"
-      > m01s03i223_ens*m01s03i223_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i223"
-      name="avensq-m01s03i223"
-      operation="instant"
-      field_ref="m01s03i223"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i223*m01s03i223
-    </field>
-
-    <field
-      id="stdev-m01s03i223"
-      name="stdev-m01s03i223"
-      operation="instant"
-      field_ref="m01s03i223_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i224" name="test-m01s03i224" output_freq="72ts">
-
-    <field
-      id="m01s03i224_inst"
-      name="m01s03i224_inst"
-      operation="instant"
-      field_ref="m01s03i224"
-    />
-
-    <field
-      id="m01s03i224_ens"
-      name="m01s03i224_ens"
-      operation="instant"
-      field_ref="m01s03i224"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i224"
-      name="sqav-m01s03i224"
-      operation="instant"
-      field_ref="m01s03i224_ens"
-      > m01s03i224_ens*m01s03i224_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i224"
-      name="avensq-m01s03i224"
-      operation="instant"
-      field_ref="m01s03i224"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i224*m01s03i224
-    </field>
-
-    <field
-      id="stdev-m01s03i224"
-      name="stdev-m01s03i224"
-      operation="instant"
-      field_ref="m01s03i224_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i228" name="test-m01s03i228" output_freq="72ts">
-
-    <field
-      id="m01s03i228_inst"
-      name="m01s03i228_inst"
-      operation="instant"
-      field_ref="m01s03i228"
-    />
-
-    <field
-      id="m01s03i228_ens"
-      name="m01s03i228_ens"
-      operation="instant"
-      field_ref="m01s03i228"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i228"
-      name="sqav-m01s03i228"
-      operation="instant"
-      field_ref="m01s03i228_ens"
-      > m01s03i228_ens*m01s03i228_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i228"
-      name="avensq-m01s03i228"
-      operation="instant"
-      field_ref="m01s03i228"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i228*m01s03i228
-    </field>
-
-    <field
-      id="stdev-m01s03i228"
-      name="stdev-m01s03i228"
-      operation="instant"
-      field_ref="m01s03i228_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i231" name="test-m01s03i231" output_freq="72ts">
-
-    <field
-      id="m01s03i231_inst"
-      name="m01s03i231_inst"
-      operation="instant"
-      field_ref="m01s03i231"
-    />
-
-    <field
-      id="m01s03i231_ens"
-      name="m01s03i231_ens"
-      operation="instant"
-      field_ref="m01s03i231"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i231"
-      name="sqav-m01s03i231"
-      operation="instant"
-      field_ref="m01s03i231_ens"
-      > m01s03i231_ens*m01s03i231_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i231"
-      name="avensq-m01s03i231"
-      operation="instant"
-      field_ref="m01s03i231"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i231*m01s03i231
-    </field>
-
-    <field
-      id="stdev-m01s03i231"
-      name="stdev-m01s03i231"
-      operation="instant"
-      field_ref="m01s03i231_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i232" name="test-m01s03i232" output_freq="72ts">
-
-    <field
-      id="m01s03i232_inst"
-      name="m01s03i232_inst"
-      operation="instant"
-      field_ref="m01s03i232"
-    />
-
-    <field
-      id="m01s03i232_ens"
-      name="m01s03i232_ens"
-      operation="instant"
-      field_ref="m01s03i232"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i232"
-      name="sqav-m01s03i232"
-      operation="instant"
-      field_ref="m01s03i232_ens"
-      > m01s03i232_ens*m01s03i232_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i232"
-      name="avensq-m01s03i232"
-      operation="instant"
-      field_ref="m01s03i232"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i232*m01s03i232
-    </field>
-
-    <field
-      id="stdev-m01s03i232"
-      name="stdev-m01s03i232"
-      operation="instant"
-      field_ref="m01s03i232_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i234" name="test-m01s03i234" output_freq="72ts">
-
-    <field
-      id="m01s03i234_inst"
-      name="m01s03i234_inst"
-      operation="instant"
-      field_ref="m01s03i234"
-    />
-
-    <field
-      id="m01s03i234_ens"
-      name="m01s03i234_ens"
-      operation="instant"
-      field_ref="m01s03i234"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i234"
-      name="sqav-m01s03i234"
-      operation="instant"
-      field_ref="m01s03i234_ens"
-      > m01s03i234_ens*m01s03i234_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i234"
-      name="avensq-m01s03i234"
-      operation="instant"
-      field_ref="m01s03i234"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i234*m01s03i234
-    </field>
-
-    <field
-      id="stdev-m01s03i234"
-      name="stdev-m01s03i234"
-      operation="instant"
-      field_ref="m01s03i234_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i235" name="test-m01s03i235" output_freq="72ts">
-
-    <field
-      id="m01s03i235_inst"
-      name="m01s03i235_inst"
-      operation="instant"
-      field_ref="m01s03i235"
-    />
-
-    <field
-      id="m01s03i235_ens"
-      name="m01s03i235_ens"
-      operation="instant"
-      field_ref="m01s03i235"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i235"
-      name="sqav-m01s03i235"
-      operation="instant"
-      field_ref="m01s03i235_ens"
-      > m01s03i235_ens*m01s03i235_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i235"
-      name="avensq-m01s03i235"
-      operation="instant"
-      field_ref="m01s03i235"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i235*m01s03i235
-    </field>
-
-    <field
-      id="stdev-m01s03i235"
-      name="stdev-m01s03i235"
-      operation="instant"
-      field_ref="m01s03i235_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i236" name="test-m01s03i236" output_freq="72ts">
-
-    <field
-      id="m01s03i236_inst"
-      name="m01s03i236_inst"
-      operation="instant"
-      field_ref="m01s03i236"
-    />
-
-    <field
-      id="m01s03i236_ens"
-      name="m01s03i236_ens"
-      operation="instant"
-      field_ref="m01s03i236"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i236"
-      name="sqav-m01s03i236"
-      operation="instant"
-      field_ref="m01s03i236_ens"
-      > m01s03i236_ens*m01s03i236_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i236"
-      name="avensq-m01s03i236"
-      operation="instant"
-      field_ref="m01s03i236"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i236*m01s03i236
-    </field>
-
-    <field
-      id="stdev-m01s03i236"
-      name="stdev-m01s03i236"
-      operation="instant"
-      field_ref="m01s03i236_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i237" name="test-m01s03i237" output_freq="72ts">
-
-    <field
-      id="m01s03i237_inst"
-      name="m01s03i237_inst"
-      operation="instant"
-      field_ref="m01s03i237"
-    />
-
-    <field
-      id="m01s03i237_ens"
-      name="m01s03i237_ens"
-      operation="instant"
-      field_ref="m01s03i237"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i237"
-      name="sqav-m01s03i237"
-      operation="instant"
-      field_ref="m01s03i237_ens"
-      > m01s03i237_ens*m01s03i237_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i237"
-      name="avensq-m01s03i237"
-      operation="instant"
-      field_ref="m01s03i237"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i237*m01s03i237
-    </field>
-
-    <field
-      id="stdev-m01s03i237"
-      name="stdev-m01s03i237"
-      operation="instant"
-      field_ref="m01s03i237_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i245" name="test-m01s03i245" output_freq="72ts">
-
-    <field
-      id="m01s03i245_inst"
-      name="m01s03i245_inst"
-      operation="instant"
-      field_ref="m01s03i245"
-    />
-
-    <field
-      id="m01s03i245_ens"
-      name="m01s03i245_ens"
-      operation="instant"
-      field_ref="m01s03i245"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i245"
-      name="sqav-m01s03i245"
-      operation="instant"
-      field_ref="m01s03i245_ens"
-      > m01s03i245_ens*m01s03i245_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i245"
-      name="avensq-m01s03i245"
-      operation="instant"
-      field_ref="m01s03i245"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i245*m01s03i245
-    </field>
-
-    <field
-      id="stdev-m01s03i245"
-      name="stdev-m01s03i245"
-      operation="instant"
-      field_ref="m01s03i245_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i258" name="test-m01s03i258" output_freq="72ts">
-
-    <field
-      id="m01s03i258_inst"
-      name="m01s03i258_inst"
-      operation="instant"
-      field_ref="m01s03i258"
-    />
-
-    <field
-      id="m01s03i258_ens"
-      name="m01s03i258_ens"
-      operation="instant"
-      field_ref="m01s03i258"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i258"
-      name="sqav-m01s03i258"
-      operation="instant"
-      field_ref="m01s03i258_ens"
-      > m01s03i258_ens*m01s03i258_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i258"
-      name="avensq-m01s03i258"
-      operation="instant"
-      field_ref="m01s03i258"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i258*m01s03i258
-    </field>
-
-    <field
-      id="stdev-m01s03i258"
-      name="stdev-m01s03i258"
-      operation="instant"
-      field_ref="m01s03i258_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i261" name="test-m01s03i261" output_freq="72ts">
-
-    <field
-      id="m01s03i261_inst"
-      name="m01s03i261_inst"
-      operation="instant"
-      field_ref="m01s03i261"
-    />
-
-    <field
-      id="m01s03i261_ens"
-      name="m01s03i261_ens"
-      operation="instant"
-      field_ref="m01s03i261"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i261"
-      name="sqav-m01s03i261"
-      operation="instant"
-      field_ref="m01s03i261_ens"
-      > m01s03i261_ens*m01s03i261_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i261"
-      name="avensq-m01s03i261"
-      operation="instant"
-      field_ref="m01s03i261"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i261*m01s03i261
-    </field>
-
-    <field
-      id="stdev-m01s03i261"
-      name="stdev-m01s03i261"
-      operation="instant"
-      field_ref="m01s03i261_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i293" name="test-m01s03i293" output_freq="72ts">
-
-    <field
-      id="m01s03i293_inst"
-      name="m01s03i293_inst"
-      operation="instant"
-      field_ref="m01s03i293"
-    />
-
-    <field
-      id="m01s03i293_ens"
-      name="m01s03i293_ens"
-      operation="instant"
-      field_ref="m01s03i293"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i293"
-      name="sqav-m01s03i293"
-      operation="instant"
-      field_ref="m01s03i293_ens"
-      > m01s03i293_ens*m01s03i293_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i293"
-      name="avensq-m01s03i293"
-      operation="instant"
-      field_ref="m01s03i293"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i293*m01s03i293
-    </field>
-
-    <field
-      id="stdev-m01s03i293"
-      name="stdev-m01s03i293"
-      operation="instant"
-      field_ref="m01s03i293_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i296" name="test-m01s03i296" output_freq="72ts">
-
-    <field
-      id="m01s03i296_inst"
-      name="m01s03i296_inst"
-      operation="instant"
-      field_ref="m01s03i296"
-    />
-
-    <field
-      id="m01s03i296_ens"
-      name="m01s03i296_ens"
-      operation="instant"
-      field_ref="m01s03i296"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i296"
-      name="sqav-m01s03i296"
-      operation="instant"
-      field_ref="m01s03i296_ens"
-      > m01s03i296_ens*m01s03i296_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i296"
-      name="avensq-m01s03i296"
-      operation="instant"
-      field_ref="m01s03i296"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i296*m01s03i296
-    </field>
-
-    <field
-      id="stdev-m01s03i296"
-      name="stdev-m01s03i296"
-      operation="instant"
-      field_ref="m01s03i296_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i297" name="test-m01s03i297" output_freq="72ts">
-
-    <field
-      id="m01s03i297_inst"
-      name="m01s03i297_inst"
-      operation="instant"
-      field_ref="m01s03i297"
-    />
-
-    <field
-      id="m01s03i297_ens"
-      name="m01s03i297_ens"
-      operation="instant"
-      field_ref="m01s03i297"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i297"
-      name="sqav-m01s03i297"
-      operation="instant"
-      field_ref="m01s03i297_ens"
-      > m01s03i297_ens*m01s03i297_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i297"
-      name="avensq-m01s03i297"
-      operation="instant"
-      field_ref="m01s03i297"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i297*m01s03i297
-    </field>
-
-    <field
-      id="stdev-m01s03i297"
-      name="stdev-m01s03i297"
-      operation="instant"
-      field_ref="m01s03i297_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i298" name="test-m01s03i298" output_freq="72ts">
-
-    <field
-      id="m01s03i298_inst"
-      name="m01s03i298_inst"
-      operation="instant"
-      field_ref="m01s03i298"
-    />
-
-    <field
-      id="m01s03i298_ens"
-      name="m01s03i298_ens"
-      operation="instant"
-      field_ref="m01s03i298"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i298"
-      name="sqav-m01s03i298"
-      operation="instant"
-      field_ref="m01s03i298_ens"
-      > m01s03i298_ens*m01s03i298_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i298"
-      name="avensq-m01s03i298"
-      operation="instant"
-      field_ref="m01s03i298"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i298*m01s03i298
-    </field>
-
-    <field
-      id="stdev-m01s03i298"
-      name="stdev-m01s03i298"
-      operation="instant"
-      field_ref="m01s03i298_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i304" name="test-m01s03i304" output_freq="72ts">
-
-    <field
-      id="m01s03i304_inst"
-      name="m01s03i304_inst"
-      operation="instant"
-      field_ref="m01s03i304"
-    />
-
-    <field
-      id="m01s03i304_ens"
-      name="m01s03i304_ens"
-      operation="instant"
-      field_ref="m01s03i304"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i304"
-      name="sqav-m01s03i304"
-      operation="instant"
-      field_ref="m01s03i304_ens"
-      > m01s03i304_ens*m01s03i304_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i304"
-      name="avensq-m01s03i304"
-      operation="instant"
-      field_ref="m01s03i304"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i304*m01s03i304
-    </field>
-
-    <field
-      id="stdev-m01s03i304"
-      name="stdev-m01s03i304"
-      operation="instant"
-      field_ref="m01s03i304_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i305" name="test-m01s03i305" output_freq="72ts">
-
-    <field
-      id="m01s03i305_inst"
-      name="m01s03i305_inst"
-      operation="instant"
-      field_ref="m01s03i305"
-    />
-
-    <field
-      id="m01s03i305_ens"
-      name="m01s03i305_ens"
-      operation="instant"
-      field_ref="m01s03i305"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i305"
-      name="sqav-m01s03i305"
-      operation="instant"
-      field_ref="m01s03i305_ens"
-      > m01s03i305_ens*m01s03i305_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i305"
-      name="avensq-m01s03i305"
-      operation="instant"
-      field_ref="m01s03i305"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i305*m01s03i305
-    </field>
-
-    <field
-      id="stdev-m01s03i305"
-      name="stdev-m01s03i305"
-      operation="instant"
-      field_ref="m01s03i305_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i306" name="test-m01s03i306" output_freq="72ts">
-
-    <field
-      id="m01s03i306_inst"
-      name="m01s03i306_inst"
-      operation="instant"
-      field_ref="m01s03i306"
-    />
-
-    <field
-      id="m01s03i306_ens"
-      name="m01s03i306_ens"
-      operation="instant"
-      field_ref="m01s03i306"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i306"
-      name="sqav-m01s03i306"
-      operation="instant"
-      field_ref="m01s03i306_ens"
-      > m01s03i306_ens*m01s03i306_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i306"
-      name="avensq-m01s03i306"
-      operation="instant"
-      field_ref="m01s03i306"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i306*m01s03i306
-    </field>
-
-    <field
-      id="stdev-m01s03i306"
-      name="stdev-m01s03i306"
-      operation="instant"
-      field_ref="m01s03i306_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i307" name="test-m01s03i307" output_freq="72ts">
-
-    <field
-      id="m01s03i307_inst"
-      name="m01s03i307_inst"
-      operation="instant"
-      field_ref="m01s03i307"
-    />
-
-    <field
-      id="m01s03i307_ens"
-      name="m01s03i307_ens"
-      operation="instant"
-      field_ref="m01s03i307"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i307"
-      name="sqav-m01s03i307"
-      operation="instant"
-      field_ref="m01s03i307_ens"
-      > m01s03i307_ens*m01s03i307_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i307"
-      name="avensq-m01s03i307"
-      operation="instant"
-      field_ref="m01s03i307"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i307*m01s03i307
-    </field>
-
-    <field
-      id="stdev-m01s03i307"
-      name="stdev-m01s03i307"
-      operation="instant"
-      field_ref="m01s03i307_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i308" name="test-m01s03i308" output_freq="72ts">
-
-    <field
-      id="m01s03i308_inst"
-      name="m01s03i308_inst"
-      operation="instant"
-      field_ref="m01s03i308"
-    />
-
-    <field
-      id="m01s03i308_ens"
-      name="m01s03i308_ens"
-      operation="instant"
-      field_ref="m01s03i308"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i308"
-      name="sqav-m01s03i308"
-      operation="instant"
-      field_ref="m01s03i308_ens"
-      > m01s03i308_ens*m01s03i308_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i308"
-      name="avensq-m01s03i308"
-      operation="instant"
-      field_ref="m01s03i308"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i308*m01s03i308
-    </field>
-
-    <field
-      id="stdev-m01s03i308"
-      name="stdev-m01s03i308"
-      operation="instant"
-      field_ref="m01s03i308_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i309" name="test-m01s03i309" output_freq="72ts">
-
-    <field
-      id="m01s03i309_inst"
-      name="m01s03i309_inst"
-      operation="instant"
-      field_ref="m01s03i309"
-    />
-
-    <field
-      id="m01s03i309_ens"
-      name="m01s03i309_ens"
-      operation="instant"
-      field_ref="m01s03i309"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i309"
-      name="sqav-m01s03i309"
-      operation="instant"
-      field_ref="m01s03i309_ens"
-      > m01s03i309_ens*m01s03i309_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i309"
-      name="avensq-m01s03i309"
-      operation="instant"
-      field_ref="m01s03i309"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i309*m01s03i309
-    </field>
-
-    <field
-      id="stdev-m01s03i309"
-      name="stdev-m01s03i309"
-      operation="instant"
-      field_ref="m01s03i309_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i310" name="test-m01s03i310" output_freq="72ts">
-
-    <field
-      id="m01s03i310_inst"
-      name="m01s03i310_inst"
-      operation="instant"
-      field_ref="m01s03i310"
-    />
-
-    <field
-      id="m01s03i310_ens"
-      name="m01s03i310_ens"
-      operation="instant"
-      field_ref="m01s03i310"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i310"
-      name="sqav-m01s03i310"
-      operation="instant"
-      field_ref="m01s03i310_ens"
-      > m01s03i310_ens*m01s03i310_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i310"
-      name="avensq-m01s03i310"
-      operation="instant"
-      field_ref="m01s03i310"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i310*m01s03i310
-    </field>
-
-    <field
-      id="stdev-m01s03i310"
-      name="stdev-m01s03i310"
-      operation="instant"
-      field_ref="m01s03i310_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i332" name="test-m01s03i332" output_freq="72ts">
-
-    <field
-      id="m01s03i332_inst"
-      name="m01s03i332_inst"
-      operation="instant"
-      field_ref="m01s03i332"
-    />
-
-    <field
-      id="m01s03i332_ens"
-      name="m01s03i332_ens"
-      operation="instant"
-      field_ref="m01s03i332"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i332"
-      name="sqav-m01s03i332"
-      operation="instant"
-      field_ref="m01s03i332_ens"
-      > m01s03i332_ens*m01s03i332_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i332"
-      name="avensq-m01s03i332"
-      operation="instant"
-      field_ref="m01s03i332"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i332*m01s03i332
-    </field>
-
-    <field
-      id="stdev-m01s03i332"
-      name="stdev-m01s03i332"
-      operation="instant"
-      field_ref="m01s03i332_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i340" name="test-m01s03i340" output_freq="72ts">
-
-    <field
-      id="m01s03i340_inst"
-      name="m01s03i340_inst"
-      operation="instant"
-      field_ref="m01s03i340"
-    />
-
-    <field
-      id="m01s03i340_ens"
-      name="m01s03i340_ens"
-      operation="instant"
-      field_ref="m01s03i340"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i340"
-      name="sqav-m01s03i340"
-      operation="instant"
-      field_ref="m01s03i340_ens"
-      > m01s03i340_ens*m01s03i340_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i340"
-      name="avensq-m01s03i340"
-      operation="instant"
-      field_ref="m01s03i340"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i340*m01s03i340
-    </field>
-
-    <field
-      id="stdev-m01s03i340"
-      name="stdev-m01s03i340"
-      operation="instant"
-      field_ref="m01s03i340_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i353" name="test-m01s03i353" output_freq="72ts">
-
-    <field
-      id="m01s03i353_inst"
-      name="m01s03i353_inst"
-      operation="instant"
-      field_ref="m01s03i353"
-    />
-
-    <field
-      id="m01s03i353_ens"
-      name="m01s03i353_ens"
-      operation="instant"
-      field_ref="m01s03i353"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i353"
-      name="sqav-m01s03i353"
-      operation="instant"
-      field_ref="m01s03i353_ens"
-      > m01s03i353_ens*m01s03i353_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i353"
-      name="avensq-m01s03i353"
-      operation="instant"
-      field_ref="m01s03i353"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i353*m01s03i353
-    </field>
-
-    <field
-      id="stdev-m01s03i353"
-      name="stdev-m01s03i353"
-      operation="instant"
-      field_ref="m01s03i353_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i395" name="test-m01s03i395" output_freq="72ts">
-
-    <field
-      id="m01s03i395_inst"
-      name="m01s03i395_inst"
-      operation="instant"
-      field_ref="m01s03i395"
-    />
-
-    <field
-      id="m01s03i395_ens"
-      name="m01s03i395_ens"
-      operation="instant"
-      field_ref="m01s03i395"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i395"
-      name="sqav-m01s03i395"
-      operation="instant"
-      field_ref="m01s03i395_ens"
-      > m01s03i395_ens*m01s03i395_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i395"
-      name="avensq-m01s03i395"
-      operation="instant"
-      field_ref="m01s03i395"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i395*m01s03i395
-    </field>
-
-    <field
-      id="stdev-m01s03i395"
-      name="stdev-m01s03i395"
-      operation="instant"
-      field_ref="m01s03i395_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i662" name="test-m01s03i662" output_freq="72ts">
-
-    <field
-      id="m01s03i662_inst"
-      name="m01s03i662_inst"
-      operation="instant"
-      field_ref="m01s03i662"
-    />
-
-    <field
-      id="m01s03i662_ens"
-      name="m01s03i662_ens"
-      operation="instant"
-      field_ref="m01s03i662"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i662"
-      name="sqav-m01s03i662"
-      operation="instant"
-      field_ref="m01s03i662_ens"
-      > m01s03i662_ens*m01s03i662_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i662"
-      name="avensq-m01s03i662"
-      operation="instant"
-      field_ref="m01s03i662"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i662*m01s03i662
-    </field>
-
-    <field
-      id="stdev-m01s03i662"
-      name="stdev-m01s03i662"
-      operation="instant"
-      field_ref="m01s03i662_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s03i663" name="test-m01s03i663" output_freq="72ts">
-
-    <field
-      id="m01s03i663_inst"
-      name="m01s03i663_inst"
-      operation="instant"
-      field_ref="m01s03i663"
-    />
-
-    <field
-      id="m01s03i663_ens"
-      name="m01s03i663_ens"
-      operation="instant"
-      field_ref="m01s03i663"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s03i663"
-      name="sqav-m01s03i663"
-      operation="instant"
-      field_ref="m01s03i663_ens"
-      > m01s03i663_ens*m01s03i663_ens
-    </field>
-
-    <field
-      id="avensq-m01s03i663"
-      name="avensq-m01s03i663"
-      operation="instant"
-      field_ref="m01s03i663"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s03i663*m01s03i663
-    </field>
-
-    <field
-      id="stdev-m01s03i663"
-      name="stdev-m01s03i663"
-      operation="instant"
-      field_ref="m01s03i663_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s04i203" name="test-m01s04i203" output_freq="72ts">
-
-    <field
-      id="m01s04i203_inst"
-      name="m01s04i203_inst"
-      operation="instant"
-      field_ref="m01s04i203"
-    />
-
-    <field
-      id="m01s04i203_ens"
-      name="m01s04i203_ens"
-      operation="instant"
-      field_ref="m01s04i203"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s04i203"
-      name="sqav-m01s04i203"
-      operation="instant"
-      field_ref="m01s04i203_ens"
-      > m01s04i203_ens*m01s04i203_ens
-    </field>
-
-    <field
-      id="avensq-m01s04i203"
-      name="avensq-m01s04i203"
-      operation="instant"
-      field_ref="m01s04i203"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s04i203*m01s04i203
-    </field>
-
-    <field
-      id="stdev-m01s04i203"
-      name="stdev-m01s04i203"
-      operation="instant"
-      field_ref="m01s04i203_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s04i204" name="test-m01s04i204" output_freq="72ts">
-
-    <field
-      id="m01s04i204_inst"
-      name="m01s04i204_inst"
-      operation="instant"
-      field_ref="m01s04i204"
-    />
-
-    <field
-      id="m01s04i204_ens"
-      name="m01s04i204_ens"
-      operation="instant"
-      field_ref="m01s04i204"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s04i204"
-      name="sqav-m01s04i204"
-      operation="instant"
-      field_ref="m01s04i204_ens"
-      > m01s04i204_ens*m01s04i204_ens
-    </field>
-
-    <field
-      id="avensq-m01s04i204"
-      name="avensq-m01s04i204"
-      operation="instant"
-      field_ref="m01s04i204"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s04i204*m01s04i204
-    </field>
-
-    <field
-      id="stdev-m01s04i204"
-      name="stdev-m01s04i204"
-      operation="instant"
-      field_ref="m01s04i204_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i205" name="test-m01s05i205" output_freq="72ts">
-
-    <field
-      id="m01s05i205_inst"
-      name="m01s05i205_inst"
-      operation="instant"
-      field_ref="m01s05i205"
-    />
-
-    <field
-      id="m01s05i205_ens"
-      name="m01s05i205_ens"
-      operation="instant"
-      field_ref="m01s05i205"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i205"
-      name="sqav-m01s05i205"
-      operation="instant"
-      field_ref="m01s05i205_ens"
-      > m01s05i205_ens*m01s05i205_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i205"
-      name="avensq-m01s05i205"
-      operation="instant"
-      field_ref="m01s05i205"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i205*m01s05i205
-    </field>
-
-    <field
-      id="stdev-m01s05i205"
-      name="stdev-m01s05i205"
-      operation="instant"
-      field_ref="m01s05i205_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i206" name="test-m01s05i206" output_freq="72ts">
-
-    <field
-      id="m01s05i206_inst"
-      name="m01s05i206_inst"
-      operation="instant"
-      field_ref="m01s05i206"
-    />
-
-    <field
-      id="m01s05i206_ens"
-      name="m01s05i206_ens"
-      operation="instant"
-      field_ref="m01s05i206"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i206"
-      name="sqav-m01s05i206"
-      operation="instant"
-      field_ref="m01s05i206_ens"
-      > m01s05i206_ens*m01s05i206_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i206"
-      name="avensq-m01s05i206"
-      operation="instant"
-      field_ref="m01s05i206"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i206*m01s05i206
-    </field>
-
-    <field
-      id="stdev-m01s05i206"
-      name="stdev-m01s05i206"
-      operation="instant"
-      field_ref="m01s05i206_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i214" name="test-m01s05i214" output_freq="72ts">
-
-    <field
-      id="m01s05i214_inst"
-      name="m01s05i214_inst"
-      operation="instant"
-      field_ref="m01s05i214"
-    />
-
-    <field
-      id="m01s05i214_ens"
-      name="m01s05i214_ens"
-      operation="instant"
-      field_ref="m01s05i214"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i214"
-      name="sqav-m01s05i214"
-      operation="instant"
-      field_ref="m01s05i214_ens"
-      > m01s05i214_ens*m01s05i214_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i214"
-      name="avensq-m01s05i214"
-      operation="instant"
-      field_ref="m01s05i214"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i214*m01s05i214
-    </field>
-
-    <field
-      id="stdev-m01s05i214"
-      name="stdev-m01s05i214"
-      operation="instant"
-      field_ref="m01s05i214_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i215" name="test-m01s05i215" output_freq="72ts">
-
-    <field
-      id="m01s05i215_inst"
-      name="m01s05i215_inst"
-      operation="instant"
-      field_ref="m01s05i215"
-    />
-
-    <field
-      id="m01s05i215_ens"
-      name="m01s05i215_ens"
-      operation="instant"
-      field_ref="m01s05i215"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i215"
-      name="sqav-m01s05i215"
-      operation="instant"
-      field_ref="m01s05i215_ens"
-      > m01s05i215_ens*m01s05i215_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i215"
-      name="avensq-m01s05i215"
-      operation="instant"
-      field_ref="m01s05i215"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i215*m01s05i215
-    </field>
-
-    <field
-      id="stdev-m01s05i215"
-      name="stdev-m01s05i215"
-      operation="instant"
-      field_ref="m01s05i215_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i216" name="test-m01s05i216" output_freq="72ts">
-
-    <field
-      id="m01s05i216_inst"
-      name="m01s05i216_inst"
-      operation="instant"
-      field_ref="m01s05i216"
-    />
-
-    <field
-      id="m01s05i216_ens"
-      name="m01s05i216_ens"
-      operation="instant"
-      field_ref="m01s05i216"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i216"
-      name="sqav-m01s05i216"
-      operation="instant"
-      field_ref="m01s05i216_ens"
-      > m01s05i216_ens*m01s05i216_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i216"
-      name="avensq-m01s05i216"
-      operation="instant"
-      field_ref="m01s05i216"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i216*m01s05i216
-    </field>
-
-    <field
-      id="stdev-m01s05i216"
-      name="stdev-m01s05i216"
-      operation="instant"
-      field_ref="m01s05i216_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i231" name="test-m01s05i231" output_freq="72ts">
-
-    <field
-      id="m01s05i231_inst"
-      name="m01s05i231_inst"
-      operation="instant"
-      field_ref="m01s05i231"
-    />
-
-    <field
-      id="m01s05i231_ens"
-      name="m01s05i231_ens"
-      operation="instant"
-      field_ref="m01s05i231"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i231"
-      name="sqav-m01s05i231"
-      operation="instant"
-      field_ref="m01s05i231_ens"
-      > m01s05i231_ens*m01s05i231_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i231"
-      name="avensq-m01s05i231"
-      operation="instant"
-      field_ref="m01s05i231"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i231*m01s05i231
-    </field>
-
-    <field
-      id="stdev-m01s05i231"
-      name="stdev-m01s05i231"
-      operation="instant"
-      field_ref="m01s05i231_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i232" name="test-m01s05i232" output_freq="72ts">
-
-    <field
-      id="m01s05i232_inst"
-      name="m01s05i232_inst"
-      operation="instant"
-      field_ref="m01s05i232"
-    />
-
-    <field
-      id="m01s05i232_ens"
-      name="m01s05i232_ens"
-      operation="instant"
-      field_ref="m01s05i232"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i232"
-      name="sqav-m01s05i232"
-      operation="instant"
-      field_ref="m01s05i232_ens"
-      > m01s05i232_ens*m01s05i232_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i232"
-      name="avensq-m01s05i232"
-      operation="instant"
-      field_ref="m01s05i232"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i232*m01s05i232
-    </field>
-
-    <field
-      id="stdev-m01s05i232"
-      name="stdev-m01s05i232"
-      operation="instant"
-      field_ref="m01s05i232_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i269" name="test-m01s05i269" output_freq="72ts">
-
-    <field
-      id="m01s05i269_inst"
-      name="m01s05i269_inst"
-      operation="instant"
-      field_ref="m01s05i269"
-    />
-
-    <field
-      id="m01s05i269_ens"
-      name="m01s05i269_ens"
-      operation="instant"
-      field_ref="m01s05i269"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i269"
-      name="sqav-m01s05i269"
-      operation="instant"
-      field_ref="m01s05i269_ens"
-      > m01s05i269_ens*m01s05i269_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i269"
-      name="avensq-m01s05i269"
-      operation="instant"
-      field_ref="m01s05i269"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i269*m01s05i269
-    </field>
-
-    <field
-      id="stdev-m01s05i269"
-      name="stdev-m01s05i269"
-      operation="instant"
-      field_ref="m01s05i269_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i270" name="test-m01s05i270" output_freq="72ts">
-
-    <field
-      id="m01s05i270_inst"
-      name="m01s05i270_inst"
-      operation="instant"
-      field_ref="m01s05i270"
-    />
-
-    <field
-      id="m01s05i270_ens"
-      name="m01s05i270_ens"
-      operation="instant"
-      field_ref="m01s05i270"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i270"
-      name="sqav-m01s05i270"
-      operation="instant"
-      field_ref="m01s05i270_ens"
-      > m01s05i270_ens*m01s05i270_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i270"
-      name="avensq-m01s05i270"
-      operation="instant"
-      field_ref="m01s05i270"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i270*m01s05i270
-    </field>
-
-    <field
-      id="stdev-m01s05i270"
-      name="stdev-m01s05i270"
-      operation="instant"
-      field_ref="m01s05i270_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i272" name="test-m01s05i272" output_freq="72ts">
-
-    <field
-      id="m01s05i272_inst"
-      name="m01s05i272_inst"
-      operation="instant"
-      field_ref="m01s05i272"
-    />
-
-    <field
-      id="m01s05i272_ens"
-      name="m01s05i272_ens"
-      operation="instant"
-      field_ref="m01s05i272"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i272"
-      name="sqav-m01s05i272"
-      operation="instant"
-      field_ref="m01s05i272_ens"
-      > m01s05i272_ens*m01s05i272_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i272"
-      name="avensq-m01s05i272"
-      operation="instant"
-      field_ref="m01s05i272"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i272*m01s05i272
-    </field>
-
-    <field
-      id="stdev-m01s05i272"
-      name="stdev-m01s05i272"
-      operation="instant"
-      field_ref="m01s05i272_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i277" name="test-m01s05i277" output_freq="72ts">
-
-    <field
-      id="m01s05i277_inst"
-      name="m01s05i277_inst"
-      operation="instant"
-      field_ref="m01s05i277"
-    />
-
-    <field
-      id="m01s05i277_ens"
-      name="m01s05i277_ens"
-      operation="instant"
-      field_ref="m01s05i277"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i277"
-      name="sqav-m01s05i277"
-      operation="instant"
-      field_ref="m01s05i277_ens"
-      > m01s05i277_ens*m01s05i277_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i277"
-      name="avensq-m01s05i277"
-      operation="instant"
-      field_ref="m01s05i277"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i277*m01s05i277
-    </field>
-
-    <field
-      id="stdev-m01s05i277"
-      name="stdev-m01s05i277"
-      operation="instant"
-      field_ref="m01s05i277_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i278" name="test-m01s05i278" output_freq="72ts">
-
-    <field
-      id="m01s05i278_inst"
-      name="m01s05i278_inst"
-      operation="instant"
-      field_ref="m01s05i278"
-    />
-
-    <field
-      id="m01s05i278_ens"
-      name="m01s05i278_ens"
-      operation="instant"
-      field_ref="m01s05i278"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i278"
-      name="sqav-m01s05i278"
-      operation="instant"
-      field_ref="m01s05i278_ens"
-      > m01s05i278_ens*m01s05i278_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i278"
-      name="avensq-m01s05i278"
-      operation="instant"
-      field_ref="m01s05i278"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i278*m01s05i278
-    </field>
-
-    <field
-      id="stdev-m01s05i278"
-      name="stdev-m01s05i278"
-      operation="instant"
-      field_ref="m01s05i278_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s05i279" name="test-m01s05i279" output_freq="72ts">
-
-    <field
-      id="m01s05i279_inst"
-      name="m01s05i279_inst"
-      operation="instant"
-      field_ref="m01s05i279"
-    />
-
-    <field
-      id="m01s05i279_ens"
-      name="m01s05i279_ens"
-      operation="instant"
-      field_ref="m01s05i279"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s05i279"
-      name="sqav-m01s05i279"
-      operation="instant"
-      field_ref="m01s05i279_ens"
-      > m01s05i279_ens*m01s05i279_ens
-    </field>
-
-    <field
-      id="avensq-m01s05i279"
-      name="avensq-m01s05i279"
-      operation="instant"
-      field_ref="m01s05i279"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s05i279*m01s05i279
-    </field>
-
-    <field
-      id="stdev-m01s05i279"
-      name="stdev-m01s05i279"
-      operation="instant"
-      field_ref="m01s05i279_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s08i023" name="test-m01s08i023" output_freq="72ts">
-
-    <field
-      id="m01s08i023_inst"
-      name="m01s08i023_inst"
-      operation="instant"
-      field_ref="m01s08i023"
-    />
-
-    <field
-      id="m01s08i023_ens"
-      name="m01s08i023_ens"
-      operation="instant"
-      field_ref="m01s08i023"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s08i023"
-      name="sqav-m01s08i023"
-      operation="instant"
-      field_ref="m01s08i023_ens"
-      > m01s08i023_ens*m01s08i023_ens
-    </field>
-
-    <field
-      id="avensq-m01s08i023"
-      name="avensq-m01s08i023"
-      operation="instant"
-      field_ref="m01s08i023"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s08i023*m01s08i023
-    </field>
-
-    <field
-      id="stdev-m01s08i023"
-      name="stdev-m01s08i023"
-      operation="instant"
-      field_ref="m01s08i023_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s08i208" name="test-m01s08i208" output_freq="72ts">
-
-    <field
-      id="m01s08i208_inst"
-      name="m01s08i208_inst"
-      operation="instant"
-      field_ref="m01s08i208"
-    />
-
-    <field
-      id="m01s08i208_ens"
-      name="m01s08i208_ens"
-      operation="instant"
-      field_ref="m01s08i208"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s08i208"
-      name="sqav-m01s08i208"
-      operation="instant"
-      field_ref="m01s08i208_ens"
-      > m01s08i208_ens*m01s08i208_ens
-    </field>
-
-    <field
-      id="avensq-m01s08i208"
-      name="avensq-m01s08i208"
-      operation="instant"
-      field_ref="m01s08i208"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s08i208*m01s08i208
-    </field>
-
-    <field
-      id="stdev-m01s08i208"
-      name="stdev-m01s08i208"
-      operation="instant"
-      field_ref="m01s08i208_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s08i209" name="test-m01s08i209" output_freq="72ts">
-
-    <field
-      id="m01s08i209_inst"
-      name="m01s08i209_inst"
-      operation="instant"
-      field_ref="m01s08i209"
-    />
-
-    <field
-      id="m01s08i209_ens"
-      name="m01s08i209_ens"
-      operation="instant"
-      field_ref="m01s08i209"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s08i209"
-      name="sqav-m01s08i209"
-      operation="instant"
-      field_ref="m01s08i209_ens"
-      > m01s08i209_ens*m01s08i209_ens
-    </field>
-
-    <field
-      id="avensq-m01s08i209"
-      name="avensq-m01s08i209"
-      operation="instant"
-      field_ref="m01s08i209"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s08i209*m01s08i209
-    </field>
-
-    <field
-      id="stdev-m01s08i209"
-      name="stdev-m01s08i209"
-      operation="instant"
-      field_ref="m01s08i209_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s08i231" name="test-m01s08i231" output_freq="72ts">
-
-    <field
-      id="m01s08i231_inst"
-      name="m01s08i231_inst"
-      operation="instant"
-      field_ref="m01s08i231"
-    />
-
-    <field
-      id="m01s08i231_ens"
-      name="m01s08i231_ens"
-      operation="instant"
-      field_ref="m01s08i231"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s08i231"
-      name="sqav-m01s08i231"
-      operation="instant"
-      field_ref="m01s08i231_ens"
-      > m01s08i231_ens*m01s08i231_ens
-    </field>
-
-    <field
-      id="avensq-m01s08i231"
-      name="avensq-m01s08i231"
-      operation="instant"
-      field_ref="m01s08i231"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s08i231*m01s08i231
-    </field>
-
-    <field
-      id="stdev-m01s08i231"
-      name="stdev-m01s08i231"
-      operation="instant"
-      field_ref="m01s08i231_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s08i233" name="test-m01s08i233" output_freq="72ts">
-
-    <field
-      id="m01s08i233_inst"
-      name="m01s08i233_inst"
-      operation="instant"
-      field_ref="m01s08i233"
-    />
-
-    <field
-      id="m01s08i233_ens"
-      name="m01s08i233_ens"
-      operation="instant"
-      field_ref="m01s08i233"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s08i233"
-      name="sqav-m01s08i233"
-      operation="instant"
-      field_ref="m01s08i233_ens"
-      > m01s08i233_ens*m01s08i233_ens
-    </field>
-
-    <field
-      id="avensq-m01s08i233"
-      name="avensq-m01s08i233"
-      operation="instant"
-      field_ref="m01s08i233"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s08i233*m01s08i233
-    </field>
-
-    <field
-      id="stdev-m01s08i233"
-      name="stdev-m01s08i233"
-      operation="instant"
-      field_ref="m01s08i233_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s08i234" name="test-m01s08i234" output_freq="72ts">
-
-    <field
-      id="m01s08i234_inst"
-      name="m01s08i234_inst"
-      operation="instant"
-      field_ref="m01s08i234"
-    />
-
-    <field
-      id="m01s08i234_ens"
-      name="m01s08i234_ens"
-      operation="instant"
-      field_ref="m01s08i234"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s08i234"
-      name="sqav-m01s08i234"
-      operation="instant"
-      field_ref="m01s08i234_ens"
-      > m01s08i234_ens*m01s08i234_ens
-    </field>
-
-    <field
-      id="avensq-m01s08i234"
-      name="avensq-m01s08i234"
-      operation="instant"
-      field_ref="m01s08i234"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s08i234*m01s08i234
-    </field>
-
-    <field
-      id="stdev-m01s08i234"
-      name="stdev-m01s08i234"
-      operation="instant"
-      field_ref="m01s08i234_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s08i235" name="test-m01s08i235" output_freq="72ts">
-
-    <field
-      id="m01s08i235_inst"
-      name="m01s08i235_inst"
-      operation="instant"
-      field_ref="m01s08i235"
-    />
-
-    <field
-      id="m01s08i235_ens"
-      name="m01s08i235_ens"
-      operation="instant"
-      field_ref="m01s08i235"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s08i235"
-      name="sqav-m01s08i235"
-      operation="instant"
-      field_ref="m01s08i235_ens"
-      > m01s08i235_ens*m01s08i235_ens
-    </field>
-
-    <field
-      id="avensq-m01s08i235"
-      name="avensq-m01s08i235"
-      operation="instant"
-      field_ref="m01s08i235"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s08i235*m01s08i235
-    </field>
-
-    <field
-      id="stdev-m01s08i235"
-      name="stdev-m01s08i235"
-      operation="instant"
-      field_ref="m01s08i235_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s16i222" name="test-m01s16i222" output_freq="72ts">
-
-    <field
-      id="m01s16i222_inst"
-      name="m01s16i222_inst"
-      operation="instant"
-      field_ref="m01s16i222"
-    />
-
-    <field
-      id="m01s16i222_ens"
-      name="m01s16i222_ens"
-      operation="instant"
-      field_ref="m01s16i222"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s16i222"
-      name="sqav-m01s16i222"
-      operation="instant"
-      field_ref="m01s16i222_ens"
-      > m01s16i222_ens*m01s16i222_ens
-    </field>
-
-    <field
-      id="avensq-m01s16i222"
-      name="avensq-m01s16i222"
-      operation="instant"
-      field_ref="m01s16i222"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s16i222*m01s16i222
-    </field>
-
-    <field
-      id="stdev-m01s16i222"
-      name="stdev-m01s16i222"
-      operation="instant"
-      field_ref="m01s16i222_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i402" name="test-m01s30i402" output_freq="72ts">
-
-    <field
-      id="m01s30i402_inst"
-      name="m01s30i402_inst"
-      operation="instant"
-      field_ref="m01s30i402"
-    />
-
-    <field
-      id="m01s30i402_ens"
-      name="m01s30i402_ens"
-      operation="instant"
-      field_ref="m01s30i402"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i402"
-      name="sqav-m01s30i402"
-      operation="instant"
-      field_ref="m01s30i402_ens"
-      > m01s30i402_ens*m01s30i402_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i402"
-      name="avensq-m01s30i402"
-      operation="instant"
-      field_ref="m01s30i402"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i402*m01s30i402
-    </field>
-
-    <field
-      id="stdev-m01s30i402"
-      name="stdev-m01s30i402"
-      operation="instant"
-      field_ref="m01s30i402_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i403" name="test-m01s30i403" output_freq="72ts">
-
-    <field
-      id="m01s30i403_inst"
-      name="m01s30i403_inst"
-      operation="instant"
-      field_ref="m01s30i403"
-    />
-
-    <field
-      id="m01s30i403_ens"
-      name="m01s30i403_ens"
-      operation="instant"
-      field_ref="m01s30i403"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i403"
-      name="sqav-m01s30i403"
-      operation="instant"
-      field_ref="m01s30i403_ens"
-      > m01s30i403_ens*m01s30i403_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i403"
-      name="avensq-m01s30i403"
-      operation="instant"
-      field_ref="m01s30i403"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i403*m01s30i403
-    </field>
-
-    <field
-      id="stdev-m01s30i403"
-      name="stdev-m01s30i403"
-      operation="instant"
-      field_ref="m01s30i403_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i404" name="test-m01s30i404" output_freq="72ts">
-
-    <field
-      id="m01s30i404_inst"
-      name="m01s30i404_inst"
-      operation="instant"
-      field_ref="m01s30i404"
-    />
-
-    <field
-      id="m01s30i404_ens"
-      name="m01s30i404_ens"
-      operation="instant"
-      field_ref="m01s30i404"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i404"
-      name="sqav-m01s30i404"
-      operation="instant"
-      field_ref="m01s30i404_ens"
-      > m01s30i404_ens*m01s30i404_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i404"
-      name="avensq-m01s30i404"
-      operation="instant"
-      field_ref="m01s30i404"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i404*m01s30i404
-    </field>
-
-    <field
-      id="stdev-m01s30i404"
-      name="stdev-m01s30i404"
-      operation="instant"
-      field_ref="m01s30i404_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i405" name="test-m01s30i405" output_freq="72ts">
-
-    <field
-      id="m01s30i405_inst"
-      name="m01s30i405_inst"
-      operation="instant"
-      field_ref="m01s30i405"
-    />
-
-    <field
-      id="m01s30i405_ens"
-      name="m01s30i405_ens"
-      operation="instant"
-      field_ref="m01s30i405"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i405"
-      name="sqav-m01s30i405"
-      operation="instant"
-      field_ref="m01s30i405_ens"
-      > m01s30i405_ens*m01s30i405_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i405"
-      name="avensq-m01s30i405"
-      operation="instant"
-      field_ref="m01s30i405"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i405*m01s30i405
-    </field>
-
-    <field
-      id="stdev-m01s30i405"
-      name="stdev-m01s30i405"
-      operation="instant"
-      field_ref="m01s30i405_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i406" name="test-m01s30i406" output_freq="72ts">
-
-    <field
-      id="m01s30i406_inst"
-      name="m01s30i406_inst"
-      operation="instant"
-      field_ref="m01s30i406"
-    />
-
-    <field
-      id="m01s30i406_ens"
-      name="m01s30i406_ens"
-      operation="instant"
-      field_ref="m01s30i406"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i406"
-      name="sqav-m01s30i406"
-      operation="instant"
-      field_ref="m01s30i406_ens"
-      > m01s30i406_ens*m01s30i406_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i406"
-      name="avensq-m01s30i406"
-      operation="instant"
-      field_ref="m01s30i406"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i406*m01s30i406
-    </field>
-
-    <field
-      id="stdev-m01s30i406"
-      name="stdev-m01s30i406"
-      operation="instant"
-      field_ref="m01s30i406_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i407" name="test-m01s30i407" output_freq="72ts">
-
-    <field
-      id="m01s30i407_inst"
-      name="m01s30i407_inst"
-      operation="instant"
-      field_ref="m01s30i407"
-    />
-
-    <field
-      id="m01s30i407_ens"
-      name="m01s30i407_ens"
-      operation="instant"
-      field_ref="m01s30i407"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i407"
-      name="sqav-m01s30i407"
-      operation="instant"
-      field_ref="m01s30i407_ens"
-      > m01s30i407_ens*m01s30i407_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i407"
-      name="avensq-m01s30i407"
-      operation="instant"
-      field_ref="m01s30i407"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i407*m01s30i407
-    </field>
-
-    <field
-      id="stdev-m01s30i407"
-      name="stdev-m01s30i407"
-      operation="instant"
-      field_ref="m01s30i407_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i408" name="test-m01s30i408" output_freq="72ts">
-
-    <field
-      id="m01s30i408_inst"
-      name="m01s30i408_inst"
-      operation="instant"
-      field_ref="m01s30i408"
-    />
-
-    <field
-      id="m01s30i408_ens"
-      name="m01s30i408_ens"
-      operation="instant"
-      field_ref="m01s30i408"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i408"
-      name="sqav-m01s30i408"
-      operation="instant"
-      field_ref="m01s30i408_ens"
-      > m01s30i408_ens*m01s30i408_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i408"
-      name="avensq-m01s30i408"
-      operation="instant"
-      field_ref="m01s30i408"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i408*m01s30i408
-    </field>
-
-    <field
-      id="stdev-m01s30i408"
-      name="stdev-m01s30i408"
-      operation="instant"
-      field_ref="m01s30i408_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i419" name="test-m01s30i419" output_freq="72ts">
-
-    <field
-      id="m01s30i419_inst"
-      name="m01s30i419_inst"
-      operation="instant"
-      field_ref="m01s30i419"
-    />
-
-    <field
-      id="m01s30i419_ens"
-      name="m01s30i419_ens"
-      operation="instant"
-      field_ref="m01s30i419"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i419"
-      name="sqav-m01s30i419"
-      operation="instant"
-      field_ref="m01s30i419_ens"
-      > m01s30i419_ens*m01s30i419_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i419"
-      name="avensq-m01s30i419"
-      operation="instant"
-      field_ref="m01s30i419"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i419*m01s30i419
-    </field>
-
-    <field
-      id="stdev-m01s30i419"
-      name="stdev-m01s30i419"
-      operation="instant"
-      field_ref="m01s30i419_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i420" name="test-m01s30i420" output_freq="72ts">
-
-    <field
-      id="m01s30i420_inst"
-      name="m01s30i420_inst"
-      operation="instant"
-      field_ref="m01s30i420"
-    />
-
-    <field
-      id="m01s30i420_ens"
-      name="m01s30i420_ens"
-      operation="instant"
-      field_ref="m01s30i420"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i420"
-      name="sqav-m01s30i420"
-      operation="instant"
-      field_ref="m01s30i420_ens"
-      > m01s30i420_ens*m01s30i420_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i420"
-      name="avensq-m01s30i420"
-      operation="instant"
-      field_ref="m01s30i420"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i420*m01s30i420
-    </field>
-
-    <field
-      id="stdev-m01s30i420"
-      name="stdev-m01s30i420"
-      operation="instant"
-      field_ref="m01s30i420_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i421" name="test-m01s30i421" output_freq="72ts">
-
-    <field
-      id="m01s30i421_inst"
-      name="m01s30i421_inst"
-      operation="instant"
-      field_ref="m01s30i421"
-    />
-
-    <field
-      id="m01s30i421_ens"
-      name="m01s30i421_ens"
-      operation="instant"
-      field_ref="m01s30i421"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i421"
-      name="sqav-m01s30i421"
-      operation="instant"
-      field_ref="m01s30i421_ens"
-      > m01s30i421_ens*m01s30i421_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i421"
-      name="avensq-m01s30i421"
-      operation="instant"
-      field_ref="m01s30i421"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i421*m01s30i421
-    </field>
-
-    <field
-      id="stdev-m01s30i421"
-      name="stdev-m01s30i421"
-      operation="instant"
-      field_ref="m01s30i421_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i428" name="test-m01s30i428" output_freq="72ts">
-
-    <field
-      id="m01s30i428_inst"
-       name="m01s30i428_inst"
-      operation="instant"
-      field_ref="m01s30i428"
-    />
-
-    <field
-      id="m01s30i428_ens"
-      name="m01s30i428_ens"
-      operation="instant"
-      field_ref="m01s30i428"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i428"
-      name="sqav-m01s30i428"
-      operation="instant"
-      field_ref="m01s30i428_ens"
-      > m01s30i428_ens*m01s30i428_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i428"
-      name="avensq-m01s30i428"
-      operation="instant"
-      field_ref="m01s30i428"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i428*m01s30i428
-    </field>
-
-    <field
-      id="stdev-m01s30i428"
-      name="stdev-m01s30i428"
-      operation="instant"
-      field_ref="m01s30i428_ens"
-      > sqrt(avensq - sqav)
-    </field>
-
-</file>
-
-<file description="Test New XML" id="test-m01s30i429" name="test-m01s30i429" output_freq="72ts">
-
-    <field
-      id="m01s30i429_inst"
-      name="m01s30i429_inst"
-      operation="instant"
-      field_ref="m01s30i429"
-    />
-
-    <field
-      id="m01s30i429_ens"
-      name="m01s30i429_ens"
-      operation="instant"
-      field_ref="m01s30i429"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-    />
-
-    <field
-      id="sqav-m01s30i429"
-      name="sqav-m01s30i429"
-      operation="instant"
-      field_ref="m01s30i429_ens"
-      > m01s30i429_ens*m01s30i429_ens
-    </field>
-
-    <field
-      id="avensq-m01s30i429"
-      name="avensq-m01s30i429"
-      operation="instant"
-      field_ref="m01s30i429"
-      grid_ref="um-atmos_grid_t_DIAG_ens_mean"
-      > m01s30i429*m01s30i429
-    </field>
-
-    <field
-      id="stdev-m01s30i429"
-      name="stdev-m01s30i429"
-      operation="instant"
-      field_ref="m01s30i429_ens"
-      > sqrt(avensq - sqav)
-    </field>
+<file description="Field m01s01i221" id="test-m01s01i221" name="test-m01s01i221" output_freq="72ts">
+
+		<field
+			id="m01s01i221_inst"
+			name="m01s01i221_inst"
+			operation="instant"
+			field_ref="m01s01i221"
+		/>
+
+		<field
+			id="m01s01i221_ens"
+			name="m01s01i221_ens"
+			operation="instant"
+			field_ref="m01s01i221"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s01i221_sqav"
+			name="m01s01i221_sqav"
+			operation="instant"
+			field_ref="m01s01i221_ens"
+			> m01s01i221_ens*m01s01i221_ens
+		</field>
+
+		<field
+			id="m01s01i221_avensq"
+			name="m01s01i221_avensq"
+			operation="instant"
+			field_ref="m01s01i221"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+			> m01s01i221*m01s01i221
+		</field>
+
+		<field
+			id="m01s01i221_stdev"
+			name="m01s01i221_stdev"
+			operation="instant"
+			field_ref="m01s01i221_ens"
+			> sqrt(m01s01i221_avensq - m01s01i221_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i223" id="test-m01s01i223" name="test-m01s01i223" output_freq="72ts">
+
+		<field
+			id="m01s01i223_inst"
+			name="m01s01i223_inst"
+			operation="instant"
+			field_ref="m01s01i223"
+		/>
+
+		<field
+			id="m01s01i223_ens"
+			name="m01s01i223_ens"
+			operation="instant"
+			field_ref="m01s01i223"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s01i223_sqav"
+			name="m01s01i223_sqav"
+			operation="instant"
+			field_ref="m01s01i223_ens"
+			> m01s01i223_ens*m01s01i223_ens
+		</field>
+
+		<field
+			id="m01s01i223_avensq"
+			name="m01s01i223_avensq"
+			operation="instant"
+			field_ref="m01s01i223"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+			> m01s01i223*m01s01i223
+		</field>
+
+		<field
+			id="m01s01i223_stdev"
+			name="m01s01i223_stdev"
+			operation="instant"
+			field_ref="m01s01i223_ens"
+			> sqrt(m01s01i223_avensq - m01s01i223_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i225" id="test-m01s01i225" name="test-m01s01i225" output_freq="72ts">
+
+		<field
+			id="m01s01i225_inst"
+			name="m01s01i225_inst"
+			operation="instant"
+			field_ref="m01s01i225"
+		/>
+
+		<field
+			id="m01s01i225_ens"
+			name="m01s01i225_ens"
+			operation="instant"
+			field_ref="m01s01i225"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s01i225_sqav"
+			name="m01s01i225_sqav"
+			operation="instant"
+			field_ref="m01s01i225_ens"
+			> m01s01i225_ens*m01s01i225_ens
+		</field>
+
+		<field
+			id="m01s01i225_avensq"
+			name="m01s01i225_avensq"
+			operation="instant"
+			field_ref="m01s01i225"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+			> m01s01i225*m01s01i225
+		</field>
+
+		<field
+			id="m01s01i225_stdev"
+			name="m01s01i225_stdev"
+			operation="instant"
+			field_ref="m01s01i225_ens"
+			> sqrt(m01s01i225_avensq - m01s01i225_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i226" id="test-m01s01i226" name="test-m01s01i226" output_freq="72ts">
+
+		<field
+			id="m01s01i226_inst"
+			name="m01s01i226_inst"
+			operation="instant"
+			field_ref="m01s01i226"
+		/>
+
+		<field
+			id="m01s01i226_ens"
+			name="m01s01i226_ens"
+			operation="instant"
+			field_ref="m01s01i226"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s01i226_sqav"
+			name="m01s01i226_sqav"
+			operation="instant"
+			field_ref="m01s01i226_ens"
+			> m01s01i226_ens*m01s01i226_ens
+		</field>
+
+		<field
+			id="m01s01i226_avensq"
+			name="m01s01i226_avensq"
+			operation="instant"
+			field_ref="m01s01i226"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+			> m01s01i226*m01s01i226
+		</field>
+
+		<field
+			id="m01s01i226_stdev"
+			name="m01s01i226_stdev"
+			operation="instant"
+			field_ref="m01s01i226_ens"
+			> sqrt(m01s01i226_avensq - m01s01i226_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i235" id="test-m01s01i235" name="test-m01s01i235" output_freq="72ts">
+
+		<field
+			id="m01s01i235_inst"
+			name="m01s01i235_inst"
+			operation="instant"
+			field_ref="m01s01i235"
+		/>
+
+		<field
+			id="m01s01i235_ens"
+			name="m01s01i235_ens"
+			operation="instant"
+			field_ref="m01s01i235"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s01i235_sqav"
+			name="m01s01i235_sqav"
+			operation="instant"
+			field_ref="m01s01i235_ens"
+			> m01s01i235_ens*m01s01i235_ens
+		</field>
+
+		<field
+			id="m01s01i235_avensq"
+			name="m01s01i235_avensq"
+			operation="instant"
+			field_ref="m01s01i235"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s01i235*m01s01i235
+		</field>
+
+		<field
+			id="m01s01i235_stdev"
+			name="m01s01i235_stdev"
+			operation="instant"
+			field_ref="m01s01i235_ens"
+			> sqrt(m01s01i235_avensq - m01s01i235_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i241" id="test-m01s01i241" name="test-m01s01i241" output_freq="72ts">
+
+		<field
+			id="m01s01i241_inst"
+			name="m01s01i241_inst"
+			operation="instant"
+			field_ref="m01s01i241"
+		/>
+
+		<field
+			id="m01s01i241_ens"
+			name="m01s01i241_ens"
+			operation="instant"
+			field_ref="m01s01i241"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s01i241_sqav"
+			name="m01s01i241_sqav"
+			operation="instant"
+			field_ref="m01s01i241_ens"
+			> m01s01i241_ens*m01s01i241_ens
+		</field>
+
+		<field
+			id="m01s01i241_avensq"
+			name="m01s01i241_avensq"
+			operation="instant"
+			field_ref="m01s01i241"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+			> m01s01i241*m01s01i241
+		</field>
+
+		<field
+			id="m01s01i241_stdev"
+			name="m01s01i241_stdev"
+			operation="instant"
+			field_ref="m01s01i241_ens"
+			> sqrt(m01s01i241_avensq - m01s01i241_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i242" id="test-m01s01i242" name="test-m01s01i242" output_freq="72ts">
+
+		<field
+			id="m01s01i242_inst"
+			name="m01s01i242_inst"
+			operation="instant"
+			field_ref="m01s01i242"
+		/>
+
+		<field
+			id="m01s01i242_ens"
+			name="m01s01i242_ens"
+			operation="instant"
+			field_ref="m01s01i242"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s01i242_sqav"
+			name="m01s01i242_sqav"
+			operation="instant"
+			field_ref="m01s01i242_ens"
+			> m01s01i242_ens*m01s01i242_ens
+		</field>
+
+		<field
+			id="m01s01i242_avensq"
+			name="m01s01i242_avensq"
+			operation="instant"
+			field_ref="m01s01i242"
+			grid_ref="um-atmos_grid_t_DALLTH_ens_mean"
+			> m01s01i242*m01s01i242
+		</field>
+
+		<field
+			id="m01s01i242_stdev"
+			name="m01s01i242_stdev"
+			operation="instant"
+			field_ref="m01s01i242_ens"
+			> sqrt(m01s01i242_avensq - m01s01i242_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i245" id="test-m01s01i245" name="test-m01s01i245" output_freq="72ts">
+
+		<field
+			id="m01s01i245_inst"
+			name="m01s01i245_inst"
+			operation="instant"
+			field_ref="m01s01i245"
+		/>
+
+		<field
+			id="m01s01i245_ens"
+			name="m01s01i245_ens"
+			operation="instant"
+			field_ref="m01s01i245"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s01i245_sqav"
+			name="m01s01i245_sqav"
+			operation="instant"
+			field_ref="m01s01i245_ens"
+			> m01s01i245_ens*m01s01i245_ens
+		</field>
+
+		<field
+			id="m01s01i245_avensq"
+			name="m01s01i245_avensq"
+			operation="instant"
+			field_ref="m01s01i245"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s01i245*m01s01i245
+		</field>
+
+		<field
+			id="m01s01i245_stdev"
+			name="m01s01i245_stdev"
+			operation="instant"
+			field_ref="m01s01i245_ens"
+			> sqrt(m01s01i245_avensq - m01s01i245_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i246" id="test-m01s01i246" name="test-m01s01i246" output_freq="72ts">
+
+		<field
+			id="m01s01i246_inst"
+			name="m01s01i246_inst"
+			operation="instant"
+			field_ref="m01s01i246"
+		/>
+
+		<field
+			id="m01s01i246_ens"
+			name="m01s01i246_ens"
+			operation="instant"
+			field_ref="m01s01i246"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s01i246_sqav"
+			name="m01s01i246_sqav"
+			operation="instant"
+			field_ref="m01s01i246_ens"
+			> m01s01i246_ens*m01s01i246_ens
+		</field>
+
+		<field
+			id="m01s01i246_avensq"
+			name="m01s01i246_avensq"
+			operation="instant"
+			field_ref="m01s01i246"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s01i246*m01s01i246
+		</field>
+
+		<field
+			id="m01s01i246_stdev"
+			name="m01s01i246_stdev"
+			operation="instant"
+			field_ref="m01s01i246_ens"
+			> sqrt(m01s01i246_avensq - m01s01i246_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i254" id="test-m01s01i254" name="test-m01s01i254" output_freq="72ts">
+
+		<field
+			id="m01s01i254_inst"
+			name="m01s01i254_inst"
+			operation="instant"
+			field_ref="m01s01i254"
+		/>
+
+		<field
+			id="m01s01i254_ens"
+			name="m01s01i254_ens"
+			operation="instant"
+			field_ref="m01s01i254"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s01i254_sqav"
+			name="m01s01i254_sqav"
+			operation="instant"
+			field_ref="m01s01i254_ens"
+			> m01s01i254_ens*m01s01i254_ens
+		</field>
+
+		<field
+			id="m01s01i254_avensq"
+			name="m01s01i254_avensq"
+			operation="instant"
+			field_ref="m01s01i254"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s01i254*m01s01i254
+		</field>
+
+		<field
+			id="m01s01i254_stdev"
+			name="m01s01i254_stdev"
+			operation="instant"
+			field_ref="m01s01i254_ens"
+			> sqrt(m01s01i254_avensq - m01s01i254_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i255" id="test-m01s01i255" name="test-m01s01i255" output_freq="72ts">
+
+		<field
+			id="m01s01i255_inst"
+			name="m01s01i255_inst"
+			operation="instant"
+			field_ref="m01s01i255"
+		/>
+
+		<field
+			id="m01s01i255_ens"
+			name="m01s01i255_ens"
+			operation="instant"
+			field_ref="m01s01i255"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s01i255_sqav"
+			name="m01s01i255_sqav"
+			operation="instant"
+			field_ref="m01s01i255_ens"
+			> m01s01i255_ens*m01s01i255_ens
+		</field>
+
+		<field
+			id="m01s01i255_avensq"
+			name="m01s01i255_avensq"
+			operation="instant"
+			field_ref="m01s01i255"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s01i255*m01s01i255
+		</field>
+
+		<field
+			id="m01s01i255_stdev"
+			name="m01s01i255_stdev"
+			operation="instant"
+			field_ref="m01s01i255_ens"
+			> sqrt(m01s01i255_avensq - m01s01i255_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i260" id="test-m01s01i260" name="test-m01s01i260" output_freq="72ts">
+
+		<field
+			id="m01s01i260_inst"
+			name="m01s01i260_inst"
+			operation="instant"
+			field_ref="m01s01i260"
+		/>
+
+		<field
+			id="m01s01i260_ens"
+			name="m01s01i260_ens"
+			operation="instant"
+			field_ref="m01s01i260"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s01i260_sqav"
+			name="m01s01i260_sqav"
+			operation="instant"
+			field_ref="m01s01i260_ens"
+			> m01s01i260_ens*m01s01i260_ens
+		</field>
+
+		<field
+			id="m01s01i260_avensq"
+			name="m01s01i260_avensq"
+			operation="instant"
+			field_ref="m01s01i260"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s01i260*m01s01i260
+		</field>
+
+		<field
+			id="m01s01i260_stdev"
+			name="m01s01i260_stdev"
+			operation="instant"
+			field_ref="m01s01i260_ens"
+			> sqrt(m01s01i260_avensq - m01s01i260_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i280" id="test-m01s01i280" name="test-m01s01i280" output_freq="72ts">
+
+		<field
+			id="m01s01i280_inst"
+			name="m01s01i280_inst"
+			operation="instant"
+			field_ref="m01s01i280"
+		/>
+
+		<field
+			id="m01s01i280_ens"
+			name="m01s01i280_ens"
+			operation="instant"
+			field_ref="m01s01i280"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s01i280_sqav"
+			name="m01s01i280_sqav"
+			operation="instant"
+			field_ref="m01s01i280_ens"
+			> m01s01i280_ens*m01s01i280_ens
+		</field>
+
+		<field
+			id="m01s01i280_avensq"
+			name="m01s01i280_avensq"
+			operation="instant"
+			field_ref="m01s01i280"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s01i280*m01s01i280
+		</field>
+
+		<field
+			id="m01s01i280_stdev"
+			name="m01s01i280_stdev"
+			operation="instant"
+			field_ref="m01s01i280_ens"
+			> sqrt(m01s01i280_avensq - m01s01i280_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i281" id="test-m01s01i281" name="test-m01s01i281" output_freq="72ts">
+
+		<field
+			id="m01s01i281_inst"
+			name="m01s01i281_inst"
+			operation="instant"
+			field_ref="m01s01i281"
+		/>
+
+		<field
+			id="m01s01i281_ens"
+			name="m01s01i281_ens"
+			operation="instant"
+			field_ref="m01s01i281"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s01i281_sqav"
+			name="m01s01i281_sqav"
+			operation="instant"
+			field_ref="m01s01i281_ens"
+			> m01s01i281_ens*m01s01i281_ens
+		</field>
+
+		<field
+			id="m01s01i281_avensq"
+			name="m01s01i281_avensq"
+			operation="instant"
+			field_ref="m01s01i281"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s01i281*m01s01i281
+		</field>
+
+		<field
+			id="m01s01i281_stdev"
+			name="m01s01i281_stdev"
+			operation="instant"
+			field_ref="m01s01i281_ens"
+			> sqrt(m01s01i281_avensq - m01s01i281_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i298" id="test-m01s01i298" name="test-m01s01i298" output_freq="72ts">
+
+		<field
+			id="m01s01i298_inst"
+			name="m01s01i298_inst"
+			operation="instant"
+			field_ref="m01s01i298"
+		/>
+
+		<field
+			id="m01s01i298_ens"
+			name="m01s01i298_ens"
+			operation="instant"
+			field_ref="m01s01i298"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s01i298_sqav"
+			name="m01s01i298_sqav"
+			operation="instant"
+			field_ref="m01s01i298_ens"
+			> m01s01i298_ens*m01s01i298_ens
+		</field>
+
+		<field
+			id="m01s01i298_avensq"
+			name="m01s01i298_avensq"
+			operation="instant"
+			field_ref="m01s01i298"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s01i298*m01s01i298
+		</field>
+
+		<field
+			id="m01s01i298_stdev"
+			name="m01s01i298_stdev"
+			operation="instant"
+			field_ref="m01s01i298_ens"
+			> sqrt(m01s01i298_avensq - m01s01i298_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s01i299" id="test-m01s01i299" name="test-m01s01i299" output_freq="72ts">
+
+		<field
+			id="m01s01i299_inst"
+			name="m01s01i299_inst"
+			operation="instant"
+			field_ref="m01s01i299"
+		/>
+
+		<field
+			id="m01s01i299_ens"
+			name="m01s01i299_ens"
+			operation="instant"
+			field_ref="m01s01i299"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s01i299_sqav"
+			name="m01s01i299_sqav"
+			operation="instant"
+			field_ref="m01s01i299_ens"
+			> m01s01i299_ens*m01s01i299_ens
+		</field>
+
+		<field
+			id="m01s01i299_avensq"
+			name="m01s01i299_avensq"
+			operation="instant"
+			field_ref="m01s01i299"
+			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			> m01s01i299*m01s01i299
+		</field>
+
+		<field
+			id="m01s01i299_stdev"
+			name="m01s01i299_stdev"
+			operation="instant"
+			field_ref="m01s01i299_ens"
+			> sqrt(m01s01i299_avensq - m01s01i299_sqav)
+		</field>
 
 </file>
 
