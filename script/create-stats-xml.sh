@@ -25,3 +25,4 @@ do
 	fi
 done < "$input"
 
+rm new-file.txt
