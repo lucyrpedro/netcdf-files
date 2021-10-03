@@ -3,6 +3,18 @@
 grid=$1
 field=$2
 
+cat >> grids.txt << EOF
+${grid}
+EOF
+
+cat >> fields.txt << EOF
+${field}
+EOF
+
+cat >> grids-fields.txt << EOF
+${grid} ${field}
+EOF
+
 cat >> um-stats.xml << EOF
 
 <file description="Field ${field}" id="test-${field}" name="test-${field}" output_freq="72ts">

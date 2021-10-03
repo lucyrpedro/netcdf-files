@@ -4,9 +4,9 @@ rm -rf um-stats.xml
 
 # input="grids-fields.txt"
 
-sed 's/\"//g' file.txt > new-file.txt
+sed 's/\"//g' um-atmos-field_ens_def.xml > aux.txt
 
-input="new-file.txt"
+input="aux.txt"
 
 while IFS= read -r line
 do
@@ -25,4 +25,4 @@ do
 	fi
 done < "$input"
 
-rm new-file.txt
+rm -rf aux.txt
