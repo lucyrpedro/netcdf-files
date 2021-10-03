@@ -3,19 +3,14 @@
 grid=$1
 field=$2
 
-rm -rf grids.txt 
 cat >> grids.txt << EOF
 ${grid}
 EOF
 
-rm -rf grids.txt
-rm -rf fields.txt
-rm -rf grids-fields.txt
 cat >> fields.txt << EOF
 ${field}
 EOF
 
-rm -rf grids-fields.txt
 cat >> grids-fields.txt << EOF
 ${grid} ${field}
 EOF
