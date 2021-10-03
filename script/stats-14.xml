@@ -1,0 +1,264 @@
+
+<file description="Field m01s06i105" id="test-m01s06i105" name="test-m01s06i105" output_freq="72ts">
+
+		<field
+			id="m01s06i105_inst"
+			name="m01s06i105_inst"
+			operation="instant"
+			field_ref="m01s06i105"
+		/>
+
+		<field
+			id="m01s06i105_ens"
+			name="m01s06i105_ens"
+			operation="instant"
+			field_ref="m01s06i105"
+			grid_ref="um-atmos_grid_cu_DNOGWRH_ens_mean"
+		/>
+
+		<field
+			id="m01s06i105_sqav"
+			name="m01s06i105_sqav"
+			operation="instant"
+			field_ref="m01s06i105_ens"
+			> m01s06i105_ens*m01s06i105_ens
+		</field>
+
+		<field
+			id="m01s06i105_avensq"
+			name="m01s06i105_avensq"
+			operation="instant"
+			field_ref="m01s06i105"
+			grid_ref="um-atmos_grid_cu_DNOGWRH_ens_mean"
+			> m01s06i105*m01s06i105
+		</field>
+
+		<field
+			id="m01s06i105_stdev"
+			name="m01s06i105_stdev"
+			operation="instant"
+			field_ref="m01s06i105_ens"
+			> sqrt(m01s06i105_avensq - m01s06i105_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s06i101" id="test-m01s06i101" name="test-m01s06i101" output_freq="72ts">
+
+		<field
+			id="m01s06i101_inst"
+			name="m01s06i101_inst"
+			operation="instant"
+			field_ref="m01s06i101"
+		/>
+
+		<field
+			id="m01s06i101_ens"
+			name="m01s06i101_ens"
+			operation="instant"
+			field_ref="m01s06i101"
+			grid_ref="um-atmos_grid_cu_DNOGWTH_ens_mean"
+		/>
+
+		<field
+			id="m01s06i101_sqav"
+			name="m01s06i101_sqav"
+			operation="instant"
+			field_ref="m01s06i101_ens"
+			> m01s06i101_ens*m01s06i101_ens
+		</field>
+
+		<field
+			id="m01s06i101_avensq"
+			name="m01s06i101_avensq"
+			operation="instant"
+			field_ref="m01s06i101"
+			grid_ref="um-atmos_grid_cu_DNOGWTH_ens_mean"
+			> m01s06i101*m01s06i101
+		</field>
+
+		<field
+			id="m01s06i101_stdev"
+			name="m01s06i101_stdev"
+			operation="instant"
+			field_ref="m01s06i101_ens"
+			> sqrt(m01s06i101_avensq - m01s06i101_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s06i103" id="test-m01s06i103" name="test-m01s06i103" output_freq="72ts">
+
+		<field
+			id="m01s06i103_inst"
+			name="m01s06i103_inst"
+			operation="instant"
+			field_ref="m01s06i103"
+		/>
+
+		<field
+			id="m01s06i103_ens"
+			name="m01s06i103_ens"
+			operation="instant"
+			field_ref="m01s06i103"
+			grid_ref="um-atmos_grid_cu_DNOGWTH_ens_mean"
+		/>
+
+		<field
+			id="m01s06i103_sqav"
+			name="m01s06i103_sqav"
+			operation="instant"
+			field_ref="m01s06i103_ens"
+			> m01s06i103_ens*m01s06i103_ens
+		</field>
+
+		<field
+			id="m01s06i103_avensq"
+			name="m01s06i103_avensq"
+			operation="instant"
+			field_ref="m01s06i103"
+			grid_ref="um-atmos_grid_cu_DNOGWTH_ens_mean"
+			> m01s06i103*m01s06i103
+		</field>
+
+		<field
+			id="m01s06i103_stdev"
+			name="m01s06i103_stdev"
+			operation="instant"
+			field_ref="m01s06i103_ens"
+			> sqrt(m01s06i103_avensq - m01s06i103_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s06i102" id="test-m01s06i102" name="test-m01s06i102" output_freq="72ts">
+
+		<field
+			id="m01s06i102_inst"
+			name="m01s06i102_inst"
+			operation="instant"
+			field_ref="m01s06i102"
+		/>
+
+		<field
+			id="m01s06i102_ens"
+			name="m01s06i102_ens"
+			operation="instant"
+			field_ref="m01s06i102"
+			grid_ref="um-atmos_grid_cv_DNOGWTH_ens_mean"
+		/>
+
+		<field
+			id="m01s06i102_sqav"
+			name="m01s06i102_sqav"
+			operation="instant"
+			field_ref="m01s06i102_ens"
+			> m01s06i102_ens*m01s06i102_ens
+		</field>
+
+		<field
+			id="m01s06i102_avensq"
+			name="m01s06i102_avensq"
+			operation="instant"
+			field_ref="m01s06i102"
+			grid_ref="um-atmos_grid_cv_DNOGWTH_ens_mean"
+			> m01s06i102*m01s06i102
+		</field>
+
+		<field
+			id="m01s06i102_stdev"
+			name="m01s06i102_stdev"
+			operation="instant"
+			field_ref="m01s06i102_ens"
+			> sqrt(m01s06i102_avensq - m01s06i102_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s06i104" id="test-m01s06i104" name="test-m01s06i104" output_freq="72ts">
+
+		<field
+			id="m01s06i104_inst"
+			name="m01s06i104_inst"
+			operation="instant"
+			field_ref="m01s06i104"
+		/>
+
+		<field
+			id="m01s06i104_ens"
+			name="m01s06i104_ens"
+			operation="instant"
+			field_ref="m01s06i104"
+			grid_ref="um-atmos_grid_cv_DNOGWTH_ens_mean"
+		/>
+
+		<field
+			id="m01s06i104_sqav"
+			name="m01s06i104_sqav"
+			operation="instant"
+			field_ref="m01s06i104_ens"
+			> m01s06i104_ens*m01s06i104_ens
+		</field>
+
+		<field
+			id="m01s06i104_avensq"
+			name="m01s06i104_avensq"
+			operation="instant"
+			field_ref="m01s06i104"
+			grid_ref="um-atmos_grid_cv_DNOGWTH_ens_mean"
+			> m01s06i104*m01s06i104
+		</field>
+
+		<field
+			id="m01s06i104_stdev"
+			name="m01s06i104_stdev"
+			operation="instant"
+			field_ref="m01s06i104_ens"
+			> sqrt(m01s06i104_avensq - m01s06i104_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s06i106" id="test-m01s06i106" name="test-m01s06i106" output_freq="72ts">
+
+		<field
+			id="m01s06i106_inst"
+			name="m01s06i106_inst"
+			operation="instant"
+			field_ref="m01s06i106"
+		/>
+
+		<field
+			id="m01s06i106_ens"
+			name="m01s06i106_ens"
+			operation="instant"
+			field_ref="m01s06i106"
+			grid_ref="um-atmos_grid_cv_DNOGWRH_ens_mean"
+		/>
+
+		<field
+			id="m01s06i106_sqav"
+			name="m01s06i106_sqav"
+			operation="instant"
+			field_ref="m01s06i106_ens"
+			> m01s06i106_ens*m01s06i106_ens
+		</field>
+
+		<field
+			id="m01s06i106_avensq"
+			name="m01s06i106_avensq"
+			operation="instant"
+			field_ref="m01s06i106"
+			grid_ref="um-atmos_grid_cv_DNOGWRH_ens_mean"
+			> m01s06i106*m01s06i106
+		</field>
+
+		<field
+			id="m01s06i106_stdev"
+			name="m01s06i106_stdev"
+			operation="instant"
+			field_ref="m01s06i106_ens"
+			> sqrt(m01s06i106_avensq - m01s06i106_sqav)
+		</field>
+
+</file>

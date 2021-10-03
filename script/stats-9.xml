@@ -1,0 +1,1056 @@
+
+<file description="Field m01s30i204_3" id="test-m01s30i204_3" name="test-m01s30i204_3" output_freq="72ts">
+
+		<field
+			id="m01s30i204_3_inst"
+			name="m01s30i204_3_inst"
+			operation="instant"
+			field_ref="m01s30i204_3"
+		/>
+
+		<field
+			id="m01s30i204_3_ens"
+			name="m01s30i204_3_ens"
+			operation="instant"
+			field_ref="m01s30i204_3"
+			grid_ref="um-atmos_grid_uv_DPLEV11H_ens_mean"
+		/>
+
+		<field
+			id="m01s30i204_3_sqav"
+			name="m01s30i204_3_sqav"
+			operation="instant"
+			field_ref="m01s30i204_3_ens"
+			> m01s30i204_3_ens*m01s30i204_3_ens
+		</field>
+
+		<field
+			id="m01s30i204_3_avensq"
+			name="m01s30i204_3_avensq"
+			operation="instant"
+			field_ref="m01s30i204_3"
+			grid_ref="um-atmos_grid_uv_DPLEV11H_ens_mean"
+			> m01s30i204_3*m01s30i204_3
+		</field>
+
+		<field
+			id="m01s30i204_3_stdev"
+			name="m01s30i204_3_stdev"
+			operation="instant"
+			field_ref="m01s30i204_3_ens"
+			> sqrt(m01s30i204_3_avensq - m01s30i204_3_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i244" id="test-m01s30i244" name="test-m01s30i244" output_freq="72ts">
+
+		<field
+			id="m01s30i244_inst"
+			name="m01s30i244_inst"
+			operation="instant"
+			field_ref="m01s30i244"
+		/>
+
+		<field
+			id="m01s30i244_ens"
+			name="m01s30i244_ens"
+			operation="instant"
+			field_ref="m01s30i244"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i244_sqav"
+			name="m01s30i244_sqav"
+			operation="instant"
+			field_ref="m01s30i244_ens"
+			> m01s30i244_ens*m01s30i244_ens
+		</field>
+
+		<field
+			id="m01s30i244_avensq"
+			name="m01s30i244_avensq"
+			operation="instant"
+			field_ref="m01s30i244"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i244*m01s30i244
+		</field>
+
+		<field
+			id="m01s30i244_stdev"
+			name="m01s30i244_stdev"
+			operation="instant"
+			field_ref="m01s30i244_ens"
+			> sqrt(m01s30i244_avensq - m01s30i244_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i211" id="test-m01s30i211" name="test-m01s30i211" output_freq="72ts">
+
+		<field
+			id="m01s30i211_inst"
+			name="m01s30i211_inst"
+			operation="instant"
+			field_ref="m01s30i211"
+		/>
+
+		<field
+			id="m01s30i211_ens"
+			name="m01s30i211_ens"
+			operation="instant"
+			field_ref="m01s30i211"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i211_sqav"
+			name="m01s30i211_sqav"
+			operation="instant"
+			field_ref="m01s30i211_ens"
+			> m01s30i211_ens*m01s30i211_ens
+		</field>
+
+		<field
+			id="m01s30i211_avensq"
+			name="m01s30i211_avensq"
+			operation="instant"
+			field_ref="m01s30i211"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i211*m01s30i211
+		</field>
+
+		<field
+			id="m01s30i211_stdev"
+			name="m01s30i211_stdev"
+			operation="instant"
+			field_ref="m01s30i211_ens"
+			> sqrt(m01s30i211_avensq - m01s30i211_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i222" id="test-m01s30i222" name="test-m01s30i222" output_freq="72ts">
+
+		<field
+			id="m01s30i222_inst"
+			name="m01s30i222_inst"
+			operation="instant"
+			field_ref="m01s30i222"
+		/>
+
+		<field
+			id="m01s30i222_ens"
+			name="m01s30i222_ens"
+			operation="instant"
+			field_ref="m01s30i222"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i222_sqav"
+			name="m01s30i222_sqav"
+			operation="instant"
+			field_ref="m01s30i222_ens"
+			> m01s30i222_ens*m01s30i222_ens
+		</field>
+
+		<field
+			id="m01s30i222_avensq"
+			name="m01s30i222_avensq"
+			operation="instant"
+			field_ref="m01s30i222"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i222*m01s30i222
+		</field>
+
+		<field
+			id="m01s30i222_stdev"
+			name="m01s30i222_stdev"
+			operation="instant"
+			field_ref="m01s30i222_ens"
+			> sqrt(m01s30i222_avensq - m01s30i222_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i201_5" id="test-m01s30i201_5" name="test-m01s30i201_5" output_freq="72ts">
+
+		<field
+			id="m01s30i201_5_inst"
+			name="m01s30i201_5_inst"
+			operation="instant"
+			field_ref="m01s30i201_5"
+		/>
+
+		<field
+			id="m01s30i201_5_ens"
+			name="m01s30i201_5_ens"
+			operation="instant"
+			field_ref="m01s30i201_5"
+			grid_ref="um-atmos_grid_uv_DPLEV7H_ens_mean"
+		/>
+
+		<field
+			id="m01s30i201_5_sqav"
+			name="m01s30i201_5_sqav"
+			operation="instant"
+			field_ref="m01s30i201_5_ens"
+			> m01s30i201_5_ens*m01s30i201_5_ens
+		</field>
+
+		<field
+			id="m01s30i201_5_avensq"
+			name="m01s30i201_5_avensq"
+			operation="instant"
+			field_ref="m01s30i201_5"
+			grid_ref="um-atmos_grid_uv_DPLEV7H_ens_mean"
+			> m01s30i201_5*m01s30i201_5
+		</field>
+
+		<field
+			id="m01s30i201_5_stdev"
+			name="m01s30i201_5_stdev"
+			operation="instant"
+			field_ref="m01s30i201_5_ens"
+			> sqrt(m01s30i201_5_avensq - m01s30i201_5_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i202_5" id="test-m01s30i202_5" name="test-m01s30i202_5" output_freq="72ts">
+
+		<field
+			id="m01s30i202_5_inst"
+			name="m01s30i202_5_inst"
+			operation="instant"
+			field_ref="m01s30i202_5"
+		/>
+
+		<field
+			id="m01s30i202_5_ens"
+			name="m01s30i202_5_ens"
+			operation="instant"
+			field_ref="m01s30i202_5"
+			grid_ref="um-atmos_grid_uv_DPLEV7H_ens_mean"
+		/>
+
+		<field
+			id="m01s30i202_5_sqav"
+			name="m01s30i202_5_sqav"
+			operation="instant"
+			field_ref="m01s30i202_5_ens"
+			> m01s30i202_5_ens*m01s30i202_5_ens
+		</field>
+
+		<field
+			id="m01s30i202_5_avensq"
+			name="m01s30i202_5_avensq"
+			operation="instant"
+			field_ref="m01s30i202_5"
+			grid_ref="um-atmos_grid_uv_DPLEV7H_ens_mean"
+			> m01s30i202_5*m01s30i202_5
+		</field>
+
+		<field
+			id="m01s30i202_5_stdev"
+			name="m01s30i202_5_stdev"
+			operation="instant"
+			field_ref="m01s30i202_5_ens"
+			> sqrt(m01s30i202_5_avensq - m01s30i202_5_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i205_3" id="test-m01s30i205_3" name="test-m01s30i205_3" output_freq="72ts">
+
+		<field
+			id="m01s30i205_3_inst"
+			name="m01s30i205_3_inst"
+			operation="instant"
+			field_ref="m01s30i205_3"
+		/>
+
+		<field
+			id="m01s30i205_3_ens"
+			name="m01s30i205_3_ens"
+			operation="instant"
+			field_ref="m01s30i205_3"
+			grid_ref="um-atmos_grid_uv_DPLEV7H_ens_mean"
+		/>
+
+		<field
+			id="m01s30i205_3_sqav"
+			name="m01s30i205_3_sqav"
+			operation="instant"
+			field_ref="m01s30i205_3_ens"
+			> m01s30i205_3_ens*m01s30i205_3_ens
+		</field>
+
+		<field
+			id="m01s30i205_3_avensq"
+			name="m01s30i205_3_avensq"
+			operation="instant"
+			field_ref="m01s30i205_3"
+			grid_ref="um-atmos_grid_uv_DPLEV7H_ens_mean"
+			> m01s30i205_3*m01s30i205_3
+		</field>
+
+		<field
+			id="m01s30i205_3_stdev"
+			name="m01s30i205_3_stdev"
+			operation="instant"
+			field_ref="m01s30i205_3_ens"
+			> sqrt(m01s30i205_3_avensq - m01s30i205_3_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i206" id="test-m01s30i206" name="test-m01s30i206" output_freq="72ts">
+
+		<field
+			id="m01s30i206_inst"
+			name="m01s30i206_inst"
+			operation="instant"
+			field_ref="m01s30i206"
+		/>
+
+		<field
+			id="m01s30i206_ens"
+			name="m01s30i206_ens"
+			operation="instant"
+			field_ref="m01s30i206"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i206_sqav"
+			name="m01s30i206_sqav"
+			operation="instant"
+			field_ref="m01s30i206_ens"
+			> m01s30i206_ens*m01s30i206_ens
+		</field>
+
+		<field
+			id="m01s30i206_avensq"
+			name="m01s30i206_avensq"
+			operation="instant"
+			field_ref="m01s30i206"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i206*m01s30i206
+		</field>
+
+		<field
+			id="m01s30i206_stdev"
+			name="m01s30i206_stdev"
+			operation="instant"
+			field_ref="m01s30i206_ens"
+			> sqrt(m01s30i206_avensq - m01s30i206_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i207_3" id="test-m01s30i207_3" name="test-m01s30i207_3" output_freq="72ts">
+
+		<field
+			id="m01s30i207_3_inst"
+			name="m01s30i207_3_inst"
+			operation="instant"
+			field_ref="m01s30i207_3"
+		/>
+
+		<field
+			id="m01s30i207_3_ens"
+			name="m01s30i207_3_ens"
+			operation="instant"
+			field_ref="m01s30i207_3"
+			grid_ref="um-atmos_grid_uv_DPLEV9H_ens_mean"
+		/>
+
+		<field
+			id="m01s30i207_3_sqav"
+			name="m01s30i207_3_sqav"
+			operation="instant"
+			field_ref="m01s30i207_3_ens"
+			> m01s30i207_3_ens*m01s30i207_3_ens
+		</field>
+
+		<field
+			id="m01s30i207_3_avensq"
+			name="m01s30i207_3_avensq"
+			operation="instant"
+			field_ref="m01s30i207_3"
+			grid_ref="um-atmos_grid_uv_DPLEV9H_ens_mean"
+			> m01s30i207_3*m01s30i207_3
+		</field>
+
+		<field
+			id="m01s30i207_3_stdev"
+			name="m01s30i207_3_stdev"
+			operation="instant"
+			field_ref="m01s30i207_3_ens"
+			> sqrt(m01s30i207_3_avensq - m01s30i207_3_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i203_2" id="test-m01s30i203_2" name="test-m01s30i203_2" output_freq="72ts">
+
+		<field
+			id="m01s30i203_2_inst"
+			name="m01s30i203_2_inst"
+			operation="instant"
+			field_ref="m01s30i203_2"
+		/>
+
+		<field
+			id="m01s30i203_2_ens"
+			name="m01s30i203_2_ens"
+			operation="instant"
+			field_ref="m01s30i203_2"
+			grid_ref="um-atmos_grid_uv_DPLEV8H_ens_mean"
+		/>
+
+		<field
+			id="m01s30i203_2_sqav"
+			name="m01s30i203_2_sqav"
+			operation="instant"
+			field_ref="m01s30i203_2_ens"
+			> m01s30i203_2_ens*m01s30i203_2_ens
+		</field>
+
+		<field
+			id="m01s30i203_2_avensq"
+			name="m01s30i203_2_avensq"
+			operation="instant"
+			field_ref="m01s30i203_2"
+			grid_ref="um-atmos_grid_uv_DPLEV8H_ens_mean"
+			> m01s30i203_2*m01s30i203_2
+		</field>
+
+		<field
+			id="m01s30i203_2_stdev"
+			name="m01s30i203_2_stdev"
+			operation="instant"
+			field_ref="m01s30i203_2_ens"
+			> sqrt(m01s30i203_2_avensq - m01s30i203_2_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i218" id="test-m01s30i218" name="test-m01s30i218" output_freq="72ts">
+
+		<field
+			id="m01s30i218_inst"
+			name="m01s30i218_inst"
+			operation="instant"
+			field_ref="m01s30i218"
+		/>
+
+		<field
+			id="m01s30i218_ens"
+			name="m01s30i218_ens"
+			operation="instant"
+			field_ref="m01s30i218"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i218_sqav"
+			name="m01s30i218_sqav"
+			operation="instant"
+			field_ref="m01s30i218_ens"
+			> m01s30i218_ens*m01s30i218_ens
+		</field>
+
+		<field
+			id="m01s30i218_avensq"
+			name="m01s30i218_avensq"
+			operation="instant"
+			field_ref="m01s30i218"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i218*m01s30i218
+		</field>
+
+		<field
+			id="m01s30i218_stdev"
+			name="m01s30i218_stdev"
+			operation="instant"
+			field_ref="m01s30i218_ens"
+			> sqrt(m01s30i218_avensq - m01s30i218_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i208" id="test-m01s30i208" name="test-m01s30i208" output_freq="72ts">
+
+		<field
+			id="m01s30i208_inst"
+			name="m01s30i208_inst"
+			operation="instant"
+			field_ref="m01s30i208"
+		/>
+
+		<field
+			id="m01s30i208_ens"
+			name="m01s30i208_ens"
+			operation="instant"
+			field_ref="m01s30i208"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i208_sqav"
+			name="m01s30i208_sqav"
+			operation="instant"
+			field_ref="m01s30i208_ens"
+			> m01s30i208_ens*m01s30i208_ens
+		</field>
+
+		<field
+			id="m01s30i208_avensq"
+			name="m01s30i208_avensq"
+			operation="instant"
+			field_ref="m01s30i208"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i208*m01s30i208
+		</field>
+
+		<field
+			id="m01s30i208_stdev"
+			name="m01s30i208_stdev"
+			operation="instant"
+			field_ref="m01s30i208_ens"
+			> sqrt(m01s30i208_avensq - m01s30i208_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i228" id="test-m01s30i228" name="test-m01s30i228" output_freq="72ts">
+
+		<field
+			id="m01s30i228_inst"
+			name="m01s30i228_inst"
+			operation="instant"
+			field_ref="m01s30i228"
+		/>
+
+		<field
+			id="m01s30i228_ens"
+			name="m01s30i228_ens"
+			operation="instant"
+			field_ref="m01s30i228"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i228_sqav"
+			name="m01s30i228_sqav"
+			operation="instant"
+			field_ref="m01s30i228_ens"
+			> m01s30i228_ens*m01s30i228_ens
+		</field>
+
+		<field
+			id="m01s30i228_avensq"
+			name="m01s30i228_avensq"
+			operation="instant"
+			field_ref="m01s30i228"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i228*m01s30i228
+		</field>
+
+		<field
+			id="m01s30i228_stdev"
+			name="m01s30i228_stdev"
+			operation="instant"
+			field_ref="m01s30i228_ens"
+			> sqrt(m01s30i228_avensq - m01s30i228_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i248" id="test-m01s30i248" name="test-m01s30i248" output_freq="72ts">
+
+		<field
+			id="m01s30i248_inst"
+			name="m01s30i248_inst"
+			operation="instant"
+			field_ref="m01s30i248"
+		/>
+
+		<field
+			id="m01s30i248_ens"
+			name="m01s30i248_ens"
+			operation="instant"
+			field_ref="m01s30i248"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i248_sqav"
+			name="m01s30i248_sqav"
+			operation="instant"
+			field_ref="m01s30i248_ens"
+			> m01s30i248_ens*m01s30i248_ens
+		</field>
+
+		<field
+			id="m01s30i248_avensq"
+			name="m01s30i248_avensq"
+			operation="instant"
+			field_ref="m01s30i248"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i248*m01s30i248
+		</field>
+
+		<field
+			id="m01s30i248_stdev"
+			name="m01s30i248_stdev"
+			operation="instant"
+			field_ref="m01s30i248_ens"
+			> sqrt(m01s30i248_avensq - m01s30i248_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i258" id="test-m01s30i258" name="test-m01s30i258" output_freq="72ts">
+
+		<field
+			id="m01s30i258_inst"
+			name="m01s30i258_inst"
+			operation="instant"
+			field_ref="m01s30i258"
+		/>
+
+		<field
+			id="m01s30i258_ens"
+			name="m01s30i258_ens"
+			operation="instant"
+			field_ref="m01s30i258"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i258_sqav"
+			name="m01s30i258_sqav"
+			operation="instant"
+			field_ref="m01s30i258_ens"
+			> m01s30i258_ens*m01s30i258_ens
+		</field>
+
+		<field
+			id="m01s30i258_avensq"
+			name="m01s30i258_avensq"
+			operation="instant"
+			field_ref="m01s30i258"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i258*m01s30i258
+		</field>
+
+		<field
+			id="m01s30i258_stdev"
+			name="m01s30i258_stdev"
+			operation="instant"
+			field_ref="m01s30i258_ens"
+			> sqrt(m01s30i258_avensq - m01s30i258_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i212" id="test-m01s30i212" name="test-m01s30i212" output_freq="72ts">
+
+		<field
+			id="m01s30i212_inst"
+			name="m01s30i212_inst"
+			operation="instant"
+			field_ref="m01s30i212"
+		/>
+
+		<field
+			id="m01s30i212_ens"
+			name="m01s30i212_ens"
+			operation="instant"
+			field_ref="m01s30i212"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i212_sqav"
+			name="m01s30i212_sqav"
+			operation="instant"
+			field_ref="m01s30i212_ens"
+			> m01s30i212_ens*m01s30i212_ens
+		</field>
+
+		<field
+			id="m01s30i212_avensq"
+			name="m01s30i212_avensq"
+			operation="instant"
+			field_ref="m01s30i212"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i212*m01s30i212
+		</field>
+
+		<field
+			id="m01s30i212_stdev"
+			name="m01s30i212_stdev"
+			operation="instant"
+			field_ref="m01s30i212_ens"
+			> sqrt(m01s30i212_avensq - m01s30i212_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i214" id="test-m01s30i214" name="test-m01s30i214" output_freq="72ts">
+
+		<field
+			id="m01s30i214_inst"
+			name="m01s30i214_inst"
+			operation="instant"
+			field_ref="m01s30i214"
+		/>
+
+		<field
+			id="m01s30i214_ens"
+			name="m01s30i214_ens"
+			operation="instant"
+			field_ref="m01s30i214"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i214_sqav"
+			name="m01s30i214_sqav"
+			operation="instant"
+			field_ref="m01s30i214_ens"
+			> m01s30i214_ens*m01s30i214_ens
+		</field>
+
+		<field
+			id="m01s30i214_avensq"
+			name="m01s30i214_avensq"
+			operation="instant"
+			field_ref="m01s30i214"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i214*m01s30i214
+		</field>
+
+		<field
+			id="m01s30i214_stdev"
+			name="m01s30i214_stdev"
+			operation="instant"
+			field_ref="m01s30i214_ens"
+			> sqrt(m01s30i214_avensq - m01s30i214_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i215" id="test-m01s30i215" name="test-m01s30i215" output_freq="72ts">
+
+		<field
+			id="m01s30i215_inst"
+			name="m01s30i215_inst"
+			operation="instant"
+			field_ref="m01s30i215"
+		/>
+
+		<field
+			id="m01s30i215_ens"
+			name="m01s30i215_ens"
+			operation="instant"
+			field_ref="m01s30i215"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i215_sqav"
+			name="m01s30i215_sqav"
+			operation="instant"
+			field_ref="m01s30i215_ens"
+			> m01s30i215_ens*m01s30i215_ens
+		</field>
+
+		<field
+			id="m01s30i215_avensq"
+			name="m01s30i215_avensq"
+			operation="instant"
+			field_ref="m01s30i215"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i215*m01s30i215
+		</field>
+
+		<field
+			id="m01s30i215_stdev"
+			name="m01s30i215_stdev"
+			operation="instant"
+			field_ref="m01s30i215_ens"
+			> sqrt(m01s30i215_avensq - m01s30i215_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i224" id="test-m01s30i224" name="test-m01s30i224" output_freq="72ts">
+
+		<field
+			id="m01s30i224_inst"
+			name="m01s30i224_inst"
+			operation="instant"
+			field_ref="m01s30i224"
+		/>
+
+		<field
+			id="m01s30i224_ens"
+			name="m01s30i224_ens"
+			operation="instant"
+			field_ref="m01s30i224"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i224_sqav"
+			name="m01s30i224_sqav"
+			operation="instant"
+			field_ref="m01s30i224_ens"
+			> m01s30i224_ens*m01s30i224_ens
+		</field>
+
+		<field
+			id="m01s30i224_avensq"
+			name="m01s30i224_avensq"
+			operation="instant"
+			field_ref="m01s30i224"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i224*m01s30i224
+		</field>
+
+		<field
+			id="m01s30i224_stdev"
+			name="m01s30i224_stdev"
+			operation="instant"
+			field_ref="m01s30i224_ens"
+			> sqrt(m01s30i224_avensq - m01s30i224_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i225" id="test-m01s30i225" name="test-m01s30i225" output_freq="72ts">
+
+		<field
+			id="m01s30i225_inst"
+			name="m01s30i225_inst"
+			operation="instant"
+			field_ref="m01s30i225"
+		/>
+
+		<field
+			id="m01s30i225_ens"
+			name="m01s30i225_ens"
+			operation="instant"
+			field_ref="m01s30i225"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i225_sqav"
+			name="m01s30i225_sqav"
+			operation="instant"
+			field_ref="m01s30i225_ens"
+			> m01s30i225_ens*m01s30i225_ens
+		</field>
+
+		<field
+			id="m01s30i225_avensq"
+			name="m01s30i225_avensq"
+			operation="instant"
+			field_ref="m01s30i225"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i225*m01s30i225
+		</field>
+
+		<field
+			id="m01s30i225_stdev"
+			name="m01s30i225_stdev"
+			operation="instant"
+			field_ref="m01s30i225_ens"
+			> sqrt(m01s30i225_avensq - m01s30i225_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i288" id="test-m01s30i288" name="test-m01s30i288" output_freq="72ts">
+
+		<field
+			id="m01s30i288_inst"
+			name="m01s30i288_inst"
+			operation="instant"
+			field_ref="m01s30i288"
+		/>
+
+		<field
+			id="m01s30i288_ens"
+			name="m01s30i288_ens"
+			operation="instant"
+			field_ref="m01s30i288"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i288_sqav"
+			name="m01s30i288_sqav"
+			operation="instant"
+			field_ref="m01s30i288_ens"
+			> m01s30i288_ens*m01s30i288_ens
+		</field>
+
+		<field
+			id="m01s30i288_avensq"
+			name="m01s30i288_avensq"
+			operation="instant"
+			field_ref="m01s30i288"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i288*m01s30i288
+		</field>
+
+		<field
+			id="m01s30i288_stdev"
+			name="m01s30i288_stdev"
+			operation="instant"
+			field_ref="m01s30i288_ens"
+			> sqrt(m01s30i288_avensq - m01s30i288_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i301_5" id="test-m01s30i301_5" name="test-m01s30i301_5" output_freq="72ts">
+
+		<field
+			id="m01s30i301_5_inst"
+			name="m01s30i301_5_inst"
+			operation="instant"
+			field_ref="m01s30i301_5"
+		/>
+
+		<field
+			id="m01s30i301_5_ens"
+			name="m01s30i301_5_ens"
+			operation="instant"
+			field_ref="m01s30i301_5"
+			grid_ref="um-atmos_grid_uv_DP850200_ens_mean"
+		/>
+
+		<field
+			id="m01s30i301_5_sqav"
+			name="m01s30i301_5_sqav"
+			operation="instant"
+			field_ref="m01s30i301_5_ens"
+			> m01s30i301_5_ens*m01s30i301_5_ens
+		</field>
+
+		<field
+			id="m01s30i301_5_avensq"
+			name="m01s30i301_5_avensq"
+			operation="instant"
+			field_ref="m01s30i301_5"
+			grid_ref="um-atmos_grid_uv_DP850200_ens_mean"
+			> m01s30i301_5*m01s30i301_5
+		</field>
+
+		<field
+			id="m01s30i301_5_stdev"
+			name="m01s30i301_5_stdev"
+			operation="instant"
+			field_ref="m01s30i301_5_ens"
+			> sqrt(m01s30i301_5_avensq - m01s30i301_5_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i234" id="test-m01s30i234" name="test-m01s30i234" output_freq="72ts">
+
+		<field
+			id="m01s30i234_inst"
+			name="m01s30i234_inst"
+			operation="instant"
+			field_ref="m01s30i234"
+		/>
+
+		<field
+			id="m01s30i234_ens"
+			name="m01s30i234_ens"
+			operation="instant"
+			field_ref="m01s30i234"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i234_sqav"
+			name="m01s30i234_sqav"
+			operation="instant"
+			field_ref="m01s30i234_ens"
+			> m01s30i234_ens*m01s30i234_ens
+		</field>
+
+		<field
+			id="m01s30i234_avensq"
+			name="m01s30i234_avensq"
+			operation="instant"
+			field_ref="m01s30i234"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i234*m01s30i234
+		</field>
+
+		<field
+			id="m01s30i234_stdev"
+			name="m01s30i234_stdev"
+			operation="instant"
+			field_ref="m01s30i234_ens"
+			> sqrt(m01s30i234_avensq - m01s30i234_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s30i235" id="test-m01s30i235" name="test-m01s30i235" output_freq="72ts">
+
+		<field
+			id="m01s30i235_inst"
+			name="m01s30i235_inst"
+			operation="instant"
+			field_ref="m01s30i235"
+		/>
+
+		<field
+			id="m01s30i235_ens"
+			name="m01s30i235_ens"
+			operation="instant"
+			field_ref="m01s30i235"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+		/>
+
+		<field
+			id="m01s30i235_sqav"
+			name="m01s30i235_sqav"
+			operation="instant"
+			field_ref="m01s30i235_ens"
+			> m01s30i235_ens*m01s30i235_ens
+		</field>
+
+		<field
+			id="m01s30i235_avensq"
+			name="m01s30i235_avensq"
+			operation="instant"
+			field_ref="m01s30i235"
+			grid_ref="um-atmos_grid_uv_DP17_ens_mean"
+			> m01s30i235*m01s30i235
+		</field>
+
+		<field
+			id="m01s30i235_stdev"
+			name="m01s30i235_stdev"
+			operation="instant"
+			field_ref="m01s30i235_ens"
+			> sqrt(m01s30i235_avensq - m01s30i235_sqav)
+		</field>
+
+</file>
