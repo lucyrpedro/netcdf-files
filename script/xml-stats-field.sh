@@ -8,7 +8,9 @@ cat >> grids.txt << EOF
 ${grid}
 EOF
 
+rm -rf grids.txt
 rm -rf fields.txt
+rm -rf grids-fields.txt
 cat >> fields.txt << EOF
 ${field}
 EOF

@@ -1,8 +1,11 @@
 #!/bin/bash
 
-rm -rf um-stats.xml
+# Files created inside ./xml-stats-field.sh
 
-# input="grids-fields.txt"
+rm -rf um-stats.xml
+rm -rf grids.txt
+rm -rf fields.txt
+rm -rf grids-fields.txt
 
 sed 's/\"//g' um-atmos-field_ens_def.xml > aux.txt
 
