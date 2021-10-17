@@ -30,14 +30,15 @@ for l in f:
 
     if m1:    
         data_M.update(m1.groupdict())        
+        out.writerow(data_M)
     if m2:
         data_M.update(m2.groupdict())
+        out.writerow(data_M)
     if m3:
         data_M.update(m3.groupdict())
+        out.writerow(data_M)
 
 f.close()
-
-out.writerow(data_M)
 
 fd.close()
 

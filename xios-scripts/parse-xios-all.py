@@ -6,7 +6,16 @@ import os
 
 # Create the output filename
 
+cwd = os.getcwd()
+print(cwd)
+
 filename = "results.csv"
+file_old = cwd + "/" + filename
+
+if os.path.exists(file_old):
+  os.remove(file_old)
+  
+print(file_old)
 
 # Open the output file
 
@@ -16,9 +25,6 @@ out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MIN
 out.writeheader()
 
 data_M = {}
-
-cwd = os.getcwd()
-print(cwd)
 
 f_dir = open("aux-files/dir.txt", "r")
 for file in f_dir:
@@ -53,15 +59,14 @@ for file in f_dir:
 
             if m1:    
                 data_M.update(m1.groupdict())        
-                out.writerow(data_M)
             if m2:
                 data_M.update(m2.groupdict())
-                out.writerow(data_M)
             if m3:
                 data_M.update(m3.groupdict())
-                out.writerow(data_M)
-
+                
         f.close()
+        
+        out.writerow(data_M)
 
 f_dir.close()
 

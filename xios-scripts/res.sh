@@ -7,6 +7,7 @@ ls -1 > ${aux}/aux-files/dir.txt
 
 input=${aux}/aux-files/dir.txt
 	
+rm -rf ${aux}/results
 mkdir -p ${aux}/results
 cd ${aux}/results
 
