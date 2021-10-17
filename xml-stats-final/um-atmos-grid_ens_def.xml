@@ -1,19 +1,440 @@
 <grid_definition>
+  <grid id="um-atmos_grid_t_D52RH">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_D52RH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_halo_single_D52RH">
+    <domain domain_ref="um-atmos_grid_t_halo_single" />
+    <axis axis_ref="um-atmos_D52RH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DP500">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DP500" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_DP500">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_DP500" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_D52TH">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_D52TH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_halo_single_D52TH">
+    <domain domain_ref="um-atmos_grid_t_halo_single" />
+    <axis axis_ref="um-atmos_D52TH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cu_DALLRH">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="um-atmos_DALLRH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cv_DALLRH">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="um-atmos_DALLRH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cu_halo_single_DALLRH">
+    <domain domain_ref="um-atmos_grid_cu_halo_single" />
+    <axis axis_ref="um-atmos_DALLRH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cv_halo_single_DALLRH">
+    <domain domain_ref="um-atmos_grid_cv_halo_single" />
+    <axis axis_ref="um-atmos_DALLRH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_halo_single_DALLRH">
+    <domain domain_ref="um-atmos_grid_t_halo_single" />
+    <axis axis_ref="um-atmos_DALLRH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cu_DALLTH">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cv_DALLTH">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_DALLTH">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_halo_single_DALLTH">
+    <domain domain_ref="um-atmos_grid_t_halo_single" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_halo_extended_DALLTH">
+    <domain domain_ref="um-atmos_grid_t_halo_extended" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cu_DNOGWTH">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="um-atmos_DNOGWTH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cv_DNOGWTH">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="um-atmos_DNOGWTH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DP850200">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DP850200" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cu_DNOGWRH">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="um-atmos_DNOGWRH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cv_DNOGWRH">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="um-atmos_DNOGWRH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_D1TH">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_D1TH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DPLEV9H">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DPLEV9H" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DT330">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DT330" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_DSOIL">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_DSOIL" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cu_DPBLTH">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="um-atmos_DPBLTH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cv_DPBLTH">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="um-atmos_DPBLTH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DPLEV11H">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DPLEV11H" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DPLEV8H">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DPLEV8H" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DP17">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DP17" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DP6">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DP6" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DPLEV7H">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DPLEV7H" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cu_DIAG">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DIAG">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cv_DIAG">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_DIAG">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_uv_DP7LOW">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DP7LOW" />
+    <axis axis_ref="ensemble" />
+  </grid>
 
-	<grid id="um-atmos_grid_t_test">
-		<domain domain_ref="um-atmos_grid_t" />
-	</grid>
-
-	<grid id="um-atmos_grid_t_ufs_ens">
-		<domain domain_ref="um-atmos_grid_t" />
-		<scalar id="ens-mean">
-			<reduce_axis operation="average" />
-		</scalar>
-	</grid>
-
-	<grid id="um-atmos_grid_t_ufs">
-		<domain domain_ref="um-atmos_grid_t" />
-		<axis axis_ref="ensemble" />
-	</grid>
+  <grid id="um-atmos_grid_t_D52RH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_D52RH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_halo_single_D52RH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t_halo_single" />
+    <axis axis_ref="um-atmos_D52RH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DP500_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DP500" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_DP500_ens_mean">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_DP500" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_D52TH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_D52TH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_halo_single_D52TH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t_halo_single" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_cu_DALLRH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="um-atmos_DALLRH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cv_DALLRH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="um-atmos_DALLRH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cu_halo_single_DALLRH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cu_halo_single" />
+    <axis axis_ref="um-atmos_DALLRH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cv_halo_single_DALLRH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cv_halo_single" />
+    <axis axis_ref="um-atmos_DALLRH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_halo_single_DALLRH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t_halo_single" />
+    <axis axis_ref="um-atmos_DALLRH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cu_DALLTH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cv_DALLTH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_DALLTH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_halo_single_DALLTH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t_halo_single" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_halo_extended_DALLTH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t_halo_extended" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cu_DNOGWTH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="um-atmos_DNOGWTH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cv_DNOGWTH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="um-atmos_DNOGWTH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DP850200_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DP850200" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cu_DNOGWRH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="um-atmos_DNOGWRH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cv_DNOGWRH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="um-atmos_DNOGWRH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_D1TH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_D1TH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DPLEV9H_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DPLEV9H" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DT330_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DT330" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_DSOIL_ens_mean">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_DSOIL" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cu_DPBLTH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <axis axis_ref="um-atmos_DPBLTH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cv_DPBLTH_ens_mean">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <axis axis_ref="um-atmos_DPBLTH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DPLEV11H_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DPLEV11H" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DPLEV8H_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DPLEV8H" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DP17_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DP17" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DP6_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DP6" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DPLEV7H_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DPLEV7H" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cu_DIAG_ens_mean">
+    <domain domain_ref="um-atmos_grid_cu" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DIAG_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_cv_DIAG_ens_mean">
+    <domain domain_ref="um-atmos_grid_cv" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_DIAG_ens_mean">
+    <domain domain_ref="um-atmos_grid_t" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_uv_DP7LOW_ens_mean">
+    <domain domain_ref="um-atmos_grid_uv" />
+    <axis axis_ref="um-atmos_DP7LOW" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
 
 </grid_definition>
