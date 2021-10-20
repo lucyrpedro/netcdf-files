@@ -1,6 +1,6 @@
 #!/bin/bash
 
-aux=~/netcdf-files/xios-scripts
+aux=~/test-git/netcdf-files/xios-scripts
 
 cd ~/cylc-run
 ls -1 > ${aux}/aux-files/dir.txt
@@ -21,7 +21,7 @@ do
 	echo $filename
 done < "$input"
 
-aux2=~/netcdf-files/xios-scripts/results
+aux2=~/test-git/netcdf-files/xios-scripts/results
 
 while IFS= read -r line
 do
