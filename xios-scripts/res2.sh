@@ -24,6 +24,8 @@ done < "$input"
 
 aux2=~/test-git/netcdf-files/xios-scripts/results
 
+# Reading information from pe file
+
 while IFS= read -r line
 do
 	filename=$(ls ${aux2}/${line} |grep pe)
@@ -37,3 +39,33 @@ do
 		echo $(cat ${filename} |grep "DUMPCTL") >> time.txt
 	fi
 done < "$input"
+
+# Reading information from xios-client file
+
+while IFS= read -r line
+do
+        filename="xios_client_000.out"
+        echo "file=$filename"
+        cd ${aux2}/${line}
+        if [[ -s "${filename}" ]]; then
+                echo "aux=${filename}"
+                echo $(cat ${filename} |grep "CSpatialTransformFilterEngine") >> time.txt
+        fi
+done < "$input"
+
+# Reading took information from pe file
+
+rm -rf ${aux2}/${line}/took.txt
+touch ${aux2}/${line}/took.txt
+
+while IFS= read -r line
+do
+        filename=$(ls ${aux2}/${line} |grep pe)
+        echo "file=$filename"
+        cd ${aux2}/${line}
+        if [[ -s "${filename}" ]]; then
+                echo "took=${filename}"
+                echo $(cat ${filename} |grep "took") >> took.txt
+        fi
+done < "$input"
+
