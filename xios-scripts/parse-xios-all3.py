@@ -20,7 +20,7 @@ print(file_old)
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["SUITE", "TIME", "INITIAL", "DUMPCTL", "JOB_ID", "JOB_PID", "JOB_SUBMIT_TIME", "JOB_INIT_TIME", "JOB_EXIT_TIME", "TOOK 1"]
+fields = ["SUITE", "TIME", "INITIAL", "DUMPCTL", "JOB_ID", "JOB_PID", "JOB_SUBMIT_TIME", "JOB_INIT_TIME", "JOB_EXIT_TIME", "TOOK1", "TOOK2", "TOOK3"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -37,7 +37,7 @@ for file in f_dir:
 
     # Change to the suite directory
 
-    # Parse the data for the information inside the result file
+    # Parse the data for the information inside time.txt
 
     filename = cwd + "/results/" + file.strip() + "/time.txt";
     print(filename)
@@ -63,21 +63,61 @@ for file in f_dir:
             m8 = re.match("(.*)JOB_EXIT_TIME=(?P<JOB_EXIT_TIME>[0-9.TZ:-]+)", l)
 
             if m1:    
-                data_M.update(m1.groupdict())        
+                data_M.update(m1.groupdict())       
+                del m1
             if m2:
                 data_M.update(m2.groupdict())
+                del m2
             if m3:
                 data_M.update(m3.groupdict())
+                del m3
             if m4:
                 data_M.update(m4.groupdict())
+                del m4
             if m5:
                 data_M.update(m5.groupdict())
+                del m5
             if m6:
                 data_M.update(m6.groupdict())
+                del m6
             if m7:
                 data_M.update(m7.groupdict())
+                del m7
             if m8:
                 data_M.update(m8.groupdict())
+                del m8
+                
+        f.close()
+
+    # Parse the data for the information inside took.txt
+
+    filename = cwd + "/results/" + file.strip() + "/took.txt";
+    print(filename)
+
+    isFile = os.path.isfile(filename)
+    print(isFile)
+
+    if isFile:
+
+        f = open(filename, "r")
+
+        for l in f:
+    
+            print(l)
+
+            m1 = re.match("(.*) 1 took (?P<TOOK1>[0-9.]*) ", l)
+            m2 = re.match("(.*) 2 took (?P<TOOK2>[0-9.]*) ", l)
+            m3 = re.match("(.*) 3 took (?P<TOOK3>[0-9.]*) ", l)
+
+            if m1:    
+                data_M.update(m1.groupdict())        
+                del m1
+            if m2:
+                data_M.update(m2.groupdict())
+                del m2
+            if m3:
+                data_M.update(m3.groupdict())
+                del m3
                 
         f.close()
         
