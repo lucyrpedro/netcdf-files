@@ -20,7 +20,7 @@ print(file_old)
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["SUITE", "TIME", "INITIAL", "DUMPCTL", "JOB_ID", "JOB_PID", "JOB_SUBMIT_TIME", "JOB_INIT_TIME", "JOB_EXIT_TIME", "TOOK1", "TOOK2", "TOOK3"]
+fields = ["SUITE", "TIME", "INITIAL", "DUMPCTL", "JOB_ID", "JOB_PID", "JOB_SUBMIT_TIME", "JOB_INIT_TIME", "JOB_EXIT_TIME", "JOB_STATUS" , "TOOK1", "TOOK2", "TOOK3"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -61,6 +61,7 @@ for file in f_dir:
             m6 = re.match("(.*)JOB_SUBMIT_TIME=(?P<JOB_SUBMIT_TIME>[0-9.TZ:-]+)", l)
             m7 = re.match("(.*)JOB_INIT_TIME=(?P<JOB_INIT_TIME>[0-9.TZ:-]+)", l)
             m8 = re.match("(.*)JOB_EXIT_TIME=(?P<JOB_EXIT_TIME>[0-9.TZ:-]+)", l)
+            m9 = re.match("(.*)JOB_EXIT=(?P<JOB_STATUS>[0-9.TZ:-]+)", l)
 
             if m1:    
                 data_M.update(m1.groupdict())       
@@ -86,6 +87,9 @@ for file in f_dir:
             if m8:
                 data_M.update(m8.groupdict())
                 del m8
+            if m9:
+                data_M.update(m9.groupdict())
+                del m9
                 
         f.close()
 
