@@ -20,7 +20,7 @@ print(file_old)
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["SUITE", "TIME", "INITIAL", "DUMPCTL", "JOB_ID", "JOB_PID", "JOB_SUBMIT_TIME", "JOB_INIT_TIME", "JOB_EXIT_TIME", "JOB_STATUS" , "TOOK1", "TOOK2", "TOOK3"]
+fields = ["SUITE", "TIME", "INITIAL", "JOB_ID", "JOB_PID", "JOB_SUBMIT_TIME", "JOB_INIT_TIME", "JOB_EXIT_TIME", "JOB_STATUS" , "TOOK1", "TOOK2", "TOOK3"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -54,8 +54,8 @@ for file in f_dir:
             print(l)
 
             m1 = re.match("(.*) 0 Elapsed Wallclock Time: (?P<TIME>[0-9.]*) ", l)
-            m2 = re.match("(.*) INITIAL 1 (?P<INITIAL>[0-9.]+) ", l)
-            m3 = re.match("(.*) DUMPCTL 1 (?P<DUMPCTL>[0-9.]+) ", l)
+            m2 = re.match("(.*) INITIAL 1 [0-9.]+ [0-9.]+ (?P<INITIAL>[0-9.]+) ", l)
+#            m3 = re.match("(.*) DUMPCTL 1 (?P<DUMPCTL>[0-9.]+) ", l) # It seems DUMPCTL doesn't exist anymore
             m4 = re.match("(.*)JOB_ID=(?P<JOB_ID>[0-9.]+)", l)
             m5 = re.match("(.*)JOB_PID=(?P<JOB_PID>[0-9.]+)", l)
             m6 = re.match("(.*)JOB_SUBMIT_TIME=(?P<JOB_SUBMIT_TIME>[0-9.TZ:-]+)", l)
@@ -69,9 +69,9 @@ for file in f_dir:
             if m2:
                 data_M.update(m2.groupdict())
                 del m2
-            if m3:
-                data_M.update(m3.groupdict())
-                del m3
+#            if m3:
+#                data_M.update(m3.groupdict())
+#                del m3
             if m4:
                 data_M.update(m4.groupdict())
                 del m4
