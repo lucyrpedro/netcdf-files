@@ -60,7 +60,7 @@ for file in f_dir:
             m5 = re.match("(.*)JOB_PID=(?P<JOB_PID>[0-9.]+)", l)
             m6 = re.match("(.*)JOB_SUBMIT_TIME=(?P<JOB_SUBMIT_TIME>[0-9.TZ:-]+)", l)
             m7 = re.match("(.*)JOB_INIT_TIME=(?P<JOB_INIT_TIME>[0-9.TZ:-]+)", l)
-            m8 = re.match("(.*)CYLC_JOB_EXIT=(?P<JOB_STATUS>[SUCED]+)(.*)", l)
+            m8 = re.match("(.*)JOB_EXIT=(?P<JOB_STATUS>[SUCED]+)", l)
             m9 = re.match("(.*)JOB_EXIT_TIME=(?P<JOB_EXIT_TIME>[0-9.TZ:-]+)", l)
 
             if m1:    

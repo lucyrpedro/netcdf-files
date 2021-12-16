@@ -85,6 +85,6 @@ do
 		echo $(cat ${filename} |grep "CYLC_BATCH_SYS_JOB_ID") >> time.txt
 		echo $(cat ${filename} |grep "CYLC_BATCH_SYS_JOB_SUBMIT_TIME") >> time.txt
                 echo $(cat ${filename} |grep "CYLC_JOB_INIT_TIME") >> time.txt
-                echo $(cat ${filename} |grep "CYLC_JOB_EXIT_TIME") >> time.txt
+                echo $(cat ${filename} |grep "CYLC_JOB_EXIT") >> time.txt # Collects CYLC_JOB_EXIT and CYLC_JOB_EXIT_TIME
         fi
 done < "$input"
