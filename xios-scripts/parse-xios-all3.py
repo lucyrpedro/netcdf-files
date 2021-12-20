@@ -14,8 +14,7 @@ file_old = cwd + "/" + filename
 
 if os.path.exists(file_old):
   os.remove(file_old)
-  
-print(file_old)
+  print(file_old)
 
 # Open the output file
 
@@ -33,14 +32,14 @@ for file in f_dir:
     # Parse the data for the information inside the filename
 
     data_M["SUITE"] = file.strip()
-    print(file)
+#    print(data_M["SUITE"])
 
     # Change to the suite directory
 
     # Parse the data for the information inside time.txt
 
     filename = cwd + "/results/" + file.strip() + "/time.txt";
-    print(filename)
+#    print(filename)
 
     isFile = os.path.isfile(filename)
     print(isFile)
@@ -51,7 +50,7 @@ for file in f_dir:
 
         for l in f:
     
-            print(l)
+#            print(l)
 
             m1 = re.match("(.*) 0 Elapsed Wallclock Time: (?P<TIME>[0-9.]*) ", l)
             m2 = re.match("(.*) INITIAL 1 [0-9.]+ [0-9.]+ (?P<INITIAL>[0-9.]+) ", l)
@@ -64,68 +63,78 @@ for file in f_dir:
             m9 = re.match("(.*)JOB_EXIT_TIME=(?P<JOB_EXIT_TIME>[0-9.TZ:-]+)", l)
 
             if m1:    
+#                print(m1)
                 data_M.update(m1.groupdict())       
                 del m1
             if m2:
+#                print(m2)
                 data_M.update(m2.groupdict())
                 del m2
 #            if m3:
 #                data_M.update(m3.groupdict())
 #                del m3
             if m4:
+#                print(m4)
                 data_M.update(m4.groupdict())
                 del m4
             if m5:
+#                print(m5)
                 data_M.update(m5.groupdict())
                 del m5
             if m6:
+#                print(m6)
                 data_M.update(m6.groupdict())
                 del m6
             if m7:
+#                print(m7)
                 data_M.update(m7.groupdict())
                 del m7
             if m8:
+#                print(m8)
                 data_M.update(m8.groupdict())
                 del m8
             if m9:
+#                print(m9)
                 data_M.update(m9.groupdict())
                 del m9
                 
         f.close()
 
-    # Parse the data for the information inside took.txt
+  # Parse the data for the information inside took.txt
 
     filename = cwd + "/results/" + file.strip() + "/took.txt";
-    print(filename)
+#   print(filename)
 
     isFile = os.path.isfile(filename)
-    print(isFile)
+#   print(isFile)
 
     if isFile:
 
-        f = open(filename, "r")
+      f = open(filename, "r")
 
-        for l in f:
+      for l in f:
     
-            print(l)
+     #   print(l)
 
-            m1 = re.match("(.*) 1 took (?P<TOOK1>[0-9.]*) ", l)
-            m2 = re.match("(.*) 2 took (?P<TOOK2>[0-9.]*) ", l)
-            m3 = re.match("(.*) 3 took (?P<TOOK3>[0-9.]*) ", l)
+        m1 = re.match("(.*) 1 took (?P<TOOK1>[0-9.]*) ", l)
+        m2 = re.match("(.*) 2 took (?P<TOOK2>[0-9.]*) ", l)
+        m3 = re.match("(.*) 3 took (?P<TOOK3>[0-9.]*) ", l)
 
-            if m1:    
-                data_M.update(m1.groupdict())        
-                del m1
-            if m2:
-                data_M.update(m2.groupdict())
-                del m2
-            if m3:
-                data_M.update(m3.groupdict())
-                del m3
+        if m1:    
+            data_M.update(m1.groupdict())        
+            del m1
+        if m2:
+            data_M.update(m2.groupdict())
+            del m2
+        if m3:
+            data_M.update(m3.groupdict())
+            del m3
                 
-        f.close()
+      f.close()
         
-        out.writerow(data_M)
+    out.writerow(data_M)
+
+    print("EOF\n\n")
 
 f_dir.close()
 
