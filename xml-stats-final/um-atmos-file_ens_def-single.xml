@@ -1,0 +1,28 @@
+<file_definition format="netcdf4" time_counter="instant" type="one_file">
+
+<file description="Field m01s00i028" id="test-m01s00i028" name="test-m01s00i028" output_freq="3h">
+
+		<field
+			id="m01s00i028_ens"
+			name="m01s00i028_ens"
+			operation="instant"
+			field_ref="m01s00i028"
+			grid_ref="um-atmos_grid_cu_DIAG_ens_mean"
+		/>
+
+</file>
+
+<file description="Field m01s05i256" id="test-m01s05i256" name="test-m01s05i256" output_freq="3h">
+
+		<field
+			id="m01s05i256_ens"
+			name="m01s05i256_ens"
+			operation="instant"
+			field_ref="m01s05i256"
+			grid_ref="um-atmos_grid_t_D52RH_ens_mean"
+		/>
+
+</file>
+
+</file_definition>
+

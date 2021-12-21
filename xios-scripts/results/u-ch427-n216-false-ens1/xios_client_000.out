@@ -1193,30 +1193,30 @@
 -> report :  Memory report : Context <um-atmos_ens> : server side : total memory used for buffer 69984 bytes
 -> info : CContext: Context <um-atmos_ens> is finalized.
 -> info : Client side context is finalized
--> report :  Performance report : Whole time from XIOS init and finalize: 132.5 s
--> report :  Performance report : total time spent for XIOS : 3.41275 s
--> report :  Performance report : time spent for waiting free buffer : 0.0213591 s
--> report :  Performance report : Ratio : 0.0161201 %
+-> report :  Performance report : Whole time from XIOS init and finalize: 131.953 s
+-> report :  Performance report : total time spent for XIOS : 4.04986 s
+-> report :  Performance report : time spent for waiting free buffer : 0.0182767 s
+-> report :  Performance report : Ratio : 0.0138509 %
 -> report :  Performance report : This ratio must be close to zero. Otherwise it may be usefull to increase buffer size or numbers of server
 -> report :  Memory report : Minimum buffer size required : 69968 bytes
 -> report :  Memory report : increasing it by a factor will increase performance, depending of the volume of data wrote in file at each time step of the file
--> report : Timer : Blocking time    -->   cumulated time : 0.0213591
-Timer : CSpatialTransformFilterEngine::apply    -->   cumulated time : 0.113542
-Timer : Context : close definition    -->   cumulated time : 0.393706
-Timer : Field : send data    -->   cumulated time : 0.0124105
-Timer : Process events    -->   cumulated time : 8.606e-06
-Timer : Process request    -->   cumulated time : 2.3926e-05
-Timer : XIOS    -->   cumulated time : 3.41275
-Timer : XIOS close definition    -->   cumulated time : 0.393709
-Timer : XIOS context finalize    -->   cumulated time : 0.260208
+-> report : Timer : Blocking time    -->   cumulated time : 0.0182767
+Timer : CSpatialTransformFilterEngine::apply    -->   cumulated time : 0.111024
+Timer : Context : close definition    -->   cumulated time : 0.392824
+Timer : Field : send data    -->   cumulated time : 0.0116239
+Timer : Process events    -->   cumulated time : 9.208e-06
+Timer : Process request    -->   cumulated time : 6.9044e-05
+Timer : XIOS    -->   cumulated time : 4.04986
+Timer : XIOS close definition    -->   cumulated time : 0.392829
+Timer : XIOS context finalize    -->   cumulated time : 0.770221
 Timer : XIOS finalize    -->   cumulated time : 0
 Timer : XIOS init    -->   cumulated time : 0
-Timer : XIOS init context    -->   cumulated time : 2.11874
-Timer : XIOS init/finalize    -->   cumulated time : 132.5
-Timer : XIOS send field    -->   cumulated time : 0.277749
-Timer : computeGlobalSourceIndex    -->   cumulated time : 0.0848146
-Timer : computeIndexSourceMapping    -->   cumulated time : 1.6632e-05
-Timer : computeTransformationMapping    -->   cumulated time : 0.0214634
+Timer : XIOS init context    -->   cumulated time : 2.25679
+Timer : XIOS init/finalize    -->   cumulated time : 131.953
+Timer : XIOS send field    -->   cumulated time : 0.272074
+Timer : computeGlobalSourceIndex    -->   cumulated time : 0.0847483
+Timer : computeIndexSourceMapping    -->   cumulated time : 1.6752e-05
+Timer : computeTransformationMapping    -->   cumulated time : 0.0212727
 
 -> info : Write data base Registry
 
