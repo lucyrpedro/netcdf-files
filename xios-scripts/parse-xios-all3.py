@@ -19,7 +19,7 @@ if os.path.exists(file_old):
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["SUITE", "TIME", "INITIAL", "JOB_ID", "JOB_PID", "JOB_SUBMIT_TIME", "JOB_INIT_TIME", "JOB_EXIT_TIME", "JOB_STATUS" , "TOOK1", "TOOK2", "TOOK3"]
+fields = ["SUITE", "TIME", "INITIAL", "ENSEMBLES", "RESOLUTION", "NODES", "JOB_SUBMIT_TIME", "JOB_INIT_TIME", "JOB_EXIT_TIME", "JOB_STATUS" , "JOB_ID", "JOB_PID", "TOOK1", "TOOK2", "TOOK3"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -61,6 +61,7 @@ for file in f_dir:
             m7 = re.match("(.*)JOB_INIT_TIME=(?P<JOB_INIT_TIME>[0-9.TZ:-]+)", l)
             m8 = re.match("(.*)JOB_EXIT=(?P<JOB_STATUS>[SUCED]+)", l)
             m9 = re.match("(.*)JOB_EXIT_TIME=(?P<JOB_EXIT_TIME>[0-9.TZ:-]+)", l)
+            m10 = re.match("(.*)nodes=(?P<NODES>[0-9]+)", l)
 
             if m1:    
 #                print(m1)
@@ -97,7 +98,11 @@ for file in f_dir:
 #                print(m9)
                 data_M.update(m9.groupdict())
                 del m9
-                
+            if m10:
+#                print(m10)
+                data_M.update(m10.groupdict())
+                del m10
+
         f.close()
 
   # Parse the data for the information inside took.txt

@@ -18,6 +18,7 @@ do
 	cp ~/cylc-run/${line}/work/19880901T0000Z/atmos_ens0/pe_output/*pe.stdout ${line} 2>/dev/null
 	cp ~/cylc-run/${line}/work/19880901T0000Z/atmos_ens0/xios_client_000.out ${line} 2>/dev/null
 	cp ~/cylc-run/${line}/log/job/19880901T0000Z/atmos_main/NN/job.status ${line} 2>/dev/null
+        cp ~/cylc-run/${line}/log/job/19880901T0000Z/atmos_main/NN/job ${line} 2>/dev/null
 	filename=$(ls ${line} |grep pe)
 	echo $line
 	echo $filename
@@ -30,7 +31,7 @@ aux2=~/test-git/netcdf-files/xios-scripts/results
 while IFS= read -r line
 do
 	filename=$(ls ${aux2}/${line} |grep pe)
-        echo "line=$line"
+#        echo "line=$line"
         echo "file=$filename"
 	cd ${aux2}/${line}
 	if [[ -s "${filename}" ]]; then
@@ -77,7 +78,7 @@ done < "$input"
 while IFS= read -r line
 do
         filename=$(ls ${aux2}/${line} |grep job.status)
-        echo "line=$line"
+#        echo "line=$line"
         echo "file=$filename"
         cd ${aux2}/${line}
         if [[ -s "${filename}" ]]; then
@@ -89,3 +90,18 @@ do
                 echo $(cat ${filename} |grep "CYLC_JOB_EXIT") >> time.txt # Collects CYLC_JOB_EXIT and CYLC_JOB_EXIT_TIME
         fi
 done < "$input"
+
+# Reading number of nodes from log/job
+
+while IFS= read -r line
+do
+        filename=job
+#        echo "line=$line"
+        echo "file=$filename"
+        cd ${aux2}/${line}
+        if [[ -s "${filename}" ]]; then
+                echo "aux=${filename}"
+                echo $(cat ${filename} |grep "SBATCH --nodes") >> time.txt
+        fi
+done < "$input"
+
