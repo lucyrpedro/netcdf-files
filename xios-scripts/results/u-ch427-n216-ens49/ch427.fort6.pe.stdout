@@ -3,7 +3,7 @@ Enabling 0 I/O PEs
 [0] OpenMP Specification: 201511
 
 *******************************************************************************
-**************** Start of UM RUN Job : 21:08:22 on 28/12/2021 *****************
+**************** Start of UM RUN Job : 14:09:48 on 30/12/2021 *****************
 **************** Based upon UM release vn11.6             *****************
 *******************************************************************************
 
@@ -513,7 +513,7 @@ Mass, energy, energy drift =   0.5130E+19  0.1312E+25 -0.5599E-07
 
 ************************  PE configuration for this run  ***********************
 ****  PE configuration:    32 processors East-West    28 processors North-South *
-Atm_Step: Info: Starting timestep        0 at time=   175.513 seconds
+Atm_Step: Info: Starting timestep        0 at time=   172.765 seconds
 
 Atm_Step: Timestep        0   Model time:   1988-09-01 00:00:00
 
@@ -526,7 +526,7 @@ Atm_Step: Timestep        0   Model time:   1988-09-01 00:00:00
 ?  Warning number: 35
 ????????????????????????????????????????????????????????????????????????????????
 
-Atm_Step: Info: Starting timestep        1 at time=   508.931 seconds
+Atm_Step: Info: Starting timestep        1 at time=   579.797 seconds
 
 Atm_Step: Timestep        1   Model time:   1988-09-01 00:15:00
 ***************************************************************
@@ -553,9 +553,9 @@ Atm_Step: Timestep        1   Model time:   1988-09-01 00:15:00
 
 
 ********************************************************************************
-Atm_Step: Info: timestep        1 took    112.058 seconds
+Atm_Step: Info: timestep        1 took     34.647 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        2 at time=   620.990 seconds
+Atm_Step: Info: Starting timestep        2 at time=   614.445 seconds
 
 Atm_Step: Timestep        2   Model time:   1988-09-01 00:30:00
 ***************************************************************
@@ -572,9 +572,9 @@ Atm_Step: Timestep        2   Model time:   1988-09-01 00:30:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        2 took      1.294 seconds
+Atm_Step: Info: timestep        2 took      1.611 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        3 at time=   622.285 seconds
+Atm_Step: Info: Starting timestep        3 at time=   616.056 seconds
 
 Atm_Step: Timestep        3   Model time:   1988-09-01 00:45:00
 ***************************************************************
@@ -591,9 +591,9 @@ Atm_Step: Timestep        3   Model time:   1988-09-01 00:45:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        3 took      0.671 seconds
+Atm_Step: Info: timestep        3 took      0.666 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        4 at time=   622.958 seconds
+Atm_Step: Info: Starting timestep        4 at time=   616.725 seconds
 
 Atm_Step: Timestep        4   Model time:   1988-09-01 01:00:00
 ***************************************************************
@@ -610,9 +610,9 @@ Atm_Step: Timestep        4   Model time:   1988-09-01 01:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        4 took      0.948 seconds
+Atm_Step: Info: timestep        4 took      0.952 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        5 at time=   623.976 seconds
+Atm_Step: Info: Starting timestep        5 at time=   617.746 seconds
 
 Atm_Step: Timestep        5   Model time:   1988-09-01 01:15:00
 ***************************************************************
@@ -629,9 +629,9 @@ Atm_Step: Timestep        5   Model time:   1988-09-01 01:15:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        5 took      1.085 seconds
+Atm_Step: Info: timestep        5 took      1.078 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        6 at time=   625.063 seconds
+Atm_Step: Info: Starting timestep        6 at time=   618.826 seconds
 
 Atm_Step: Timestep        6   Model time:   1988-09-01 01:30:00
 ***************************************************************
@@ -648,9 +648,9 @@ Atm_Step: Timestep        6   Model time:   1988-09-01 01:30:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        6 took      0.676 seconds
+Atm_Step: Info: timestep        6 took      0.668 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        7 at time=   625.741 seconds
+Atm_Step: Info: Starting timestep        7 at time=   619.495 seconds
 
 Atm_Step: Timestep        7   Model time:   1988-09-01 01:45:00
 ***************************************************************
@@ -667,9 +667,9 @@ Atm_Step: Timestep        7   Model time:   1988-09-01 01:45:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        7 took      0.676 seconds
+Atm_Step: Info: timestep        7 took      0.797 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        8 at time=   626.419 seconds
+Atm_Step: Info: Starting timestep        8 at time=   620.293 seconds
 
 Atm_Step: Timestep        8   Model time:   1988-09-01 02:00:00
 ***************************************************************
@@ -686,9 +686,9 @@ Atm_Step: Timestep        8   Model time:   1988-09-01 02:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        8 took      0.911 seconds
+Atm_Step: Info: timestep        8 took      0.909 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        9 at time=   627.402 seconds
+Atm_Step: Info: Starting timestep        9 at time=   621.281 seconds
 
 Atm_Step: Timestep        9   Model time:   1988-09-01 02:15:00
 ***************************************************************
@@ -705,9 +705,9 @@ Atm_Step: Timestep        9   Model time:   1988-09-01 02:15:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        9 took      1.082 seconds
+Atm_Step: Info: timestep        9 took      1.080 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       10 at time=   628.485 seconds
+Atm_Step: Info: Starting timestep       10 at time=   622.363 seconds
 
 Atm_Step: Timestep       10   Model time:   1988-09-01 02:30:00
 ***************************************************************
@@ -724,9 +724,9 @@ Atm_Step: Timestep       10   Model time:   1988-09-01 02:30:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       10 took      0.666 seconds
+Atm_Step: Info: timestep       10 took      0.669 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       11 at time=   629.153 seconds
+Atm_Step: Info: Starting timestep       11 at time=   623.033 seconds
 
 Atm_Step: Timestep       11   Model time:   1988-09-01 02:45:00
 ***************************************************************
