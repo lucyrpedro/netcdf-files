@@ -20,7 +20,7 @@ do
 	cp ~/cylc-run/${line}/log/job/19880901T0000Z/atmos_main/NN/job.status ${line} 2>/dev/null
         cp ~/cylc-run/${line}/log/job/19880901T0000Z/atmos_main/NN/job ${line} 2>/dev/null
 	filename=$(ls ${line} |grep pe)
-	echo $line
+#	echo $line
 	echo $filename
 done < "$input"
 
@@ -32,10 +32,10 @@ while IFS= read -r line
 do
 	filename=$(ls ${aux2}/${line} |grep pe)
 #        echo "line=$line"
-        echo "file=$filename"
+#        echo "file=$filename"
 	cd ${aux2}/${line}
 	if [[ -s "${filename}" ]]; then
-		echo "aux=${filename}"
+#		echo "aux=${filename}"
 		echo $(cat ${filename} |grep "Elapsed Wallclock Time") > time.txt		
 		echo $(cat ${filename} |grep " INITIAL ") >> time.txt
 		echo $(cat ${filename} |grep "DUMPCTL") >> time.txt
@@ -47,10 +47,10 @@ done < "$input"
 while IFS= read -r line
 do
         filename="xios_client_000.out"
-        echo "file=$filename"
+#        echo "file=$filename"
         cd ${aux2}/${line}
         if [[ -s "${filename}" ]]; then
-                echo "aux=${filename}"
+#                echo "aux=${filename}"
                 echo $(cat ${filename} |grep "CSpatialTransformFilterEngine") >> time.txt
         fi
 done < "$input"
@@ -63,10 +63,10 @@ touch ${aux2}/${line}/took.txt
 while IFS= read -r line
 do
         filename=$(ls ${aux2}/${line} |grep pe)
-        echo "file=$filename"
+#        echo "file=$filename"
         cd ${aux2}/${line}
         if [[ -s "${filename}" ]]; then
-                echo "took=${filename}"
+#                echo "took=${filename}"
                 echo $(cat ${filename} |grep "1 took") >> took.txt
 		echo $(cat ${filename} |grep "2 took") >> took.txt
                 echo $(cat ${filename} |grep "3 took") >> took.txt
@@ -82,7 +82,7 @@ do
         echo "file=$filename"
         cd ${aux2}/${line}
         if [[ -s "${filename}" ]]; then
-                echo "aux=${filename}"
+#                echo "aux=${filename}"
                 echo $(cat ${filename} |grep "CYLC_JOB_PID") >> time.txt
 		echo $(cat ${filename} |grep "CYLC_BATCH_SYS_JOB_ID") >> time.txt
 		echo $(cat ${filename} |grep "CYLC_BATCH_SYS_JOB_SUBMIT_TIME") >> time.txt
@@ -97,10 +97,10 @@ while IFS= read -r line
 do
         filename=job
 #        echo "line=$line"
-        echo "file=$filename"
+#        echo "file=$filename"
         cd ${aux2}/${line}
         if [[ -s "${filename}" ]]; then
-                echo "aux=${filename}"
+#                echo "aux=${filename}"
                 echo $(cat ${filename} |grep "SBATCH --nodes") >> time.txt
         fi
 done < "$input"
