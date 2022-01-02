@@ -19,7 +19,7 @@ if os.path.exists(file_old):
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["SUITE", "TIME", "INITIAL", "ENSEMBLES", "RESOLUTION", "NODES", "JOB_SUBMIT_TIME", "JOB_INIT_TIME", "JOB_EXIT_TIME", "JOB_STATUS" , "JOB_ID", "JOB_PID", "TOOK1", "TOOK2", "TOOK3"]
+fields = ["SUITE", "TIME", "INITIAL", "ENSEMBLE", "RESOLUTION", "NODES", "JOB_SUBMIT_TIME", "JOB_INIT_TIME", "JOB_EXIT_TIME", "JOB_STATUS" , "JOB_ID", "JOB_PID", "TOOK1", "TOOK2", "TOOK3"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -32,6 +32,14 @@ for file in f_dir:
     # Parse the data for the information inside the filename
 
     data_M["SUITE"] = file.strip()
+    data_M["ENSEMBLE"] = file[-3:-1]
+#    data_M["RESOLUTION"] = file[9:12]
+    m0 = re.match("(.*)u-ch427-n(?P<RESOLUTION>[0-9]*)-ens(.*)", file)
+    if m0:
+#     print(m0)
+      data_M.update(m0.groupdict())
+      del m0
+
 #    print(data_M["SUITE"])
 
     # Change to the suite directory
@@ -63,45 +71,63 @@ for file in f_dir:
             m9 = re.match("(.*)JOB_EXIT_TIME=(?P<JOB_EXIT_TIME>[0-9.TZ:-]+)", l)
             m10 = re.match("(.*)nodes=(?P<NODES>[0-9]+)", l)
 
-            if m1:    
+            if m1 is not None:    
 #                print(m1)
                 data_M.update(m1.groupdict())       
-                del m1
+                m1 = None
+#                print(file)
+#                print(l)
+#                print(m1)
+#            else: 
+#                m1 = "0"
+#                data_M.update(m1.groupdict())
             if m2:
 #                print(m2)
                 data_M.update(m2.groupdict())
-                del m2
+                m2 = None
 #            if m3:
 #                data_M.update(m3.groupdict())
 #                del m3
+                m3 = None
+
             if m4:
 #                print(m4)
                 data_M.update(m4.groupdict())
-                del m4
+#                del m4
+                m4 = None
             if m5:
 #                print(m5)
                 data_M.update(m5.groupdict())
-                del m5
+#                del m5
+                m5 = None
+
             if m6:
 #                print(m6)
                 data_M.update(m6.groupdict())
-                del m6
+#               del m6
+                m6 = None
             if m7:
 #                print(m7)
                 data_M.update(m7.groupdict())
-                del m7
+#               del m7
+                m7 = None
             if m8:
 #                print(m8)
                 data_M.update(m8.groupdict())
-                del m8
+#               del m8
+                m8 = None
             if m9:
 #                print(m9)
                 data_M.update(m9.groupdict())
-                del m9
+#               del m9
+                m9 = None
             if m10:
 #                print(m10)
                 data_M.update(m10.groupdict())
-                del m10
+#               del m10
+                m10 = None
+
+            del l
 
         f.close()
 
@@ -137,9 +163,9 @@ for file in f_dir:
                 
       f.close()
         
-    out.writerow(data_M)
+      out.writerow(data_M)
 
-    print("EOF\n\n")
+      print("EOF\n\n")
 
 f_dir.close()
 
