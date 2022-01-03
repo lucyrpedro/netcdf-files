@@ -30,10 +30,10 @@ for file in f_dir:
 
     cwd = os.getcwd()
     filename = cwd + "/" + file.strip() + "/time.txt";
-    print(filename)
+#    print(filename)
 
     isFile = os.path.isfile(filename)
-    print(isFile)
+#    print(isFile)
 
     if isFile:
 
@@ -48,7 +48,7 @@ for file in f_dir:
             m10 = re.search("nodes=(?P<NODES>[0-9]+)", l)
 
             if m1 is not None:    
-                print(m1)
+#                print(m1)
                 data_M.update(m1.groupdict())       
 #                data_M["TIME"] = m1
                 m1 = None
@@ -59,7 +59,7 @@ for file in f_dir:
 #                m1 = ""
 #                data_M.update(m1.groupdict())
             if m10 is not None:
-                print(m10)
+#                print(m10)
                 data_M.update(m10.groupdict())
 #                data_M["NODES"] = m10
 #               del m10
