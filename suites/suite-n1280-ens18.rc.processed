@@ -1,0 +1,326 @@
+[cylc]
+    [[environment]]
+        CYLC_VERSION=7.8.7
+        ROSE_ORIG_HOST=pumatest.nerc.ac.uk
+        ROSE_SITE=
+        ROSE_VERSION=2019.01.3
+# Ensembles
+# XIOS
+[cylc]
+    UTC mode = True
+    [[events]]
+        mail events = shutdown
+[scheduling]
+    cycling mode            = 360day
+    initial cycle point     = 19790301T0000Z
+    final cycle point       = 19790301T0000Z
+    max active cycle points = 4
+    [[special tasks]]
+        sequential = ens_setup_all, atmos_main, postproc, pptransfer, supermean,
+ housekeeping, rose_arch_logs
+    [[dependencies]]
+        [[[ R1 ]]]
+            graph = fcm_make_um => fcm_make2_um => atmos_main
+        [[[ R1 ]]]
+            graph = install_cold => install_ancil => atmos_main
+        [[[R1]]]
+            graph = fcm_make_drivers => fcm_make2_drivers
+        [[[R1]]]
+            graph = xml
+        [[[ P1D ]]]
+            graph = ens_setup_all => atmos_main => housekeeping
+        [[[ P1D ]]]
+            graph = atmos_main => housekeeping
+[runtime]
+    [[root]]
+        script = rose task-run --verbose -O '(archer2)'
+        env-script = "eval $(rose task-env)"
+        [[[environment]]]
+            IS_CYLC_SUITE_INITIAL_CYCLE_POINT = $(if [ $CYLC_TASK_CYCLE_POINT ==
+ $CYLC_SUITE_INITIAL_CYCLE_POINT ]; then echo "true"; else echo "false"; fi)
+            IS_CYLC_TASK_TRY_NUMBER_1 = $(if [ $CYLC_TASK_TRY_NUMBER -eq 1 ]; th
+en echo "true"; else echo "false"; fi)
+            BASIS_UM_PT = $(rose date -c --calendar=360day --print-format='%Y,%m
+,%d,%H,%M,%S' 19790301T0000Z)
+            BASIS_YR = $(rose date -c --calendar=360day --print-format='%Y' 1979
+0301T0000Z)
+            DATEC_DUMP = $(rose date -c --calendar=360day --print-format='%Y%m%d
+_%H')
+            RUNID = $(echo -n $CYLC_SUITE_NAME | cut -d - -f 2 | cut -c 1-5)
+            UM_VN = 11.4
+            XIOS_XML=$CYLC_SUITE_SHARE_DIR/data/xml
+            USE_XIOS=true
+            XIOS_PATH = /work/n02/n02/jwc/XIOS/extract/xios_trunk_r2245
+            UM_ATM_NENS = 1
+            MODELS = um_ens xios
+            TASK_NAME_ROOT = atmos_ens
+        [[[events]]]
+            mail events = submission retry, retry, submission failed, failed, su
+bmission timeout, timeout
+            submission timeout = P1D
+    [[UM]]
+        script = rose task-run --verbose -O '(archer2)' --path="share/fcm_make_u
+m/build-*/bin"
+        [[[environment]]]
+            FLUME_IOS_NPROC = 0
+            RCF_NPROCX = 24
+            RCF_NPROCY = 16
+            ROSE_APP_OPT_CONF_KEYS = (ga7p0) (n1280e) (360day)
+            ROSE_TASK_APP = um
+            UM_ATM_NPROCX = 94
+            UM_ATM_NPROCY = 64
+            XIOS_NPROC = 6
+    [[RECONFIGURE]]
+        inherit = UM
+        [[[environment]]]
+            HYPERTHREADS = 1
+            OMP_NUM_THREADS = 2
+            TASKEND = $BASIS_UM_PT
+    [[ATMOS]]
+        inherit = UM
+        [[[environment]]]
+            ATMOS_EXEC = $CYLC_SUITE_SHARE_DIR/fcm_make_um/build-atmos/bin/um-at
+mos.exe
+            HYPERTHREADS = 1
+            OMP_NUM_THREADS = 2
+            CONTINUE = $(if $IS_CYLC_SUITE_INITIAL_CYCLE_POINT && $IS_CYLC_TASK_
+TRY_NUMBER_1; then echo "false"; else echo "true"; fi)
+            TASKEND = $(rose date -c --calendar=360day --print-format='y,m,d,h,M
+,s' --offset2=P1D 19790301T0000Z ref)
+    [[RUN_MAIN]]
+        [[[environment]]]
+            DATAM = $ROSE_DATA/History_Data
+            DATAW = $CYLC_TASK_WORK_PATH
+    [[fcm_make_um]]
+        inherit = RUN_MAIN, EXTRACT_RESOURCE, UMBUILD
+    [[fcm_make2_um]]
+        inherit = RUN_MAIN, UMBUILD_RESOURCE, UMBUILD
+    [[fcm_make_drivers]]
+        inherit = RUN_MAIN, EXTRACT_RESOURCE, UMBUILD
+    [[fcm_make2_drivers]]
+        inherit = RUN_MAIN, UMBUILD_RESOURCE, UMBUILD
+    [[xml]]
+        inherit = RUN_MAIN, XML_RESOURCE
+        [[[environment]]]
+            ROSE_APP_OPT_CONF_KEYS = n1280e
+    [[ens_setup_all]]
+        inherit = RUN_MAIN, ENS_RESOURCE, ATMOS
+        command scripting = rose task-run --verbose -O '(archer2)' --path="share
+/fcm_make_um/build-*/bin" --command-key=ens_setup_all
+    [[install_cold]]
+        inherit = RUN_MAIN, STARTDUMP, INSTALL_RESOURCE
+        [[[environment]]]
+            ROSE_APP_OPT_CONF_KEYS =  (ga7p0) (n1280e) (360day)
+    [[install_ancil]]
+        inherit = RUN_MAIN, INSTALL_RESOURCE
+        pre-script = . $ROSE_DATA/etc/um_ancils_gl
+        [[[environment]]]
+            ROSE_APP_OPT_CONF_KEYS = (ga7p0) (n1280e) (360day)
+    [[recon]]
+        inherit = RUN_MAIN, RCF_RESOURCE, RECONFIGURE
+    [[atmos_main]]
+        inherit = RUN_MAIN, ATMOS_RESOURCE, ATMOS
+        post-script = save_wallclock.sh P1D
+    [[fcm_make_pp]]
+        inherit = RUN_MAIN, EXTRACT_RESOURCE
+    [[fcm_make2_pp]]
+        inherit = RUN_MAIN, PPBUILD_RESOURCE
+    [[POSTPROC]]
+        [[[environment]]]
+            ARCHIVE_SET = $CYLC_SUITE_NAME
+    [[postproc]]
+        inherit = RUN_MAIN, POSTPROC_RESOURCE, POSTPROC
+        [[[environment]]]
+            MODELBASIS = $BASIS_UM_PT
+            CYCLEPERIOD = P1D
+    [[fcm_make_pptransfer]]
+        inherit = RUN_MAIN, EXTRACT_RESOURCE
+        [[[environment]]]
+            ROSE_TASK_APP = fcm_make_pp
+    [[fcm_make2_pptransfer]]
+        inherit = RUN_MAIN, PPTRANSFER_RESOURCE
+        [[[environment]]]
+            ROSE_TASK_APP = fcm_make_pp
+    [[pptransfer]]
+        inherit = RUN_MAIN, PPTRANSFER_RESOURCE
+        [[[environment]]]
+            CYCLEPERIOD = P1D
+            ROSE_TASK_APP = postproc
+    [[supermean]]
+        inherit = RUN_MAIN, SUPERMEAN_RESOURCE, POSTPROC
+        [[[environment]]]
+            BASIS = $(rose date -c --calendar=360day 19790301T0000Z)
+            TCYCLE = $(rose date -c --calendar=360day ref)
+            NCYCLE = $(rose date -c --calendar=360day --offset=P1D ref)
+    [[rose_arch_logs]]
+        inherit = RUN_MAIN, LOGS_RESOURCE
+        [[[environment]]]
+            ROSE_APP_OPT_CONF_KEYS = logs
+            ROSE_TASK_APP = rose_arch
+    [[rose_arch_wallclock]]
+        inherit = RUN_MAIN, WALLCLOCK_RESOURCE
+        [[[environment]]]
+            ROSE_APP_OPT_CONF_KEYS = wallclock
+            ROSE_TASK_APP = rose_arch
+    [[housekeeping]]
+        inherit = RUN_MAIN, HOUSEKEEP_RESOURCE
+# Ensembles
+# XIOS
+    [[NCAS_NOT_SUPPORTED]]
+        script = """
+            echo 'Task not supported at NCAS' >&2
+            false
+        """
+        [[[ job ]]]
+            # No need to submit to the queue
+            batch system = background
+    [[RETRIES]]
+        [[[job]]]
+            execution retry delays = 2*PT30M, 2*PT1H, PT3H, 3*PT6H
+    [[SUBMIT_RETRIES]]
+        [[[job]]]
+            submission retry delays = PT1M, 2*PT5M, 2*PT30M, 4*PT3H
+    [[LINUX]]
+        [[[environment]]]
+            PLATFORM = linux
+            UMDIR = ~um
+        [[[job]]]
+            batch system = background
+    [[EXTRACT_RESOURCE]]
+        inherit = LINUX
+    [[HPC]]
+        pre-script = """
+                     ulimit -s unlimited
+# ---------------ARCHER2 23-cab---------------------------
+                     module use /work/n02/n02/simon/modulefiles
+                     module load um
+# ---------------ARCHER2 23-cab---------------------------
+                     module list 2>&1
+                     unset OMP_NUM_THREADS
+                     export MPICH_CPUMASK_DISPLAY=1
+                     """
+        [[[directives]]]
+            --export=none
+            --chdir=/work/n02/n02/lrpedro
+            --partition=standard
+            --qos=largescale
+            --account=n02-cms
+        [[[environment]]]
+            PLATFORM = cce
+            CMIP6_ANCILS = $UMDIR/CMIP6_ANCIL/data/ancils
+        [[[job]]]
+            batch system = slurm
+        [[[remote]]]
+            host = login.archer2.ac.uk
+    [[HPC_SERIAL]]
+        inherit = HPC
+        [[[directives]]]
+            --nodes=1
+	    --tasks-per-node=128
+	    --cpus-per-task=1
+        [[[environment]]]
+            ROSE_TASK_N_JOBS = 128
+    [[UMBUILD]]
+        [[[environment]]]
+            CONFIG = ncas-ex-cce
+            OPENMP= true
+            OPTIM = safe
+            PREBUILD =
+    [[UMBUILD_RESOURCE]]
+        inherit = HPC_SERIAL
+        [[[job]]]
+            execution time limit = PT20M
+    [[STARTDUMP]]
+        [[[environment]]]
+            AINITIAL = /work/y07/shared/umshared/HRCM/start/br938a.da20041101_00
+    [[INSTALL_RESOURCE]]
+        inherit = HPC_SERIAL
+        [[[job]]]
+            execution time limit = PT1M
+    [[XML_RESOURCE]]
+        inherit = HPC_SERIAL
+        [[[job]]]
+            execution time limit = PT20M
+        [[[directives]]]
+            --qos=short
+            --reservation=shortqos
+    [[ENS_RESOURCE]]
+        inherit = HPC_SERIAL
+        [[[job]]]
+            execution time limit = PT20M
+        [[[directives]]]
+            --qos=short
+            --reservation=shortqos
+    [[UM_PARALLEL]]
+        inherit = HPC
+        [[[environment]]]
+            ATP_ENABLED = 1
+            ROSE_LAUNCHER = srun
+	    OMP_PLACES = cores
+    [[RCF_RESOURCE]]
+        inherit = UM_PARALLEL
+        [[[directives]]]
+            --nodes=6
+            --ntasks= 384
+            --tasks-per-node=64
+            --cpus-per-task=2
+        [[[environment]]]
+            OMP_NUM_THREADS=2
+            ROSE_LAUNCHER_PREOPTS = --hint=nomultithread --distribution=block:bl
+ock
+        [[[job]]]
+            execution time limit = PT20M
+    [[ATMOS_RESOURCE]]
+        inherit = UM_PARALLEL, SUBMIT_RETRIES
+        [[[directives]]]
+            --qos=largescale
+# ---------------ARCHER2 23-cab---------------------------
+            --nodes=95
+# ---------------ARCHER2 23-cab---------------------------
+        [[[environment]]]
+            OMP_NUM_THREADS=2
+            FI_OFI_RXM_SAR_LIMIT=64K
+            ROSE_LAUNCHER_PREOPTS_UM  = --het-group=0 --hint=nomultithread --dis
+tribution=block:block --nodes=94 --ntasks=6016 --tasks-per-node=64 --cpus-per-ta
+sk=2 env OMP_NUM_THREADS=2 HYPERTHREADS=1
+          ROSE_LAUNCHER_PREOPTS_XIOS = --het-group=1 --cpu-bind=cores --export=a
+ll --nodes=1 --ntasks=6 --tasks-per-node=6 --cpus-per-task=21 env OMP_NUM_THREAD
+S=1 HYPERTHREADS=1
+        [[[job]]]
+            execution time limit = PT40M
+    [[PPBUILD_RESOURCE]]
+        inherit = HPC_SERIAL
+        [[[job]]]
+            execution time limit = PT5M
+    [[POSTPROC_RESOURCE]]
+        inherit = HPC_SERIAL, RETRIES
+        pre-script = """module restore $UMDIR/modulefiles/postproc/2020.12.11
+                        module list 2>&1
+                        ulimit -s unlimited
+                     """
+	[[[job]]]
+            execution time limit = PT20M
+    [[PPTRANSFER_RESOURCE]]
+        inherit = POSTPROC_RESOURCE
+        [[[job]]]
+            batch system = background
+    [[SUPERMEAN_RESOURCE]]
+        inherit = LINUX, NCAS_NOT_SUPPORTED
+    [[LOGS_RESOURCE]]
+        inherit = LINUX, NCAS_NOT_SUPPORTED
+    [[WALLCLOCK_RESOURCE]]
+        inherit = HPC_SERIAL, NCAS_NOT_SUPPORTED
+    [[HOUSEKEEP_RESOURCE]]
+        inherit = LINUX
+[visualization]
+    initial cycle point = 19790301T0000Z
+    final cycle point = +P1D
+    default node attributes = style=filled, color=black, fillcolor=khaki
+    [[node attributes]]
+        RECONFIGURE = fillcolor=green
+        ATMOS = fillcolor=dodgerblue
+        POSTPROC = fillcolor=tomato
+        RUN_TESTS = fillcolor=lightskyblue
+        ROSE_ANA = fillcolor=pink
+        supermean = fillcolor=yellow
+        housekeeping = fillcolor=red

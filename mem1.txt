@@ -1,0 +1,16 @@
+-> report :  Memory report : Context <um-atmos_ens> : client side : memory used for buffer of each connection to server
+  +) To server with rank 15 : 23416094 bytes
+-> report :  Memory report : Context <um-atmos_ens> : client side : total memory used for buffer 23416094 bytes
+-> info :  CContextServer: Receive context <um-atmos_ens> finalize.
+-> report :  Memory report : Context <um-atmos_ens> : server side : memory used for buffer of each connection to client
+  +) With client of rank 15 : 544101 bytes
+-> report :  Memory report : Context <um-atmos_ens> : server side : total memory used for buffer 544101 bytes
+-> info : CContext: Context <um-atmos_ens> is finalized.
+-> info : Client side context is finalized
+-> report :  Performance report : Whole time from XIOS init and finalize: 838.276 s
+-> report :  Performance report : total time spent for XIOS : 16.3867 s
+-> report :  Performance report : time spent for waiting free buffer : 0.00130468 s
+-> report :  Performance report : Ratio : 0.000155638 %
+-> report :  Performance report : This ratio must be close to zero. Otherwise it may be usefull to increase buffer size or numbers of server
+-> report :  Memory report : Minimum buffer size required : 544085 bytes
+-> report :  Memory report : increasing it by a factor will increase performance, depending of the volume of data wrote in file at each time step of the file

@@ -1,0 +1,178 @@
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens00
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens01
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens02
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens03
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens04
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens05
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens06
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens07
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens08
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens09
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens10
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens11
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens12
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens13
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens14
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens15
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens16
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens17
+cp -r u-ch427-n216-template u-ch427-n216-single3-ens18
+
+sed -i 's/ATM_NENS=18/ATM_NENS=0/g' u-ch427-n216-single3-ens00/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=1/g' u-ch427-n216-single3-ens01/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=2/g' u-ch427-n216-single3-ens02/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=3/g' u-ch427-n216-single3-ens03/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=4/g' u-ch427-n216-single3-ens04/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=5/g' u-ch427-n216-single3-ens05/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=6/g' u-ch427-n216-single3-ens06/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=7/g' u-ch427-n216-single3-ens07/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=8/g' u-ch427-n216-single3-ens08/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=9/g' u-ch427-n216-single3-ens09/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=10/g' u-ch427-n216-single3-ens10/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=11/g' u-ch427-n216-single3-ens11/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=12/g' u-ch427-n216-single3-ens12/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=13/g' u-ch427-n216-single3-ens13/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=14/g' u-ch427-n216-single3-ens14/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=15/g' u-ch427-n216-single3-ens15/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=16/g' u-ch427-n216-single3-ens16/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=17/g' u-ch427-n216-single3-ens17/rose-suite.conf;
+sed -i 's/ATM_NENS=18/ATM_NENS=18/g' u-ch427-n216-single3-ens18/rose-suite.conf;
+
+cd ../u-ch427-n216-single3-ens00; rose suite-run;
+cd ../u-ch427-n216-single3-ens01; rose suite-run;
+cd ../u-ch427-n216-single3-ens02; rose suite-run;
+cd ../u-ch427-n216-single3-ens03; rose suite-run;
+cd ../u-ch427-n216-single3-ens04; rose suite-run;
+cd ../u-ch427-n216-single3-ens05; rose suite-run;
+cd ../u-ch427-n216-single3-ens06; rose suite-run;
+cd ../u-ch427-n216-single3-ens07; rose suite-run;
+cd ../u-ch427-n216-single3-ens08; rose suite-run;
+cd ../u-ch427-n216-single3-ens09; rose suite-run;
+cd ../u-ch427-n216-single3-ens10; rose suite-run;
+cd ../u-ch427-n216-single3-ens11; rose suite-run;
+cd ../u-ch427-n216-single3-ens12; rose suite-run;
+cd ../u-ch427-n216-single3-ens13; rose suite-run;
+cd ../u-ch427-n216-single3-ens14; rose suite-run;
+cd ../u-ch427-n216-single3-ens15; rose suite-run;
+cd ../u-ch427-n216-single3-ens16; rose suite-run;
+cd ../u-ch427-n216-single3-ens17; rose suite-run;
+cd ../u-ch427-n216-single3-ens18; rose suite-run;
+
+ ./xml.sh u-ch427-n216-single3-ens00
+ ./xml.sh u-ch427-n216-single3-ens01
+ ./xml.sh u-ch427-n216-single3-ens02
+ ./xml.sh u-ch427-n216-single3-ens03
+ ./xml.sh u-ch427-n216-single3-ens04
+ ./xml.sh u-ch427-n216-single3-ens05
+ ./xml.sh u-ch427-n216-single3-ens06
+ ./xml.sh u-ch427-n216-single3-ens07
+ ./xml.sh u-ch427-n216-single3-ens08
+ ./xml.sh u-ch427-n216-single3-ens09
+ ./xml.sh u-ch427-n216-single3-ens10
+ ./xml.sh u-ch427-n216-single3-ens11
+ ./xml.sh u-ch427-n216-single3-ens12
+ ./xml.sh u-ch427-n216-single3-ens13
+ ./xml.sh u-ch427-n216-single3-ens14
+ ./xml.sh u-ch427-n216-single3-ens15
+ ./xml.sh u-ch427-n216-single3-ens16
+ ./xml.sh u-ch427-n216-single3-ens17
+ ./xml.sh u-ch427-n216-single3-ens18
+
+ ./xml-single.sh u-ch427-n216-single3-ens00
+ ./xml-single.sh u-ch427-n216-single3-ens01
+ ./xml-single.sh u-ch427-n216-single3-ens02
+ ./xml-single.sh u-ch427-n216-single3-ens03
+ ./xml-single.sh u-ch427-n216-single3-ens04
+ ./xml-single.sh u-ch427-n216-single3-ens05
+ ./xml-single.sh u-ch427-n216-single3-ens06
+ ./xml-single.sh u-ch427-n216-single3-ens07
+ ./xml-single.sh u-ch427-n216-single3-ens08
+ ./xml-single.sh u-ch427-n216-single3-ens09
+ ./xml-single.sh u-ch427-n216-single3-ens10
+ ./xml-single.sh u-ch427-n216-single3-ens11
+ ./xml-single.sh u-ch427-n216-single3-ens12
+ ./xml-single.sh u-ch427-n216-single3-ens13
+ ./xml-single.sh u-ch427-n216-single3-ens14
+ ./xml-single.sh u-ch427-n216-single3-ens15
+ ./xml-single.sh u-ch427-n216-single3-ens16
+ ./xml-single.sh u-ch427-n216-single3-ens17
+ ./xml-single.sh u-ch427-n216-single3-ens18
+
+cylc trigger u-ch427-n216-single3-ens01 atmos_main;
+cylc trigger u-ch427-n216-single3-ens02 atmos_main;
+cylc trigger u-ch427-n216-single3-ens03 atmos_main;
+cylc trigger u-ch427-n216-single3-ens04 atmos_main;
+cylc trigger u-ch427-n216-single3-ens05 atmos_main;
+cylc trigger u-ch427-n216-single3-ens06 atmos_main;
+cylc trigger u-ch427-n216-single3-ens07 atmos_main;
+cylc trigger u-ch427-n216-single3-ens08 atmos_main;
+cylc trigger u-ch427-n216-single3-ens09 atmos_main;
+cylc trigger u-ch427-n216-single3-ens10 atmos_main;
+cylc trigger u-ch427-n216-single3-ens11 atmos_main;
+cylc trigger u-ch427-n216-single3-ens12 atmos_main;
+cylc trigger u-ch427-n216-single3-ens13 atmos_main;
+cylc trigger u-ch427-n216-single3-ens14 atmos_main;
+cylc trigger u-ch427-n216-single3-ens15 atmos_main;
+cylc trigger u-ch427-n216-single3-ens16 atmos_main;
+cylc trigger u-ch427-n216-single3-ens17 atmos_main;
+cylc trigger u-ch427-n216-single3-ens18 atmos_main;
+
+cylc trigger u-ch427-n216-single3-ens01 atmos_main;
+cylc trigger u-ch427-n216-single3-ens02 atmos_main;
+cylc trigger u-ch427-n216-single3-ens03 atmos_main;
+cylc trigger u-ch427-n216-single3-ens04 atmos_main;
+cylc trigger u-ch427-n216-single3-ens05 atmos_main;
+cylc trigger u-ch427-n216-single3-ens06 atmos_main;
+cylc trigger u-ch427-n216-single3-ens07 atmos_main;
+cylc trigger u-ch427-n216-single3-ens08 atmos_main;
+cylc trigger u-ch427-n216-single3-ens09 atmos_main;
+cylc trigger u-ch427-n216-single3-ens10 atmos_main;
+cylc trigger u-ch427-n216-single3-ens11 atmos_main;
+cylc trigger u-ch427-n216-single3-ens12 atmos_main;
+cylc trigger u-ch427-n216-single3-ens13 atmos_main;
+cylc trigger u-ch427-n216-single3-ens14 atmos_main;
+cylc trigger u-ch427-n216-single3-ens15 atmos_main;
+cylc trigger u-ch427-n216-single3-ens16 atmos_main;
+cylc trigger u-ch427-n216-single3-ens17 atmos_main;
+cylc trigger u-ch427-n216-single3-ens18 atmos_main;
+
+cylc stop -n u-ch427-n216-single3-ens00
+cylc stop -n u-ch427-n216-single3-ens01
+cylc stop -n u-ch427-n216-single3-ens02
+cylc stop -n u-ch427-n216-single3-ens03
+cylc stop -n u-ch427-n216-single3-ens04
+cylc stop -n u-ch427-n216-single3-ens05
+cylc stop -n u-ch427-n216-single3-ens06
+cylc stop -n u-ch427-n216-single3-ens07
+cylc stop -n u-ch427-n216-single3-ens08
+cylc stop -n u-ch427-n216-single3-ens09
+cylc stop -n u-ch427-n216-single3-ens10
+cylc stop -n u-ch427-n216-single3-ens11
+cylc stop -n u-ch427-n216-single3-ens12
+cylc stop -n u-ch427-n216-single3-ens13
+cylc stop -n u-ch427-n216-single3-ens14
+cylc stop -n u-ch427-n216-single3-ens15
+cylc stop -n u-ch427-n216-single3-ens16
+cylc stop -n u-ch427-n216-single3-ens17
+cylc stop -n u-ch427-n216-single3-ens18
+
+./tf.sh u-ch427-n216-false-ens0
+./tf.sh u-ch427-n216-false-ens1
+./tf.sh u-ch427-n216-false-ens2
+./tf.sh u-ch427-n216-false-ens3
+./tf.sh u-ch427-n216-false-ens4
+./tf.sh u-ch427-n216-false-ens5
+./tf.sh u-ch427-n216-false-ens6
+./tf.sh u-ch427-n216-false-ens7
+./tf.sh u-ch427-n216-false-ens8
+./tf.sh u-ch427-n216-false-ens9
+./tf.sh u-ch427-n216-false-ens10
+./tf.sh u-ch427-n216-false-ens11
+./tf.sh u-ch427-n216-false-ens12
+./tf.sh u-ch427-n216-false-ens13
+./tf.sh u-ch427-n216-false-ens14
+./tf.sh u-ch427-n216-false-ens15
+./tf.sh u-ch427-n216-false-ens16
+./tf.sh u-ch427-n216-false-ens17
+./tf.sh u-ch427-n216-false-ens18
+

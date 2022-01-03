@@ -1,0 +1,261 @@
+{# Macro to calculate number of nodes required based on total tasks, #}
+{# OpenMP threads, hyperthreads and number of cores per node #}
+{%- macro node(t,o,h,pn) -%}
+  {{ ((t*o)/(h*pn)) | round (0, 'ceil') | int }}
+{%- endmacro -%}
+
+{# Macro to calculate number of tasks per NUMA region on a node based on #}
+{# OpenMP threads, hyperthreads and number of cores per node. #}
+{# There are 8 (128/16) NUMA regions per node #}
+{%- macro tpnuma(o,h,pn,nu) -%}
+  {{ ((h*pn)/(nu*o)) | round (0, 'ceil') | int }}
+{%- endmacro -%}
+
+{% set NUMA = 8 %}
+{% set PPN = 128 %}
+{% set APPN = MAIN_ATM_PPN if MAIN_ATM_PPN is defined else PPN %}
+{% set TASKS_RCF = MAIN_RCF_PROCX * MAIN_RCF_PROCY %}
+{% set TASKS_ATM = MAIN_ATM_PROCX * MAIN_ATM_PROCY + MAIN_IOS_NPROC %}
+{% set NODE_RCF = node(TASKS_RCF, MAIN_OMPTHR_RCF, MAIN_HYPTHR_RCF, APPN) %}
+{% set NODE_ATM = node(TASKS_ATM, MAIN_OMPTHR_ATM, MAIN_HYPTHR_ATM, APPN) %}
+{% set TPNUMA_RCF = tpnuma(MAIN_OMPTHR_RCF, MAIN_HYPTHR_RCF, APPN, NUMA) %}
+{% set TPNUMA_ATM = tpnuma(MAIN_OMPTHR_ATM, MAIN_HYPTHR_ATM, APPN, NUMA) %}
+
+{# Set up start dumps #}
+{% set AINITIAL_DIR = '$UMDIR/hadgem3/initial/atmos/' %}
+{% if EXPT_HORIZ == 'n96e' %}
+{% set AINITIAL = AINITIAL_DIR + 'N96L85/ab642a.da19880901_00' %}
+{% elif EXPT_HORIZ == 'n216e' %}
+{% set AINITIAL = AINITIAL_DIR + 'N216L85/ab680a.da19880901_00' %}
+{% elif EXPT_HORIZ == 'n512e' %}
+{% set AINITIAL = AINITIAL_DIR + 'N216L85/ab680a.da19880901_00' %}
+{% elif EXPT_HORIZ == 'n1280e' %}
+{% set AINITIAL = '/work/y07/shared/umshared/HRCM/start/br938a.da20041101_00' %}
+{% endif %}
+
+{# set up slurm flags for OpenMP/non-OpenMP #}
+{% if MAIN_OMPTHR_RCF > 1 %}
+ {% set RCF_SLURM_FLAGS= "--hint=nomultithread --distribution=block:block" %}
+{% else %}
+ {% set RCF_SLURM_FLAGS = "--cpu-bind=cores" %}
+{% endif %}
+{% if MAIN_OMPTHR_ATM > 1 %}
+ {% set ATM_SLURM_FLAGS= "--hint=nomultithread --distribution=block:block" %}
+{% else %}
+ {% set ATM_SLURM_FLAGS = "--cpu-bind=cores" %}
+{% endif %}
+
+{% if ARCHER2_QUEUE == 'short' %}
+  {% set ARCHER2_RESERVATION = "--reservation=shortqos" %}
+{% else %}
+  {% set ARCHER2_RESERVATION = "" %}
+{% endif %}
+
+
+
+# Ensembles
+{% if ATMOS_NENS > 0 %}
+ {% set ATMOS_NEXEC = ATMOS_NENS %}
+{% else %}
+ {% set ATMOS_NEXEC = 1 %}
+{% endif %}
+{% set NEXEC = ATMOS_NEXEC %}
+
+# XIOS
+{% if XIOS_NPROC > 0 %}
+ {% set XPPN = XIOS_PPN if XIOS_PPN is defined else PPN %}
+ {% set XIOS_NODES = (XIOS_NPROC/XPPN)|round(0,'ceil')|int %}
+ {% set XIOS_PPNU = (XIOS_NPROC/(XIOS_NODES*NUMA))|round(0,'ceil')|int %}
+ {% set XIOS_SPACING = (PPN/XPPN)|round(0,'floor')|int %}
+ {% set NEXEC = NEXEC+1 %}
+{% endif %}
+
+
+
+    [[NCAS_NOT_SUPPORTED]]
+        script = """
+            echo 'Task not supported at NCAS' >&2
+            false
+        """
+        [[[ job ]]]
+            # No need to submit to the queue
+            batch system = background
+
+    [[RETRIES]]
+        [[[job]]]
+            execution retry delays = 2*PT30M, 2*PT1H, PT3H, 3*PT6H
+
+    [[SUBMIT_RETRIES]]
+        [[[job]]]
+            submission retry delays = PT1M, 2*PT5M, 2*PT30M, 4*PT3H
+
+    [[LINUX]]
+        [[[environment]]]
+            PLATFORM = linux
+            UMDIR = ~um
+        [[[job]]]
+            batch system = background
+
+    [[EXTRACT_RESOURCE]]
+        inherit = LINUX
+
+    [[HPC]]
+        pre-script = """
+                     ulimit -s unlimited
+# ---------------ARCHER2 23-cab---------------------------
+                     module use /work/n02/n02/simon/modulefiles
+                     module load um
+# ---------------ARCHER2 23-cab---------------------------
+                     module list 2>&1
+                     unset OMP_NUM_THREADS
+                     export MPICH_CPUMASK_DISPLAY=1
+                     """
+        [[[directives]]]
+            --export=none
+            --chdir=/work/n02/n02/lrpedro
+            --partition=standard
+            --qos={{ARCHER2_QUEUE}}
+            --account={{ARCHER2_GROUP}}
+            {{ARCHER2_RESERVATION}}
+        [[[environment]]]
+            PLATFORM = cce
+            CMIP6_ANCILS = $UMDIR/CMIP6_ANCIL/data/ancils
+        [[[job]]]
+            batch system = slurm
+        [[[remote]]]
+            host = login.archer2.ac.uk
+{% if HPC_USER is defined %}
+            owner = {{HPC_USER}}
+{% endif %}
+
+    [[HPC_SERIAL]]
+        inherit = HPC
+        [[[directives]]]
+            --nodes=1
+	    --tasks-per-node=128
+	    --cpus-per-task=1
+        [[[environment]]]
+            ROSE_TASK_N_JOBS = 128
+
+    [[UMBUILD]]
+        [[[environment]]]
+            CONFIG = ncas-ex-cce
+            OPENMP= true
+            OPTIM = safe
+            PREBUILD =
+
+    [[UMBUILD_RESOURCE]]
+        inherit = HPC_SERIAL
+        [[[job]]]
+            execution time limit = PT20M
+
+    [[STARTDUMP]]
+        [[[environment]]]
+            AINITIAL = {{AINITIAL}}
+
+    [[INSTALL_RESOURCE]]
+        inherit = HPC_SERIAL
+        [[[job]]]
+            execution time limit = PT1M
+
+    [[XML_RESOURCE]]
+        inherit = HPC_SERIAL
+        [[[job]]]
+            execution time limit = PT20M
+        [[[directives]]]
+            --qos=short
+            --reservation=shortqos
+
+    [[ENS_RESOURCE]]
+        inherit = HPC_SERIAL
+        [[[job]]]
+            execution time limit = PT20M
+        [[[directives]]]
+            --qos=short
+            --reservation=shortqos
+
+    [[UM_PARALLEL]]
+        inherit = HPC
+        [[[environment]]]
+            ATP_ENABLED = 1
+            ROSE_LAUNCHER = srun
+	    OMP_PLACES = cores
+    [[RCF_RESOURCE]]
+        inherit = UM_PARALLEL
+        [[[directives]]]
+            --nodes={{NODE_RCF}}
+            --ntasks= {{TASKS_RCF}}
+            --tasks-per-node={{NUMA*(TPNUMA_RCF|int)}}
+            --cpus-per-task={{MAIN_OMPTHR_RCF}}
+        [[[environment]]]
+            OMP_NUM_THREADS={{MAIN_OMPTHR_RCF}}
+            ROSE_LAUNCHER_PREOPTS = {{RCF_SLURM_FLAGS}}
+        [[[job]]]
+            execution time limit = PT20M
+
+    [[ATMOS_RESOURCE]]
+        inherit = UM_PARALLEL, SUBMIT_RETRIES
+        [[[directives]]]
+{% if ARCHER2_QUEUE is defined %}
+            --qos={{ARCHER2_QUEUE}}
+{% if ARCHER2_QUEUE == 'short' %}
+            --reservation=shortqos
+{% endif %}
+{% endif %}
+
+# ---------------ARCHER2 23-cab---------------------------
+            --nodes={{((ATMOS_NEXEC|int*NODE_ATM|int)+XIOS_NODES|int)}}
+# ---------------ARCHER2 23-cab---------------------------
+
+        [[[environment]]]
+            OMP_NUM_THREADS={{MAIN_OMPTHR_ATM}}
+            FI_OFI_RXM_SAR_LIMIT=64K
+{% if NEXEC > 1 %}
+            ROSE_LAUNCHER_PREOPTS_UM  = --het-group=0 {{ATM_SLURM_FLAGS}} --node
+s={{NODE_ATM}} --ntasks={{TASKS_ATM}} --tasks-per-node={{NUMA*(TPNUMA_ATM|int)}}
+ --cpus-per-task={{MAIN_OMPTHR_ATM}} env OMP_NUM_THREADS={{MAIN_OMPTHR_ATM}} HYP
+ERTHREADS={{HYPERTHREADS}}
+  {% if XIOS_NPROC > 0 %}
+          ROSE_LAUNCHER_PREOPTS_XIOS = --het-group={{NEXEC-1}} --cpu-bind=cores
+--export=all --nodes={{XIOS_NODES}} --ntasks={{XIOS_NPROC}} --tasks-per-node={{X
+PPN}} --cpus-per-task={{XIOS_SPACING}} env OMP_NUM_THREADS=1 HYPERTHREADS=1
+  {% endif %}
+{% else %}
+           ROSE_LAUNCHER_PREOPTS_UM  = {{ATM_SLURM_FLAGS}}  --nodes={{NODE_ATM}}
+ --tasks-per-node={{NUMA*(TPNUMA_ATM|int)}} --cpus-per-task={{MAIN_OMPTHR_ATM}}
+env OMP_NUM_THREADS={{MAIN_OMPTHR_ATM}} HYPERTHREADS={{HYPERTHREADS}}
+{% endif %}
+        [[[job]]]
+            execution time limit = {{MAIN_CLOCK}}
+
+
+    [[PPBUILD_RESOURCE]]
+        inherit = HPC_SERIAL
+        [[[job]]]
+            execution time limit = PT5M
+
+    [[POSTPROC_RESOURCE]]
+        inherit = HPC_SERIAL, RETRIES
+        pre-script = """module restore $UMDIR/modulefiles/postproc/2020.12.11
+                        module list 2>&1
+                        ulimit -s unlimited
+                     """
+	[[[job]]]
+            execution time limit = PT20M
+
+    [[PPTRANSFER_RESOURCE]]
+        inherit = POSTPROC_RESOURCE
+        [[[job]]]
+            batch system = background
+
+    [[SUPERMEAN_RESOURCE]]
+        inherit = LINUX, NCAS_NOT_SUPPORTED
+
+    [[LOGS_RESOURCE]]
+        inherit = LINUX, NCAS_NOT_SUPPORTED
+
+    [[WALLCLOCK_RESOURCE]]
+        inherit = HPC_SERIAL, NCAS_NOT_SUPPORTED
+
+    [[HOUSEKEEP_RESOURCE]]
+        inherit = LINUX

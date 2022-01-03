@@ -1,0 +1,71 @@
+u-ch427-n512-ens00-single
+u-ch427-n512-ens01-single
+u-ch427-n512-ens02-single
+u-ch427-n512-ens03-single
+u-ch427-n512-ens04-single
+u-ch427-n512-ens05-single
+u-ch427-n512-ens06-single
+u-ch427-n512-ens07-single
+u-ch427-n512-ens08-single
+u-ch427-n512-ens09-single
+u-ch427-n512-ens10-single
+
+cp -r u-ch427-n512-template u-ch427-n512-ens00-single
+cp -r u-ch427-n512-template u-ch427-n512-ens01-single
+cp -r u-ch427-n512-template u-ch427-n512-ens02-single
+cp -r u-ch427-n512-template u-ch427-n512-ens03-single
+cp -r u-ch427-n512-template u-ch427-n512-ens04-single
+cp -r u-ch427-n512-template u-ch427-n512-ens05-single
+cp -r u-ch427-n512-template u-ch427-n512-ens06-single
+cp -r u-ch427-n512-template u-ch427-n512-ens07-single
+cp -r u-ch427-n512-template u-ch427-n512-ens08-single
+cp -r u-ch427-n512-template u-ch427-n512-ens09-single
+cp -r u-ch427-n512-template u-ch427-n512-ens10-single
+
+sed -i 's/ATM_NENS=1/ATM_NENS=0/g' u-ch427-n512-ens00-single/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=1/g' u-ch427-n512-ens01-single/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=2/g' u-ch427-n512-ens02-single/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=3/g' u-ch427-n512-ens03-single/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=4/g' u-ch427-n512-ens04-single/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=5/g' u-ch427-n512-ens05-single/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=6/g' u-ch427-n512-ens06-single/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=7/g' u-ch427-n512-ens07-single/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=8/g' u-ch427-n512-ens08-single/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=9/g' u-ch427-n512-ens09-single/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=10/g' u-ch427-n512-ens10-single/rose-suite.conf;
+
+cd ../u-ch427-n512-ens00-single; rose suite-run
+cd ../u-ch427-n512-ens01-single; rose suite-run
+cd ../u-ch427-n512-ens02-single; rose suite-run
+cd ../u-ch427-n512-ens03-single; rose suite-run
+cd ../u-ch427-n512-ens04-single; rose suite-run
+cd ../u-ch427-n512-ens05-single; rose suite-run
+cd ../u-ch427-n512-ens06-single; rose suite-run
+cd ../u-ch427-n512-ens07-single; rose suite-run
+cd ../u-ch427-n512-ens08-single; rose suite-run
+cd ../u-ch427-n512-ens09-single; rose suite-run
+cd ../u-ch427-n512-ens10-single; rose suite-run
+
+./scripts/step2-n512.sh u-ch427-n512-ens00-single
+./scripts/step2-n512.sh u-ch427-n512-ens01-single
+./scripts/step2-n512.sh u-ch427-n512-ens02-single
+./scripts/step2-n512.sh u-ch427-n512-ens03-single
+./scripts/step2-n512.sh u-ch427-n512-ens04-single
+./scripts/step2-n512.sh u-ch427-n512-ens05-single
+./scripts/step2-n512.sh u-ch427-n512-ens06-single
+./scripts/step2-n512.sh u-ch427-n512-ens07-single
+./scripts/step2-n512.sh u-ch427-n512-ens08-single
+./scripts/step2-n512.sh u-ch427-n512-ens09-single
+./scripts/step2-n512.sh u-ch427-n512-ens10-single
+
+ ./xml-single.sh u-ch427-n512-ens00-single
+ ./xml-single.sh u-ch427-n512-ens01-single
+ ./xml-single.sh u-ch427-n512-ens02-single
+ ./xml-single.sh u-ch427-n512-ens03-single
+ ./xml-single.sh u-ch427-n512-ens04-single
+ ./xml-single.sh u-ch427-n512-ens05-single
+ ./xml-single.sh u-ch427-n512-ens06-single
+ ./xml-single.sh u-ch427-n512-ens07-single
+ ./xml-single.sh u-ch427-n512-ens08-single
+ ./xml-single.sh u-ch427-n512-ens09-single
+ ./xml-single.sh u-ch427-n512-ens10-single
