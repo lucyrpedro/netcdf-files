@@ -23,10 +23,9 @@ fields = ["SUITE", "TIME", "INITIAL", "ENSEMBLE", "RESOLUTION", "NODES", "JOB_SU
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
-data_M = {}
-
 f_dir = open("aux-files/dir.txt", "r")
 for file in f_dir:
+    data_M = {}
     print(file)
 
     # Parse the data for the information inside the filename
