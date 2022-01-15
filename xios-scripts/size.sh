@@ -47,10 +47,10 @@ do
 done
 
 cd $curr
-rm -rf file
-touch file.csv
+rm -rf size.csv
+touch size.csv
 
 for (( c=0; c<=$iter; c++ ))
 do
-	cat aux-$c >> file.csv
+	cat aux-$c >> size.csv
 done
