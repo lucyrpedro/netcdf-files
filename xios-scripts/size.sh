@@ -35,11 +35,9 @@ do
 		total=$(echo $total $line |awk '{print $1 + $2}')
 #		echo $line
 	done < aux4
-	echo -e "$ens,,Total Size,$total\n" >> aux-${ens}
+	echo -e "$ens,,Total Size,$total\n" >> aux-$c
 
 	rm aux1 aux2 aux3 aux4
-	cp aux-$ens aux-$c
-#	mv aux-$ens $curr
 	mv aux-$c $curr
 done
 
