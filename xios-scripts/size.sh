@@ -39,7 +39,7 @@ do
 
 	rm aux1 aux2 aux3 aux4
 	cp aux-$ens aux-$c
-	mv aux-$ens $curr
+#	mv aux-$ens $curr
 	mv aux-$c $curr
 done
 
@@ -50,4 +50,6 @@ touch size-$suite.csv
 for (( c=0; c<=$iter; c++ ))
 do
 	cat aux-$c >> size-$suite.csv
+	rm aux-$c
 done
+
