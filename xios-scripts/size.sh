@@ -25,9 +25,8 @@ do
 	echo $ens > aux1
 	ls -lh |grep test | cut -c 43-61 > aux2
 	ls -lh |grep test | cut -c 25-30 > aux3
-	ls -l |grep test | cut -c 25-35 > aux4
-	ls -s1 |grep test | awk '{print $1}' > aux5
-	paste -d ',' aux1 aux2 aux3 aux4 aux5 >> aux-$c
+	ls -s1 |grep test | awk '{print $1}' > aux4
+	paste -d ',' aux1 aux2 aux3 aux4 >> aux-$c
 
 	total=0
 	while IFS= read -r line
@@ -35,19 +34,12 @@ do
 		total=$(echo $total $line |awk '{print $1 + $2}')
 	done < aux4
 
-        total2=0
-        while IFS= read -r line
-        do
-                total2=$(echo $total2 $line |awk '{print $1 + $2}')
-        done < aux5
-
-	echo -e "$ens,,Total Size,$total,$total2\n" >> aux-$c
-        echo -e "\nTotal Size,$ens,$c,$total,$total2" > total-$c
+	echo -e "$ens,,Total Size,$total\n" >> aux-$c
+        echo -e "Total Size,$ens,$c,$total" > total-$c
 
 	rm aux1 aux2 aux3 aux4
 	mv aux-$c $curr
 	mv total-$c $curr
-	mv aux5 $curr
 done
 
 cd $curr

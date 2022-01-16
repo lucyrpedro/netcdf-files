@@ -19,31 +19,31 @@ touch total-all-suites.csv
 #do
 	suite=u-ch427-n96-max18
 	cat total-$suite.csv >> total-all-suites.csv
-	echo -e "\n" >> total-all-suites.csv
+	cat blank.txt >> total-all-suites.csv
 	suite=u-ch427-n96-max18-mf
         cat total-$suite.csv >> total-all-suites.csv
-        echo -e "\n" >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
 	suite=u-ch427-n96-max18-single
         cat total-$suite.csv >> total-all-suites.csv
-        echo -e "\n" >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
         suite=u-ch427-n216-max18
         cat total-$suite.csv >> total-all-suites.csv
-        echo -e "\n" >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
         suite=u-ch427-n216-max18-mf
         cat total-$suite.csv >> total-all-suites.csv
-        echo -e "\n" >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
         suite=u-ch427-n216-max18-single
         cat total-$suite.csv >> total-all-suites.csv
-        echo -e "\n" >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
         suite=u-ch427-n512-max18
         cat total-$suite.csv >> total-all-suites.csv
-        echo -e "\n" >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
         suite=u-ch427-n512-max18-mf
         cat total-$suite.csv >> total-all-suites.csv
-        echo -e "\n" >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
         suite=u-ch427-n512-max18-single
         cat total-$suite.csv >> total-all-suites.csv
-        echo -e "\n" >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
 
 #done
 
