@@ -37,7 +37,7 @@ do
 	done < aux4
 
 	echo -e "$ens,,Total Size,$total\n" >> aux-$c
-        echo -e "Total Size,$ens,$c,total" > total-$c
+        echo -e "Total Size,$ens,$c,$total" > total-$c
 
 	rm aux1 aux2 aux3 aux4
 	mv aux-$c $curr
