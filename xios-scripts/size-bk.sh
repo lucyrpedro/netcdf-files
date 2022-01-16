@@ -35,19 +35,26 @@ do
 		total=$(echo $total $line |awk '{print $1 + $2}')
 #		echo $line
 	done < aux4
+
 	echo -e "$ens,,Total Size,$total\n" >> aux-$c
+        echo -e "Total Size,$ens,$c,$total" > total-$c
 
 	rm aux1 aux2 aux3 aux4
 	mv aux-$c $curr
+	mv total-$c $curr
 done
 
 cd $curr
 rm -rf size-$suite.csv
+rm -rf total-$suite.csv
 touch size-$suite.csv
+touch total-$suite.csv
 
 for (( c=0; c<=$iter; c++ ))
 do
 	cat aux-$c >> size-$suite.csv
+	cat total-$c >> total-$suite.csv
 	rm aux-$c
+	rm total-$c
 done
 

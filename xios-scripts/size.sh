@@ -26,7 +26,9 @@ do
 	ls -lh |grep test | cut -c 43-61 > aux2
 	ls -lh |grep test | cut -c 25-30 > aux3
 	ls -l |grep test | cut -c 25-35 > aux4
-	paste -d ',' aux1 aux2 aux3 aux4 >> aux-$c
+	ls -s1 |grep test | awk '{print $1}' > aux5
+#	sed 's/ test/,test/' aux5 > aux6
+	paste -d ',' aux1 aux2 aux3 aux4 aux5 >> aux-$c
 
 	total=0
 	while IFS= read -r line
@@ -42,6 +44,7 @@ do
 	rm aux1 aux2 aux3 aux4
 	mv aux-$c $curr
 	mv total-$c $curr
+	mv aux5 $curr
 done
 
 cd $curr
