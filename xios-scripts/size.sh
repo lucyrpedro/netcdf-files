@@ -27,19 +27,22 @@ do
 	ls -lh |grep test | cut -c 25-30 > aux3
 	ls -l |grep test | cut -c 25-35 > aux4
 	ls -s1 |grep test | awk '{print $1}' > aux5
-#	sed 's/ test/,test/' aux5 > aux6
 	paste -d ',' aux1 aux2 aux3 aux4 aux5 >> aux-$c
 
 	total=0
 	while IFS= read -r line
 	do
-#		total=$(echo "$total + $line" |bc)
 		total=$(echo $total $line |awk '{print $1 + $2}')
-#		echo $line
 	done < aux4
 
-	echo -e "$ens,,Total Size,$total\n" >> aux-$c
-        echo -e "Total Size,$ens,$c,$total" > total-$c
+        total2=0
+        while IFS= read -r line
+        do
+                total2=$(echo $total2 $line |awk '{print $1 + $2}')
+        done < aux5
+
+	echo -e "$ens,,Total Size,$total,$total2\n" >> aux-$c
+        echo -e "\nTotal Size,$ens,$c,$total,$total2" > total-$c
 
 	rm aux1 aux2 aux3 aux4
 	mv aux-$c $curr
