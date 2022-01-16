@@ -21,12 +21,12 @@ do
 	dir="/home/n02/n02/lrpedro/cylc-run/${ens}/work/19880901T0000Z/atmos_main/"	
 	echo $dir
 	cd $dir
-	echo -e "Suite, Netcdf File, Size, Size (bytes)" > aux-${ens}
+	echo -e "Suite, Netcdf File, Size, Size (bytes)" > aux-$c
 	echo $ens > aux1
 	ls -lh |grep test | cut -c 43-61 > aux2
 	ls -lh |grep test | cut -c 25-30 > aux3
 	ls -l |grep test | cut -c 25-35 > aux4
-	paste -d ',' aux1 aux2 aux3 aux4 >> aux-${ens}
+	paste -d ',' aux1 aux2 aux3 aux4 >> aux-$c
 
 	total=0
 	while IFS= read -r line
