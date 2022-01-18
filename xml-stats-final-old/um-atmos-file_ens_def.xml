@@ -1,0 +1,16 @@
+<file_definition format="netcdf4" time_counter="instant" type="one_file">
+
+<file description="Field m01s00i028" id="test-m01s00i028" name="test-m01s00i028" output_freq="3h">
+
+		<field
+			id="m01s00i028_stdev"
+			name="m01s00i028_stdev"
+			operation="instant"
+			field_ref="m01s00i028_ens"
+			> sqrt(m01s00i028_avensq - m01s00i028_sqav)
+		</field>
+
+</file>
+
+</file_definition>
+

@@ -196,36 +196,4 @@
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i428" long_name="dry mass col int u*q  per unit area" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i429" long_name="dry mass col int v*q  per unit area" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i431" long_name="dry mass col int u*v  per unit area" />
-  		<field
-			id="m01s00i028_inst"
-			name="m01s00i028_inst"
-			operation="instant"
-			field_ref="m01s00i028"
-		/>
-
-		<field
-			id="m01s00i028_ens"
-			name="m01s00i028_ens"
-			operation="instant"
-			field_ref="m01s00i028"
-			grid_ref="um-atmos_grid_cu_DIAG_ens_mean"
-		/>
-
-		<field
-			id="m01s00i028_sqav"
-			name="m01s00i028_sqav"
-			operation="instant"
-			field_ref="m01s00i028_ens"
-			> m01s00i028_ens*m01s00i028_ens
-		</field>
-
-		<field
-			id="m01s00i028_avensq"
-			name="m01s00i028_avensq"
-			operation="instant"
-			field_ref="m01s00i028"
-			grid_ref="um-atmos_grid_cu_DIAG_ens_mean"
-			> m01s00i028*m01s00i028
-		</field>
-
 </field_definition>
