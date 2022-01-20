@@ -1,0 +1,29 @@
+test-mean-1
+test-mean-all
+test-stdev-1
+test-stdev-all
+
+cd ../test-mean-1; rose suite-run;
+cd ../test-stdev-1; rose suite-run;
+cd ../test-mean-all; rose suite-run;
+cd ../test-stdev-all; rose suite-run;
+
+./scripts/step2-n96.sh test-mean-all
+./scripts/step2-n96.sh test-mean-1
+./scripts/step2-n96.sh test-stdev-1
+./scripts/step2-n96.sh test-stdev-all
+
+./create-xml-mean-multiple-fields.sh test-mean-all
+./create-xml-mean-one-field.sh test-mean-1
+./create-xml-stdev-multiple-fields.sh test-stdev-all
+./create-xml-stdev-one-field.sh test-stdev-1
+
+test-mean-1
+test-mean-all
+test-stdev-1
+test-stdev-all
+
+cylc trigger test-mean-1 atmos_main;
+cylc trigger test-stdev-1 atmos_main;
+cylc trigger test-mean-all atmos_main;
+cylc trigger test-stdev-all atmos_main;
