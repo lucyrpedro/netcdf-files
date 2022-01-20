@@ -33,9 +33,9 @@ do
 done < "$input"
 
 cat >> $output_mean << EOF
-<file_definition>
+</file_definition>
 EOF
 
 cat >> $output_stdev << EOF
-<file_definition>
+</file_definition>
 EOF

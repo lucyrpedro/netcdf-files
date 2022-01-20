@@ -38,13 +38,5 @@ cat >> ${file} << EOF
 			> ${field}*${field}
 		</field>
 
-		<field
-			id="${field}_stdev"
-			name="${field}_stdev"
-			operation="instant"
-			field_ref="${field}_ens"
-			> sqrt(${field}_avensq - ${field}_sqav)
-		</field>
-
 EOF
 
