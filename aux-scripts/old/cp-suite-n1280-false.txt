@@ -1,0 +1,151 @@
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens00
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens01
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens02
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens03
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens04
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens05
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens06
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens07
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens08
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens09
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens10
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens11
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens12
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens13
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens14
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens15
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens16
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens17
+cp -r u-ch427-n1280-template u-ch427-n1280-false-ens18
+
+sed -i 's/ATM_NENS=1/ATM_NENS=0/g' u-ch427-n1280-false-ens00/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=1/g' u-ch427-n1280-false-ens01/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=2/g' u-ch427-n1280-false-ens02/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=3/g' u-ch427-n1280-false-ens03/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=4/g' u-ch427-n1280-false-ens04/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=5/g' u-ch427-n1280-false-ens05/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=6/g' u-ch427-n1280-false-ens06/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=7/g' u-ch427-n1280-false-ens07/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=8/g' u-ch427-n1280-false-ens08/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=9/g' u-ch427-n1280-false-ens09/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=10/g' u-ch427-n1280-false-ens10/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=11/g' u-ch427-n1280-false-ens11/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=12/g' u-ch427-n1280-false-ens12/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=13/g' u-ch427-n1280-false-ens13/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=14/g' u-ch427-n1280-false-ens14/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=15/g' u-ch427-n1280-false-ens15/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=16/g' u-ch427-n1280-false-ens16/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=17/g' u-ch427-n1280-false-ens17/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=1/g' u-ch427-n1280-false-ens18/rose-suite.conf;
+
+cd ../u-ch427-n1280-false-ens00; rose suite-run;
+cd ../u-ch427-n1280-false-ens01; rose suite-run;
+cd ../u-ch427-n1280-false-ens02; rose suite-run;
+cd ../u-ch427-n1280-false-ens03; rose suite-run;
+cd ../u-ch427-n1280-false-ens04; rose suite-run;
+cd ../u-ch427-n1280-false-ens05; rose suite-run;
+cd ../u-ch427-n1280-false-ens06; rose suite-run;
+cd ../u-ch427-n1280-false-ens07; rose suite-run;
+cd ../u-ch427-n1280-false-ens08; rose suite-run;
+cd ../u-ch427-n1280-false-ens09; rose suite-run;
+cd ../u-ch427-n1280-false-ens10; rose suite-run;
+cd ../u-ch427-n1280-false-ens11; rose suite-run;
+cd ../u-ch427-n1280-false-ens12; rose suite-run;
+cd ../u-ch427-n1280-false-ens13; rose suite-run;
+cd ../u-ch427-n1280-false-ens14; rose suite-run;
+cd ../u-ch427-n1280-false-ens15; rose suite-run;
+cd ../u-ch427-n1280-false-ens16; rose suite-run;
+cd ../u-ch427-n1280-false-ens17; rose suite-run;
+cd ../u-ch427-n1280-false-ens18; rose suite-run;
+
+ ./xml.sh u-ch427-n1280-false-ens00
+ ./xml.sh u-ch427-n1280-false-ens01
+ ./xml.sh u-ch427-n1280-false-ens02
+ ./xml.sh u-ch427-n1280-false-ens03
+ ./xml.sh u-ch427-n1280-false-ens04
+ ./xml.sh u-ch427-n1280-false-ens05
+ ./xml.sh u-ch427-n1280-false-ens06
+ ./xml.sh u-ch427-n1280-false-ens07
+ ./xml.sh u-ch427-n1280-false-ens08
+ ./xml.sh u-ch427-n1280-false-ens09
+ ./xml.sh u-ch427-n1280-false-ens10
+ ./xml.sh u-ch427-n1280-false-ens11
+ ./xml.sh u-ch427-n1280-false-ens12
+ ./xml.sh u-ch427-n1280-false-ens13
+ ./xml.sh u-ch427-n1280-false-ens14
+ ./xml.sh u-ch427-n1280-false-ens15
+ ./xml.sh u-ch427-n1280-false-ens16
+ ./xml.sh u-ch427-n1280-false-ens17
+ ./xml.sh u-ch427-n1280-false-ens18
+
+cylc trigger u-ch427-n1280-false-ens01 atmos_main;
+cylc trigger u-ch427-n1280-false-ens02 atmos_main;
+cylc trigger u-ch427-n1280-false-ens03 atmos_main;
+cylc trigger u-ch427-n1280-false-ens04 atmos_main;
+cylc trigger u-ch427-n1280-false-ens05 atmos_main;
+cylc trigger u-ch427-n1280-false-ens06 atmos_main;
+cylc trigger u-ch427-n1280-false-ens07 atmos_main;
+cylc trigger u-ch427-n1280-false-ens08 atmos_main;
+cylc trigger u-ch427-n1280-false-ens09 atmos_main;
+cylc trigger u-ch427-n1280-false-ens10 atmos_main;
+cylc trigger u-ch427-n1280-false-ens11 atmos_main;
+cylc trigger u-ch427-n1280-false-ens12 atmos_main;
+cylc trigger u-ch427-n1280-false-ens13 atmos_main;
+cylc trigger u-ch427-n1280-false-ens14 atmos_main;
+cylc trigger u-ch427-n1280-false-ens15 atmos_main;
+cylc trigger u-ch427-n1280-false-ens16 atmos_main;
+cylc trigger u-ch427-n1280-false-ens17 atmos_main;
+cylc trigger u-ch427-n1280-false-ens18 atmos_main;
+
+ ./tf.sh u-ch427-n1280-false-ens00
+ ./tf.sh u-ch427-n1280-false-ens01
+ ./tf.sh u-ch427-n1280-false-ens02
+ ./tf.sh u-ch427-n1280-false-ens03
+ ./tf.sh u-ch427-n1280-false-ens04
+ ./tf.sh u-ch427-n1280-false-ens05
+ ./tf.sh u-ch427-n1280-false-ens06
+ ./tf.sh u-ch427-n1280-false-ens07
+ ./tf.sh u-ch427-n1280-false-ens08
+ ./tf.sh u-ch427-n1280-false-ens09
+ ./tf.sh u-ch427-n1280-false-ens10
+ ./tf.sh u-ch427-n1280-false-ens11
+ ./tf.sh u-ch427-n1280-false-ens12
+ ./tf.sh u-ch427-n1280-false-ens13
+ ./tf.sh u-ch427-n1280-false-ens14
+ ./tf.sh u-ch427-n1280-false-ens15
+ ./tf.sh u-ch427-n1280-false-ens16
+ ./tf.sh u-ch427-n1280-false-ens17
+ ./tf.sh u-ch427-n1280-false-ens18
+
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens00/rose-suite.conf;
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens01/rose-suite.conf;
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens02/rose-suite.conf;
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens03/rose-suite.conf;
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens04/rose-suite.conf;
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens05/rose-suite.conf;
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens06/rose-suite.conf;
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens07/rose-suite.conf;
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens08/rose-suite.conf;
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens09/rose-suite.conf;
+ sed -i 's/PT40M/PT2H/g' u-ch427-n1280-false-ens10/rose-suite.conf;
+
+ sed -i 's/PT2H/PT6H/g' u-ch427-n1280-false-ens01/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=80/g' u-ch427-n1280-false-ens01/rose-suite.conf;
+ sed -i 's/PT2H/PT6H/g' u-ch427-n1280-false-ens02/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=80/g' u-ch427-n1280-false-ens02/rose-suite.conf;
+ sed -i 's/PT2H/PT6H/g' u-ch427-n1280-false-ens03/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=80/g' u-ch427-n1280-false-ens03/rose-suite.conf;
+ sed -i 's/PT2H/PT6H/g' u-ch427-n1280-false-ens04/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=80/g' u-ch427-n1280-false-ens04/rose-suite.conf;
+ sed -i 's/PT2H/PT6H/g' u-ch427-n1280-false-ens05/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=80/g' u-ch427-n1280-false-ens05/rose-suite.conf;
+ sed -i 's/PT2H/PT6H/g' u-ch427-n1280-false-ens06/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=80/g' u-ch427-n1280-false-ens06/rose-suite.conf;
+ sed -i 's/PT2H/PT6H/g' u-ch427-n1280-false-ens07/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=80/g' u-ch427-n1280-false-ens07/rose-suite.conf;
+ sed -i 's/PT2H/PT6H/g' u-ch427-n1280-false-ens08/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=80/g' u-ch427-n1280-false-ens08/rose-suite.conf;
+ sed -i 's/PT2H/PT6H/g' u-ch427-n1280-false-ens09/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=80/g' u-ch427-n1280-false-ens09/rose-suite.conf;
+ sed -i 's/PT2H/PT6H/g' u-ch427-n1280-false-ens10/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=80/g' u-ch427-n1280-false-ens10/rose-suite.conf;

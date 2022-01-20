@@ -1,0 +1,134 @@
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens00
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens01
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens02
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens03
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens04
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens05
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens06
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens07
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens08
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens09
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens10
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens11
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens12
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens13
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens14
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens15
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens16
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens17
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens18
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens19
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens20
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens21
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens22
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens23
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens24
+cp -r u-ch427-n512-template u-ch427-n512-max25-asof-ens25
+
+sed -i 's/ATM_NENS=1/ATM_NENS=0/g' u-ch427-n512-max25-asof-ens00/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=1/g' u-ch427-n512-max25-asof-ens01/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=2/g' u-ch427-n512-max25-asof-ens02/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=3/g' u-ch427-n512-max25-asof-ens03/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=4/g' u-ch427-n512-max25-asof-ens04/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=5/g' u-ch427-n512-max25-asof-ens05/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=6/g' u-ch427-n512-max25-asof-ens06/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=7/g' u-ch427-n512-max25-asof-ens07/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=8/g' u-ch427-n512-max25-asof-ens08/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=9/g' u-ch427-n512-max25-asof-ens09/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=10/g' u-ch427-n512-max25-asof-ens10/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=11/g' u-ch427-n512-max25-asof-ens11/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=12/g' u-ch427-n512-max25-asof-ens12/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=13/g' u-ch427-n512-max25-asof-ens13/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=14/g' u-ch427-n512-max25-asof-ens14/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=15/g' u-ch427-n512-max25-asof-ens15/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=16/g' u-ch427-n512-max25-asof-ens16/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=17/g' u-ch427-n512-max25-asof-ens17/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=18/g' u-ch427-n512-max25-asof-ens18/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=19/g' u-ch427-n512-max25-asof-ens19/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=20/g' u-ch427-n512-max25-asof-ens20/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=21/g' u-ch427-n512-max25-asof-ens21/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=22/g' u-ch427-n512-max25-asof-ens22/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=23/g' u-ch427-n512-max25-asof-ens23/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=24/g' u-ch427-n512-max25-asof-ens24/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=25/g' u-ch427-n512-max25-asof-ens25/rose-suite.conf;
+
+cd ../u-ch427-n512-max25-asof-ens00; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens01; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens02; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens03; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens04; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens05; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens06; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens07; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens08; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens09; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens10; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens11; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens12; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens13; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens14; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens15; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens16; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens17; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens18; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens19; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens20; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens21; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens22; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens23; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens24; rose suite-run;
+cd ../u-ch427-n512-max25-asof-ens25; rose suite-run;
+
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens00
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens01
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens02
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens03
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens04
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens05
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens06
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens07
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens08
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens09
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens10
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens11
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens12
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens13
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens14
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens15
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens16
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens17
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens18
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens19
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens20
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens21
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens22
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens23
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens24
+./scripts/step2-n512.sh u-ch427-n512-max25-asof-ens25
+
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens00
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens01
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens02
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens03
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens04
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens05
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens06
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens07
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens08
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens09
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens10
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens11
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens12
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens13
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens14
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens15
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens16
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens17
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens18
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens19
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens20
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens21
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens22
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens23
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens24
+ ./create-xml-stdev-one-field.sh u-ch427-n512-max25-asof-ens25

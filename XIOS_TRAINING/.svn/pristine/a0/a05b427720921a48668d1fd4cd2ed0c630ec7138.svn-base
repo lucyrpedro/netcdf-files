@@ -1,0 +1,7 @@
+# adapt your path from your system
+# example for unbuntu Virtual machine 
+
+source ./xios_build/arch.env
+export NETCDF_INCLUDE="-I$NETCDF_INCDIR"
+export NETCDF_LIBS="-L$NETCDF_LIBDIR -lnetcdf -L$HDF5_LIBDIR -lhdf5_hl -lhdf5 -ldl -lz -lcurl" 
+

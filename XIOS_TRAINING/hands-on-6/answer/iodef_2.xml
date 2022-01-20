@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<simulation>
+ <context id="test">
+   <calendar type="Gregorian" time_origin="2021-01-01" start_date="2021-03" />
+
+   <domain_definition>
+     <domain id="domain" type="rectilinear" ni_glo="20" nj_glo="20"/>
+   </domain_definition>
+
+   <grid_definition>
+     <grid id="grid">
+       <domain domain_ref="domain"/>
+     </grid>
+   </grid_definition>
+   
+   <field_definition>
+     <field id="temp" name="temperature" operation="instant" grid_ref="grid"/>
+     <field id="temp2" field_ref="temp"> temp*temp </field>
+   </field_definition>
+
+   <file_definition>
+     <file id="output" name="output" output_freq="1h" type="one_file" >
+       <field field_ref="temp" />
+     </file>
+
+     <file name="output_wmax" output_freq="7d" type="one_file" >
+       <field field_ref="temp" name="weekly_max_at_noon" operation="maximum" freq_offset="11h" freq_op="1d"/>
+     </file>
+
+     <file name="output_wmin" output_freq="7d" type="one_file" >
+       <field field_ref="temp" name="weekly_min_at_midnight" operation="minimum" freq_offset="23h" freq_op="1d"/>
+     </file>
+
+     <file name="output_v" output_freq="1d" type="one_file" >
+       <field id="sigma_T" operation="instant" freq_op="1d" grid_ref="grid"> sqrt(@temp2-@temp*@temp) </field>
+     </file>
+
+  </file_definition>
+
+ </context>
+
+  <context id="xios">
+     <variable_definition>
+        <variable_group id="parameters" >
+          <variable id="print_file" type="bool">true</variable>
+        </variable_group>
+     </variable_definition>
+  </context>
+
+</simulation>
+

@@ -1,0 +1,920 @@
+<html>
+
+<!--
+ ##########################################################################
+ Author: Yushan WANG
+ yushan.wang@lsce.ipsl.fr
+ ##########################################################################
+-->
+
+<head>
+
+<meta charset="utf-8">
+<style type="text/css">
+    body {
+        font-family: arial;
+        font-size: 12px;
+        }
+
+    .row {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        }
+
+    #mynetwork {
+        width: 1500px;
+        height: 1000px;
+        border: 1px solid lightgray;
+        }
+
+    input {
+        padding: 10px;
+        }
+
+    ul li {
+        display: inline;
+        border: 1px solid gray;
+        padding: 4px;
+        margin: 2px;
+        border-radius: 4px;
+        }
+    button {
+        background-color: rgb(132,197,255);
+        border-radius: 8px;
+    }
+    
+    /* /!\ Use border-top-color not border-color for firefox compatibility */
+ </style>
+
+</head>
+
+<body>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script type="text/javascript">
+
+    //######################################################################################################
+    $(document).ready(function() 
+    {    
+        var styleArr = {
+            1: { // source filter
+                background: 'LightSlateGray',
+                border: 'SlateGray',
+                shape: 'box'},
+            2: { // pass through filter
+                background: 'Khaki',
+                border: 'DarkKhaki',
+                shape: 'ellipse'},
+            3: { // arithmtic filter
+                background: 'Orchid',
+                border: 'DarkOrchid',
+                shape: 'ellipse'},
+            4: { // spatial transform filter
+                background: 'Orange',
+                border: 'DarkOrange',
+                shape: 'ellipse'},
+            5: { // temporal filter
+                background: 'YellowGreen',
+                border: 'OliveDrab',
+                shape: 'box'},
+            6: { // file writer filter
+                background: 'LightGray',
+                border: 'Gray',
+                shape: 'ellipse'},
+            7: { // store filter
+                background: 'LightBlue',
+                border: 'Gray',
+                shape: 'ellipse'}}
+
+        var transparentNode = {
+            background: 'white',
+            border: 'LightGray'}
+
+        var redNode = {
+            background: 'Red',
+            border: 'DarkRed'}
+
+        var transparentEdge = {
+            color: '#00000000',
+            font: 0}
+
+
+        var container = $('#mynetwork')[0];
+
+        var node;
+        var nodes;
+        var edges;
+        var network;
+
+        var allParentNodes = [];
+        var allChildNodes = [];
+        
+
+    
+
+        //===========================================================
+
+        $('#file').on('change', function() 
+        {
+            var file = $("#file").prop('files')[0];
+            handleFileSelect(file);
+        });
+
+       
+        function handleFileSelect(file) 
+        {
+            if (!window.File || !window.FileReader || !window.FileList || !window.Blob) 
+            {
+                alert('The File APIs are not fully supported in this browser.');
+                return;
+            }
+
+            var reader = new FileReader();
+            var json;
+
+            reader.onload = (function(file) 
+            {
+                return function(e) 
+                {
+                    try 
+                    {
+                        json = JSON.parse(e.target.result);
+                        json.nodes.forEach(function(node, index) 
+                        {
+                            var classVal = node.class;
+                            var entryVal = node.entry;
+                            var attrVal = node.attributes;
+                            var labelVal = node.label;
+                                
+                            node.color = {
+                                background: styleArr[classVal].background,
+                                border: styleArr[classVal].border,
+                                hover: styleArr[classVal].background,
+                                highlight: {
+                                    background: styleArr[classVal].background,
+                                    border: 'green'
+                                    }
+                                }
+
+                            node.shape = styleArr[classVal].shape;
+
+                            if (node.class == 1 || node.class >= 6)
+                                 node.title = "node id = " + node.id + "</br>" + labelVal + "</br>field attributes : </br>" + attrVal;
+                            else if (node.class == 5)
+                                node.title = "node id = " + node.id + "</br>" + labelVal + "</br> entry nb = " + entryVal ;
+                            else
+                                node.title = "node id = " + node.id + "</br>" + labelVal;
+
+                            if (node.filled == 1) 
+                            {
+                                node.title += "</br></br> filter has no child!!!</br>" + "</br>field attributes : </br>" + attrVal + "</br> entry nb = " + entryVal;
+                                node.color = {
+                                    background: 'Red',
+                                    border: 'DarkRed',
+                                    hover: 'Red',
+                                    highlight: {
+                                        background: 'Red',
+                                        border: 'blue'
+                                    }
+                                }
+                            }
+
+                            node.level = node.distance;
+
+                        });
+
+                        json.edges.forEach(function(node, index)
+                        {
+                            var dateVal = node.date;
+                            var fidVal = node.fid;
+                            var fnameVal = node.fname;
+                            var gidVal = node.gid;
+                            var attVal = node.attributes;
+                            var idVal = node.id
+
+                            node.title = "id = " + idVal + "</br>field attributes : </br>" + attVal + "</br> date = " + dateVal;
+                        });
+
+                            
+                        nodes = new vis.DataSet();
+                        nodes.add(json.nodes);
+
+                        edges = new vis.DataSet();
+                        edges.add(json.edges);
+
+                        var data = {
+                            nodes: nodes,
+                            edges: edges
+                        };
+
+                        var options = {
+                            edges: {
+                                smooth: false,
+                                arrows: 'to',
+                                font: {
+                                    align: 'middle',
+                                    size: 14,
+                                },
+                                color: {
+                                    //color: 'black',
+                                    //highlight: 'black',
+                                    //hover: 'black',
+                                    inherit: 'both',
+                                }
+                            },
+                            physics: {
+                                enabled: false
+                            },
+                            nodes: {
+                                borderWidth: 2
+                            },
+                            interaction: {
+                                hover: true
+                            },
+                            layout: {
+                                hierarchical: {
+                                    enabled: true,
+                                    direction: "LR",
+                                    sortMethod: "directed",
+                                    levelSeparation: 300,
+                                    nodeSpacing: 100,
+                                    treeSpacing: 100,
+                                    blockShifting: true,
+                                    edgeMinimization: true
+                                }
+                            },
+                        };
+
+
+                        network = new vis.Network(container, data, options);
+
+                        timeSelect = document.getElementById('minTimeSelect');
+                        var length = timeSelect.options.length;
+                        for (i = length-1; i >= 1; i--) 
+                        {
+                            timeSelect.options[i] = null;
+                        }
+
+                        timeSelect = document.getElementById('maxTimeSelect');
+                        var length = timeSelect.options.length;
+                        for (i = length-1; i >= 1; i--) 
+                        {
+                            timeSelect.options[i] = null;
+                        }
+
+                        var TimeList=[];
+                        var previousTimeRecord="0";
+                        
+                        for(var i=0; i<edges.length; i++)
+                        {
+                            var thisTime=edges.get()[i].date;
+                            if(thisTime == previousTimeRecord)
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                previousTimeRecord = thisTime;
+                                var timeExist = TimeList.includes(thisTime)
+                                if (!timeExist)
+                                {
+                                    TimeList.push(thisTime)
+                                    timeSelect = document.getElementById('minTimeSelect');
+                                    timeSelect.options[timeSelect.options.length] = new Option(thisTime, thisTime);
+                                    timeSelect = document.getElementById('maxTimeSelect');
+                                    timeSelect.options[timeSelect.options.length] = new Option(thisTime, thisTime);
+                                }
+                            }
+                            
+                        }
+                            
+
+                        Array.prototype.unique = function() 
+                        {
+                            var a = this.concat();
+                            for (var i = 0; i < a.length; ++i) 
+                            {
+                                for (var j = i + 1; j < a.length; ++j) 
+                                {
+                                    if (a[i] === a[j])
+                                        a.splice(j--, 1);
+                                }
+                            }
+                            return a;
+                        };
+
+                        function findAllParentNodes(nodesArray) 
+                        {
+                            if (nodesArray.length == 0) return 1;
+
+                            var parentsArray = network.getConnectedNodes(nodesArray[0], 'from');
+                            nodesArray = nodesArray.concat(parentsArray).unique();
+                            allParentNodes = allParentNodes.concat(nodesArray[0]).unique();
+
+                            nodesArray.splice(0, 1);
+                            return findAllParentNodes(nodesArray);
+                        }
+
+                        function findAllChildNodes(nodesArray) 
+                        {
+                            if (nodesArray.length == 0) return 1;
+                                
+                            var childArray = network.getConnectedNodes(nodesArray[0], 'to');
+                            nodesArray = nodesArray.concat(childArray).unique();
+                            allChildNodes = allChildNodes.concat(nodesArray[0]).unique();
+                            nodesArray.splice(0, 1);
+                            return findAllChildNodes(nodesArray);
+                        }
+
+                        function getEdgeConnections(node) 
+                        {
+                            var connectedEdgeArray = network.getConnectedEdges(node);
+                        }
+
+                        network.on("click", function(params) 
+                        {
+                            params.event = "[original event]";
+                            console.log('__________________________');
+                            nodeSelected = this.getNodeAt(params.pointer.DOM);
+                            if (nodeSelected === undefined) return 0;
+
+                            var node = nodes.get(nodeSelected);
+                            var connectedChild = nodes.get(network.getConnectedNodes(node.id, "to"));
+                            console.log('------->', connectedChild.length);
+                           
+
+                            var connectedEdgeArray = getEdgeConnections(nodeSelected);
+                            var parentsArray = network.getConnectedNodes(nodeSelected, 'from');
+                            allParentNodes = [nodeSelected];
+                            findAllParentNodes(parentsArray);
+                            // remove selected node
+                            var index = allParentNodes.indexOf(nodeSelected);
+                            if (index !== -1) allParentNodes.splice(index, 1);
+                            console.log('Final parent nodes: ', allParentNodes);
+
+
+                            var node = this.getNodeAt(params.pointer.DOM);
+                            var childArray = network.getConnectedNodes(nodeSelected, 'to');
+
+
+                            allChildNodes = [nodeSelected];
+                            findAllChildNodes(childArray);
+                            // remove selected node
+                            var index = allChildNodes.indexOf(nodeSelected);
+                            if (index !== -1) allChildNodes.splice(index, 1);
+                            console.log('Final child nodes: ', allChildNodes);
+                        });
+
+                    } 
+                    catch (ex) 
+                    {
+                        alert('ex when trying to parse json = ' + ex);
+                    }
+                }
+            })(file);
+
+            reader.readAsText(file);
+
+        }
+
+        //#################### ADD BUTTON DEFINITIONS HERE#######################################################
+        
+        $('#zoomEdge').on('change', function() 
+        {
+            var options = {
+                layout: {
+                    hierarchical: {
+                        levelSeparation: parseInt(this.value)
+                    }
+                }
+            }
+            network.setOptions(options);
+        });
+
+
+        $('#hideAll').on('click', function() 
+        {
+            var all_edges = edges.get()
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = true
+            }
+            edges.update(all_edges)
+
+            var all_nodes = nodes.get();
+            for (i = 0; i < all_nodes.length; i++) 
+            {
+                all_nodes[i].hidden = true;
+            }
+            nodes.update(all_nodes);
+        });
+
+
+        $('#showAll').on('click', function() 
+        {
+            var all_edges = edges.get()
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = false
+            }
+            edges.update(all_edges)
+
+            var all_nodes = nodes.get();
+            for (i = 0; i < all_nodes.length; i++) 
+            {
+                all_nodes[i].hidden = false;
+            }
+            nodes.update(all_nodes);
+        });
+
+
+        $('#showInputs').on('click', function() 
+        {
+            var all_edges = edges.get()
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = false
+            }
+            edges.update(all_edges)
+
+            var all_nodes = nodes.get();
+            for (i = 0; i < all_nodes.length; i++) 
+            {
+                if (all_nodes[i].class == 1) all_nodes[i].hidden = false;
+                else all_nodes[i].hidden = true;
+            }
+            nodes.update(all_nodes);
+        });
+
+
+        $('#showOutputs').on('click', function() 
+        {
+            var all_edges = edges.get()
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = false
+            }
+            edges.update(all_edges)
+
+            var all_nodes = nodes.get();
+            for (i = 0; i < all_nodes.length; i++) 
+            {
+                if (all_nodes[i].class >= 6 || all_nodes[i].filled == 1) all_nodes[i].hidden = false;
+                else all_nodes[i].hidden = true;
+            }
+            nodes.update(all_nodes);
+        });
+
+        $('#showSubgraph').on('click', function() 
+        {
+            // do nothing if no node is selected
+            var thisNode = nodes.get(nodeSelected);
+            if(!thisNode) return;
+
+            var all_edges = edges.get()
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = false
+            }
+            edges.update(all_edges)
+
+            // hide all nodes
+            var all_nodes = nodes.get();
+            for (i = 0; i < all_nodes.length; i++) 
+            {
+                all_nodes[i].hidden = true;
+            }
+            nodes.update(all_nodes);
+
+            // enable selected node
+            thisNode.hidden = false;
+            nodes.update(thisNode);
+
+            // enable all parents
+            console.log("showAllParents: allParentNodes = ", allParentNodes);
+            var parent_nodes = nodes.get(allParentNodes);
+
+            for (i = 0; i < parent_nodes.length; i++) 
+            {
+                var node = parent_nodes[i];
+                node.font = {
+                    color: 'black'
+                }
+                node.hidden = false;
+                if (node.filled == 1) {
+                    node.color = {
+                        background: redNode.background,
+                        border: redNode.border,
+                        hover: redNode.background,
+                        highlight: {
+                            background: redNode.background,
+                            border: 'blue'
+                        }
+                    }
+                } 
+                else
+                {
+                    node.color = {
+                        background: styleArr[node.class].background,
+                        border: styleArr[node.class].border,
+                        highlight: {
+                            background: styleArr[node.class].background,
+                            border: 'blue'
+                        }
+                    }
+                }
+            }
+            nodes.update(parent_nodes);
+
+            var connectedEdgeArray = edges.get(network.getConnectedEdges(thisNode.id));
+            for (j = 0; j < connectedEdgeArray.length; j++) 
+            {
+                var edge = connectedEdgeArray[j];
+                if (edge.to == thisNode.id) edge.hidden = false;  
+            }
+            edges.update(connectedEdgeArray);
+
+            all_nodes = nodes.get();
+            nodes.update(all_nodes);
+
+            //===== enable all children
+            console.log("showAllChildren: allChildNodes = ", allChildNodes);
+            var child_nodes = nodes.get(allChildNodes);
+            for (i = 0; i < child_nodes.length; i++)
+            {
+                node = child_nodes[i];
+                node.font = {
+                    color: 'black'
+                }
+                node.hidden = false;
+                if (node.filled == 1) {
+                    node.color = {
+                        background: redNode.background,
+                        border: redNode.border,
+                        hover: redNode.background,
+                        highlight: {
+                            background: redNode.background,
+                            border: 'blue'
+                        }
+                    }
+                }
+                else
+                {
+                    node.color = {
+                        background: styleArr[node.class].background,
+                        border: styleArr[node.class].border,
+                        highlight: {
+                            background: styleArr[node.class].background,
+                            border: 'blue'
+                        }
+                    }
+                }
+            }
+            nodes.update(child_nodes);
+
+            connectedEdgeArray = edges.get(network.getConnectedEdges(thisNode.id));
+            for (j = 0; j < connectedEdgeArray.length; j++)
+            {
+                var edge = connectedEdgeArray[j];
+                    if (edge.from == thisNode.id) edge.hidden = false;
+            }
+            edges.update(connectedEdgeArray);
+        });
+
+        $('#showSubgraphBis').on('click', function() 
+        {
+            // do nothing if no node is selected
+            var thisNode = nodes.get(nodeSelected);
+            if(!thisNode) return;
+
+            var all_edges = edges.get()
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = false
+            }
+            edges.update(all_edges)
+
+            // enable selected node
+            thisNode.hidden = false;
+            nodes.update(thisNode);
+
+            // enable all parents
+            console.log("showAllParents: allParentNodes = ", allParentNodes);
+            var parent_nodes = nodes.get(allParentNodes);
+
+            for (i = 0; i < parent_nodes.length; i++) 
+            {
+                var node = parent_nodes[i];
+                node.font = {
+                    color: 'black'
+                }
+                node.hidden = false;
+                if (node.filled == 1) {
+                    node.color = {
+                        background: redNode.background,
+                        border: redNode.border,
+                        hover: redNode.background,
+                        highlight: {
+                            background: redNode.background,
+                            border: 'blue'
+                        }
+                    }
+                } 
+                else
+                {
+                    node.color = {
+                        background: styleArr[node.class].background,
+                        border: styleArr[node.class].border,
+                        highlight: {
+                            background: styleArr[node.class].background,
+                            border: 'blue'
+                        }
+                    }
+                }
+            }
+            nodes.update(parent_nodes);
+
+            var connectedEdgeArray = edges.get(network.getConnectedEdges(thisNode.id));
+            for (j = 0; j < connectedEdgeArray.length; j++) 
+            {
+                var edge = connectedEdgeArray[j];
+                if (edge.to == thisNode.id) edge.hidden = false;  
+            }
+            edges.update(connectedEdgeArray);
+
+            all_nodes = nodes.get();
+            nodes.update(all_nodes);
+
+            //===== enable all children
+            console.log("showAllChildren: allChildNodes = ", allChildNodes);
+            var child_nodes = nodes.get(allChildNodes);
+            for (i = 0; i < child_nodes.length; i++)
+            {
+                node = child_nodes[i];
+                node.font = {
+                    color: 'black'
+                }
+                node.hidden = false;
+                if (node.filled == 1) {
+                    node.color = {
+                        background: redNode.background,
+                        border: redNode.border,
+                        hover: redNode.background,
+                        highlight: {
+                            background: redNode.background,
+                            border: 'blue'
+                        }
+                    }
+                }
+                else
+                {
+                    node.color = {
+                        background: styleArr[node.class].background,
+                        border: styleArr[node.class].border,
+                        highlight: {
+                            background: styleArr[node.class].background,
+                            border: 'blue'
+                        }
+                    }
+                }
+            }
+            nodes.update(child_nodes);
+
+            connectedEdgeArray = edges.get(network.getConnectedEdges(thisNode.id));
+            for (j = 0; j < connectedEdgeArray.length; j++)
+            {
+                var edge = connectedEdgeArray[j];
+                    if (edge.from == thisNode.id) edge.hidden = false;
+            }
+            edges.update(connectedEdgeArray);
+        });
+
+
+        $('#showDirectChild').on('click', function() 
+        {
+            // do nothing if no node is selected
+            var thisNode = nodes.get(nodeSelected);
+            if(!thisNode) return;
+
+            var all_edges = edges.get()
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = false
+            }
+            edges.update(all_edges)
+            
+            //===== enable all children
+            var directChildNodes = nodes.get(network.getConnectedNodes(nodeSelected, 'to'));
+            
+            if(!directChildNodes.length) return;
+            console.log("showDirectChild: directChildNodes = ", directChildNodes);
+
+            for (i = 0; i < directChildNodes.length; i++)
+            {
+                directChildNodes[i].hidden = false;
+            }
+            nodes.update(directChildNodes);
+        });
+
+        $('#showDirectParent').on('click', function() 
+        {
+            // do nothing if no node is selected
+            var thisNode = nodes.get(nodeSelected);
+            if(!thisNode) return;
+
+            var all_edges = edges.get()
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = false
+            }
+            edges.update(all_edges)
+            
+            //===== enable all parents
+            var directParentNodes = nodes.get(network.getConnectedNodes(nodeSelected, 'from'));
+            
+            if(!directParentNodes.length) return;
+            console.log("directParentNodes: directParentNodes = ", directParentNodes);
+
+            for (i = 0; i < directParentNodes.length; i++)
+            {
+                directParentNodes[i].hidden = false;
+            }
+            nodes.update(directParentNodes);
+        });
+
+        $('#showNode').on('click', function() 
+        {
+            // do nothing if no node is selected
+            var thisNode = nodes.get(nodeSelected);
+            if(!thisNode) return;
+
+            var all_edges = edges.get()
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = false
+            }
+            edges.update(all_edges)
+
+            
+            var all_nodes = nodes.get();
+            for (i = 0; i < all_nodes.length; i++) 
+            {
+                all_nodes[i].hidden = true;
+            }
+            
+            nodes.update(all_nodes);
+
+            thisNode.hidden = false;
+            nodes.update(thisNode) 
+        });
+
+        $('#minTimeSelect').on('change', function() 
+        {
+            var all_edges = edges.get()
+
+            var minTime = document.querySelector('#minTimeSelect').value;
+            var maxTime = document.querySelector('#maxTimeSelect').value;
+
+            console.log("min : ", minTime)
+            console.log("max : ", maxTime)
+
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = true
+                if(minTime <= all_edges[j].date && all_edges[j].date <= maxTime)
+                {
+                    all_edges[j].hidden = false
+                }
+            }
+            edges.update(all_edges)
+
+            var all_nodes=nodes.get();
+
+            for (i=0; i<all_nodes.length; i++)
+            {
+                all_nodes[i].hidden = true
+                var edgeList = edges.get(network.getConnectedEdges(all_nodes[i].id));
+                for(j=0; j<edgeList.length; j++)
+                {
+                    if(edgeList[j].hidden == false)
+                    {
+                        all_nodes[i].hidden = false
+                        break
+                    }
+                }
+            }
+            nodes.update(all_nodes)
+        });
+
+        $('#maxTimeSelect').on('change', function() 
+        {
+            var all_edges = edges.get()
+
+            var minTime = document.querySelector('#minTimeSelect').value;
+            var maxTime = document.querySelector('#maxTimeSelect').value;
+
+            console.log("min : ", minTime)
+            console.log("max : ", maxTime)
+
+            for(j=0; j<all_edges.length; j++)
+            {
+                all_edges[j].hidden = true
+                if(minTime <= all_edges[j].date && all_edges[j].date <= maxTime)
+                {
+                    all_edges[j].hidden = false
+                }
+            }
+            edges.update(all_edges)
+
+            var all_nodes=nodes.get();
+
+            for (i=0; i<all_nodes.length; i++)
+            {
+                all_nodes[i].hidden = true
+                var edgeList = edges.get(network.getConnectedEdges(all_nodes[i].id));
+                for(j=0; j<edgeList.length; j++)
+                {
+                    if(edgeList[j].hidden == false)
+                    {
+                        all_nodes[i].hidden = false
+                        break
+                    }
+                }
+                
+            }
+            
+            nodes.update(all_nodes)
+        });
+
+        
+
+        //#################### END OF BUTTON DEFINITIONS ########################################################
+    });
+
+</script>
+
+<div class="container">
+
+    <div class="row">
+	<label for="file"> Choose your JSON file
+        <input type="file" id="file"  onchange="$('#upload-file-info').html(this.files[0].name)">
+	</label>
+    </div>
+
+    <div class="row">
+        <button type="button" id="showAll">Show all</button>
+        <button type="button" id="hideAll">Hide all</button>  
+    </div>
+
+    <div class="row">
+        <button type="button" id="showInputs">Show all inputs</button>
+        <button type="button" id="showOutputs">Show all outputs</button>  
+    </div>
+
+    <div class="row">
+        <button type="button" id="showDirectChild">Show direct child(ren)</button>
+        <button type="button" id="showDirectParent">Show direct parent(s)</button>  
+    </div>
+
+    <div class="row">
+        <button type="button" id="showNode">Show this node (and hide other)</button>
+        <button type="button" id="showSubgraph">Show subgraph (and hide other)</button>
+        <button type="button" id="showSubgraphBis">Show subgraph (and keep other)</button>
+    </div>
+
+    <div class="row" style="width:300px">
+        <p> Choose Edge Length : </p>
+        <input autocomplete="off" type="range" id="zoomEdge" min="200" max="600" value="300" step="10" >       
+        
+         
+    </div>
+
+    <div class="row" style="width:800px">
+        <p>Focus on time : </p>
+        From
+        <select id="minTimeSelect">
+            <option value="0000-00-00 00:00:00" hidden selected>-</option>
+        </select>
+        To
+        <select id="maxTimeSelect">
+            <option value="9999-00-00 00:00:00" hidden selected>-</option>
+        </select>
+
+    </div>
+
+
+    <div class="row">
+        <div id="mynetwork"></div>
+    </div>
+
+</body>
+
+</html>
+
+

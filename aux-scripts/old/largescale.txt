@@ -1,0 +1,58 @@
+
+cp -r u-ch427-n96-template u-ch427-n96-ens256
+cp -r u-ch427-n96-template u-ch427-n96-ens257
+cp -r u-ch427-n216-template u-ch427-n216-ens73
+cp -r u-ch427-n216-template u-ch427-n216-ens74
+cp -r u-ch427-n512-template u-ch427-n512-ens34
+cp -r u-ch427-n512-template u-ch427-n512-ens35
+cp -r u-ch427-n1280-template u-ch427-n1280-ens10
+cp -r u-ch427-n1280-template u-ch427-n1280-ens11
+
+sed -i 's/ATM_NENS=1/ATM_NENS=256/g' u-ch427-n96-ens256/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=257/g' u-ch427-n96-ens257/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=73/g' u-ch427-n216-ens73/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=74/g' u-ch427-n216-ens74/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=34/g' u-ch427-n512-ens34/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=35/g' u-ch427-n512-ens35/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=10/g' u-ch427-n1280-ens10/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=11/g' u-ch427-n1280-ens11/rose-suite.conf;
+
+cd ../u-ch427-n96-ens256; rose suite-run;
+cd ../u-ch427-n96-ens257; rose suite-run;
+cd ../u-ch427-n216-ens73; rose suite-run;
+cd ../u-ch427-n216-ens74; rose suite-run;
+cd ../u-ch427-n512-ens34; rose suite-run;
+cd ../u-ch427-n512-ens35; rose suite-run;
+cd ../u-ch427-n1280-ens10; rose suite-run;
+cd ../u-ch427-n1280-ens11; rose suite-run;
+
+./xml.sh u-ch427-n96-ens256
+./xml.sh u-ch427-n96-ens257
+./xml.sh u-ch427-n216-ens73
+./xml.sh u-ch427-n216-ens74
+./xml.sh u-ch427-n512-ens34
+./xml.sh u-ch427-n512-ens35
+./xml.sh u-ch427-n1280-ens10
+./xml.sh u-ch427-n1280-ens11
+
+./scripts/step2-n96.sh u-ch427-n96-ens256
+./scripts/step2-n96.sh u-ch427-n96-ens257
+./scripts/step2-n216.sh u-ch427-n216-ens73
+./scripts/step2-n216.sh u-ch427-n216-ens74
+./scripts/step2-n512.sh u-ch427-n512-ens34
+./scripts/step2-n512.sh u-ch427-n512-ens35
+./scripts/step2-n1280.sh u-ch427-n1280-ens10
+./scripts/step2-n1280.sh u-ch427-n1280-ens11
+
+sed -i 's/ARCHER2_QUEUE='\''standard'\''/ARCHER2_QUEUE='\''largescale'\''/g' u-ch427-n96-ens256/rose-suite.conf;
+sed -i 's/ARCHER2_QUEUE='\''standard'\''/ARCHER2_QUEUE='\''largescale'\''/g' u-ch427-n96-ens257/rose-suite.conf;
+sed -i 's/ARCHER2_QUEUE='\''standard'\''/ARCHER2_QUEUE='\''largescale'\''/g' u-ch427-n216-ens73/rose-suite.conf;
+sed -i 's/ARCHER2_QUEUE='\''standard'\''/ARCHER2_QUEUE='\''largescale'\''/g' u-ch427-n216-ens74/rose-suite.conf;
+sed -i 's/ARCHER2_QUEUE='\''standard'\''/ARCHER2_QUEUE='\''largescale'\''/g' u-ch427-n512-ens34/rose-suite.conf;
+sed -i 's/ARCHER2_QUEUE='\''standard'\''/ARCHER2_QUEUE='\''largescale'\''/g' u-ch427-n512-ens35/rose-suite.conf;
+sed -i 's/ARCHER2_QUEUE='\''standard'\''/ARCHER2_QUEUE='\''largescale'\''/g' u-ch427-n1280-ens10/rose-suite.conf;
+sed -i 's/ARCHER2_QUEUE='\''standard'\''/ARCHER2_QUEUE='\''largescale'\''/g' u-ch427-n1280-ens11/rose-suite.conf;
+
+sed -i 's/ATM_NENS=1/ATM_NENS=11/g' u-ch427-n1280-ens11/rose-suite.conf;
+sed -i 's/MAIN_CLOCK='\''PT5M'\''/MAIN_CLOCK='\''PT20M'\''/g' ${dir}/rose-suite.conf
+

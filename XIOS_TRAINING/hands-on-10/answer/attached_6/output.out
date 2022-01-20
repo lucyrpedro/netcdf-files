@@ -1,0 +1,40 @@
+Computing intersections ...
+double triarea(const Coord& A, const Coord& B, const Coord& C) : t < 0 !!! t=0
+double triarea(const Coord& A, const Coord& B, const Coord& C) : t < 0 !!! t=0
+Computing grads ...
+Remapping...
+ finished Successfully
+ finished Successfully
+ finished Successfully
+ finished Successfully
+ finished Successfully
+ finished Successfully
+########## ########## ########## ########## ########## ########## ########## ##########
+Execution Sum Up
+########## ########## ########## ########## ########## ########## ########## ##########
+Jobid     : 6728662
+Jobname   : job.sh
+User      : wangyush
+Account   : gen0826@skylake
+Limits    : time = 30:00 , memory/task = 3750 Mo
+Date      : submit = 11/03/2021 16:27:58 , start = 11/03/2021 16:27:58 , end = 11/03/2021 16:57:58
+Execution : partition = skylake , QoS = test@skylake , Comment = (null)
+Resources : ntasks = 48 , cpus/task = 1 , ncpus = 48 , nodes = 1
+   Nodes=irene1739 CPU_IDs=0-47 Mem=180000 GRES_IDX=
+ 
+Memory / step 
+--------------
+                          Resident Size (Mo)                     Virtual Size (Go)
+JobID            Max     (Node:Task)       AveTask    Max  (Node:Task)            AveTask
+-----------      ------------------------  -------    --------------------------  -------
+6728662.extern       0 (            :   0)       0      0.00 (            :   0)    0.00
+
+Accounting / step 
+------------------
+
+JobID           JobName                  Ntasks  Ncpus Nnodes  Layout       Elapsed               User         System     Eff  State
+------------    ------------             ------  ----- ------  -------      -------               -------      ------     ---  -----
+6728662         job.sh                        -     48      1        -     00:00:44   (100%)            -            -      -  -
+6728662.extern  extern                        1     48      1  Unknown     00:00:44 (100.0%)     00:00:00     00:00:00      0  RUNNING
+6728662.0       generic_testcase.exe          6      6      1   BBlock     00:00:28  (63.6%)     00:01:48     00:00:01   64.8  COMPLETED
+########## ########## ########## ########## ########## ########## ########## ##########

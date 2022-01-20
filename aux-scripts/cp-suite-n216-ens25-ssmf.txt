@@ -1,0 +1,134 @@
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens00
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens01
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens02
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens03
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens04
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens05
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens06
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens07
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens08
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens09
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens10
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens11
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens12
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens13
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens14
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens15
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens16
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens17
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens18
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens19
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens20
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens21
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens22
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens23
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens24
+cp -r u-ch427-n216-template u-ch427-n216-max25-ssmf-ens25
+
+sed -i 's/ATM_NENS=1/ATM_NENS=0/g' u-ch427-n216-max25-ssmf-ens00/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=1/g' u-ch427-n216-max25-ssmf-ens01/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=2/g' u-ch427-n216-max25-ssmf-ens02/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=3/g' u-ch427-n216-max25-ssmf-ens03/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=4/g' u-ch427-n216-max25-ssmf-ens04/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=5/g' u-ch427-n216-max25-ssmf-ens05/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=6/g' u-ch427-n216-max25-ssmf-ens06/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=7/g' u-ch427-n216-max25-ssmf-ens07/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=8/g' u-ch427-n216-max25-ssmf-ens08/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=9/g' u-ch427-n216-max25-ssmf-ens09/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=10/g' u-ch427-n216-max25-ssmf-ens10/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=11/g' u-ch427-n216-max25-ssmf-ens11/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=12/g' u-ch427-n216-max25-ssmf-ens12/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=13/g' u-ch427-n216-max25-ssmf-ens13/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=14/g' u-ch427-n216-max25-ssmf-ens14/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=15/g' u-ch427-n216-max25-ssmf-ens15/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=16/g' u-ch427-n216-max25-ssmf-ens16/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=17/g' u-ch427-n216-max25-ssmf-ens17/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=18/g' u-ch427-n216-max25-ssmf-ens18/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=19/g' u-ch427-n216-max25-ssmf-ens19/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=20/g' u-ch427-n216-max25-ssmf-ens20/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=21/g' u-ch427-n216-max25-ssmf-ens21/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=22/g' u-ch427-n216-max25-ssmf-ens22/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=23/g' u-ch427-n216-max25-ssmf-ens23/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=24/g' u-ch427-n216-max25-ssmf-ens24/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=25/g' u-ch427-n216-max25-ssmf-ens25/rose-suite.conf;
+
+cd ../u-ch427-n216-max25-ssmf-ens00; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens01; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens02; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens03; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens04; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens05; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens06; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens07; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens08; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens09; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens10; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens11; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens12; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens13; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens14; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens15; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens16; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens17; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens18; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens19; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens20; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens21; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens22; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens23; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens24; rose suite-run;
+cd ../u-ch427-n216-max25-ssmf-ens25; rose suite-run;
+
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens00
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens01
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens02
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens03
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens04
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens05
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens06
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens07
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens08
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens09
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens10
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens11
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens12
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens13
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens14
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens15
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens16
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens17
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens18
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens19
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens20
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens21
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens22
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens23
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens24
+./scripts/step2-n216.sh u-ch427-n216-max25-ssmf-ens25
+
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens00
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens01
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens02
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens03
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens04
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens05
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens06
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens07
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens08
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens09
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens10
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens11
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens12
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens13
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens14
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens15
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens16
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens17
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens18
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens19
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens20
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens21
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens22
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens23
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens24
+ ./create-xml-mean-multiple-fields.sh u-ch427-n216-max25-ssmf-ens25

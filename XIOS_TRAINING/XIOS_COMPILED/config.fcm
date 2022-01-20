@@ -1,0 +1,6 @@
+%COMPIL_CFLAGS %DEBUG_CFLAGS
+%COMPIL_FFLAGS %DEBUG_FFLAGS
+%CPP_KEY        USING_NETCDF_PAR
+%CBASE_INC     /ccc/products/netcdf-c-4.6.0/intel--17.0.4.196__openmpi--2.0.2/hdf5__parallel/include /ccc/products/hdf5-1.8.20/intel--17.0.4.196__openmpi--2.0.2/parallel/include /ccc/products/openmpi-2.0.4/intel--17.0.6.256/default/include -I/ccc/work/cont003/drf/p86yann/XIOS_TRAINING/XIOS_COMPILED/extern/boost -I/ccc/work/cont003/drf/p86yann/XIOS_TRAINING/XIOS_COMPILED/extern/blitz
+%FBASE_INC     /ccc/products/netcdf-c-4.6.0/intel--17.0.4.196__openmpi--2.0.2/hdf5__parallel/include  /ccc/products/openmpi-2.0.4/intel--17.0.6.256/default/include -I/ccc/work/cont003/drf/p86yann/XIOS_TRAINING/XIOS_COMPILED/extern/boost -I/ccc/work/cont003/drf/p86yann/XIOS_TRAINING/XIOS_COMPILED/extern/blitz
+%ARCH_LD        /ccc/products/netcdf-c-4.6.0/intel--17.0.4.196__openmpi--2.0.2/hdf5__parallel/lib /ccc/products/hdf5-1.8.20/intel--17.0.4.196__openmpi--2.0.2/parallel/lib /ccc/products/openmpi-2.0.4/intel--17.0.6.256/default/lib   
