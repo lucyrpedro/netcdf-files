@@ -1,0 +1,99 @@
+<file_definition format="netcdf4" time_counter="instant" type="one_file">
+
+<file description="Field m01s00i028" id="test-m01s00i028" name="test-m01s00i028" output_freq="3h" enabled=".FALSE.">
+
+		<field
+			id="m01s00i028_inst"
+			name="m01s00i028_inst"
+			operation="instant"
+			field_ref="m01s00i028"
+		/>
+
+		<field
+			id="m01s00i028_ens"
+			name="m01s00i028_ens"
+			operation="instant"
+			field_ref="m01s00i028"
+			grid_ref="um-atmos_grid_cu_DIAG_ens_mean"
+		/>
+
+		<field
+			id="m01s00i028_sqav"
+			name="m01s00i028_sqav"
+			operation="instant"
+			field_ref="m01s00i028_ens"
+			> m01s00i028_ens*m01s00i028_ens
+		</field>
+
+		<field
+			id="m01s00i028_avensq"
+			name="m01s00i028_avensq"
+			operation="instant"
+			field_ref="m01s00i028"
+			grid_ref="um-atmos_grid_cu_DIAG_ens_mean"
+			> m01s00i028*m01s00i028
+		</field>
+
+</file>
+
+<file description="Field m01s00i028 - stdev" id="test-m01s00i028-stdev" name="test-m01s00i028-stdev" output_freq="3h">
+
+
+		<field
+			id="m01s00i028_stdev"
+			name="m01s00i028_stdev"
+			operation="instant"
+			field_ref="m01s00i028_ens"
+			> sqrt(m01s00i028_avensq - m01s00i028_sqav)
+		</field>
+
+</file>
+
+<file description="Field m01s05i256" id="test-m01s05i256" name="test-m01s05i256" output_freq="3h">
+
+		<field
+			enabled=".FALSE."
+			id="m01s05i256_inst"
+			name="m01s05i256_inst"
+			operation="instant"
+			field_ref="m01s05i256"
+		/>
+
+		<field
+			enabled=".FALSE."
+			id="m01s05i256_ens"
+			name="m01s05i256_ens"
+			operation="instant"
+			field_ref="m01s05i256"
+			grid_ref="um-atmos_grid_t_D52RH_ens_mean"
+		/>
+
+		<field
+			id="m01s05i256_sqav"
+			name="m01s05i256_sqav"
+			operation="instant"
+			field_ref="m01s05i256_ens"
+			> m01s05i256_ens*m01s05i256_ens
+		</field>
+
+		<field
+			id="m01s05i256_avensq"
+			name="m01s05i256_avensq"
+			operation="instant"
+			field_ref="m01s05i256"
+			grid_ref="um-atmos_grid_t_D52RH_ens_mean"
+			> m01s05i256*m01s05i256
+		</field>
+
+		<field
+			id="m01s05i256_stdev"
+			name="m01s05i256_stdev"
+			operation="instant"
+			field_ref="m01s05i256_ens"
+			> sqrt(m01s05i256_avensq - m01s05i256_sqav)
+		</field>
+
+</file>
+
+</file_definition>
+
