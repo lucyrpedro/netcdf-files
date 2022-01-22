@@ -1,0 +1,140 @@
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens00
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens01
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens02
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens03
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens04
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens05
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens06
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens07
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens08
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens09
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens10
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens11
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens12
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens13
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens14
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens15
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens16
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens17
+cp -r u-ch427-n96-template u-ch427-n96-max18-stdev-ens18
+
+sed -i 's/ATM_NENS=1/ATM_NENS=0/g' u-ch427-n96-max18-stdev-ens00/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=1/g' u-ch427-n96-max18-stdev-ens01/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=2/g' u-ch427-n96-max18-stdev-ens02/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=3/g' u-ch427-n96-max18-stdev-ens03/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=4/g' u-ch427-n96-max18-stdev-ens04/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=5/g' u-ch427-n96-max18-stdev-ens05/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=6/g' u-ch427-n96-max18-stdev-ens06/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=7/g' u-ch427-n96-max18-stdev-ens07/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=8/g' u-ch427-n96-max18-stdev-ens08/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=9/g' u-ch427-n96-max18-stdev-ens09/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=10/g' u-ch427-n96-max18-stdev-ens10/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=11/g' u-ch427-n96-max18-stdev-ens11/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=12/g' u-ch427-n96-max18-stdev-ens12/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=13/g' u-ch427-n96-max18-stdev-ens13/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=14/g' u-ch427-n96-max18-stdev-ens14/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=15/g' u-ch427-n96-max18-stdev-ens15/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=16/g' u-ch427-n96-max18-stdev-ens16/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=17/g' u-ch427-n96-max18-stdev-ens17/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=18/g' u-ch427-n96-max18-stdev-ens18/rose-suite.conf;
+
+cd ../u-ch427-n96-max18-stdev-ens00; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens01; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens02; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens03; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens04; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens05; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens06; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens07; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens08; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens09; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens10; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens11; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens12; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens13; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens14; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens15; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens16; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens17; rose suite-run;
+cd ../u-ch427-n96-max18-stdev-ens18; rose suite-run;
+
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens00
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens01
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens02
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens03
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens04
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens05
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens06
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens07
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens08
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens09
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens10
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens11
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens12
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens13
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens14
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens15
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens16
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens17
+./scripts/step2-n96.sh u-ch427-n96-max18-stdev-ens18
+
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens00
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens01
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens02
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens03
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens04
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens05
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens06
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens07
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens08
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens09
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens10
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens11
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens12
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens13
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens14
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens15
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens16
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens17
+ ./xml-stdev.sh u-ch427-n96-max18-stdev-ens18
+
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens00
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens01
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens02
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens03
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens04
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens05
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens06
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens07
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens08
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens09
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens10
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens11
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens12
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens13
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens14
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens15
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens16
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens17
+ ./xml-stdev-one.sh u-ch427-n96-max18-stdev-ens18
+
+cylc trigger u-ch427-n96-max18-stdev-ens00 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens01 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens02 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens03 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens04 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens05 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens06 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens07 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens08 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens09 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens10 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens11 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens12 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens13 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens14 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens15 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens16 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens17 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-ens18 atmos_main;
+
