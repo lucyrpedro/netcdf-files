@@ -6,12 +6,17 @@
 ./size.sh u-ch427-n96-max18-mf
 ./size.sh u-ch427-n96-max18-single
 ./size.sh u-ch427-n96-max18-stdev
+./size.sh u-ch427-n96-max18-stdev-one
 ./size.sh u-ch427-n216-max18
 ./size.sh u-ch427-n216-max18-mf
 ./size.sh u-ch427-n216-max18-single
+./size.sh u-ch427-n216-max18-stdev
+./size.sh u-ch427-n216-max18-stdev-one
 ./size.sh u-ch427-n512-max18
 ./size.sh u-ch427-n512-max18-mf
 ./size.sh u-ch427-n512-max18-single
+./size.sh u-ch427-n512-max18-stdev
+./size.sh u-ch427-n512-max18-stdev-one
 
 rm -rf total-all-suites.csv
 touch total-all-suites.csv
