@@ -117,3 +117,43 @@ cd ../u-ch427-n96-max18-stdev-one-ens18; rose suite-run;
 ./xml-stdev-half-half.sh u-ch427-n96-max18-stdev-one-ens16
 ./xml-stdev-half-half.sh u-ch427-n96-max18-stdev-one-ens17
 ./xml-stdev-half-half.sh u-ch427-n96-max18-stdev-one-ens18
+
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens00
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens01
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens02
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens03
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens04
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens05
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens06
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens07
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens08
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens09
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens10
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens11
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens12
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens13
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens14
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens15
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens16
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens17
+./xml-stdev-half-half-half.sh u-ch427-n96-max18-stdev-one-ens18
+
+cylc trigger u-ch427-n96-max18-stdev-one-ens00 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens01 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens02 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens03 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens04 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens05 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens06 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens07 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens08 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens09 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens10 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens11 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens12 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens13 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens14 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens15 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens16 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens17 atmos_main;
+cylc trigger u-ch427-n96-max18-stdev-one-ens18 atmos_main;
