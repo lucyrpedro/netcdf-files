@@ -32,11 +32,9 @@ for file in f_dir:
 
     data_M["SUITE"] = file.strip()
     data_M["ENSEMBLE"] = file[-3:-1]
-#    data_M["RESOLUTION"] = file[9:12]
     m0 = re.match("(.*)u-ch427-n(?P<RESOLUTION>[0-9]*)-ens(.*)", file)
     if m0:
       data_M.update(m0.groupdict())
-      del m0
 
     # Change to the suite directory
 
@@ -64,7 +62,7 @@ for file in f_dir:
             m9 = re.match("(.*)JOB_EXIT_TIME=(?P<JOB_EXIT_TIME>[0-9.TZ:-]+)", l)
             m10 = re.match("(.*)nodes=(?P<NODES>[0-9]+)", l)
 
-            if m1 is not None:    
+            if m1:    
                 data_M.update(m1.groupdict())       
             if m2:
                 data_M.update(m2.groupdict())
@@ -105,18 +103,19 @@ for file in f_dir:
 
         if m1:    
             data_M.update(m1.groupdict())        
-            del m1
         if m2:
             data_M.update(m2.groupdict())
-            del m2
         if m3:
             data_M.update(m3.groupdict())
-            del m3
                 
       f.close()
-        
-    out.writerow(data_M)
 
+#    data_M["TIME-INITIAL"] = data_M["TIME"] - data_M["INITIAL"]
+        
+    # This next command can be used to already exclude from the .csv the files that do not have took
+
+    out.writerow(data_M)
+#    data_M["TIME-INITIAL"] = data_M["TIME"] - data_M["INITIAL"]
     print("EOF\n\n")
 
 f_dir.close()
