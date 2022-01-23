@@ -35,6 +35,9 @@ touch total-all-suites.csv
         suite=u-ch427-n96-max18-stdev
         cat total-$suite.csv >> total-all-suites.csv
         cat blank.txt >> total-all-suites.csv
+        suite=u-ch427-n96-max18-stdev-one
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
 	suite=u-ch427-n216-max18
         cat total-$suite.csv >> total-all-suites.csv
         cat blank.txt >> total-all-suites.csv
@@ -44,7 +47,13 @@ touch total-all-suites.csv
         suite=u-ch427-n216-max18-single
         cat total-$suite.csv >> total-all-suites.csv
         cat blank.txt >> total-all-suites.csv
-        suite=u-ch427-n512-max18
+        suite=u-ch427-n216-max18-stdev
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
+        suite=u-ch427-n216-max18-stdev-one
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
+	suite=u-ch427-n512-max18
         cat total-$suite.csv >> total-all-suites.csv
         cat blank.txt >> total-all-suites.csv
         suite=u-ch427-n512-max18-mf
@@ -53,7 +62,12 @@ touch total-all-suites.csv
         suite=u-ch427-n512-max18-single
         cat total-$suite.csv >> total-all-suites.csv
         cat blank.txt >> total-all-suites.csv
-
+        suite=u-ch427-n512-max18-stdev
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
+        suite=u-ch427-n512-max18-stdev-one
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
 #done
 
 
