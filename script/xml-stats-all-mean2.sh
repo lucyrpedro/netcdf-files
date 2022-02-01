@@ -6,7 +6,7 @@ file=$3
 
 cat >> ${file} << EOF
 
-	<file description="Field ${field}" id="test-${field}" name="test-${field}" output_freq="3h">
+	<file description="Field ${field} - MEAN" id="test-${field}-mean" name="test-${field}-mean" output_freq="3h">
 
 		<field
 			id="${field}_ens"
