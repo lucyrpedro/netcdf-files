@@ -23,10 +23,6 @@ cat >> $output_stdev << EOF
 
 EOF
 
-cat >> $output_field << EOF
-<field_definition default_value="-1073741824.0" prec="8">
-EOF
-
 while IFS= read -r line
 do
 	grid=$(echo "$line" | cut -d' ' -f 1)
@@ -49,6 +45,10 @@ EOF
 cat >> $output_field << EOF
 </field_definition>
 EOF
+
+cat field-orig.txt $output_field > aux
+
+mv aux $output_field
 
 cp $output_field ../test
 cp $output_mean ../test
