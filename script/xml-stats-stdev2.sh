@@ -13,7 +13,7 @@ cat >> ${file} << EOF
 			name="${field}_stdev"
 			operation="instant"
 			field_ref="${field}_stdev_field"
-		</field>
+		/>
 
 	</file>
 

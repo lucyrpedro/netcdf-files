@@ -11,6 +11,8 @@ rm -rf $output_stdev
 output_field="um-stats-all-field2.xml"
 rm -rf $output_field
 
+EOF
+
 cat >> $output_mean << EOF
 <file_definition format="netcdf4" time_counter="instant" type="one_file">
 
@@ -47,3 +49,8 @@ EOF
 cat >> $output_field << EOF
 </field_definition>
 EOF
+
+cp $output_field ../test
+cp $output_mean ../test
+cp $output_stdev ../test
+

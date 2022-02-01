@@ -9,11 +9,11 @@ cat >> ${file} << EOF
 	<file description="Field ${field} - STDEV" id="test-${field}-stdev" name="test-${field}-stdev" output_freq="3h">
 
 		<field
-			id="${field}_stdev"
-			name="${field}_stdev"
+			id="${field}_stdev_file"
+			name="${field}_stdev_file"
 			operation="instant"
-			field_ref="${field}_field_stdev"
-		</field>
+			field_ref="${field}_stdev"
+		/>
 
 	</file>
 
