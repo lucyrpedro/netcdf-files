@@ -97,3 +97,22 @@ cd ../u-ch427-n96-test-one-ens18; rose suite-run;
  ./xml-test-one.sh u-ch427-n96-test-one-ens16
  ./xml-test-one.sh u-ch427-n96-test-one-ens17
  ./xml-test-one.sh u-ch427-n96-test-one-ens18
+
+ cylc trigger  u-ch427-n96-test-one-ens01 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens02 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens03 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens04 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens05 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens06 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens07 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens08 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens09 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens10 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens11 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens12 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens13 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens14 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens15 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens16 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens17 atmos_main;
+ cylc trigger  u-ch427-n96-test-one-ens18 atmos_main;

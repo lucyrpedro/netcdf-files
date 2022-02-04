@@ -78,22 +78,92 @@ cd ../u-ch427-n96-test-stdev-ens18; rose suite-run;
 ./scripts/step2-n96.sh u-ch427-n96-test-stdev-ens17
 ./scripts/step2-n96.sh u-ch427-n96-test-stdev-ens18
 
- ./xml.sh u-ch427-n96-test-stdev-ens00
- ./xml.sh u-ch427-n96-test-stdev-ens01
- ./xml.sh u-ch427-n96-test-stdev-ens02
- ./xml.sh u-ch427-n96-test-stdev-ens03
- ./xml.sh u-ch427-n96-test-stdev-ens04
- ./xml.sh u-ch427-n96-test-stdev-ens05
- ./xml.sh u-ch427-n96-test-stdev-ens06
- ./xml.sh u-ch427-n96-test-stdev-ens07
- ./xml.sh u-ch427-n96-test-stdev-ens08
- ./xml.sh u-ch427-n96-test-stdev-ens09
- ./xml.sh u-ch427-n96-test-stdev-ens10
- ./xml.sh u-ch427-n96-test-stdev-ens11
- ./xml.sh u-ch427-n96-test-stdev-ens12
- ./xml.sh u-ch427-n96-test-stdev-ens13
- ./xml.sh u-ch427-n96-test-stdev-ens14
- ./xml.sh u-ch427-n96-test-stdev-ens15
- ./xml.sh u-ch427-n96-test-stdev-ens16
- ./xml.sh u-ch427-n96-test-stdev-ens17
- ./xml.sh u-ch427-n96-test-stdev-ens18
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens00
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens01
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens02
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens03
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens04
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens05
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens06
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens07
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens08
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens09
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens10
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens11
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens12
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens13
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens14
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens15
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens16
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens17
+ ./xml-test-stdev.sh u-ch427-n96-test-stdev-ens18
+
+ cylc stop -n u-ch427-n96-test-stdev-ens00
+ cylc stop -n u-ch427-n96-test-stdev-ens01
+ cylc stop -n u-ch427-n96-test-stdev-ens02
+ cylc stop -n u-ch427-n96-test-stdev-ens03
+ cylc stop -n u-ch427-n96-test-stdev-ens04
+ cylc stop -n u-ch427-n96-test-stdev-ens05
+ cylc stop -n u-ch427-n96-test-stdev-ens06
+ cylc stop -n u-ch427-n96-test-stdev-ens07
+ cylc stop -n u-ch427-n96-test-stdev-ens08
+ cylc stop -n u-ch427-n96-test-stdev-ens09
+ cylc stop -n u-ch427-n96-test-stdev-ens10
+ cylc stop -n u-ch427-n96-test-stdev-ens11
+ cylc stop -n u-ch427-n96-test-stdev-ens12
+ cylc stop -n u-ch427-n96-test-stdev-ens13
+ cylc stop -n u-ch427-n96-test-stdev-ens14
+ cylc stop -n u-ch427-n96-test-stdev-ens15
+ cylc stop -n u-ch427-n96-test-stdev-ens16
+ cylc stop -n u-ch427-n96-test-stdev-ens17
+ cylc stop -n u-ch427-n96-test-stdev-ens18
+
+rm um-atmos-file_ens_def_half_half_half_half.xml
+rm um-atmos-file_ens_def_half_half_half.xml
+rm um-atmos-file_ens_def_half_half.xml
+rm um-atmos-file_ens_def_half.xml
+cp um-atmos-file_ens_def_one.xml um-atmos-file_ens_def.xml
+rm um-atmos-file_ens_def_ten.xml
+rm um-stats-stdev.xml
+
+cp ~/test-git/netcdf-files/test/um-atmos-file_ens_def-stdev-all.xml um-atmos-file_ens_def.xml
+
+./clean.sh u-ch427-n96-test-stdev-ens00
+./clean.sh u-ch427-n96-test-stdev-ens01
+./clean.sh u-ch427-n96-test-stdev-ens02
+./clean.sh u-ch427-n96-test-stdev-ens03
+./clean.sh u-ch427-n96-test-stdev-ens04
+./clean.sh u-ch427-n96-test-stdev-ens05
+./clean.sh u-ch427-n96-test-stdev-ens06
+./clean.sh u-ch427-n96-test-stdev-ens07
+./clean.sh u-ch427-n96-test-stdev-ens08
+./clean.sh u-ch427-n96-test-stdev-ens09
+./clean.sh u-ch427-n96-test-stdev-ens10
+./clean.sh u-ch427-n96-test-stdev-ens11
+./clean.sh u-ch427-n96-test-stdev-ens12
+./clean.sh u-ch427-n96-test-stdev-ens13
+./clean.sh u-ch427-n96-test-stdev-ens14
+./clean.sh u-ch427-n96-test-stdev-ens15
+./clean.sh u-ch427-n96-test-stdev-ens16
+./clean.sh u-ch427-n96-test-stdev-ens17
+./clean.sh u-ch427-n96-test-stdev-ens18
+
+cylc trigger u-ch427-n96-test-stdev-ens00 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens01 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens02 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens03 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens04 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens05 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens06 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens07 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens08 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens09 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens10 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens11 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens12 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens13 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens14 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens15 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens16 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens17 atmos_main
+cylc trigger u-ch427-n96-test-stdev-ens18 atmos_main

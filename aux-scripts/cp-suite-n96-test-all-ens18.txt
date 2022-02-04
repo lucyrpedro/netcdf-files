@@ -98,7 +98,6 @@ cd ../u-ch427-n96-test-all-ens18; rose suite-run;
  ./xml-test-all.sh u-ch427-n96-test-all-ens17
  ./xml-test-all.sh u-ch427-n96-test-all-ens18
 
-cylc trigger  u-ch427-n96-test-all-ens00 atmos_main;
 cylc trigger  u-ch427-n96-test-all-ens01 atmos_main;
 cylc trigger  u-ch427-n96-test-all-ens02 atmos_main;
 cylc trigger  u-ch427-n96-test-all-ens03 atmos_main;

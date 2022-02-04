@@ -1,0 +1,118 @@
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens00
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens01
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens02
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens03
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens04
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens05
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens06
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens07
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens08
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens09
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens10
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens11
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens12
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens13
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens14
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens15
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens16
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens17
+cp -r u-ch427-n96-template u-ch427-n96-mean-tfof-ens18
+
+sed -i 's/ATM_NENS=1/ATM_NENS=0/g' u-ch427-n96-mean-tfof-ens00/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=1/g' u-ch427-n96-mean-tfof-ens01/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=2/g' u-ch427-n96-mean-tfof-ens02/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=3/g' u-ch427-n96-mean-tfof-ens03/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=4/g' u-ch427-n96-mean-tfof-ens04/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=5/g' u-ch427-n96-mean-tfof-ens05/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=6/g' u-ch427-n96-mean-tfof-ens06/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=7/g' u-ch427-n96-mean-tfof-ens07/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=8/g' u-ch427-n96-mean-tfof-ens08/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=9/g' u-ch427-n96-mean-tfof-ens09/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=10/g' u-ch427-n96-mean-tfof-ens10/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=11/g' u-ch427-n96-mean-tfof-ens11/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=12/g' u-ch427-n96-mean-tfof-ens12/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=13/g' u-ch427-n96-mean-tfof-ens13/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=14/g' u-ch427-n96-mean-tfof-ens14/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=15/g' u-ch427-n96-mean-tfof-ens15/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=16/g' u-ch427-n96-mean-tfof-ens16/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=17/g' u-ch427-n96-mean-tfof-ens17/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=18/g' u-ch427-n96-mean-tfof-ens18/rose-suite.conf;
+
+cd ../u-ch427-n96-mean-tfof-ens00; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens01; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens02; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens03; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens04; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens05; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens06; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens07; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens08; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens09; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens10; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens11; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens12; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens13; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens14; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens15; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens16; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens17; rose suite-run;
+cd ../u-ch427-n96-mean-tfof-ens18; rose suite-run;
+
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens00
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens01
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens02
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens03
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens04
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens05
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens06
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens07
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens08
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens09
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens10
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens11
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens12
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens13
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens14
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens15
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens16
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens17
+./scripts/step2-n96.sh u-ch427-n96-mean-tfof-ens18
+
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens00
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens01
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens02
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens03
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens04
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens05
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens06
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens07
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens08
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens09
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens10
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens11
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens12
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens13
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens14
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens15
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens16
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens17
+ ./xml-mean-tfof.sh u-ch427-n96-mean-tfof-ens18
+
+ cylc trigger  u-ch427-n96-mean-tfof-ens01 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens02 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens03 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens04 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens05 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens06 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens07 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens08 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens09 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens10 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens11 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens12 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens13 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens14 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens15 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens16 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens17 atmos_main;
+ cylc trigger  u-ch427-n96-mean-tfof-ens18 atmos_main;

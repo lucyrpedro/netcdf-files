@@ -1,6 +1,5 @@
 <file_definition format="netcdf4" time_counter="instant" type="one_file">
 
-
 	<file description="Field m01s00i002 - STDEV" id="test-m01s00i002-stdev-file" name="test-m01s00i002-stdev-file" output_freq="3h">
 
 		<field
@@ -72,20 +71,12 @@
 
 	</file>
 
-
-	<file description="Field m01s00i024 - STDEV" id="test-m01s00i024-stdev-file" name="test-m01s00i024-stdev-file" output_freq="3h">
-
 		<field
 			id="m01s00i024_stdev_file"
 			name="m01s00i024_stdev_file"
 			operation="instant"
 			field_ref="m01s00i024_stdev"
 		/>
-
-	</file>
-
-
-	<file description="Field m01s00i025 - STDEV" id="test-m01s00i025-stdev-file" name="test-m01s00i025-stdev-file" output_freq="3h">
 
 		<field
 			id="m01s00i025_stdev_file"
@@ -94,22 +85,12 @@
 			field_ref="m01s00i025_stdev"
 		/>
 
-	</file>
-
-
-	<file description="Field m01s00i028 - STDEV" id="test-m01s00i028-stdev-file" name="test-m01s00i028-stdev-file" output_freq="3h">
-
 		<field
 			id="m01s00i028_stdev_file"
 			name="m01s00i028_stdev_file"
 			operation="instant"
 			field_ref="m01s00i028_stdev"
 		/>
-
-	</file>
-
-
-	<file description="Field m01s00i029 - STDEV" id="test-m01s00i029-stdev-file" name="test-m01s00i029-stdev-file" output_freq="3h">
 
 		<field
 			id="m01s00i029_stdev_file"

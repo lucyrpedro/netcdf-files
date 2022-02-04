@@ -1,0 +1,118 @@
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens00
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens01
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens02
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens03
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens04
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens05
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens06
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens07
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens08
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens09
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens10
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens11
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens12
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens13
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens14
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens15
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens16
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens17
+cp -r u-ch427-n96-template u-ch427-n96-stdev-afaf-ens18
+
+sed -i 's/ATM_NENS=1/ATM_NENS=0/g' u-ch427-n96-stdev-afaf-ens00/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=1/g' u-ch427-n96-stdev-afaf-ens01/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=2/g' u-ch427-n96-stdev-afaf-ens02/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=3/g' u-ch427-n96-stdev-afaf-ens03/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=4/g' u-ch427-n96-stdev-afaf-ens04/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=5/g' u-ch427-n96-stdev-afaf-ens05/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=6/g' u-ch427-n96-stdev-afaf-ens06/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=7/g' u-ch427-n96-stdev-afaf-ens07/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=8/g' u-ch427-n96-stdev-afaf-ens08/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=9/g' u-ch427-n96-stdev-afaf-ens09/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=10/g' u-ch427-n96-stdev-afaf-ens10/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=11/g' u-ch427-n96-stdev-afaf-ens11/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=12/g' u-ch427-n96-stdev-afaf-ens12/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=13/g' u-ch427-n96-stdev-afaf-ens13/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=14/g' u-ch427-n96-stdev-afaf-ens14/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=15/g' u-ch427-n96-stdev-afaf-ens15/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=16/g' u-ch427-n96-stdev-afaf-ens16/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=17/g' u-ch427-n96-stdev-afaf-ens17/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=18/g' u-ch427-n96-stdev-afaf-ens18/rose-suite.conf;
+
+cd ../u-ch427-n96-stdev-afaf-ens00; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens01; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens02; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens03; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens04; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens05; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens06; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens07; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens08; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens09; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens10; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens11; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens12; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens13; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens14; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens15; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens16; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens17; rose suite-run;
+cd ../u-ch427-n96-stdev-afaf-ens18; rose suite-run;
+
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens00
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens01
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens02
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens03
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens04
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens05
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens06
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens07
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens08
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens09
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens10
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens11
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens12
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens13
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens14
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens15
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens16
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens17
+./scripts/step2-n96.sh u-ch427-n96-stdev-afaf-ens18
+
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens00
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens01
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens02
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens03
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens04
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens05
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens06
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens07
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens08
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens09
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens10
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens11
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens12
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens13
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens14
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens15
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens16
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens17
+ ./xml-stdev-afaf.sh u-ch427-n96-stdev-afaf-ens18
+
+ cylc trigger  u-ch427-n96-stdev-afaf-ens01 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens02 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens03 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens04 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens05 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens06 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens07 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens08 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens09 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens10 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens11 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens12 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens13 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens14 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens15 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens16 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens17 atmos_main;
+ cylc trigger  u-ch427-n96-stdev-afaf-ens18 atmos_main;

@@ -78,22 +78,42 @@ cd ../u-ch427-n96-test-mean-ens18; rose suite-run;
 ./scripts/step2-n96.sh u-ch427-n96-test-mean-ens17
 ./scripts/step2-n96.sh u-ch427-n96-test-mean-ens18
 
- ./xml.sh u-ch427-n96-test-mean-ens00
- ./xml.sh u-ch427-n96-test-mean-ens01
- ./xml.sh u-ch427-n96-test-mean-ens02
- ./xml.sh u-ch427-n96-test-mean-ens03
- ./xml.sh u-ch427-n96-test-mean-ens04
- ./xml.sh u-ch427-n96-test-mean-ens05
- ./xml.sh u-ch427-n96-test-mean-ens06
- ./xml.sh u-ch427-n96-test-mean-ens07
- ./xml.sh u-ch427-n96-test-mean-ens08
- ./xml.sh u-ch427-n96-test-mean-ens09
- ./xml.sh u-ch427-n96-test-mean-ens10
- ./xml.sh u-ch427-n96-test-mean-ens11
- ./xml.sh u-ch427-n96-test-mean-ens12
- ./xml.sh u-ch427-n96-test-mean-ens13
- ./xml.sh u-ch427-n96-test-mean-ens14
- ./xml.sh u-ch427-n96-test-mean-ens15
- ./xml.sh u-ch427-n96-test-mean-ens16
- ./xml.sh u-ch427-n96-test-mean-ens17
- ./xml.sh u-ch427-n96-test-mean-ens18
+./xml-test-mean.sh u-ch427-n96-test-mean-ens00
+./xml-test-mean.sh u-ch427-n96-test-mean-ens01
+./xml-test-mean.sh u-ch427-n96-test-mean-ens02
+./xml-test-mean.sh u-ch427-n96-test-mean-ens03
+./xml-test-mean.sh u-ch427-n96-test-mean-ens04
+./xml-test-mean.sh u-ch427-n96-test-mean-ens05
+./xml-test-mean.sh u-ch427-n96-test-mean-ens06
+./xml-test-mean.sh u-ch427-n96-test-mean-ens07
+./xml-test-mean.sh u-ch427-n96-test-mean-ens08
+./xml-test-mean.sh u-ch427-n96-test-mean-ens09
+./xml-test-mean.sh u-ch427-n96-test-mean-ens10
+./xml-test-mean.sh u-ch427-n96-test-mean-ens11
+./xml-test-mean.sh u-ch427-n96-test-mean-ens12
+./xml-test-mean.sh u-ch427-n96-test-mean-ens13
+./xml-test-mean.sh u-ch427-n96-test-mean-ens14
+./xml-test-mean.sh u-ch427-n96-test-mean-ens15
+./xml-test-mean.sh u-ch427-n96-test-mean-ens16
+./xml-test-mean.sh u-ch427-n96-test-mean-ens17
+./xml-test-mean.sh u-ch427-n96-test-mean-ens18
+
+cylc stop -n u-ch427-n96-test-mean-ens00
+cylc stop -n u-ch427-n96-test-mean-ens01
+cylc stop -n u-ch427-n96-test-mean-ens02
+cylc stop -n u-ch427-n96-test-mean-ens03
+cylc stop -n u-ch427-n96-test-mean-ens04
+cylc stop -n u-ch427-n96-test-mean-ens05
+cylc stop -n u-ch427-n96-test-mean-ens06
+cylc stop -n u-ch427-n96-test-mean-ens07
+cylc stop -n u-ch427-n96-test-mean-ens08
+cylc stop -n u-ch427-n96-test-mean-ens09
+cylc stop -n u-ch427-n96-test-mean-ens10
+cylc stop -n u-ch427-n96-test-mean-ens11
+cylc stop -n u-ch427-n96-test-mean-ens12
+cylc stop -n u-ch427-n96-test-mean-ens13
+cylc stop -n u-ch427-n96-test-mean-ens14
+cylc stop -n u-ch427-n96-test-mean-ens15
+cylc stop -n u-ch427-n96-test-mean-ens16
+cylc stop -n u-ch427-n96-test-mean-ens17
+cylc stop -n u-ch427-n96-test-mean-ens18
