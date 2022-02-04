@@ -1,8 +1,6 @@
 <file_definition format="netcdf4" time_counter="instant" type="one_file">
 
-	<file description="All Fields" id="all-fields-stdev" name="te
-st-all-fields-stdev" output_freq="3h">
-
+	<file description="All Fields" id="all-fields-stdev" name="file-all-fields-stdev" output_freq="3h">
 
 		<field
 			id="m01s00i002_stdev_file"
@@ -1382,6 +1380,7 @@ st-all-fields-stdev" output_freq="3h">
 			operation="instant"
 			field_ref="m01s30i431_stdev"
 		/>
+
 	</file>
 
 </file_definition>

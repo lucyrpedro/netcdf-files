@@ -2,13 +2,13 @@
 
 input="grids-fields.txt"
 
-output_stdev="um-stats-all-stdev-one-file.xml"
-rm -rf $output_stdev
+output_mean="um-stats-all-mean-one-file.xml"
+rm -rf $output_mean
 
-cat >> $output_stdev << EOF
+cat >> $output_mean << EOF
 <file_definition format="netcdf4" time_counter="instant" type="one_file">
 
-	<file description="All Fields" id="all-fields-stdev" name="file-all-fields-stdev" output_freq="3h">
+	<file description="All Fields" id="all-fields-mean" name="file-all-fields-mean" output_freq="3h">
 
 EOF
 
@@ -18,14 +18,14 @@ do
 	field=$(echo "$line" | cut -d' ' -f 2)
 	echo "grid = $grid"
 	echo "field = $field"
-	./xml-stats-all-stdev-one-file.sh $grid $field $output_stdev
+	./xml-stats-all-mean-one-file.sh $grid $field $output_mean
 done < "$input"
 
-cat >> $output_stdev << EOF
+cat >> $output_mean << EOF
 	</file>
 
 </file_definition>
 EOF
 
-cp $output_stdev ../test
+cp $output_mean ../test
 
