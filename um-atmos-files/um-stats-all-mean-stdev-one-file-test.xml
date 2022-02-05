@@ -1,0 +1,21 @@
+<file_definition format="netcdf4" time_counter="instant" type="multiple_file">
+
+	<file description="All Fields" id="all-fields-mean-stdev-test" name="file-all-fields-mean-stdev-test" output_freq="3h">
+
+		<field
+			id="m01s00i002_ens_mean_file"
+			name="m01s00i002_ens_mean_file"
+			operation="instant"
+		 	field_ref="m01s00i002_ens"
+		/>
+
+		<field
+			id="m01s00i002_stdev_file"
+			name="m01s00i002_stdev_file"
+			operation="instant"
+			field_ref="m01s00i002_stdev"
+		/>
+
+	</file>
+
+</file_definition>

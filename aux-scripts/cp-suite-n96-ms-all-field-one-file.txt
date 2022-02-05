@@ -1,0 +1,139 @@
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens00
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens01
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens02
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens03
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens04
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens05
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens06
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens07
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens08
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens09
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens10
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens11
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens12
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens13
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens14
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens15
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens16
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens17
+cp -r u-ch427-n96-template u-ch427-n96-ms-afof-ens18
+
+sed -i 's/ATM_NENS=1/ATM_NENS=0/g' u-ch427-n96-ms-afof-ens00/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=1/g' u-ch427-n96-ms-afof-ens01/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=2/g' u-ch427-n96-ms-afof-ens02/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=3/g' u-ch427-n96-ms-afof-ens03/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=4/g' u-ch427-n96-ms-afof-ens04/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=5/g' u-ch427-n96-ms-afof-ens05/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=6/g' u-ch427-n96-ms-afof-ens06/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=7/g' u-ch427-n96-ms-afof-ens07/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=8/g' u-ch427-n96-ms-afof-ens08/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=9/g' u-ch427-n96-ms-afof-ens09/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=10/g' u-ch427-n96-ms-afof-ens10/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=11/g' u-ch427-n96-ms-afof-ens11/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=12/g' u-ch427-n96-ms-afof-ens12/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=13/g' u-ch427-n96-ms-afof-ens13/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=14/g' u-ch427-n96-ms-afof-ens14/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=15/g' u-ch427-n96-ms-afof-ens15/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=16/g' u-ch427-n96-ms-afof-ens16/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=17/g' u-ch427-n96-ms-afof-ens17/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=18/g' u-ch427-n96-ms-afof-ens18/rose-suite.conf;
+
+cd ../u-ch427-n96-ms-afof-ens00; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens01; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens02; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens03; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens04; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens05; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens06; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens07; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens08; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens09; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens10; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens11; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens12; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens13; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens14; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens15; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens16; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens17; rose suite-run;
+cd ../u-ch427-n96-ms-afof-ens18; rose suite-run;
+
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens00
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens01
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens02
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens03
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens04
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens05
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens06
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens07
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens08
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens09
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens10
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens11
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens12
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens13
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens14
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens15
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens16
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens17
+./scripts/step2-n96.sh u-ch427-n96-ms-afof-ens18
+
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens00
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens01
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens02
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens03
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens04
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens05
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens06
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens07
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens08
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens09
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens10
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens11
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens12
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens13
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens14
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens15
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens16
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens17
+ ./xml-ms-afof.sh u-ch427-n96-ms-afof-ens18
+
+ cylc trigger  u-ch427-n96-ms-afof-ens01 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens02 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens03 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens04 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens05 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens06 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens07 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens08 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens09 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens10 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens11 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens12 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens13 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens14 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens15 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens16 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens17 atmos_main;
+ cylc trigger  u-ch427-n96-ms-afof-ens18 atmos_main;
+
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens08/work/19880901T0000Z/atmos_main/core
+
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens01/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens02/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens03/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens04/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens05/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens06/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens07/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens08/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens09/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens10/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens11/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens12/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens13/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens14/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens15/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens16/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens17/work/19880901T0000Z/atmos_main/core
+rm ~/cylc-run/u-ch427-n96-ms-afof-ens18/work/19880901T0000Z/atmos_main/core
