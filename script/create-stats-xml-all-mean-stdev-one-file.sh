@@ -2,13 +2,13 @@
 
 input="grids-fields.txt"
 
-output_mean_stdev="um-stats-all-mean-stdev-one-file.xml"
+output_mean_stdev="um-stats-all-ms-one-file.xml"
 rm -rf $output_mean_stdev
 
 cat >> $output_mean_stdev << EOF
 <file_definition format="netcdf4" time_counter="instant" type="one_file">
 
-	<file description="All Fields" id="all-fields-mean-stdev" name="file-all-fields-mean-stdev" output_freq="3h">
+	<file description="All Fields" id="all-fields-mean-stdev" name="test-all-fields-mean-stdev" output_freq="3h">
 
 EOF
 

@@ -5,12 +5,7 @@ field=$2
 file=$3
 
 cat >> ${file} << EOF
-		<field
-			id="${field}_ens_mean_file"
-			name="${field}_ens_mean_file"
-			operation="instant"
-		 	field_ref="${field}_ens"
-		/>
+	<file description="Field ${field} - STDEV" id="test-${field}-stdev-file" name="file-${field}-stdev" output_freq="3h">
 
 		<field
 			id="${field}_stdev_file"
@@ -18,6 +13,8 @@ cat >> ${file} << EOF
 			operation="instant"
 			field_ref="${field}_stdev"
 		/>
+
+	</file>
 
 EOF
 
