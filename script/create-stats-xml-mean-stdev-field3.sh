@@ -54,12 +54,11 @@ done < "$input"
 
 cat $output_mean $mean > aux3
 cat $output_stdev $stdev > aux4
-cat $mean $output_mean_stdev > aux5
-cat $stdev $aux5 > aux6
+cat $mean $stdev $output_mean_stdev > aux5
 
 mv aux3 $output_mean
 mv aux4 $output_stdev
-mv aux6 $output_mean_stdev
+mv aux5 $output_mean_stdev
 
 cat >> $output_mean << EOF
 </file_definition>

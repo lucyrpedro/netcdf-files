@@ -1,0 +1,14 @@
+<file_definition format="netcdf4" time_counter="instant" type="one_file">
+
+        <file description="Field m01s05i256 - MEAN" id="test-m01s05i256-mean-file" name="test-m01s05i256-mean" output_freq="3h" compression_level="0">
+
+                <field
+                        id="m01s05i256_ens_mean_file"
+                        name="m01s05i256_ens_mean_file"
+                        operation="instant"
+                        field_ref="m01s05i256_ens"
+                />
+
+        </file>
+
+</file_definition>
