@@ -1,0 +1,128 @@
+#!/bin/bash -l
+#
+# ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
+# Suite: u-ch427-n1280-mf-ens01
+# Task: atmos_main.19790301T0000Z
+# Job log directory: 19790301T0000Z/atmos_main/01
+# Job submit method: slurm
+# Execution time limit: 3600.0
+
+# DIRECTIVES:
+#SBATCH --job-name=u-ch427-n1280-mf-ens01.atmos_main.19790301T0000Z
+#SBATCH --output=cylc-run/u-ch427-n1280-mf-ens01/log/job/19790301T0000Z/atmos_main/01/job.out
+#SBATCH --error=cylc-run/u-ch427-n1280-mf-ens01/log/job/19790301T0000Z/atmos_main/01/job.err
+#SBATCH --time=60:00
+#SBATCH --export=none
+#SBATCH --chdir=/work/n02/n02/lrpedro
+#SBATCH --partition=standard
+#SBATCH --qos=standard
+#SBATCH --account=n02-cms
+#SBATCH --nodes=95
+# N.B. CYLC_DIR has been updated on the remote host
+export CYLC_DIR='/mnt/lustre/a2fs-work1/work/y07/shared/umshared/software/cylc-7.8.7'
+export CYLC_VERSION='7.8.7'
+CYLC_FAIL_SIGNALS='EXIT ERR XCPU'
+
+cylc__job__inst__cylc_env() {
+    # CYLC SUITE ENVIRONMENT:
+    export CYLC_CYCLING_MODE="360day"
+    export CYLC_SUITE_FINAL_CYCLE_POINT="19790301T0000Z"
+    export CYLC_SUITE_INITIAL_CYCLE_POINT="19790301T0000Z"
+    export CYLC_SUITE_NAME="u-ch427-n1280-mf-ens01"
+    export CYLC_UTC="True"
+    export CYLC_VERBOSE="false"
+    export TZ="UTC"
+
+    export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n1280-mf-ens01"
+    export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n1280-mf-ens01"
+    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n1280-mf-ens01"
+    export CYLC_SUITE_UUID="ede5ce7f-c252-43b3-bce7-3b80c246a45e"
+
+    # CYLC TASK ENVIRONMENT:
+    export CYLC_TASK_JOB="19790301T0000Z/atmos_main/01"
+    export CYLC_TASK_NAMESPACE_HIERARCHY="root UM ATMOS SUBMIT_RETRIES HPC UM_PARALLEL ATMOS_RESOURCE RUN_MAIN atmos_main"
+    export CYLC_TASK_DEPENDENCIES="ens_setup_all.19790301T0000Z install_ancil.19790301T0000Z"
+    export CYLC_TASK_TRY_NUMBER=1
+}
+
+cylc__job__inst__global_init_script() {
+# GLOBAL-INIT-SCRIPT:
+. /work/y07/shared/umshared/bin/rose-um-env
+export HOME=$DATADIR
+export CYLC_SUITE_RUN_DIR=$HOME/cylc-run/$CYLC_SUITE_NAME
+export CYLC_SUITE_DEF_PATH=${CYLC_SUITE_RUN_DIR}
+export ROSE_VERSION='pumatest'
+}
+
+cylc__job__inst__user_env() {
+    # TASK RUNTIME ENVIRONMENT:
+    export IS_CYLC_SUITE_INITIAL_CYCLE_POINT IS_CYLC_TASK_TRY_NUMBER_1 BASIS_UM_PT BASIS_YR DATEC_DUMP RUNID UM_VN XIOS_XML USE_XIOS XIOS_PATH UM_ATM_NENS MODELS TASK_NAME_ROOT FLUME_IOS_NPROC RCF_NPROCX RCF_NPROCY ROSE_APP_OPT_CONF_KEYS ROSE_TASK_APP UM_ATM_NPROCX UM_ATM_NPROCY XIOS_NPROC ATMOS_EXEC HYPERTHREADS OMP_NUM_THREADS CONTINUE TASKEND PLATFORM CMIP6_ANCILS ATP_ENABLED ROSE_LAUNCHER OMP_PLACES FI_OFI_RXM_SAR_LIMIT ROSE_LAUNCHER_PREOPTS_UM ROSE_LAUNCHER_PREOPTS_XIOS DATAM DATAW
+    IS_CYLC_SUITE_INITIAL_CYCLE_POINT="$(if [ $CYLC_TASK_CYCLE_POINT == $CYLC_SUITE_INITIAL_CYCLE_POINT ]; then echo "true"; else echo "false"; fi)"
+    IS_CYLC_TASK_TRY_NUMBER_1="$(if [ $CYLC_TASK_TRY_NUMBER -eq 1 ]; then echo "true"; else echo "false"; fi)"
+    BASIS_UM_PT="$(rose date -c --calendar=360day --print-format='%Y,%m,%d,%H,%M,%S' 19790301T0000Z)"
+    BASIS_YR="$(rose date -c --calendar=360day --print-format='%Y' 19790301T0000Z)"
+    DATEC_DUMP="$(rose date -c --calendar=360day --print-format='%Y%m%d_%H')"
+    RUNID="$(echo -n $CYLC_SUITE_NAME | cut -d - -f 2 | cut -c 1-5)"
+    UM_VN="11.4"
+    XIOS_XML="$CYLC_SUITE_SHARE_DIR/data/xml"
+    USE_XIOS="true"
+    XIOS_PATH="/work/n02/n02/jwc/XIOS/extract/xios_trunk_r2245"
+    UM_ATM_NENS="1"
+    MODELS="um_ens xios"
+    TASK_NAME_ROOT="atmos_ens"
+    FLUME_IOS_NPROC="0"
+    RCF_NPROCX="24"
+    RCF_NPROCY="16"
+    ROSE_APP_OPT_CONF_KEYS="(ga7p0) (n1280e) (360day)"
+    ROSE_TASK_APP="um"
+    UM_ATM_NPROCX="94"
+    UM_ATM_NPROCY="64"
+    XIOS_NPROC="6"
+    ATMOS_EXEC="$CYLC_SUITE_SHARE_DIR/fcm_make_um/build-atmos/bin/um-atmos.exe"
+    HYPERTHREADS="1"
+    OMP_NUM_THREADS="2"
+    CONTINUE="$(if $IS_CYLC_SUITE_INITIAL_CYCLE_POINT && $IS_CYLC_TASK_TRY_NUMBER_1; then echo "false"; else echo "true"; fi)"
+    TASKEND="$(rose date -c --calendar=360day --print-format='y,m,d,h,M,s' --offset2=P1D 19790301T0000Z ref)"
+    PLATFORM="cce"
+    CMIP6_ANCILS="$UMDIR/CMIP6_ANCIL/data/ancils"
+    ATP_ENABLED="1"
+    ROSE_LAUNCHER="srun"
+    OMP_PLACES="cores"
+    FI_OFI_RXM_SAR_LIMIT="64K"
+    ROSE_LAUNCHER_PREOPTS_UM="--het-group=0 --hint=nomultithread --distribution=block:block --nodes=94 --ntasks=6016 --tasks-per-node=64 --cpus-per-task=2 env OMP_NUM_THREADS=2 HYPERTHREADS=1"
+    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=1 --cpu-bind=cores --export=all --nodes=1 --ntasks=6 --tasks-per-node=6 --cpus-per-task=21 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
+    DATAM="$ROSE_DATA/History_Data"
+    DATAW="$CYLC_TASK_WORK_PATH"
+}
+
+cylc__job__inst__env_script() {
+# ENV-SCRIPT:
+eval $(rose task-env)
+}
+
+cylc__job__inst__pre_script() {
+# PRE-SCRIPT:
+ulimit -s unlimited
+# ---------------ARCHER2 23-cab---------------------------
+                     module use /work/n02/n02/simon/modulefiles
+                     module load um
+# ---------------ARCHER2 23-cab---------------------------
+                     module list 2>&1
+                     unset OMP_NUM_THREADS
+                     export MPICH_CPUMASK_DISPLAY=1
+}
+
+cylc__job__inst__script() {
+# SCRIPT:
+rose task-run --verbose -O '(archer2)' --path="share/fcm_make_um/build-*/bin"
+}
+
+cylc__job__inst__post_script() {
+# POST-SCRIPT:
+save_wallclock.sh P1D
+}
+
+. "${CYLC_DIR}/lib/cylc/job.sh"
+cylc__job__main
+
+#EOF: 19790301T0000Z/atmos_main/01
