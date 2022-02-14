@@ -1,14 +1,1586 @@
+Enabling 0 I/O PEs
+[0] I am running with  2 thread(s).
+[0] OpenMP Specification: 201511
+
+*******************************************************************************
+**************** Start of UM RUN Job : 19:33:26 on 14/02/2022 *****************
+**************** Based upon UM release vn11.6             *****************
+*******************************************************************************
+
+If you are using OpenMPI or think your MPI is thread capable, try setting ios_force_threading_mode appropriately in the UI
 
 ????????????????????????????????????????????????????????????????????????????????
-???!!!???!!!???!!!???!!!???!!!       ERROR        ???!!!???!!!???!!!???!!!???!!!
-?  Error code: 1
-?  Error from routine: EG_BICGSTAB
-?  Error message: NaNs in error term in BiCGstab after      1 iterations
-?        This is a common point for the model to fail if it
-?        has ingested or developed NaNs or infinities
-?        elsewhere in the code.
-?        See the following URL for more information:
-?        https://code.metoffice.gov.uk/trac/um/wiki/KnownUMFailurePoints
-?  Error from processor: 828
-?  Error number: 23
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -10
+?  Warning from routine: GET_ENV_VAR
+?  Warning message: Environment variable OMP_WAIT_POLICY is not set.
+?  Warning from processor: 0
+?  Warning number: 0
 ????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -10
+?  Warning from routine: check_configid
+?  Warning message:
+?          itab is set to missing data, pp_head(LBEXP) will be set to zero
+?  Warning from processor: 0
+?  Warning number: 1
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -10
+?  Warning from routine: GET_ENV_VAR
+?  Warning message: Environment variable FASTRUN is not set.
+?  Warning from processor: 0
+?  Warning number: 2
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message: Model run excludes ticket #1167 as
+?          l_fix_conv_precip_evap=.FALSE.
+?          This will affect all runs with parameterised
+?          precipitating convection; evaporation rates for
+?          convective precipitation will be underestimated.
+?  Warning from processor: 0
+?  Warning number: 3
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes ticket #2077 as l_fix_dyndiag=.FALSE.
+?          This will mess up shear-dominated PBLs slightly
+?  Warning from processor: 0
+?  Warning number: 4
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #2556 as
+?          l_fix_riming=.FALSE.
+?          This could affect any model runs where l_shape_rime is .TRUE.
+?          and may produce small numbers in the microphysics leading to
+?          the UM crashing in the solver.
+?  Warning from processor: 0
+?  Warning number: 5
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #3681 as
+?          l_fix_conv_diags_var=.FALSE.
+?          This affects the diagnostics that are passed from the
+?          convection scheme to the PF model. Without this switch
+?          the increments will incorrectly include contributions
+?          from cloud erosion, a temperature rather than potential
+?          temperature will be passed, and the mass flux will exclude
+?          points where it is reducing with height.
+?  Warning from processor: 0
+?  Warning number: 6
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #1250 as
+?          l_fix_conv_diags_var=.FALSE.
+?          This will mean that dry deposition velocities are set to null
+?          for HCl, HOCl, HBr, HOBr, H2SO4, MeOH and Sec_Org and that dry
+?          deposition velocities for 9 tiles are inconsistant with 13/17/27 tiles.
+?  Warning from processor: 0
+?  Warning number: 7
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #4157 as
+?          l_fix_ukca_h2dd_x=.FALSE. .
+?          This will mean that the wrong element is used for h2dd_c & h2dd_m.
+?  Warning from processor: 0
+?  Warning number: 8
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #3245 as
+?          l_fix_ukca_h2so4_ystore=.FALSE. .
+?          This will mean that the UKCA H2SO4 tracer will not be updated correctly.
+?  Warning from processor: 0
+?  Warning number: 9
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #3031 as
+?          l_fix_ukca_meoh_emiss_input=.FALSE. .
+?          This means the chemistry scheme is reading methanol (MeOH)
+?          emissions from a file tagged as NVOC (non-volatile org carbon)
+?          by applying factor as MeOH = 0.215 * NVOC.
+?  Warning from processor: 0
+?  Warning number: 10
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #5031 as
+?          l_fix_tidy_rainfracs=.FALSE.
+?          This means that if l_mcr_qcf2 =.false. the rain fractions
+?          will not be updated from the melting of snow in lsp_tidy.
+?  Warning from processor: 0
+?  Warning number: 11
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #5080 as
+?          l_fix_incloud_qcf=.FALSE. .
+?          When true this fixes a bug in the PC2 code after inhomogeneous
+?          forcing of ice cloud by turbulence which checks to avoid
+?          generating unreasonably high in-cloud ice water contents
+?          qcf/cff.  Such occurences wrongly result in the ice-cloud
+?          fraction being reset to near-zero instead of increased
+?          as intended.
+?  Warning from processor: 0
+?  Warning number: 12
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #5080 as
+?          l_fix_mcr_frac_ice=.FALSE. .
+?          This switch fixes 2 minor issues in the treatment of ice-cloud
+?          fractions by the microphysics scheme, both of which can
+?          result in the ice fraction cff going to near-zero while
+?          retaining a significant grid-mean ice mass qcf.
+?  Warning from processor: 0
+?  Warning number: 13
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #5118 as
+?          l_fix_ukca_offox_h2o_fac=.FALSE.
+?          This means that water vapour will not be in vmr when
+?          using UKCA Offline-Oxidants.
+?  Warning from processor: 0
+?  Warning number: 14
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: WARN_TEMP_FIXES
+?  Warning message:
+?          Model run excludes a change from ticket #5009 as
+?          l_fix_ukca_cloud_frac=.FALSE.
+?          This means that values of the cloud fraction field used in
+?          aerosol chemistry will be those from from the level below the
+?          correct level due to an array indexing bug.
+?          Runs which do not use UKCA aerosol chemistry are unaffected.
+?  Warning from processor: 0
+?  Warning number: 15
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: CHECK_RUN_DIFFUSION
+?  Warning message:
+?          cldbase_opt_sh set to sh_wstar_closure since
+?          Smagorinsky diffusion not chosen.
+?  Warning from processor: 0
+?  Warning number: 16
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -10
+?  Warning from routine: UM_XIOS_GET_AXIS_INFO
+?  Warning message: Axis element ensemble has no standard_name value defined and is not a pseudo axis, skipping field
+?  Warning from processor: 0
+?  Warning number: 17
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -20
+?  Warning from routine: UM_XIOS_GET_AXIS_INFO
+?  Warning message: Axis element ensemble has no n_glo value defined, skipping field
+?  Warning from processor: 0
+?  Warning number: 18
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -30
+?  Warning from routine: UM_XIOS_GET_AXIS_INFO
+?  Warning message: Axis element ensemble has no values defined, skipping field
+?  Warning from processor: 0
+?  Warning number: 19
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -30
+?  Warning from routine: UM_XIOS_FIELD_XML
+?  Warning message: Field element m01s05i256_ens has a field reference, skipping field
+?  Warning from processor: 0
+?  Warning number: 20
+????????????????????????????????????????????????????????????????????????????????
+
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -100
+?  Warning from routine: COPY_STR_CTOF
+?  Warning message: WARNING: element string exceeds maximum length 17 partial string is test-m01s05i256-m
+?  Warning from processor: 0
+?  Warning number: 21
+????????????????????????????????????????????????????????????????????????????????
+
+
+INTEGER CONSTANTS
+-----------------
+Number of timesteps since start of run - -32768
+Meaning interval for mean fields (hrs) - -32768
+Number of dumps used to generate mean  - -32768
+No of hrs between neighbouring contiguous sections of means - -32768
+No of hrs between end of one contiguous section and start of next - -32768
+Number of E-W x N-S points -   2560 x   1920
+Number of levels -     85
+Number of wet levels -     85
+Number of soil temperature levels -      4
+Number of soil moisture levels -      4
+Number of tracer levels -      1
+Number of boundary layer levels -     50
+Number of passive tracers advected -      0
+
+REAL CONSTANTS
+--------------
+E-W grid spacing in degrees -  0.1406E+00
+N-S grid spacing in degress -  0.9375E-01
+Latitude of first row in degrees - -0.9000E+02
+Longitude of first point in a row in degrees -  0.0000E+00
+Real latitude of pseudo North Pole in degrees -   0.9000E+02
+Real longitude of pseudo North Pole in degrees -   0.0000E+00
+Grid orientation in degrees -  -0.1074E+10
+Year        Day       Hour      Minute     Second
+Atmosphere time =  -0.1074E+10 -0.1074E+10 -0.1074E+10 -0.1074E+10 -0.1074E+10
+Mass, energy, energy drift =   0.5124E+19  0.1310E+25  0.1992E-07
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -1001
+?  Warning from routine: ANCIL_CHECK_MOD::REPORT_ANCIL_ERRORS
+?  Warning message:
+?
+?          WARNINGS: 1 ancil files have failed ancil checking. These files did not cause an abort
+?          due to the setting of l_ignore_ancil_grid_check=.true. in the items namelist:
+?          -- /work/n02/n02/lrpedro/cylc-run/u-ch427-n1280-x09/share/data/etc/ancil/qrclim.ozone
+?  Warning from processor: 0
+?  Warning number: 22
+????????????????????????????????????????????????????????????????????????????????
+
+
+************************  PE configuration for this run  ***********************
+****  PE configuration:    94 processors East-West    64 processors North-South *
+Atm_Step: Info: Starting timestep        0 at time=   281.109 seconds
+
+Atm_Step: Timestep        0   Model time:   1979-03-01 00:00:00
+
+????????????????????????????????????????????????????????????????????????????????
+??????????????????????????????      WARNING       ??????????????????????????????
+?  Warning code: -1
+?  Warning from routine: eg_SISL_setcon
+?  Warning message:  Constant gravity enforced
+?  Warning from processor: 0
+?  Warning number: 23
+????????????????????????????????????????????????????????????????????????????????
+
+Atm_Step: Info: Starting timestep        1 at time=   288.627 seconds
+
+Atm_Step: Timestep        1   Model time:   1979-03-01 00:03:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.226227E-04     *
+*    1     2        2      0.430786E-02      0.124160E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.115226E+00      0.407848E-04     *
+*    2     2        1      0.848259E-03      0.386223E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep        1 took    470.796 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep        2 at time=   759.440 seconds
+
+Atm_Step: Timestep        2   Model time:   1979-03-01 00:06:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        3      0.100000E+01      0.916515E-04     *
+*    1     2        2      0.703523E-02      0.210774E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.974238E-01      0.131913E-04     *
+*    2     2        1      0.108921E-02      0.552490E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep        2 took      1.489 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep        3 at time=   760.929 seconds
+
+Atm_Step: Timestep        3   Model time:   1979-03-01 00:09:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.174559E-04     *
+*    1     2        2      0.696759E-02      0.213706E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.103305E+00      0.146579E-04     *
+*    2     2        1      0.109156E-02      0.554493E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep        3 took      1.475 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep        4 at time=   762.404 seconds
+
+Atm_Step: Timestep        4   Model time:   1979-03-01 00:12:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.179839E-04     *
+*    1     2        2      0.686266E-02      0.205713E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.101082E+00      0.138862E-04     *
+*    2     2        1      0.105153E-02      0.543267E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep        4 took      1.461 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep        5 at time=   763.866 seconds
+
+Atm_Step: Timestep        5   Model time:   1979-03-01 00:15:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.133785E-04     *
+*    1     2        2      0.683662E-02      0.207494E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100473E+00      0.141834E-04     *
+*    2     2        1      0.104558E-02      0.540083E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep        5 took      1.485 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep        6 at time=   769.006 seconds
+
+Atm_Step: Timestep        6   Model time:   1979-03-01 00:18:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.162055E-04     *
+*    1     2        2      0.685155E-02      0.207595E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100404E+00      0.144189E-04     *
+*    2     2        1      0.104505E-02      0.540693E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep        6 took      1.448 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep        7 at time=   770.455 seconds
+
+Atm_Step: Timestep        7   Model time:   1979-03-01 00:21:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.193639E-04     *
+*    1     2        2      0.681980E-02      0.206102E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.999747E-01      0.144510E-04     *
+*    2     2        1      0.103982E-02      0.538298E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep        7 took      2.238 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep        8 at time=   772.693 seconds
+
+Atm_Step: Timestep        8   Model time:   1979-03-01 00:24:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.170342E-04     *
+*    1     2        2      0.683420E-02      0.207274E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100172E+00      0.146414E-04     *
+*    2     2        1      0.103905E-02      0.537138E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep        8 took      1.443 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep        9 at time=   774.136 seconds
+
+Atm_Step: Timestep        9   Model time:   1979-03-01 00:27:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.185467E-04     *
+*    1     2        2      0.681188E-02      0.206798E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100054E+00      0.150865E-04     *
+*    2     2        1      0.103739E-02      0.536569E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep        9 took      1.438 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       10 at time=   775.575 seconds
+
+Atm_Step: Timestep       10   Model time:   1979-03-01 00:30:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.199692E-04     *
+*    1     2        2      0.682080E-02      0.206807E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100401E+00      0.150534E-04     *
+*    2     2        1      0.103670E-02      0.535598E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       10 took      1.858 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       11 at time=   801.480 seconds
+
+Atm_Step: Timestep       11   Model time:   1979-03-01 00:33:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.175365E-04     *
+*    1     2        2      0.681158E-02      0.206776E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100103E+00      0.151445E-04     *
+*    2     2        1      0.103523E-02      0.532830E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       11 took      1.502 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       12 at time=   802.983 seconds
+
+Atm_Step: Timestep       12   Model time:   1979-03-01 00:36:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.177647E-04     *
+*    1     2        2      0.682420E-02      0.206951E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100303E+00      0.149253E-04     *
+*    2     2        1      0.103674E-02      0.532489E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       12 took      1.437 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       13 at time=   804.421 seconds
+
+Atm_Step: Timestep       13   Model time:   1979-03-01 00:39:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.165492E-04     *
+*    1     2        2      0.682219E-02      0.206623E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100510E+00      0.146017E-04     *
+*    2     2        1      0.105220E-02      0.531662E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       13 took      1.443 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       14 at time=   805.864 seconds
+
+Atm_Step: Timestep       14   Model time:   1979-03-01 00:42:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.149812E-04     *
+*    1     2        2      0.682746E-02      0.206745E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100722E+00      0.144641E-04     *
+*    2     2        1      0.104725E-02      0.529809E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       14 took      1.440 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       15 at time=   807.304 seconds
+
+Atm_Step: Timestep       15   Model time:   1979-03-01 00:45:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.145486E-04     *
+*    1     2        2      0.682756E-02      0.206411E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100760E+00      0.142710E-04     *
+*    2     2        1      0.105143E-02      0.528572E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       15 took      1.431 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       16 at time=   808.736 seconds
+
+Atm_Step: Timestep       16   Model time:   1979-03-01 00:48:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.142755E-04     *
+*    1     2        2      0.682701E-02      0.206352E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100729E+00      0.141671E-04     *
+*    2     2        1      0.109041E-02      0.528016E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       16 took      1.882 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       17 at time=   810.618 seconds
+
+Atm_Step: Timestep       17   Model time:   1979-03-01 00:51:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.142643E-04     *
+*    1     2        2      0.682394E-02      0.206349E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.101076E+00      0.141585E-04     *
+*    2     2        1      0.110119E-02      0.526713E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       17 took      1.444 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       18 at time=   812.063 seconds
+
+Atm_Step: Timestep       18   Model time:   1979-03-01 00:54:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.142223E-04     *
+*    1     2        2      0.682574E-02      0.206221E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100852E+00      0.141903E-04     *
+*    2     2        1      0.106973E-02      0.525465E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       18 took      1.446 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       19 at time=   813.509 seconds
+
+Atm_Step: Timestep       19   Model time:   1979-03-01 00:57:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.138967E-04     *
+*    1     2        2      0.682847E-02      0.206101E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.101097E+00      0.141418E-04     *
+*    2     2        1      0.106802E-02      0.522639E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       19 took      1.435 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       20 at time=   814.945 seconds
+
+Atm_Step: Timestep       20   Model time:   1979-03-01 01:00:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.139757E-04     *
+*    1     2        2      0.683104E-02      0.206064E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100969E+00      0.140614E-04     *
+*    2     2        1      0.107918E-02      0.521930E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       20 took      1.441 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       21 at time=   816.386 seconds
+
+Atm_Step: Timestep       21   Model time:   1979-03-01 01:03:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.139760E-04     *
+*    1     2        2      0.681756E-02      0.204887E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100831E+00      0.140213E-04     *
+*    2     2        1      0.106139E-02      0.522105E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       21 took      1.853 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       22 at time=   818.239 seconds
+
+Atm_Step: Timestep       22   Model time:   1979-03-01 01:06:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.138564E-04     *
+*    1     2        2      0.681340E-02      0.204859E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100579E+00      0.139668E-04     *
+*    2     2        1      0.103865E-02      0.520883E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       22 took      1.434 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       23 at time=   819.673 seconds
+
+Atm_Step: Timestep       23   Model time:   1979-03-01 01:09:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.137888E-04     *
+*    1     2        2      0.681539E-02      0.204799E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100852E+00      0.138985E-04     *
+*    2     2        1      0.104546E-02      0.520098E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       23 took      1.442 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       24 at time=   821.116 seconds
+
+Atm_Step: Timestep       24   Model time:   1979-03-01 01:12:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.137078E-04     *
+*    1     2        2      0.681762E-02      0.204859E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100333E+00      0.138547E-04     *
+*    2     2        1      0.103639E-02      0.518014E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       24 took      1.433 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       25 at time=   822.549 seconds
+
+Atm_Step: Timestep       25   Model time:   1979-03-01 01:15:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.140364E-04     *
+*    1     2        2      0.682485E-02      0.205019E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100501E+00      0.138422E-04     *
+*    2     2        1      0.104170E-02      0.517156E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       25 took      1.444 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       26 at time=   823.994 seconds
+
+Atm_Step: Timestep       26   Model time:   1979-03-01 01:18:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.138267E-04     *
+*    1     2        2      0.682333E-02      0.204984E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100376E+00      0.138519E-04     *
+*    2     2        1      0.102301E-02      0.515183E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       26 took      1.441 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       27 at time=   825.435 seconds
+
+Atm_Step: Timestep       27   Model time:   1979-03-01 01:21:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.139498E-04     *
+*    1     2        2      0.682706E-02      0.205145E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100282E+00      0.138617E-04     *
+*    2     2        1      0.102255E-02      0.514489E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       27 took      2.004 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       28 at time=   827.439 seconds
+
+Atm_Step: Timestep       28   Model time:   1979-03-01 01:24:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.138378E-04     *
+*    1     2        2      0.682942E-02      0.205057E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100227E+00      0.137536E-04     *
+*    2     2        1      0.102219E-02      0.511016E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       28 took      1.439 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       29 at time=   828.878 seconds
+
+Atm_Step: Timestep       29   Model time:   1979-03-01 01:27:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.136500E-04     *
+*    1     2        2      0.683477E-02      0.205181E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100180E+00      0.137537E-04     *
+*    2     2        1      0.102186E-02      0.509305E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       29 took      1.436 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       30 at time=   830.314 seconds
+
+Atm_Step: Timestep       30   Model time:   1979-03-01 01:30:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.138516E-04     *
+*    1     2        2      0.683644E-02      0.205194E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.999820E-01      0.137101E-04     *
+*    2     2        1      0.101668E-02      0.508016E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       30 took      1.450 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       31 at time=   831.764 seconds
+
+Atm_Step: Timestep       31   Model time:   1979-03-01 01:33:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.135355E-04     *
+*    1     2        2      0.684053E-02      0.205277E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100136E+00      0.136962E-04     *
+*    2     2        1      0.101360E-02      0.507543E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       31 took      1.427 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       32 at time=   833.192 seconds
+
+Atm_Step: Timestep       32   Model time:   1979-03-01 01:36:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.134842E-04     *
+*    1     2        2      0.684453E-02      0.205491E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.999054E-01      0.136442E-04     *
+*    2     2        1      0.100991E-02      0.505805E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       32 took      1.445 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       33 at time=   834.638 seconds
+
+Atm_Step: Timestep       33   Model time:   1979-03-01 01:39:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.135590E-04     *
+*    1     2        2      0.684642E-02      0.205456E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100032E+00      0.136298E-04     *
+*    2     2        1      0.101196E-02      0.504832E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       33 took      1.445 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       34 at time=   836.083 seconds
+
+Atm_Step: Timestep       34   Model time:   1979-03-01 01:42:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.134563E-04     *
+*    1     2        2      0.684903E-02      0.205604E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100014E+00      0.136092E-04     *
+*    2     2        1      0.100531E-02      0.503815E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       34 took      1.502 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       35 at time=   837.586 seconds
+
+Atm_Step: Timestep       35   Model time:   1979-03-01 01:45:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.134134E-04     *
+*    1     2        2      0.685196E-02      0.205707E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.999862E-01      0.135926E-04     *
+*    2     2        1      0.100657E-02      0.502910E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       35 took      1.466 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       36 at time=   839.052 seconds
+
+Atm_Step: Timestep       36   Model time:   1979-03-01 01:48:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.135656E-04     *
+*    1     2        2      0.685442E-02      0.205929E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100242E+00      0.135590E-04     *
+*    2     2        1      0.102155E-02      0.502800E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       36 took      1.431 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       37 at time=   840.484 seconds
+
+Atm_Step: Timestep       37   Model time:   1979-03-01 01:51:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.134906E-04     *
+*    1     2        2      0.686138E-02      0.206092E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100189E+00      0.135309E-04     *
+*    2     2        1      0.102078E-02      0.500996E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       37 took      1.722 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       38 at time=   842.206 seconds
+
+Atm_Step: Timestep       38   Model time:   1979-03-01 01:54:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.135278E-04     *
+*    1     2        2      0.686809E-02      0.206290E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100391E+00      0.135386E-04     *
+*    2     2        1      0.102811E-02      0.500320E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       38 took      1.431 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       39 at time=   843.638 seconds
+
+Atm_Step: Timestep       39   Model time:   1979-03-01 01:57:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.135862E-04     *
+*    1     2        2      0.687382E-02      0.206468E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100522E+00      0.134863E-04     *
+*    2     2        1      0.104279E-02      0.498486E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       39 took      1.425 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       40 at time=   845.063 seconds
+
+Atm_Step: Timestep       40   Model time:   1979-03-01 02:00:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.135619E-04     *
+*    1     2        2      0.687876E-02      0.206623E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100722E+00      0.134830E-04     *
+*    2     2        1      0.104621E-02      0.497871E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       40 took      1.450 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       41 at time=   846.513 seconds
+
+Atm_Step: Timestep       41   Model time:   1979-03-01 02:03:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.135694E-04     *
+*    1     2        2      0.687052E-02      0.205797E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100752E+00      0.134888E-04     *
+*    2     2        1      0.107804E-02      0.497863E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       41 took      1.849 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       42 at time=   848.362 seconds
+
+Atm_Step: Timestep       42   Model time:   1979-03-01 02:06:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.134946E-04     *
+*    1     2        2      0.687341E-02      0.205945E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100701E+00      0.135050E-04     *
+*    2     2        1      0.103355E-02      0.496553E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       42 took      1.424 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       43 at time=   849.787 seconds
+
+Atm_Step: Timestep       43   Model time:   1979-03-01 02:09:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.136783E-04     *
+*    1     2        2      0.688085E-02      0.206280E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100661E+00      0.134845E-04     *
+*    2     2        1      0.103528E-02      0.495632E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       43 took      1.436 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       44 at time=   851.223 seconds
+
+Atm_Step: Timestep       44   Model time:   1979-03-01 02:12:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.136226E-04     *
+*    1     2        2      0.688432E-02      0.206486E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100487E+00      0.134750E-04     *
+*    2     2        1      0.101661E-02      0.494126E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       44 took      1.423 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       45 at time=   852.646 seconds
+
+Atm_Step: Timestep       45   Model time:   1979-03-01 02:15:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.136701E-04     *
+*    1     2        2      0.689482E-02      0.206743E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100420E+00      0.134140E-04     *
+*    2     2        1      0.102464E-02      0.491989E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       45 took      1.430 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       46 at time=   854.077 seconds
+
+Atm_Step: Timestep       46   Model time:   1979-03-01 02:18:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.136791E-04     *
+*    1     2        2      0.690375E-02      0.206904E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100147E+00      0.134857E-04     *
+*    2     2        1      0.101858E-02      0.491022E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       46 took      1.436 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       47 at time=   855.513 seconds
+
+Atm_Step: Timestep       47   Model time:   1979-03-01 02:21:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.137918E-04     *
+*    1     2        2      0.690535E-02      0.207038E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100005E+00      0.134218E-04     *
+*    2     2        1      0.101321E-02      0.488467E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       47 took      1.593 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       48 at time=   857.107 seconds
+
+Atm_Step: Timestep       48   Model time:   1979-03-01 02:24:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.137810E-04     *
+*    1     2        2      0.691408E-02      0.207028E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100008E+00      0.134769E-04     *
+*    2     2        1      0.105267E-02      0.487695E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       48 took      1.433 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       49 at time=   858.541 seconds
+
+Atm_Step: Timestep       49   Model time:   1979-03-01 02:27:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.140572E-04     *
+*    1     2        2      0.691436E-02      0.207165E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100422E+00      0.134053E-04     *
+*    2     2        1      0.109798E-02      0.485897E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       49 took      1.439 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       50 at time=   859.980 seconds
+
+Atm_Step: Timestep       50   Model time:   1979-03-01 02:30:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.139959E-04     *
+*    1     2        2      0.691045E-02      0.207147E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.101386E+00      0.134555E-04     *
+*    2     2        1      0.122973E-02      0.485992E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       50 took      1.421 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       51 at time=   861.401 seconds
+
+Atm_Step: Timestep       51   Model time:   1979-03-01 02:33:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.139609E-04     *
+*    1     2        2      0.691756E-02      0.207133E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.101082E+00      0.135285E-04     *
+*    2     2        1      0.106206E-02      0.483429E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       51 took      1.463 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       52 at time=   862.864 seconds
+
+Atm_Step: Timestep       52   Model time:   1979-03-01 02:36:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.141476E-04     *
+*    1     2        2      0.690775E-02      0.207177E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.100261E+00      0.134773E-04     *
+*    2     2        1      0.102660E-02      0.483327E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       52 took      1.468 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       53 at time=   864.333 seconds
+
+Atm_Step: Timestep       53   Model time:   1979-03-01 02:39:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.140645E-04     *
+*    1     2        2      0.692706E-02      0.207010E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.998878E-01      0.134551E-04     *
+*    2     2        1      0.101993E-02      0.480434E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       53 took      1.851 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       54 at time=   866.184 seconds
+
+Atm_Step: Timestep       54   Model time:   1979-03-01 02:42:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.142533E-04     *
+*    1     2        2      0.692433E-02      0.206992E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.994158E-01      0.134491E-04     *
+*    2     2        1      0.991617E-03      0.480201E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       54 took      2.425 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       55 at time=   868.609 seconds
+
+Atm_Step: Timestep       55   Model time:   1979-03-01 02:45:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.140840E-04     *
+*    1     2        2      0.690368E-02      0.206835E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.992055E-01      0.134078E-04     *
+*    2     2        1      0.996104E-03      0.477267E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       55 took      1.428 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       56 at time=   870.037 seconds
+
+Atm_Step: Timestep       56   Model time:   1979-03-01 02:48:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.141615E-04     *
+*    1     2        2      0.690868E-02      0.206771E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.991903E-01      0.134063E-04     *
+*    2     2        1      0.984337E-03      0.476535E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       56 took      1.435 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       57 at time=   871.473 seconds
+
+Atm_Step: Timestep       57   Model time:   1979-03-01 02:51:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.141794E-04     *
+*    1     2        2      0.690008E-02      0.206765E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.989976E-01      0.133551E-04     *
+*    2     2        1      0.982009E-03      0.475721E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       57 took      1.423 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       58 at time=   872.896 seconds
+
+Atm_Step: Timestep       58   Model time:   1979-03-01 02:54:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.139213E-04     *
+*    1     2        2      0.689467E-02      0.206719E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.989694E-01      0.133507E-04     *
+*    2     2        1      0.983137E-03      0.474826E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       58 took      1.732 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       59 at time=   874.628 seconds
+
+Atm_Step: Timestep       59   Model time:   1979-03-01 02:57:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.140882E-04     *
+*    1     2        2      0.689955E-02      0.206756E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.989650E-01      0.133403E-04     *
+*    2     2        1      0.980854E-03      0.473408E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       59 took      1.429 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       60 at time=   876.058 seconds
+
+Atm_Step: Timestep       60   Model time:   1979-03-01 03:00:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.140446E-04     *
+*    1     2        2      0.689892E-02      0.206732E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.988175E-01      0.132818E-04     *
+*    2     2        1      0.979156E-03      0.472186E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       60 took      1.616 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       61 at time=   877.674 seconds
+
+Atm_Step: Timestep       61   Model time:   1979-03-01 03:03:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.138801E-04     *
+*    1     2        2      0.688281E-02      0.205575E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.989332E-01      0.133538E-04     *
+*    2     2        1      0.981334E-03      0.472237E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       61 took      1.851 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       62 at time=   879.526 seconds
+
+Atm_Step: Timestep       62   Model time:   1979-03-01 03:06:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.139536E-04     *
+*    1     2        2      0.688106E-02      0.205577E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.988264E-01      0.132604E-04     *
+*    2     2        1      0.979322E-03      0.470662E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       62 took      1.428 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       63 at time=   880.954 seconds
+
+Atm_Step: Timestep       63   Model time:   1979-03-01 03:09:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.137422E-04     *
+*    1     2        2      0.688491E-02      0.205802E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.987301E-01      0.132765E-04     *
+*    2     2        1      0.978055E-03      0.470287E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       63 took      1.437 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       64 at time=   882.392 seconds
+
+Atm_Step: Timestep       64   Model time:   1979-03-01 03:12:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.139935E-04     *
+*    1     2        2      0.688045E-02      0.205733E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.985808E-01      0.132344E-04     *
+*    2     2        1      0.976235E-03      0.468607E-04     *
+***************************************************************
+
+********************************************************************************
+Atm_Step: Info: timestep       64 took      1.425 seconds
+********************************************************************************
+Atm_Step: Info: Starting timestep       65 at time=   883.817 seconds
+
+Atm_Step: Timestep       65   Model time:   1979-03-01 03:15:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1        4      0.100000E+01      0.138676E-04     *
+*    1     2        2      0.688352E-02      0.205940E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1        3      0.985231E-01      0.132727E-04     *
+*    2     2        1      0.974514E-03      0.467319E-04     *
+***************************************************************

@@ -51,7 +51,7 @@ for file in f_dir:
 
         for l in f:
     
-            m1 = re.match("(.*) 0 Elapsed Wallclock Time: (?P<TIME>[0-9.]*) ", l)
+            m1 = re.match("(.*)Elapsed Wallclock Time:(?P<TIME>[0-9. ]*)", l)
             m2 = re.match("(.*) INITIAL 1 [0-9.]+ [0-9.]+ (?P<INITIAL>[0-9.]+) ", l)
 #            m3 = re.match("(.*) DUMPCTL 1 (?P<DUMPCTL>[0-9.]+) ", l) # It seems DUMPCTL doesn't exist anymore
             m4 = re.match("(.*)JOB_ID=(?P<JOB_ID>[0-9.]+)", l)
@@ -62,6 +62,7 @@ for file in f_dir:
             m9 = re.match("(.*)JOB_EXIT_TIME=(?P<JOB_EXIT_TIME>[0-9.TZ:-]+)", l)
             m10 = re.match("(.*)nodes=(?P<NODES>[0-9]+)", l)
 
+            print(m1)
             if m1:    
                 data_M.update(m1.groupdict())       
             if m2:
