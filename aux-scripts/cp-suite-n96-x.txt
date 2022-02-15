@@ -53,16 +53,16 @@ cd ../u-ch427-n96-x09; rose suite-run;
  cylc stop -n u-ch427-n96-x08
  cylc stop -n u-ch427-n96-x09
 
- cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x00.xml  u-ch427-n96-x00/share/data/xml/um-atmos-file_ens_def.xml
- cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x01.xml u-ch427-n96-x01/share/data/xml/um-atmos-file_ens_def.xml
- cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x02.xml u-ch427-n96-x02/share/data/xml/um-atmos-file_ens_def.xml
- cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x03.xml u-ch427-n96-x03/share/data/xml/um-atmos-file_ens_def.xml
- cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x04.xml u-ch427-n96-x04/share/data/xml/um-atmos-file_ens_def.xml
- cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x05.xml u-ch427-n96-x05/share/data/xml/um-atmos-file_ens_def.xml
- cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x06.xml u-ch427-n96-x06/share/data/xml/um-atmos-file_ens_def.xml
- cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x07.xml u-ch427-n96-x07/share/data/xml/um-atmos-file_ens_def.xml
- cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x08.xml u-ch427-n96-x08/share/data/xml/um-atmos-file_ens_def.xml
- cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x09.xml u-ch427-n96-x09/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-00.xml  u-ch427-n96-x00/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-01.xml u-ch427-n96-x01/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-02.xml u-ch427-n96-x02/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-03.xml u-ch427-n96-x03/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-04.xml u-ch427-n96-x04/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-05.xml u-ch427-n96-x05/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-06.xml u-ch427-n96-x06/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-07.xml u-ch427-n96-x07/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-08.xml u-ch427-n96-x08/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-09.xml u-ch427-n96-x09/share/data/xml/um-atmos-file_ens_def.xml
 
  cylc trigger u-ch427-n96-x00 atmos_main
  cylc trigger u-ch427-n96-x01 atmos_main

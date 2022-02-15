@@ -1,0 +1,24 @@
+u-ch427-n96-template-start-00
+u-ch427-n216-template-start-00
+u-ch427-n512-template-start-00
+u-ch427-n1280-template-start-00
+
+cp -r u-ch427-n96-template-start u-ch427-n96-template-start-00
+cp -r u-ch427-n216-template-start u-ch427-n216-template-start-00
+cp -r u-ch427-n512-template-start u-ch427-n512-template-start-00
+cp -r u-ch427-n1280-template-start u-ch427-n1280-template-start-00
+
+cd ../u-ch427-n96-template-start-00; rose suite-run;
+cd ../u-ch427-n216-template-start-00; rose suite-run;
+cd ../u-ch427-n512-template-start-00; rose suite-run;
+cd ../u-ch427-n1280-template-start-00; rose suite-run;
+
+./scripts/update-n96.sh u-ch427-n96-template-start-00
+./scripts/update-n216.sh u-ch427-n216-template-start-00
+./scripts/update-n512.sh u-ch427-n512-template-start-00
+./scripts/update-n1280.sh u-ch427-n1280-template-start-00
+
+./xml-start.sh u-ch427-n96-template-start-00
+./xml-start.sh u-ch427-n216-template-start-00
+./xml-start.sh u-ch427-n512-template-start-00
+./xml-start.sh u-ch427-n1280-template-start-00

@@ -116,3 +116,12 @@ cd ../u-ch427-n96-mean-afof-ens18; rose suite-run;
  cylc trigger  u-ch427-n96-mean-afof-ens16 atmos_main;
  cylc trigger  u-ch427-n96-mean-afof-ens17 atmos_main;
  cylc trigger  u-ch427-n96-mean-afof-ens18 atmos_main;
+
+cylc stop -n u-ch427-n96-mean-afof-ens11
+cylc stop -n u-ch427-n96-mean-afof-ens12
+cylc stop -n u-ch427-n96-mean-afof-ens13
+cylc stop -n u-ch427-n96-mean-afof-ens14
+cylc stop -n u-ch427-n96-mean-afof-ens15
+cylc stop -n u-ch427-n96-mean-afof-ens16
+cylc stop -n u-ch427-n96-mean-afof-ens17
+cylc stop -n u-ch427-n96-mean-afof-ens18

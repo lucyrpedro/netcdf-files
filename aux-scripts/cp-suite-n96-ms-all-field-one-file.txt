@@ -137,3 +137,22 @@ rm ~/cylc-run/u-ch427-n96-ms-afof-ens15/work/19880901T0000Z/atmos_main/core
 rm ~/cylc-run/u-ch427-n96-ms-afof-ens16/work/19880901T0000Z/atmos_main/core
 rm ~/cylc-run/u-ch427-n96-ms-afof-ens17/work/19880901T0000Z/atmos_main/core
 rm ~/cylc-run/u-ch427-n96-ms-afof-ens18/work/19880901T0000Z/atmos_main/core
+
+cylc stop -n u-ch427-n96-ms-afof-ens01
+cylc stop -n u-ch427-n96-ms-afof-ens02
+cylc stop -n u-ch427-n96-ms-afof-ens03
+cylc stop -n u-ch427-n96-ms-afof-ens04
+cylc stop -n u-ch427-n96-ms-afof-ens05
+cylc stop -n u-ch427-n96-ms-afof-ens06
+cylc stop -n u-ch427-n96-ms-afof-ens07
+cylc stop -n u-ch427-n96-ms-afof-ens08
+cylc stop -n u-ch427-n96-ms-afof-ens09
+cylc stop -n u-ch427-n96-ms-afof-ens10
+cylc stop -n u-ch427-n96-ms-afof-ens11
+cylc stop -n u-ch427-n96-ms-afof-ens12
+cylc stop -n u-ch427-n96-ms-afof-ens13
+cylc stop -n u-ch427-n96-ms-afof-ens14
+cylc stop -n u-ch427-n96-ms-afof-ens15
+cylc stop -n u-ch427-n96-ms-afof-ens16
+cylc stop -n u-ch427-n96-ms-afof-ens17
+cylc stop -n u-ch427-n96-ms-afof-ens18

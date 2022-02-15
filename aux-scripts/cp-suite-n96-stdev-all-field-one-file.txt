@@ -116,3 +116,50 @@ cd ../u-ch427-n96-stdev-afof-ens18; rose suite-run;
  cylc trigger  u-ch427-n96-stdev-afof-ens16 atmos_main;
  cylc trigger  u-ch427-n96-stdev-afof-ens17 atmos_main;
  cylc trigger  u-ch427-n96-stdev-afof-ens18 atmos_main;
+
+  sed -i 's/MAIN_CLOCK='\''PT30M'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n96-stdev-afof-ens13/rose-suite.conf
+  sed -i 's/MAIN_CLOCK='\''PT30M'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n96-stdev-afof-ens14/rose-suite.conf
+  sed -i 's/MAIN_CLOCK='\''PT30M'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n96-stdev-afof-ens15/rose-suite.conf
+  sed -i 's/MAIN_CLOCK='\''PT30M'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n96-stdev-afof-ens16/rose-suite.conf
+  sed -i 's/MAIN_CLOCK='\''PT30M'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n96-stdev-afof-ens17/rose-suite.conf
+  sed -i 's/MAIN_CLOCK='\''PT30M'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n96-stdev-afof-ens18/rose-suite.conf
+
+gcylc u-ch427-n96-stdev-afof-ens00 &
+gcylc u-ch427-n96-stdev-afof-ens01 &
+gcylc u-ch427-n96-stdev-afof-ens02 &
+gcylc u-ch427-n96-stdev-afof-ens03 &
+gcylc u-ch427-n96-stdev-afof-ens04 &
+gcylc u-ch427-n96-stdev-afof-ens05 &
+gcylc u-ch427-n96-stdev-afof-ens06 &
+gcylc u-ch427-n96-stdev-afof-ens07 &
+gcylc u-ch427-n96-stdev-afof-ens08 &
+gcylc u-ch427-n96-stdev-afof-ens09 &
+gcylc u-ch427-n96-stdev-afof-ens10 &
+gcylc u-ch427-n96-stdev-afof-ens11 &
+gcylc u-ch427-n96-stdev-afof-ens12 &
+gcylc u-ch427-n96-stdev-afof-ens13 &
+gcylc u-ch427-n96-stdev-afof-ens14 &
+gcylc u-ch427-n96-stdev-afof-ens15 &
+gcylc u-ch427-n96-stdev-afof-ens16 &
+gcylc u-ch427-n96-stdev-afof-ens17 &
+gcylc u-ch427-n96-stdev-afof-ens18 &
+
+cylc stop -n  u-ch427-n96-stdev-afof-ens00
+cylc stop -n  u-ch427-n96-stdev-afof-ens01
+cylc stop -n  u-ch427-n96-stdev-afof-ens02
+cylc stop -n  u-ch427-n96-stdev-afof-ens03
+cylc stop -n  u-ch427-n96-stdev-afof-ens04
+cylc stop -n  u-ch427-n96-stdev-afof-ens05
+cylc stop -n  u-ch427-n96-stdev-afof-ens06
+cylc stop -n  u-ch427-n96-stdev-afof-ens07
+cylc stop -n  u-ch427-n96-stdev-afof-ens08
+cylc stop -n  u-ch427-n96-stdev-afof-ens09
+cylc stop -n  u-ch427-n96-stdev-afof-ens10
+cylc stop -n  u-ch427-n96-stdev-afof-ens11
+cylc stop -n  u-ch427-n96-stdev-afof-ens12
+cylc stop -n  u-ch427-n96-stdev-afof-ens13
+cylc stop -n  u-ch427-n96-stdev-afof-ens14
+cylc stop -n  u-ch427-n96-stdev-afof-ens15
+cylc stop -n  u-ch427-n96-stdev-afof-ens16
+cylc stop -n  u-ch427-n96-stdev-afof-ens17
+cylc stop -n  u-ch427-n96-stdev-afof-ens18

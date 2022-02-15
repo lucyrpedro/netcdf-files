@@ -1,0 +1,86 @@
+cp -r u-ch427-n96-template u-ch427-n96-x500
+cp -r u-ch427-n96-template u-ch427-n96-x501
+cp -r u-ch427-n96-template u-ch427-n96-x502
+cp -r u-ch427-n96-template u-ch427-n96-x503
+cp -r u-ch427-n96-template u-ch427-n96-x504
+cp -r u-ch427-n96-template u-ch427-n96-x505
+cp -r u-ch427-n96-template u-ch427-n96-x506
+cp -r u-ch427-n96-template u-ch427-n96-x507
+cp -r u-ch427-n96-template u-ch427-n96-x508
+cp -r u-ch427-n96-template u-ch427-n96-x509
+
+cd ../u-ch427-n96-x500; rose suite-run;
+cd ../u-ch427-n96-x501; rose suite-run;
+cd ../u-ch427-n96-x502; rose suite-run;
+cd ../u-ch427-n96-x503; rose suite-run;
+cd ../u-ch427-n96-x504; rose suite-run;
+cd ../u-ch427-n96-x505; rose suite-run;
+cd ../u-ch427-n96-x506; rose suite-run;
+cd ../u-ch427-n96-x507; rose suite-run;
+cd ../u-ch427-n96-x508; rose suite-run;
+cd ../u-ch427-n96-x509; rose suite-run;
+
+./scripts/step2-n96.sh u-ch427-n96-x500
+./scripts/step2-n96.sh u-ch427-n96-x501
+./scripts/step2-n96.sh u-ch427-n96-x502
+./scripts/step2-n96.sh u-ch427-n96-x503
+./scripts/step2-n96.sh u-ch427-n96-x504
+./scripts/step2-n96.sh u-ch427-n96-x505
+./scripts/step2-n96.sh u-ch427-n96-x506
+./scripts/step2-n96.sh u-ch427-n96-x507
+./scripts/step2-n96.sh u-ch427-n96-x508
+./scripts/step2-n96.sh u-ch427-n96-x509
+
+ ./xml-x.sh u-ch427-n96-x500
+ ./xml-x.sh u-ch427-n96-x501
+ ./xml-x.sh u-ch427-n96-x502
+ ./xml-x.sh u-ch427-n96-x503
+ ./xml-x.sh u-ch427-n96-x504
+ ./xml-x.sh u-ch427-n96-x505
+ ./xml-x.sh u-ch427-n96-x506
+ ./xml-x.sh u-ch427-n96-x507
+ ./xml-x.sh u-ch427-n96-x508
+ ./xml-x.sh u-ch427-n96-x509
+
+ cylc stop -n u-ch427-n96-x500
+ cylc stop -n u-ch427-n96-x501
+ cylc stop -n u-ch427-n96-x502
+ cylc stop -n u-ch427-n96-x503
+ cylc stop -n u-ch427-n96-x504
+ cylc stop -n u-ch427-n96-x505
+ cylc stop -n u-ch427-n96-x506
+ cylc stop -n u-ch427-n96-x507
+ cylc stop -n u-ch427-n96-x508
+ cylc stop -n u-ch427-n96-x509
+
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-00.xml  u-ch427-n96-x500/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-01.xml u-ch427-n96-x501/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-02.xml u-ch427-n96-x502/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-03.xml u-ch427-n96-x503/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-04.xml u-ch427-n96-x504/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-05.xml u-ch427-n96-x505/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-06.xml u-ch427-n96-x506/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-07.xml u-ch427-n96-x507/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-08.xml u-ch427-n96-x508/share/data/xml/um-atmos-file_ens_def.xml
+ cp /home/n02/n02/lrpedro/test-git/netcdf-files/test/um-atmos-file_ens_def-x-09.xml u-ch427-n96-x509/share/data/xml/um-atmos-file_ens_def.xml
+
+ cylc trigger u-ch427-n96-x500 atmos_main
+ cylc trigger u-ch427-n96-x501 atmos_main
+ cylc trigger u-ch427-n96-x502 atmos_main
+ cylc trigger u-ch427-n96-x503 atmos_main
+ cylc trigger u-ch427-n96-x504 atmos_main
+ cylc trigger u-ch427-n96-x505 atmos_main
+ cylc trigger u-ch427-n96-x506 atmos_main
+ cylc trigger u-ch427-n96-x507 atmos_main
+ cylc trigger u-ch427-n96-x508 atmos_main
+ cylc trigger u-ch427-n96-x509 atmos_main
+
+cp u-ch427-n96-x500/app/xml/rose-app.conf u-ch427-n96-x501/app/xml/rose-app.conf
+cp u-ch427-n96-x500/app/xml/rose-app.conf u-ch427-n96-x502/app/xml/rose-app.conf
+cp u-ch427-n96-x500/app/xml/rose-app.conf u-ch427-n96-x503/app/xml/rose-app.conf
+cp u-ch427-n96-x500/app/xml/rose-app.conf u-ch427-n96-x504/app/xml/rose-app.conf
+cp u-ch427-n96-x500/app/xml/rose-app.conf u-ch427-n96-x505/app/xml/rose-app.conf
+cp u-ch427-n96-x500/app/xml/rose-app.conf u-ch427-n96-x506/app/xml/rose-app.conf
+cp u-ch427-n96-x500/app/xml/rose-app.conf u-ch427-n96-x507/app/xml/rose-app.conf
+cp u-ch427-n96-x500/app/xml/rose-app.conf u-ch427-n96-x508/app/xml/rose-app.conf
+cp u-ch427-n96-x500/app/xml/rose-app.conf u-ch427-n96-x509/app/xml/rose-app.conf

@@ -1,0 +1,65 @@
+cp -r u-ch427-n1280-template-x5 u-ch427-n1280-x5-00
+cp -r u-ch427-n1280-template-x5 u-ch427-n1280-x5-01
+cp -r u-ch427-n1280-template-x5 u-ch427-n1280-x5-02
+cp -r u-ch427-n1280-template-x5 u-ch427-n1280-x5-03
+cp -r u-ch427-n1280-template-x5 u-ch427-n1280-x5-04
+cp -r u-ch427-n1280-template-x5 u-ch427-n1280-x5-05
+cp -r u-ch427-n1280-template-x5 u-ch427-n1280-x5-06
+cp -r u-ch427-n1280-template-x5 u-ch427-n1280-x5-07
+cp -r u-ch427-n1280-template-x5 u-ch427-n1280-x5-08
+cp -r u-ch427-n1280-template-x5 u-ch427-n1280-x5-09
+
+cd ../u-ch427-n1280-x5-00; rose suite-run;
+cd ../u-ch427-n1280-x5-01; rose suite-run;
+cd ../u-ch427-n1280-x5-02; rose suite-run;
+cd ../u-ch427-n1280-x5-03; rose suite-run;
+cd ../u-ch427-n1280-x5-04; rose suite-run;
+cd ../u-ch427-n1280-x5-05; rose suite-run;
+cd ../u-ch427-n1280-x5-06; rose suite-run;
+cd ../u-ch427-n1280-x5-07; rose suite-run;
+cd ../u-ch427-n1280-x5-08; rose suite-run;
+cd ../u-ch427-n1280-x5-09; rose suite-run;
+
+./scripts/update-n1280.sh u-ch427-n1280-x5-00
+./scripts/update-n1280.sh u-ch427-n1280-x5-01
+./scripts/update-n1280.sh u-ch427-n1280-x5-02
+./scripts/update-n1280.sh u-ch427-n1280-x5-03
+./scripts/update-n1280.sh u-ch427-n1280-x5-04
+./scripts/update-n1280.sh u-ch427-n1280-x5-05
+./scripts/update-n1280.sh u-ch427-n1280-x5-06
+./scripts/update-n1280.sh u-ch427-n1280-x5-07
+./scripts/update-n1280.sh u-ch427-n1280-x5-08
+./scripts/update-n1280.sh u-ch427-n1280-x5-09
+
+./create-xml-n1280-x5-all.sh u-ch427-n1280-x5-00
+./create-xml-n1280-x5-all.sh u-ch427-n1280-x5-01
+./create-xml-n1280-x5-all.sh u-ch427-n1280-x5-02
+./create-xml-n1280-x5-all.sh u-ch427-n1280-x5-03
+./create-xml-n1280-x5-all.sh u-ch427-n1280-x5-04
+./create-xml-n1280-x5-all.sh u-ch427-n1280-x5-05
+./create-xml-n1280-x5-all.sh u-ch427-n1280-x5-06
+./create-xml-n1280-x5-all.sh u-ch427-n1280-x5-07
+./create-xml-n1280-x5-all.sh u-ch427-n1280-x5-08
+./create-xml-n1280-x5-all.sh u-ch427-n1280-x5-09
+
+ cylc trigger u-ch427-n1280-x5-00 atmos_main
+ cylc trigger u-ch427-n1280-x5-01 atmos_main
+ cylc trigger u-ch427-n1280-x5-02 atmos_main
+ cylc trigger u-ch427-n1280-x5-03 atmos_main
+ cylc trigger u-ch427-n1280-x5-04 atmos_main
+ cylc trigger u-ch427-n1280-x5-05 atmos_main
+ cylc trigger u-ch427-n1280-x5-06 atmos_main
+ cylc trigger u-ch427-n1280-x5-07 atmos_main
+ cylc trigger u-ch427-n1280-x5-08 atmos_main
+ cylc trigger u-ch427-n1280-x5-09 atmos_main
+
+ cylc stop -n u-ch427-n1280-x5-00
+ cylc stop -n u-ch427-n1280-x5-01
+ cylc stop -n u-ch427-n1280-x5-02
+ cylc stop -n u-ch427-n1280-x5-03
+ cylc stop -n u-ch427-n1280-x5-04
+ cylc stop -n u-ch427-n1280-x5-05
+ cylc stop -n u-ch427-n1280-x5-06
+ cylc stop -n u-ch427-n1280-x5-07
+ cylc stop -n u-ch427-n1280-x5-08
+ cylc stop -n u-ch427-n1280-x5-09
