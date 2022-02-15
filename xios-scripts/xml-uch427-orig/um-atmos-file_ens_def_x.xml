@@ -1,5 +1,5 @@
 <file_definition format="netcdf4" time_counter="instant" type="multiple_file">
-  <file description="UM output" id="xios_up9_1h" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.p9" output_freq="1h" split_freq="02d" compression_level="0">
+  <file description="UM output" id="xios_up9_1h" name="test-ch427a.p9" output_freq="1h" split_freq="02d" compression_level="0">
     <field field_ref="m01s02i205" id="m01s02i205_xios_up9_1h" name="m01s02i205" operation="instant" />
     <field field_ref="m01s03i225" id="m01s03i225_xios_up9_1h" name="m01s03i225" operation="instant" />
     <field field_ref="m01s03i226" id="m01s03i226_xios_up9_1h" name="m01s03i226" operation="instant" />
@@ -7,7 +7,7 @@
     <field field_ref="m01s05i205" freq_offset="0ts" freq_op="1ts" id="m01s05i205_xios_up9_1h" name="m01s05i205" operation="average" />
     <field field_ref="m01s05i216" freq_offset="0ts" freq_op="1ts" id="m01s05i216_xios_up9_1h" name="m01s05i216" operation="average" />
   </file>
-  <file description="UM output" id="xios_upa_1d" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.pa" output_freq="1d" split_freq="10d">
+  <file description="UM output" id="xios_upa_1d" name="test-ch427a.pa" output_freq="1d" split_freq="10d">
     <field field_ref="m01s00i024" freq_offset="0ts" freq_op="1ts" id="m01s00i024_xios_upa_1d" name="m01s00i024" operation="average" />
     <field field_ref="m01s00i031" freq_offset="0ts" freq_op="1ts" id="m01s00i031_xios_upa_1d" name="m01s00i031" operation="average" />
     <field field_ref="m01s00i032" freq_offset="0ts" freq_op="1ts" id="m01s00i032_xios_upa_1d" name="m01s00i032" operation="average" />
@@ -26,7 +26,7 @@
     <field field_ref="m01s30i202_5" freq_offset="0ts" freq_op="1ts" id="m01s30i202_5_xios_upa_1d" name="m01s30i202_5" operation="average" />
     <field field_ref="m01s30i301_6" freq_offset="0ts" freq_op="1ts" id="m01s30i301_6_xios_upa_1d" name="m01s30i301_6" operation="average" />
   </file>
-  <file description="UM output" id="xios_upb_1d" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.pb" output_freq="1d" split_freq="10d" compression_level="0" >
+  <file description="UM output" id="xios_upb_1d" name="test-ch427a.pb" output_freq="1d" split_freq="10d" compression_level="0" >
     <field field_ref="m01s15i215" id="m01s15i215_xios_upb_1d" name="m01s15i215" operation="instant" />
     <field field_ref="m01s16i222" freq_offset="0h" freq_op="6h" id="m01s16i222_2_xios_upb_1d" name="m01s16i222_2" operation="average" />
     <field field_ref="m01s30i201_4" freq_offset="0h" freq_op="6h" id="m01s30i201_4_xios_upb_1d" name="m01s30i201_4" operation="average" />
@@ -34,7 +34,7 @@
     <field field_ref="m01s30i207" freq_offset="0h" freq_op="6h" id="m01s30i207_xios_upb_1d" name="m01s30i207" operation="average" />
     <field field_ref="m01s30i301_5" freq_offset="0h" freq_op="6h" id="m01s30i301_5_xios_upb_1d" name="m01s30i301_5" operation="average" />
   </file>
-  <file description="UM output" id="xios_upc_6h" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.pc" output_freq="6h" split_freq="10d" compression_level="0" >
+  <file description="UM output" id="xios_upc_6h" name="test-ch427a.pc" output_freq="6h" split_freq="10d" compression_level="0" >
     <field field_ref="m01s00i409" id="m01s00i409_xios_upc_6h" name="m01s00i409" operation="instant" />
     <field field_ref="m01s03i227" freq_offset="0ts" freq_op="1ts" id="m01s03i227_xios_upc_6h" name="m01s03i227" operation="maximum" />
     <field field_ref="m01s15i214" id="m01s15i214_xios_upc_6h" name="m01s15i214" operation="instant" />
@@ -50,7 +50,7 @@
     <field field_ref="m01s30i407" id="m01s30i407_xios_upc_6h" name="m01s30i407" operation="instant" />
     <field field_ref="m01s30i408" id="m01s30i408_xios_upc_6h" name="m01s30i408" operation="instant" />
   </file>
-  <file description="UM output" id="xios_upd_1d" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.pd" output_freq="1d" split_freq="10d" compression_level="0" >
+  <file description="UM output" id="xios_upd_1d" name="test-ch427a.pd" output_freq="1d" split_freq="10d" compression_level="0" >
     <field field_ref="m01s00i407" freq_offset="0ts" freq_op="1ts" id="m01s00i407_xios_upd_1d" name="m01s00i407" operation="average" />
     <field field_ref="m01s00i408" freq_offset="0ts" freq_op="1ts" id="m01s00i408_xios_upd_1d" name="m01s00i408" operation="average" />
     <field field_ref="m01s01i201" freq_offset="0ts" freq_op="1ts" id="m01s01i201_xios_upd_1d" name="m01s01i201" operation="average" />
@@ -93,7 +93,7 @@
     <field field_ref="m01s08i223" freq_offset="0ts" freq_op="1ts" id="m01s08i223_2_xios_upd_1d" name="m01s08i223_2" operation="average" />
     <field field_ref="m01s16i222" freq_offset="0ts" freq_op="1ts" id="m01s16i222_3_xios_upd_1d" name="m01s16i222_3" operation="average" />
   </file>
-  <file description="UM output" id="xios_upe_1d" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.pe" output_freq="1d" split_freq="10d" compression_level="0" >
+  <file description="UM output" id="xios_upe_1d" name="test-ch427a.pe" output_freq="1d" split_freq="10d" compression_level="0" >
     <field field_ref="m01s03i223" freq_offset="0ts" freq_op="1ts" id="m01s03i223_xios_upe_1d" name="m01s03i223" operation="average" />
     <field field_ref="m01s30i201" freq_offset="0ts" freq_op="1ts" id="m01s30i201_2_xios_upe_1d" name="m01s30i201_2" operation="average" />
     <field field_ref="m01s30i202" freq_offset="0ts" freq_op="1ts" id="m01s30i202_2_xios_upe_1d" name="m01s30i202_2" operation="average" />
@@ -105,14 +105,14 @@
     <field field_ref="m01s30i258" freq_offset="0ts" freq_op="1ts" id="m01s30i258_2_xios_upe_1d" name="m01s30i258_2" operation="average" />
     <field field_ref="m01s30i301" freq_offset="0ts" freq_op="1ts" id="m01s30i301_2_xios_upe_1d" name="m01s30i301_2" operation="average" />
   </file>
-  <file description="UM output" id="xios_upf_1d" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.pf" output_freq="1d" split_freq="10d" compression_level="0" >
+  <file description="UM output" id="xios_upf_1d" name="test-ch427a.pf" output_freq="1d" split_freq="10d" compression_level="0" >
     <field field_ref="m01s00i023" freq_offset="0ts" freq_op="1ts" id="m01s00i023_xios_upf_1d" name="m01s00i023" operation="average" />
     <field field_ref="m01s01i207" freq_offset="0ts" freq_op="1ts" id="m01s01i207_xios_upf_1d" name="m01s01i207" operation="average" />
     <field field_ref="m01s01i208" freq_offset="0ts" freq_op="1ts" id="m01s01i208_xios_upf_1d" name="m01s01i208" operation="average" />
     <field field_ref="m01s01i209" freq_offset="0ts" freq_op="1ts" id="m01s01i209_xios_upf_1d" name="m01s01i209" operation="average" />
     <field field_ref="m01s02i206" freq_offset="0ts" freq_op="1ts" id="m01s02i206_xios_upf_1d" name="m01s02i206" operation="average" />
   </file>
-  <file description="UM output" id="xios_upg_1m" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.pg" output_freq="1mo" split_freq="1mo" compression_level="0" >
+  <file description="UM output" id="xios_upg_1m" name="test-ch427a.pg" output_freq="1mo" split_freq="1mo" compression_level="0" >
     <field field_ref="m01s06i101" freq_offset="0h" freq_op="6h" id="m01s06i101_xios_upg_1m" name="m01s06i101" operation="average" />
     <field field_ref="m01s06i102" freq_offset="0h" freq_op="6h" id="m01s06i102_xios_upg_1m" name="m01s06i102" operation="average" />
     <field field_ref="m01s06i103" freq_offset="0h" freq_op="6h" id="m01s06i103_xios_upg_1m" name="m01s06i103" operation="average" />
@@ -135,7 +135,7 @@
     <field field_ref="m01s30i205_3" freq_offset="0h" freq_op="6h" id="m01s30i205_3_xios_upg_1m" name="m01s30i205_3" operation="average" />
     <field field_ref="m01s30i301_3" freq_offset="0h" freq_op="6h" id="m01s30i301_3_xios_upg_1m" name="m01s30i301_3" operation="average" />
   </file>
-  <file description="UM output" id="xios_upi_1m" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.pi" output_freq="1mo" split_freq="1mo" compression_level="0" >
+  <file description="UM output" id="xios_upi_1m" name="test-ch427a.pi" output_freq="1mo" split_freq="1mo" compression_level="0" >
     <field field_ref="m01s00i030" id="m01s00i030_2_xios_upi_1m" name="m01s00i030_2" operation="instant" />
     <field field_ref="m01s00i033" id="m01s00i033_2_xios_upi_1m" name="m01s00i033_2" operation="instant" />
     <field field_ref="m01s03i317" id="m01s03i317_2_xios_upi_1m" name="m01s03i317_2" operation="instant" />
@@ -147,10 +147,10 @@
     <field field_ref="m01s30i420" id="m01s30i420_xios_upi_1m" name="m01s30i420" operation="instant" />
     <field field_ref="m01s30i421" id="m01s30i421_xios_upi_1m" name="m01s30i421" operation="instant" />
   </file>
-  <file description="UM output" id="xios_upk_3h" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.pk" output_freq="3h" split_freq="10d" compression_level="0" >
+  <file description="UM output" id="xios_upk_3h" name="test-ch427a.pk" output_freq="3h" split_freq="10d" compression_level="0" >
     <field field_ref="m01s05i216" freq_offset="0ts" freq_op="1ts" id="m01s05i216_2_xios_upk_3h" name="m01s05i216_2" operation="average" />
   </file>
-  <file description="UM output" id="xios_upm_1m" name="/work/n02/n02/lrpedro/cylc-run/u-ch427-n512-template-start-00/share/data/History_Data/ch427a.pm" output_freq="1mo" split_freq="1mo" compression_level="0" >
+  <file description="UM output" id="xios_upm_1m" name="test-ch427a.pm" output_freq="1mo" split_freq="1mo" compression_level="0" >
     <field field_ref="m01s00i002" freq_offset="0h" freq_op="6h" id="m01s00i002_xios_upm_1m" name="m01s00i002" operation="average" />
     <field field_ref="m01s00i003" freq_offset="0h" freq_op="6h" id="m01s00i003_xios_upm_1m" name="m01s00i003" operation="average" />
     <field field_ref="m01s00i004" freq_offset="0ts" freq_op="01ts" id="m01s00i004_xios_upm_1m" name="m01s00i004" operation="average" />
