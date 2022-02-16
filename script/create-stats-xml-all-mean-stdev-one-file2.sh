@@ -24,7 +24,7 @@ done < "$input"
 cat >> $output_ms << EOF
         </file>
 
-        <file description="All Fields" id="all-fields-stdev" name="test-all-field-stdev" output_freq="3h">
+        <file description="All Fields" id="all-fields-stdev" name="test-all-fields-stdev" output_freq="3h">
 
 EOF
 
