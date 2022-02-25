@@ -1,0 +1,17 @@
+<domain_definition>
+  <domain id="um-atmos_grid_t" name="grid_t" />
+  <domain id="um-atmos_grid_cu" name="grid_cu" />
+  <domain id="um-atmos_grid_cv" name="grid_cv" />
+  <domain id="um-atmos_grid_uv" name="grid_uv" />
+  <domain id="um-atmos_grid_r" name="grid_r" />
+  <domain id="um-atmos_grid_cu_halo_single" name="grid_cu" />
+  <domain id="um-atmos_grid_cv_halo_single" name="grid_cv" />
+  <domain id="um-atmos_grid_t_halo_single" name="grid_t" />
+  <domain id="um-atmos_grid_uv_halo_single" name="grid_uv" />
+  <domain id="um-atmos_grid_r_halo_single" name="grid_r" />
+  <domain id="um-atmos_grid_t_halo_extended" name="grid_t" />
+  <domain id="um-atmos_grid_cu_halo_extended" name="grid_cu" />
+  <domain id="um-atmos_grid_cv_halo_extended" name="grid_cv" />
+  <domain id="um-atmos_grid_uv_halo_extended" name="grid_uv" />
+  <domain id="um-atmos_grid_r_halo_extended" name="grid_r" />
+</domain_definition>
