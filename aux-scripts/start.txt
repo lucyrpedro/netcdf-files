@@ -22,3 +22,63 @@ cd ../u-ch427-n1280-template-start-00; rose suite-run;
 ./xml-start.sh u-ch427-n216-template-start-00
 ./xml-start.sh u-ch427-n512-template-start-00
 ./xml-start.sh u-ch427-n1280-template-start-00
+
+u-ch427-n96-template-start-all
+u-ch427-n216-template-start-all
+u-ch427-n512-template-start-all
+u-ch427-n1280-template-start-all
+
+cp -r u-ch427-n96-template-start-all u-ch427-n96-template-start-all2
+cp -r u-ch427-n216-template-start-all u-ch427-n216-template-start-all2
+cp -r u-ch427-n512-template-start-all u-ch427-n512-template-start-all2
+cp -r u-ch427-n1280-template-start-all u-ch427-n1280-template-start-all2
+
+cd ../u-ch427-n96-template-start-all2; rose suite-run;
+cd ../u-ch427-n216-template-start-all2; rose suite-run;
+cd ../u-ch427-n512-template-start-all2; rose suite-run;
+cd ../u-ch427-n1280-template-start-all2; rose suite-run;
+
+cd ../u-ch427-n96-template-start-all2; rose suite-run --new;
+cd ../u-ch427-n216-template-start-all2; rose suite-run --new;
+cd ../u-ch427-n512-template-start-all2; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-all2; rose suite-run --new;
+
+./scripts/update-n96.sh u-ch427-n96-template-start-all2
+./scripts/update-n216.sh u-ch427-n216-template-start-all2
+./scripts/update-n512.sh u-ch427-n512-template-start-all2
+./scripts/update-n1280.sh u-ch427-n1280-template-start-all2
+
+cylc stop -n u-ch427-n96-template-start-all2
+cylc stop -n u-ch427-n216-template-start-all2
+cylc stop -n u-ch427-n512-template-start-all2
+cylc stop -n u-ch427-n1280-template-start-all2
+
+cp -r u-ch427-n96-template-start-all2 u-ch427-n96-template-start-all-ms
+cp -r u-ch427-n216-template-start-all2 u-ch427-n216-template-start-all-ms
+cp -r u-ch427-n512-template-start-all2 u-ch427-n512-template-start-all-ms
+cp -r u-ch427-n1280-template-start-all2 u-ch427-n1280-template-start-all-ms
+
+cd ../u-ch427-n96-template-start-all-ms; rose suite-run --new;
+cd ../u-ch427-n216-template-start-all-ms; rose suite-run --new;
+cd ../u-ch427-n512-template-start-all-ms; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-all-ms; rose suite-run --new;
+
+cylc stop -n u-ch427-n96-template-start-all-ms
+cylc stop -n u-ch427-n216-template-start-all-ms
+cylc stop -n u-ch427-n512-template-start-all-ms
+cylc stop -n u-ch427-n1280-template-start-all-ms
+
+u-ch427-n96-template-start-all-ms
+u-ch427-n216-template-start-all-ms
+u-ch427-n512-template-start-all-ms
+u-ch427-n1280-template-start-all-ms
+
+u-ch427-n96-template-start-all-ms
+u-ch427-n216-template-start-all-ms
+u-ch427-n512-template-start-all-ms
+u-ch427-n1280-template-start-all-ms
+
+u-ch427-n96-template-start-all-ms
+u-ch427-n216-template-start-all-ms
+u-ch427-n512-template-start-all-ms
+u-ch427-n1280-template-start-all-ms

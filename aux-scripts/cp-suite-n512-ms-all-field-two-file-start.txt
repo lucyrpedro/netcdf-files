@@ -1,0 +1,148 @@
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens00
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens01
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens02
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens03
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens04
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens05
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens06
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens07
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens08
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens09
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens10
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens11
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens12
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens13
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens14
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens15
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens16
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens17
+cp -r u-ch427-n512-template-start-00 u-ch427-n512-ms-aftf-start-ens18
+
+sed -i 's/ATM_NENS=1/ATM_NENS=0/g' u-ch427-n512-ms-aftf-start-ens00/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=1/g' u-ch427-n512-ms-aftf-start-ens01/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=2/g' u-ch427-n512-ms-aftf-start-ens02/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=3/g' u-ch427-n512-ms-aftf-start-ens03/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=4/g' u-ch427-n512-ms-aftf-start-ens04/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=5/g' u-ch427-n512-ms-aftf-start-ens05/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=6/g' u-ch427-n512-ms-aftf-start-ens06/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=7/g' u-ch427-n512-ms-aftf-start-ens07/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=8/g' u-ch427-n512-ms-aftf-start-ens08/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=9/g' u-ch427-n512-ms-aftf-start-ens09/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=10/g' u-ch427-n512-ms-aftf-start-ens10/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=11/g' u-ch427-n512-ms-aftf-start-ens11/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=12/g' u-ch427-n512-ms-aftf-start-ens12/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=13/g' u-ch427-n512-ms-aftf-start-ens13/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=14/g' u-ch427-n512-ms-aftf-start-ens14/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=15/g' u-ch427-n512-ms-aftf-start-ens15/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=16/g' u-ch427-n512-ms-aftf-start-ens16/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=17/g' u-ch427-n512-ms-aftf-start-ens17/rose-suite.conf;
+sed -i 's/ATM_NENS=1/ATM_NENS=18/g' u-ch427-n512-ms-aftf-start-ens18/rose-suite.conf;
+
+cd ../u-ch427-n512-ms-aftf-start-ens00; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens01; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens02; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens03; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens04; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens05; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens06; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens07; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens08; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens09; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens10; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens11; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens12; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens13; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens14; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens15; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens16; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens17; rose suite-run;
+cd ../u-ch427-n512-ms-aftf-start-ens18; rose suite-run;
+
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens00
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens01
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens02
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens03
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens04
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens05
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens06
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens07
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens08
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens09
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens10
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens11
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens12
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens13
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens14
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens15
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens16
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens17
+./scripts/step2-n512.sh u-ch427-n512-ms-aftf-start-ens18
+
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens00
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens01
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens02
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens03
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens04
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens05
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens06
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens07
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens08
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens09
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens10
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens11
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens12
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens13
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens14
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens15
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens16
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens17
+ ./xml-ms-aftf-start.sh u-ch427-n512-ms-aftf-start-ens18
+
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens01 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens02 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens03 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens04 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens05 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens06 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens07 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens08 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens09 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens10 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens11 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens12 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens13 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens14 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens15 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens16 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens17 atmos_main;
+ cylc trigger  u-ch427-n512-ms-aftf-start-ens18 atmos_main;
+
+cylc stop -n u-ch427-n512-ms-aftf-start-ens00
+cylc stop -n u-ch427-n512-ms-aftf-start-ens01
+cylc stop -n u-ch427-n512-ms-aftf-start-ens02
+cylc stop -n u-ch427-n512-ms-aftf-start-ens03
+cylc stop -n u-ch427-n512-ms-aftf-start-ens04
+cylc stop -n u-ch427-n512-ms-aftf-start-ens05
+cylc stop -n u-ch427-n512-ms-aftf-start-ens06
+cylc stop -n u-ch427-n512-ms-aftf-start-ens07
+cylc stop -n u-ch427-n512-ms-aftf-start-ens08
+cylc stop -n u-ch427-n512-ms-aftf-start-ens09
+cylc stop -n u-ch427-n512-ms-aftf-start-ens10
+cylc stop -n u-ch427-n512-ms-aftf-start-ens11
+cylc stop -n u-ch427-n512-ms-aftf-start-ens12
+cylc stop -n u-ch427-n512-ms-aftf-start-ens13
+cylc stop -n u-ch427-n512-ms-aftf-start-ens14
+cylc stop -n u-ch427-n512-ms-aftf-start-ens15
+cylc stop -n u-ch427-n512-ms-aftf-start-ens16
+cylc stop -n u-ch427-n512-ms-aftf-start-ens17
+cylc stop -n u-ch427-n512-ms-aftf-start-ens18
+
+sed -i 's/PT10M/PT1H/g' u-ch427-n512-ms-aftf-start-ens09/rose-suite.conf;
+sed -i 's/PT10M/PT1H/g' u-ch427-n512-ms-aftf-start-ens10/rose-suite.conf;
+sed -i 's/PT10M/PT1H/g' u-ch427-n512-ms-aftf-start-ens11/rose-suite.conf;
+sed -i 's/PT10M/PT1H/g' u-ch427-n512-ms-aftf-start-ens12/rose-suite.conf;
+sed -i 's/PT10M/PT1H/g' u-ch427-n512-ms-aftf-start-ens14/rose-suite.conf;
+sed -i 's/PT10M/PT1H/g' u-ch427-n512-ms-aftf-start-ens15/rose-suite.conf;
+sed -i 's/PT10M/PT1H/g' u-ch427-n512-ms-aftf-start-ens16/rose-suite.conf;
+sed -i 's/PT10M/PT1H/g' u-ch427-n512-ms-aftf-start-ens17/rose-suite.conf;
+sed -i 's/PT10M/PT1H/g' u-ch427-n512-ms-aftf-start-ens18/rose-suite.conf;

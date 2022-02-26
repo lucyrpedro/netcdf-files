@@ -63,3 +63,14 @@ cd ../u-ch427-n1280-x5-09; rose suite-run;
  cylc stop -n u-ch427-n1280-x5-07
  cylc stop -n u-ch427-n1280-x5-08
  cylc stop -n u-ch427-n1280-x5-09
+
+ cp rose-suite.conf ../u-ch427-n1280-x5-00/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x5-01/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x5-02/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x5-03/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x5-04/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x5-05/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x5-06/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x5-07/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x5-08/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x5-09/rose-suite.conf

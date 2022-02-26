@@ -37,7 +37,17 @@ cd ../u-ch427-n1280-x-09; rose suite-run;
 ./create-xml-n1280-x-all.sh u-ch427-n1280-x-03
 ./create-xml-n1280-x-all.sh u-ch427-n1280-x-04
 ./create-xml-n1280-x-all.sh u-ch427-n1280-x-05
-./create-xml-n1280-x-all.sh u-ch427-n1280-x-06
+./create-xml-n1280-x-all.sh cd ../u-ch427-n1280-x-orig-00; rose suite-run;
+cd ../u-ch427-n1280-x-orig-01; rose suite-run;
+cd ../u-ch427-n1280-x-orig-02; rose suite-run;
+cd ../u-ch427-n1280-x-orig-03; rose suite-run;
+cd ../u-ch427-n1280-x-orig-04; rose suite-run;
+cd ../u-ch427-n1280-x-orig-05; rose suite-run;
+cd ../u-ch427-n1280-x-orig-06; rose suite-run;
+cd ../u-ch427-n1280-x-orig-07; rose suite-run;
+cd ../u-ch427-n1280-x-orig-08; rose suite-run;
+cd ../u-ch427-n1280-x-orig-09; rose suite-run;
+u-ch427-n1280-x-06
 ./create-xml-n1280-x-all.sh u-ch427-n1280-x-07
 ./create-xml-n1280-x-all.sh u-ch427-n1280-x-08
 ./create-xml-n1280-x-all.sh u-ch427-n1280-x-09
@@ -60,6 +70,27 @@ cd ../u-ch427-n1280-x-09; rose suite-run;
  cylc stop -n u-ch427-n1280-x-04
  cylc stop -n u-ch427-n1280-x-05
  cylc stop -n u-ch427-n1280-x-06
- cylc stop -n u-ch427-n1280-x-07
+ cylc stop -n u-ch427-n1280-cd ../u-ch427-n1280-x-orig-00; rose suite-run;
+cd ../u-ch427-n1280-x-orig-01; rose suite-run;
+cd ../u-ch427-n1280-x-orig-02; rose suite-run;
+cd ../u-ch427-n1280-x-orig-03; rose suite-run;
+cd ../u-ch427-n1280-x-orig-04; rose suite-run;
+cd ../u-ch427-n1280-x-orig-05; rose suite-run;
+cd ../u-ch427-n1280-x-orig-06; rose suite-run;
+cd ../u-ch427-n1280-x-orig-07; rose suite-run;
+cd ../u-ch427-n1280-x-orig-08; rose suite-run;
+cd ../u-ch427-n1280-x-orig-09; rose suite-run;
+x-07
  cylc stop -n u-ch427-n1280-x-08
  cylc stop -n u-ch427-n1280-x-09
+
+ cp rose-suite.conf ../u-ch427-n1280-x-00/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x-01/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x-02/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x-03/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x-04/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x-05/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x-06/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x-07/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x-08/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-x-09/rose-suite.conf

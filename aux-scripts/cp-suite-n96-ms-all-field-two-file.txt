@@ -166,5 +166,10 @@ sed -i 's/PT10M/PT1H/g' u-ch427-n96-ms-aftf-ens16/rose-suite.conf;
 sed -i 's/PT10M/PT1H/g' u-ch427-n96-ms-aftf-ens17/rose-suite.conf;
 sed -i 's/PT10M/PT1H/g' u-ch427-n96-ms-aftf-ens18/rose-suite.conf;
 
-
 sed -i 's/PT10M/PT1H/g' u-ch427-n96-max18-test-ens00/rose-suite.conf;
+
+cylc stop -n u-ch427-n96-ms-aftf-ens14
+cylc stop -n u-ch427-n96-ms-aftf-ens15
+cylc stop -n u-ch427-n96-ms-aftf-ens16
+cylc stop -n u-ch427-n96-ms-aftf-ens17
+cylc stop -n u-ch427-n96-ms-aftf-ens18
