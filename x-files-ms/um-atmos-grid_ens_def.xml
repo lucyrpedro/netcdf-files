@@ -64,6 +64,11 @@
     <axis axis_ref="um-atmos_DALLTH" />
     <axis axis_ref="ensemble" />
   </grid>
+  <grid id="um-atmos_grid_t_halo_extended_DALLTH">
+    <domain domain_ref="um-atmos_grid_t_halo_extended" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <axis axis_ref="ensemble" />
+  </grid>
   <grid id="um-atmos_grid_cu_DNOGWTH">
     <domain domain_ref="um-atmos_grid_cu" />
     <axis axis_ref="um-atmos_DNOGWTH" />
@@ -252,6 +257,13 @@
   </grid>
   <grid id="um-atmos_grid_t_halo_single_DALLTH_ens_mean">
     <domain domain_ref="um-atmos_grid_t_halo_single" />
+    <axis axis_ref="um-atmos_DALLTH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+  <grid id="um-atmos_grid_t_halo_extended_DALLTH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t_halo_extended" />
     <axis axis_ref="um-atmos_DALLTH" />
     <scalar>
       <reduce_axis operation="average" />

@@ -1,5 +1,7 @@
 <field_definition default_value="-1073741824.0" prec="8">
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s00i004" long_name="THETA AFTER TIMESTEP" standard_name="air_potential_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_extended_DALLTH" id="m01s00i010" long_name="SPECIFIC HUMIDITY AFTER TIMESTEP" standard_name="specific_humidity" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_extended_DALLTH" id="m01s00i012" long_name="QCF AFTER TIMESTEP" standard_name="mass_fraction_of_cloud_ice_in_air" unit="1" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i023" long_name="SNOW AMOUNT OVER LAND AFT TSTP KG/M2" standard_name="snowfall_amount" unit="kg m-2" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i024" long_name="SURFACE TEMPERATURE AFTER TIMESTEP" standard_name="surface_temperature" unit="K" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i025" long_name="BOUNDARY LAYER DEPTH AFTER TIMESTEP" standard_name="atmosphere_boundary_layer_thickness" unit="m" />
@@ -229,6 +231,88 @@
 			operation="instant"
 			field_ref="m01s00i004_ens"
 			> sqrt(m01s00i004_avensq - m01s00i004_sqav)
+		</field>
+
+
+		<field
+			id="m01s00i010_inst"
+			name="m01s00i010_inst"
+			operation="instant"
+			field_ref="m01s00i010"
+		/>
+
+		<field
+			id="m01s00i010_ens"
+			name="m01s00i010_ens"
+			operation="instant"
+			field_ref="m01s00i010"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i010_sqav"
+			name="m01s00i010_sqav"
+			operation="instant"
+			field_ref="m01s00i010_ens"
+			> m01s00i010_ens*m01s00i010_ens
+		</field>
+
+		<field
+			id="m01s00i010_avensq"
+			name="m01s00i010_avensq"
+			operation="instant"
+			field_ref="m01s00i010"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+			> m01s00i010*m01s00i010
+		</field>
+
+		<field
+			id="m01s00i010_stdev"
+			name="m01s00i010_stdev"
+			operation="instant"
+			field_ref="m01s00i010_ens"
+			> sqrt(m01s00i010_avensq - m01s00i010_sqav)
+		</field>
+
+
+		<field
+			id="m01s00i012_inst"
+			name="m01s00i012_inst"
+			operation="instant"
+			field_ref="m01s00i012"
+		/>
+
+		<field
+			id="m01s00i012_ens"
+			name="m01s00i012_ens"
+			operation="instant"
+			field_ref="m01s00i012"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i012_sqav"
+			name="m01s00i012_sqav"
+			operation="instant"
+			field_ref="m01s00i012_ens"
+			> m01s00i012_ens*m01s00i012_ens
+		</field>
+
+		<field
+			id="m01s00i012_avensq"
+			name="m01s00i012_avensq"
+			operation="instant"
+			field_ref="m01s00i012"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+			> m01s00i012*m01s00i012
+		</field>
+
+		<field
+			id="m01s00i012_stdev"
+			name="m01s00i012_stdev"
+			operation="instant"
+			field_ref="m01s00i012_ens"
+			> sqrt(m01s00i012_avensq - m01s00i012_sqav)
 		</field>
 
 
@@ -639,6 +723,88 @@
 			operation="instant"
 			field_ref="m01s00i211_ens"
 			> sqrt(m01s00i211_avensq - m01s00i211_sqav)
+		</field>
+
+
+		<field
+			id="m01s00i254_inst"
+			name="m01s00i254_inst"
+			operation="instant"
+			field_ref="m01s00i254"
+		/>
+
+		<field
+			id="m01s00i254_ens"
+			name="m01s00i254_ens"
+			operation="instant"
+			field_ref="m01s00i254"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i254_sqav"
+			name="m01s00i254_sqav"
+			operation="instant"
+			field_ref="m01s00i254_ens"
+			> m01s00i254_ens*m01s00i254_ens
+		</field>
+
+		<field
+			id="m01s00i254_avensq"
+			name="m01s00i254_avensq"
+			operation="instant"
+			field_ref="m01s00i254"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+			> m01s00i254*m01s00i254
+		</field>
+
+		<field
+			id="m01s00i254_stdev"
+			name="m01s00i254_stdev"
+			operation="instant"
+			field_ref="m01s00i254_ens"
+			> sqrt(m01s00i254_avensq - m01s00i254_sqav)
+		</field>
+
+
+		<field
+			id="m01s00i266_inst"
+			name="m01s00i266_inst"
+			operation="instant"
+			field_ref="m01s00i266"
+		/>
+
+		<field
+			id="m01s00i266_ens"
+			name="m01s00i266_ens"
+			operation="instant"
+			field_ref="m01s00i266"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i266_sqav"
+			name="m01s00i266_sqav"
+			operation="instant"
+			field_ref="m01s00i266_ens"
+			> m01s00i266_ens*m01s00i266_ens
+		</field>
+
+		<field
+			id="m01s00i266_avensq"
+			name="m01s00i266_avensq"
+			operation="instant"
+			field_ref="m01s00i266"
+			grid_ref="um-atmos_grid_t_halo_extended_DALLTH_ens_mean"
+			> m01s00i266*m01s00i266
+		</field>
+
+		<field
+			id="m01s00i266_stdev"
+			name="m01s00i266_stdev"
+			operation="instant"
+			field_ref="m01s00i266_ens"
+			> sqrt(m01s00i266_avensq - m01s00i266_sqav)
 		</field>
 
 
