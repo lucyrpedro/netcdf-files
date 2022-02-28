@@ -4,6 +4,10 @@
 
 ./size-x.sh u-ch427-n1280-x
 ./size-x.sh u-ch427-n1280-x5
+./size-x.sh u-ch427-n1280-x-orig
+./size-x.sh u-ch427-n1280-x5-orig
+./size-x.sh u-ch427-n1280-x-ms
+./size-x.sh u-ch427-n1280-x5-ms
 
 rm -rf total-all-suites-x.csv
 touch total-all-suites-x.csv
@@ -16,6 +20,18 @@ touch total-all-suites-x.csv
 	suite=u-ch427-n1280-x5
         cat total-$suite.csv >> total-all-suites.csv
         cat blank.txt >> total-all-suites.csv
+        suite=u-ch427-n1280-x-orig
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
+        suite=u-ch427-n1280-x5-orig
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
+        suite=u-ch427-n1280-x-ms
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
+        suite=u-ch427-n1280-x5-ms
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv	
 #done
 
 
