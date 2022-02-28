@@ -1,6 +1,6 @@
-<file_definition format="netcdf4" time_counter="instant" type="one_file">
+<file_definition format="netcdf4" time_counter="instant" type="multiple_file">
 
-	<file description="All Fields" id="all-fields-mean" name="test-all-fields-mean" output_freq="3h" compression_level="5">
+	<file description="All Fields" id="all-fields-mean" name="test-all-fields-mean" output_freq="3h" compression_level="0">
 
 
 		<field
@@ -1333,6 +1333,6 @@
 			field_ref="m01s30i431_ens"
 		/>
 
-        </file>
+	</file>
 
 </file_definition>

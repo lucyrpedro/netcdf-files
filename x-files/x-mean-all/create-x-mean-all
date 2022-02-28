@@ -1,0 +1,26 @@
+#!/bin/bash
+
+cp ~/test-git/netcdf-files/x-files/um-atmos-file_ens_def-x-one-file-mean.xml .
+
+cp um-atmos-file_ens_def-x-one-file-mean.xml um-atmos-file_ens_def-x-mean-00.xml
+cp um-atmos-file_ens_def-x-one-file-mean.xml um-atmos-file_ens_def-x-mean-01.xml
+cp um-atmos-file_ens_def-x-one-file-mean.xml um-atmos-file_ens_def-x-mean-02.xml
+cp um-atmos-file_ens_def-x-one-file-mean.xml um-atmos-file_ens_def-x-mean-03.xml
+cp um-atmos-file_ens_def-x-one-file-mean.xml um-atmos-file_ens_def-x-mean-04.xml
+cp um-atmos-file_ens_def-x-one-file-mean.xml um-atmos-file_ens_def-x-mean-05.xml
+cp um-atmos-file_ens_def-x-one-file-mean.xml um-atmos-file_ens_def-x-mean-06.xml
+cp um-atmos-file_ens_def-x-one-file-mean.xml um-atmos-file_ens_def-x-mean-07.xml
+cp um-atmos-file_ens_def-x-one-file-mean.xml um-atmos-file_ens_def-x-mean-08.xml
+cp um-atmos-file_ens_def-x-one-file-mean.xml um-atmos-file_ens_def-x-mean-09.xml
+
+sed -i 's/compression_level="0"/compression_level="0"/g' um-atmos-file_ens_def-x-mean-00.xml
+sed -i 's/compression_level="0"/compression_level="1"/g' um-atmos-file_ens_def-x-mean-01.xml
+sed -i 's/compression_level="0"/compression_level="2"/g' um-atmos-file_ens_def-x-mean-02.xml
+sed -i 's/compression_level="0"/compression_level="3"/g' um-atmos-file_ens_def-x-mean-03.xml
+sed -i 's/compression_level="0"/compression_level="4"/g' um-atmos-file_ens_def-x-mean-04.xml
+sed -i 's/compression_level="0"/compression_level="5"/g' um-atmos-file_ens_def-x-mean-05.xml
+sed -i 's/compression_level="0"/compression_level="6"/g' um-atmos-file_ens_def-x-mean-06.xml
+sed -i 's/compression_level="0"/compression_level="7"/g' um-atmos-file_ens_def-x-mean-07.xml
+sed -i 's/compression_level="0"/compression_level="8"/g' um-atmos-file_ens_def-x-mean-08.xml
+sed -i 's/compression_level="0"/compression_level="9"/g' um-atmos-file_ens_def-x-mean-09.xml
+

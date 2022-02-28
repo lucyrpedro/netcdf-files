@@ -1,4 +1,6 @@
 <field_definition default_value="-1073741824.0" prec="8">
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_halo_single_DALLRH" id="m01s00i002" long_name="U COMPNT OF WIND AFTER TIMESTEP" standard_name="eastward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_halo_single_DALLRH" id="m01s00i003" long_name="V COMPNT OF WIND AFTER TIMESTEP" standard_name="northward_wind" unit="m s-1" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s00i004" long_name="THETA AFTER TIMESTEP" standard_name="air_potential_temperature" unit="K" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_extended_DALLTH" id="m01s00i010" long_name="SPECIFIC HUMIDITY AFTER TIMESTEP" standard_name="specific_humidity" unit="1" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_extended_DALLTH" id="m01s00i012" long_name="QCF AFTER TIMESTEP" standard_name="mass_fraction_of_cloud_ice_in_air" unit="1" />
@@ -12,6 +14,8 @@
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i032" long_name="SEA ICE DEPTH (MEAN OVER ICE)      M" standard_name="sea_ice_thickness" unit="m" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i033" long_name="OROGRAPHY (/STRAT LOWER BC)" standard_name="surface_altitude" unit="m" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DALLTH" id="m01s00i211" long_name="CCA WITH ANVIL AFTER TIMESTEP" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_extended_DALLTH" id="m01s00i254" long_name="QCL AFTER TIMESTEP" standard_name="mass_fraction_of_cloud_liquid_water_in_air" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_extended_DALLTH" id="m01s00i266" long_name="BULK CLOUD FRACTION IN EACH LAYER" unit="1" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_single_D52RH" id="m01s00i407" long_name="PRESSURE AT RHO LEVELS AFTER TS" standard_name="air_pressure" unit="Pa" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLRH" id="m01s00i407_2" long_name="PRESSURE AT RHO LEVELS AFTER TS" standard_name="air_pressure" unit="Pa" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_single_D52TH" id="m01s00i408" long_name="PRESSURE AT THETA LEVELS AFTER TS" standard_name="air_pressure" unit="Pa" />
@@ -192,6 +196,88 @@
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i428" long_name="dry mass col int u*q  per unit area" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i429" long_name="dry mass col int v*q  per unit area" />
   <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i431" long_name="dry mass col int u*v  per unit area" />
+
+		<field
+			id="m01s00i002_inst"
+			name="m01s00i002_inst"
+			operation="instant"
+			field_ref="m01s00i002"
+		/>
+
+		<field
+			id="m01s00i002_ens"
+			name="m01s00i002_ens"
+			operation="instant"
+			field_ref="m01s00i002"
+			grid_ref="um-atmos_grid_cu_halo_single_DALLRH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i002_sqav"
+			name="m01s00i002_sqav"
+			operation="instant"
+			field_ref="m01s00i002_ens"
+			> m01s00i002_ens*m01s00i002_ens
+		</field>
+
+		<field
+			id="m01s00i002_avensq"
+			name="m01s00i002_avensq"
+			operation="instant"
+			field_ref="m01s00i002"
+			grid_ref="um-atmos_grid_cu_halo_single_DALLRH_ens_mean"
+			> m01s00i002*m01s00i002
+		</field>
+
+		<field
+			id="m01s00i002_stdev"
+			name="m01s00i002_stdev"
+			operation="instant"
+			field_ref="m01s00i002_ens"
+			> sqrt(m01s00i002_avensq - m01s00i002_sqav)
+		</field>
+
+
+		<field
+			id="m01s00i003_inst"
+			name="m01s00i003_inst"
+			operation="instant"
+			field_ref="m01s00i003"
+		/>
+
+		<field
+			id="m01s00i003_ens"
+			name="m01s00i003_ens"
+			operation="instant"
+			field_ref="m01s00i003"
+			grid_ref="um-atmos_grid_cv_halo_single_DALLRH_ens_mean"
+		/>
+
+		<field
+			id="m01s00i003_sqav"
+			name="m01s00i003_sqav"
+			operation="instant"
+			field_ref="m01s00i003_ens"
+			> m01s00i003_ens*m01s00i003_ens
+		</field>
+
+		<field
+			id="m01s00i003_avensq"
+			name="m01s00i003_avensq"
+			operation="instant"
+			field_ref="m01s00i003"
+			grid_ref="um-atmos_grid_cv_halo_single_DALLRH_ens_mean"
+			> m01s00i003*m01s00i003
+		</field>
+
+		<field
+			id="m01s00i003_stdev"
+			name="m01s00i003_stdev"
+			operation="instant"
+			field_ref="m01s00i003_ens"
+			> sqrt(m01s00i003_avensq - m01s00i003_sqav)
+		</field>
+
 
 		<field
 			id="m01s00i004_inst"
