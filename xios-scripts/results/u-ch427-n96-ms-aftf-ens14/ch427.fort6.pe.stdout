@@ -3,11 +3,38 @@ Enabling 0 I/O PEs
 [0] OpenMP Specification: 201511
 
 *******************************************************************************
-**************** Start of UM RUN Job : 23:42:32 on 15/02/2022 *****************
+**************** Start of UM RUN Job : 18:28:25 on 22/02/2022 *****************
 **************** Based upon UM release vn11.6             *****************
 *******************************************************************************
 
 If you are using OpenMPI or think your MPI is thread capable, try setting ios_force_threading_mode appropriately in the UI
+Info: Task spacing               =   256 tasks
+Info: Task offset                =     0 tasks
+Info: Interleaved servers        = F
+Info: Server size                =     1 tasks
+Info: Buffer size                =  1500 MB
+Info: Verbosity                  = 3
+Info: Asynchronous stash         = F
+Info: Asynchronous dumps         = F
+Info: Serialise all mpi calls    = F
+Info: Only thread zero calls MPI = F
+Info: Read only files stay local = T
+Info: Unit allocation policy     = 1
+Info: Polling Interval           = 1000
+Info: Timeout Interval           = 120
+Info: Lock Metering              = F
+Info: Relay protocol to slaves   = F
+Info: Server Decomposition Model = 0
+Info: Info: Use helper threads   = F
+Info: Info: Enable MPI-IO        = F
+Info: Info: No Barrier FileOps   = T
+Info: Async Dispatch slots       = 40
+Info: Dispatch slots mem cap     = 40 MB
+Info: Async Stash Dispatch slots =  20
+Info: Async fields/levs per pack =  76
+Info: Async send empty tiles     = F
+Info: Async stats profiling      = F
+Info: IOS print start time       = F
 
 ????????????????????????????????????????????????????????????????????????????????
 ??????????????????????????????      WARNING       ??????????????????????????????
@@ -10363,7 +10390,7 @@ Mass, energy, energy drift =   0.5129E+19  0.1311E+25 -0.5774E-07
 
 ************************  PE configuration for this run  ***********************
 ****  PE configuration:    16 processors East-West    16 processors North-South *
-Atm_Step: Info: Starting timestep        0 at time=    16.823 seconds
+Atm_Step: Info: Starting timestep        0 at time=    17.147 seconds
 
 Atm_Step: Timestep        0   Model time:   1988-09-01 00:00:00
 
@@ -10376,6 +10403,3 @@ Atm_Step: Timestep        0   Model time:   1988-09-01 00:00:00
 ?  Warning number: 1020
 ????????????????????????????????????????????????????????????????????????????????
 
-Atm_Step: Info: Starting timestep        1 at time=    58.641 seconds
-
-Atm_Step: Timestep        1   Model time:   1988-09-01 00:20:00
