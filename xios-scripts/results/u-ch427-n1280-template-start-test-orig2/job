@@ -3,21 +3,21 @@
 # ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
 # Suite: u-ch427-n1280-template-start-test-orig2
 # Task: atmos_main.19790301T0000Z
-# Job log directory: 19790301T0000Z/atmos_main/02
+# Job log directory: 19790301T0000Z/atmos_main/01
 # Job submit method: slurm
 # Execution time limit: 7200.0
 
 # DIRECTIVES:
 #SBATCH --job-name=u-ch427-n1280-template-start-test-orig2.atmos_main.19790301T0000Z
-#SBATCH --output=cylc-run/u-ch427-n1280-template-start-test-orig2/log/job/19790301T0000Z/atmos_main/02/job.out
-#SBATCH --error=cylc-run/u-ch427-n1280-template-start-test-orig2/log/job/19790301T0000Z/atmos_main/02/job.err
+#SBATCH --output=cylc-run/u-ch427-n1280-template-start-test-orig2/log/job/19790301T0000Z/atmos_main/01/job.out
+#SBATCH --error=cylc-run/u-ch427-n1280-template-start-test-orig2/log/job/19790301T0000Z/atmos_main/01/job.err
 #SBATCH --time=120:00
 #SBATCH --export=none
 #SBATCH --chdir=/work/n02/n02/lrpedro
 #SBATCH --partition=standard
 #SBATCH --qos=standard
 #SBATCH --account=n02-cms
-#SBATCH --nodes=102
+#SBATCH --nodes=110
 # N.B. CYLC_DIR has been updated on the remote host
 export CYLC_DIR='/mnt/lustre/a2fs-work1/work/y07/shared/umshared/software/cylc-7.8.7'
 export CYLC_VERSION='7.8.7'
@@ -36,10 +36,10 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n1280-template-start-test-orig2"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n1280-template-start-test-orig2"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n1280-template-start-test-orig2"
-    export CYLC_SUITE_UUID="886c07cc-187e-4409-897c-b9759ca92d88"
+    export CYLC_SUITE_UUID="17e6ee62-e796-4fc2-b0e6-8dd7eaee80b3"
 
     # CYLC TASK ENVIRONMENT:
-    export CYLC_TASK_JOB="19790301T0000Z/atmos_main/02"
+    export CYLC_TASK_JOB="19790301T0000Z/atmos_main/01"
     export CYLC_TASK_NAMESPACE_HIERARCHY="root UM ATMOS SUBMIT_RETRIES HPC UM_PARALLEL ATMOS_RESOURCE RUN_MAIN atmos_main"
     export CYLC_TASK_DEPENDENCIES="ens_setup_all.19790301T0000Z fcm_make2_um.19790301T0000Z install_ancil.19790301T0000Z"
     export CYLC_TASK_TRY_NUMBER=1
@@ -77,7 +77,7 @@ cylc__job__inst__user_env() {
     ROSE_TASK_APP="um"
     UM_ATM_NPROCX="94"
     UM_ATM_NPROCY="64"
-    XIOS_NPROC="16"
+    XIOS_NPROC="32"
     ATMOS_EXEC="$CYLC_SUITE_SHARE_DIR/fcm_make_um/build-atmos/bin/um-atmos.exe"
     HYPERTHREADS="1"
     OMP_NUM_THREADS="2"
@@ -90,7 +90,7 @@ cylc__job__inst__user_env() {
     OMP_PLACES="cores"
     FI_OFI_RXM_SAR_LIMIT="64K"
     ROSE_LAUNCHER_PREOPTS_UM="--het-group=0 --hint=nomultithread --distribution=block:block --nodes=94 --ntasks=6016 --tasks-per-node=64 --cpus-per-task=2 env OMP_NUM_THREADS=2 HYPERTHREADS=1"
-    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=1 --cpu-bind=cores --export=all --nodes=8 --ntasks=16 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
+    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=1 --cpu-bind=cores --export=all --nodes=16 --ntasks=32 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
     DATAM="$ROSE_DATA/History_Data"
     DATAW="$CYLC_TASK_WORK_PATH"
 }
@@ -118,4 +118,4 @@ save_wallclock.sh P1D
 . "${CYLC_DIR}/lib/cylc/job.sh"
 cylc__job__main
 
-#EOF: 19790301T0000Z/atmos_main/02
+#EOF: 19790301T0000Z/atmos_main/01
