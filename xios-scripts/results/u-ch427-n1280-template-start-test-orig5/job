@@ -3,14 +3,14 @@
 # ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
 # Suite: u-ch427-n1280-template-start-test-orig5
 # Task: atmos_main.19790301T0000Z
-# Job log directory: 19790301T0000Z/atmos_main/01
+# Job log directory: 19790301T0000Z/atmos_main/02
 # Job submit method: slurm
 # Execution time limit: 7200.0
 
 # DIRECTIVES:
 #SBATCH --job-name=u-ch427-n1280-template-start-test-orig5.atmos_main.19790301T0000Z
-#SBATCH --output=cylc-run/u-ch427-n1280-template-start-test-orig5/log/job/19790301T0000Z/atmos_main/01/job.out
-#SBATCH --error=cylc-run/u-ch427-n1280-template-start-test-orig5/log/job/19790301T0000Z/atmos_main/01/job.err
+#SBATCH --output=cylc-run/u-ch427-n1280-template-start-test-orig5/log/job/19790301T0000Z/atmos_main/02/job.out
+#SBATCH --error=cylc-run/u-ch427-n1280-template-start-test-orig5/log/job/19790301T0000Z/atmos_main/02/job.err
 #SBATCH --time=120:00
 #SBATCH --export=none
 #SBATCH --chdir=/work/n02/n02/lrpedro
@@ -39,7 +39,7 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_UUID="77dc87f6-5401-49d5-9487-1e80ce7a1d93"
 
     # CYLC TASK ENVIRONMENT:
-    export CYLC_TASK_JOB="19790301T0000Z/atmos_main/01"
+    export CYLC_TASK_JOB="19790301T0000Z/atmos_main/02"
     export CYLC_TASK_NAMESPACE_HIERARCHY="root UM ATMOS SUBMIT_RETRIES HPC UM_PARALLEL ATMOS_RESOURCE RUN_MAIN atmos_main"
     export CYLC_TASK_DEPENDENCIES="ens_setup_all.19790301T0000Z fcm_make2_um.19790301T0000Z install_ancil.19790301T0000Z"
     export CYLC_TASK_TRY_NUMBER=1
@@ -118,4 +118,4 @@ save_wallclock.sh P1D
 . "${CYLC_DIR}/lib/cylc/job.sh"
 cylc__job__main
 
-#EOF: 19790301T0000Z/atmos_main/01
+#EOF: 19790301T0000Z/atmos_main/02
