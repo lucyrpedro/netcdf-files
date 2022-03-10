@@ -8,6 +8,8 @@
 ./size-x.sh u-ch427-n1280-x5-orig
 ./size-x.sh u-ch427-n1280-x-ms
 ./size-x.sh u-ch427-n1280-x5-ms
+./size-pack.sh u-ch427-n1280-pack0
+./size-pack.sh u-ch427-n1280-pack5
 
 rm -rf total-all-suites-x.csv
 touch total-all-suites-x.csv
