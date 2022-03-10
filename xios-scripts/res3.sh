@@ -67,9 +67,7 @@ do
         cd ${aux2}/${line}
         if [[ -s "${filename}" ]]; then
 #                echo "took=${filename}"
-                echo $(cat ${filename} |grep "1 took") >> took.txt
-		echo $(cat ${filename} |grep "2 took") >> took.txt
-                echo $(cat ${filename} |grep "3 took") >> took.txt
+                echo $(cat ${filename} |grep "took") >> took.txt
         fi
 done < "$input"
 
