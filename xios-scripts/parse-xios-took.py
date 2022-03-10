@@ -20,7 +20,7 @@ print(file_old)
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["SUITE", "TOOK", "NUMBER"]
+fields = ["SUITE", "TOOK SIZE", "TOOK TOTAL", "TOOK MEAN"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -32,8 +32,8 @@ for file in f_dir:
 
     # Parse the data for the information inside the filename
 
-    #data_M["SUITE"] = file.strip()
-#    print(file)
+    data_M["SUITE"] = file.strip()
+    print(file)
 
     # Change to the suite directory
 
@@ -54,23 +54,46 @@ for file in f_dir:
 
             text = myfile.read()
 #            print(text)
+            text = text.split();
+            ntook=text.count('took')
+#            print(ntook)
 
-            for aux in range(1, 72):
+            data_M["TOOK SIZE"] = ntook
 
-                print("text")
-                print(text)
+            took_list = []
 
-                str = "{}".format(aux) + " took (?P<TOOK>[0-9.]*) seconds"
-                print(str)
+            for i in range(0, ntook):
+                pos=7*i+5
+#                print("%s" % (text[pos]))
+                took_list.append(text[pos])
+
+#            for i in range(0, ntook):
+#                print(took_list[i])
+
+            took_vector = []
+            for item in took_list:
+                took_vector.append(float(item))
+            
+#            print(took_vector)
+
+            filename_took = cwd + "/results/" + file.strip() + "/took.csv";
+            with open(filename_took, 'w') as myfile2:
+                wr = csv.writer(myfile2, quoting=csv.QUOTE_ALL)
+                wr.writerow(took_vector)
+
+            total=0;
+            for i in range(0, ntook):
+                total=total+took_vector[i]
+
+            data_M["TOOK TOTAL"] = round(total, 2)
+
+            if total!=0:
+                mean=total/ntook;
+                data_M["TOOK MEAN"] = round(mean, 2)
                 
-                m = re.match(str, text)
-                print("m")
-                print(m)
+#            print(round(total, 2))
+#            print(round(mean, 2))
 
-                if m:
-                    data_M.update(m.groupdict())
-                    data_M["NUMBER"] = aux
-                
             out.writerow(data_M)
 
 f_dir.close()
