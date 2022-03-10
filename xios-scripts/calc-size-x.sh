@@ -34,6 +34,12 @@ touch total-all-suites-x.csv
         suite=u-ch427-n1280-x5-ms
         cat total-$suite.csv >> total-all-suites.csv
         cat blank.txt >> total-all-suites.csv	
+        suite=u-ch427-n1280-pack0
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
+        suite=u-ch427-n1280-pack5
+        cat total-$suite.csv >> total-all-suites.csv
+        cat blank.txt >> total-all-suites.csv
 #done
 
 
