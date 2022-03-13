@@ -1,0 +1,88 @@
+u-ch427-n1280-template-start-test-orig1
+u-ch427-n1280-template-start-test-orig2
+u-ch427-n1280-template-start-test-orig3
+u-ch427-n1280-template-start-test-orig4
+u-ch427-n1280-template-start-test-orig5
+u-ch427-n1280-template-start-test-orig6
+u-ch427-n1280-template-start-test-orig7
+u-ch427-n1280-template-start-test-orig8
+
+cd ../u-ch427-n1280-template-start-test-orig1; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig2; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig3; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig4; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig5; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig6; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig7; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig8; rose suite-run --new;
+
+cylc trigger u-ch427-n1280-template-start-test-orig1 atmos_main;
+cylc trigger u-ch427-n1280-template-start-test-orig2 atmos_main;
+cylc trigger u-ch427-n1280-template-start-test-orig3 atmos_main;
+cylc trigger u-ch427-n1280-template-start-test-orig4 atmos_main;
+cylc trigger u-ch427-n1280-template-start-test-orig5 atmos_main;
+cylc trigger u-ch427-n1280-template-start-test-orig6 atmos_main;
+cylc trigger u-ch427-n1280-template-start-test-orig7 atmos_main;
+cylc trigger u-ch427-n1280-template-start-test-orig8 atmos_main;
+
+sed -i 's/XIOS_NPROC=16/XIOS_NPROC=32/g' u-ch427-n1280-template-start-test-orig1/rose-suite.conf;
+sed -i 's/XIOS_NPROC=16/XIOS_NPROC=32/g' u-ch427-n1280-template-start-test-orig2/rose-suite.conf;
+sed -i 's/XIOS_NPROC=16/XIOS_NPROC=32/g' u-ch427-n1280-template-start-test-orig3/rose-suite.conf;
+sed -i 's/XIOS_NPROC=16/XIOS_NPROC=32/g' u-ch427-n1280-template-start-test-orig4/rose-suite.conf;
+sed -i 's/XIOS_NPROC=16/XIOS_NPROC=32/g' u-ch427-n1280-template-start-test-orig5/rose-suite.conf;
+sed -i 's/XIOS_NPROC=16/XIOS_NPROC=32/g' u-ch427-n1280-template-start-test-orig6/rose-suite.conf;
+sed -i 's/XIOS_NPROC=16/XIOS_NPROC=32/g' u-ch427-n1280-template-start-test-orig7/rose-suite.conf;
+sed -i 's/XIOS_NPROC=16/XIOS_NPROC=32/g' u-ch427-n1280-template-start-test-orig8/rose-suite.conf;
+
+sed -i 's/XIOS_NPROC=32/XIOS_NPROC=16/g' u-ch427-n1280-template-start-test-orig1/rose-suite.conf;
+sed -i 's/XIOS_NPROC=32/XIOS_NPROC=16/g' u-ch427-n1280-template-start-test-orig2/rose-suite.conf;
+sed -i 's/XIOS_NPROC=32/XIOS_NPROC=16/g' u-ch427-n1280-template-start-test-orig3/rose-suite.conf;
+sed -i 's/XIOS_NPROC=32/XIOS_NPROC=16/g' u-ch427-n1280-template-start-test-orig4/rose-suite.conf;
+sed -i 's/XIOS_NPROC=32/XIOS_NPROC=16/g' u-ch427-n1280-template-start-test-orig5/rose-suite.conf;
+sed -i 's/XIOS_NPROC=32/XIOS_NPROC=16/g' u-ch427-n1280-template-start-test-orig6/rose-suite.conf;
+sed -i 's/XIOS_NPROC=32/XIOS_NPROC=16/g' u-ch427-n1280-template-start-test-orig7/rose-suite.conf;
+sed -i 's/XIOS_NPROC=32/XIOS_NPROC=16/g' u-ch427-n1280-template-start-test-orig8/rose-suite.conf;
+
+sed -i 's/MAIN_OMPTHR_ATM=1/MAIN_OMPTHR_ATM=2/g' u-ch427-n1280-template-start-test-orig1/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=1/MAIN_OMPTHR_ATM=2/g' u-ch427-n1280-template-start-test-orig2/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=1/MAIN_OMPTHR_ATM=2/g' u-ch427-n1280-template-start-test-orig3/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=1/MAIN_OMPTHR_ATM=2/g' u-ch427-n1280-template-start-test-orig4/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=1/MAIN_OMPTHR_ATM=2/g' u-ch427-n1280-template-start-test-orig5/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=1/MAIN_OMPTHR_ATM=2/g' u-ch427-n1280-template-start-test-orig6/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=1/MAIN_OMPTHR_ATM=2/g' u-ch427-n1280-template-start-test-orig7/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=1/MAIN_OMPTHR_ATM=2/g' u-ch427-n1280-template-start-test-orig8/rose-suite.conf;
+
+sed -i 's/MAIN_OMPTHR_ATM=2/MAIN_OMPTHR_ATM=1/g' u-ch427-n1280-template-start-test-orig1/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=2/MAIN_OMPTHR_ATM=1/g' u-ch427-n1280-template-start-test-orig2/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=2/MAIN_OMPTHR_ATM=1/g' u-ch427-n1280-template-start-test-orig3/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=2/MAIN_OMPTHR_ATM=1/g' u-ch427-n1280-template-start-test-orig4/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=2/MAIN_OMPTHR_ATM=1/g' u-ch427-n1280-template-start-test-orig5/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=2/MAIN_OMPTHR_ATM=1/g' u-ch427-n1280-template-start-test-orig6/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=2/MAIN_OMPTHR_ATM=1/g' u-ch427-n1280-template-start-test-orig7/rose-suite.conf;
+sed -i 's/MAIN_OMPTHR_ATM=2/MAIN_OMPTHR_ATM=1/g' u-ch427-n1280-template-start-test-orig8/rose-suite.conf;
+
+cylc reload u-ch427-n1280-template-start-test-orig1
+cylc reload u-ch427-n1280-template-start-test-orig2
+cylc reload u-ch427-n1280-template-start-test-orig3
+cylc reload u-ch427-n1280-template-start-test-orig4
+cylc reload u-ch427-n1280-template-start-test-orig5
+cylc reload u-ch427-n1280-template-start-test-orig6
+cylc reload u-ch427-n1280-template-start-test-orig7
+cylc reload u-ch427-n1280-template-start-test-orig8
+
+cylc stop -n u-ch427-n1280-template-start-test-orig1;
+cylc stop -n u-ch427-n1280-template-start-test-orig2;
+cylc stop -n u-ch427-n1280-template-start-test-orig3;
+cylc stop -n u-ch427-n1280-template-start-test-orig4;
+cylc stop -n u-ch427-n1280-template-start-test-orig5;
+cylc stop -n u-ch427-n1280-template-start-test-orig6;
+cylc stop -n u-ch427-n1280-template-start-test-orig7;
+cylc stop -n u-ch427-n1280-template-start-test-orig8;
+
+cd ../u-ch427-n1280-template-start-test-orig1; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig2; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig3; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig4; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig6; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig7; rose suite-run --new;
+cd ../u-ch427-n1280-template-start-test-orig8; rose suite-run --new;

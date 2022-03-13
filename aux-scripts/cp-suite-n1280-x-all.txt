@@ -1,0 +1,107 @@
+u-ch427-n1280-template-x0
+u-ch427-n1280-template-x1
+u-ch427-n1280-template-x2
+u-ch427-n1280-template-x3
+u-ch427-n1280-template-x4
+u-ch427-n1280-template-x5
+u-ch427-n1280-template-x6
+u-ch427-n1280-template-x7
+
+cd ../u-ch427-n1280-template-x0; rose suite-run;
+cd ../u-ch427-n1280-template-x1; rose suite-run;
+cd ../u-ch427-n1280-template-x2; rose suite-run;
+cd ../u-ch427-n1280-template-x3; rose suite-run;
+cd ../u-ch427-n1280-template-x4; rose suite-run;
+cd ../u-ch427-n1280-template-x5; rose suite-run;
+cd ../u-ch427-n1280-template-x6; rose suite-run;
+cd ../u-ch427-n1280-template-x7; rose suite-run;
+
+./scripts/update-n1280.sh u-ch427-n1280-template-x0
+./scripts/update-n1280.sh u-ch427-n1280-template-x1
+./scripts/update-n1280.sh u-ch427-n1280-template-x2
+./scripts/update-n1280.sh u-ch427-n1280-template-x3
+./scripts/update-n1280.sh u-ch427-n1280-template-x4
+./scripts/update-n1280.sh u-ch427-n1280-template-x5
+./scripts/update-n1280.sh u-ch427-n1280-template-x6
+./scripts/update-n1280.sh u-ch427-n1280-template-x7
+
+./create-xml-n1280-template-x.sh u-ch427-n1280-template-x0
+./create-xml-n1280-template-x.sh u-ch427-n1280-template-x1
+./create-xml-n1280-template-x.sh u-ch427-n1280-template-x2
+./create-xml-n1280-template-x.sh u-ch427-n1280-template-x3
+./create-xml-n1280-template-x.sh u-ch427-n1280-template-x4
+./create-xml-n1280-template-x.sh u-ch427-n1280-template-x5
+./create-xml-n1280-template-x.sh u-ch427-n1280-template-x6
+./create-xml-n1280-template-x.sh u-ch427-n1280-template-x7
+
+ cylc trigger u-ch427-n1280-template-x0 atmos_main
+ cylc trigger u-ch427-n1280-template-x1 atmos_main
+ cylc trigger u-ch427-n1280-template-x2 atmos_main
+ cylc trigger u-ch427-n1280-template-x3 atmos_main
+ cylc trigger u-ch427-n1280-template-x4 atmos_main
+ cylc trigger u-ch427-n1280-template-x5 atmos_main
+ cylc trigger u-ch427-n1280-template-x6 atmos_main
+ cylc trigger u-ch427-n1280-template-x7 atmos_main
+
+ sed -i 's/MAIN_CLOCK='\''PT5M'\''/MAIN_CLOCK='\''PT60M'\''/g' u-ch427-n1280-template-x0/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT5M'\''/MAIN_CLOCK='\''PT60M'\''/g' u-ch427-n1280-template-x1/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT5M'\''/MAIN_CLOCK='\''PT60M'\''/g' u-ch427-n1280-template-x2/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT5M'\''/MAIN_CLOCK='\''PT60M'\''/g' u-ch427-n1280-template-x3/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT5M'\''/MAIN_CLOCK='\''PT60M'\''/g' u-ch427-n1280-template-x4/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT5M'\''/MAIN_CLOCK='\''PT60M'\''/g' u-ch427-n1280-template-x5/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT5M'\''/MAIN_CLOCK='\''PT60M'\''/g' u-ch427-n1280-template-x6/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT5M'\''/MAIN_CLOCK='\''PT60M'\''/g' u-ch427-n1280-template-x7/rose-suite.conf
+
+ sed -i 's/MAIN_CLOCK='\''PT60M'\''/MAIN_CLOCK='\''PT6H'\''/g' u-ch427-n1280-template-x0/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT60M'\''/MAIN_CLOCK='\''PT6H'\''/g' u-ch427-n1280-template-x1/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT60M'\''/MAIN_CLOCK='\''PT6H'\''/g' u-ch427-n1280-template-x2/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT60M'\''/MAIN_CLOCK='\''PT6H'\''/g' u-ch427-n1280-template-x3/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT60M'\''/MAIN_CLOCK='\''PT6H'\''/g' u-ch427-n1280-template-x4/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT60M'\''/MAIN_CLOCK='\''PT6H'\''/g' u-ch427-n1280-template-x5/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT60M'\''/MAIN_CLOCK='\''PT6H'\''/g' u-ch427-n1280-template-x6/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT60M'\''/MAIN_CLOCK='\''PT6H'\''/g' u-ch427-n1280-template-x7/rose-suite.conf
+
+ sed -i 's/MAIN_CLOCK='\''PT6H'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n1280-template-x0/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT6H'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n1280-template-x1/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT6H'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n1280-template-x2/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT6H'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n1280-template-x3/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT6H'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n1280-template-x4/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT6H'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n1280-template-x5/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT6H'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n1280-template-x6/rose-suite.conf
+ sed -i 's/MAIN_CLOCK='\''PT6H'\''/MAIN_CLOCK='\''PT2H'\''/g' u-ch427-n1280-template-x7/rose-suite.conf
+
+ cylc reload u-ch427-n1280-template-x0
+ cylc reload u-ch427-n1280-template-x1
+ cylc reload u-ch427-n1280-template-x2
+ cylc reload u-ch427-n1280-template-x3
+ cylc reload u-ch427-n1280-template-x4
+ cylc reload u-ch427-n1280-template-x5
+ cylc reload u-ch427-n1280-template-x6
+ cylc reload u-ch427-n1280-template-x7
+
+ cylc trigger u-ch427-n1280-template-x0 atmos_main;
+ cylc trigger u-ch427-n1280-template-x1 atmos_main;
+ cylc trigger u-ch427-n1280-template-x2 atmos_main;
+ cylc trigger u-ch427-n1280-template-x3 atmos_main;
+ cylc trigger u-ch427-n1280-template-x4 atmos_main;
+ cylc trigger u-ch427-n1280-template-x5 atmos_main;
+ cylc trigger u-ch427-n1280-template-x6 atmos_main;
+ cylc trigger u-ch427-n1280-template-x7 atmos_main;
+
+ cylc stop -n u-ch427-n1280-template-x0
+ cylc stop -n u-ch427-n1280-template-x1
+ cylc stop -n u-ch427-n1280-template-x2
+ cylc stop -n u-ch427-n1280-template-x3
+ cylc stop -n u-ch427-n1280-template-x4
+ cylc stop -n u-ch427-n1280-template-x5
+ cylc stop -n u-ch427-n1280-template-x6
+ cylc stop -n u-ch427-n1280-template-x7
+
+ cp rose-suite.conf ../u-ch427-n1280-template-x0/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-x1/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-x2/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-x3/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-x4/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-x5/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-x6/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-x7/rose-suite.conf

@@ -1,0 +1,253 @@
+cp -r u-ch427-n1280-template-start-paper-pack0 u-ch427-n1280-start-paper-pack0-x0
+cp -r u-ch427-n1280-template-start-paper-pack0 u-ch427-n1280-start-paper-pack0-x1
+cp -r u-ch427-n1280-template-start-paper-pack0 u-ch427-n1280-start-paper-pack0-x2
+cp -r u-ch427-n1280-template-start-paper-pack0 u-ch427-n1280-start-paper-pack0-x3
+cp -r u-ch427-n1280-template-start-paper-pack0 u-ch427-n1280-start-paper-pack0-x4
+cp -r u-ch427-n1280-template-start-paper-pack0 u-ch427-n1280-start-paper-pack0-x5
+cp -r u-ch427-n1280-template-start-paper-pack0 u-ch427-n1280-start-paper-pack0-x6
+cp -r u-ch427-n1280-template-start-paper-pack0 u-ch427-n1280-start-paper-pack0-x7
+cp -r u-ch427-n1280-template-start-paper-pack0 u-ch427-n1280-start-paper-pack0-x8
+cp -r u-ch427-n1280-template-start-paper-pack0 u-ch427-n1280-start-paper-pack0-x9
+
+cp -r u-ch427-n1280-template-start-paper-pack5 u-ch427-n1280-start-paper-pack5-x0
+cp -r u-ch427-n1280-template-start-paper-pack5 u-ch427-n1280-start-paper-pack5-x1
+cp -r u-ch427-n1280-template-start-paper-pack5 u-ch427-n1280-start-paper-pack5-x2
+cp -r u-ch427-n1280-template-start-paper-pack5 u-ch427-n1280-start-paper-pack5-x3
+cp -r u-ch427-n1280-template-start-paper-pack5 u-ch427-n1280-start-paper-pack5-x4
+cp -r u-ch427-n1280-template-start-paper-pack5 u-ch427-n1280-start-paper-pack5-x5
+cp -r u-ch427-n1280-template-start-paper-pack5 u-ch427-n1280-start-paper-pack5-x6
+cp -r u-ch427-n1280-template-start-paper-pack5 u-ch427-n1280-start-paper-pack5-x7
+cp -r u-ch427-n1280-template-start-paper-pack5 u-ch427-n1280-start-paper-pack5-x8
+cp -r u-ch427-n1280-template-start-paper-pack5 u-ch427-n1280-start-paper-pack5-x9
+
+cd ../u-ch427-n1280-start-paper-pack0-x0; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack0-x1; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack0-x2; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack0-x3; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack0-x4; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack0-x5; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack0-x6; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack0-x7; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack0-x8; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack0-x9; rose suite-run --new;
+
+cd ../u-ch427-n1280-start-paper-pack5-x0; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack5-x1; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack5-x2; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack5-x3; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack5-x4; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack5-x5; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack5-x6; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack5-x7; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack5-x8; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-pack5-x9; rose suite-run --new;
+
+cylc trigger u-ch427-n512-start-all-mean-mf-ens00 fcm_make2_um;
+cylc trigger u-ch427-n512-start-all-mean-mf-ens00 fcm_make2_drivers;
+cylc trigger u-ch427-n512-start-all-mean-mf-ens00 xml;
+cylc trigger u-ch427-n512-start-all-mean-mf-ens00 ens_setup_all;
+cylc trigger u-ch427-n512-start-all-mean-mf-ens00 install_ancil;
+cylc trigger u-ch427-n512-start-all-mean-mf-ens00 install_cold;
+cylc trigger u-ch427-n512-start-all-mean-mf-ens00 atmos_main;
+
+cylc trigger u-ch427-n1280-start-paper-pack0-x0 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack0-x1 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack0-x2 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack0-x3 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack0-x4 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack0-x5 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack0-x6 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack0-x7 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack0-x8 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack0-x9 fcm_make2_um;
+
+cylc trigger u-ch427-n1280-start-paper-pack5-x0 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack5-x1 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack5-x2 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack5-x3 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack5-x4 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack5-x5 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack5-x6 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack5-x7 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack5-x8 fcm_make2_um;
+cylc trigger u-ch427-n1280-start-paper-pack5-x9 fcm_make2_um;
+
+cylc trigger u-ch427-n1280-start-paper-pack0-x0 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack0-x1 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack0-x2 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack0-x3 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack0-x4 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack0-x5 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack0-x6 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack0-x7 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack0-x8 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack0-x9 fcm_make2_drivers;
+
+cylc trigger u-ch427-n1280-start-paper-pack5-x0 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack5-x1 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack5-x2 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack5-x3 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack5-x4 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack5-x5 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack5-x6 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack5-x7 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack5-x8 fcm_make2_drivers;
+cylc trigger u-ch427-n1280-start-paper-pack5-x9 fcm_make2_drivers;
+
+cylc trigger u-ch427-n1280-start-paper-pack0-x0 xml;
+cylc trigger u-ch427-n1280-start-paper-pack0-x1 xml;
+cylc trigger u-ch427-n1280-start-paper-pack0-x2 xml;
+cylc trigger u-ch427-n1280-start-paper-pack0-x3 xml;
+cylc trigger u-ch427-n1280-start-paper-pack0-x4 xml;
+cylc trigger u-ch427-n1280-start-paper-pack0-x5 xml;
+cylc trigger u-ch427-n1280-start-paper-pack0-x6 xml;
+cylc trigger u-ch427-n1280-start-paper-pack0-x7 xml;
+cylc trigger u-ch427-n1280-start-paper-pack0-x8 xml;
+cylc trigger u-ch427-n1280-start-paper-pack0-x9 xml;
+
+cylc trigger u-ch427-n1280-start-paper-pack5-x0 xml;
+cylc trigger u-ch427-n1280-start-paper-pack5-x1 xml;
+cylc trigger u-ch427-n1280-start-paper-pack5-x2 xml;
+cylc trigger u-ch427-n1280-start-paper-pack5-x3 xml;
+cylc trigger u-ch427-n1280-start-paper-pack5-x4 xml;
+cylc trigger u-ch427-n1280-start-paper-pack5-x5 xml;
+cylc trigger u-ch427-n1280-start-paper-pack5-x6 xml;
+cylc trigger u-ch427-n1280-start-paper-pack5-x7 xml;
+cylc trigger u-ch427-n1280-start-paper-pack5-x8 xml;
+cylc trigger u-ch427-n1280-start-paper-pack5-x9 xml;
+
+cylc trigger u-ch427-n1280-start-paper-pack0-x0 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack0-x1 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack0-x2 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack0-x3 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack0-x4 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack0-x5 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack0-x6 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack0-x7 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack0-x8 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack0-x9 ens_setup_all;
+
+cylc trigger u-ch427-n1280-start-paper-pack5-x0 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack5-x1 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack5-x2 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack5-x3 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack5-x4 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack5-x5 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack5-x6 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack5-x7 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack5-x8 ens_setup_all;
+cylc trigger u-ch427-n1280-start-paper-pack5-x9 ens_setup_all;
+
+cylc trigger u-ch427-n1280-start-paper-pack0-x0 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack0-x1 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack0-x2 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack0-x3 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack0-x4 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack0-x5 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack0-x6 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack0-x7 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack0-x8 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack0-x9 install_cold;
+
+cylc trigger u-ch427-n1280-start-paper-pack5-x0 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack5-x1 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack5-x2 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack5-x3 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack5-x4 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack5-x5 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack5-x6 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack5-x7 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack5-x8 install_cold;
+cylc trigger u-ch427-n1280-start-paper-pack5-x9 install_cold;
+
+cylc trigger u-ch427-n1280-start-paper-pack0-x0 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack0-x1 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack0-x2 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack0-x3 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack0-x4 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack0-x5 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack0-x6 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack0-x7 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack0-x8 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack0-x9 install_ancil;
+
+cylc trigger u-ch427-n1280-start-paper-pack5-x0 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack5-x1 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack5-x2 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack5-x3 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack5-x4 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack5-x5 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack5-x6 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack5-x7 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack5-x8 install_ancil;
+cylc trigger u-ch427-n1280-start-paper-pack5-x9 install_ancil;
+
+cylc trigger u-ch427-n1280-start-paper-pack0-x0 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack0-x1 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack0-x2 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack0-x3 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack0-x4 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack0-x5 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack0-x6 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack0-x7 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack0-x8 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack0-x9 atmos_main;
+
+cylc trigger u-ch427-n1280-start-paper-pack5-x0 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack5-x1 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack5-x2 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack5-x3 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack5-x4 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack5-x5 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack5-x6 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack5-x7 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack5-x8 atmos_main;
+cylc trigger u-ch427-n1280-start-paper-pack5-x9 atmos_main;
+
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x0
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x1
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x2
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x3
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x4
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x5
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x6
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x7
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x8
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x9
+
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x0
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x1
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x2
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x3
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x4
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x5
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x6
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x7
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x8
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x9
+
+ cp rose-suite.conf ../u-ch427-n1280-template-start-paper-pack0/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-start-paper-pack1/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-start-paper-pack2/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-start-paper-pack3/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-start-paper-pack4/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-start-paper-pack5/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-start-paper-pack6/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-start-paper-pack7/rose-suite.conf
+
+ sed -i 's/pack0/pack1/g' create-xml-n1280-template-x-pack1.sh
+ sed -i 's/pack0/pack2/g' create-xml-n1280-template-x-pack2.sh
+ sed -i 's/pack0/pack3/g' create-xml-n1280-template-x-pack3.sh
+ sed -i 's/pack0/pack4/g' create-xml-n1280-template-x-pack4.sh
+ sed -i 's/pack0/pack5/g' create-xml-n1280-template-x-pack5.sh
+ sed -i 's/pack0/pack6/g' create-xml-n1280-template-x-pack6.sh
+ sed -i 's/pack0/pack7/g' create-xml-n1280-template-x-pack7.sh
+
+ cylc stop -n u-ch427-n1280-start-paper-pack0-x9
+ cylc stop -n u-ch427-n1280-start-paper-pack5-x9
+
+ cd ../u-ch427-n1280-start-paper-pack0-x9; rose suite-run --new;
+ cd ../u-ch427-n1280-start-paper-pack5-x9; rose suite-run --new;
+
+ cylc trigger u-ch427-n1280-start-paper-pack0-x9 atmos_main;
+ cylc trigger u-ch427-n1280-start-paper-pack5-x9 atmos_main;
