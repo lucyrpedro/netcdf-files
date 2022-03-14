@@ -5,13 +5,13 @@
 # Task: atmos_main.19790301T0000Z
 # Job log directory: 19790301T0000Z/atmos_main/01
 # Job submit method: slurm
-# Execution time limit: 10800.0
+# Execution time limit: 14400.0
 
 # DIRECTIVES:
 #SBATCH --job-name=u-ch427-n1280-ens03.atmos_main.19790301T0000Z
 #SBATCH --output=cylc-run/u-ch427-n1280-ens03/log/job/19790301T0000Z/atmos_main/01/job.out
 #SBATCH --error=cylc-run/u-ch427-n1280-ens03/log/job/19790301T0000Z/atmos_main/01/job.err
-#SBATCH --time=180:00
+#SBATCH --time=240:00
 #SBATCH --export=none
 #SBATCH --chdir=/work/n02/n02/lrpedro
 #SBATCH --partition=standard
@@ -36,12 +36,12 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n1280-ens03"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n1280-ens03"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n1280-ens03"
-    export CYLC_SUITE_UUID="d3369b53-e7c4-41d7-b8eb-5b170417fc51"
+    export CYLC_SUITE_UUID="a25655a3-ac8e-4c22-bb2b-85a36c0b6b33"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19790301T0000Z/atmos_main/01"
     export CYLC_TASK_NAMESPACE_HIERARCHY="root UM ATMOS SUBMIT_RETRIES HPC UM_PARALLEL ATMOS_RESOURCE RUN_MAIN atmos_main"
-    export CYLC_TASK_DEPENDENCIES="ens_setup_all.19790301T0000Z install_ancil.19790301T0000Z"
+    export CYLC_TASK_DEPENDENCIES="ens_setup_all.19790301T0000Z fcm_make2_um.19790301T0000Z install_ancil.19790301T0000Z"
     export CYLC_TASK_TRY_NUMBER=1
 }
 
@@ -102,14 +102,7 @@ eval $(rose task-env)
 
 cylc__job__inst__pre_script() {
 # PRE-SCRIPT:
-ulimit -s unlimited
-# ---------------ARCHER2 23-cab---------------------------
-                     module use /work/n02/n02/simon/modulefiles
-                     module load um
-# ---------------ARCHER2 23-cab---------------------------
-                     module list 2>&1
-                     unset OMP_NUM_THREADS
-                     export MPICH_CPUMASK_DISPLAY=1
+config_xml.sh
 }
 
 cylc__job__inst__script() {
