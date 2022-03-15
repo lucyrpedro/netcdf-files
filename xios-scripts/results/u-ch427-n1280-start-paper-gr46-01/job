@@ -5,13 +5,13 @@
 # Task: atmos_main.19790301T0000Z
 # Job log directory: 19790301T0000Z/atmos_main/01
 # Job submit method: slurm
-# Execution time limit: 14400.0
+# Execution time limit: 28800.0
 
 # DIRECTIVES:
 #SBATCH --job-name=u-ch427-n1280-start-paper-gr46-01.atmos_main.19790301T0000Z
 #SBATCH --output=cylc-run/u-ch427-n1280-start-paper-gr46-01/log/job/19790301T0000Z/atmos_main/01/job.out
 #SBATCH --error=cylc-run/u-ch427-n1280-start-paper-gr46-01/log/job/19790301T0000Z/atmos_main/01/job.err
-#SBATCH --time=240:00
+#SBATCH --time=480:00
 #SBATCH --export=none
 #SBATCH --chdir=/work/n02/n02/lrpedro
 #SBATCH --partition=standard
@@ -36,7 +36,7 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n1280-start-paper-gr46-01"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n1280-start-paper-gr46-01"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n1280-start-paper-gr46-01"
-    export CYLC_SUITE_UUID="006a0a51-1c9d-4302-8a4c-cc1319b3ae8d"
+    export CYLC_SUITE_UUID="12a94c1a-4487-42e8-90ae-7e81b72f5f8f"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19790301T0000Z/atmos_main/01"

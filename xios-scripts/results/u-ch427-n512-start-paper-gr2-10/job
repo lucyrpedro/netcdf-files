@@ -5,13 +5,13 @@
 # Task: atmos_main.19880901T0000Z
 # Job log directory: 19880901T0000Z/atmos_main/01
 # Job submit method: slurm
-# Execution time limit: 7200.0
+# Execution time limit: 14400.0
 
 # DIRECTIVES:
 #SBATCH --job-name=u-ch427-n512-start-paper-gr2-10.atmos_main.19880901T0000Z
 #SBATCH --output=cylc-run/u-ch427-n512-start-paper-gr2-10/log/job/19880901T0000Z/atmos_main/01/job.out
 #SBATCH --error=cylc-run/u-ch427-n512-start-paper-gr2-10/log/job/19880901T0000Z/atmos_main/01/job.err
-#SBATCH --time=120:00
+#SBATCH --time=240:00
 #SBATCH --export=none
 #SBATCH --chdir=/work/n02/n02/lrpedro
 #SBATCH --partition=standard
@@ -36,7 +36,7 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n512-start-paper-gr2-10"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n512-start-paper-gr2-10"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n512-start-paper-gr2-10"
-    export CYLC_SUITE_UUID="3c9f05b2-0306-4980-b360-d713a54f050f"
+    export CYLC_SUITE_UUID="a285ac5f-d8c2-41f7-9e4a-77ca60811eef"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19880901T0000Z/atmos_main/01"
@@ -82,7 +82,7 @@ cylc__job__inst__user_env() {
     HYPERTHREADS="1"
     OMP_NUM_THREADS="3"
     CONTINUE="$(if $IS_CYLC_SUITE_INITIAL_CYCLE_POINT && $IS_CYLC_TASK_TRY_NUMBER_1; then echo "false"; else echo "true"; fi)"
-    TASKEND="$(rose date -c --calendar=360day --print-format='y,m,d,h,M,s' --offset2=P2D 19880901T0000Z ref)"
+    TASKEND="$(rose date -c --calendar=360day --print-format='y,m,d,h,M,s' --offset2=PT46H 19880901T0000Z ref)"
     PLATFORM="cce"
     CMIP6_ANCILS="$UMDIR/CMIP6_ANCIL/data/ancils"
     ATP_ENABLED="1"
@@ -112,7 +112,7 @@ rose task-run --verbose -O '(archer2)' --path="share/fcm_make_um/build-*/bin"
 
 cylc__job__inst__post_script() {
 # POST-SCRIPT:
-save_wallclock.sh P2D
+save_wallclock.sh PT46H
 }
 
 . "${CYLC_DIR}/lib/cylc/job.sh"
