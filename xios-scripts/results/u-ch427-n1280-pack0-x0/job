@@ -17,7 +17,7 @@
 #SBATCH --partition=standard
 #SBATCH --qos=standard
 #SBATCH --account=n02-cms
-#SBATCH --nodes=102
+#SBATCH --nodes=309
 # N.B. CYLC_DIR has been updated on the remote host
 export CYLC_DIR='/mnt/lustre/a2fs-work1/work/y07/shared/umshared/software/cylc-7.8.7'
 export CYLC_VERSION='7.8.7'
@@ -36,7 +36,7 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n1280-pack0-x0"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n1280-pack0-x0"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n1280-pack0-x0"
-    export CYLC_SUITE_UUID="0316d261-be52-48e3-b098-485287f44ca9"
+    export CYLC_SUITE_UUID="d940962f-857c-455c-b4ec-e96f4d10d686"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19790301T0000Z/atmos_main/01"
@@ -89,7 +89,7 @@ cylc__job__inst__user_env() {
     ROSE_LAUNCHER="srun"
     OMP_PLACES="cores"
     FI_OFI_RXM_SAR_LIMIT="64K"
-    ROSE_LAUNCHER_PREOPTS_UM="--het-group=0 --hint=nomultithread --distribution=block:block --nodes=94 --ntasks=6016 --tasks-per-node=64 --cpus-per-task=2 env OMP_NUM_THREADS=2 HYPERTHREADS=1"
+    ROSE_LAUNCHER_PREOPTS_UM="--het-group=0 --hint=nomultithread --distribution=block:block --nodes=301 --ntasks=6016 --tasks-per-node=24 --cpus-per-task=2 env OMP_NUM_THREADS=2 HYPERTHREADS=1"
     ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=1 --cpu-bind=cores --export=all --nodes=8 --ntasks=16 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
     DATAM="$ROSE_DATA/History_Data"
     DATAW="$CYLC_TASK_WORK_PATH"
