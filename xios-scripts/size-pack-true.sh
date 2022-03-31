@@ -17,7 +17,7 @@ do
 	echo $ens > aux1
 	ls -lh |grep true | cut -c 43-61 > aux2
 	ls -lh |grep true | cut -c 25-30 > aux3
-	ls -s1 |grep ruee | awk '{print $1}' > aux4
+	ls -s1 |grep true | awk '{print $1}' > aux4
 	paste -d ',' aux1 aux2 aux3 aux4 >> aux-$c
 
 	total=0
