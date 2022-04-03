@@ -1,0 +1,29 @@
+<grid_definition>
+	
+	<grid id="um-atmos_grid_t_ufs">
+		
+		<domain domain_ref="um-atmos_grid_t" />
+	    
+		<axis axis_ref="ensemble" />
+      
+	</grid>
+
+	<grid id="um-atmos_grid_t_ufs_ens">
+	    
+		<domain domain_ref="um-atmos_grid_t" />
+	    
+		<scalar id="ensmean1">
+		  
+			<reduce_axis operation="average" />
+	    
+		</scalar>
+      
+	</grid>
+      
+	<grid id="um-atmos_grid_t_ufs_1">
+	    
+		<domain domain_ref="um-atmos_grid_t" />
+      
+	</grid>
+
+</grid_definition>
