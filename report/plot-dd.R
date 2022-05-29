@@ -2,7 +2,7 @@
 
 # ########################################################
 
-pdf("figs-dd.pdf") # either save all files in one pdf or the files in specific pdfs; find an option to automatise the choice
+pdf("temp.pdf") # either save all files in one pdf or the files in specific pdfs; find an option to automatise the choice
 
 # temp_inst = read.csv("temp-inst.csv")
 # temp_max = read.csv("temp-max.csv")
