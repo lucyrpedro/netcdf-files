@@ -1,0 +1,324 @@
+<file_definition format="netcdf4" time_counter="instant" type="multiple_file">
+  <file description="UM output" id="xios_up9_1h" name="test-ch427a.p9" output_freq="1h" split_freq="02d" compression_level="0">
+    <field field_ref="m01s02i205" id="m01s02i205_xios_up9_1h" name="m01s02i205" operation="instant" />
+    <field field_ref="m01s03i225" id="m01s03i225_xios_up9_1h" name="m01s03i225" operation="instant" />
+    <field field_ref="m01s03i226" id="m01s03i226_xios_up9_1h" name="m01s03i226" operation="instant" />
+    <field field_ref="m01s04i203" freq_offset="0ts" freq_op="1ts" id="m01s04i203_xios_up9_1h" name="m01s04i203" operation="average" />
+    <field field_ref="m01s05i205" freq_offset="0ts" freq_op="1ts" id="m01s05i205_xios_up9_1h" name="m01s05i205" operation="average" />
+    <field field_ref="m01s05i216" freq_offset="0ts" freq_op="1ts" id="m01s05i216_xios_up9_1h" name="m01s05i216" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upa_1d" name="test-ch427a.pa" output_freq="1d" split_freq="10d">
+    <field field_ref="m01s00i024" freq_offset="0ts" freq_op="1ts" id="m01s00i024_xios_upa_1d" name="m01s00i024" operation="average" />
+    <field field_ref="m01s00i031" freq_offset="0ts" freq_op="1ts" id="m01s00i031_xios_upa_1d" name="m01s00i031" operation="average" />
+    <field field_ref="m01s00i032" freq_offset="0ts" freq_op="1ts" id="m01s00i032_xios_upa_1d" name="m01s00i032" operation="average" />
+    <field field_ref="m01s04i203" freq_offset="0ts" freq_op="1ts" id="m01s04i203_2_xios_upa_1d" name="m01s04i203_2" operation="average" />
+    <field field_ref="m01s05i205" freq_offset="0ts" freq_op="1ts" id="m01s05i205_2_xios_upa_1d" name="m01s05i205_2" operation="average" />
+    <field field_ref="m01s05i216" freq_offset="0ts" freq_op="1ts" id="m01s05i216_3_xios_upa_1d" name="m01s05i216_3" operation="average" />
+    <field field_ref="m01s05i250" freq_offset="0ts" freq_op="1ts" id="m01s05i250_xios_upa_1d" name="m01s05i250" operation="average" />
+    <field field_ref="m01s05i256" freq_offset="0ts" freq_op="1ts" id="m01s05i256_xios_upa_1d" name="m01s05i256" operation="average" />
+    <field field_ref="m01s05i257" freq_offset="0ts" freq_op="1ts" id="m01s05i257_xios_upa_1d" name="m01s05i257" operation="average" />
+    <field field_ref="m01s05i270" freq_offset="0ts" freq_op="1ts" id="m01s05i270_xios_upa_1d" name="m01s05i270" operation="average" />
+    <field field_ref="m01s05i272" freq_offset="0ts" freq_op="1ts" id="m01s05i272_xios_upa_1d" name="m01s05i272" operation="average" />
+    <field field_ref="m01s08i208" freq_offset="0ts" freq_op="1ts" id="m01s08i208_xios_upa_1d" name="m01s08i208" operation="average" />
+    <field field_ref="m01s08i234" freq_offset="0ts" freq_op="1ts" id="m01s08i234_xios_upa_1d" name="m01s08i234" operation="average" />
+    <field field_ref="m01s08i235" freq_offset="0ts" freq_op="1ts" id="m01s08i235_xios_upa_1d" name="m01s08i235" operation="average" />
+    <field field_ref="m01s30i201_5" freq_offset="0ts" freq_op="1ts" id="m01s30i201_5_xios_upa_1d" name="m01s30i201_5" operation="average" />
+    <field field_ref="m01s30i202_5" freq_offset="0ts" freq_op="1ts" id="m01s30i202_5_xios_upa_1d" name="m01s30i202_5" operation="average" />
+    <field field_ref="m01s30i301_6" freq_offset="0ts" freq_op="1ts" id="m01s30i301_6_xios_upa_1d" name="m01s30i301_6" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upb_1d" name="test-ch427a.pb" output_freq="1d" split_freq="10d" compression_level="0" >
+    <field field_ref="m01s15i215" id="m01s15i215_xios_upb_1d" name="m01s15i215" operation="instant" />
+    <field field_ref="m01s16i222" freq_offset="0h" freq_op="6h" id="m01s16i222_2_xios_upb_1d" name="m01s16i222_2" operation="average" />
+    <field field_ref="m01s30i201_4" freq_offset="0h" freq_op="6h" id="m01s30i201_4_xios_upb_1d" name="m01s30i201_4" operation="average" />
+    <field field_ref="m01s30i202_4" freq_offset="0h" freq_op="6h" id="m01s30i202_4_xios_upb_1d" name="m01s30i202_4" operation="average" />
+    <field field_ref="m01s30i207" freq_offset="0h" freq_op="6h" id="m01s30i207_xios_upb_1d" name="m01s30i207" operation="average" />
+    <field field_ref="m01s30i301_5" freq_offset="0h" freq_op="6h" id="m01s30i301_5_xios_upb_1d" name="m01s30i301_5" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upc_6h" name="test-ch427a.pc" output_freq="6h" split_freq="10d" compression_level="0" >
+    <field field_ref="m01s00i409" id="m01s00i409_xios_upc_6h" name="m01s00i409" operation="instant" />
+    <field field_ref="m01s03i227" freq_offset="0ts" freq_op="1ts" id="m01s03i227_xios_upc_6h" name="m01s03i227" operation="maximum" />
+    <field field_ref="m01s15i214" id="m01s15i214_xios_upc_6h" name="m01s15i214" operation="instant" />
+    <field field_ref="m01s16i202" id="m01s16i202_xios_upc_6h" name="m01s16i202" operation="instant" />
+    <field field_ref="m01s16i222" id="m01s16i222_xios_upc_6h" name="m01s16i222" operation="instant" />
+    <field field_ref="m01s30i201_6" id="m01s30i201_6_xios_upc_6h" name="m01s30i201_6" operation="instant" />
+    <field field_ref="m01s30i202_6" id="m01s30i202_6_xios_upc_6h" name="m01s30i202_6" operation="instant" />
+    <field field_ref="m01s30i203_3" id="m01s30i203_3_xios_upc_6h" name="m01s30i203_3" operation="instant" />
+    <field field_ref="m01s30i204_4" id="m01s30i204_4_xios_upc_6h" name="m01s30i204_4" operation="instant" />
+    <field field_ref="m01s30i205_4" id="m01s30i205_4_xios_upc_6h" name="m01s30i205_4" operation="instant" />
+    <field field_ref="m01s30i207_3" id="m01s30i207_3_xios_upc_6h" name="m01s30i207_3" operation="instant" />
+    <field field_ref="m01s30i301_4" id="m01s30i301_4_xios_upc_6h" name="m01s30i301_4" operation="instant" />
+    <field field_ref="m01s30i407" id="m01s30i407_xios_upc_6h" name="m01s30i407" operation="instant" />
+    <field field_ref="m01s30i408" id="m01s30i408_xios_upc_6h" name="m01s30i408" operation="instant" />
+  </file>
+  <file description="UM output" id="xios_upd_1d" name="test-ch427a.pd" output_freq="1d" split_freq="10d" compression_level="0" >
+    <field field_ref="m01s00i407" freq_offset="0ts" freq_op="1ts" id="m01s00i407_xios_upd_1d" name="m01s00i407" operation="average" />
+    <field field_ref="m01s00i408" freq_offset="0ts" freq_op="1ts" id="m01s00i408_xios_upd_1d" name="m01s00i408" operation="average" />
+    <field field_ref="m01s01i201" freq_offset="0ts" freq_op="1ts" id="m01s01i201_xios_upd_1d" name="m01s01i201" operation="average" />
+    <field field_ref="m01s01i203" freq_offset="0ts" freq_op="1ts" id="m01s01i203_xios_upd_1d" name="m01s01i203" operation="average" />
+    <field field_ref="m01s01i210" freq_offset="0ts" freq_op="1ts" id="m01s01i210_xios_upd_1d" name="m01s01i210" operation="average" />
+    <field field_ref="m01s01i211" freq_offset="0ts" freq_op="1ts" id="m01s01i211_xios_upd_1d" name="m01s01i211" operation="average" />
+    <field field_ref="m01s01i235" freq_offset="0ts" freq_op="1ts" id="m01s01i235_xios_upd_1d" name="m01s01i235" operation="average" />
+    <field field_ref="m01s01i260" freq_offset="0ts" freq_op="1ts" id="m01s01i260_xios_upd_1d" name="m01s01i260" operation="average" />
+    <field field_ref="m01s02i201" freq_offset="0ts" freq_op="1ts" id="m01s02i201_xios_upd_1d" name="m01s02i201" operation="average" />
+    <field field_ref="m01s02i203" freq_offset="0ts" freq_op="1ts" id="m01s02i203_xios_upd_1d" name="m01s02i203" operation="average" />
+    <field field_ref="m01s02i204" freq_offset="0ts" freq_op="1ts" id="m01s02i204_xios_upd_1d" name="m01s02i204" operation="average" />
+    <field field_ref="m01s02i207" freq_offset="0ts" freq_op="1ts" id="m01s02i207_xios_upd_1d" name="m01s02i207" operation="average" />
+    <field field_ref="m01s02i208" freq_offset="0ts" freq_op="1ts" id="m01s02i208_xios_upd_1d" name="m01s02i208" operation="average" />
+    <field field_ref="m01s03i217" freq_offset="0ts" freq_op="1ts" id="m01s03i217_xios_upd_1d" name="m01s03i217" operation="average" />
+    <field field_ref="m01s03i225" freq_offset="0ts" freq_op="1ts" id="m01s03i225_2_xios_upd_1d" name="m01s03i225_2" operation="average" />
+    <field field_ref="m01s03i226" freq_offset="0ts" freq_op="1ts" id="m01s03i226_2_xios_upd_1d" name="m01s03i226_2" operation="average" />
+    <field field_ref="m01s03i227" freq_offset="0ts" freq_op="1ts" id="m01s03i227_2_xios_upd_1d" name="m01s03i227_2" operation="maximum" />
+    <field field_ref="m01s03i228" freq_offset="0ts" freq_op="1ts" id="m01s03i228_xios_upd_1d" name="m01s03i228" operation="average" />
+    <field field_ref="m01s03i234" freq_offset="0ts" freq_op="1ts" id="m01s03i234_xios_upd_1d" name="m01s03i234" operation="average" />
+    <field field_ref="m01s03i236" freq_offset="0ts" freq_op="1ts" id="m01s03i236_2_xios_upd_1d" name="m01s03i236_2" operation="average" />
+    <field field_ref="m01s03i236" freq_offset="0ts" freq_op="1ts" id="m01s03i236_3_xios_upd_1d" name="m01s03i236_3" operation="maximum" />
+    <field field_ref="m01s03i236" freq_offset="0ts" freq_op="1ts" id="m01s03i236_4_xios_upd_1d" name="m01s03i236_4" operation="minimum" />
+    <field field_ref="m01s03i237" freq_offset="0ts" freq_op="1ts" id="m01s03i237_xios_upd_1d" name="m01s03i237" operation="average" />
+    <field field_ref="m01s03i245" freq_offset="0ts" freq_op="1ts" id="m01s03i245_xios_upd_1d" name="m01s03i245" operation="average" />
+    <field field_ref="m01s03i287" freq_offset="0ts" freq_op="1ts" id="m01s03i287_xios_upd_1d" name="m01s03i287" operation="average" />
+    <field field_ref="m01s03i296" freq_offset="0ts" freq_op="1ts" id="m01s03i296_xios_upd_1d" name="m01s03i296" operation="average" />
+    <field field_ref="m01s03i297" freq_offset="0ts" freq_op="1ts" id="m01s03i297_xios_upd_1d" name="m01s03i297" operation="average" />
+    <field field_ref="m01s03i304" freq_offset="0ts" freq_op="1ts" id="m01s03i304_xios_upd_1d" name="m01s03i304" operation="average" />
+    <field field_ref="m01s03i305" freq_offset="0ts" freq_op="1ts" id="m01s03i305_xios_upd_1d" name="m01s03i305" operation="average" />
+    <field field_ref="m01s03i307" freq_offset="0ts" freq_op="1ts" id="m01s03i307_xios_upd_1d" name="m01s03i307" operation="average" />
+    <field field_ref="m01s03i309" freq_offset="0ts" freq_op="1ts" id="m01s03i309_xios_upd_1d" name="m01s03i309" operation="average" />
+    <field field_ref="m01s03i310" freq_offset="0ts" freq_op="1ts" id="m01s03i310_xios_upd_1d" name="m01s03i310" operation="average" />
+    <field field_ref="m01s03i332" freq_offset="0ts" freq_op="1ts" id="m01s03i332_xios_upd_1d" name="m01s03i332" operation="average" />
+    <field field_ref="m01s03i365" freq_offset="0ts" freq_op="1ts" id="m01s03i365_xios_upd_1d" name="m01s03i365" operation="average" />
+    <field field_ref="m01s03i366" freq_offset="0ts" freq_op="1ts" id="m01s03i366_xios_upd_1d" name="m01s03i366" operation="average" />
+    <field field_ref="m01s03i367" freq_offset="0ts" freq_op="1ts" id="m01s03i367_xios_upd_1d" name="m01s03i367" operation="average" />
+    <field field_ref="m01s03i367" freq_offset="0ts" freq_op="1ts" id="m01s03i367_2_xios_upd_1d" name="m01s03i367_2" operation="maximum" />
+    <field field_ref="m01s08i023" freq_offset="0ts" freq_op="1ts" id="m01s08i023_2_xios_upd_1d" name="m01s08i023_2" operation="average" />
+    <field field_ref="m01s08i209" freq_offset="0ts" freq_op="1ts" id="m01s08i209_2_xios_upd_1d" name="m01s08i209_2" operation="average" />
+    <field field_ref="m01s08i223" freq_offset="0ts" freq_op="1ts" id="m01s08i223_2_xios_upd_1d" name="m01s08i223_2" operation="average" />
+    <field field_ref="m01s16i222" freq_offset="0ts" freq_op="1ts" id="m01s16i222_3_xios_upd_1d" name="m01s16i222_3" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upe_1d" name="test-ch427a.pe" output_freq="1d" split_freq="10d" compression_level="0" >
+    <field field_ref="m01s03i223" freq_offset="0ts" freq_op="1ts" id="m01s03i223_xios_upe_1d" name="m01s03i223" operation="average" />
+    <field field_ref="m01s30i201" freq_offset="0ts" freq_op="1ts" id="m01s30i201_2_xios_upe_1d" name="m01s30i201_2" operation="average" />
+    <field field_ref="m01s30i202" freq_offset="0ts" freq_op="1ts" id="m01s30i202_2_xios_upe_1d" name="m01s30i202_2" operation="average" />
+    <field field_ref="m01s30i204" freq_offset="0ts" freq_op="1ts" id="m01s30i204_2_xios_upe_1d" name="m01s30i204_2" operation="average" />
+    <field field_ref="m01s30i205" freq_offset="0ts" freq_op="1ts" id="m01s30i205_2_xios_upe_1d" name="m01s30i205_2" operation="average" />
+    <field field_ref="m01s30i208" freq_offset="0ts" freq_op="1ts" id="m01s30i208_xios_upe_1d" name="m01s30i208" operation="average" />
+    <field field_ref="m01s30i215" freq_offset="0ts" freq_op="1ts" id="m01s30i215_2_xios_upe_1d" name="m01s30i215_2" operation="average" />
+    <field field_ref="m01s30i225" freq_offset="0ts" freq_op="1ts" id="m01s30i225_2_xios_upe_1d" name="m01s30i225_2" operation="average" />
+    <field field_ref="m01s30i258" freq_offset="0ts" freq_op="1ts" id="m01s30i258_2_xios_upe_1d" name="m01s30i258_2" operation="average" />
+    <field field_ref="m01s30i301" freq_offset="0ts" freq_op="1ts" id="m01s30i301_2_xios_upe_1d" name="m01s30i301_2" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upf_1d" name="test-ch427a.pf" output_freq="1d" split_freq="10d" compression_level="0" >
+    <field field_ref="m01s00i023" freq_offset="0ts" freq_op="1ts" id="m01s00i023_xios_upf_1d" name="m01s00i023" operation="average" />
+    <field field_ref="m01s01i207" freq_offset="0ts" freq_op="1ts" id="m01s01i207_xios_upf_1d" name="m01s01i207" operation="average" />
+    <field field_ref="m01s01i208" freq_offset="0ts" freq_op="1ts" id="m01s01i208_xios_upf_1d" name="m01s01i208" operation="average" />
+    <field field_ref="m01s01i209" freq_offset="0ts" freq_op="1ts" id="m01s01i209_xios_upf_1d" name="m01s01i209" operation="average" />
+    <field field_ref="m01s02i206" freq_offset="0ts" freq_op="1ts" id="m01s02i206_xios_upf_1d" name="m01s02i206" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upg_1m" name="test-ch427a.pg" output_freq="1mo" split_freq="1mo" compression_level="0" >
+    <field field_ref="m01s06i101" freq_offset="0h" freq_op="6h" id="m01s06i101_xios_upg_1m" name="m01s06i101" operation="average" />
+    <field field_ref="m01s06i102" freq_offset="0h" freq_op="6h" id="m01s06i102_xios_upg_1m" name="m01s06i102" operation="average" />
+    <field field_ref="m01s06i103" freq_offset="0h" freq_op="6h" id="m01s06i103_xios_upg_1m" name="m01s06i103" operation="average" />
+    <field field_ref="m01s06i104" freq_offset="0h" freq_op="6h" id="m01s06i104_xios_upg_1m" name="m01s06i104" operation="average" />
+    <field field_ref="m01s06i105" freq_offset="0h" freq_op="6h" id="m01s06i105_xios_upg_1m" name="m01s06i105" operation="average" />
+    <field field_ref="m01s06i106" freq_offset="0h" freq_op="6h" id="m01s06i106_xios_upg_1m" name="m01s06i106" operation="average" />
+    <field field_ref="m01s06i111" freq_offset="0h" freq_op="6h" id="m01s06i111_xios_upg_1m" name="m01s06i111" operation="average" />
+    <field field_ref="m01s06i113" freq_offset="0h" freq_op="6h" id="m01s06i113_xios_upg_1m" name="m01s06i113" operation="average" />
+    <field field_ref="m01s06i115" freq_offset="0h" freq_op="6h" id="m01s06i115_xios_upg_1m" name="m01s06i115" operation="average" />
+    <field field_ref="m01s06i207" freq_offset="0h" freq_op="6h" id="m01s06i207_xios_upg_1m" name="m01s06i207" operation="average" />
+    <field field_ref="m01s06i208" freq_offset="0h" freq_op="6h" id="m01s06i208_xios_upg_1m" name="m01s06i208" operation="average" />
+    <field field_ref="m01s06i223" freq_offset="0h" freq_op="6h" id="m01s06i223_xios_upg_1m" name="m01s06i223" operation="average" />
+    <field field_ref="m01s06i224" freq_offset="0h" freq_op="6h" id="m01s06i224_xios_upg_1m" name="m01s06i224" operation="average" />
+    <field field_ref="m01s06i241" freq_offset="0h" freq_op="6h" id="m01s06i241_xios_upg_1m" name="m01s06i241" operation="average" />
+    <field field_ref="m01s06i247" freq_offset="0h" freq_op="6h" id="m01s06i247_xios_upg_1m" name="m01s06i247" operation="average" />
+    <field field_ref="m01s30i201_3" freq_offset="0h" freq_op="6h" id="m01s30i201_3_xios_upg_1m" name="m01s30i201_3" operation="average" />
+    <field field_ref="m01s30i202_3" freq_offset="0h" freq_op="6h" id="m01s30i202_3_xios_upg_1m" name="m01s30i202_3" operation="average" />
+    <field field_ref="m01s30i203_2" freq_offset="0h" freq_op="6h" id="m01s30i203_2_xios_upg_1m" name="m01s30i203_2" operation="average" />
+    <field field_ref="m01s30i204_3" freq_offset="0h" freq_op="6h" id="m01s30i204_3_xios_upg_1m" name="m01s30i204_3" operation="average" />
+    <field field_ref="m01s30i205_3" freq_offset="0h" freq_op="6h" id="m01s30i205_3_xios_upg_1m" name="m01s30i205_3" operation="average" />
+    <field field_ref="m01s30i301_3" freq_offset="0h" freq_op="6h" id="m01s30i301_3_xios_upg_1m" name="m01s30i301_3" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upi_1m" name="test-ch427a.pi" output_freq="1mo" split_freq="1mo" compression_level="0" >
+    <field field_ref="m01s00i030" id="m01s00i030_2_xios_upi_1m" name="m01s00i030_2" operation="instant" />
+    <field field_ref="m01s00i033" id="m01s00i033_2_xios_upi_1m" name="m01s00i033_2" operation="instant" />
+    <field field_ref="m01s03i317" id="m01s03i317_2_xios_upi_1m" name="m01s03i317_2" operation="instant" />
+    <field field_ref="m01s03i395" id="m01s03i395_2_xios_upi_1m" name="m01s03i395_2" operation="instant" />
+    <field field_ref="m01s08i023" id="m01s08i023_xios_upi_1m" name="m01s08i023" operation="instant" />
+    <field field_ref="m01s08i209" id="m01s08i209_xios_upi_1m" name="m01s08i209" operation="instant" />
+    <field field_ref="m01s08i223" id="m01s08i223_xios_upi_1m" name="m01s08i223" operation="instant" />
+    <field field_ref="m01s30i402" id="m01s30i402_xios_upi_1m" name="m01s30i402" operation="instant" />
+    <field field_ref="m01s30i420" id="m01s30i420_xios_upi_1m" name="m01s30i420" operation="instant" />
+    <field field_ref="m01s30i421" id="m01s30i421_xios_upi_1m" name="m01s30i421" operation="instant" />
+  </file>
+  <file description="UM output" id="xios_upk_3h" name="test-ch427a.pk" output_freq="3h" split_freq="10d" compression_level="0" >
+    <field field_ref="m01s05i216" freq_offset="0ts" freq_op="1ts" id="m01s05i216_2_xios_upk_3h" name="m01s05i216_2" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upm_1m" name="test-ch427a.pm" output_freq="1mo" split_freq="1mo" compression_level="0" >
+    <field field_ref="m01s00i002" freq_offset="0h" freq_op="6h" id="m01s00i002_xios_upm_1m" name="m01s00i002" operation="average" />
+    <field field_ref="m01s00i003" freq_offset="0h" freq_op="6h" id="m01s00i003_xios_upm_1m" name="m01s00i003" operation="average" />
+    <field field_ref="m01s00i004" freq_offset="0ts" freq_op="01ts" id="m01s00i004_xios_upm_1m" name="m01s00i004" operation="average" />
+    <field field_ref="m01s00i010" freq_offset="0ts" freq_op="01ts" id="m01s00i010_xios_upm_1m" name="m01s00i010" operation="average" />
+    <field field_ref="m01s00i012" freq_offset="0ts" freq_op="01ts" id="m01s00i012_xios_upm_1m" name="m01s00i012" operation="average" />
+    <field field_ref="m01s00i023" freq_offset="0ts" freq_op="01ts" id="m01s00i023_2_xios_upm_1m" name="m01s00i023_2" operation="average" />
+    <field field_ref="m01s00i024" freq_offset="0ts" freq_op="01ts" id="m01s00i024_2_xios_upm_1m" name="m01s00i024_2" operation="average" />
+    <field field_ref="m01s00i025" freq_offset="0ts" freq_op="01ts" id="m01s00i025_xios_upm_1m" name="m01s00i025" operation="average" />
+    <field field_ref="m01s00i028" freq_offset="0ts" freq_op="01ts" id="m01s00i028_xios_upm_1m" name="m01s00i028" operation="average" />
+    <field field_ref="m01s00i029" freq_offset="0ts" freq_op="01ts" id="m01s00i029_xios_upm_1m" name="m01s00i029" operation="average" />
+    <field field_ref="m01s00i030" freq_offset="0h" freq_op="6h" id="m01s00i030_xios_upm_1m" name="m01s00i030" operation="average" />
+    <field field_ref="m01s00i031" freq_offset="0ts" freq_op="01ts" id="m01s00i031_2_xios_upm_1m" name="m01s00i031_2" operation="average" />
+    <field field_ref="m01s00i032" freq_offset="0ts" freq_op="01ts" id="m01s00i032_2_xios_upm_1m" name="m01s00i032_2" operation="average" />
+    <field field_ref="m01s00i033" freq_offset="0h" freq_op="6h" id="m01s00i033_xios_upm_1m" name="m01s00i033" operation="average" />
+    <field field_ref="m01s00i211" freq_offset="0ts" freq_op="01ts" id="m01s00i211_xios_upm_1m" name="m01s00i211" operation="average" />
+    <field field_ref="m01s00i254" freq_offset="0ts" freq_op="01ts" id="m01s00i254_xios_upm_1m" name="m01s00i254" operation="average" />
+    <field field_ref="m01s00i266" freq_offset="0ts" freq_op="01ts" id="m01s00i266_xios_upm_1m" name="m01s00i266" operation="average" />
+    <field field_ref="m01s00i407_2" freq_offset="0ts" freq_op="01ts" id="m01s00i407_2_xios_upm_1m" name="m01s00i407_2" operation="average" />
+    <field field_ref="m01s00i408_2" freq_offset="0ts" freq_op="01ts" id="m01s00i408_2_xios_upm_1m" name="m01s00i408_2" operation="average" />
+    <field field_ref="m01s00i409" freq_offset="0ts" freq_op="01ts" id="m01s00i409_2_xios_upm_1m" name="m01s00i409_2" operation="average" />
+    <field field_ref="m01s00i507" freq_offset="0ts" freq_op="01ts" id="m01s00i507_xios_upm_1m" name="m01s00i507" operation="average" />
+    <field field_ref="m01s00i508" freq_offset="0ts" freq_op="01ts" id="m01s00i508_xios_upm_1m" name="m01s00i508" operation="average" />
+    <field field_ref="m01s00i509" freq_offset="0ts" freq_op="01ts" id="m01s00i509_xios_upm_1m" name="m01s00i509" operation="average" />
+    <field field_ref="m01s01i201" freq_offset="0ts" freq_op="01ts" id="m01s01i201_2_xios_upm_1m" name="m01s01i201_2" operation="average" />
+    <field field_ref="m01s01i203" freq_offset="0ts" freq_op="01ts" id="m01s01i203_2_xios_upm_1m" name="m01s01i203_2" operation="average" />
+    <field field_ref="m01s01i207" freq_offset="0ts" freq_op="01ts" id="m01s01i207_2_xios_upm_1m" name="m01s01i207_2" operation="average" />
+    <field field_ref="m01s01i208" freq_offset="0ts" freq_op="01ts" id="m01s01i208_2_xios_upm_1m" name="m01s01i208_2" operation="average" />
+    <field field_ref="m01s01i209" freq_offset="0ts" freq_op="01ts" id="m01s01i209_2_xios_upm_1m" name="m01s01i209_2" operation="average" />
+    <field field_ref="m01s01i210" freq_offset="0ts" freq_op="01ts" id="m01s01i210_2_xios_upm_1m" name="m01s01i210_2" operation="average" />
+    <field field_ref="m01s01i211" freq_offset="0ts" freq_op="01ts" id="m01s01i211_2_xios_upm_1m" name="m01s01i211_2" operation="average" />
+    <field field_ref="m01s01i221" freq_offset="0ts" freq_op="01ts" id="m01s01i221_xios_upm_1m" name="m01s01i221" operation="average" />
+    <field field_ref="m01s01i223" freq_offset="0ts" freq_op="01ts" id="m01s01i223_xios_upm_1m" name="m01s01i223" operation="average" />
+    <field field_ref="m01s01i225" freq_offset="0ts" freq_op="01ts" id="m01s01i225_xios_upm_1m" name="m01s01i225" operation="average" />
+    <field field_ref="m01s01i226" freq_offset="0ts" freq_op="01ts" id="m01s01i226_xios_upm_1m" name="m01s01i226" operation="average" />
+    <field field_ref="m01s01i235" freq_offset="0ts" freq_op="01ts" id="m01s01i235_2_xios_upm_1m" name="m01s01i235_2" operation="average" />
+    <field field_ref="m01s01i241" freq_offset="0ts" freq_op="01ts" id="m01s01i241_xios_upm_1m" name="m01s01i241" operation="average" />
+    <field field_ref="m01s01i242" freq_offset="0ts" freq_op="01ts" id="m01s01i242_xios_upm_1m" name="m01s01i242" operation="average" />
+    <field field_ref="m01s01i245" freq_offset="0ts" freq_op="01ts" id="m01s01i245_xios_upm_1m" name="m01s01i245" operation="average" />
+    <field field_ref="m01s01i246" freq_offset="0ts" freq_op="01ts" id="m01s01i246_xios_upm_1m" name="m01s01i246" operation="average" />
+    <field field_ref="m01s01i254" freq_offset="0ts" freq_op="01ts" id="m01s01i254_xios_upm_1m" name="m01s01i254" operation="average" />
+    <field field_ref="m01s01i255" freq_offset="0ts" freq_op="01ts" id="m01s01i255_xios_upm_1m" name="m01s01i255" operation="average" />
+    <field field_ref="m01s01i260" freq_offset="0ts" freq_op="01ts" id="m01s01i260_2_xios_upm_1m" name="m01s01i260_2" operation="average" />
+    <field field_ref="m01s01i280" freq_offset="0ts" freq_op="01ts" id="m01s01i280_xios_upm_1m" name="m01s01i280" operation="average" />
+    <field field_ref="m01s01i281" freq_offset="0ts" freq_op="01ts" id="m01s01i281_xios_upm_1m" name="m01s01i281" operation="average" />
+    <field field_ref="m01s01i298" freq_offset="0ts" freq_op="01ts" id="m01s01i298_xios_upm_1m" name="m01s01i298" operation="average" />
+    <field field_ref="m01s01i299" freq_offset="0ts" freq_op="01ts" id="m01s01i299_xios_upm_1m" name="m01s01i299" operation="average" />
+    <field field_ref="m01s02i201" freq_offset="0ts" freq_op="01ts" id="m01s02i201_2_xios_upm_1m" name="m01s02i201_2" operation="average" />
+    <field field_ref="m01s02i203" freq_offset="0ts" freq_op="01ts" id="m01s02i203_2_xios_upm_1m" name="m01s02i203_2" operation="average" />
+    <field field_ref="m01s02i204" freq_offset="0ts" freq_op="01ts" id="m01s02i204_2_xios_upm_1m" name="m01s02i204_2" operation="average" />
+    <field field_ref="m01s02i205" freq_offset="0ts" freq_op="01ts" id="m01s02i205_2_xios_upm_1m" name="m01s02i205_2" operation="average" />
+    <field field_ref="m01s02i206" freq_offset="0ts" freq_op="01ts" id="m01s02i206_2_xios_upm_1m" name="m01s02i206_2" operation="average" />
+    <field field_ref="m01s02i207" freq_offset="0ts" freq_op="01ts" id="m01s02i207_2_xios_upm_1m" name="m01s02i207_2" operation="average" />
+    <field field_ref="m01s02i208" freq_offset="0ts" freq_op="01ts" id="m01s02i208_2_xios_upm_1m" name="m01s02i208_2" operation="average" />
+    <field field_ref="m01s02i295" freq_offset="0ts" freq_op="01ts" id="m01s02i295_xios_upm_1m" name="m01s02i295" operation="average" />
+    <field field_ref="m01s02i422" freq_offset="0ts" freq_op="01ts" id="m01s02i422_xios_upm_1m" name="m01s02i422" operation="average" />
+    <field field_ref="m01s03i201" freq_offset="0ts" freq_op="01ts" id="m01s03i201_xios_upm_1m" name="m01s03i201" operation="average" />
+    <field field_ref="m01s03i217" freq_offset="0ts" freq_op="01ts" id="m01s03i217_2_xios_upm_1m" name="m01s03i217_2" operation="average" />
+    <field field_ref="m01s03i219" freq_offset="0ts" freq_op="01ts" id="m01s03i219_xios_upm_1m" name="m01s03i219" operation="average" />
+    <field field_ref="m01s03i220" freq_offset="0ts" freq_op="01ts" id="m01s03i220_xios_upm_1m" name="m01s03i220" operation="average" />
+    <field field_ref="m01s03i223" freq_offset="0ts" freq_op="01ts" id="m01s03i223_2_xios_upm_1m" name="m01s03i223_2" operation="average" />
+    <field field_ref="m01s03i224" freq_offset="0ts" freq_op="01ts" id="m01s03i224_xios_upm_1m" name="m01s03i224" operation="average" />
+    <field field_ref="m01s03i225" freq_offset="0ts" freq_op="01ts" id="m01s03i225_3_xios_upm_1m" name="m01s03i225_3" operation="average" />
+    <field field_ref="m01s03i226" freq_offset="0ts" freq_op="01ts" id="m01s03i226_3_xios_upm_1m" name="m01s03i226_3" operation="average" />
+    <field field_ref="m01s03i227" freq_offset="0ts" freq_op="01ts" id="m01s03i227_3_xios_upm_1m" name="m01s03i227_3" operation="average" />
+    <field field_ref="m01s03i228" freq_offset="0ts" freq_op="01ts" id="m01s03i228_2_xios_upm_1m" name="m01s03i228_2" operation="average" />
+    <field field_ref="m01s03i231" freq_offset="0ts" freq_op="01ts" id="m01s03i231_xios_upm_1m" name="m01s03i231" operation="average" />
+    <field field_ref="m01s03i232" freq_offset="0ts" freq_op="01ts" id="m01s03i232_xios_upm_1m" name="m01s03i232" operation="average" />
+    <field field_ref="m01s03i234" freq_offset="0ts" freq_op="01ts" id="m01s03i234_2_xios_upm_1m" name="m01s03i234_2" operation="average" />
+    <field field_ref="m01s03i235" freq_offset="0ts" freq_op="01ts" id="m01s03i235_xios_upm_1m" name="m01s03i235" operation="average" />
+    <field field_ref="m01s03i236" freq_offset="0h" freq_op="6h" id="m01s03i236_xios_upm_1m" name="m01s03i236" operation="average" />
+    <field field_ref="m01s03i237" freq_offset="0ts" freq_op="01ts" id="m01s03i237_2_xios_upm_1m" name="m01s03i237_2" operation="average" />
+    <field field_ref="m01s03i245" freq_offset="0ts" freq_op="01ts" id="m01s03i245_2_xios_upm_1m" name="m01s03i245_2" operation="average" />
+    <field field_ref="m01s03i258" freq_offset="0ts" freq_op="01ts" id="m01s03i258_xios_upm_1m" name="m01s03i258" operation="average" />
+    <field field_ref="m01s03i261" freq_offset="0ts" freq_op="01ts" id="m01s03i261_xios_upm_1m" name="m01s03i261" operation="average" />
+    <field field_ref="m01s03i287" freq_offset="0ts" freq_op="01ts" id="m01s03i287_2_xios_upm_1m" name="m01s03i287_2" operation="average" />
+    <field field_ref="m01s03i293" freq_offset="0ts" freq_op="01ts" id="m01s03i293_xios_upm_1m" name="m01s03i293" operation="average" />
+    <field field_ref="m01s03i296" freq_offset="0ts" freq_op="01ts" id="m01s03i296_2_xios_upm_1m" name="m01s03i296_2" operation="average" />
+    <field field_ref="m01s03i297" freq_offset="0ts" freq_op="01ts" id="m01s03i297_2_xios_upm_1m" name="m01s03i297_2" operation="average" />
+    <field field_ref="m01s03i298" freq_offset="0ts" freq_op="01ts" id="m01s03i298_xios_upm_1m" name="m01s03i298" operation="average" />
+    <field field_ref="m01s03i304" freq_offset="0ts" freq_op="01ts" id="m01s03i304_2_xios_upm_1m" name="m01s03i304_2" operation="average" />
+    <field field_ref="m01s03i305" freq_offset="0ts" freq_op="01ts" id="m01s03i305_2_xios_upm_1m" name="m01s03i305_2" operation="average" />
+    <field field_ref="m01s03i306" freq_offset="0ts" freq_op="01ts" id="m01s03i306_xios_upm_1m" name="m01s03i306" operation="average" />
+    <field field_ref="m01s03i307" freq_offset="0ts" freq_op="01ts" id="m01s03i307_2_xios_upm_1m" name="m01s03i307_2" operation="average" />
+    <field field_ref="m01s03i308" freq_offset="0ts" freq_op="01ts" id="m01s03i308_xios_upm_1m" name="m01s03i308" operation="average" />
+    <field field_ref="m01s03i309" freq_offset="0ts" freq_op="01ts" id="m01s03i309_2_xios_upm_1m" name="m01s03i309_2" operation="average" />
+    <field field_ref="m01s03i310" freq_offset="0ts" freq_op="01ts" id="m01s03i310_2_xios_upm_1m" name="m01s03i310_2" operation="average" />
+    <field field_ref="m01s03i317" freq_offset="0h" freq_op="6h" id="m01s03i317_xios_upm_1m" name="m01s03i317" operation="average" />
+    <field field_ref="m01s03i321" freq_offset="0ts" freq_op="01ts" id="m01s03i321_xios_upm_1m" name="m01s03i321" operation="average" />
+    <field field_ref="m01s03i331" freq_offset="0ts" freq_op="01ts" id="m01s03i331_xios_upm_1m" name="m01s03i331" operation="average" />
+    <field field_ref="m01s03i332" freq_offset="0ts" freq_op="01ts" id="m01s03i332_2_xios_upm_1m" name="m01s03i332_2" operation="average" />
+    <field field_ref="m01s03i340" freq_offset="0ts" freq_op="01ts" id="m01s03i340_xios_upm_1m" name="m01s03i340" operation="average" />
+    <field field_ref="m01s03i353" freq_offset="0ts" freq_op="01ts" id="m01s03i353_xios_upm_1m" name="m01s03i353" operation="average" />
+    <field field_ref="m01s03i365" freq_offset="0ts" freq_op="01ts" id="m01s03i365_2_xios_upm_1m" name="m01s03i365_2" operation="average" />
+    <field field_ref="m01s03i366" freq_offset="0ts" freq_op="01ts" id="m01s03i366_2_xios_upm_1m" name="m01s03i366_2" operation="average" />
+    <field field_ref="m01s03i367" freq_offset="0ts" freq_op="01ts" id="m01s03i367_3_xios_upm_1m" name="m01s03i367_3" operation="average" />
+    <field field_ref="m01s03i370" freq_offset="0ts" freq_op="01ts" id="m01s03i370_xios_upm_1m" name="m01s03i370" operation="average" />
+    <field field_ref="m01s03i371" freq_offset="0ts" freq_op="01ts" id="m01s03i371_xios_upm_1m" name="m01s03i371" operation="average" />
+    <field field_ref="m01s03i392" freq_offset="0ts" freq_op="01ts" id="m01s03i392_xios_upm_1m" name="m01s03i392" operation="average" />
+    <field field_ref="m01s03i394" freq_offset="0ts" freq_op="01ts" id="m01s03i394_xios_upm_1m" name="m01s03i394" operation="average" />
+    <field field_ref="m01s03i395" freq_offset="0h" freq_op="6h" id="m01s03i395_xios_upm_1m" name="m01s03i395" operation="average" />
+    <field field_ref="m01s03i662" freq_offset="0ts" freq_op="01ts" id="m01s03i662_xios_upm_1m" name="m01s03i662" operation="average" />
+    <field field_ref="m01s03i663" freq_offset="0ts" freq_op="01ts" id="m01s03i663_xios_upm_1m" name="m01s03i663" operation="average" />
+    <field field_ref="m01s04i203" freq_offset="0ts" freq_op="01ts" id="m01s04i203_3_xios_upm_1m" name="m01s04i203_3" operation="average" />
+    <field field_ref="m01s04i204" freq_offset="0ts" freq_op="01ts" id="m01s04i204_xios_upm_1m" name="m01s04i204" operation="average" />
+    <field field_ref="m01s05i205" freq_offset="0ts" freq_op="01ts" id="m01s05i205_3_xios_upm_1m" name="m01s05i205_3" operation="average" />
+    <field field_ref="m01s05i206" freq_offset="0ts" freq_op="01ts" id="m01s05i206_xios_upm_1m" name="m01s05i206" operation="average" />
+    <field field_ref="m01s05i209" freq_offset="0ts" freq_op="01ts" id="m01s05i209_xios_upm_1m" name="m01s05i209" operation="average" />
+    <field field_ref="m01s05i214" freq_offset="0ts" freq_op="01ts" id="m01s05i214_xios_upm_1m" name="m01s05i214" operation="average" />
+    <field field_ref="m01s05i215" freq_offset="0ts" freq_op="01ts" id="m01s05i215_xios_upm_1m" name="m01s05i215" operation="average" />
+    <field field_ref="m01s05i216" freq_offset="0ts" freq_op="01ts" id="m01s05i216_4_xios_upm_1m" name="m01s05i216_4" operation="average" />
+    <field field_ref="m01s05i231" freq_offset="0ts" freq_op="01ts" id="m01s05i231_xios_upm_1m" name="m01s05i231" operation="average" />
+    <field field_ref="m01s05i232" freq_offset="0ts" freq_op="01ts" id="m01s05i232_xios_upm_1m" name="m01s05i232" operation="average" />
+    <field field_ref="m01s05i269" freq_offset="0ts" freq_op="01ts" id="m01s05i269_xios_upm_1m" name="m01s05i269" operation="average" />
+    <field field_ref="m01s05i270" freq_offset="0ts" freq_op="01ts" id="m01s05i270_2_xios_upm_1m" name="m01s05i270_2" operation="average" />
+    <field field_ref="m01s05i272" freq_offset="0ts" freq_op="01ts" id="m01s05i272_2_xios_upm_1m" name="m01s05i272_2" operation="average" />
+    <field field_ref="m01s05i277" freq_offset="0ts" freq_op="01ts" id="m01s05i277_xios_upm_1m" name="m01s05i277" operation="average" />
+    <field field_ref="m01s05i278" freq_offset="0ts" freq_op="01ts" id="m01s05i278_xios_upm_1m" name="m01s05i278" operation="average" />
+    <field field_ref="m01s05i279" freq_offset="0ts" freq_op="01ts" id="m01s05i279_xios_upm_1m" name="m01s05i279" operation="average" />
+    <field field_ref="m01s05i319" freq_offset="0ts" freq_op="01ts" id="m01s05i319_xios_upm_1m" name="m01s05i319" operation="average" />
+    <field field_ref="m01s05i320" freq_offset="0ts" freq_op="01ts" id="m01s05i320_xios_upm_1m" name="m01s05i320" operation="average" />
+    <field field_ref="m01s05i322" freq_offset="0ts" freq_op="01ts" id="m01s05i322_xios_upm_1m" name="m01s05i322" operation="average" />
+    <field field_ref="m01s05i323" freq_offset="0ts" freq_op="01ts" id="m01s05i323_xios_upm_1m" name="m01s05i323" operation="average" />
+    <field field_ref="m01s06i201" freq_offset="0ts" freq_op="01ts" id="m01s06i201_xios_upm_1m" name="m01s06i201" operation="average" />
+    <field field_ref="m01s08i023" freq_offset="0ts" freq_op="01ts" id="m01s08i023_3_xios_upm_1m" name="m01s08i023_3" operation="average" />
+    <field field_ref="m01s08i208" freq_offset="0ts" freq_op="01ts" id="m01s08i208_2_xios_upm_1m" name="m01s08i208_2" operation="average" />
+    <field field_ref="m01s08i209" freq_offset="0ts" freq_op="01ts" id="m01s08i209_3_xios_upm_1m" name="m01s08i209_3" operation="average" />
+    <field field_ref="m01s08i223" freq_offset="0ts" freq_op="01ts" id="m01s08i223_3_xios_upm_1m" name="m01s08i223_3" operation="average" />
+    <field field_ref="m01s08i225" freq_offset="0ts" freq_op="01ts" id="m01s08i225_xios_upm_1m" name="m01s08i225" operation="average" />
+    <field field_ref="m01s08i229" freq_offset="0ts" freq_op="01ts" id="m01s08i229_xios_upm_1m" name="m01s08i229" operation="average" />
+    <field field_ref="m01s08i230" freq_offset="0ts" freq_op="01ts" id="m01s08i230_xios_upm_1m" name="m01s08i230" operation="average" />
+    <field field_ref="m01s08i231" freq_offset="0ts" freq_op="01ts" id="m01s08i231_xios_upm_1m" name="m01s08i231" operation="average" />
+    <field field_ref="m01s08i233" freq_offset="0ts" freq_op="01ts" id="m01s08i233_xios_upm_1m" name="m01s08i233" operation="average" />
+    <field field_ref="m01s08i234" freq_offset="0ts" freq_op="01ts" id="m01s08i234_2_xios_upm_1m" name="m01s08i234_2" operation="average" />
+    <field field_ref="m01s08i235" freq_offset="0ts" freq_op="01ts" id="m01s08i235_2_xios_upm_1m" name="m01s08i235_2" operation="average" />
+    <field field_ref="m01s16i222" freq_offset="0ts" freq_op="01ts" id="m01s16i222_4_xios_upm_1m" name="m01s16i222_4" operation="average" />
+    <field field_ref="m01s30i112" freq_offset="0ts" freq_op="01ts" id="m01s30i112_xios_upm_1m" name="m01s30i112" operation="average" />
+    <field field_ref="m01s30i114" freq_offset="0ts" freq_op="01ts" id="m01s30i114_xios_upm_1m" name="m01s30i114" operation="average" />
+    <field field_ref="m01s30i201" freq_offset="0h" freq_op="6h" id="m01s30i201_xios_upm_1m" name="m01s30i201" operation="average" />
+    <field field_ref="m01s30i202" freq_offset="0h" freq_op="6h" id="m01s30i202_xios_upm_1m" name="m01s30i202" operation="average" />
+    <field field_ref="m01s30i203" freq_offset="0ts" freq_op="01ts" id="m01s30i203_xios_upm_1m" name="m01s30i203" operation="average" />
+    <field field_ref="m01s30i204" freq_offset="0h" freq_op="6h" id="m01s30i204_xios_upm_1m" name="m01s30i204" operation="average" />
+    <field field_ref="m01s30i205" freq_offset="0h" freq_op="6h" id="m01s30i205_xios_upm_1m" name="m01s30i205" operation="average" />
+    <field field_ref="m01s30i206" freq_offset="0h" freq_op="6h" id="m01s30i206_xios_upm_1m" name="m01s30i206" operation="average" />
+    <field field_ref="m01s30i207" freq_offset="0h" freq_op="6h" id="m01s30i207_2_xios_upm_1m" name="m01s30i207_2" operation="average" />
+    <field field_ref="m01s30i208" freq_offset="0ts" freq_op="01ts" id="m01s30i208_2_xios_upm_1m" name="m01s30i208_2" operation="average" />
+    <field field_ref="m01s30i211" freq_offset="0h" freq_op="6h" id="m01s30i211_xios_upm_1m" name="m01s30i211" operation="average" />
+    <field field_ref="m01s30i212" freq_offset="0h" freq_op="6h" id="m01s30i212_xios_upm_1m" name="m01s30i212" operation="average" />
+    <field field_ref="m01s30i214" freq_offset="0h" freq_op="6h" id="m01s30i214_xios_upm_1m" name="m01s30i214" operation="average" />
+    <field field_ref="m01s30i215" freq_offset="0h" freq_op="6h" id="m01s30i215_xios_upm_1m" name="m01s30i215" operation="average" />
+    <field field_ref="m01s30i218" freq_offset="0h" freq_op="6h" id="m01s30i218_xios_upm_1m" name="m01s30i218" operation="average" />
+    <field field_ref="m01s30i222" freq_offset="0h" freq_op="6h" id="m01s30i222_xios_upm_1m" name="m01s30i222" operation="average" />
+    <field field_ref="m01s30i224" freq_offset="0h" freq_op="6h" id="m01s30i224_xios_upm_1m" name="m01s30i224" operation="average" />
+    <field field_ref="m01s30i225" freq_offset="0h" freq_op="6h" id="m01s30i225_xios_upm_1m" name="m01s30i225" operation="average" />
+    <field field_ref="m01s30i228" freq_offset="0h" freq_op="6h" id="m01s30i228_xios_upm_1m" name="m01s30i228" operation="average" />
+    <field field_ref="m01s30i234" freq_offset="0h" freq_op="6h" id="m01s30i234_xios_upm_1m" name="m01s30i234" operation="average" />
+    <field field_ref="m01s30i235" freq_offset="0h" freq_op="6h" id="m01s30i235_xios_upm_1m" name="m01s30i235" operation="average" />
+    <field field_ref="m01s30i244" freq_offset="0h" freq_op="6h" id="m01s30i244_xios_upm_1m" name="m01s30i244" operation="average" />
+    <field field_ref="m01s30i248" freq_offset="0h" freq_op="6h" id="m01s30i248_xios_upm_1m" name="m01s30i248" operation="average" />
+    <field field_ref="m01s30i258" freq_offset="0h" freq_op="6h" id="m01s30i258_xios_upm_1m" name="m01s30i258" operation="average" />
+    <field field_ref="m01s30i288" freq_offset="0h" freq_op="6h" id="m01s30i288_xios_upm_1m" name="m01s30i288" operation="average" />
+    <field field_ref="m01s30i301" freq_offset="0h" freq_op="6h" id="m01s30i301_xios_upm_1m" name="m01s30i301" operation="average" />
+    <field field_ref="m01s30i403" freq_offset="0ts" freq_op="01ts" id="m01s30i403_xios_upm_1m" name="m01s30i403" operation="average" />
+    <field field_ref="m01s30i404" freq_offset="0ts" freq_op="01ts" id="m01s30i404_xios_upm_1m" name="m01s30i404" operation="average" />
+    <field field_ref="m01s30i405" freq_offset="0ts" freq_op="01ts" id="m01s30i405_xios_upm_1m" name="m01s30i405" operation="average" />
+    <field field_ref="m01s30i406" freq_offset="0ts" freq_op="01ts" id="m01s30i406_xios_upm_1m" name="m01s30i406" operation="average" />
+    <field field_ref="m01s30i419" freq_offset="0ts" freq_op="01ts" id="m01s30i419_xios_upm_1m" name="m01s30i419" operation="average" />
+    <field field_ref="m01s30i428" freq_offset="0ts" freq_op="01ts" id="m01s30i428_xios_upm_1m" name="m01s30i428" operation="average" />
+    <field field_ref="m01s30i429" freq_offset="0ts" freq_op="01ts" id="m01s30i429_xios_upm_1m" name="m01s30i429" operation="average" />
+    <field field_ref="m01s30i431" freq_offset="0ts" freq_op="01ts" id="m01s30i431_xios_upm_1m" name="m01s30i431" operation="average" />
+  </file>
+</file_definition>
