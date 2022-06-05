@@ -1,61 +1,109 @@
-u-ch427-n96-template-start-paper
-u-ch427-n216-template-start-paper
-u-ch427-n512-template-start-paper
-u-ch427-n1280-template-start-paper
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr
+cp -r u-ch427-n1280-template-start-paper-00 u-ch427-n1280-start-paper-gr
 
-rm -rf u-ch427-n96-template-start-paper
-rm -rf u-ch427-n216-template-start-paper
-rm -rf u-ch427-n512-template-start-paper
-rm -rf u-ch427-n1280-template-start-paper
+cd ../u-ch427-n96-start-paper-gr; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr; rose suite-run --new;
 
-cp -r u-ch427-n96-template-start-all-ms u-ch427-n96-template-start-paper
-cp -r u-ch427-n216-template-start-all-ms u-ch427-n216-template-start-paper
-cp -r u-ch427-n512-template-start-all-ms u-ch427-n512-template-start-paper
-cp -r u-ch427-n1280-template-start-all-ms u-ch427-n1280-template-start-paper
+cylc stop -n u-ch427-n96-start-paper-gr
+cylc stop -n u-ch427-n216-start-paper-gr
+cylc stop -n u-ch427-n512-start-paper-gr
+cylc stop -n u-ch427-n1280-start-paper-gr
 
-cp -r u-ch427-n96-template-start-all-mean-mf/site/archer2.rc u-ch427-n96-template-start-paper/site/archer2.rc
-cp -r u-ch427-n216-template-start-all-mean-mf/site/archer2.rc u-ch427-n216-template-start-paper/site/archer2.rc
-cp -r u-ch427-n512-template-start-all-mean-mf/site/archer2.rc u-ch427-n512-template-start-paper/site/archer2.rc
-cp -r u-ch427-n1280-template-start-all-mean-mf/site/archer2.rc u-ch427-n1280-template-start-paper/site/archer2.rc
+u-ch427-n96-start-paper-gr-00
+u-ch427-n96-start-paper-gr-01
+u-ch427-n96-start-paper-gr-10
+u-ch427-n96-start-paper-gr-100
+u-ch427-n96-start-paper-gr-150
+u-ch427-n96-start-paper-gr-20
+u-ch427-n96-start-paper-gr-200
+u-ch427-n96-start-paper-gr-30
+u-ch427-n96-start-paper-gr-50
+u-ch427-n216-start-paper-gr-00
+u-ch427-n216-start-paper-gr-01
+u-ch427-n216-start-paper-gr-10
+u-ch427-n216-start-paper-gr-20
+u-ch427-n216-start-paper-gr-30
+u-ch427-n216-start-paper-gr-50
+u-ch427-n512-start-paper-gr-00
+u-ch427-n512-start-paper-gr-01
+u-ch427-n512-start-paper-gr-10
+u-ch427-n512-start-paper-gr-20
+u-ch427-n512-start-paper-gr-30
+u-ch427-n1280-start-paper-gr-00
+u-ch427-n1280-start-paper-gr-01
 
-cd ../u-ch427-n96-template-start-paper; rose suite-run --new;
-cd ../u-ch427-n216-template-start-paper; rose suite-run --new;
-cd ../u-ch427-n512-template-start-paper; rose suite-run --new;
-cd ../u-ch427-n1280-template-start-paper; rose suite-run --new;
+cp -r u-ch427-n96-template-start-paper-gr u-ch427-n96-start-paper-gr-00
+cp -r u-ch427-n96-template-start-paper-gr u-ch427-n96-start-paper-gr-01
+cp -r u-ch427-n96-template-start-paper-gr u-ch427-n96-start-paper-gr-10
+cp -r u-ch427-n96-template-start-paper-gr u-ch427-n96-start-paper-gr-100
+cp -r u-ch427-n96-template-start-paper-gr u-ch427-n96-start-paper-gr-150
+cp -r u-ch427-n96-template-start-paper-gr u-ch427-n96-start-paper-gr-20
+cp -r u-ch427-n96-template-start-paper-gr u-ch427-n96-start-paper-gr-200
+cp -r u-ch427-n96-template-start-paper-gr u-ch427-n96-start-paper-gr-30
+cp -r u-ch427-n96-template-start-paper-gr u-ch427-n96-start-paper-gr-50
+cp -r u-ch427-n216-template-start-paper-gr u-ch427-n216-start-paper-gr-00
+cp -r u-ch427-n216-template-start-paper-gr u-ch427-n216-start-paper-gr-01
+cp -r u-ch427-n216-template-start-paper-gr u-ch427-n216-start-paper-gr-10
+cp -r u-ch427-n216-template-start-paper-gr u-ch427-n216-start-paper-gr-20
+cp -r u-ch427-n216-template-start-paper-gr u-ch427-n216-start-paper-gr-30
+cp -r u-ch427-n216-template-start-paper-gr u-ch427-n216-start-paper-gr-50
+cp -r u-ch427-n512-template-start-paper-gr u-ch427-n512-start-paper-gr-00
+cp -r u-ch427-n512-template-start-paper-gr u-ch427-n512-start-paper-gr-01
+cp -r u-ch427-n512-template-start-paper-gr u-ch427-n512-start-paper-gr-10
+cp -r u-ch427-n512-template-start-paper-gr u-ch427-n512-start-paper-gr-20
+cp -r u-ch427-n512-template-start-paper-gr u-ch427-n512-start-paper-gr-30
+cp -r u-ch427-n1280-template-start-paper-gr u-ch427-n1280-start-paper-gr-00
+cp -r u-ch427-n1280-template-start-paper-gr u-ch427-n1280-start-paper-gr-01
 
-cylc stop -n u-ch427-n96-template-start-paper
-cylc stop -n u-ch427-n216-template-start-paper
-cylc stop -n u-ch427-n512-template-start-paper
-cylc stop -n u-ch427-n1280-template-start-paper
+cd ../u-ch427-n96-start-paper-gr-00; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr-01; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr-10; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr-100; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr-150; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr-20; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr-200; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr-30; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr-50; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr-00; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr-01; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr-10; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr-20; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr-30; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr-50; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr-00; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr-01; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr-10; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr-20; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr-30; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr-00; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr-01; rose suite-run --new;
 
-cp -r u-ch427-n96-template-start-paper u-ch427-n96-start-paper-00
-cp -r u-ch427-n216-template-start-paper u-ch427-n216-start-paper-00
-cp -r u-ch427-n512-template-start-paper u-ch427-n512-start-paper-00
-cp -r u-ch427-n1280-template-start-paper u-ch427-n1280-start-paper-00
-
-cp -r u-ch427-n96-template-start-paper u-ch427-n96-start-paper-01
-cp -r u-ch427-n216-template-start-paper u-ch427-n216-start-paper-01
-cp -r u-ch427-n512-template-start-paper u-ch427-n512-start-paper-01
-cp -r u-ch427-n1280-template-start-paper u-ch427-n1280-start-paper-01
-
-cp -r u-ch427-n96-template-start-paper u-ch427-n96-start-paper-10
-cp -r u-ch427-n216-template-start-paper u-ch427-n216-start-paper-10
-cp -r u-ch427-n512-template-start-paper u-ch427-n512-start-paper-10
-
-cp -r u-ch427-n96-template-start-paper u-ch427-n96-start-paper-20
-cp -r u-ch427-n216-template-start-paper u-ch427-n216-start-paper-20
-cp -r u-ch427-n512-template-start-paper u-ch427-n512-start-paper-20
-
-cp -r u-ch427-n96-template-start-paper u-ch427-n96-start-paper-30
-cp -r u-ch427-n216-template-start-paper u-ch427-n216-start-paper-30
-cp -r u-ch427-n512-template-start-paper u-ch427-n512-start-paper-30
-
-cp -r u-ch427-n96-template-start-paper u-ch427-n96-start-paper-50
-cp -r u-ch427-n216-template-start-paper u-ch427-n216-start-paper-50
-
-cp -r u-ch427-n96-template-start-paper u-ch427-n96-start-paper-100
-cp -r u-ch427-n96-template-start-paper u-ch427-n96-start-paper-150
-cp -r u-ch427-n96-template-start-paper u-ch427-n96-start-paper-200
+cylc stop -n u-ch427-n96-start-paper-gr-00
+cylc stop -n u-ch427-n96-start-paper-gr-01
+cylc stop -n u-ch427-n96-start-paper-gr-10
+cylc stop -n u-ch427-n96-start-paper-gr-100
+cylc stop -n u-ch427-n96-start-paper-gr-150
+cylc stop -n u-ch427-n96-start-paper-gr-20
+cylc stop -n u-ch427-n96-start-paper-gr-200
+cylc stop -n u-ch427-n96-start-paper-gr-30
+cylc stop -n u-ch427-n96-start-paper-gr-50
+cylc stop -n u-ch427-n216-start-paper-gr-00
+cylc stop -n u-ch427-n216-start-paper-gr-01
+cylc stop -n u-ch427-n216-start-paper-gr-10
+cylc stop -n u-ch427-n216-start-paper-gr-20
+cylc stop -n u-ch427-n216-start-paper-gr-30
+cylc stop -n u-ch427-n216-start-paper-gr-50
+cylc stop -n u-ch427-n512-start-paper-gr-00
+cylc stop -n u-ch427-n512-start-paper-gr-01
+cylc stop -n u-ch427-n512-start-paper-gr-10
+cylc stop -n u-ch427-n512-start-paper-gr-20
+cylc stop -n u-ch427-n512-start-paper-gr-30
+cylc stop -n u-ch427-n1280-start-paper-gr-00
+cylc stop -n u-ch427-n1280-start-paper-gr-01
 
 u-ch427-n96-start-paper-00
 u-ch427-n96-start-paper-01
@@ -79,6 +127,29 @@ u-ch427-n512-start-paper-20
 u-ch427-n512-start-paper-30
 u-ch427-n1280-start-paper-00
 u-ch427-n1280-start-paper-01
+
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-00
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-01
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-10
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-100
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-150
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-20
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-200
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-30
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-50
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-00
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-01
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-10
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-20
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-30
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-50
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-00
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-01
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-10
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-20
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-30
+cp -r u-ch427-n1280-template-start-paper-00 u-ch427-n1280-start-paper-00
+cp -r u-ch427-n1280-template-start-paper-00 u-ch427-n1280-start-paper-01
 
 cd ../u-ch427-n96-start-paper-00; rose suite-run --new;
 cd ../u-ch427-n96-start-paper-01; rose suite-run --new;
@@ -125,3 +196,342 @@ cylc stop -n u-ch427-n512-start-paper-20
 cylc stop -n u-ch427-n512-start-paper-30
 cylc stop -n u-ch427-n1280-start-paper-00
 cylc stop -n u-ch427-n1280-start-paper-01
+
+u-ch427-n96-start-paper-gr2-00
+u-ch427-n96-start-paper-gr2-01
+u-ch427-n96-start-paper-gr2-10
+u-ch427-n96-start-paper-gr2-100
+u-ch427-n96-start-paper-gr2-150
+u-ch427-n96-start-paper-gr2-20
+u-ch427-n96-start-paper-gr2-200
+u-ch427-n96-start-paper-gr2-30
+u-ch427-n96-start-paper-gr2-50
+u-ch427-n216-start-paper-gr2-00
+u-ch427-n216-start-paper-gr2-01
+u-ch427-n216-start-paper-gr2-10
+u-ch427-n216-start-paper-gr2-20
+u-ch427-n216-start-paper-gr2-30
+u-ch427-n216-start-paper-gr2-50
+u-ch427-n512-start-paper-gr2-00
+u-ch427-n512-start-paper-gr2-01
+u-ch427-n512-start-paper-gr2-10
+u-ch427-n512-start-paper-gr2-20
+u-ch427-n512-start-paper-gr2-30
+u-ch427-n1280-start-paper-gr2-00
+u-ch427-n1280-start-paper-gr2-01
+
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr2-00
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr2-01
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr2-10
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr2-100
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr2-150
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr2-20
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr2-200
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr2-30
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr2-50
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr2-00
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr2-01
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr2-10
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr2-20
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr2-30
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr2-50
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr2-00
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr2-01
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr2-10
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr2-20
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr2-30
+cp -r u-ch427-n1280-template-start-paper-00 u-ch427-n1280-start-paper-gr2-00
+cp -r u-ch427-n1280-template-start-paper-00 u-ch427-n1280-start-paper-gr2-01
+
+sed -i 's/P1D/P2D/g' u-ch427-n96-start-paper-gr2-00/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n96-start-paper-gr2-01/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n96-start-paper-gr2-10/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n96-start-paper-gr2-100/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n96-start-paper-gr2-20/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n96-start-paper-gr2-30/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n96-start-paper-gr2-50/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n216-start-paper-gr2-00/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n216-start-paper-gr2-01/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n216-start-paper-gr2-10/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n216-start-paper-gr2-20/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n216-start-paper-gr2-30/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n216-start-paper-gr2-50/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n512-start-paper-gr2-00/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n512-start-paper-gr2-01/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n512-start-paper-gr2-10/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n512-start-paper-gr2-20/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n512-start-paper-gr2-30/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n1280-start-paper-gr2-00/rose-suite.conf
+sed -i 's/P1D/P2D/g' u-ch427-n1280-start-paper-gr2-01/rose-suite.conf
+
+cd ../u-ch427-n96-start-paper-gr2-00; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr2-01; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr2-10; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr2-100; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr2-20; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr2-30; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr2-50; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr2-00; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr2-01; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr2-10; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr2-20; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr2-30; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr2-50; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr2-00; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr2-01; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr2-10; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr2-20; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr2-30; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr2-00; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr2-01; rose suite-run --new;
+
+cylc stop -n u-ch427-n96-start-paper-gr2-00
+cylc stop -n u-ch427-n96-start-paper-gr2-01
+cylc stop -n u-ch427-n96-start-paper-gr2-10
+cylc stop -n u-ch427-n96-start-paper-gr2-100
+cylc stop -n u-ch427-n96-start-paper-gr2-20
+cylc stop -n u-ch427-n96-start-paper-gr2-30
+cylc stop -n u-ch427-n96-start-paper-gr2-50
+cylc stop -n u-ch427-n216-start-paper-gr2-00
+cylc stop -n u-ch427-n216-start-paper-gr2-01
+cylc stop -n u-ch427-n216-start-paper-gr2-10
+cylc stop -n u-ch427-n216-start-paper-gr2-20
+cylc stop -n u-ch427-n216-start-paper-gr2-30
+cylc stop -n u-ch427-n216-start-paper-gr2-50
+cylc stop -n u-ch427-n512-start-paper-gr2-00
+cylc stop -n u-ch427-n512-start-paper-gr2-01
+cylc stop -n u-ch427-n512-start-paper-gr2-10
+cylc stop -n u-ch427-n512-start-paper-gr2-20
+cylc stop -n u-ch427-n512-start-paper-gr2-30
+cylc stop -n u-ch427-n1280-start-paper-gr2-00
+cylc stop -n u-ch427-n1280-start-paper-gr2-01
+
+u-ch427-n96-start-paper-gr46-00
+u-ch427-n96-start-paper-gr46-01
+u-ch427-n96-start-paper-gr46-10
+u-ch427-n96-start-paper-gr46-100
+u-ch427-n96-start-paper-gr46-150
+u-ch427-n96-start-paper-gr46-20
+u-ch427-n96-start-paper-gr46-200
+u-ch427-n96-start-paper-gr46-30
+u-ch427-n96-start-paper-gr46-50
+u-ch427-n216-start-paper-gr46-00
+u-ch427-n216-start-paper-gr46-01
+u-ch427-n216-start-paper-gr46-10
+u-ch427-n216-start-paper-gr46-20
+u-ch427-n216-start-paper-gr46-30
+u-ch427-n216-start-paper-gr46-50
+u-ch427-n512-start-paper-gr46-00
+u-ch427-n512-start-paper-gr46-01
+u-ch427-n512-start-paper-gr46-10
+u-ch427-n512-start-paper-gr46-20
+u-ch427-n512-start-paper-gr46-30
+u-ch427-n1280-start-paper-gr46-00
+u-ch427-n1280-start-paper-gr46-01
+
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr46-00
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr46-01
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr46-10
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr46-100
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr46-150
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr46-20
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr46-200
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr46-30
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-start-paper-gr46-50
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr46-00
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr46-01
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr46-10
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr46-20
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr46-30
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-start-paper-gr46-50
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr46-00
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr46-01
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr46-10
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr46-20
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-start-paper-gr46-30
+cp -r u-ch427-n1280-template-start-paper-00 u-ch427-n1280-start-paper-gr46-00
+cp -r u-ch427-n1280-template-start-paper-00 u-ch427-n1280-start-paper-gr46-01
+
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n96-start-paper-gr46-00
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n96-start-paper-gr46-01
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n96-start-paper-gr46-10
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n96-start-paper-gr46-100
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n96-start-paper-gr46-150
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n96-start-paper-gr46-20
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n96-start-paper-gr46-200
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n96-start-paper-gr46-30
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n96-start-paper-gr46-50
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n216-start-paper-gr46-00
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n216-start-paper-gr46-01
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n216-start-paper-gr46-10
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n216-start-paper-gr46-20
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n216-start-paper-gr46-30
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n216-start-paper-gr46-50
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n512-start-paper-gr46-00
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n512-start-paper-gr46-01
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n512-start-paper-gr46-10
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n512-start-paper-gr46-20
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n512-start-paper-gr46-30
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n1280-start-paper-gr46-00
+cp u-ch427-n96-start-paper-gr46-00/suite.rc u-ch427-n1280-start-paper-gr46-01
+
+sed -i 's/P1D/P46H/g' u-ch427-n96-start-paper-gr46-00/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n96-start-paper-gr46-01/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n96-start-paper-gr46-10/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n96-start-paper-gr46-100/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n96-start-paper-gr46-20/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n96-start-paper-gr46-30/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n96-start-paper-gr46-50/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n216-start-paper-gr46-00/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n216-start-paper-gr46-01/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n216-start-paper-gr46-10/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n216-start-paper-gr46-20/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n216-start-paper-gr46-30/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n216-start-paper-gr46-50/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n512-start-paper-gr46-00/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n512-start-paper-gr46-01/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n512-start-paper-gr46-10/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n512-start-paper-gr46-20/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n512-start-paper-gr46-30/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n1280-start-paper-gr46-00/rose-suite.conf
+sed -i 's/P1D/P46H/g' u-ch427-n1280-start-paper-gr46-01/rose-suite.conf
+
+sed -i 's/P46H/PT46H/g' u-ch427-n96-start-paper-gr46-00/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n96-start-paper-gr46-01/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n96-start-paper-gr46-10/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n96-start-paper-gr46-100/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n96-start-paper-gr46-20/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n96-start-paper-gr46-30/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n96-start-paper-gr46-50/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n216-start-paper-gr46-00/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n216-start-paper-gr46-01/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n216-start-paper-gr46-10/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n216-start-paper-gr46-20/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n216-start-paper-gr46-30/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n216-start-paper-gr46-50/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n512-start-paper-gr46-00/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n512-start-paper-gr46-01/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n512-start-paper-gr46-10/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n512-start-paper-gr46-20/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n512-start-paper-gr46-30/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n1280-start-paper-gr46-00/rose-suite.conf
+sed -i 's/P46H/PT46H/g' u-ch427-n1280-start-paper-gr46-01/rose-suite.conf
+
+cd ../u-ch427-n96-start-paper-gr46-00; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr46-01; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr46-10; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr46-100; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr46-20; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr46-30; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-gr46-50; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr46-00; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr46-01; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr46-10; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr46-20; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr46-30; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-gr46-50; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr46-00; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr46-01; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr46-10; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr46-20; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr46-30; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr46-00; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr46-01; rose suite-run --new;
+
+cylc stop -n u-ch427-n96-start-paper-gr46-00
+cylc stop -n u-ch427-n96-start-paper-gr46-01
+cylc stop -n u-ch427-n96-start-paper-gr46-10
+cylc stop -n u-ch427-n96-start-paper-gr46-100
+cylc stop -n u-ch427-n96-start-paper-gr46-20
+cylc stop -n u-ch427-n96-start-paper-gr46-30
+cylc stop -n u-ch427-n96-start-paper-gr46-50
+cylc stop -n u-ch427-n216-start-paper-gr46-00
+cylc stop -n u-ch427-n216-start-paper-gr46-01
+cylc stop -n u-ch427-n216-start-paper-gr46-10
+cylc stop -n u-ch427-n216-start-paper-gr46-20
+cylc stop -n u-ch427-n216-start-paper-gr46-30
+cylc stop -n u-ch427-n216-start-paper-gr46-50
+cylc stop -n u-ch427-n512-start-paper-gr46-00
+cylc stop -n u-ch427-n512-start-paper-gr46-01
+cylc stop -n u-ch427-n512-start-paper-gr46-10
+cylc stop -n u-ch427-n512-start-paper-gr46-20
+cylc stop -n u-ch427-n512-start-paper-gr46-30
+cylc stop -n u-ch427-n1280-start-paper-gr46-00
+cylc stop -n u-ch427-n1280-start-paper-gr46-01
+
+u-ch427-n1280-start-paper-gr46-00 luciana@pumatest.nerc.ac.uk:43049
+u-ch427-n1280-start-paper-gr46-01 luciana@pumatest.nerc.ac.uk:43021
+u-ch427-n512-start-paper-gr46-30 luciana@pumatest.nerc.ac.uk:43014
+u-ch427-n512-start-paper-gr46-00 luciana@pumatest.nerc.ac.uk:43096
+u-ch427-n512-start-paper-gr46-10 luciana@pumatest.nerc.ac.uk:43031
+u-ch427-n512-start-paper-gr46-01 luciana@pumatest.nerc.ac.uk:43083
+u-ch427-n512-start-paper-gr46-20 luciana@pumatest.nerc.ac.uk:43020
+
+cylc stop -n u-ch427-n512-start-paper-gr46-00
+cylc stop -n u-ch427-n512-start-paper-gr46-01
+cylc stop -n u-ch427-n512-start-paper-gr46-10
+cylc stop -n u-ch427-n512-start-paper-gr46-20
+cylc stop -n u-ch427-n512-start-paper-gr46-30
+cylc stop -n u-ch427-n1280-start-paper-gr46-00
+cylc stop -n u-ch427-n1280-start-paper-gr46-01
+
+sed -i 's/MAIN_CLOCK='\''PT2H'\''/MAIN_CLOCK='\''PT4H'\''/g' u-ch427-n512-start-paper-gr46-00/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT2H'\''/MAIN_CLOCK='\''PT4H'\''/g' u-ch427-n512-start-paper-gr46-01/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT2H'\''/MAIN_CLOCK='\''PT4H'\''/g' u-ch427-n512-start-paper-gr46-10/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT2H'\''/MAIN_CLOCK='\''PT4H'\''/g' u-ch427-n512-start-paper-gr46-20/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT2H'\''/MAIN_CLOCK='\''PT4H'\''/g' u-ch427-n512-start-paper-gr46-30/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT4H'\''/MAIN_CLOCK='\''PT8H'\''/g' u-ch427-n1280-start-paper-gr46-00/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT4H'\''/MAIN_CLOCK='\''PT8H'\''/g' u-ch427-n1280-start-paper-gr46-01/rose-suite.conf
+
+cd ../u-ch427-n512-start-paper-gr46-00; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr46-01; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr46-10; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr46-20; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr46-30; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr46-00; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr46-01; rose suite-run --new;
+
+u-ch427-n1280-start-paper-gr2-00 luciana@pumatest.nerc.ac.uk:43084
+u-ch427-n512-start-paper-gr2-00 luciana@pumatest.nerc.ac.uk:43008
+u-ch427-n512-start-paper-gr2-30 luciana@pumatest.nerc.ac.uk:43043
+u-ch427-n512-start-paper-gr2-10 luciana@pumatest.nerc.ac.uk:43068
+u-ch427-n512-start-paper-gr2-01 luciana@pumatest.nerc.ac.uk:43005
+u-ch427-n1280-start-paper-gr2-01 luciana@pumatest.nerc.ac.uk:43046
+u-ch427-n512-start-paper-gr2-20 luciana@pumatest.nerc.ac.uk:43074
+
+cylc stop -n u-ch427-n512-start-paper-gr2-00
+cylc stop -n u-ch427-n512-start-paper-gr2-01
+cylc stop -n u-ch427-n512-start-paper-gr2-10
+cylc stop -n u-ch427-n512-start-paper-gr2-20
+cylc stop -n u-ch427-n512-start-paper-gr2-30
+cylc stop -n u-ch427-n1280-start-paper-gr2-00
+cylc stop -n u-ch427-n1280-start-paper-gr2-01
+
+sed -i 's/MAIN_CLOCK='\''PT2H'\''/MAIN_CLOCK='\''PT4H'\''/g' u-ch427-n512-start-paper-gr2-00/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT2H'\''/MAIN_CLOCK='\''PT4H'\''/g' u-ch427-n512-start-paper-gr2-01/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT2H'\''/MAIN_CLOCK='\''PT4H'\''/g' u-ch427-n512-start-paper-gr2-10/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT2H'\''/MAIN_CLOCK='\''PT4H'\''/g' u-ch427-n512-start-paper-gr2-20/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT2H'\''/MAIN_CLOCK='\''PT4H'\''/g' u-ch427-n512-start-paper-gr2-30/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT4H'\''/MAIN_CLOCK='\''PT8H'\''/g' u-ch427-n1280-start-paper-gr2-00/rose-suite.conf
+sed -i 's/MAIN_CLOCK='\''PT4H'\''/MAIN_CLOCK='\''PT8H'\''/g' u-ch427-n1280-start-paper-gr2-01/rose-suite.conf
+
+cd ../u-ch427-n512-start-paper-gr2-01; rose suite-run --new;
+
+cd ../u-ch427-n512-start-paper-gr2-00; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr2-10; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr2-20; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-gr2-30; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr2-00; rose suite-run --new;
+cd ../u-ch427-n1280-start-paper-gr2-01; rose suite-run --new;
+
+cp u-ch427-n512-start-paper-gr46-00/rose-suite.conf u-ch427-n512-start-paper-gr2-00/rose-suite.conf
+cp u-ch427-n512-start-paper-gr46-01/rose-suite.conf u-ch427-n512-start-paper-gr2-01/rose-suite.conf
+cp u-ch427-n512-start-paper-gr46-10/rose-suite.conf u-ch427-n512-start-paper-gr2-10/rose-suite.conf
+cp u-ch427-n512-start-paper-gr46-20/rose-suite.conf u-ch427-n512-start-paper-gr2-20/rose-suite.conf
+cp u-ch427-n512-start-paper-gr46-30/rose-suite.conf u-ch427-n512-start-paper-gr2-30/rose-suite.conf
+cp u-ch427-n1280-start-paper-gr46-00/rose-suite.conf u-ch427-n1280-start-paper-gr2-00/rose-suite.conf
+cp u-ch427-n1280-start-paper-gr46-01/rose-suite.conf u-ch427-n1280-start-paper-gr2-01/rose-suite.conf
+
+
+
+

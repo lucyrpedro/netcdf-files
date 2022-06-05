@@ -1,0 +1,59 @@
+u-ch427-n1280-template-pack0
+u-ch427-n1280-template-pack5
+
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-x0
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-x1
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-x9
+
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-x0
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-x1
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-x9
+
+cd ../u-ch427-n1280-pack0-x0; rose suite-run;
+cd ../u-ch427-n1280-pack0-x1; rose suite-run;
+cd ../u-ch427-n1280-pack0-x9; rose suite-run;
+
+cd ../u-ch427-n1280-pack5-x0; rose suite-run;
+cd ../u-ch427-n1280-pack5-x1; rose suite-run;
+cd ../u-ch427-n1280-pack5-x9; rose suite-run;
+
+./scripts/update-n1280.sh u-ch427-n1280-pack0-x0
+./scripts/update-n1280.sh u-ch427-n1280-pack0-x1
+./scripts/update-n1280.sh u-ch427-n1280-pack0-x9
+
+./scripts/update-n1280.sh u-ch427-n1280-pack5-x0
+./scripts/update-n1280.sh u-ch427-n1280-pack5-x1
+./scripts/update-n1280.sh u-ch427-n1280-pack5-x9
+
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-x0
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-x1
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-x9
+
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-x0
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-x1
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-x9
+
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-x0
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-x1
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-x9
+
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-x0
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-x1
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-x9
+
+ cylc trigger u-ch427-n1280-pack0-x0 atmos_main;
+ cylc trigger u-ch427-n1280-pack0-x1 atmos_main;
+ cylc trigger u-ch427-n1280-pack0-x9 atmos_main;
+
+ cylc trigger u-ch427-n1280-pack5-x0 atmos_main;
+ cylc trigger u-ch427-n1280-pack5-x1 atmos_main;
+ cylc trigger u-ch427-n1280-pack5-x9 atmos_main;
+
+ cylc stop -n u-ch427-n1280-pack0-x0
+ cylc stop -n u-ch427-n1280-pack0-x1
+ cylc stop -n u-ch427-n1280-pack0-x9
+
+ cylc stop -n u-ch427-n1280-pack5-x0
+ cylc stop -n u-ch427-n1280-pack5-x1
+ cylc stop -n u-ch427-n1280-pack5-x9
+

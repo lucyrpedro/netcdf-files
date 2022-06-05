@@ -1,0 +1,189 @@
+u-ch427-n1280-template-pack0
+u-ch427-n1280-template-pack5
+
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-v2-x0
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-v2-x1
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-v2-x2
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-v2-x3
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-v2-x4
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-v2-x5
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-v2-x6
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-v2-x7
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-v2-x8
+cp -r u-ch427-n1280-template-pack0 u-ch427-n1280-pack0-v2-x9
+
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-v2-x0
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-v2-x1
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-v2-x2
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-v2-x3
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-v2-x4
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-v2-x5
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-v2-x6
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-v2-x7
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-v2-x8
+cp -r u-ch427-n1280-template-pack5 u-ch427-n1280-pack5-v2-x9
+
+cd ../u-ch427-n1280-pack0-v2-x0; rose suite-run;
+cd ../u-ch427-n1280-pack0-v2-x1; rose suite-run;
+cd ../u-ch427-n1280-pack0-v2-x2; rose suite-run;
+cd ../u-ch427-n1280-pack0-v2-x3; rose suite-run;
+cd ../u-ch427-n1280-pack0-v2-x4; rose suite-run;
+cd ../u-ch427-n1280-pack0-v2-x5; rose suite-run;
+cd ../u-ch427-n1280-pack0-v2-x6; rose suite-run;
+cd ../u-ch427-n1280-pack0-v2-x7; rose suite-run;
+cd ../u-ch427-n1280-pack0-v2-x8; rose suite-run;
+cd ../u-ch427-n1280-pack0-v2-x9; rose suite-run;
+
+cd ../u-ch427-n1280-pack5-v2-x0; rose suite-run;
+cd ../u-ch427-n1280-pack5-v2-x1; rose suite-run;
+cd ../u-ch427-n1280-pack5-v2-x2; rose suite-run;
+cd ../u-ch427-n1280-pack5-v2-x3; rose suite-run;
+cd ../u-ch427-n1280-pack5-v2-x4; rose suite-run;
+cd ../u-ch427-n1280-pack5-v2-x5; rose suite-run;
+cd ../u-ch427-n1280-pack5-v2-x6; rose suite-run;
+cd ../u-ch427-n1280-pack5-v2-x7; rose suite-run;
+cd ../u-ch427-n1280-pack5-v2-x8; rose suite-run;
+cd ../u-ch427-n1280-pack5-v2-x9; rose suite-run;
+
+./scripts/update-n1280.sh u-ch427-n1280-pack0-v2-x0
+./scripts/update-n1280.sh u-ch427-n1280-pack0-v2-x1
+./scripts/update-n1280.sh u-ch427-n1280-pack0-v2-x2
+./scripts/update-n1280.sh u-ch427-n1280-pack0-v2-x3
+./scripts/update-n1280.sh u-ch427-n1280-pack0-v2-x4
+./scripts/update-n1280.sh u-ch427-n1280-pack0-v2-x5
+./scripts/update-n1280.sh u-ch427-n1280-pack0-v2-x6
+./scripts/update-n1280.sh u-ch427-n1280-pack0-v2-x7
+./scripts/update-n1280.sh u-ch427-n1280-pack0-v2-x8
+./scripts/update-n1280.sh u-ch427-n1280-pack0-v2-x9
+
+./scripts/update-n1280.sh u-ch427-n1280-pack5-v2-x0
+./scripts/update-n1280.sh u-ch427-n1280-pack5-v2-x1
+./scripts/update-n1280.sh u-ch427-n1280-pack5-v2-x2
+./scripts/update-n1280.sh u-ch427-n1280-pack5-v2-x3
+./scripts/update-n1280.sh u-ch427-n1280-pack5-v2-x4
+./scripts/update-n1280.sh u-ch427-n1280-pack5-v2-x5
+./scripts/update-n1280.sh u-ch427-n1280-pack5-v2-x6
+./scripts/update-n1280.sh u-ch427-n1280-pack5-v2-x7
+./scripts/update-n1280.sh u-ch427-n1280-pack5-v2-x8
+./scripts/update-n1280.sh u-ch427-n1280-pack5-v2-x9
+
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-v2-x0
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-v2-x1
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-v2-x2
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-v2-x3
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-v2-x4
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-v2-x5
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-v2-x6
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-v2-x7
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-v2-x8
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack0-v2-x9
+
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-v2-x0
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-v2-x1
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-v2-x2
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-v2-x3
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-v2-x4
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-v2-x5
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-v2-x6
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-v2-x7
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-v2-x8
+./scripts/downgrade-n1280.sh u-ch427-n1280-pack5-v2-x9
+
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-v2-x0
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-v2-x1
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-v2-x2
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-v2-x3
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-v2-x4
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-v2-x5
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-v2-x6
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-v2-x7
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-v2-x8
+./create-xml-n1280-template-x-pack0.sh u-ch427-n1280-pack0-v2-x9
+
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-v2-x0
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-v2-x1
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-v2-x2
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-v2-x3
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-v2-x4
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-v2-x5
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-v2-x6
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-v2-x7
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-v2-x8
+./create-xml-n1280-template-x-pack5.sh u-ch427-n1280-pack5-v2-x9
+
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack0-v2-x0/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack0-v2-x1/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack0-v2-x2/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack0-v2-x3/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack0-v2-x4/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack0-v2-x5/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack0-v2-x6/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack0-v2-x7/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack0-v2-x8/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack0-v2-x9/rose-suite.conf;
+
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack5-v2-x0/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack5-v2-x1/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack5-v2-x2/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack5-v2-x3/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack5-v2-x4/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack5-v2-x5/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack5-v2-x6/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack5-v2-x7/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack5-v2-x8/rose-suite.conf;
+ sed -i 's/MAIN_ATM_PPN=128/MAIN_ATM_PPN=40/g' u-ch427-n1280-pack5-v2-x9/rose-suite.conf;
+
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack0-v2-x0/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack0-v2-x1/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack0-v2-x2/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack0-v2-x3/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack0-v2-x4/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack0-v2-x5/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack0-v2-x6/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack0-v2-x7/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack0-v2-x8/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack0-v2-x9/rose-suite.conf;
+
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack5-v2-x0/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack5-v2-x1/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack5-v2-x2/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack5-v2-x3/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack5-v2-x4/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack5-v2-x5/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack5-v2-x6/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack5-v2-x7/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack5-v2-x8/rose-suite.conf;
+ sed -i 's/XIOS_PPN=2/XIOS_PPN=1/g' u-ch427-n1280-pack5-v2-x9/rose-suite.conf;
+
+ cylc stop -n u-ch427-n1280-pack0-v2-x0
+ cylc stop -n u-ch427-n1280-pack0-v2-x1
+ cylc stop -n u-ch427-n1280-pack0-v2-x2
+ cylc stop -n u-ch427-n1280-pack0-v2-x3
+ cylc stop -n u-ch427-n1280-pack0-v2-x4
+ cylc stop -n u-ch427-n1280-pack0-v2-x5
+ cylc stop -n u-ch427-n1280-pack0-v2-x6
+ cylc stop -n u-ch427-n1280-pack0-v2-x7
+ cylc stop -n u-ch427-n1280-pack0-v2-x8
+ cylc stop -n u-ch427-n1280-pack0-v2-x9
+
+ cylc stop -n u-ch427-n1280-pack5-v2-x0
+ cylc stop -n u-ch427-n1280-pack5-v2-x1
+ cylc stop -n u-ch427-n1280-pack5-v2-x2
+ cylc stop -n u-ch427-n1280-pack5-v2-x3
+ cylc stop -n u-ch427-n1280-pack5-v2-x4
+ cylc stop -n u-ch427-n1280-pack5-v2-x5
+ cylc stop -n u-ch427-n1280-pack5-v2-x6
+ cylc stop -n u-ch427-n1280-pack5-v2-x7
+ cylc stop -n u-ch427-n1280-pack5-v2-x8
+ cylc stop -n u-ch427-n1280-pack5-v2-x9
+
+ cp rose-suite.conf ../u-ch427-n1280-template-pack0/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-pack1/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-pack2/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-pack3/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-pack4/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-pack5/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-pack6/rose-suite.conf
+ cp rose-suite.conf ../u-ch427-n1280-template-pack7/rose-suite.conf
+
+ sed -i 's/pack0/pack5/g' create-xml-n1280-template-x-pack5.sh
