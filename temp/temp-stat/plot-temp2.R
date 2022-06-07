@@ -98,12 +98,6 @@ legend(x = "top",inset = 0,
         legend = c("ens0", "ens1","max", "min","mean"),
         col=plot_colors, lwd=5, cex=.5, horiz = TRUE)
 
-#print(temp_inst1[1:10])
-#print(temp_inst2[1:10])
-#print(temp_max[1:10])
-#print(temp_min[1:10])
-#print(temp_mean[1:10])
-
 
 plot(x,temp_inst1,type="l",col="blue",ylim = c(lmin, lmax),ylab="")
 par(new = TRUE)
