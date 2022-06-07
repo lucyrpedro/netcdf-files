@@ -31,21 +31,58 @@ print(x5)
 x = seq(1, x2, 1)
 
 
-plot(x[1:1000:27648],temp_inst[1:100:27648],type="s",col="blue") 
+plot(x,temp_inst[1:27648],type="s",col="blue") 
 par(new = TRUE)
-plot(x[1:1000:27648],temp_inst[27649:1000:55296],type="s",col="pink") 
+plot(x,temp_inst[27649:55296],type="s",col="pink") 
 par(new = TRUE)
-plot(x[1:1000:27648],temp_max[1:1000:27648],type="p",col="green",) 
+plot(x,temp_max,type="p",col="green",) 
 par(new = TRUE)
-plot(x[1:1000:27648],temp_min[1:1000:27648],type="p",col="red") 
+plot(x,temp_min,type="p",col="red") 
 par(new = TRUE)
-plot(x[1:1000:27648],temp_mean[1:1000:27648],type="p",col="orange") 
+plot(x,temp_mean,type="p",col="orange") 
 par(new = TRUE)
 #lines(x,temp_stdev,col="pink")
 plot_colors <- c("blue","pink","green","red","orange") 
 par(new = TRUE)
 legend(x = "top",inset = 0,
         legend = c("ens0", "ens1","max", "min","mean"), 
+        col=plot_colors, lwd=5, cex=.5, horiz = TRUE)
+
+y = sample(x, 1000)
+
+temp_inst1_t = sample(temp_inst[1:27648],1000)
+temp_inst2_t = sample(temp_inst[27649:55296],1000)
+temp_max_t = sample(temp_max,1000)
+temp_min_t = sample(temp_min,1000)
+temp_mean_t = sample(temp_mean,1000)
+
+x1=length(temp_inst1_t)
+x2=length(temp_inst2_t)
+x3=length(temp_max_t)
+x4=length(temp_min_t)
+x5=length(temp_mean_t)
+print(x1)
+print(x2)
+print(x3)
+print(x4)
+print(x5)
+
+
+plot(y,temp_inst1_t,type="s",col="blue")
+par(new = TRUE)
+plot(y,temp_inst2_t,type="s",col="pink")                         
+par(new = TRUE)
+plot(y,temp_max_t,type="p",col="green",)                            
+par(new = TRUE)
+plot(y,temp_min_t,type="p",col="red")                            
+par(new = TRUE)
+plot(y,temp_mean_t,type="p",col="orange")                            
+par(new = TRUE)
+#lines(x,temp_stdev,col="pink")
+plot_colors <- c("blue","pink","green","red","orange")
+par(new = TRUE)
+legend(x = "top",inset = 0,
+        legend = c("ens0", "ens1","max", "min","mean"),
         col=plot_colors, lwd=5, cex=.5, horiz = TRUE)
 
 
