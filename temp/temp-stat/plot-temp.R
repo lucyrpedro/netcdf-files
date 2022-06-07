@@ -68,9 +68,9 @@ print(x4)
 print(x5)
 
 
-plot(y,temp_inst1_t,type="s",col="blue")
+plot(y,temp_inst1_t,type="p",col="blue")
 par(new = TRUE)
-plot(y,temp_inst2_t,type="s",col="pink")                         
+plot(y,temp_inst2_t,type="p",col="pink")                         
 par(new = TRUE)
 plot(y,temp_max_t,type="p",col="green",)                            
 par(new = TRUE)
