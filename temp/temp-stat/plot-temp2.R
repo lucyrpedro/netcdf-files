@@ -34,15 +34,15 @@ print(x6)
 x = seq(1, x1, 1)
 
 
-plot(x,temp_inst1,type="l",col="blue") 
+plot(x,temp_inst1,type="l",col="blue",ylim = c(210, 212),ylab="") 
 par(new = TRUE)
-plot(x,temp_inst2,type="l",col="pink") 
+plot(x,temp_inst2,type="l",col="pink",ylim = c(210, 212),ylab="") 
 par(new = TRUE)
-plot(x,temp_max,type="l",col="green",) 
+plot(x,temp_max,type="l",col="green",ylim = c(210, 212),ylab="") 
 par(new = TRUE)
-plot(x,temp_min,type="l",col="red") 
+plot(x,temp_min,type="l",col="red",ylim = c(210, 212),ylab="") 
 par(new = TRUE)
-plot(x,temp_mean,type="l",col="orange") 
+plot(x,temp_mean,type="l",col="orange",ylim = c(210, 212),ylab="") 
 par(new = TRUE)
 #lines(x,temp_stdev,col="pink")
 plot_colors <- c("blue","pink","green","red","orange") 
@@ -100,15 +100,15 @@ legend(x = "top",inset = 0,
 #print(temp_mean[1:10])
 
 
-plot(x,temp_inst1,type="l",col="blue")
+plot(x,temp_inst1,type="l",col="blue",ylim = c(210, 212),ylab="")
 par(new = TRUE)
-plot(x,temp_inst2,type="l",col="pink")
+plot(x,temp_inst2,type="l",col="pink",ylim = c(210, 212),ylab="")
 
-plot(x,temp_max,type="l",col="green")
+plot(x,temp_max,type="l",col="green",ylim = c(210, 212),ylab="")
 
-plot(x,temp_min,type="l",col="red")
+plot(x,temp_min,type="l",col="red",ylim = c(210, 212),ylab="")
 
-plot(x,temp_mean,type="l",col="orange")
+plot(x,temp_mean,type="l",col="orange",ylim = c(210, 212),ylab="")
 
 #plot(x,temp_stdev,col="pink")
 
