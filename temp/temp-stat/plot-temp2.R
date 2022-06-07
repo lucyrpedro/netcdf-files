@@ -76,9 +76,9 @@ legend(x = "top",inset = 0,
 xb = seq(1, 10, 1)
 
 
-plot(xb,temp_inst1[1:10],type="s",col="blue")
+plot(xb,temp_inst1[1:10],type="p",col="blue")
 par(new = TRUE)
-plot(xb,temp_inst2[1:10],type="s",col="pink")
+plot(xb,temp_inst2[1:10],type="p",col="pink")
 par(new = TRUE)
 plot(xb,temp_max[1:10],type="p",col="green",)
 par(new = TRUE)
@@ -93,6 +93,11 @@ legend(x = "top",inset = 0,
         legend = c("ens0", "ens1","max", "min","mean"),
         col=plot_colors, lwd=5, cex=.5, horiz = TRUE)
 
+#print(temp_inst1[1:10])
+#print(temp_inst2[1:10])
+#print(temp_max[1:10])
+#print(temp_min[1:10])
+#print(temp_mean[1:10])
 
 
 plot(x,temp_inst1,type="l",col="blue")
