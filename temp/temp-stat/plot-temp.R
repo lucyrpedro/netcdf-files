@@ -31,20 +31,27 @@ print(x5)
 x = seq(1, x2, 1)
 
 
-plot(x,temp_inst[1:27648],type="l",col="blue")
-plot(x,temp_inst[27649:55296],type="l",col="pink")
-lines(x,temp_max,type="l",col="green",)
-lines(x,temp_min,type="l",col="red")
-lines(x,temp_mean,type="l",col="orange")
+plot(x,temp_inst[1:27648],type="l",col="blue") 
+par(new = TRUE)
+plot(x,temp_inst[27649:55296],type="l",col="pink") 
+par(new = TRUE)
+plot(x,temp_max,type="l",col="green",) 
+par(new = TRUE)
+plot(x,temp_min,type="l",col="red") 
+par(new = TRUE)
+plot(x,temp_mean,type="l",col="orange") 
+par(new = TRUE)
 #lines(x,temp_stdev,col="pink")
-plot_colors <- c("blue","pink","green","red","orange")
+plot_colors <- c("blue","pink","green","red","orange") 
+par(new = TRUE)
 legend(x = "top",inset = 0,
         legend = c("ens0", "ens1","max", "min","mean"), 
         col=plot_colors, lwd=5, cex=.5, horiz = TRUE)
 
 
 plot(x,temp_inst[1:27648],col="blue")
-lines(x,temp_inst[27649:55296],col="pink")
+par(new = TRUE)
+plot(x,temp_inst[27649:55296],col="pink")
 
 plot(x,temp_max,col="green")
 
