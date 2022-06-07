@@ -28,27 +28,31 @@ print(x3)
 print(x4)
 print(x5)
 
-l1 = seq(1, x1, 1)
-l2 = seq(1, x2, 1)
+x = seq(1, x2, 1)
 
 
-plot(l2,temp_inst[1:27648],type="l",col="blue")
-plot(l2,temp_inst[27649:55296],type="l",col="blue")
-lines(l2,temp_max,col="green")
-lines(l2,temp_min,col="red")
-lines(l2,temp_mean,col="orange")
-lines(l2,temp_stdev,col="pink")
+plot(x,temp_inst[1:27648],type="l",col="blue")
+plot(x,temp_inst[27649:55296],type="l",col="blue")
+lines(x,temp_max,col="green")
+lines(x,temp_min,col="red")
+lines(x,temp_mean,col="orange")
+#lines(x,temp_stdev,col="pink")
 plot_colors <- c("blue","green","red","orange", "pink")
 legend(x = "top",inset = 0,
         legend = c("Instant", "Max", "Min","Mean", "Stdev"), 
         col=plot_colors, lwd=5, cex=.5, horiz = TRUE)
 
 
-#plot(x,temp_inst,type="l",col="blue")
-#plot(x,temp_max,col="green")
-#plot(x,temp_min,col="red")
-#plot(x,temp_mean,col="yellow")
-#plot(x,temp_stdev,col="magenta")
+plot(x,temp_inst[1:27648],type="l",col="blue")
+lines(x,temp_inst[27649:55296],type="l",col="blue")
+
+plot(x,temp_max,col="green")
+
+plot(x,temp_min,col="red")
+
+plot(x,temp_mean,col="orange")
+
+#plot(x,temp_stdev,col="pink")
 
 # dev.off()
 print("Graphics constructed with success!")
