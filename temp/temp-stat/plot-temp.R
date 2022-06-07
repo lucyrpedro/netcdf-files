@@ -68,18 +68,18 @@ legend(x = "top",inset = 0,
 #print(x5)
 
 
-xa = seq(1, 1000, 1)
+xa = seq(1, 100, 1)
 
 
-plot(xa,temp_inst[1:1000],type="p",col="blue")
+plot(xa,temp_inst[1:100],type="s",col="blue")
 par(new = TRUE)
-plot(xa,temp_inst[28649:29648],type="p",col="pink")
+plot(xa,temp_inst[27749:27848],type="s",col="pink")
 par(new = TRUE)
-plot(xa,temp_max[1:1000],type="p",col="green",)
+plot(xa,temp_max[1:100],type="p",col="green",)
 par(new = TRUE)
-plot(xa,temp_min[1:1000],type="p",col="red")
+plot(xa,temp_min[1:100],type="p",col="red")
 par(new = TRUE)
-plot(xa,temp_mean[1:1000],type="p",col="orange")
+plot(xa,temp_mean[1:100],type="p",col="orange")
 par(new = TRUE)
 #lines(x,temp_stdev,col="pink")
 plot_colors <- c("blue","pink","green","red","orange")
