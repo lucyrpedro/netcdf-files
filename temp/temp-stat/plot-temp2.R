@@ -73,6 +73,27 @@ legend(x = "top",inset = 0,
         col=plot_colors, lwd=5, cex=.5, horiz = TRUE)
 
 
+xb = seq(1, 10, 1)
+
+
+plot(xb,temp_inst1[1:10],type="s",col="blue")
+par(new = TRUE)
+plot(xb,temp_inst2[1:10],type="s",col="pink")
+par(new = TRUE)
+plot(xb,temp_max[1:10],type="p",col="green",)
+par(new = TRUE)
+plot(xb,temp_min[1:10],type="p",col="red")
+par(new = TRUE)
+plot(xb,temp_mean[1:10],type="p",col="orange")
+par(new = TRUE)
+#lines(x,temp_stdev,col="pink")
+plot_colors <- c("blue","pink","green","red","orange")
+par(new = TRUE)
+legend(x = "top",inset = 0,
+        legend = c("ens0", "ens1","max", "min","mean"),
+        col=plot_colors, lwd=5, cex=.5, horiz = TRUE)
+
+
 
 plot(x,temp_inst1,type="l",col="blue")
 par(new = TRUE)
