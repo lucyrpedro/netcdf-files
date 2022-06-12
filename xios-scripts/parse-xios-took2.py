@@ -20,7 +20,7 @@ print(file_old)
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["SUITE", "TOOK SIZE", "TOOK TOTAL", "TOOK MEAN", "TOOK 6 MEAN", "TOOK 8 MEAN", "TOOK 12 MEAN", "TOOK 6 TOTAL", "TOOK 8 TOTAL", "TOOK 12 TOTAL","TOOK TI", "TOOK 6 TI", "TOOK 8 TI","TOOK 12 TI"]
+fields = ["SUITE", "TOOK SIZE", "TOOK 0", "TOOK TOTAL", "TOOK MEAN", "TOOK 6 MEAN", "TOOK 8 MEAN", "TOOK 12 MEAN", "TOOK 6 TOTAL", "TOOK 8 TOTAL", "TOOK 12 TOTAL","TOOK TI", "TOOK 6 TI", "TOOK 8 TI","TOOK 12 TI"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -104,6 +104,8 @@ for file in f_dir:
             data_M["TOOK 6 TOTAL"] = round(total_6, 2)
             data_M["TOOK 8 TOTAL"] = round(total_8, 2)
             data_M["TOOK 12 TOTAL"] = round(total_12, 2)
+
+            data_M["TOOK 0"] = round(took_vector[0], 2)
 
             total=total-took_vector[0] # Remove the initial time
             total_6=total_6-took_vector[0] # Remove the initial time
