@@ -20,7 +20,7 @@ print(file_old)
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["SUITE", "TOOK SIZE", "TOOK TOTAL", "TOOK MEAN", "TOOK 6 TOTAL", "TOOK 8 TOTAL", "TOOK 12 TOTAL","TOOK TI", "TOOK 6 TI", "TOOK 8 TI","TOOK 12 TI"]
+fields = ["SUITE", "TOOK SIZE", "TOOK TOTAL", "TOOK MEAN", "TOOK 6 MEAN", "TOOK 8 MEAN", "TOOK 12 MEAN", "TOOK 6 TOTAL", "TOOK 8 TOTAL", "TOOK 12 TOTAL","TOOK TI", "TOOK 6 TI", "TOOK 8 TI","TOOK 12 TI"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -119,12 +119,27 @@ for file in f_dir:
             if total!=0:
                 mean=total/ntook;
                 data_M["TOOK MEAN"] = round(mean, 2)
-                
+
+            if total_6!=0:
+                mean_6=total_6*6/ntook;
+                data_M["TOOK 6 MEAN"] = round(mean_6, 2)
+
+            if total_8!=0:
+                mean_8=total_8*8/ntook;
+                data_M["TOOK 8 MEAN"] = round(mean_8, 2)
+
+            if total_12!=0:
+                mean_12=total_12*12/ntook;
+                data_M["TOOK 12 MEAN"] = round(mean_12, 2)
+
             print(round(total, 2))
             print(round(total_6, 2))
             print(round(total_8, 2))
             print(round(total_12, 2))
-#            print(round(mean, 2))
+            print(round(mean, 2))
+            print(round(mean_6, 2))
+            print(round(mean_8, 2))
+            print(round(mean_12, 2))
 
             out.writerow(data_M)
 
