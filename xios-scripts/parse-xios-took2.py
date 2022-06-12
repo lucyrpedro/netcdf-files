@@ -105,10 +105,10 @@ for file in f_dir:
             data_M["TOOK 8 TOTAL"] = round(total_8, 2)
             data_M["TOOK 12 TOTAL"] = round(total_12, 2)
 
-            total_t=total-took_vector[0] # Remove the initial time
-            total_6_t=total_6-took_vector[0] # Remove the initial time
-            total_8_t=total_8-took_vector[0] # Remove the initial time
-            total_12_t=total_12-took_vector[0] # Remove the initial time
+            total=total-took_vector[0] # Remove the initial time
+            total_6=total_6-took_vector[0] # Remove the initial time
+            total_8=total_8-took_vector[0] # Remove the initial time
+            total_12=total_12-took_vector[0] # Remove the initial time
 
             data_M["TOOK TI"] = round(total, 2)
             data_M["TOOK 6 TI"] = round(total_6, 2)
