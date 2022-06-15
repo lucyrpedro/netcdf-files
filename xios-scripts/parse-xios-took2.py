@@ -15,7 +15,7 @@ file_old = cwd + "/" + filename
 if os.path.exists(file_old):
   os.remove(file_old)
   
-print(file_old)
+# print(file_old)
 
 # Open the output file
 
@@ -28,19 +28,19 @@ data_M = {}
 
 f_dir = open("aux-files/paper.txt", "r")
 for file in f_dir:
-#    print(file)
+    print(file)
 
     # Parse the data for the information inside the filename
 
     data_M["SUITE"] = file.strip()
-    print(file)
+#    print(file)
 
     # Change to the suite directory
 
     # Parse the data for the information inside the result file
 
     filename = cwd + "/results/" + file.strip() + "/took.txt";
-    print(filename)
+#    print(filename)
 
     isFile = os.path.isfile(filename)
 #    print(isFile)
@@ -56,7 +56,7 @@ for file in f_dir:
 #            print(text)
             text = text.split();
             ntook=text.count('took')
-            print(ntook)
+#            print(ntook)
 
             data_M["TOOK SIZE"] = ntook
 
@@ -74,7 +74,7 @@ for file in f_dir:
             for item in took_list:
                 took_vector.append(float(item))
             
-            print(took_vector)
+#            print(took_vector)
 
             filename_took = cwd + "/results/" + file.strip() + "/took.csv";
             with open(filename_took, 'w') as myfile2:
