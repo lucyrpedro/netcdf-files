@@ -15,9 +15,9 @@
 #SBATCH --export=none
 #SBATCH --chdir=/work/n02/n02/lrpedro
 #SBATCH --partition=standard
-#SBATCH --qos=standard
+#SBATCH --qos=lowpriority
 #SBATCH --account=n02-cms
-#SBATCH --nodes=38
+#SBATCH --nodes=45
 # N.B. CYLC_DIR has been updated on the remote host
 export CYLC_DIR='/mnt/lustre/a2fs-work1/work/y07/shared/umshared/software/cylc-7.8.7'
 export CYLC_VERSION='7.8.7'
@@ -36,7 +36,7 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n512-start-paper-01"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n512-start-paper-01"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n512-start-paper-01"
-    export CYLC_SUITE_UUID="88b10b1f-bddf-42af-beb0-7f323394df83"
+    export CYLC_SUITE_UUID="205fc7c0-4549-48f0-9e1f-d546e32c49b6"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19880901T0000Z/atmos_main/01"
@@ -77,7 +77,7 @@ cylc__job__inst__user_env() {
     ROSE_TASK_APP="um"
     UM_ATM_NPROCX="40"
     UM_ATM_NPROCY="32"
-    XIOS_NPROC="16"
+    XIOS_NPROC="30"
     ATMOS_EXEC="$CYLC_SUITE_SHARE_DIR/fcm_make_um/build-atmos/bin/um-atmos.exe"
     HYPERTHREADS="1"
     OMP_NUM_THREADS="3"
@@ -90,7 +90,7 @@ cylc__job__inst__user_env() {
     OMP_PLACES="cores"
     FI_OFI_RXM_SAR_LIMIT="64K"
     ROSE_LAUNCHER_PREOPTS_UM="--het-group=0 --hint=nomultithread --distribution=block:block --nodes=30 --ntasks=1280 --tasks-per-node=48 --cpus-per-task=3 env OMP_NUM_THREADS=3 HYPERTHREADS=1"
-    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=1 --cpu-bind=cores --export=all --nodes=8 --ntasks=16 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
+    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=1 --cpu-bind=cores --export=all --nodes=15 --ntasks=30 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
     DATAM="$ROSE_DATA/History_Data"
     DATAW="$CYLC_TASK_WORK_PATH"
 }
