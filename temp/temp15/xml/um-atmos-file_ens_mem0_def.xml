@@ -1,0 +1,8 @@
+<file_definition format="netcdf4" time_counter="instant" type="one_file">
+  <file description="UM output" id="xios_upa_1d" name="bo026_ens0a.pa" output_freq="1d" split_freq="10d">
+    <field field_ref="m01s00i024" name="m01s00i024" operation="average" />
+  </file>
+  <file description="UM output" id="xios_upm_1m" name="bo026_ens0a.pm" output_freq="1mo" split_freq="1mo">
+    <field field_ref="m01s00i024" name="m01s00i024_2" operation="average" />
+  </file>
+</file_definition>
