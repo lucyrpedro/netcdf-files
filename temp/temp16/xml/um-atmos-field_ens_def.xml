@@ -1,0 +1,61 @@
+<field_definition default_value="-1073741824.0">
+
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i024" long_name="SURFACE TEMPERATURE AFTER TIMESTEP" standard_name="surface_temperature" unit="K" />
+
+    <field
+            id="m01s00i024_inst"
+            name="m01s00i024_inst"
+            operation="instant"
+            field_ref="m01s00i024"
+            grid_ref="um-atmos_grid_t_DIAG"
+    />
+
+    <field
+            id="m01s00i024_ens_mean"
+            name="m01s00i024_ens_mean"
+            operation="instant"
+            field_ref="m01s00i024"
+            grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+    />
+
+    <field
+            id="m01s00i024_ens_max"
+            name="m01s00i024_ens_max"
+            operation="instant"
+            field_ref="m01s00i024"
+            grid_ref="um-atmos_grid_t_DIAG_ens_max"
+    />
+
+    <field
+            id="m01s00i024_ens_min"
+            name="m01s00i024_ens_min"
+            operation="instant"
+            field_ref="m01s00i024"
+            grid_ref="um-atmos_grid_t_DIAG_ens_min"
+    />
+
+    <field
+            id="m01s00i024_ens_sum"
+            name="m01s00i024_ens_sum"
+            operation="instant"
+            field_ref="m01s00i024"
+            grid_ref="um-atmos_grid_t_DIAG_ens_sum"
+    />
+
+    <field
+            id="m01s00i024_ens_mean_max"
+            name="m01s00i024_ens_mean_max"
+            operation="instant"
+            field_ref="m01s00i024_ens_mean"
+            grid_ref="um-atmos_grid_t_DIAG_ens_max_max"
+    />
+
+    <field
+            id="m01s00i024_ens_mean_max2"
+            name="m01s00i024_ens_mean_max2"
+            operation="instant"
+            field_ref="m01s00i024_ens_mean"
+            grid_ref="um-atmos_grid_t_DIAG_ens_max_max2"
+    />
+
+</field_definition>
