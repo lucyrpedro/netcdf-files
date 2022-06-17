@@ -1,0 +1,41 @@
+<field_definition default_value="-1073741822.0" prec="8">
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_DP500" id="m01s16i202" long_name="GEOPOTENTIAL HEIGHT ON P LEV/P GRID" standard_name="geopotential_height" unit="m" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s16i222" long_name="PRESSURE AT MEAN SEA LEVEL" standard_name="air_pressure_at_sea_level" unit="Pa" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_uv_DP6" id="m01s30i201" long_name="U COMPNT OF WIND ON P LEV/UV GRID" standard_name="eastward_wind" unit="m s-1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_uv_DP6" id="m01s30i202" long_name="V COMPNT OF WIND ON P LEV/UV GRID" standard_name="northward_wind" unit="m s-1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_uv_DP6" id="m01s30i203" long_name="W COMPNT OF WIND ON P LEV/UV GRID" standard_name="upward_air_velocity" unit="m s-1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_uv_DP6" id="m01s30i204" long_name="TEMPERATURE ON P LEV/UV GRID" standard_name="air_temperature" unit="K" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_uv_DP6" id="m01s30i205" long_name="SPECIFIC HUMIDITY ON P LEV/UV GRID" standard_name="specific_humidity" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_uv_DP6" id="m01s30i301" long_name="HEAVYSIDE FN ON P LEV/UV GRID" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_uv_DIAG" id="m01s30i455" long_name="VORTICITY 850" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_uv_DIAG" id="m01s30i456" long_name="FILTERED VORTICITY 850" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_uv_DP6" id="m01s30i457" long_name="VORTICITY TC" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_uv_DP6" id="m01s30i458" long_name="FILTERED VORTICITY TC" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i008" long_name="H2O2 MASS MIXING RATIO AFTER TSTEP" standard_name="mass_fraction_of_hydrogen_peroxide_in_air" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i071" long_name="DMS MASS MIXING RATIO AFTER TIMESTEP" standard_name="mass_fraction_of_dimethyl_sulfide_in_air" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i072" long_name="SO2 MASS MIXING RATIO AFTER TIMESTEP" standard_name="mass_fraction_of_sulfur_dioxide_in_air" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i073" long_name="H2SO4 MASS MIXING RATIO AFTER TSTEP" standard_name="mass_fraction_of_sulfuric_acid_in_air" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i075" long_name="DMSO MASS MIXING RATIO AFTER TSTEP" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i091" long_name="MONOTERPENE MASS MIXING RATIO AFT TS" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i092" long_name="SEC_ORG MASS MIXING RATIO AFTER TS" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i101" long_name="NUCLEATION MODE (SOLUBLE) NUMBER" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i102" long_name="NUCLEATION MODE (SOLUBLE) H2SO4 MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i103" long_name="AITKEN MODE (SOLUBLE) NUMBER" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i104" long_name="AITKEN MODE (SOLUBLE) H2SO4 MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i105" long_name="AITKEN MODE (SOLUBLE) BC MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i106" long_name="AITKEN MODE (SOLUBLE) OM MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i107" long_name="ACCUMULATION MODE (SOLUBLE) NUMBER" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i108" long_name="ACCUMULATION MODE (SOL) H2SO4 MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i109" long_name="ACCUMULATION MODE (SOL) BC MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i110" long_name="ACCUMULATION MODE (SOL) OM MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i111" long_name="ACCUMULATION MODE (SOL) SEA SALT MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i113" long_name="COARSE MODE (SOLUBLE) NUMBER" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i114" long_name="COARSE MODE (SOLUBLE) H2SO4 MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i115" long_name="COARSE MODE (SOLUBLE) BC MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i116" long_name="COARSE MODE (SOLUBLE) OM MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i117" long_name="COARSE MODE (SOLUBLE) SEA SALT MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i119" long_name="AITKEN MODE (INSOLUBLE) NUMBER" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i120" long_name="AITKEN MODE (INSOLUBLE) BC MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i121" long_name="AITKEN MODE (INSOLUBLE) OM MMR" unit="1" />
+  <field enabled=".TRUE."  check_if_active=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s34i126" long_name="NUCLEATION MODE (SOLUBLE) OM MMR" unit="1" />
+</field_definition>
