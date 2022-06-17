@@ -3,18 +3,6 @@
 grid=$1
 field=$2
 
-cat >> grids-paper.txt << EOF
-${grid}
-EOF
-
-cat >> fields-paper.txt << EOF
-${field}
-EOF
-
-cat >> grids-fields-paper.txt << EOF
-${grid} ${field}
-EOF
-
 cat >> um-stats-all-paper.xml << EOF
 
 		<field

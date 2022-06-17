@@ -18,7 +18,7 @@ do
 	field=$(echo "$line" | cut -d' ' -f 2)
 	echo "grid = $grid"
 	echo "field = $field"
-	./xml-stats-all-mean-one-file.sh $grid $field $output_ms
+	./xml-stats-all-mean-one-file-paper.sh $grid $field $output_ms
 done < "$input"
 
 cat >> $output_ms << EOF
@@ -34,7 +34,7 @@ do
         field=$(echo "$line" | cut -d' ' -f 2)
         echo "grid = $grid"
         echo "field = $field"
-        ./xml-stats-all-stdev-one-file.sh $grid $field $output_ms
+        ./xml-stats-all-stdev-one-file-paper.sh $grid $field $output_ms
 done < "$input"
 
 

@@ -6,6 +6,7 @@ rm -rf um-stats-paper.xml
 rm -rf grids-paper.txt
 rm -rf fields-paper.txt
 rm -rf grids-fields-paper.txt
+rm -rf um-stats-all-paper.xml
 
 sed 's/\"//g' um-atmos-field_ens_def-paper.xml > aux.txt
 
