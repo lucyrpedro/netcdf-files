@@ -177,508 +177,508 @@ touch total-all-suites-paper.csv
 
 suite=u-ch427-n216-start-paper-01
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-02
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-03
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-04
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-05
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-06
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-07
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-08
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-09
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-10
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-20
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-30
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-50
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-01
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-02
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-03
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-04
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-05
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-06
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-07
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-08
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-09
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-10
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-11
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-12
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-13
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-14
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-15
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-16
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-17
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-21
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-22
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-23
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-30
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-start-paper-x0-50
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-template-start-paper
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-template-start-paper-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-template-start-paper-ms-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-template-start-paper-x-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-template-start-paper-x0-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n216-template-start-paper-x5-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-01
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-02
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-03
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-04
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-05
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-06
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-07
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-08
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-09
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-10
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-11
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-12
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-13
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-14
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-15
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-16
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-17
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-18
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-19
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-20
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-21
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-22
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-23
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-24
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-25
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-26
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-27
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-28
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-29
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-30
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-01
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-02
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-03
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-04
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-10
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-11
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-12
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-13
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-14
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-15
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-16
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-17
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-18
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-19
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-20
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-21
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-22
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-23
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-24
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-25
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-26
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-27
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-28
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-29
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-start-paper-x0-30
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-template-start-paper
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-template-start-paper-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-template-start-paper-ms-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-template-start-paper-x-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-template-start-paper-x0-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n512-template-start-paper-x5-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-01
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-02
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-03
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-04
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-05
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-06
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-07
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-08
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-09
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-10
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-100
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-150
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-20
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-200
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-30
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-50
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-97
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-98
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-99
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-01
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-02
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-03
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-04
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-05
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-06
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-07
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-08
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-09
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-10
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-100
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-11
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-12
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-13
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-14
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-15
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-16
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-17
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-18
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-19
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-20
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-21
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-22
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-23
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-24
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-25
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-26
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-27
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-30
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-50
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-97
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-98
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-start-paper-x0-99
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-template-start-paper
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-template-start-paper-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-template-start-paper-ms-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-template-start-paper-prec-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-template-start-paper-x-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-template-start-paper-x0-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-template-start-paper-x0-prec-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 suite=u-ch427-n96-template-start-paper-x5-00
 cat total-$suite.csv >> total-all-suites-paper.csv
-cat blank.txt >> total-all-suites-paper.csv
+
 
 #done
 

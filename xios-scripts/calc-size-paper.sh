@@ -14,16 +14,12 @@ touch total-all-suites-paper.csv
 #do
 	suite=u-ch427-n96-start-paper
 	cat total-$suite.csv >> total-all-suites-paper.csv
-	cat blank.txt >> total-all-suites-paper.csv
 	suite=u-ch427-n96-template-start-paper-00
         cat total-$suite.csv >> total-all-suites-paper.csv
-        cat blank.txt >> total-all-suites-paper.csv
 	suite=u-ch427-n216-template-start-paper-00
         cat total-$suite.csv >> total-all-suites-paper.csv
-        cat blank.txt >> total-all-suites-paper.csv
         suite=u-ch427-n512-template-start-paper-00
         cat total-$suite.csv >> total-all-suites-paper.csv
-        cat blank.txt >> total-all-suites-paper.csv
 #done
 
 
