@@ -682,4 +682,5 @@ cat total-$suite.csv >> total-all-suites-paper.csv
 
 #done
 
+cp total-all-suites-paper.csv final-total-all-suites-paper.csv
 
