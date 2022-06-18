@@ -3,6 +3,18 @@
 grid=$1
 field=$2
 
+cat >> grids-paper.txt << EOF
+${grid}
+EOF
+
+cat >> fields-paper.txt << EOF
+${field}
+EOF
+
+cat >> grids-fields-paper.txt << EOF
+${grid} ${field}
+EOF
+
 cat >> um-stats-all-paper.xml << EOF
 
 		<field
@@ -17,7 +29,7 @@ cat >> um-stats-all-paper.xml << EOF
 			name="${field}_ens"
 			operation="instant"
 			field_ref="${field}"
-			grid_ref="${grid}_ens_mean"
+			grid_ref="${grid}-ens"
 		/>
 
 		<field
@@ -33,7 +45,7 @@ cat >> um-stats-all-paper.xml << EOF
 			name="${field}_avensq"
 			operation="instant"
 			field_ref="${field}"
-			grid_ref="${grid}_ens_mean"
+			grid_ref="${grid}-ens"
 			> ${field}*${field}
 		</field>
 

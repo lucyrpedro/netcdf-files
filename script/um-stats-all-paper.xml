@@ -11,7 +11,7 @@
 			name="m01s16i202_ens"
 			operation="instant"
 			field_ref="m01s16i202"
-			grid_ref="um-atmos_grid_t_DP500_ens_mean"
+			grid_ref="um-atmos_grid_t_DP500-ens"
 		/>
 
 		<field
@@ -27,7 +27,7 @@
 			name="m01s16i202_avensq"
 			operation="instant"
 			field_ref="m01s16i202"
-			grid_ref="um-atmos_grid_t_DP500_ens_mean"
+			grid_ref="um-atmos_grid_t_DP500-ens"
 			> m01s16i202*m01s16i202
 		</field>
 
@@ -52,7 +52,7 @@
 			name="m01s16i222_ens"
 			operation="instant"
 			field_ref="m01s16i222"
-			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			grid_ref="um-atmos_grid_t_DIAG-ens"
 		/>
 
 		<field
@@ -68,7 +68,7 @@
 			name="m01s16i222_avensq"
 			operation="instant"
 			field_ref="m01s16i222"
-			grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+			grid_ref="um-atmos_grid_t_DIAG-ens"
 			> m01s16i222*m01s16i222
 		</field>
 
@@ -93,7 +93,7 @@
 			name="m01s30i201_ens"
 			operation="instant"
 			field_ref="m01s30i201"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 		/>
 
 		<field
@@ -109,7 +109,7 @@
 			name="m01s30i201_avensq"
 			operation="instant"
 			field_ref="m01s30i201"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 			> m01s30i201*m01s30i201
 		</field>
 
@@ -134,7 +134,7 @@
 			name="m01s30i202_ens"
 			operation="instant"
 			field_ref="m01s30i202"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 		/>
 
 		<field
@@ -150,7 +150,7 @@
 			name="m01s30i202_avensq"
 			operation="instant"
 			field_ref="m01s30i202"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 			> m01s30i202*m01s30i202
 		</field>
 
@@ -175,7 +175,7 @@
 			name="m01s30i203_ens"
 			operation="instant"
 			field_ref="m01s30i203"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 		/>
 
 		<field
@@ -191,7 +191,7 @@
 			name="m01s30i203_avensq"
 			operation="instant"
 			field_ref="m01s30i203"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 			> m01s30i203*m01s30i203
 		</field>
 
@@ -216,7 +216,7 @@
 			name="m01s30i204_ens"
 			operation="instant"
 			field_ref="m01s30i204"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 		/>
 
 		<field
@@ -232,7 +232,7 @@
 			name="m01s30i204_avensq"
 			operation="instant"
 			field_ref="m01s30i204"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 			> m01s30i204*m01s30i204
 		</field>
 
@@ -257,7 +257,7 @@
 			name="m01s30i205_ens"
 			operation="instant"
 			field_ref="m01s30i205"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 		/>
 
 		<field
@@ -273,7 +273,7 @@
 			name="m01s30i205_avensq"
 			operation="instant"
 			field_ref="m01s30i205"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 			> m01s30i205*m01s30i205
 		</field>
 
@@ -298,7 +298,7 @@
 			name="m01s30i301_ens"
 			operation="instant"
 			field_ref="m01s30i301"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 		/>
 
 		<field
@@ -314,7 +314,7 @@
 			name="m01s30i301_avensq"
 			operation="instant"
 			field_ref="m01s30i301"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 			> m01s30i301*m01s30i301
 		</field>
 
@@ -339,7 +339,7 @@
 			name="m01s30i455_ens"
 			operation="instant"
 			field_ref="m01s30i455"
-			grid_ref="um-atmos_grid_uv_DIAG_ens_mean"
+			grid_ref="um-atmos_grid_uv_DIAG-ens"
 		/>
 
 		<field
@@ -355,7 +355,7 @@
 			name="m01s30i455_avensq"
 			operation="instant"
 			field_ref="m01s30i455"
-			grid_ref="um-atmos_grid_uv_DIAG_ens_mean"
+			grid_ref="um-atmos_grid_uv_DIAG-ens"
 			> m01s30i455*m01s30i455
 		</field>
 
@@ -380,7 +380,7 @@
 			name="m01s30i456_ens"
 			operation="instant"
 			field_ref="m01s30i456"
-			grid_ref="um-atmos_grid_uv_DIAG_ens_mean"
+			grid_ref="um-atmos_grid_uv_DIAG-ens"
 		/>
 
 		<field
@@ -396,7 +396,7 @@
 			name="m01s30i456_avensq"
 			operation="instant"
 			field_ref="m01s30i456"
-			grid_ref="um-atmos_grid_uv_DIAG_ens_mean"
+			grid_ref="um-atmos_grid_uv_DIAG-ens"
 			> m01s30i456*m01s30i456
 		</field>
 
@@ -421,7 +421,7 @@
 			name="m01s30i457_ens"
 			operation="instant"
 			field_ref="m01s30i457"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 		/>
 
 		<field
@@ -437,7 +437,7 @@
 			name="m01s30i457_avensq"
 			operation="instant"
 			field_ref="m01s30i457"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 			> m01s30i457*m01s30i457
 		</field>
 
@@ -462,7 +462,7 @@
 			name="m01s30i458_ens"
 			operation="instant"
 			field_ref="m01s30i458"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 		/>
 
 		<field
@@ -478,7 +478,7 @@
 			name="m01s30i458_avensq"
 			operation="instant"
 			field_ref="m01s30i458"
-			grid_ref="um-atmos_grid_uv_DP6_ens_mean"
+			grid_ref="um-atmos_grid_uv_DP6-ens"
 			> m01s30i458*m01s30i458
 		</field>
 
@@ -503,7 +503,7 @@
 			name="m01s34i008_ens"
 			operation="instant"
 			field_ref="m01s34i008"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -519,7 +519,7 @@
 			name="m01s34i008_avensq"
 			operation="instant"
 			field_ref="m01s34i008"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i008*m01s34i008
 		</field>
 
@@ -544,7 +544,7 @@
 			name="m01s34i071_ens"
 			operation="instant"
 			field_ref="m01s34i071"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -560,7 +560,7 @@
 			name="m01s34i071_avensq"
 			operation="instant"
 			field_ref="m01s34i071"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i071*m01s34i071
 		</field>
 
@@ -585,7 +585,7 @@
 			name="m01s34i072_ens"
 			operation="instant"
 			field_ref="m01s34i072"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -601,7 +601,7 @@
 			name="m01s34i072_avensq"
 			operation="instant"
 			field_ref="m01s34i072"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i072*m01s34i072
 		</field>
 
@@ -626,7 +626,7 @@
 			name="m01s34i073_ens"
 			operation="instant"
 			field_ref="m01s34i073"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -642,7 +642,7 @@
 			name="m01s34i073_avensq"
 			operation="instant"
 			field_ref="m01s34i073"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i073*m01s34i073
 		</field>
 
@@ -667,7 +667,7 @@
 			name="m01s34i075_ens"
 			operation="instant"
 			field_ref="m01s34i075"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -683,7 +683,7 @@
 			name="m01s34i075_avensq"
 			operation="instant"
 			field_ref="m01s34i075"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i075*m01s34i075
 		</field>
 
@@ -708,7 +708,7 @@
 			name="m01s34i091_ens"
 			operation="instant"
 			field_ref="m01s34i091"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -724,7 +724,7 @@
 			name="m01s34i091_avensq"
 			operation="instant"
 			field_ref="m01s34i091"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i091*m01s34i091
 		</field>
 
@@ -749,7 +749,7 @@
 			name="m01s34i092_ens"
 			operation="instant"
 			field_ref="m01s34i092"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -765,7 +765,7 @@
 			name="m01s34i092_avensq"
 			operation="instant"
 			field_ref="m01s34i092"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i092*m01s34i092
 		</field>
 
@@ -790,7 +790,7 @@
 			name="m01s34i101_ens"
 			operation="instant"
 			field_ref="m01s34i101"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -806,7 +806,7 @@
 			name="m01s34i101_avensq"
 			operation="instant"
 			field_ref="m01s34i101"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i101*m01s34i101
 		</field>
 
@@ -831,7 +831,7 @@
 			name="m01s34i102_ens"
 			operation="instant"
 			field_ref="m01s34i102"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -847,7 +847,7 @@
 			name="m01s34i102_avensq"
 			operation="instant"
 			field_ref="m01s34i102"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i102*m01s34i102
 		</field>
 
@@ -872,7 +872,7 @@
 			name="m01s34i103_ens"
 			operation="instant"
 			field_ref="m01s34i103"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -888,7 +888,7 @@
 			name="m01s34i103_avensq"
 			operation="instant"
 			field_ref="m01s34i103"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i103*m01s34i103
 		</field>
 
@@ -913,7 +913,7 @@
 			name="m01s34i104_ens"
 			operation="instant"
 			field_ref="m01s34i104"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -929,7 +929,7 @@
 			name="m01s34i104_avensq"
 			operation="instant"
 			field_ref="m01s34i104"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i104*m01s34i104
 		</field>
 
@@ -954,7 +954,7 @@
 			name="m01s34i105_ens"
 			operation="instant"
 			field_ref="m01s34i105"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -970,7 +970,7 @@
 			name="m01s34i105_avensq"
 			operation="instant"
 			field_ref="m01s34i105"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i105*m01s34i105
 		</field>
 
@@ -995,7 +995,7 @@
 			name="m01s34i106_ens"
 			operation="instant"
 			field_ref="m01s34i106"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1011,7 +1011,7 @@
 			name="m01s34i106_avensq"
 			operation="instant"
 			field_ref="m01s34i106"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i106*m01s34i106
 		</field>
 
@@ -1036,7 +1036,7 @@
 			name="m01s34i107_ens"
 			operation="instant"
 			field_ref="m01s34i107"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1052,7 +1052,7 @@
 			name="m01s34i107_avensq"
 			operation="instant"
 			field_ref="m01s34i107"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i107*m01s34i107
 		</field>
 
@@ -1077,7 +1077,7 @@
 			name="m01s34i108_ens"
 			operation="instant"
 			field_ref="m01s34i108"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1093,7 +1093,7 @@
 			name="m01s34i108_avensq"
 			operation="instant"
 			field_ref="m01s34i108"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i108*m01s34i108
 		</field>
 
@@ -1118,7 +1118,7 @@
 			name="m01s34i109_ens"
 			operation="instant"
 			field_ref="m01s34i109"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1134,7 +1134,7 @@
 			name="m01s34i109_avensq"
 			operation="instant"
 			field_ref="m01s34i109"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i109*m01s34i109
 		</field>
 
@@ -1159,7 +1159,7 @@
 			name="m01s34i110_ens"
 			operation="instant"
 			field_ref="m01s34i110"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1175,7 +1175,7 @@
 			name="m01s34i110_avensq"
 			operation="instant"
 			field_ref="m01s34i110"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i110*m01s34i110
 		</field>
 
@@ -1200,7 +1200,7 @@
 			name="m01s34i111_ens"
 			operation="instant"
 			field_ref="m01s34i111"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1216,7 +1216,7 @@
 			name="m01s34i111_avensq"
 			operation="instant"
 			field_ref="m01s34i111"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i111*m01s34i111
 		</field>
 
@@ -1241,7 +1241,7 @@
 			name="m01s34i113_ens"
 			operation="instant"
 			field_ref="m01s34i113"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1257,7 +1257,7 @@
 			name="m01s34i113_avensq"
 			operation="instant"
 			field_ref="m01s34i113"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i113*m01s34i113
 		</field>
 
@@ -1282,7 +1282,7 @@
 			name="m01s34i114_ens"
 			operation="instant"
 			field_ref="m01s34i114"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1298,7 +1298,7 @@
 			name="m01s34i114_avensq"
 			operation="instant"
 			field_ref="m01s34i114"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i114*m01s34i114
 		</field>
 
@@ -1323,7 +1323,7 @@
 			name="m01s34i115_ens"
 			operation="instant"
 			field_ref="m01s34i115"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1339,7 +1339,7 @@
 			name="m01s34i115_avensq"
 			operation="instant"
 			field_ref="m01s34i115"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i115*m01s34i115
 		</field>
 
@@ -1364,7 +1364,7 @@
 			name="m01s34i116_ens"
 			operation="instant"
 			field_ref="m01s34i116"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1380,7 +1380,7 @@
 			name="m01s34i116_avensq"
 			operation="instant"
 			field_ref="m01s34i116"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i116*m01s34i116
 		</field>
 
@@ -1405,7 +1405,7 @@
 			name="m01s34i117_ens"
 			operation="instant"
 			field_ref="m01s34i117"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1421,7 +1421,7 @@
 			name="m01s34i117_avensq"
 			operation="instant"
 			field_ref="m01s34i117"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i117*m01s34i117
 		</field>
 
@@ -1446,7 +1446,7 @@
 			name="m01s34i119_ens"
 			operation="instant"
 			field_ref="m01s34i119"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1462,7 +1462,7 @@
 			name="m01s34i119_avensq"
 			operation="instant"
 			field_ref="m01s34i119"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i119*m01s34i119
 		</field>
 
@@ -1487,7 +1487,7 @@
 			name="m01s34i120_ens"
 			operation="instant"
 			field_ref="m01s34i120"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1503,7 +1503,7 @@
 			name="m01s34i120_avensq"
 			operation="instant"
 			field_ref="m01s34i120"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i120*m01s34i120
 		</field>
 
@@ -1528,7 +1528,7 @@
 			name="m01s34i121_ens"
 			operation="instant"
 			field_ref="m01s34i121"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1544,7 +1544,7 @@
 			name="m01s34i121_avensq"
 			operation="instant"
 			field_ref="m01s34i121"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i121*m01s34i121
 		</field>
 
@@ -1569,7 +1569,7 @@
 			name="m01s34i126_ens"
 			operation="instant"
 			field_ref="m01s34i126"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 		/>
 
 		<field
@@ -1585,7 +1585,7 @@
 			name="m01s34i126_avensq"
 			operation="instant"
 			field_ref="m01s34i126"
-			grid_ref="um-atmos_grid_t_halo_single_DALLTH_ens_mean"
+			grid_ref="um-atmos_grid_t_halo_single_DALLTH-ens"
 			> m01s34i126*m01s34i126
 		</field>
 
