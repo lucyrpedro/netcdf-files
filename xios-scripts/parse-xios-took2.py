@@ -26,7 +26,7 @@ out.writeheader()
 
 data_M = {}
 
-f_dir = open("aux-files/paper.txt", "r")
+f_dir = open("aux-files/paper3.txt", "r")
 for file in f_dir:
     print(file)
 
