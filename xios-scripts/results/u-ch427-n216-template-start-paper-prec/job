@@ -1,23 +1,23 @@
 #!/bin/bash -l
 #
 # ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
-# Suite: u-ch427-n96-start-paper-200
+# Suite: u-ch427-n216-template-start-paper-prec
 # Task: atmos_main.19880901T0000Z
 # Job log directory: 19880901T0000Z/atmos_main/01
 # Job submit method: slurm
-# Execution time limit: 300.0
+# Execution time limit: 1800.0
 
 # DIRECTIVES:
-#SBATCH --job-name=u-ch427-n96-start-paper-200.atmos_main.19880901T0000Z
-#SBATCH --output=cylc-run/u-ch427-n96-start-paper-200/log/job/19880901T0000Z/atmos_main/01/job.out
-#SBATCH --error=cylc-run/u-ch427-n96-start-paper-200/log/job/19880901T0000Z/atmos_main/01/job.err
-#SBATCH --time=5:00
+#SBATCH --job-name=u-ch427-n216-template-start-paper-prec.atmos_main.19880901T0000Z
+#SBATCH --output=cylc-run/u-ch427-n216-template-start-paper-prec/log/job/19880901T0000Z/atmos_main/01/job.out
+#SBATCH --error=cylc-run/u-ch427-n216-template-start-paper-prec/log/job/19880901T0000Z/atmos_main/01/job.err
+#SBATCH --time=30:00
 #SBATCH --export=none
 #SBATCH --chdir=/work/n02/n02/lrpedro
 #SBATCH --partition=standard
 #SBATCH --qos=lowpriority
 #SBATCH --account=n02-cms
-#SBATCH --nodes=803
+#SBATCH --nodes=36
 # N.B. CYLC_DIR has been updated on the remote host
 export CYLC_DIR='/mnt/lustre/a2fs-work1/work/y07/shared/umshared/software/cylc-7.8.7'
 export CYLC_VERSION='7.8.7'
@@ -28,15 +28,15 @@ cylc__job__inst__cylc_env() {
     export CYLC_CYCLING_MODE="360day"
     export CYLC_SUITE_FINAL_CYCLE_POINT="19880901T0000Z"
     export CYLC_SUITE_INITIAL_CYCLE_POINT="19880901T0000Z"
-    export CYLC_SUITE_NAME="u-ch427-n96-start-paper-200"
+    export CYLC_SUITE_NAME="u-ch427-n216-template-start-paper-prec"
     export CYLC_UTC="True"
     export CYLC_VERBOSE="false"
     export TZ="UTC"
 
-    export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n96-start-paper-200"
-    export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n96-start-paper-200"
-    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n96-start-paper-200"
-    export CYLC_SUITE_UUID="7c65d58b-52a6-4df0-a8da-eeb4b02a2774"
+    export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n216-template-start-paper-prec"
+    export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n216-template-start-paper-prec"
+    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n216-template-start-paper-prec"
+    export CYLC_SUITE_UUID="75d71414-c84e-4ab9-babe-cb0aa7143981"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19880901T0000Z/atmos_main/01"
@@ -67,17 +67,17 @@ cylc__job__inst__user_env() {
     XIOS_XML="$CYLC_SUITE_SHARE_DIR/data/xml"
     USE_XIOS="true"
     XIOS_PATH="/work/n02/n02/jwc/XIOS/extract/xios_trunk_r2245"
-    UM_ATM_NENS="200"
+    UM_ATM_NENS="2"
     MODELS="um_ens xios"
     TASK_NAME_ROOT="atmos_ens"
     FLUME_IOS_NPROC="0"
     RCF_NPROCX="24"
     RCF_NPROCY="16"
-    ROSE_APP_OPT_CONF_KEYS="(ga7p0) (n96e) (360day)"
+    ROSE_APP_OPT_CONF_KEYS="(ga7p0) (n216e) (360day)"
     ROSE_TASK_APP="um"
-    UM_ATM_NPROCX="16"
-    UM_ATM_NPROCY="16"
-    XIOS_NPROC="6"
+    UM_ATM_NPROCX="32"
+    UM_ATM_NPROCY="28"
+    XIOS_NPROC="16"
     ATMOS_EXEC="$CYLC_SUITE_SHARE_DIR/fcm_make_um/build-atmos/bin/um-atmos.exe"
     HYPERTHREADS="1"
     OMP_NUM_THREADS="2"
@@ -89,8 +89,8 @@ cylc__job__inst__user_env() {
     ROSE_LAUNCHER="srun"
     OMP_PLACES="cores"
     FI_OFI_RXM_SAR_LIMIT="64K"
-    ROSE_LAUNCHER_PREOPTS_UM="--het-group=0 --hint=nomultithread --distribution=block:block --nodes=4 --ntasks=256 --tasks-per-node=64 --cpus-per-task=2 env OMP_NUM_THREADS=2 HYPERTHREADS=1"
-    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=200 --cpu-bind=cores --export=all --nodes=3 --ntasks=6 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
+    ROSE_LAUNCHER_PREOPTS_UM="--het-group=0 --hint=nomultithread --distribution=block:block --nodes=14 --ntasks=896 --tasks-per-node=64 --cpus-per-task=2 env OMP_NUM_THREADS=2 HYPERTHREADS=1"
+    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=2 --cpu-bind=cores --export=all --nodes=8 --ntasks=16 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
     DATAM="$ROSE_DATA/History_Data"
     DATAW="$CYLC_TASK_WORK_PATH"
 }
