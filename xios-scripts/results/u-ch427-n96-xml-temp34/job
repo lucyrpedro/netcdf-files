@@ -1,16 +1,16 @@
 #!/bin/bash -l
 #
 # ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
-# Suite: u-ch427-n96-xml-temp25
+# Suite: u-ch427-n96-xml-temp34
 # Task: atmos_main.19880901T0000Z
 # Job log directory: 19880901T0000Z/atmos_main/01
 # Job submit method: slurm
 # Execution time limit: 300.0
 
 # DIRECTIVES:
-#SBATCH --job-name=u-ch427-n96-xml-temp25.atmos_main.19880901T0000Z
-#SBATCH --output=cylc-run/u-ch427-n96-xml-temp25/log/job/19880901T0000Z/atmos_main/01/job.out
-#SBATCH --error=cylc-run/u-ch427-n96-xml-temp25/log/job/19880901T0000Z/atmos_main/01/job.err
+#SBATCH --job-name=u-ch427-n96-xml-temp34.atmos_main.19880901T0000Z
+#SBATCH --output=cylc-run/u-ch427-n96-xml-temp34/log/job/19880901T0000Z/atmos_main/01/job.out
+#SBATCH --error=cylc-run/u-ch427-n96-xml-temp34/log/job/19880901T0000Z/atmos_main/01/job.err
 #SBATCH --time=5:00
 #SBATCH --export=none
 #SBATCH --chdir=/work/n02/n02/lrpedro
@@ -29,15 +29,15 @@ cylc__job__inst__cylc_env() {
     export CYLC_CYCLING_MODE="360day"
     export CYLC_SUITE_FINAL_CYCLE_POINT="19880901T0000Z"
     export CYLC_SUITE_INITIAL_CYCLE_POINT="19880901T0000Z"
-    export CYLC_SUITE_NAME="u-ch427-n96-xml-temp25"
+    export CYLC_SUITE_NAME="u-ch427-n96-xml-temp34"
     export CYLC_UTC="True"
     export CYLC_VERBOSE="false"
     export TZ="UTC"
 
-    export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n96-xml-temp25"
-    export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n96-xml-temp25"
-    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n96-xml-temp25"
-    export CYLC_SUITE_UUID="235b3904-268e-496c-95fe-1c613c327dac"
+    export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n96-xml-temp34"
+    export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n96-xml-temp34"
+    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n96-xml-temp34"
+    export CYLC_SUITE_UUID="bd12c59a-4a43-4b0a-b10c-b545c876c95b"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19880901T0000Z/atmos_main/01"
