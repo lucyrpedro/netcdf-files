@@ -45,4 +45,3 @@ do
 	rm total-$c
 done
 
-rm t1
