@@ -3,7 +3,7 @@ Enabling 0 I/O PEs
 [0] OpenMP Specification: 201511
 
 *******************************************************************************
-**************** Start of UM RUN Job : 18:49:59 on 13/06/2022 *****************
+**************** Start of UM RUN Job : 03:12:46 on 23/06/2022 *****************
 **************** Based upon UM release vn11.6             *****************
 *******************************************************************************
 
@@ -452,36 +452,6 @@ If you are using OpenMPI or think your MPI is thread capable, try setting ios_fo
 ????????????????????????????????????????????????????????????????????????????????
 
 
-????????????????????????????????????????????????????????????????????????????????
-??????????????????????????????      WARNING       ??????????????????????????????
-?  Warning code: -10
-?  Warning from routine: UM_XIOS_GET_AXIS_INFO
-?  Warning message: Axis element ensemble has no standard_name value defined and is not a pseudo axis, skipping field
-?  Warning from processor: 0
-?  Warning number: 32
-????????????????????????????????????????????????????????????????????????????????
-
-
-????????????????????????????????????????????????????????????????????????????????
-??????????????????????????????      WARNING       ??????????????????????????????
-?  Warning code: -20
-?  Warning from routine: UM_XIOS_GET_AXIS_INFO
-?  Warning message: Axis element ensemble has no n_glo value defined, skipping field
-?  Warning from processor: 0
-?  Warning number: 33
-????????????????????????????????????????????????????????????????????????????????
-
-
-????????????????????????????????????????????????????????????????????????????????
-??????????????????????????????      WARNING       ??????????????????????????????
-?  Warning code: -30
-?  Warning from routine: UM_XIOS_GET_AXIS_INFO
-?  Warning message: Axis element ensemble has no values defined, skipping field
-?  Warning from processor: 0
-?  Warning number: 34
-????????????????????????????????????????????????????????????????????????????????
-
-
 INTEGER CONSTANTS
 -----------------
 Number of timesteps since start of run - -32768
@@ -513,7 +483,7 @@ Mass, energy, energy drift =   0.5129E+19  0.1311E+25 -0.5774E-07
 
 ************************  PE configuration for this run  ***********************
 ****  PE configuration:    16 processors East-West    16 processors North-South *
-Atm_Step: Info: Starting timestep        0 at time=    10.391 seconds
+Atm_Step: Info: Starting timestep        0 at time=    10.517 seconds
 
 Atm_Step: Timestep        0   Model time:   1988-09-01 00:00:00
 
@@ -523,10 +493,10 @@ Atm_Step: Timestep        0   Model time:   1988-09-01 00:00:00
 ?  Warning from routine: eg_SISL_setcon
 ?  Warning message:  Constant gravity enforced
 ?  Warning from processor: 0
-?  Warning number: 35
+?  Warning number: 32
 ????????????????????????????????????????????????????????????????????????????????
 
-Atm_Step: Info: Starting timestep        1 at time=    13.983 seconds
+Atm_Step: Info: Starting timestep        1 at time=    12.336 seconds
 
 Atm_Step: Timestep        1   Model time:   1988-09-01 00:20:00
 ***************************************************************
@@ -548,14 +518,14 @@ Atm_Step: Timestep        1   Model time:   1988-09-01 00:20:00
 ?  Warning from routine: ASAD_CINIT
 ?  Warning message:  NRSTEPS IS OUT OF RANGE, RESETTING
 ?  Warning from processor: 0
-?  Warning number: 36
+?  Warning number: 33
 ????????????????????????????????????????????????????????????????????????????????
 
 
 ********************************************************************************
-Atm_Step: Info: timestep        1 took      8.390 seconds
+Atm_Step: Info: timestep        1 took      8.471 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        2 at time=    22.377 seconds
+Atm_Step: Info: Starting timestep        2 at time=    20.811 seconds
 
 Atm_Step: Timestep        2   Model time:   1988-09-01 00:40:00
 ***************************************************************
@@ -572,9 +542,9 @@ Atm_Step: Timestep        2   Model time:   1988-09-01 00:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        2 took      0.400 seconds
+Atm_Step: Info: timestep        2 took      0.391 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        3 at time=    22.779 seconds
+Atm_Step: Info: Starting timestep        3 at time=    21.203 seconds
 
 Atm_Step: Timestep        3   Model time:   1988-09-01 01:00:00
 ***************************************************************
@@ -591,9 +561,9 @@ Atm_Step: Timestep        3   Model time:   1988-09-01 01:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        3 took      0.571 seconds
+Atm_Step: Info: timestep        3 took      0.534 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        4 at time=    23.403 seconds
+Atm_Step: Info: Starting timestep        4 at time=    21.789 seconds
 
 Atm_Step: Timestep        4   Model time:   1988-09-01 01:20:00
 ***************************************************************
@@ -610,9 +580,9 @@ Atm_Step: Timestep        4   Model time:   1988-09-01 01:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        4 took      0.853 seconds
+Atm_Step: Info: timestep        4 took      0.796 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        5 at time=    24.257 seconds
+Atm_Step: Info: Starting timestep        5 at time=    22.587 seconds
 
 Atm_Step: Timestep        5   Model time:   1988-09-01 01:40:00
 ***************************************************************
@@ -629,9 +599,9 @@ Atm_Step: Timestep        5   Model time:   1988-09-01 01:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        5 took      0.395 seconds
+Atm_Step: Info: timestep        5 took      0.356 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        6 at time=    24.653 seconds
+Atm_Step: Info: Starting timestep        6 at time=    22.946 seconds
 
 Atm_Step: Timestep        6   Model time:   1988-09-01 02:00:00
 ***************************************************************
@@ -648,9 +618,9 @@ Atm_Step: Timestep        6   Model time:   1988-09-01 02:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        6 took      0.618 seconds
+Atm_Step: Info: timestep        6 took      0.524 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        7 at time=    25.342 seconds
+Atm_Step: Info: Starting timestep        7 at time=    23.526 seconds
 
 Atm_Step: Timestep        7   Model time:   1988-09-01 02:20:00
 ***************************************************************
@@ -667,9 +637,9 @@ Atm_Step: Timestep        7   Model time:   1988-09-01 02:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        7 took      0.829 seconds
+Atm_Step: Info: timestep        7 took      0.789 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        8 at time=    26.173 seconds
+Atm_Step: Info: Starting timestep        8 at time=    24.315 seconds
 
 Atm_Step: Timestep        8   Model time:   1988-09-01 02:40:00
 ***************************************************************
@@ -686,9 +656,9 @@ Atm_Step: Timestep        8   Model time:   1988-09-01 02:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        8 took      0.396 seconds
+Atm_Step: Info: timestep        8 took      0.359 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep        9 at time=    26.570 seconds
+Atm_Step: Info: Starting timestep        9 at time=    24.677 seconds
 
 Atm_Step: Timestep        9   Model time:   1988-09-01 03:00:00
 ***************************************************************
@@ -705,9 +675,9 @@ Atm_Step: Timestep        9   Model time:   1988-09-01 03:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep        9 took      0.559 seconds
+Atm_Step: Info: timestep        9 took      0.523 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       10 at time=    27.182 seconds
+Atm_Step: Info: Starting timestep       10 at time=    25.255 seconds
 
 Atm_Step: Timestep       10   Model time:   1988-09-01 03:20:00
 ***************************************************************
@@ -724,9 +694,9 @@ Atm_Step: Timestep       10   Model time:   1988-09-01 03:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       10 took      0.829 seconds
+Atm_Step: Info: timestep       10 took      0.792 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       11 at time=    28.012 seconds
+Atm_Step: Info: Starting timestep       11 at time=    26.048 seconds
 
 Atm_Step: Timestep       11   Model time:   1988-09-01 03:40:00
 ***************************************************************
@@ -743,9 +713,9 @@ Atm_Step: Timestep       11   Model time:   1988-09-01 03:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       11 took      0.393 seconds
+Atm_Step: Info: timestep       11 took      0.358 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       12 at time=    28.408 seconds
+Atm_Step: Info: Starting timestep       12 at time=    26.408 seconds
 
 Atm_Step: Timestep       12   Model time:   1988-09-01 04:00:00
 ***************************************************************
@@ -762,9 +732,9 @@ Atm_Step: Timestep       12   Model time:   1988-09-01 04:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       12 took      0.610 seconds
+Atm_Step: Info: timestep       12 took      0.524 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       13 at time=    29.075 seconds
+Atm_Step: Info: Starting timestep       13 at time=    26.985 seconds
 
 Atm_Step: Timestep       13   Model time:   1988-09-01 04:20:00
 ***************************************************************
@@ -781,9 +751,9 @@ Atm_Step: Timestep       13   Model time:   1988-09-01 04:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       13 took      0.831 seconds
+Atm_Step: Info: timestep       13 took      0.789 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       14 at time=    29.907 seconds
+Atm_Step: Info: Starting timestep       14 at time=    27.776 seconds
 
 Atm_Step: Timestep       14   Model time:   1988-09-01 04:40:00
 ***************************************************************
@@ -800,9 +770,9 @@ Atm_Step: Timestep       14   Model time:   1988-09-01 04:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       14 took      0.393 seconds
+Atm_Step: Info: timestep       14 took      0.356 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       15 at time=    30.301 seconds
+Atm_Step: Info: Starting timestep       15 at time=    28.133 seconds
 
 Atm_Step: Timestep       15   Model time:   1988-09-01 05:00:00
 ***************************************************************
@@ -819,9 +789,9 @@ Atm_Step: Timestep       15   Model time:   1988-09-01 05:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       15 took      0.565 seconds
+Atm_Step: Info: timestep       15 took      0.525 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       16 at time=    30.923 seconds
+Atm_Step: Info: Starting timestep       16 at time=    28.714 seconds
 
 Atm_Step: Timestep       16   Model time:   1988-09-01 05:20:00
 ***************************************************************
@@ -838,9 +808,9 @@ Atm_Step: Timestep       16   Model time:   1988-09-01 05:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       16 took      0.820 seconds
+Atm_Step: Info: timestep       16 took      0.785 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       17 at time=    31.744 seconds
+Atm_Step: Info: Starting timestep       17 at time=    29.500 seconds
 
 Atm_Step: Timestep       17   Model time:   1988-09-01 05:40:00
 ***************************************************************
@@ -857,9 +827,9 @@ Atm_Step: Timestep       17   Model time:   1988-09-01 05:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       17 took      0.391 seconds
+Atm_Step: Info: timestep       17 took      0.356 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       18 at time=    32.138 seconds
+Atm_Step: Info: Starting timestep       18 at time=    29.858 seconds
 
 Atm_Step: Timestep       18   Model time:   1988-09-01 06:00:00
 ***************************************************************
@@ -876,9 +846,9 @@ Atm_Step: Timestep       18   Model time:   1988-09-01 06:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       18 took      0.609 seconds
+Atm_Step: Info: timestep       18 took      0.519 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       19 at time=    32.803 seconds
+Atm_Step: Info: Starting timestep       19 at time=    30.434 seconds
 
 Atm_Step: Timestep       19   Model time:   1988-09-01 06:20:00
 ***************************************************************
@@ -895,9 +865,9 @@ Atm_Step: Timestep       19   Model time:   1988-09-01 06:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       19 took      0.829 seconds
+Atm_Step: Info: timestep       19 took      0.790 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       20 at time=    33.633 seconds
+Atm_Step: Info: Starting timestep       20 at time=    31.228 seconds
 
 Atm_Step: Timestep       20   Model time:   1988-09-01 06:40:00
 ***************************************************************
@@ -914,9 +884,9 @@ Atm_Step: Timestep       20   Model time:   1988-09-01 06:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       20 took      0.397 seconds
+Atm_Step: Info: timestep       20 took      0.360 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       21 at time=    34.031 seconds
+Atm_Step: Info: Starting timestep       21 at time=    31.589 seconds
 
 Atm_Step: Timestep       21   Model time:   1988-09-01 07:00:00
 ***************************************************************
@@ -933,9 +903,9 @@ Atm_Step: Timestep       21   Model time:   1988-09-01 07:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       21 took      0.562 seconds
+Atm_Step: Info: timestep       21 took      0.525 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       22 at time=    34.650 seconds
+Atm_Step: Info: Starting timestep       22 at time=    32.171 seconds
 
 Atm_Step: Timestep       22   Model time:   1988-09-01 07:20:00
 ***************************************************************
@@ -952,9 +922,9 @@ Atm_Step: Timestep       22   Model time:   1988-09-01 07:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       22 took      0.831 seconds
+Atm_Step: Info: timestep       22 took      0.795 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       23 at time=    35.484 seconds
+Atm_Step: Info: Starting timestep       23 at time=    32.966 seconds
 
 Atm_Step: Timestep       23   Model time:   1988-09-01 07:40:00
 ***************************************************************
@@ -971,9 +941,9 @@ Atm_Step: Timestep       23   Model time:   1988-09-01 07:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       23 took      0.397 seconds
+Atm_Step: Info: timestep       23 took      0.361 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       24 at time=    35.882 seconds
+Atm_Step: Info: Starting timestep       24 at time=    33.329 seconds
 
 Atm_Step: Timestep       24   Model time:   1988-09-01 08:00:00
 ***************************************************************
@@ -990,9 +960,9 @@ Atm_Step: Timestep       24   Model time:   1988-09-01 08:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       24 took      0.623 seconds
+Atm_Step: Info: timestep       24 took      0.527 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       25 at time=    36.605 seconds
+Atm_Step: Info: Starting timestep       25 at time=    33.914 seconds
 
 Atm_Step: Timestep       25   Model time:   1988-09-01 08:20:00
 ***************************************************************
@@ -1009,9 +979,9 @@ Atm_Step: Timestep       25   Model time:   1988-09-01 08:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       25 took      0.833 seconds
+Atm_Step: Info: timestep       25 took      0.795 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       26 at time=    37.440 seconds
+Atm_Step: Info: Starting timestep       26 at time=    34.710 seconds
 
 Atm_Step: Timestep       26   Model time:   1988-09-01 08:40:00
 ***************************************************************
@@ -1028,9 +998,9 @@ Atm_Step: Timestep       26   Model time:   1988-09-01 08:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       26 took      0.391 seconds
+Atm_Step: Info: timestep       26 took      0.353 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       27 at time=    37.832 seconds
+Atm_Step: Info: Starting timestep       27 at time=    35.067 seconds
 
 Atm_Step: Timestep       27   Model time:   1988-09-01 09:00:00
 ***************************************************************
@@ -1047,9 +1017,9 @@ Atm_Step: Timestep       27   Model time:   1988-09-01 09:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       27 took      0.563 seconds
+Atm_Step: Info: timestep       27 took      0.527 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       28 at time=    38.453 seconds
+Atm_Step: Info: Starting timestep       28 at time=    35.651 seconds
 
 Atm_Step: Timestep       28   Model time:   1988-09-01 09:20:00
 ***************************************************************
@@ -1066,9 +1036,9 @@ Atm_Step: Timestep       28   Model time:   1988-09-01 09:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       28 took      0.829 seconds
+Atm_Step: Info: timestep       28 took      0.791 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       29 at time=    39.282 seconds
+Atm_Step: Info: Starting timestep       29 at time=    36.444 seconds
 
 Atm_Step: Timestep       29   Model time:   1988-09-01 09:40:00
 ***************************************************************
@@ -1085,9 +1055,9 @@ Atm_Step: Timestep       29   Model time:   1988-09-01 09:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       29 took      0.395 seconds
+Atm_Step: Info: timestep       29 took      0.355 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       30 at time=    39.678 seconds
+Atm_Step: Info: Starting timestep       30 at time=    36.804 seconds
 
 Atm_Step: Timestep       30   Model time:   1988-09-01 10:00:00
 ***************************************************************
@@ -1104,9 +1074,9 @@ Atm_Step: Timestep       30   Model time:   1988-09-01 10:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       30 took      0.614 seconds
+Atm_Step: Info: timestep       30 took      0.526 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       31 at time=    40.351 seconds
+Atm_Step: Info: Starting timestep       31 at time=    37.388 seconds
 
 Atm_Step: Timestep       31   Model time:   1988-09-01 10:20:00
 ***************************************************************
@@ -1123,9 +1093,9 @@ Atm_Step: Timestep       31   Model time:   1988-09-01 10:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       31 took      0.831 seconds
+Atm_Step: Info: timestep       31 took      0.794 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       32 at time=    41.184 seconds
+Atm_Step: Info: Starting timestep       32 at time=    38.183 seconds
 
 Atm_Step: Timestep       32   Model time:   1988-09-01 10:40:00
 ***************************************************************
@@ -1142,9 +1112,9 @@ Atm_Step: Timestep       32   Model time:   1988-09-01 10:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       32 took      0.397 seconds
+Atm_Step: Info: timestep       32 took      0.360 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       33 at time=    41.583 seconds
+Atm_Step: Info: Starting timestep       33 at time=    38.547 seconds
 
 Atm_Step: Timestep       33   Model time:   1988-09-01 11:00:00
 ***************************************************************
@@ -1161,9 +1131,9 @@ Atm_Step: Timestep       33   Model time:   1988-09-01 11:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       33 took      0.562 seconds
+Atm_Step: Info: timestep       33 took      0.525 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       34 at time=    42.204 seconds
+Atm_Step: Info: Starting timestep       34 at time=    39.130 seconds
 
 Atm_Step: Timestep       34   Model time:   1988-09-01 11:20:00
 ***************************************************************
@@ -1180,9 +1150,9 @@ Atm_Step: Timestep       34   Model time:   1988-09-01 11:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       34 took      0.830 seconds
+Atm_Step: Info: timestep       34 took      0.795 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       35 at time=    43.034 seconds
+Atm_Step: Info: Starting timestep       35 at time=    39.926 seconds
 
 Atm_Step: Timestep       35   Model time:   1988-09-01 11:40:00
 ***************************************************************
@@ -1199,9 +1169,9 @@ Atm_Step: Timestep       35   Model time:   1988-09-01 11:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       35 took      0.399 seconds
+Atm_Step: Info: timestep       35 took      0.360 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       36 at time=    43.434 seconds
+Atm_Step: Info: Starting timestep       36 at time=    40.289 seconds
 
 Atm_Step: Timestep       36   Model time:   1988-09-01 12:00:00
 ***************************************************************
@@ -1218,9 +1188,9 @@ Atm_Step: Timestep       36   Model time:   1988-09-01 12:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       36 took      0.618 seconds
+Atm_Step: Info: timestep       36 took      0.527 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       37 at time=    44.115 seconds
+Atm_Step: Info: Starting timestep       37 at time=    40.872 seconds
 
 Atm_Step: Timestep       37   Model time:   1988-09-01 12:20:00
 ***************************************************************
@@ -1237,9 +1207,9 @@ Atm_Step: Timestep       37   Model time:   1988-09-01 12:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       37 took      0.837 seconds
+Atm_Step: Info: timestep       37 took      0.796 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       38 at time=    44.953 seconds
+Atm_Step: Info: Starting timestep       38 at time=    41.672 seconds
 
 Atm_Step: Timestep       38   Model time:   1988-09-01 12:40:00
 ***************************************************************
@@ -1256,9 +1226,9 @@ Atm_Step: Timestep       38   Model time:   1988-09-01 12:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       38 took      0.403 seconds
+Atm_Step: Info: timestep       38 took      0.366 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       39 at time=    45.357 seconds
+Atm_Step: Info: Starting timestep       39 at time=    42.040 seconds
 
 Atm_Step: Timestep       39   Model time:   1988-09-01 13:00:00
 ***************************************************************
@@ -1275,9 +1245,9 @@ Atm_Step: Timestep       39   Model time:   1988-09-01 13:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       39 took      0.568 seconds
+Atm_Step: Info: timestep       39 took      0.531 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       40 at time=    45.982 seconds
+Atm_Step: Info: Starting timestep       40 at time=    42.626 seconds
 
 Atm_Step: Timestep       40   Model time:   1988-09-01 13:20:00
 ***************************************************************
@@ -1294,9 +1264,9 @@ Atm_Step: Timestep       40   Model time:   1988-09-01 13:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       40 took      0.835 seconds
+Atm_Step: Info: timestep       40 took      0.799 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       41 at time=    46.819 seconds
+Atm_Step: Info: Starting timestep       41 at time=    43.427 seconds
 
 Atm_Step: Timestep       41   Model time:   1988-09-01 13:40:00
 ***************************************************************
@@ -1313,9 +1283,9 @@ Atm_Step: Timestep       41   Model time:   1988-09-01 13:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       41 took      0.395 seconds
+Atm_Step: Info: timestep       41 took      0.357 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       42 at time=    47.216 seconds
+Atm_Step: Info: Starting timestep       42 at time=    43.784 seconds
 
 Atm_Step: Timestep       42   Model time:   1988-09-01 14:00:00
 ***************************************************************
@@ -1332,9 +1302,9 @@ Atm_Step: Timestep       42   Model time:   1988-09-01 14:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       42 took      0.623 seconds
+Atm_Step: Info: timestep       42 took      0.530 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       43 at time=    47.899 seconds
+Atm_Step: Info: Starting timestep       43 at time=    44.371 seconds
 
 Atm_Step: Timestep       43   Model time:   1988-09-01 14:20:00
 ***************************************************************
@@ -1351,9 +1321,9 @@ Atm_Step: Timestep       43   Model time:   1988-09-01 14:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       43 took      0.830 seconds
+Atm_Step: Info: timestep       43 took      0.790 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       44 at time=    48.729 seconds
+Atm_Step: Info: Starting timestep       44 at time=    45.162 seconds
 
 Atm_Step: Timestep       44   Model time:   1988-09-01 14:40:00
 ***************************************************************
@@ -1370,9 +1340,9 @@ Atm_Step: Timestep       44   Model time:   1988-09-01 14:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       44 took      0.401 seconds
+Atm_Step: Info: timestep       44 took      0.363 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       45 at time=    49.133 seconds
+Atm_Step: Info: Starting timestep       45 at time=    45.528 seconds
 
 Atm_Step: Timestep       45   Model time:   1988-09-01 15:00:00
 ***************************************************************
@@ -1389,9 +1359,9 @@ Atm_Step: Timestep       45   Model time:   1988-09-01 15:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       45 took      0.565 seconds
+Atm_Step: Info: timestep       45 took      0.529 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       46 at time=    49.754 seconds
+Atm_Step: Info: Starting timestep       46 at time=    46.113 seconds
 
 Atm_Step: Timestep       46   Model time:   1988-09-01 15:20:00
 ***************************************************************
@@ -1408,9 +1378,9 @@ Atm_Step: Timestep       46   Model time:   1988-09-01 15:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       46 took      0.836 seconds
+Atm_Step: Info: timestep       46 took      0.799 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       47 at time=    50.592 seconds
+Atm_Step: Info: Starting timestep       47 at time=    46.913 seconds
 
 Atm_Step: Timestep       47   Model time:   1988-09-01 15:40:00
 ***************************************************************
@@ -1427,9 +1397,9 @@ Atm_Step: Timestep       47   Model time:   1988-09-01 15:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       47 took      0.403 seconds
+Atm_Step: Info: timestep       47 took      0.364 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       48 at time=    50.996 seconds
+Atm_Step: Info: Starting timestep       48 at time=    47.278 seconds
 
 Atm_Step: Timestep       48   Model time:   1988-09-01 16:00:00
 ***************************************************************
@@ -1446,9 +1416,9 @@ Atm_Step: Timestep       48   Model time:   1988-09-01 16:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       48 took      0.628 seconds
+Atm_Step: Info: timestep       48 took      0.530 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       49 at time=    51.689 seconds
+Atm_Step: Info: Starting timestep       49 at time=    47.865 seconds
 
 Atm_Step: Timestep       49   Model time:   1988-09-01 16:20:00
 ***************************************************************
@@ -1465,9 +1435,9 @@ Atm_Step: Timestep       49   Model time:   1988-09-01 16:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       49 took      0.836 seconds
+Atm_Step: Info: timestep       49 took      0.796 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       50 at time=    52.527 seconds
+Atm_Step: Info: Starting timestep       50 at time=    48.663 seconds
 
 Atm_Step: Timestep       50   Model time:   1988-09-01 16:40:00
 ***************************************************************
@@ -1484,9 +1454,9 @@ Atm_Step: Timestep       50   Model time:   1988-09-01 16:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       50 took      0.401 seconds
+Atm_Step: Info: timestep       50 took      0.363 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       51 at time=    52.928 seconds
+Atm_Step: Info: Starting timestep       51 at time=    49.027 seconds
 
 Atm_Step: Timestep       51   Model time:   1988-09-01 17:00:00
 ***************************************************************
@@ -1503,9 +1473,9 @@ Atm_Step: Timestep       51   Model time:   1988-09-01 17:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       51 took      0.566 seconds
+Atm_Step: Info: timestep       51 took      0.528 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       52 at time=    53.551 seconds
+Atm_Step: Info: Starting timestep       52 at time=    49.613 seconds
 
 Atm_Step: Timestep       52   Model time:   1988-09-01 17:20:00
 ***************************************************************
@@ -1522,9 +1492,9 @@ Atm_Step: Timestep       52   Model time:   1988-09-01 17:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       52 took      0.836 seconds
+Atm_Step: Info: timestep       52 took      0.798 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       53 at time=    54.388 seconds
+Atm_Step: Info: Starting timestep       53 at time=    50.412 seconds
 
 Atm_Step: Timestep       53   Model time:   1988-09-01 17:40:00
 ***************************************************************
@@ -1541,9 +1511,9 @@ Atm_Step: Timestep       53   Model time:   1988-09-01 17:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       53 took      0.401 seconds
+Atm_Step: Info: timestep       53 took      0.363 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       54 at time=    54.790 seconds
+Atm_Step: Info: Starting timestep       54 at time=    50.777 seconds
 
 Atm_Step: Timestep       54   Model time:   1988-09-01 18:00:00
 ***************************************************************
@@ -1560,9 +1530,9 @@ Atm_Step: Timestep       54   Model time:   1988-09-01 18:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       54 took      0.618 seconds
+Atm_Step: Info: timestep       54 took      0.529 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       55 at time=    55.514 seconds
+Atm_Step: Info: Starting timestep       55 at time=    51.364 seconds
 
 Atm_Step: Timestep       55   Model time:   1988-09-01 18:20:00
 ***************************************************************
@@ -1579,9 +1549,9 @@ Atm_Step: Timestep       55   Model time:   1988-09-01 18:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       55 took      0.840 seconds
+Atm_Step: Info: timestep       55 took      0.795 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       56 at time=    56.355 seconds
+Atm_Step: Info: Starting timestep       56 at time=    52.162 seconds
 
 Atm_Step: Timestep       56   Model time:   1988-09-01 18:40:00
 ***************************************************************
@@ -1598,9 +1568,9 @@ Atm_Step: Timestep       56   Model time:   1988-09-01 18:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       56 took      0.399 seconds
+Atm_Step: Info: timestep       56 took      0.362 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       57 at time=    56.755 seconds
+Atm_Step: Info: Starting timestep       57 at time=    52.527 seconds
 
 Atm_Step: Timestep       57   Model time:   1988-09-01 19:00:00
 ***************************************************************
@@ -1617,9 +1587,9 @@ Atm_Step: Timestep       57   Model time:   1988-09-01 19:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       57 took      0.566 seconds
+Atm_Step: Info: timestep       57 took      0.528 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       58 at time=    57.378 seconds
+Atm_Step: Info: Starting timestep       58 at time=    53.113 seconds
 
 Atm_Step: Timestep       58   Model time:   1988-09-01 19:20:00
 ***************************************************************
@@ -1636,9 +1606,9 @@ Atm_Step: Timestep       58   Model time:   1988-09-01 19:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       58 took      0.833 seconds
+Atm_Step: Info: timestep       58 took      0.794 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       59 at time=    58.212 seconds
+Atm_Step: Info: Starting timestep       59 at time=    53.908 seconds
 
 Atm_Step: Timestep       59   Model time:   1988-09-01 19:40:00
 ***************************************************************
@@ -1655,9 +1625,9 @@ Atm_Step: Timestep       59   Model time:   1988-09-01 19:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       59 took      0.392 seconds
+Atm_Step: Info: timestep       59 took      0.356 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       60 at time=    58.607 seconds
+Atm_Step: Info: Starting timestep       60 at time=    54.265 seconds
 
 Atm_Step: Timestep       60   Model time:   1988-09-01 20:00:00
 ***************************************************************
@@ -1674,9 +1644,9 @@ Atm_Step: Timestep       60   Model time:   1988-09-01 20:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       60 took      0.613 seconds
+Atm_Step: Info: timestep       60 took      0.526 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       61 at time=    59.279 seconds
+Atm_Step: Info: Starting timestep       61 at time=    54.848 seconds
 
 Atm_Step: Timestep       61   Model time:   1988-09-01 20:20:00
 ***************************************************************
@@ -1693,9 +1663,9 @@ Atm_Step: Timestep       61   Model time:   1988-09-01 20:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       61 took      0.838 seconds
+Atm_Step: Info: timestep       61 took      0.795 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       62 at time=    60.117 seconds
+Atm_Step: Info: Starting timestep       62 at time=    55.644 seconds
 
 Atm_Step: Timestep       62   Model time:   1988-09-01 20:40:00
 ***************************************************************
@@ -1712,9 +1682,9 @@ Atm_Step: Timestep       62   Model time:   1988-09-01 20:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       62 took      0.395 seconds
+Atm_Step: Info: timestep       62 took      0.359 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       63 at time=    60.513 seconds
+Atm_Step: Info: Starting timestep       63 at time=    56.004 seconds
 
 Atm_Step: Timestep       63   Model time:   1988-09-01 21:00:00
 ***************************************************************
@@ -1731,9 +1701,9 @@ Atm_Step: Timestep       63   Model time:   1988-09-01 21:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       63 took      0.567 seconds
+Atm_Step: Info: timestep       63 took      0.524 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       64 at time=    61.138 seconds
+Atm_Step: Info: Starting timestep       64 at time=    56.587 seconds
 
 Atm_Step: Timestep       64   Model time:   1988-09-01 21:20:00
 ***************************************************************
@@ -1750,9 +1720,9 @@ Atm_Step: Timestep       64   Model time:   1988-09-01 21:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       64 took      0.829 seconds
+Atm_Step: Info: timestep       64 took      0.793 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       65 at time=    61.969 seconds
+Atm_Step: Info: Starting timestep       65 at time=    57.382 seconds
 
 Atm_Step: Timestep       65   Model time:   1988-09-01 21:40:00
 ***************************************************************
@@ -1769,9 +1739,9 @@ Atm_Step: Timestep       65   Model time:   1988-09-01 21:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       65 took      0.400 seconds
+Atm_Step: Info: timestep       65 took      0.362 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       66 at time=    62.371 seconds
+Atm_Step: Info: Starting timestep       66 at time=    57.746 seconds
 
 Atm_Step: Timestep       66   Model time:   1988-09-01 22:00:00
 ***************************************************************
@@ -1788,9 +1758,9 @@ Atm_Step: Timestep       66   Model time:   1988-09-01 22:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       66 took      0.614 seconds
+Atm_Step: Info: timestep       66 took      0.524 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       67 at time=    63.043 seconds
+Atm_Step: Info: Starting timestep       67 at time=    58.327 seconds
 
 Atm_Step: Timestep       67   Model time:   1988-09-01 22:20:00
 ***************************************************************
@@ -1807,9 +1777,9 @@ Atm_Step: Timestep       67   Model time:   1988-09-01 22:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       67 took      0.834 seconds
+Atm_Step: Info: timestep       67 took      0.793 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       68 at time=    63.879 seconds
+Atm_Step: Info: Starting timestep       68 at time=    59.122 seconds
 
 Atm_Step: Timestep       68   Model time:   1988-09-01 22:40:00
 ***************************************************************
@@ -1826,9 +1796,9 @@ Atm_Step: Timestep       68   Model time:   1988-09-01 22:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       68 took      0.395 seconds
+Atm_Step: Info: timestep       68 took      0.357 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       69 at time=    64.275 seconds
+Atm_Step: Info: Starting timestep       69 at time=    59.482 seconds
 
 Atm_Step: Timestep       69   Model time:   1988-09-01 23:00:00
 ***************************************************************
@@ -1845,9 +1815,9 @@ Atm_Step: Timestep       69   Model time:   1988-09-01 23:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       69 took      0.562 seconds
+Atm_Step: Info: timestep       69 took      0.523 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       70 at time=    64.895 seconds
+Atm_Step: Info: Starting timestep       70 at time=    60.060 seconds
 
 Atm_Step: Timestep       70   Model time:   1988-09-01 23:20:00
 ***************************************************************
@@ -1864,9 +1834,9 @@ Atm_Step: Timestep       70   Model time:   1988-09-01 23:20:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       70 took      0.831 seconds
+Atm_Step: Info: timestep       70 took      0.790 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       71 at time=    65.727 seconds
+Atm_Step: Info: Starting timestep       71 at time=    60.851 seconds
 
 Atm_Step: Timestep       71   Model time:   1988-09-01 23:40:00
 ***************************************************************
@@ -1883,9 +1853,9 @@ Atm_Step: Timestep       71   Model time:   1988-09-01 23:40:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       71 took      0.395 seconds
+Atm_Step: Info: timestep       71 took      0.358 seconds
 ********************************************************************************
-Atm_Step: Info: Starting timestep       72 at time=    66.123 seconds
+Atm_Step: Info: Starting timestep       72 at time=    61.210 seconds
 
 Atm_Step: Timestep       72   Model time:   1988-09-02 00:00:00
 ***************************************************************
@@ -1902,32 +1872,32 @@ Atm_Step: Timestep       72   Model time:   1988-09-02 00:00:00
 ***************************************************************
 
 ********************************************************************************
-Atm_Step: Info: timestep       72 took      0.612 seconds
+Atm_Step: Info: timestep       72 took      0.525 seconds
 ********************************************************************************
-u_model_4A: Info: Exiting last atmosphere timestep  at time=    66.736 seconds
+u_model_4A: Info: Exiting last atmosphere timestep  at time=    61.735 seconds
 
 *******************************************************************************
-**************** End of UM RUN Job : 18:51:06 on 13/06/2022 *****************
+**************** End of UM RUN Job : 03:13:48 on 23/06/2022 *****************
 **************** Based upon UM release vn11.6             *****************
 *******************************************************************************
 
 
-um_shell: Info: End model run at time=    66.792 seconds
+um_shell: Info: End model run at time=    61.790 seconds
 
 
 ******************************************
 
 END OF RUN - TIMER OUTPUT
 Timer information is for whole run
-PE 0 Elapsed CPU Time:            122.770 seconds
-PE 0 Elapsed Wallclock Time:       66.514 seconds
-Total Elapsed CPU Time:            32421.779 seconds
-Maximum Elapsed Wallclock Time:       66.515 seconds
-Speedup:                              487.44
+PE 0 Elapsed CPU Time:            111.346 seconds
+PE 0 Elapsed Wallclock Time:       61.483 seconds
+Total Elapsed CPU Time:            30199.751 seconds
+Maximum Elapsed Wallclock Time:       61.484 seconds
+Speedup:                              491.18
 --------------------------------------------
 N  ROUTINE                               CALLS       TOT CPU       AVERAGE      TOT WALL       AVERAGE   % CPU  % WALL  SPEED-UP
-01 UM_SHELL                                  1        122.44        122.44         66.36         66.36   99.73   99.77      1.85
-02 SKEB2                                    72          0.33          0.00          0.16          0.00    0.27    0.23      2.11
+01 UM_SHELL                                  1        111.05        111.05         61.33         61.33   99.73   99.75      1.81
+02 SKEB2                                    72          0.30          0.00          0.16          0.00    0.27    0.25      1.91
 
 MPP Timing information :
 256 processors in atmosphere configuration 16 x 16
@@ -1937,65 +1907,65 @@ MPP : Non Inclusive timer summary
 
 WALLCLOCK  TIMES
 N  ROUTINE                                MEAN       MEDIAN        SD   % of mean          MAX  (PE)          MIN  (PE)
-01 UM_SHELL                              66.36        66.36      0.00       0.00%        66.36 ( 11)        66.35 ( 49)
+01 UM_SHELL                              61.33        61.33      0.00       0.00%        61.33 ( 14)        61.32 (199)
 02 SKEB2                                  0.00         0.00      0.01     ******%         0.16 (  0)         0.00 (  1)
 
 CPU TIMES (sorted by wallclock times)
 N  ROUTINE                                MEAN       MEDIAN        SD   % of mean          MAX  (PE)          MIN  (PE)
-01 UM_SHELL                             126.34       125.92      1.11       0.88%       128.88 (  3)       122.44 (  0)
-02 SKEB2                                  0.00         0.00      0.02     ******%         0.33 (  0)         0.00 (  1)
+01 UM_SHELL                             117.66       117.99      1.07       0.91%       119.31 (  7)       111.05 (  0)
+02 SKEB2                                  0.00         0.00      0.02     ******%         0.30 (  0)         0.00 (  1)
 
 END OF RUN - TIMER OUTPUT
 Timer information is for whole run
 Inclusive Timer Summary for PE 0
 N  ROUTINE                               CALLS       TOT CPU       AVERAGE      TOT WALL       AVERAGE  SPEED-UP
-01 U_MODEL_4A                                1        121.06        121.06         65.30         65.30      1.85
-02 Atm_Step_4A (AS)                         72         96.71          1.34         51.25          0.71      1.89
-03 AS Atmos_Phys1 (AP1)                     72         33.05          0.46         16.89          0.23      1.96
-04 INITIAL                                   1         21.37         21.37         12.55         12.55      1.70
-05 AS UKCA_MAIN1                            72         17.91          0.25         11.43          0.16      1.57
-06 AS S-L Advect (AA)                      360         15.54          0.04          7.80          0.02      1.99
-07 AS Solver                               288          9.56          0.03          4.80          0.02      1.99
-08 AS Atmos_Phys2 (AP2)                    432          9.41          0.02          4.71          0.01      2.00
-09 COSP                                     24          8.24          0.34          4.12          0.17      2.00
-10 UKCA AEROSOL MODEL                       24          6.47          0.27          3.25          0.14      1.99
-11 AS End TStep Diags                       72          6.00          0.08          3.01          0.04      2.00
-12 AP1 Radiation (AP1R)                     72          5.88          0.08          2.95          0.04      1.99
-13 AS CORRECT_TRACERS                       72          5.40          0.07          2.70          0.04      2.00
-14 AP1 Microphys (AP1M)                     72          5.04          0.07          2.52          0.03      2.00
-15 AP1M LS Rain                             72          4.85          0.07          2.44          0.03      1.99
-16 AA SL_Tracer                            144          4.67          0.03          2.35          0.02      1.99
-17 AP1R LW Rad                              72          3.27          0.05          1.65          0.02      1.98
+01 U_MODEL_4A                                1        110.01        110.01         60.59         60.59      1.82
+02 Atm_Step_4A (AS)                         72         89.59          1.24         48.01          0.67      1.87
+03 AS Atmos_Phys1 (AP1)                     72         31.42          0.44         15.85          0.22      1.98
+04 AS UKCA_MAIN1                            72         17.74          0.25         11.85          0.16      1.50
+05 INITIAL                                   1         17.63         17.63         11.19         11.19      1.58
+06 AS S-L Advect (AA)                      360         15.90          0.04          8.00          0.02      1.99
+07 AS Solver                               288          9.64          0.03          4.83          0.02      2.00
+08 AS Atmos_Phys2 (AP2)                    432          9.38          0.02          4.70          0.01      1.99
+09 COSP                                     24          8.27          0.34          4.14          0.17      2.00
+10 UKCA AEROSOL MODEL                       24          6.54          0.27          3.27          0.14      2.00
+11 AP1 Radiation (AP1R)                     72          5.88          0.08          2.94          0.04      2.00
+12 AS CORRECT_TRACERS                       72          5.38          0.07          2.70          0.04      2.00
+13 AP1 Microphys (AP1M)                     72          5.00          0.07          2.50          0.03      2.00
+14 AP1M LS Rain                             72          4.84          0.07          2.42          0.03      2.00
+15 AA SL_Tracer                            144          4.67          0.03          2.34          0.02      2.00
+16 AP1R LW Rad                              72          3.26          0.05          1.63          0.02      2.00
+17 AA SL_Full_Wind                         144          2.50          0.02          1.28          0.01      1.95
 18 AP2 Convection                          288          2.36          0.01          1.19          0.00      1.98
-19 AA SL_Full_Wind                         144          2.41          0.02          1.19          0.01      2.02
-20 AP2 Boundary Layer                      288          1.47          0.01          0.75          0.00      1.96
-21 AA SL_Moisture                          144          1.45          0.01          0.74          0.01      1.95
-22 UKCA CHEMISTRY MODEL                     72          1.16          0.02          0.58          0.01      1.98
-23 AP2 Implicit BL                         144          1.06          0.01          0.54          0.00      1.96
-24 AP1 G-wave drag                          72          0.81          0.01          0.40          0.01      2.03
-25 AS Stochastic_Phys                      216          0.70          0.00          0.35          0.00      2.03
-26 AA SL_Rho                               144          0.60          0.00          0.30          0.00      1.97
-27 TIMER                                 12349          0.06          0.00          0.30          0.00      0.18
-28 AS CONVERT                              792          0.61          0.00          0.30          0.00      2.05
-29 AS STASH                                360          0.45          0.00          0.22          0.00      2.01
-30 AS CORRECT_MOISTURE                      72          0.44          0.01          0.21          0.00      2.07
-31 AP2 Explicit BL                         144          0.40          0.00          0.20          0.00      2.00
-32 AP1R SW Rad                              72          0.34          0.00          0.17          0.00      2.07
-33 AA SL_Thermo                            144          0.19          0.00          0.10          0.00      1.82
-34 AP1M LS Cloud                            72          0.13          0.00          0.05          0.00      2.51
-35 AS DIAGNOSTICS                           72          0.06          0.00          0.03          0.00      2.22
-36 AS Aerosol Modelling                     72          0.02          0.00          0.02          0.00      1.38
-37 AS Diagnostics                            2          0.01          0.00          0.01          0.00      1.09
-38 Init_Atm_Step (FS)                        1          0.01          0.01          0.00          0.00      2.60
-39 AS Energy mass                           72          0.01          0.00          0.00          0.00      2.46
-40 AP1 NI_methox                            72          0.00          0.00          0.00          0.00      1.12
-41 AS Diffusion                            288          0.00          0.00          0.00          0.00      0.96
-42 AP1 Conv Eng Corr                        72          0.00          0.00          0.00          0.00      1.22
-43 AP1 Energy Correct.                      72          0.00          0.00          0.00          0.00      0.96
+19 AP2 Boundary Layer                      288          1.49          0.01          0.74          0.00      2.01
+20 AA SL_Moisture                          144          1.47          0.01          0.73          0.01      2.01
+21 UKCA CHEMISTRY MODEL                     72          1.15          0.02          0.57          0.01      2.02
+22 AP2 Implicit BL                         144          1.08          0.01          0.54          0.00      2.00
+23 AP1 G-wave drag                          72          0.79          0.01          0.40          0.01      1.98
+24 AS Stochastic_Phys                      216          0.69          0.00          0.35          0.00      1.99
+25 TIMER                                 12349          0.05          0.00          0.33          0.00      0.15
+26 AA SL_Rho                               144          0.59          0.00          0.30          0.00      1.93
+27 AS CONVERT                              792          0.59          0.00          0.30          0.00      1.97
+28 AS STASH                                360          0.40          0.00          0.22          0.00      1.84
+29 AS CORRECT_MOISTURE                      72          0.43          0.01          0.21          0.00      2.02
+30 AP2 Explicit BL                         144          0.40          0.00          0.20          0.00      2.02
+31 AP1R SW Rad                              72          0.35          0.00          0.17          0.00      2.14
+32 AA SL_Thermo                            144          0.21          0.00          0.10          0.00      2.01
+33 AS End TStep Diags                       72          0.19          0.00          0.09          0.00      2.07
+34 AP1M LS Cloud                            72          0.10          0.00          0.05          0.00      1.89
+35 AS DIAGNOSTICS                           72          0.05          0.00          0.03          0.00      1.77
+36 AS Aerosol Modelling                     72          0.03          0.00          0.02          0.00      1.78
+37 Init_Atm_Step (FS)                        1          0.01          0.01          0.01          0.01      1.71
+38 AS Diagnostics                            2          0.00          0.00          0.00          0.00      1.37
+39 AS Energy mass                           72          0.01          0.00          0.00          0.00      2.38
+40 AP1 NI_methox                            72          0.00          0.00          0.00          0.00      0.90
+41 AS Diffusion                            288          0.00          0.00          0.00          0.00      0.97
+42 AP1 Energy Correct.                      72          0.00          0.00          0.00          0.00      0.94
+43 AP1 Conv Eng Corr                        72          0.00          0.00          0.00          0.00      0.48
 44 AP2 Conv Eng Corr                        72          0.00          0.00          0.00          0.00      0.99
-45 AS Assimilation                         144          0.00          0.00          0.00          0.00      0.91
-46 AS IAU                                   72          0.00          0.00          0.00          0.00      0.92
-47 NCFILE_INIT                               1          0.00          0.00          0.00          0.00      0.61
+45 AS Assimilation                         144          0.00          0.00          0.00          0.00      0.87
+46 AS IAU                                   72          0.00          0.00          0.00          0.00      0.70
+47 NCFILE_INIT                               1          0.00          0.00          0.00          0.00      0.65
 
 MPP Timing information :
 256 processors in atmosphere configuration 16 x 16
@@ -2005,49 +1975,49 @@ MPP : Inclusive timer summary
 
 WALLCLOCK  TIMES
 N  ROUTINE                                MEAN       MEDIAN        SD   % of mean          MAX  (PE)          MIN  (PE)
-01 U_MODEL_4A                            65.34        65.34      0.01       0.02%        65.36 (172)        65.30 (  4)
-02 Atm_Step_4A (AS)                      52.11        52.17      0.33       0.64%        52.55 (134)        51.14 (  2)
-03 AS Atmos_Phys1 (AP1)                  16.88        16.88      0.00       0.02%        16.89 (  7)        16.88 (107)
-04 AS UKCA_MAIN1                         12.24        12.29      0.33       2.69%        12.73 (134)        11.27 (  1)
-05 INITIAL                               12.55        12.55      0.00       0.00%        12.55 ( 76)        12.55 (  9)
-06 AS S-L Advect (AA)                     7.81         7.81      0.02       0.24%         7.85 ( 19)         7.77 (  9)
-07 AS Solver                              4.80         4.80      0.00       0.04%         4.80 (239)         4.79 (  5)
-08 AS Atmos_Phys2 (AP2)                   4.71         4.71      0.02       0.48%         4.75 (212)         4.63 (154)
-09 COSP                                   4.14         4.16      0.17       4.18%         4.50 ( 28)         3.68 (178)
-10 AP1 Microphys (AP1M)                   1.94         1.93      0.61      31.64%         3.47 (  4)         0.44 (161)
-11 UKCA AEROSOL MODEL                     3.33         3.34      0.04       1.24%         3.42 ( 64)         3.18 ( 11)
-12 AP1M LS Rain                           1.86         1.85      0.61      32.97%         3.39 (  4)         0.36 (161)
-13 AP1 Radiation (AP1R)                   2.95         2.96      0.06       1.95%         3.09 (128)         2.81 (178)
-14 AS End TStep Diags                     3.01         3.01      0.00       0.03%         3.01 (164)         3.00 (  8)
-15 AS CORRECT_TRACERS                     2.70         2.70      0.00       0.09%         2.71 (111)         2.70 ( 58)
-16 AP2 Convection                         1.64         1.64      0.35      21.28%         2.45 (122)         1.07 (178)
-17 AA SL_Tracer                           2.40         2.41      0.02       1.03%         2.44 ( 21)         2.31 (  8)
-18 AP1R LW Rad                            1.65         1.66      0.06       3.50%         1.79 (128)         1.51 (178)
-19 AA SL_Full_Wind                        1.11         1.10      0.04       3.65%         1.19 (  4)         1.07 (108)
-20 AP2 Boundary Layer                     0.83         0.82      0.07       8.95%         1.01 (235)         0.74 (  6)
-21 AA SL_Moisture                         0.75         0.76      0.02       2.48%         0.79 ( 19)         0.72 (  9)
-22 UKCA CHEMISTRY MODEL                   0.58         0.58      0.02       3.99%         0.61 ( 64)         0.51 (109)
-23 AP2 Implicit BL                        0.56         0.56      0.01       1.76%         0.58 (235)         0.54 (  3)
-24 AP2 Explicit BL                        0.27         0.25      0.07      25.13%         0.43 (235)         0.18 ( 49)
-25 AP1 G-wave drag                        0.34         0.34      0.04      12.43%         0.40 ( 15)         0.23 ( 55)
-26 AS Stochastic_Phys                     0.35         0.35      0.00       0.35%         0.35 (254)         0.34 (155)
-27 AA SL_Rho                              0.29         0.29      0.01       3.13%         0.31 (  3)         0.28 (146)
-28 AS CONVERT                             0.30         0.30      0.00       0.91%         0.31 (167)         0.29 ( 12)
-29 TIMER                                  0.30         0.30      0.00       0.22%         0.30 ( 63)         0.30 ( 11)
-30 AS STASH                               0.21         0.21      0.00       2.27%         0.22 (207)         0.20 ( 97)
-31 AS CORRECT_MOISTURE                    0.21         0.21      0.00       0.11%         0.22 (113)         0.21 (  6)
-32 AP1R SW Rad                            0.00         0.00      0.01     ******%         0.17 (  0)         0.00 (  1)
-33 AA SL_Thermo                           0.00         0.00      0.01     ******%         0.10 (  0)         0.00 (  1)
+01 U_MODEL_4A                            60.63        60.63      0.01       0.02%        60.64 (155)        60.59 (  4)
+02 Atm_Step_4A (AS)                      48.91        48.96      0.33       0.67%        49.32 (136)        47.98 (  1)
+03 AS Atmos_Phys1 (AP1)                  15.84        15.85      0.00       0.02%        15.85 (247)        15.84 ( 37)
+04 AS UKCA_MAIN1                         12.69        12.74      0.33       2.56%        13.17 (136)        11.73 ( 21)
+05 INITIAL                               11.19        11.19      0.00       0.00%        11.19 (  9)        11.18 ( 99)
+06 AS S-L Advect (AA)                     8.01         8.01      0.02       0.28%         8.06 (222)         7.97 (  9)
+07 AS Solver                              4.82         4.83      0.00       0.06%         4.83 (233)         4.82 ( 14)
+08 AS Atmos_Phys2 (AP2)                   4.70         4.70      0.02       0.49%         4.75 (212)         4.63 (154)
+09 COSP                                   4.15         4.17      0.18       4.27%         4.47 ( 28)         3.64 (178)
+10 AP1 Microphys (AP1M)                   1.93         1.92      0.61      31.48%         3.45 (  4)         0.44 (161)
+11 UKCA AEROSOL MODEL                     3.34         3.35      0.04       1.20%         3.42 ( 64)         3.19 ( 11)
+12 AP1M LS Rain                           1.85         1.84      0.61      32.83%         3.37 (  4)         0.36 (161)
+13 AP1 Radiation (AP1R)                   2.96         2.97      0.06       1.96%         3.10 (128)         2.81 (178)
+14 AS CORRECT_TRACERS                     2.69         2.69      0.00       0.08%         2.70 ( 85)         2.69 ( 67)
+15 AP2 Convection                         1.64         1.64      0.35      21.22%         2.46 (122)         1.07 (162)
+16 AA SL_Tracer                           2.40         2.41      0.03       1.16%         2.46 ( 21)         2.30 (  8)
+17 AP1R LW Rad                            1.65         1.66      0.06       3.51%         1.79 (128)         1.51 (178)
+18 AA SL_Full_Wind                        1.23         1.23      0.08       6.17%         1.35 (240)         1.13 (108)
+19 AP1R SW Rad                            0.69         0.70      0.20      28.44%         1.25 (242)         0.16 ( 10)
+20 AP2 Boundary Layer                     0.83         0.81      0.08       9.04%         1.01 (235)         0.74 (  5)
+21 AA SL_Moisture                         0.74         0.75      0.02       3.00%         0.79 (222)         0.71 (  9)
+22 UKCA CHEMISTRY MODEL                   0.57         0.58      0.02       3.93%         0.61 ( 64)         0.51 (187)
+23 AP2 Implicit BL                        0.56         0.56      0.01       1.88%         0.58 (180)         0.53 (  3)
+24 AP2 Explicit BL                        0.27         0.25      0.07      25.31%         0.43 (235)         0.18 ( 49)
+25 AP1 G-wave drag                        0.34         0.34      0.04      12.52%         0.40 ( 15)         0.23 ( 56)
+26 AS Stochastic_Phys                     0.35         0.35      0.00       0.41%         0.35 (225)         0.34 (155)
+27 TIMER                                  0.33         0.33      0.00       1.07%         0.34 ( 24)         0.32 ( 10)
+28 AS CONVERT                             0.30         0.30      0.00       1.29%         0.32 ( 96)         0.29 (  1)
+29 AA SL_Rho                              0.29         0.29      0.01       3.16%         0.31 (  4)         0.28 (147)
+30 AS STASH                               0.20         0.20      0.00       2.21%         0.22 (  0)         0.19 (186)
+31 AS CORRECT_MOISTURE                    0.21         0.21      0.00       0.13%         0.21 ( 52)         0.21 (  7)
+32 AA SL_Thermo                           0.00         0.00      0.01     ******%         0.10 (  0)         0.00 (  1)
+33 AS End TStep Diags                     0.00         0.00      0.01     ******%         0.09 (  0)         0.00 (  1)
 34 AP1M LS Cloud                          0.00         0.00      0.00     ******%         0.05 (  0)         0.00 (  1)
 35 AS DIAGNOSTICS                         0.00         0.00      0.00     ******%         0.03 (  0)         0.00 (  1)
 36 AS Aerosol Modelling                   0.00         0.00      0.00     ******%         0.02 (  0)         0.00 (  1)
-37 AS Diagnostics                         0.00         0.00      0.00     ******%         0.01 (  0)         0.00 (  1)
-38 Init_Atm_Step (FS)                     0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
+37 Init_Atm_Step (FS)                     0.00         0.00      0.00     ******%         0.01 (  0)         0.00 (  1)
+38 AS Diagnostics                         0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 39 AS Energy mass                         0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 40 AP1 NI_methox                          0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 41 AS Diffusion                           0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
-42 AP1 Conv Eng Corr                      0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
-43 AP1 Energy Correct.                    0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
+42 AP1 Energy Correct.                    0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
+43 AP1 Conv Eng Corr                      0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 44 AP2 Conv Eng Corr                      0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 45 AS Assimilation                        0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 46 AS IAU                                 0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
@@ -2055,49 +2025,49 @@ N  ROUTINE                                MEAN       MEDIAN        SD   % of mea
 
 CPU TIMES (sorted by wallclock times)
 N  ROUTINE                                MEAN       MEDIAN        SD   % of mean          MAX  (PE)          MIN  (PE)
-01 U_MODEL_4A                           124.80       124.39      1.11       0.89%       127.30 (  3)       121.06 (  0)
-02 Atm_Step_4A (AS)                     102.56       102.78      0.63       0.61%       103.41 (134)        96.71 (  0)
-03 AS Atmos_Phys1 (AP1)                  32.27        32.18      0.50       1.56%        33.11 ( 51)        31.61 (231)
-04 AS UKCA_MAIN1                         24.45        24.56      0.77       3.14%        25.45 (134)        17.91 (  0)
-05 INITIAL                               20.89        20.63      0.64       3.04%        22.61 (  3)        20.06 ( 84)
-06 AS S-L Advect (AA)                    15.56        15.56      0.05       0.30%        15.67 ( 16)        15.47 ( 77)
-07 AS Solver                              9.56         9.57      0.02       0.22%         9.60 (169)         9.52 (235)
-08 AS Atmos_Phys2 (AP2)                   9.42         9.42      0.04       0.45%         9.51 (209)         9.28 (154)
-09 COSP                                   8.27         8.31      0.35       4.21%         9.00 ( 28)         7.34 (162)
-10 AP1 Microphys (AP1M)                   3.86         3.86      1.23      31.95%         6.93 (  4)         0.83 (161)
-11 UKCA AEROSOL MODEL                     6.66         6.67      0.09       1.28%         6.84 ( 64)         6.35 ( 11)
-12 AP1M LS Rain                           3.71         3.70      1.22      32.89%         6.77 (  4)         0.70 (161)
-13 AP1 Radiation (AP1R)                   5.89         5.90      0.12       1.97%         6.15 (128)         5.59 (178)
-14 AS End TStep Diags                     6.01         6.01      0.01       0.11%         6.02 ( 72)         5.99 (204)
-15 AS CORRECT_TRACERS                     5.41         5.41      0.02       0.30%         5.44 ( 85)         5.37 (218)
-16 AP2 Convection                         3.28         3.27      0.69      21.16%         4.89 (122)         2.14 (162)
-17 AA SL_Tracer                           4.79         4.80      0.06       1.16%         4.88 (127)         4.59 (  9)
-18 AP1R LW Rad                            3.29         3.30      0.12       3.55%         3.55 (128)         2.99 (178)
-19 AA SL_Full_Wind                        2.21         2.17      0.09       4.04%         2.41 ( 11)         2.10 (136)
-20 AP2 Boundary Layer                     1.67         1.64      0.15       9.06%         2.00 (235)         1.46 (  6)
-21 AA SL_Moisture                         1.50         1.50      0.04       2.86%         1.59 ( 20)         1.40 (  9)
-22 UKCA CHEMISTRY MODEL                   1.16         1.17      0.05       4.21%         1.23 (153)         1.01 (238)
-23 AP2 Implicit BL                        1.11         1.12      0.03       2.26%         1.17 (164)         1.06 (  1)
-24 AP2 Explicit BL                        0.54         0.51      0.13      24.50%         0.85 (235)         0.37 (238)
-25 AP1 G-wave drag                        0.67         0.69      0.09      12.65%         0.81 (  7)         0.45 ( 56)
-26 AS Stochastic_Phys                     0.68         0.68      0.02       2.39%         0.72 ( 50)         0.65 (122)
-27 AA SL_Rho                              0.58         0.57      0.02       3.77%         0.63 ( 19)         0.55 (144)
-28 AS CONVERT                             0.62         0.62      0.02       3.45%         0.65 (222)         0.56 (177)
-29 TIMER                                  0.06         0.06      0.01      15.28%         0.08 (127)         0.04 ( 73)
-30 AS STASH                               0.42         0.43      0.02       4.95%         0.47 (141)         0.38 (205)
-31 AS CORRECT_MOISTURE                    0.41         0.41      0.02       5.26%         0.44 ( 46)         0.38 ( 87)
-32 AP1R SW Rad                            0.00         0.00      0.02     ******%         0.34 (  0)         0.00 (  1)
-33 AA SL_Thermo                           0.00         0.00      0.01     ******%         0.19 (  0)         0.00 (  1)
-34 AP1M LS Cloud                          0.00         0.00      0.01     ******%         0.13 (  0)         0.00 (  1)
-35 AS DIAGNOSTICS                         0.00         0.00      0.00     ******%         0.06 (  0)         0.00 (  1)
-36 AS Aerosol Modelling                   0.00         0.00      0.00     ******%         0.02 (  0)         0.00 (  1)
-37 AS Diagnostics                         0.00         0.00      0.00     ******%         0.01 (  0)         0.00 (  1)
-38 Init_Atm_Step (FS)                     0.00         0.00      0.00     ******%         0.01 (  0)         0.00 (  1)
+01 U_MODEL_4A                           116.52       116.85      1.04       0.89%       118.09 ( 61)       110.01 (  0)
+02 Atm_Step_4A (AS)                      96.94        97.11      0.62       0.64%        97.46 (120)        89.59 (  0)
+03 AS Atmos_Phys1 (AP1)                  31.01        30.99      0.30       0.95%        31.44 ( 18)        30.60 (174)
+04 AS UKCA_MAIN1                         25.34        25.46      0.80       3.16%        26.33 (136)        17.74 (  0)
+05 INITIAL                               18.53        18.81      0.72       3.86%        19.72 (  7)        16.84 (136)
+06 AS S-L Advect (AA)                    15.92        15.93      0.06       0.35%        16.03 (222)        15.79 (247)
+07 AS Solver                              9.64         9.64      0.01       0.09%         9.66 (175)         9.62 (  2)
+08 AS Atmos_Phys2 (AP2)                   9.38         9.38      0.06       0.59%         9.50 (179)         9.20 (115)
+09 COSP                                   8.29         8.34      0.35       4.26%         8.93 ( 28)         7.29 (178)
+10 AP1 Microphys (AP1M)                   3.85         3.85      1.22      31.60%         6.91 (  4)         0.85 (161)
+11 UKCA AEROSOL MODEL                     6.68         6.70      0.08       1.19%         6.84 ( 64)         6.37 ( 11)
+12 AP1M LS Rain                           3.69         3.70      1.21      32.89%         6.74 (  4)         0.69 (161)
+13 AP1 Radiation (AP1R)                   5.91         5.93      0.12       1.99%         6.14 (115)         5.60 (178)
+14 AS CORRECT_TRACERS                     5.37         5.37      0.01       0.15%         5.39 ( 63)         5.35 (201)
+15 AP2 Convection                         3.29         3.28      0.70      21.29%         4.91 (122)         2.12 (162)
+16 AA SL_Tracer                           4.79         4.80      0.05       1.12%         4.90 ( 21)         4.58 (  8)
+17 AP1R LW Rad                            3.30         3.32      0.12       3.52%         3.54 (131)         3.00 (178)
+18 AA SL_Full_Wind                        2.39         2.40      0.16       6.60%         2.67 (250)         2.15 (140)
+19 AP1R SW Rad                            1.38         1.39      0.39      28.07%         2.49 (242)         0.33 (  8)
+20 AP2 Boundary Layer                     1.67         1.64      0.15       9.16%         2.03 (235)         1.47 (  6)
+21 AA SL_Moisture                         1.50         1.50      0.05       3.43%         1.59 (220)         1.39 (177)
+22 UKCA CHEMISTRY MODEL                   1.15         1.16      0.05       4.24%         1.22 (247)         1.00 (109)
+23 AP2 Implicit BL                        1.12         1.13      0.02       1.99%         1.16 (160)         1.06 (  7)
+24 AP2 Explicit BL                        0.53         0.50      0.14      25.47%         0.88 (235)         0.36 (184)
+25 AP1 G-wave drag                        0.67         0.68      0.08      12.25%         0.79 ( 13)         0.45 ( 55)
+26 AS Stochastic_Phys                     0.69         0.69      0.01       1.00%         0.70 (163)         0.67 (124)
+27 TIMER                                  0.06         0.06      0.01      18.13%         0.09 (125)         0.03 (200)
+28 AS CONVERT                             0.59         0.59      0.01       2.37%         0.63 (169)         0.55 ( 69)
+29 AA SL_Rho                              0.58         0.57      0.01       2.51%         0.61 (  3)         0.55 ( 88)
+30 AS STASH                               0.40         0.39      0.01       2.91%         0.43 (220)         0.37 (186)
+31 AS CORRECT_MOISTURE                    0.42         0.43      0.01       1.68%         0.44 (240)         0.40 ( 64)
+32 AA SL_Thermo                           0.00         0.00      0.01     ******%         0.21 (  0)         0.00 (  1)
+33 AS End TStep Diags                     0.00         0.00      0.01     ******%         0.19 (  0)         0.00 (  1)
+34 AP1M LS Cloud                          0.00         0.00      0.01     ******%         0.10 (  0)         0.00 (  1)
+35 AS DIAGNOSTICS                         0.00         0.00      0.00     ******%         0.05 (  0)         0.00 (  1)
+36 AS Aerosol Modelling                   0.00         0.00      0.00     ******%         0.03 (  0)         0.00 (  1)
+37 Init_Atm_Step (FS)                     0.00         0.00      0.00     ******%         0.01 (  0)         0.00 (  1)
+38 AS Diagnostics                         0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 39 AS Energy mass                         0.00         0.00      0.00     ******%         0.01 (  0)         0.00 (  1)
 40 AP1 NI_methox                          0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 41 AS Diffusion                           0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
-42 AP1 Conv Eng Corr                      0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
-43 AP1 Energy Correct.                    0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
+42 AP1 Energy Correct.                    0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
+43 AP1 Conv Eng Corr                      0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 44 AP2 Conv Eng Corr                      0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 45 AS Assimilation                        0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
 46 AS IAU                                 0.00         0.00      0.00     ******%         0.00 (  0)         0.00 (  1)
@@ -2106,9 +2076,9 @@ N  ROUTINE                                MEAN       MEDIAN        SD   % of mea
 
 Total IO Timings: BUFFIN
 Calls: 194
-Total time: 0.337070 secs 		 Average time: 0.001737 secs
+Total time: 0.683257 secs 		 Average time: 0.003521 secs
 Total bytes transferred: 34324008 	 Average bytes transferred: 176927
-Overall transfer rate: 101.830505 MB/s 	 Average transfer rate: 101.857803 MB/s
+Overall transfer rate: 50.235867 MB/s 	 Average transfer rate: 50.249077 MB/s
 
 Total IO Timings: BUFFOUT
 Calls: 0
@@ -2117,13 +2087,13 @@ Total bytes transferred: 0 	 Average bytes transferred: 0
 
 Total IO Timings: FILE_OPEN
 Calls: 8
-Total time: 0.013223 secs 		 Average time: 0.001652 secs
+Total time: 0.016012 secs 		 Average time: 0.002001 secs
 
 Total IO Timings: FILE_CLOSE
 Calls: 8
-Total time: 0.001364 secs 		 Average time: 0.000170 secs
+Total time: 0.001099 secs 		 Average time: 0.000137 secs
 
 Total IO Timings: FILE_SEEK
 Calls: 176
-Total time: 0.112723 secs 		 Average time: 0.000640 secs
-?  Caution This run generated 37 warnings
+Total time: 0.052059 secs 		 Average time: 0.000295 secs
+?  Caution This run generated 34 warnings
