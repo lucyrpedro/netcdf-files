@@ -88,18 +88,21 @@ for file in f_dir:
                     total=total+took_vector[i]
 
                 total_6=0;
-                for i in range(0, ntook, 6):
-#                    print(i)
+                for i in range(5, ntook, 6):
+                    print(i)
+                    print(took_vector[i])
                     total_6=total_6+took_vector[i]
 
                 total_8=0;
-                for i in range(0, ntook, 8):
+                for i in range(7, ntook, 8):
 #                    print(i)
+#                    print(took_vector[i])
                     total_8=total_8+took_vector[i]
 
                 total_12=0;
-                for i in range(0, ntook, 12):
+                for i in range(11, ntook, 12):
 #                    print(i)
+#                    print(took_vector[i])
                     total_12=total_12+took_vector[i]
 
                 data_M["TOOK TOTAL"] = round(total, 2)
