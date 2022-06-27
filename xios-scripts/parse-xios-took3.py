@@ -84,7 +84,7 @@ for file in f_dir:
                     wr.writerow(took_vector)
 
                 total=0;
-                for i in range(0, ntook):
+                for i in range(1, ntook):
                     total=total+took_vector[i]
 
                 total_6=0;
@@ -112,16 +112,15 @@ for file in f_dir:
 
                 data_M["TOOK 0"] = round(took_vector[0], 2)
 
-                total=total-took_vector[0] # Remove the initial time
-                total_6=total_6-took_vector[0] # Remove the initial time
-                total_8=total_8-took_vector[0] # Remove the initial time
-                total_12=total_12-took_vector[0] # Remove the initial time
+#                total=total-took_vector[0] # Remove the initial time
+#                total_6=total_6-took_vector[0] # Remove the initial time
+#                total_8=total_8-took_vector[0] # Remove the initial time
+#                total_12=total_12-took_vector[0] # Remove the initial time
 
-                data_M["TOOK TI"] = round(total, 2)
-                data_M["TOOK 6 TI"] = round(total_6, 2)
-                data_M["TOOK 8 TI"] = round(total_8, 2)
-                data_M["TOOK 12 TI"] = round(total_12, 2)
-
+#                data_M["TOOK TI"] = round(total, 2)
+#                data_M["TOOK 6 TI"] = round(total_6, 2)
+#                data_M["TOOK 8 TI"] = round(total_8, 2)
+#                data_M["TOOK 12 TI"] = round(total_12, 2)
 
                 if total!=0:
                     mean=total/ntook;
