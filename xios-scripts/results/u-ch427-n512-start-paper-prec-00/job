@@ -17,7 +17,7 @@
 #SBATCH --partition=standard
 #SBATCH --qos=lowpriority
 #SBATCH --account=n02-cms
-#SBATCH --nodes=75
+#SBATCH --nodes=45
 # N.B. CYLC_DIR has been updated on the remote host
 export CYLC_DIR='/mnt/lustre/a2fs-work1/work/y07/shared/umshared/software/cylc-7.8.7'
 export CYLC_VERSION='7.8.7'
@@ -36,12 +36,12 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n512-start-paper-prec-00"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n512-start-paper-prec-00"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n512-start-paper-prec-00"
-    export CYLC_SUITE_UUID="935f465f-f97d-45d5-84e0-7bcd618c9ae4"
+    export CYLC_SUITE_UUID="e3a4bebd-455b-4501-a62e-88a7103bf50b"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19880901T0000Z/atmos_main/01"
     export CYLC_TASK_NAMESPACE_HIERARCHY="root UM ATMOS SUBMIT_RETRIES HPC UM_PARALLEL ATMOS_RESOURCE RUN_MAIN atmos_main"
-    export CYLC_TASK_DEPENDENCIES="ens_setup_all.19880901T0000Z fcm_make2_um.19880901T0000Z install_ancil.19880901T0000Z"
+    export CYLC_TASK_DEPENDENCIES="fcm_make2_um.19880901T0000Z install_ancil.19880901T0000Z"
     export CYLC_TASK_TRY_NUMBER=1
 }
 
@@ -67,8 +67,8 @@ cylc__job__inst__user_env() {
     XIOS_XML="$CYLC_SUITE_SHARE_DIR/data/xml"
     USE_XIOS="true"
     XIOS_PATH="/work/n02/n02/jwc/XIOS/extract/xios_trunk_r2245"
-    UM_ATM_NENS="2"
-    MODELS="um_ens xios"
+    UM_ATM_NENS="0"
+    MODELS="um xios"
     TASK_NAME_ROOT="atmos_ens"
     FLUME_IOS_NPROC="0"
     RCF_NPROCX="24"
@@ -90,7 +90,7 @@ cylc__job__inst__user_env() {
     OMP_PLACES="cores"
     FI_OFI_RXM_SAR_LIMIT="64K"
     ROSE_LAUNCHER_PREOPTS_UM="--het-group=0 --hint=nomultithread --distribution=block:block --nodes=30 --ntasks=1280 --tasks-per-node=48 --cpus-per-task=3 env OMP_NUM_THREADS=3 HYPERTHREADS=1"
-    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=2 --cpu-bind=cores --export=all --nodes=15 --ntasks=30 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
+    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=1 --cpu-bind=cores --export=all --nodes=15 --ntasks=30 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
     DATAM="$ROSE_DATA/History_Data"
     DATAW="$CYLC_TASK_WORK_PATH"
 }
