@@ -1,23 +1,23 @@
 #!/bin/bash -l
 #
 # ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
-# Suite: u-ch427-n216-start-paper-x0-50
+# Suite: u-ch427-n216-start-paper-x0-60
 # Task: atmos_main.19880901T0000Z
 # Job log directory: 19880901T0000Z/atmos_main/01
 # Job submit method: slurm
 # Execution time limit: 1800.0
 
 # DIRECTIVES:
-#SBATCH --job-name=u-ch427-n216-start-paper-x0-50.atmos_main.19880901T0000Z
-#SBATCH --output=cylc-run/u-ch427-n216-start-paper-x0-50/log/job/19880901T0000Z/atmos_main/01/job.out
-#SBATCH --error=cylc-run/u-ch427-n216-start-paper-x0-50/log/job/19880901T0000Z/atmos_main/01/job.err
+#SBATCH --job-name=u-ch427-n216-start-paper-x0-60.atmos_main.19880901T0000Z
+#SBATCH --output=cylc-run/u-ch427-n216-start-paper-x0-60/log/job/19880901T0000Z/atmos_main/01/job.out
+#SBATCH --error=cylc-run/u-ch427-n216-start-paper-x0-60/log/job/19880901T0000Z/atmos_main/01/job.err
 #SBATCH --time=30:00
 #SBATCH --export=none
 #SBATCH --chdir=/work/n02/n02/lrpedro
 #SBATCH --partition=standard
 #SBATCH --qos=lowpriority
 #SBATCH --account=n02-cms
-#SBATCH --nodes=708
+#SBATCH --nodes=848
 # N.B. CYLC_DIR has been updated on the remote host
 export CYLC_DIR='/mnt/lustre/a2fs-work1/work/y07/shared/umshared/software/cylc-7.8.7'
 export CYLC_VERSION='7.8.7'
@@ -28,15 +28,15 @@ cylc__job__inst__cylc_env() {
     export CYLC_CYCLING_MODE="360day"
     export CYLC_SUITE_FINAL_CYCLE_POINT="19880901T0000Z"
     export CYLC_SUITE_INITIAL_CYCLE_POINT="19880901T0000Z"
-    export CYLC_SUITE_NAME="u-ch427-n216-start-paper-x0-50"
+    export CYLC_SUITE_NAME="u-ch427-n216-start-paper-x0-60"
     export CYLC_UTC="True"
     export CYLC_VERBOSE="false"
     export TZ="UTC"
 
-    export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n216-start-paper-x0-50"
-    export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n216-start-paper-x0-50"
-    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n216-start-paper-x0-50"
-    export CYLC_SUITE_UUID="b47f7390-0887-48bc-90a4-12a98f311752"
+    export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n216-start-paper-x0-60"
+    export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n216-start-paper-x0-60"
+    export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n216-start-paper-x0-60"
+    export CYLC_SUITE_UUID="67ab7eaf-bb1c-423d-9b05-41a89c62e89f"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19880901T0000Z/atmos_main/01"
@@ -67,7 +67,7 @@ cylc__job__inst__user_env() {
     XIOS_XML="$CYLC_SUITE_SHARE_DIR/data/xml"
     USE_XIOS="true"
     XIOS_PATH="/work/n02/n02/jwc/XIOS/extract/xios_trunk_r2245"
-    UM_ATM_NENS="50"
+    UM_ATM_NENS="60"
     MODELS="um_ens xios"
     TASK_NAME_ROOT="atmos_ens"
     FLUME_IOS_NPROC="0"
@@ -90,7 +90,7 @@ cylc__job__inst__user_env() {
     OMP_PLACES="cores"
     FI_OFI_RXM_SAR_LIMIT="64K"
     ROSE_LAUNCHER_PREOPTS_UM="--het-group=0 --hint=nomultithread --distribution=block:block --nodes=14 --ntasks=896 --tasks-per-node=64 --cpus-per-task=2 env OMP_NUM_THREADS=2 HYPERTHREADS=1"
-    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=50 --cpu-bind=cores --export=all --nodes=8 --ntasks=16 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
+    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=60 --cpu-bind=cores --export=all --nodes=8 --ntasks=16 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
     DATAM="$ROSE_DATA/History_Data"
     DATAW="$CYLC_TASK_WORK_PATH"
 }
