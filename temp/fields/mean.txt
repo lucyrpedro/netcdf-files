@@ -1,0 +1,33 @@
+<field
+    id="m01s00i024_ens_file"
+    name="m01s00i024_ens"
+    operation="instant"
+    field_ref="m01s00i024"
+    grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+/>
+
+<field
+	id="m01s00i024_ens_mean_file"
+    name="m01s00i024_ens_mean_file"
+	operation="instant"
+	field_ref="m01s00i024_ens"
+/>
+
+
+- - -
+
+<grid id="um-atmos_grid_t_DIAG_ens_mean">
+    <domain domain_ref="um-atmos_grid_t" />
+    <scalar id="ens-mean-grid">
+      <reduce_axis operation="average" />
+    </scalar>
+</grid>
+  
+<field
+    id="m01s00i024_ens"
+	name="m01s00i024_ens"
+	operation="instant"
+	field_ref="m01s00i024"
+	grid_ref="um-atmos_grid_t_DIAG_ens_mean"
+/>
+

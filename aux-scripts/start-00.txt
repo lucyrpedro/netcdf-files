@@ -1,0 +1,86 @@
+u-ch427-n96-start-paper-00
+u-ch427-n96-start-paper-ms-00
+u-ch427-n96-start-paper-ms-x0-prec-00
+u-ch427-n96-start-paper-prec-00
+u-ch427-n96-start-paper-x0-00
+u-ch427-n96-start-paper-x0-prec-00
+
+u-ch427-n216-start-paper-00
+u-ch427-n216-start-paper-ms-00
+u-ch427-n216-start-paper-ms-x0-prec-00
+u-ch427-n216-start-paper-prec-00
+u-ch427-n216-start-paper-x0-00
+u-ch427-n216-start-paper-x0-prec-00
+
+u-ch427-n512-start-paper-00
+u-ch427-n512-start-paper-ms-00
+u-ch427-n512-start-paper-ms-x0-prec-00
+u-ch427-n512-start-paper-prec-00
+u-ch427-n512-start-paper-x0-00
+u-ch427-n512-start-paper-x0-prec-00
+
+u-ch427-n96-start-paper
+u-ch427-n96-start-paper-ms
+u-ch427-n96-start-paper-ms-x0-prec
+u-ch427-n96-start-paper-prec
+u-ch427-n96-start-paper-x0
+u-ch427-n96-start-paper-x0-prec
+
+u-ch427-n216-start-paper
+u-ch427-n216-start-paper-ms
+u-ch427-n216-start-paper-ms-x0-prec
+u-ch427-n216-start-paper-prec
+u-ch427-n216-start-paper-x0
+u-ch427-n216-start-paper-x0-prec
+
+u-ch427-n512-start-paper
+u-ch427-n512-start-paper-ms
+u-ch427-n512-start-paper-ms-x0-prec
+u-ch427-n512-start-paper-prec
+u-ch427-n512-start-paper-x0
+u-ch427-n512-start-paper-x0-prec
+
+cp -r u-ch427-n96-start-paper-00 u-ch427-n96-start-paper
+cp -r u-ch427-n96-start-paper-ms-00 u-ch427-n96-start-paper-ms
+cp -r u-ch427-n96-start-paper-ms-x0-prec-00 u-ch427-n96-start-paper-ms-x0-prec
+cp -r u-ch427-n96-start-paper-prec-00 u-ch427-n96-start-paper-prec
+cp -r u-ch427-n96-start-paper-x0-00 u-ch427-n96-start-paper-x0
+cp -r u-ch427-n96-start-paper-x0-prec-00 u-ch427-n96-start-paper-x0-prec
+
+cp -r u-ch427-n216-start-paper-00 u-ch427-n216-start-paper
+cp -r u-ch427-n216-start-paper-ms-00 u-ch427-n216-start-paper-ms
+cp -r u-ch427-n216-start-paper-ms-x0-prec-00 u-ch427-n216-start-paper-ms-x0-prec
+cp -r u-ch427-n216-start-paper-prec-00 u-ch427-n216-start-paper-prec
+cp -r u-ch427-n216-start-paper-x0-00 u-ch427-n216-start-paper-x0
+cp -r u-ch427-n216-start-paper-x0-prec-00 u-ch427-n216-start-paper-x0-prec
+
+cp -r u-ch427-n512-start-paper-00 u-ch427-n512-start-paper
+cp -r u-ch427-n512-start-paper-ms-00 u-ch427-n512-start-paper-ms
+cp -r u-ch427-n512-start-paper-ms-x0-prec-00 u-ch427-n512-start-paper-ms-x0-prec
+cp -r u-ch427-n512-start-paper-prec-00 u-ch427-n512-start-paper-prec
+cp -r u-ch427-n512-start-paper-x0-00 u-ch427-n512-start-paper-x0
+cp -r u-ch427-n512-start-paper-x0-prec-00 u-ch427-n512-start-paper-x0-prec
+
+cd ../u-ch427-n96-start-paper-x0-40; rose suite-run --new;
+
+cd ../u-ch427-n96-start-paper; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-ms; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-ms-x0-prec; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-prec; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-x0; rose suite-run --new;
+cd ../u-ch427-n96-start-paper-x0-prec; rose suite-run --new;
+
+cd ../u-ch427-n216-start-paper; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-ms; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-ms-x0-prec; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-prec; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-x0; rose suite-run --new;
+cd ../u-ch427-n216-start-paper-x0-prec; rose suite-run --new;
+
+cd ../u-ch427-n512-start-paper; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-ms; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-ms-x0-prec; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-prec; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-x0; rose suite-run --new;
+cd ../u-ch427-n512-start-paper-x0-prec; rose suite-run --new;
+

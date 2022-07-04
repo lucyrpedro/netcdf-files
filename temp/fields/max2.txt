@@ -1,0 +1,16 @@
+<field
+    id="m01s00i024_ens_max_file2"
+    name="m01s00i024_ens_max_file2"
+    operation="maximum"
+    field_ref="m01s00i024_ens_max"
+/>
+
+- - -
+
+<field
+    id="m01s00i024_ens_max"
+    name="m01s00i024_ens_max"
+    operation="instant"
+    field_ref="m01s00i024"
+    grid_ref="um-atmos_grid_t_DIAG_ens_max"
+/>

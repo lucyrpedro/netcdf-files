@@ -1,0 +1,63 @@
+u-ch427-n96-template-start-paper
+u-ch427-n96-template-start-paper-x0
+u-ch427-n96-template-start-paper-x5
+u-ch427-n96-template-start-paper-prec
+u-ch427-n96-template-start-paper-x0-prec
+u-ch427-n96-template-start-paper-ms
+
+u-ch427-n216-template-start-paper
+u-ch427-n216-template-start-paper-x0
+u-ch427-n216-template-start-paper-x5
+u-ch427-n216-template-start-paper-prec
+u-ch427-n216-template-start-paper-x0-prec
+u-ch427-n216-template-start-paper-ms
+
+u-ch427-n512-template-start-paper
+u-ch427-n512-template-start-paper-x0
+u-ch427-n512-template-start-paper-x5
+u-ch427-n512-template-start-paper-prec
+u-ch427-n512-template-start-paper-x0-prec
+u-ch427-n512-template-start-paper-ms
+
+cp -r u-ch427-n96-template-start-paper-00 u-ch427-n96-template-start-paper
+cp -r u-ch427-n96-template-start-paper-x0-00 u-ch427-n96-template-start-paper-x0
+cp -r u-ch427-n96-template-start-paper-x5-00 u-ch427-n96-template-start-paper-x5
+cp -r u-ch427-n96-template-start-paper-prec-00 u-ch427-n96-template-start-paper-prec
+cp -r u-ch427-n96-template-start-paper-x0-prec-00 u-ch427-n96-template-start-paper-x0-prec
+cp -r u-ch427-n96-template-start-paper-ms-00 u-ch427-n96-template-start-paper-ms
+
+cp -r u-ch427-n216-template-start-paper-00 u-ch427-n216-template-start-paper
+cp -r u-ch427-n216-template-start-paper-x0-00 u-ch427-n216-template-start-paper-x0
+cp -r u-ch427-n216-template-start-paper-x5-00 u-ch427-n216-template-start-paper-x5
+cp -r u-ch427-n216-template-start-paper-prec-00 u-ch427-n216-template-start-paper-prec
+cp -r u-ch427-n216-template-start-paper-x0-prec-00 u-ch427-n216-template-start-paper-x0-prec
+cp -r u-ch427-n216-template-start-paper-ms-00 u-ch427-n216-template-start-paper-ms
+
+cp -r u-ch427-n512-template-start-paper-00 u-ch427-n512-template-start-paper
+cp -r u-ch427-n512-template-start-paper-x0-00 u-ch427-n512-template-start-paper-x0
+cp -r u-ch427-n512-template-start-paper-x5-00 u-ch427-n512-template-start-paper-x5
+cp -r u-ch427-n512-template-start-paper-prec-00 u-ch427-n512-template-start-paper-prec
+cp -r u-ch427-n512-template-start-paper-x0-prec-00 u-ch427-n512-template-start-paper-x0-prec
+cp -r u-ch427-n512-template-start-paper-ms-00 u-ch427-n512-template-start-paper-ms
+
+cd ../u-ch427-n96-template-start-paper; rose suite-run --new;
+cd ../u-ch427-n96-template-start-paper-x0; rose suite-run --new;
+cd ../u-ch427-n96-template-start-paper-x5; rose suite-run --new;
+cd ../u-ch427-n96-template-start-paper-prec; rose suite-run --new;
+cd ../u-ch427-n96-template-start-paper-x0-prec; rose suite-run --new;
+cd ../u-ch427-n96-template-start-paper-ms; rose suite-run --new;
+
+cd ../u-ch427-n216-template-start-paper; rose suite-run --new;
+cd ../u-ch427-n216-template-start-paper-x0; rose suite-run --new;
+cd ../u-ch427-n216-template-start-paper-x5; rose suite-run --new;
+cd ../u-ch427-n216-template-start-paper-prec; rose suite-run --new;
+cd ../u-ch427-n216-template-start-paper-x0-prec; rose suite-run --new;
+cd ../u-ch427-n216-template-start-paper-ms; rose suite-run --new;
+
+cd ../u-ch427-n512-template-start-paper; rose suite-run --new;
+cd ../u-ch427-n512-template-start-paper-x0; rose suite-run --new;
+cd ../u-ch427-n512-template-start-paper-x5; rose suite-run --new;
+cd ../u-ch427-n512-template-start-paper-prec; rose suite-run --new;
+cd ../u-ch427-n512-template-start-paper-x0-prec; rose suite-run --new;
+cd ../u-ch427-n512-template-start-paper-ms; rose suite-run --new;
+

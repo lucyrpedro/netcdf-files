@@ -1,0 +1,22 @@
+<field
+    id="m01s00i024_inst"
+    name="m01s00i024_inst"
+    operation="instant"
+    field_ref="m01s00i024"
+    grid_ref="um-atmos_grid_t_DIAG"
+/>
+
+<field
+    id="m01s00i024_inst2_file"
+    name="m01s00i024_inst2"
+    operation="instant"
+    field_ref="m01s00i024"
+/>
+
+
+- - -
+
+  <grid id="um-atmos_grid_t_DIAG">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="ensemble" />
+  </grid>
