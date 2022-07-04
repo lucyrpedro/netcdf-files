@@ -6,6 +6,9 @@ cd ~/cylc-run
 ls -1 > ${aux}/aux-files/dir.txt
 files=$(ls -1 |wc -l)
 
+rm -rf ${aux}/aux
+mkdir ${aux}/aux
+
 input=${aux}/aux-files/dir.txt
 
 cd ${aux}
