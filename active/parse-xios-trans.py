@@ -20,7 +20,7 @@ if os.path.exists(file_old):
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["TOTAL"]
+fields = ["TOTAL", "MEAN"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -77,9 +77,14 @@ if isFile:
             for i in range(1, ntook):
                 total=total+took_vector[i]
 
-            data_M["TOTAL"] = round(total, 2)
+            total = round(total, 2)
+            mean = round(total/ntook, 2)
+
+            data_M["TOTAL"] = total
+            data_M["MEAN"] = mean
 
             print(total)
+            print(mean)
 
             out.writerow(data_M)
 

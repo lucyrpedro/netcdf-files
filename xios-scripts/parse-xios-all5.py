@@ -9,7 +9,7 @@ import os
 cwd = os.getcwd()
 print(cwd)
 
-filename = "results3.csv"
+filename = "results-time.csv"
 file_old = cwd + "/" + filename
 
 if os.path.exists(file_old):
