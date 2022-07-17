@@ -30,18 +30,6 @@ print(lmin)
 lmax = max(temp_max)
 print(lmax)
 
-plot(x,temp_max,type="p",col="green",ylim = c(lmin, lmax),ylab="", pch = 2, cex = .1) 
-par(new = TRUE)
-plot(x,temp_min,type="p",col="red",ylim = c(lmin, lmax),ylab="", pch = 6, cex = .1) 
-par(new = TRUE)
-plot(x,temp_mean,type="b",col="orange",ylim = c(lmin, lmax),ylab="", pch = 20, cex = .5) 
-par(new = TRUE)
-plot_colors <- c("blue","green","orange") 
-par(new = TRUE)
-legend(x = "top",inset = 0,
-        legend = c("max", "min","mean"), 
-        col=plot_colors, lwd=5, cex=.5, horiz = TRUE)
-
 plot(x,temp_max,type="o",col="green",ylim = c(lmin, lmax),ylab="", pch = 16, cex = .5)
 par(new = TRUE)
 plot(x,temp_min,type="o",col="red",ylim = c(lmin, lmax),ylab="", pch = 16, cex = .5)
