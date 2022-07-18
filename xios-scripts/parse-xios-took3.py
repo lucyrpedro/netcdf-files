@@ -20,7 +20,7 @@ if os.path.exists(file_old):
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["SUITE", "TimeStep TOTAL", "TimeStep 0", "TimeStep TOTAL", "TimeStep MEAN", "TimeStep 6 MEAN", "TimeStep 8 MEAN", "TimeStep 12 MEAN", "TimeStep 6 TOTAL", "TimeStep 8 TOTAL", "TimeStep 12 TOTAL","TimeStep TI", "TimeStep 6 TI", "TimeStep 8 TI","TimeStep 12 TI"]
+fields = ["SUITE", "TimeStep SIZE", "TimeStep 0", "TimeStep TOTAL", "TimeStep MEAN", "TimeStep 6 MEAN", "TimeStep 8 MEAN", "TimeStep 12 MEAN", "TimeStep 6 TOTAL", "TimeStep 8 TOTAL", "TimeStep 12 TOTAL","TimeStep TI", "TimeStep 6 TI", "TimeStep 8 TI","TimeStep 12 TI"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -60,7 +60,7 @@ for file in f_dir:
 
             if ntook:
 
-                data_M["TimeStep TOTAL"] = ntook
+                data_M["TimeStep SIZE"] = ntook
 
                 took_list = []
 
