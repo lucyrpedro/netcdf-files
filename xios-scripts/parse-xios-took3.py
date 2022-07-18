@@ -20,7 +20,7 @@ if os.path.exists(file_old):
 # Open the output file
 
 fd = open(filename, "w")
-fields = ["SUITE", "TOOK SIZE", "TOOK 0", "TOOK TOTAL", "TOOK MEAN", "TOOK 6 MEAN", "TOOK 8 MEAN", "TOOK 12 MEAN", "TOOK 6 TOTAL", "TOOK 8 TOTAL", "TOOK 12 TOTAL","TOOK TI", "TOOK 6 TI", "TOOK 8 TI","TOOK 12 TI"]
+fields = ["SUITE", "TimeStep TOTAL", "TimeStep 0", "TimeStep TOTAL", "TimeStep MEAN", "TimeStep 6 MEAN", "TimeStep 8 MEAN", "TimeStep 12 MEAN", "TimeStep 6 TOTAL", "TimeStep 8 TOTAL", "TimeStep 12 TOTAL","TimeStep TI", "TimeStep 6 TI", "TimeStep 8 TI","TimeStep 12 TI"]
 out = csv.DictWriter(fd, fieldnames=fields, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 out.writeheader()
 
@@ -60,7 +60,7 @@ for file in f_dir:
 
             if ntook:
 
-                data_M["TOOK SIZE"] = ntook
+                data_M["TimeStep TOTAL"] = ntook
 
                 took_list = []
 
@@ -105,38 +105,38 @@ for file in f_dir:
 #                    print(took_vector[i])
                     total_12=total_12+took_vector[i]
 
-                data_M["TOOK TOTAL"] = round(total, 2)
-                data_M["TOOK 6 TOTAL"] = round(total_6, 2)
-                data_M["TOOK 8 TOTAL"] = round(total_8, 2)
-                data_M["TOOK 12 TOTAL"] = round(total_12, 2)
+                data_M["TimeStep TOTAL"] = round(total, 2)
+                data_M["TimeStep 6 TOTAL"] = round(total_6, 2)
+                data_M["TimeStep 8 TOTAL"] = round(total_8, 2)
+                data_M["TimeStep 12 TOTAL"] = round(total_12, 2)
 
-                data_M["TOOK 0"] = round(took_vector[0], 2)
+                data_M["TimeStep 0"] = round(took_vector[0], 2)
 
 #                total=total-took_vector[0] # Remove the initial time
 #                total_6=total_6-took_vector[0] # Remove the initial time
 #                total_8=total_8-took_vector[0] # Remove the initial time
 #                total_12=total_12-took_vector[0] # Remove the initial time
 
-#                data_M["TOOK TI"] = round(total, 2)
-#                data_M["TOOK 6 TI"] = round(total_6, 2)
-#                data_M["TOOK 8 TI"] = round(total_8, 2)
-#                data_M["TOOK 12 TI"] = round(total_12, 2)
+#                data_M["TimeStep TI"] = round(total, 2)
+#                data_M["TimeStep 6 TI"] = round(total_6, 2)
+#                data_M["TimeStep 8 TI"] = round(total_8, 2)
+#                data_M["TimeStep 12 TI"] = round(total_12, 2)
 
                 if total!=0:
                     mean=total/ntook;
-                    data_M["TOOK MEAN"] = round(mean, 2)
+                    data_M["TimeStep MEAN"] = round(mean, 2)
 
                 if total_6!=0:
                     mean_6=total_6*6/ntook;
-                    data_M["TOOK 6 MEAN"] = round(mean_6, 2)
+                    data_M["TimeStep 6 MEAN"] = round(mean_6, 2)
 
                 if total_8!=0:
                     mean_8=total_8*8/ntook;
-                    data_M["TOOK 8 MEAN"] = round(mean_8, 2)
+                    data_M["TimeStep 8 MEAN"] = round(mean_8, 2)
 
                 if total_12!=0:
                     mean_12=total_12*12/ntook;
-                    data_M["TOOK 12 MEAN"] = round(mean_12, 2)
+                    data_M["TimeStep 12 MEAN"] = round(mean_12, 2)
 
                 print(round(total, 2))
                 print(round(total_6, 2))
