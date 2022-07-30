@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ./res4.sh
+./res-1280.sh
 ./parse-xios-all5.py
 ./parse-xios-took3.py
 ./calc-size-all.sh
