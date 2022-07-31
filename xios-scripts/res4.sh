@@ -101,8 +101,6 @@ do
                 echo "aux=${filename}"
                 echo $(cat ${filename} |grep "SBATCH --nodes") >> time.txt
 		echo $(cat ${filename} |grep "UM_ATM_NENS=") >> time.txt
-                cat ${filename} |grep "SBATCH --nodes"
-                cat ${filename} |grep "UM_ATM_NENS="
 	fi
 done < "$input"
 
