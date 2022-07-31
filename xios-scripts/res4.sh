@@ -94,13 +94,15 @@ done < "$input"
 while IFS= read -r line
 do
         filename=job
-#        echo "line=$line"
+        echo "line=$line"
 #        echo "file=$filename"
         cd ${aux2}/${line}
         if [[ -s "${filename}" ]]; then
                 echo "aux=${filename}"
                 echo $(cat ${filename} |grep "SBATCH --nodes") >> time.txt
 		echo $(cat ${filename} |grep "UM_ATM_NENS=") >> time.txt
-        fi
+                cat ${filename} |grep "SBATCH --nodes"
+                cat ${filename} |grep "UM_ATM_NENS="
+	fi
 done < "$input"
 
