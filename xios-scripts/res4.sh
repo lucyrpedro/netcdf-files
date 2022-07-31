@@ -98,9 +98,9 @@ do
 #        echo "file=$filename"
         cd ${aux2}/${line}
         if [[ -s "${filename}" ]]; then
-#                echo "aux=${filename}"
+                echo "aux=${filename}"
                 echo $(cat ${filename} |grep "SBATCH --nodes") >> time.txt
-		echo $(cat ${filename} |grep "UM_ATM_NENS") >> time.txt
+		echo $(cat ${filename} |grep "UM_ATM_NENS=") >> time.txt
         fi
 done < "$input"
 
