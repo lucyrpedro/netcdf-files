@@ -3,14 +3,14 @@
 # ++++ THIS IS A CYLC TASK JOB SCRIPT ++++
 # Suite: u-ch427-n96-start-paper-100-454-04
 # Task: atmos_main.19880901T0000Z
-# Job log directory: 19880901T0000Z/atmos_main/10
+# Job log directory: 19880901T0000Z/atmos_main/06
 # Job submit method: slurm
 # Execution time limit: 3600.0
 
 # DIRECTIVES:
 #SBATCH --job-name=u-ch427-n96-start-paper-100-454-04.atmos_main.19880901T0000Z
-#SBATCH --output=cylc-run/u-ch427-n96-start-paper-100-454-04/log/job/19880901T0000Z/atmos_main/10/job.out
-#SBATCH --error=cylc-run/u-ch427-n96-start-paper-100-454-04/log/job/19880901T0000Z/atmos_main/10/job.err
+#SBATCH --output=cylc-run/u-ch427-n96-start-paper-100-454-04/log/job/19880901T0000Z/atmos_main/06/job.out
+#SBATCH --error=cylc-run/u-ch427-n96-start-paper-100-454-04/log/job/19880901T0000Z/atmos_main/06/job.err
 #SBATCH --time=60:00
 #SBATCH --export=none
 #SBATCH --chdir=/work/n02/n02/lrpedro
@@ -36,10 +36,10 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n96-start-paper-100-454-04"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n96-start-paper-100-454-04"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n96-start-paper-100-454-04"
-    export CYLC_SUITE_UUID="4214a799-a0c9-4c5d-95f3-c6f29197b405"
+    export CYLC_SUITE_UUID="5826e4dc-e416-4da6-a1c9-846be5fd28b7"
 
     # CYLC TASK ENVIRONMENT:
-    export CYLC_TASK_JOB="19880901T0000Z/atmos_main/10"
+    export CYLC_TASK_JOB="19880901T0000Z/atmos_main/06"
     export CYLC_TASK_NAMESPACE_HIERARCHY="root UM ATMOS SUBMIT_RETRIES HPC UM_PARALLEL ATMOS_RESOURCE RUN_MAIN atmos_main"
     export CYLC_TASK_DEPENDENCIES="ens_setup_all.19880901T0000Z fcm_make2_um.19880901T0000Z install_ancil.19880901T0000Z"
     export CYLC_TASK_TRY_NUMBER=1
@@ -118,4 +118,4 @@ save_wallclock.sh P1D
 . "${CYLC_DIR}/lib/cylc/job.sh"
 cylc__job__main
 
-#EOF: 19880901T0000Z/atmos_main/10
+#EOF: 19880901T0000Z/atmos_main/06
