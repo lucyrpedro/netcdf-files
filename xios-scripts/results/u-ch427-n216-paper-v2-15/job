@@ -17,7 +17,7 @@
 #SBATCH --partition=standard
 #SBATCH --qos=lowpriority
 #SBATCH --account=n02-cms
-#SBATCH --nodes=358
+#SBATCH --nodes=218
 # N.B. CYLC_DIR has been updated on the remote host
 export CYLC_DIR='/mnt/lustre/a2fs-work1/work/y07/shared/umshared/software/cylc-7.8.7'
 export CYLC_VERSION='7.8.7'
@@ -36,7 +36,7 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n216-paper-v2-15"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n216-paper-v2-15"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n216-paper-v2-15"
-    export CYLC_SUITE_UUID="b3b0d933-b10b-4fdf-8ad6-d4d1ecbdd43d"
+    export CYLC_SUITE_UUID="9bc880b5-2813-45fe-a4e4-4cb47ea67a7a"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19880901T0000Z/atmos_main/01"
@@ -67,7 +67,7 @@ cylc__job__inst__user_env() {
     XIOS_XML="$CYLC_SUITE_SHARE_DIR/data/xml"
     USE_XIOS="true"
     XIOS_PATH="/work/n02/n02/jwc/XIOS/extract/xios_trunk_r2245"
-    UM_ATM_NENS="25"
+    UM_ATM_NENS="15"
     MODELS="um_ens xios"
     TASK_NAME_ROOT="atmos_ens"
     FLUME_IOS_NPROC="0"
@@ -90,7 +90,7 @@ cylc__job__inst__user_env() {
     OMP_PLACES="cores"
     FI_OFI_RXM_SAR_LIMIT="64K"
     ROSE_LAUNCHER_PREOPTS_UM="--het-group=0 --hint=nomultithread --distribution=block:block --nodes=14 --ntasks=896 --tasks-per-node=64 --cpus-per-task=2 env OMP_NUM_THREADS=2 HYPERTHREADS=1"
-    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=25 --cpu-bind=cores --export=all --nodes=8 --ntasks=16 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
+    ROSE_LAUNCHER_PREOPTS_XIOS="--het-group=15 --cpu-bind=cores --export=all --nodes=8 --ntasks=16 --tasks-per-node=2 --cpus-per-task=64 env OMP_NUM_THREADS=1 HYPERTHREADS=1"
     DATAM="$ROSE_DATA/History_Data"
     DATAW="$CYLC_TASK_WORK_PATH"
 }
