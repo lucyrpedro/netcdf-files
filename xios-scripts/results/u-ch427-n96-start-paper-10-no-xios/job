@@ -36,12 +36,12 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n96-start-paper-10-no-xios"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n96-start-paper-10-no-xios"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n96-start-paper-10-no-xios"
-    export CYLC_SUITE_UUID="4b3c6c9a-8f93-4569-b07c-4b9fcd50aafa"
+    export CYLC_SUITE_UUID="3add67e0-b8b9-44f8-bac1-b625a77b1cfd"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19880901T0000Z/atmos_main/01"
     export CYLC_TASK_NAMESPACE_HIERARCHY="root UM ATMOS SUBMIT_RETRIES HPC UM_PARALLEL ATMOS_RESOURCE RUN_MAIN atmos_main"
-    export CYLC_TASK_DEPENDENCIES="ens_setup_all.19880901T0000Z fcm_make2_um.19880901T0000Z install_ancil.19880901T0000Z"
+    export CYLC_TASK_DEPENDENCIES="fcm_make2_um.19880901T0000Z install_ancil.19880901T0000Z"
     export CYLC_TASK_TRY_NUMBER=1
 }
 
@@ -67,8 +67,8 @@ cylc__job__inst__user_env() {
     XIOS_XML="$CYLC_SUITE_SHARE_DIR/data/xml"
     USE_XIOS="false"
     XIOS_PATH="/work/n02/n02/jwc/XIOS/extract/xios_trunk_r2245"
-    UM_ATM_NENS="1"
-    MODELS="um_ens xios"
+    UM_ATM_NENS="0"
+    MODELS="um xios"
     TASK_NAME_ROOT="atmos_ens"
     FLUME_IOS_NPROC="0"
     RCF_NPROCX="24"
