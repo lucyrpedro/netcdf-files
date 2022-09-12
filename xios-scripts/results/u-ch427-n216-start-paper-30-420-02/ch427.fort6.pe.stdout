@@ -3,7 +3,7 @@ Enabling 0 I/O PEs
 [0] OpenMP Specification: 201511
 
 *******************************************************************************
-**************** Start of UM RUN Job : 04:22:43 on 11/09/2022 *****************
+**************** Start of UM RUN Job : 13:21:17 on 11/09/2022 *****************
 **************** Based upon UM release vn11.6             *****************
 *******************************************************************************
 
@@ -513,7 +513,7 @@ Mass, energy, energy drift =   0.5130E+19  0.1312E+25 -0.5599E-07
 
 ************************  PE configuration for this run  ***********************
 ****  PE configuration:    32 processors East-West    28 processors North-South *
-Atm_Step: Info: Starting timestep        0 at time=    99.382 seconds
+Atm_Step: Info: Starting timestep        0 at time=   102.589 seconds
 
 Atm_Step: Timestep        0   Model time:   1988-09-01 00:00:00
 
@@ -526,6 +526,18 @@ Atm_Step: Timestep        0   Model time:   1988-09-01 00:00:00
 ?  Warning number: 35
 ????????????????????????????????????????????????????????????????????????????????
 
-Atm_Step: Info: Starting timestep        1 at time=   227.375 seconds
+Atm_Step: Info: Starting timestep        1 at time=   229.409 seconds
 
 Atm_Step: Timestep        1   Model time:   1988-09-01 00:15:00
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    1     1       19      0.100000E+01      0.953969E-04     *
+*    1     2       21      0.776536E-02      0.923690E-04     *
+***************************************************************
+***************************************************************
+*    Linear solve for Helmholtz problem                       *
+* Outer Inner Iterations   InitialError       FinalError      *
+*    2     1       10      0.236689E+00      0.792643E-04     *
+*    2     2        3      0.237613E-02      0.994038E-04     *
+***************************************************************

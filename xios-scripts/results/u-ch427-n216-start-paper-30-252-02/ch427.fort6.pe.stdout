@@ -3,7 +3,7 @@ Enabling 0 I/O PEs
 [0] OpenMP Specification: 201511
 
 *******************************************************************************
-**************** Start of UM RUN Job : 04:51:26 on 11/09/2022 *****************
+**************** Start of UM RUN Job : 15:33:04 on 11/09/2022 *****************
 **************** Based upon UM release vn11.6             *****************
 *******************************************************************************
 
@@ -513,7 +513,7 @@ Mass, energy, energy drift =   0.5130E+19  0.1312E+25 -0.5599E-07
 
 ************************  PE configuration for this run  ***********************
 ****  PE configuration:    32 processors East-West    28 processors North-South *
-Atm_Step: Info: Starting timestep        0 at time=   180.225 seconds
+Atm_Step: Info: Starting timestep        0 at time=    43.428 seconds
 
 Atm_Step: Timestep        0   Model time:   1988-09-01 00:00:00
 
@@ -526,47 +526,6 @@ Atm_Step: Timestep        0   Model time:   1988-09-01 00:00:00
 ?  Warning number: 35
 ????????????????????????????????????????????????????????????????????????????????
 
-Atm_Step: Info: Starting timestep        1 at time=   289.825 seconds
+Atm_Step: Info: Starting timestep        1 at time=   211.619 seconds
 
 Atm_Step: Timestep        1   Model time:   1988-09-01 00:15:00
-***************************************************************
-*    Linear solve for Helmholtz problem                       *
-* Outer Inner Iterations   InitialError       FinalError      *
-*    1     1       19      0.100000E+01      0.953969E-04     *
-*    1     2       21      0.776536E-02      0.923690E-04     *
-***************************************************************
-***************************************************************
-*    Linear solve for Helmholtz problem                       *
-* Outer Inner Iterations   InitialError       FinalError      *
-*    2     1       10      0.236689E+00      0.792643E-04     *
-*    2     2        3      0.237613E-02      0.994038E-04     *
-***************************************************************
-
-????????????????????????????????????????????????????????????????????????????????
-??????????????????????????????      WARNING       ??????????????????????????????
-?  Warning code: -1
-?  Warning from routine: ASAD_CINIT
-?  Warning message:  NRSTEPS IS OUT OF RANGE, RESETTING
-?  Warning from processor: 0
-?  Warning number: 36
-????????????????????????????????????????????????????????????????????????????????
-
-
-********************************************************************************
-Atm_Step: Info: timestep        1 took     17.288 seconds
-********************************************************************************
-Atm_Step: Info: Starting timestep        2 at time=   307.114 seconds
-
-Atm_Step: Timestep        2   Model time:   1988-09-01 00:30:00
-***************************************************************
-*    Linear solve for Helmholtz problem                       *
-* Outer Inner Iterations   InitialError       FinalError      *
-*    1     1       17      0.100000E+01      0.942122E-04     *
-*    1     2       17      0.877608E-02      0.829748E-04     *
-***************************************************************
-***************************************************************
-*    Linear solve for Helmholtz problem                       *
-* Outer Inner Iterations   InitialError       FinalError      *
-*    2     1        7      0.196546E+00      0.977450E-04     *
-*    2     2        5      0.173450E-02      0.795804E-04     *
-***************************************************************
