@@ -33,3 +33,4 @@ do
 done < "$input"
 
 cp total-all-suites.csv ${aux}
+cp total-all-suites.csv ${aux}/results-size.csv
