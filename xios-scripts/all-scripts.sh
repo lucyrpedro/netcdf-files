@@ -5,6 +5,7 @@
 ./parse-xios-all5.py
 ./parse-xios-took3.py
 ./calc-size-all.sh
+./calc-size-all-n1280.sh
 
 git add -A; git commit -m "files"; git push;
 
