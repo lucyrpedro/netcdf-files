@@ -6,14 +6,14 @@ rm -rf grids.txt
 rm -rf fields.txt
 rm -rf grids-fields.txt
 
-sed 's/\"//g' um-atmos-field_ens_def.xml > aux.txt
+sed 's/\"//g' um-atmos-field_ens_def-orig.xml > aux.txt
 
 input="aux.txt"
 
-output_all="um-stats-all-one-file-1.xml"
-rm -rf $output_all
+output="um-stats-all-of-orig-1x.xml"
+rm -rf $output
 
-cat >> $output_all << EOF
+cat >> $output << EOF
 <file_definition format="netcdf4" time_counter="instant" type="one_file">
 
         <file description="All Fields" id="all-fields" name="all-fields" output_freq="3h">
@@ -33,11 +33,11 @@ do
 	if [ -n "$grid" ]; then
 		echo "Grid=$grid "
 		echo "Field=$field "
-		./xml-stats-field.sh $grid $field $output_all
+		./xml-stats-field.sh $grid $field $output
 	fi
 done < "$input"
 
-cat >> $output_all << EOF
+cat >> $output << EOF
         </file>
 
 </file_definition>
