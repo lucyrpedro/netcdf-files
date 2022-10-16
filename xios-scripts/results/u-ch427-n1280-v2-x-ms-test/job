@@ -36,7 +36,7 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n1280-v2-x-ms-test"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n1280-v2-x-ms-test"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n1280-v2-x-ms-test"
-    export CYLC_SUITE_UUID="2c16ce2a-4ae1-4bf1-9e21-1a22f355016f"
+    export CYLC_SUITE_UUID="c9c5ba1d-a8e9-41d3-ba45-d872179a8c27"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19790301T0000Z/atmos_main/01"
@@ -107,7 +107,7 @@ config_xml.sh
 
 cylc__job__inst__script() {
 # SCRIPT:
-file.sh
+rose task-run --verbose -O '(archer2)' --path="share/fcm_make_um/build-*/bin"
 }
 
 cylc__job__inst__post_script() {
