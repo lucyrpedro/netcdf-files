@@ -6,11 +6,11 @@ rm -rf grids.txt
 rm -rf fields.txt
 rm -rf grids-fields.txt
 
-sed 's/\"//g' um-atmos-field_ens_def-ms.xml > aux.txt
+sed 's/\"//g' um-atmos-field_ens_def.xml > aux.txt
 
 input="aux.txt"
 
-output="um-stats-all-mf-ms-1x.xml"
+output="um-stats-all-mf-1x.xml"
 rm -rf $output
 
 cat >> $output << EOF
