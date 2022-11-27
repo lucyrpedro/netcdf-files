@@ -104,7 +104,7 @@ do
                 echo $(cat ${filename} |grep "UM_ATM_NPROCX=") >> time.txt
                 echo $(cat ${filename} |grep "UM_ATM_NPROCY=") >> time.txt
                 echo $(cat ${filename} |grep "XIOS_NPROC=") >> time.txt
-		echo $(cat ${filename} |grep "(ga7p0) (n1280e)") >> time.txt
+		echo $(cat ${filename} |grep "(ga7p0)") >> time.txt
 	fi
 done < "$input"
 
