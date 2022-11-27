@@ -120,12 +120,12 @@ for file in f_dir:
                 
       f.close()
 
-#    data_M["TIME-INITIAL"] = data_M["TIME"] - data_M["INITIAL"]
+#    data_M["TIME-INITIAL"] = data_M["TIME"] - data_M["INITIAL"] (It doesn't work!)
         
     # This next command can be used to already exclude from the .csv the files that do not have took
 
     out.writerow(data_M)
-    data_M["TIME-INITIAL"] = data_M["TIME"] - data_M["INITIAL"]
+#    data_M["TIME-INITIAL"] = data_M["TIME"] - data_M["INITIAL"] (It doesn't work!)
     print("EOF\n\n")
 
 f_dir.close()
