@@ -58,14 +58,14 @@ for file in f_dir:
             m5 = re.match("(.*)JOB_PID=(?P<JOB_PID>[0-9.]+)", l)
             m6 = re.match("(.*)JOB_SUBMIT_TIME=(?P<JOB_SUBMIT_TIME>[0-9.TZ:-]+)", l)
             m7 = re.match("(.*)JOB_INIT_TIME=(?P<JOB_INIT_TIME>[0-9.TZ:-]+)", l)
-            m8 = re.match("(.*)JOB_EXIT=(?P<JOB_STATUS>[SUCEDRO]+)", l)
+            m8 = re.match("(.*)JOB_EXIT=(?P<JOB_STATUS>[SUCEDXIT]+)", l)
             m9 = re.match("(.*)JOB_EXIT_TIME=(?P<JOB_EXIT_TIME>[0-9.TZ:-]+)", l)
             m10 = re.match("(.*)nodes=(?P<NODES>[0-9]+)", l)
             m11 = re.match("(.*)UM_ATM_NENS=\"(?P<ENSEMBLE>[0-9]+)\"", l)
             m12 = re.match("(.*)UM_ATM_NPROCX=\"(?P<PROCX>[0-9]+)\"", l)
             m13 = re.match("(.*)UM_ATM_NPROCY=\"(?P<PROCY>[0-9]+)\"", l)
             m14 = re.match("(.*)XIOS_NPROC=\"(?P<XIOS_NPROC>[0-9]+)\"", l)
-            m15 = re.match("(.*)(ga7p0) (\"(?P<RESOLUTION>[0-9n]+)\"e)", l)
+            m15 = re.match("(.*)(ga7p0) n(\"(?P<RESOLUTION>[0-9]+)\"e)(.*)", l)
 
             print(m1)
             if m1:    
@@ -125,7 +125,7 @@ for file in f_dir:
     # This next command can be used to already exclude from the .csv the files that do not have took
 
     out.writerow(data_M)
-#    data_M["TIME-INITIAL"] = data_M["TIME"] - data_M["INITIAL"]
+    data_M["TIME-INITIAL"] = data_M["TIME"] - data_M["INITIAL"]
     print("EOF\n\n")
 
 f_dir.close()
