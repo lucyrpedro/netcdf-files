@@ -65,7 +65,7 @@ for file in f_dir:
             m12 = re.match("(.*)UM_ATM_NPROCX=\"(?P<PROCX>[0-9]+)\"", l)
             m13 = re.match("(.*)UM_ATM_NPROCY=\"(?P<PROCY>[0-9]+)\"", l)
             m14 = re.match("(.*)XIOS_NPROC=\"(?P<XIOS_NPROC>[0-9]+)\"", l)
-            m15 = re.match("(.*)(ga7p0) n(\"(?P<RESOLUTION>[0-9]+)\"e)(.*)", l)
+            m15 = re.match("(.*)(ga7p0)(.*)(n\"(?P<RESOLUTION>[0-9]+)\"e)(.*)", l)
 
             print(m1)
             if m1:    
