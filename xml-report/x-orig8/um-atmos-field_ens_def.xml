@@ -1,0 +1,218 @@
+<field_definition default_value="-1073741824.0" prec="8">
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_halo_single_DALLRH" id="m01s00i002" long_name="U COMPNT OF WIND AFTER TIMESTEP" standard_name="eastward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_halo_single_DALLRH" id="m01s00i003" long_name="V COMPNT OF WIND AFTER TIMESTEP" standard_name="northward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s00i004" long_name="THETA AFTER TIMESTEP" standard_name="air_potential_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_extended_DALLTH" id="m01s00i010" long_name="SPECIFIC HUMIDITY AFTER TIMESTEP" standard_name="specific_humidity" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_extended_DALLTH" id="m01s00i012" long_name="QCF AFTER TIMESTEP" standard_name="mass_fraction_of_cloud_ice_in_air" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i023" long_name="SNOW AMOUNT OVER LAND AFT TSTP KG/M2" standard_name="snowfall_amount" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i024" long_name="SURFACE TEMPERATURE AFTER TIMESTEP" standard_name="surface_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i025" long_name="BOUNDARY LAYER DEPTH AFTER TIMESTEP" standard_name="atmosphere_boundary_layer_thickness" unit="m" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_DIAG" id="m01s00i028" long_name="SURFACE ZONAL CURRENT AFTER TIMESTEP" standard_name="surface_eastward_sea_water_velocity" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_DIAG" id="m01s00i029" long_name="SURFACE MERID CURRENT AFTER TIMESTEP" standard_name="surface_northward_sea_water_velocity" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i030" long_name="LAND MASK (No halo) (LAND=TRUE)" standard_name="land_binary_mask" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i031" long_name="FRAC OF SEA ICE IN SEA AFTER TSTEP" standard_name="sea_ice_area_fraction" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i032" long_name="SEA ICE DEPTH (MEAN OVER ICE)      M" standard_name="sea_ice_thickness" unit="m" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i033" long_name="OROGRAPHY (/STRAT LOWER BC)" standard_name="surface_altitude" unit="m" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DALLTH" id="m01s00i211" long_name="CCA WITH ANVIL AFTER TIMESTEP" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_extended_DALLTH" id="m01s00i254" long_name="QCL AFTER TIMESTEP" standard_name="mass_fraction_of_cloud_liquid_water_in_air" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_extended_DALLTH" id="m01s00i266" long_name="BULK CLOUD FRACTION IN EACH LAYER" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_single_D52RH" id="m01s00i407" long_name="PRESSURE AT RHO LEVELS AFTER TS" standard_name="air_pressure" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLRH" id="m01s00i407_2" long_name="PRESSURE AT RHO LEVELS AFTER TS" standard_name="air_pressure" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_single_D52TH" id="m01s00i408" long_name="PRESSURE AT THETA LEVELS AFTER TS" standard_name="air_pressure" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_halo_single_DALLTH" id="m01s00i408_2" long_name="PRESSURE AT THETA LEVELS AFTER TS" standard_name="air_pressure" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i409" long_name="SURFACE PRESSURE AFTER TIMESTEP" standard_name="surface_air_pressure" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i507" long_name="OPEN SEA SURFACE TEMP AFTER TIMESTEP" standard_name="surface_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i508" long_name="SEA-ICE SURFACE TEMP AFTER TIMESTEP" standard_name="surface_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s00i509" long_name="SEA ICE ALBEDO AFTER TS" standard_name="sea_ice_albedo" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i201" long_name="NET DOWN SURFACE SW FLUX: SW TS ONLY" standard_name="surface_net_downward_shortwave_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i203" long_name="NET DN SW RAD FLUX:OPEN SEA:SEA MEAN" standard_name="surface_net_downward_shortwave_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i207" long_name="INCOMING SW RAD FLUX (TOA): ALL TSS" standard_name="toa_incoming_shortwave_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i208" long_name="OUTGOING SW RAD FLUX (TOA)" standard_name="toa_outgoing_shortwave_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i209" long_name="CLEAR-SKY (II) UPWARD SW FLUX (TOA)" standard_name="toa_outgoing_shortwave_flux_assuming_clear_sky" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i210" long_name="CLEAR-SKY (II) DOWN SURFACE SW FLUX" standard_name="surface_downwelling_shortwave_flux_in_air_assuming_clear_sky" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i211" long_name="CLEAR-SKY (II) UP SURFACE SW FLUX" standard_name="surface_upwelling_shortwave_flux_in_air_assuming_clear_sky" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DALLTH" id="m01s01i221" long_name="LAYER CLD LIQ RE * LAYER CLD WEIGHT" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DALLTH" id="m01s01i223" long_name="LAYER CLOUD WEIGHT FOR MICROPHYSICS" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DALLTH" id="m01s01i225" long_name="CONV CLOUD LIQ RE * CONV CLD WEIGHT" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DALLTH" id="m01s01i226" long_name="CONV CLOUD WEIGHT FOR MICROPHYSICS" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i235" long_name="TOTAL DOWNWARD SURFACE SW FLUX" standard_name="surface_downwelling_shortwave_flux_in_air" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DALLTH" id="m01s01i241" long_name="DROPLET NUMBER CONC * LYR CLOUD WGT" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DALLTH" id="m01s01i242" long_name="LAYER CLOUD LWC * LAYER CLOUD WEIGHT" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i245" long_name="2-D RE DISTRIBUTION * 2-D RE WEIGHT" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i246" long_name="WEIGHT FOR 2-D RE DISTRIBUTION" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i254" long_name="2-D RE * WEIGHT - WARM CLOUDS ONLY" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i255" long_name="WEIGHT FOR WARM CLOUD 2-D RE" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i260" long_name="NET DN SW O SEA FLX BLW 690NM:SEA MN" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i280" long_name="COLUMN-INTEGRATED Nd * SAMP. WEIGHT" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i281" long_name="SAMP. WEIGHT FOR COL. INT. Nd" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i298" long_name="CDNC @CLOUD TOP * WEIGHT" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s01i299" long_name="WEIGHT FOR CDNC @CLOUD TOP" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s02i201" long_name="NET DOWN SURFACE LW RAD FLUX" standard_name="surface_net_downward_longwave_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s02i203" long_name="NET DN LW RAD FLUX:OPEN SEA:SEA MEAN" standard_name="surface_net_downward_longwave_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s02i204" long_name="TOTAL CLOUD AMOUNT IN LW RADIATION" standard_name="cloud_area_fraction" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s02i205" long_name="OUTGOING LW RAD FLUX (TOA)" standard_name="toa_outgoing_longwave_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s02i206" long_name="CLEAR-SKY (II) UPWARD LW FLUX (TOA)" standard_name="toa_outgoing_longwave_flux_assuming_clear_sky" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s02i207" long_name="DOWNWARD LW RAD FLUX: SURFACE" standard_name="surface_downwelling_longwave_flux_in_air" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s02i208" long_name="CLEAR-SKY (II) DOWN SURFACE LW FLUX" standard_name="surface_downwelling_longwave_flux_in_air_assuming_clear_sky" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAGAOT" id="m01s02i295" long_name="FOSSIL FUEL ORG C OPTIC DEPTH IN RAD" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAGAOT" id="m01s02i422" long_name="DUST OPTICAL DEPTH FROM PROGNOSTIC" standard_name="atmosphere_optical_thickness_due_to_dust_ambient_aerosol_particles" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i201" long_name="HT FLUX THROUGH SEAICE:SEA MEAN W/M2" standard_name="downward_heat_flux_in_sea_ice" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i217" long_name="SURFACE SENSIBLE  HEAT FLUX     W/M2" standard_name="surface_upward_sensible_heat_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_DPBLTH" id="m01s03i219" long_name="X-COMP OF SURF &amp; BL WIND STRESS N/M2" standard_name="surface_downward_eastward_stress" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_DPBLTH" id="m01s03i220" long_name="Y-COMP OF SURF &amp; BL WIND STRESS N/M2" standard_name="surface_downward_northward_stress" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i223" long_name="SURFACE TOTAL MOISTURE FLUX  KG/M2/S" standard_name="surface_upward_water_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i224" long_name="WIND MIX EN'GY FL TO SEA:SEA MN W/M2" standard_name="wind_mixing_energy_flux_into_sea_water" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DIAG" id="m01s03i225" long_name="10 METRE WIND U-COMP         B GRID" standard_name="eastward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DIAG" id="m01s03i226" long_name="10 METRE WIND V-COMP         B GRID" standard_name="northward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DIAG" id="m01s03i227" long_name="10 METRE WIND SPEED ON B GRID" standard_name="wind_speed" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i228" long_name="SFC SH FLX FROM OPEN SEA:SEA MN W/M2" standard_name="surface_upward_sensible_heat_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i231" long_name="SUBLIM. FROM SURFACE (GBM)  KG/M2/TS" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i232" long_name="EVAP FROM OPEN SEA: SEA MEAN KG/M2/S" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i234" long_name="SURFACE LATENT HEAT FLUX        W/M2" standard_name="surface_upward_latent_heat_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i235" long_name="SEAICE TOP MELT LH FLX:SEA MEAN W/M2" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i236" long_name="TEMPERATURE AT 1.5M" standard_name="air_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i237" long_name="SPECIFIC HUMIDITY  AT 1.5M" standard_name="specific_humidity" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i245" long_name="RELATIVE HUMIDITY AT 1.5M" standard_name="relative_humidity" unit="%" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i258" long_name="SURFACE SNOWMELT HEAT FLUX      W/M2" standard_name="surface_snow_melt_heat_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i261" long_name="GROSS PRIMARY PRODUCTIVITY KG C/M2/S" standard_name="gross_primary_productivity_of_carbon" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DTILE" id="m01s03i287" long_name="CANOPY EVAPORATION ON TILES" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i293" long_name="SOIL RESPIRATION           KG C/M2/S" standard_name="soil_respiration_carbon_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i296" long_name="EVAP FROM SOIL SURF : RATE   KG/M2/S" standard_name="water_evaporation_flux_from_soil" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i297" long_name="EVAP FROM CANOPY : RATE      KG/M2/S" standard_name="water_evaporation_flux_from_canopy" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i298" long_name="SUBLIM. SURFACE (GBM) : RATE KG/M2/S" standard_name="water_sublimation_flux" unit="kg m-2 s-" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i304" long_name="TURBULENT MIXING HT AFTER B.LAYER m" unit="m" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i305" long_name="STABLE BL INDICATOR" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i306" long_name="STRATOCUM. OVER STABLE BL INDICATOR" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i307" long_name="WELL_MIXED BL INDICATOR" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i308" long_name="DECOUPLED SC. NOT OVER CU. INDICATOR" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i309" long_name="DECOUPLED SC. OVER CU. INDICATOR" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i310" long_name="CUMULUS-CAPPED BL INDICATOR" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DTILE" id="m01s03i317" long_name="SURFACE TILE FRACTIONS" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DTILE" id="m01s03i321" long_name="CANOPY WATER ON TILES          KG/M2" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DTILE" id="m01s03i331" long_name="SUBLIMATION MOISTURE FLUX ON TILES" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i332" long_name="TOA OUTGOING LW RAD AFTER B.LAYER" standard_name="toa_outgoing_longwave_flux" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i340" long_name="SHEAR-DRIVEN B.LAYER INDICATOR" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i353" long_name="SUBLIM. SEAICE:SEA MEAN RATE KG/M2/S" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DIAG" id="m01s03i365" long_name="10 METRE NEUTRAL WIND U-COMP B GRID" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DIAG" id="m01s03i366" long_name="10 METRE NEUTRAL WIND V-COMP B GRID" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DIAG" id="m01s03i367" long_name="10 METRE NEUTRAL WIND SPEED B GRID" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_DIAG" id="m01s03i370" long_name="X-COMP OF SURF PSEUDOSTRESS M2.S-2" unit="m2 s-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_DIAG" id="m01s03i371" long_name="Y-COMP OF SURF PSEUDOSTRESS M2.S-2" unit="m2 s-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_DIAG" id="m01s03i392" long_name="X-COMP OF MEAN SEA SURF STRESS N/M2" standard_name="surface_downward_eastward_stress" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_DIAG" id="m01s03i394" long_name="Y-COMP OF MEAN SEA SURF STRESS N/M2" standard_name="surface_downward_northward_stress" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i395" long_name="FRACTION OF LAND" standard_name="land_area_fraction" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i662" long_name="POTENTIAL NET PRIM PRODUC KG C/M2/S" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s03i663" long_name="POTENTIAL PLANT RESPIRATION KG/M2/S" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s04i203" long_name="LARGE SCALE RAINFALL RATE    KG/M2/S" standard_name="stratiform_rainfall_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s04i204" long_name="LARGE SCALE SNOWFALL RATE    KG/M2/S" standard_name="stratiform_snowfall_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i205" long_name="CONVECTIVE RAINFALL RATE     KG/M2/S" standard_name="convective_rainfall_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i206" long_name="CONVECTIVE SNOWFALL RATE     KG/M2/S" standard_name="convective_snowfall_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_D1TH" id="m01s05i209" long_name="TEMPERATURE AFTER CONVECTION" standard_name="air_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i214" long_name="TOTAL RAINFALL RATE: LS+CONV KG/M2/S" standard_name="rainfall_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i215" long_name="TOTAL SNOWFALL RATE: LS+CONV KG/M2/S" standard_name="snowfall_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i216" long_name="TOTAL PRECIPITATION RATE     KG/M2/S" standard_name="precipitation_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i231" long_name="CAPE TIMESCALE (DEEP)              S" unit="s" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i232" long_name="INDICATOR REDUCED CAPE TIMESCALE" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_D52TH" id="m01s05i250" long_name="UPDRAUGHT MASS FLUX (Pa/s)" unit="Pa s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_D52RH" id="m01s05i256" long_name="U INCREMENT MS-2 ( P GRID)" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_D52RH" id="m01s05i257" long_name="V INCREMENT MS-2         ( P GRID)" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i269" long_name="DEEP CONVECTION INDICATOR" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i270" long_name="SHALLOW CONVECTION INDICATOR" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i272" long_name="MID LEVEL CONVECTION INDICATOR" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i277" long_name="DEEP CONV PRECIP RATE        KG/M2/S" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i278" long_name="SHALLOW CONV PRECIP RATE     KG/M2/S" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s05i279" long_name="MID LEVEL CONV PRECIP RATE   KG/M2/S" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_D52TH" id="m01s05i319" long_name="FREQ DEEP CONVECTION TERM HERE" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_D52TH" id="m01s05i320" long_name="MASS FLUX DEEP CONVECTION" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_D52TH" id="m01s05i322" long_name="MASS FLUX SHALLOW CONVECTION" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_D52TH" id="m01s05i323" long_name="MASS FLUX MID-LEVEL CONVECTION" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_DNOGWTH" id="m01s06i101" long_name="EASTWARD FLUX - SPECTRAL PSEUDOMOM." />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_DNOGWTH" id="m01s06i102" long_name="SOUTHWARD FLUX - SPECTRAL PSEUDOMOM." />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_DNOGWTH" id="m01s06i103" long_name="WESTWARD FLUX - SPECTRAL PSEUDOMOM." />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_DNOGWTH" id="m01s06i104" long_name="NORTHWARD FLUX - SPECTRAL PSEUDOMOM." />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_DNOGWRH" id="m01s06i105" long_name="EASTWARD FORCE FROM SPECTRAL GW" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_DNOGWRH" id="m01s06i106" long_name="NORTHWARD FORCE FROM SPECTRAL GW" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s06i111" long_name="E. FLUX SPECTRAL PSEUDOMOM. P LEVS" standard_name="upward_eastward_momentum_flux_in_air_due_to_nonorographic_eastward_gravity_waves" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s06i113" long_name="W. FLUX SPECTRAL PSEUDOMOM. P LEVS" standard_name="upward_eastward_momentum_flux_in_air_due_to_nonorographic_westward_gravity_waves" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s06i115" long_name="EAST. FORCE FROM SPECTRAL GW P LEVS" standard_name="tendency_of_eastward_wind_due_to_nonorographic_gravity_wave_drag" unit="m s-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_DALLTH" id="m01s06i201" long_name="X COMPONENT OF GRAVITY WAVE STRESS" standard_name="atmosphere_eastward_stress_due_to_gravity_wave_drag" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_DALLRH" id="m01s06i207" long_name="U-ACCEL FROM SATURATED STRESS" unit="m s-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_DALLRH" id="m01s06i208" long_name="V-ACCEL FROM SATURATED STRESS" unit="m s-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cu_DALLTH" id="m01s06i223" long_name="X COMPONENT OF GW SATURATION STRESS" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_cv_DALLTH" id="m01s06i224" long_name="Y COMPONENT OF GW SATURATION STRESS" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s06i241" long_name="X COMPT OF GRAV. WAVE STRESS P LEVS" standard_name="upward_eastward_momentum_flux_in_air_due_to_orographic_gravity_waves" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s06i247" long_name="U-ACCEL FROM SATURATED STRESS P LEVS" standard_name="tendency_of_eastward_wind_due_to_orographic_gravity_wave_drag" unit="m s-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s08i023" long_name="SNOW MASS AFTER HYDROLOGY      KG/M2" standard_name="surface_snow_amount" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s08i208" long_name="SOIL MOISTURE CONTENT" standard_name="soil_moisture_content" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s08i209" long_name="CANOPY WATER CONTENT" standard_name="canopy_water_amount" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DSOIL" id="m01s08i223" long_name="SOIL MOISTURE CONTENT IN A LAYER" standard_name="moisture_content_of_soil_layer" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DSOIL" id="m01s08i225" long_name="DEEP SOIL TEMP. AFTER HYDROLOGY DEGK" standard_name="soil_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DSOIL" id="m01s08i229" long_name="UNFROZEN SOIL MOISTURE FRACTION" standard_name="mass_fraction_of_unfrozen_water_in_soil_moisture" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DSOIL" id="m01s08i230" long_name="FROZEN SOIL MOISTURE FRACTION" standard_name="mass_fraction_of_frozen_water_in_soil_moisture" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s08i231" long_name="LAND SNOW MELT RATE          KG/M2/S" standard_name="surface_snow_melt_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s08i233" long_name="CANOPY THROUGHFALL RATE      KG/M2/S" standard_name="canopy_throughfall_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s08i234" long_name="SURFACE RUNOFF RATE          KG/M2/S" standard_name="surface_runoff_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s08i235" long_name="SUB-SURFACE RUNOFF RATE      KG/M2/S" standard_name="subsurface_runoff_flux" unit="kg m-2 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DT330" id="m01s15i214" long_name="ERTEL POTENTIAL VORTICITY THETA SURF" standard_name="ertel_potential_vorticity" unit="K m2 kg-1 s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DIAG" id="m01s15i215" long_name="THETA ON PV=+/-2 SURFACE" standard_name="air_potential_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DP500" id="m01s16i202" long_name="GEOPOTENTIAL HEIGHT ON P LEV/P GRID" standard_name="geopotential_height" unit="m" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s16i222" long_name="PRESSURE AT MEAN SEA LEVEL" standard_name="air_pressure_at_sea_level" unit="Pa" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DALLTH" id="m01s30i112" long_name="WBIG Set to 1 if w GT 1.0m/s" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DALLTH" id="m01s30i114" long_name="WBIG Set to 1 if w GT 0.1m/s" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i201" long_name="U COMPNT OF WIND ON P LEV/UV GRID" standard_name="eastward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s30i201_3" long_name="U COMPNT OF WIND ON P LEV/UV GRID" standard_name="eastward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP500" id="m01s30i201_4" long_name="U COMPNT OF WIND ON P LEV/UV GRID" standard_name="eastward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP850200" id="m01s30i201_5" long_name="U COMPNT OF WIND ON P LEV/UV GRID" standard_name="eastward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DPLEV7H" id="m01s30i201_6" long_name="U COMPNT OF WIND ON P LEV/UV GRID" standard_name="eastward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i202" long_name="V COMPNT OF WIND ON P LEV/UV GRID" standard_name="northward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s30i202_3" long_name="V COMPNT OF WIND ON P LEV/UV GRID" standard_name="northward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP500" id="m01s30i202_4" long_name="V COMPNT OF WIND ON P LEV/UV GRID" standard_name="northward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP850200" id="m01s30i202_5" long_name="V COMPNT OF WIND ON P LEV/UV GRID" standard_name="northward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DPLEV7H" id="m01s30i202_6" long_name="V COMPNT OF WIND ON P LEV/UV GRID" standard_name="northward_wind" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i203" long_name="W COMPNT OF WIND ON P LEV/UV GRID" standard_name="upward_air_velocity" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s30i203_2" long_name="W COMPNT OF WIND ON P LEV/UV GRID" standard_name="upward_air_velocity" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DPLEV8H" id="m01s30i203_3" long_name="W COMPNT OF WIND ON P LEV/UV GRID" standard_name="upward_air_velocity" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i204" long_name="TEMPERATURE ON P LEV/UV GRID" standard_name="air_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s30i204_3" long_name="TEMPERATURE ON P LEV/UV GRID" standard_name="air_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DPLEV11H" id="m01s30i204_4" long_name="TEMPERATURE ON P LEV/UV GRID" standard_name="air_temperature" unit="K" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i205" long_name="SPECIFIC HUMIDITY ON P LEV/UV GRID" standard_name="specific_humidity" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s30i205_3" long_name="SPECIFIC HUMIDITY ON P LEV/UV GRID" standard_name="specific_humidity" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DPLEV7H" id="m01s30i205_4" long_name="SPECIFIC HUMIDITY ON P LEV/UV GRID" standard_name="specific_humidity" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i206" long_name="RELATIVE HUMIDITY ON P LEV/UV GRID" standard_name="relative_humidity" unit="%" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i207" long_name="GEOPOTENTIAL HEIGHT ON P LEV/UV GRID" standard_name="geopotential_height" unit="m" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DPLEV9H" id="m01s30i207_3" long_name="GEOPOTENTIAL HEIGHT ON P LEV/UV GRID" standard_name="geopotential_height" unit="m" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i208" long_name="OMEGA ON P LEV/UV GRID" standard_name="lagrangian_tendency_of_air_pressure" unit="Pa s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i211" long_name="UU ON P LEV/UV GRID" standard_name="square_of_eastward_wind" unit="m2 s-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i212" long_name="UV ON P LEV/UV GRID" standard_name="product_of_eastward_wind_and_northward_wind" unit="m2 s-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i214" long_name="UT ON P LEV/UV GRID" standard_name="product_of_eastward_wind_and_air_temperature" unit="K m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i215" long_name="UQ ON P LEV/UV GRID" standard_name="product_of_eastward_wind_and_specific_humidity" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i218" long_name="UOM ON P LEV/UV GRID" standard_name="product_of_eastward_wind_and_omega" unit="Pa m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i222" long_name="VV ON P LEV/UV GRID" standard_name="square_of_northward_wind" unit="m2 s-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i224" long_name="VT ON P LEV/UV GRID" standard_name="product_of_northward_wind_and_air_temperature" unit="K m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i225" long_name="VQ ON P LEV/UV GRID" standard_name="product_of_northward_wind_and_specific_humidity" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i228" long_name="VOM ON P LEV/UV GRID" standard_name="product_of_northward_wind_and_omega" unit="Pa m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i234" long_name="WT ON P LEV/UV GRID" standard_name="product_of_upward_air_velocity_and_air_temperature" unit="K m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i235" long_name="WQ ON P LEV/UV GRID" standard_name="product_of_upward_air_velocity_and_specific_humidity" unit="m s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i244" long_name="TT ON P LEV/UV GRID" standard_name="square_of_air_temperature" unit="K2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i248" long_name="TOM ON P LEV/UV GRID" standard_name="product_of_air_temperature_and_omega" unit="K Pa s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i258" long_name="QOM ON P LEV/UV GRID" standard_name="product_of_specific_humidity_and_omega" unit="Pa s-1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i288" long_name="OMOM ON P LEV/UV GRID" standard_name="square_of_lagrangian_tendency_of_air_pressure" unit="Pa2 s-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP17" id="m01s30i301" long_name="HEAVYSIDE FN ON P LEV/UV GRID" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP36CCM" id="m01s30i301_3" long_name="HEAVYSIDE FN ON P LEV/UV GRID" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP6" id="m01s30i301_4" long_name="HEAVYSIDE FN ON P LEV/UV GRID" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP7LOW" id="m01s30i301_5" long_name="HEAVYSIDE FN ON P LEV/UV GRID" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_uv_DP850200" id="m01s30i301_6" long_name="HEAVYSIDE FN ON P LEV/UV GRID" unit="1" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i402" long_name="TOTAL KE PER UA WITH W  RHO GRID" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i403" long_name="TOTAL COLUMN DRY MASS  RHO GRID" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i404" long_name="TOTAL COLUMN WET MASS  RHO GRID" standard_name="atmosphere_mass_per_unit_area" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i405" long_name="TOTAL COLUMN QCL  RHO GRID" standard_name="atmosphere_cloud_liquid_water_content" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i406" long_name="TOTAL COLUMN QCF  RHO GRID" standard_name="atmosphere_cloud_ice_content" unit="kg m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i407" long_name="TOTAL WATER VAPOUR FLUX U  RHO GRID" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i408" long_name="TOTAL WATER VAPOUR FLUX V  RHO GRID" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i419" long_name="ENERGY CORR P GRID IN COLUMN W/M2" unit="W m-2" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i420" long_name="column integral cvT per unit area" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i421" long_name="column integral gr per unit area" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i428" long_name="dry mass col int u*q  per unit area" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i429" long_name="dry mass col int v*q  per unit area" />
+  <field enabled=".TRUE." grid_ref="um-atmos_grid_t_DIAG" id="m01s30i431" long_name="dry mass col int u*v  per unit area" />
+</field_definition>

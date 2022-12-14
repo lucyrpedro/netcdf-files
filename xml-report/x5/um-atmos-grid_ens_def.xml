@@ -1,0 +1,16 @@
+<grid_definition>
+
+  <grid id="um-atmos_grid_t_D52RH">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_D52RH" />
+    <axis axis_ref="ensemble" />
+  </grid>
+  <grid id="um-atmos_grid_t_D52RH_ens_mean">
+    <domain domain_ref="um-atmos_grid_t" />
+    <axis axis_ref="um-atmos_D52RH" />
+    <scalar>
+      <reduce_axis operation="average" />
+    </scalar>
+  </grid>
+
+</grid_definition>
