@@ -20,8 +20,8 @@
 #SBATCH --reservation=shortqos
 #SBATCH --nodes=13
 # N.B. CYLC_DIR has been updated on the remote host
-export CYLC_DIR='/mnt/lustre/a2fs-work1/work/y07/shared/umshared/software/cylc-7.8.7'
-export CYLC_VERSION='7.8.7'
+export CYLC_DIR='/mnt/lustre/a2fs-work1/work/y07/shared/umshared/software/cylc-7.8.12'
+export CYLC_VERSION='7.8.12'
 CYLC_FAIL_SIGNALS='EXIT ERR XCPU'
 
 cylc__job__inst__cylc_env() {
@@ -37,7 +37,7 @@ cylc__job__inst__cylc_env() {
     export CYLC_SUITE_RUN_DIR="$HOME/cylc-run/u-ch427-n96-xml-temp40"
     export CYLC_SUITE_DEF_PATH="${HOME}/cylc-run/u-ch427-n96-xml-temp40"
     export CYLC_SUITE_DEF_PATH_ON_SUITE_HOST="/home/luciana/cylc-run/u-ch427-n96-xml-temp40"
-    export CYLC_SUITE_UUID="f6e1685d-0889-4bf4-a008-8e03e624e63d"
+    export CYLC_SUITE_UUID="07006a32-9bb2-4e98-8ab5-a3ae64b8113b"
 
     # CYLC TASK ENVIRONMENT:
     export CYLC_TASK_JOB="19880901T0000Z/atmos_main/01"
@@ -52,7 +52,6 @@ cylc__job__inst__global_init_script() {
 export HOME=$DATADIR
 export CYLC_SUITE_RUN_DIR=$HOME/cylc-run/$CYLC_SUITE_NAME
 export CYLC_SUITE_DEF_PATH=${CYLC_SUITE_RUN_DIR}
-export ROSE_VERSION='pumatest'
 }
 
 cylc__job__inst__user_env() {
